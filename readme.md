@@ -1,8 +1,8 @@
 # Machinist
-stuff, I'll add a list of features here later
+My machinist reactions aim to maximize uptime and not waste a single GCD. I've personally managed high parses with zero fight interaction and only using my own reactions. Some people have hit 99s, and allegedly, 100s. Right now they don't aim to align with raid buffs or anything like that to get the fastest boss burn, but they do aim to get you the highest rdps possible. Along with this, there's many other key features like arm's length usage, tactician, boss retargeting, etc.. That said, any feedback is appreciated and can be left on rikudou's discord for me. 
 
 # Bard
-same here
+My bard reactions are much more simple, as I'm not entirely interested in bard, and the class is overall a lot easier. Couple that with the fact that there isn't much demand for bard reactions and that's my justification to not spend as much time improving these. That said, you'll still get some basic functionality, troubador usage, arm's length usage, disabling battle voice before key mechanics to maximize uptime, and boss retargeting after the boss becomes targetable. 
 
 # e7s read me
 I have two profiles available for e7s, the first one is just normal reactions. The second file available contains my normal reactions and contains assist toggles slightly before Away With Thee goes off, allowing you to position for the teleports. Both of them work fine, it's up to you for which one you'd like to use.
