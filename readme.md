@@ -16,7 +16,9 @@ One more thing is that there is a toggle off for wildfire near the end of the fi
 
 # FAQ
 Q: Where do I place these?
+
 A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions\TimelineTriggers
 
 Q: My reactions aren't working?
+
 A: To be safe, after placing these files in the above folder, reload your LUA, then go to the TensorReactions menu, while on the respective class select each raid and make sure the profile for the class you're on is selected. If you're on machinist, select the machinist profiles, the next time you load into that raid on machinist, that profile will load. If you're having any issues beyond this, ask for help in rikudou's discord.
