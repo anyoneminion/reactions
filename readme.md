@@ -15,10 +15,10 @@ If you're using the e8s profile listed above, make sure you are doing right side
 One more thing is that there is a toggle off for wildfire near the end of the fight, which is later turned back on when raid buffs are up. When this is most optimal is based on *your* static. You'll have to talk about when you want everybody to burst with your group. Some groups do it immediately after the akh rhai/ice slide, some groups do it after the final wyrm's lament. Based on your group, you'll have to move the reaction "reenable cd/pot" that's currently on "722.9 - Akh Rhai" to your desired location. Just copy the current reaction to where ever you want and delete the old one.
 
 # FAQ
-Q: Where do I place these?
+**Q: Where do I place these?**
 
 A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions\TimelineTriggers
 
-Q: My reactions aren't working?
+**Q: My reactions aren't working?**
 
 A: To be safe, after placing these files in the above folder, reload your LUA, then go to the TensorReactions menu, while on the respective class select each raid and make sure the profile for the class you're on is selected. If you're on machinist, select the machinist profiles, the next time you load into that raid on machinist, that profile will load. If you're having any issues beyond this, ask for help in rikudou's discord.
