@@ -634,6 +634,48 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "2c926f3e-fcf4-b1c6-bb06-f7ed05d0f38d";
 		};
+		[7] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "target boss";
+			["time"] = 116.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 22;
+			["timerEndOffset"] = 16;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = 11;
+			["used"] = false;
+			["uuid"] = "bd66ce91-ea70-46a0-ae4f-8c4ec76d9938";
+		};
 	};
 	[27] = {
 		[1] = {
@@ -1442,6 +1484,48 @@ self.used = true";
 			["timerStartOffset"] = 5;
 			["used"] = false;
 			["uuid"] = "5afd8fdb-df95-0c9f-a406-0a453c93d950";
+		};
+		[7] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "target boss";
+			["time"] = 177.5;
+			["timeRange"] = true;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 16;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = 11;
+			["used"] = false;
+			["uuid"] = "c25386ac-d5ed-2489-a3f8-c335dbb33eac";
 		};
 	};
 	[43] = {
@@ -2610,6 +2694,92 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "66d2c2a3-ca8c-485c-a73d-84f4487024eb";
+		};
+		[8] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "target boss";
+			["time"] = 264.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 56;
+			["timerEndOffset"] = 16;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = 11;
+			["used"] = false;
+			["uuid"] = "f2bf3e66-03a8-bf94-bf78-caec3ad65ef5";
+		};
+	};
+	[61] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable queen -disable if bad group";
+			["time"] = 302;
+			["timeRange"] = false;
+			["timelineIndex"] = 61;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "dff4eae6-2f2d-eaf7-9751-5092cfc3c7ae";
 		};
 	};
 	[68] = {
