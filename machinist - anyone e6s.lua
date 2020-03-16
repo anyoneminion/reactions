@@ -593,6 +593,40 @@ self.used = true";
 	};
 	[21] = {
 	};
+	[24] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if not Argus then\
+		self.used = true\
+		return\
+end\
+local markedClones = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+		if not markedClones[id] and ent.contentid == 9288 and ent.castinginfo.channelingid == 19473 then\
+				Argus.addTimedRectFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 15, 5, ent.pos.h, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, true, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				markedClones[id] = true	\
+		end\
+end\
+self.used = table.size(markedClones) >= 4\
+\
+";
+			["executeType"] = 2;
+			["loop"] = false;
+			["name"] = "draw aoe";
+			["time"] = 184.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 24;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "b34e6050-c115-1c47-a30b-e43e7af803cc";
+		};
+	};
 	[33] = {
 		[1] = {
 			["actions"] = {
@@ -1300,10 +1334,10 @@ self.used = true";
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
-					["targetContentID"] = -1;
+					["targetContentID"] = 9287;
 					["targetName"] = "Garuda";
 					["targetSubType"] = 1;
-					["targetType"] = 2;
+					["targetType"] = 3;
 					["untarget"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
@@ -1324,10 +1358,10 @@ self.used = true";
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
-					["targetContentID"] = -1;
+					["targetContentID"] = 9288;
 					["targetName"] = "Ifrit";
 					["targetSubType"] = 1;
-					["targetType"] = 2;
+					["targetType"] = 3;
 					["untarget"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
@@ -2053,6 +2087,38 @@ self.used = true";
 		};
 	};
 	[61] = {
+	};
+	[64] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if not Argus then\
+		self.used = true\
+		return\
+end\
+local markedClones = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+		if not markedClones[id] and ent.contentid == 9289 and ent.castinginfo.channelingid == 19473 then\
+				Argus.addTimedRectFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 15, 5, ent.pos.h, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, true, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				markedClones[id] = true\
+		end\
+end\
+self.used = table.size(markedClones) >= 4";
+			["executeType"] = 2;
+			["loop"] = false;
+			["name"] = "draw aoe";
+			["time"] = 394.8;
+			["timeRange"] = true;
+			["timelineIndex"] = 64;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8cc65abc-3d5c-5bd0-b3eb-976423f04b1e";
+		};
 	};
 	[73] = {
 		[1] = {
