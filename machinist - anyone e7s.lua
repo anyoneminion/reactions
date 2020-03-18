@@ -1534,9 +1534,51 @@ self.used = true";
 		};
 	};
 	[60] = {
-	};
-	[61] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "toggle off cd";
+			["time"] = 291.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 60;
+			["timerEndOffset"] = -4.1;
+			["timerOffset"] = -15;
+			["timerStartOffset"] = -4.1;
+			["used"] = false;
+			["uuid"] = "59c8c060-b2f0-de91-ae3d-ca0e8d9974c1";
+		};
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1569,15 +1611,17 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["name"] = "disable queen -disable if bad group";
-			["time"] = 302;
+			["time"] = 291.8;
 			["timeRange"] = false;
-			["timelineIndex"] = 61;
+			["timelineIndex"] = 60;
 			["timerEndOffset"] = 0;
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1eeed923-66d0-a137-8fd8-8823c4e071f0";
+			["uuid"] = "0ea636a7-8238-5640-aadb-7e7b5c0f00fb";
 		};
+	};
+	[61] = {
 	};
 	[68] = {
 		[1] = {
@@ -1754,6 +1798,90 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "3155cf51-d957-d3a8-bce7-c2c831a686b7";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "enable queen";
+			["time"] = 500;
+			["timeRange"] = false;
+			["timelineIndex"] = 68;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0.10000000149012;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "b9a9d64e-fda6-ef2e-8e3d-9cc9f2c13f2f";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "enable cd";
+			["time"] = 500;
+			["timeRange"] = false;
+			["timelineIndex"] = 68;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0.10000000149012;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "4966eedc-23c7-3a76-992f-4311f032fe46";
 		};
 	};
 	[71] = {
