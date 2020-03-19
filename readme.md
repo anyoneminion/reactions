@@ -1,3 +1,8 @@
+# Discontinued
+Discontinued my reactions until further notice, expect something in the future. Check Rikudou's discord to get replacement reactions in the meantime from user 'The', their reactions are the most up to date.
+
+I've left up my version of The's e8s machinist reaction with right side adds. Everything outside of the adds phase is outdated, but if you want to copy over the reactions from the adds phase, you can download that and copy it over.
+
 # Machinist
 My machinist reactions aim to maximize uptime and not waste a single GCD. I've personally managed high parses with zero fight interaction and only using my own reactions. Some people have hit 99s, and allegedly, 100s. Right now they don't aim to align with raid buffs or anything like that to get the fastest boss burn, but they do aim to get you the highest rdps possible. Along with this, there's many other key features like arm's length usage, tactician, boss retargeting, etc.. That said, any feedback is appreciated and can be left on rikudou's discord for me. 
 
