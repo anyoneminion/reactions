@@ -1,5 +1,5 @@
 # Discontinued
-Discontinued my reactions until further notice, expect something in the future. Check Rikudou's discord to get replacement reactions in the meantime from user 'The', their reactions are the most up to date.
+Discontinued my machinist reactions until further notice, expect more diverse stuff in the future. Check Rikudou's discord to get replacement machinist reactions in the meantime from user 'The', their reactions are the most up to date.
 
 I've left up my version of The's e8s machinist reaction with right side adds. Everything outside of the adds phase is outdated, but if you want to copy over the reactions from the adds phase, you can download that and copy it over.
 
