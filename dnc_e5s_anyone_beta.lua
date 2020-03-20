@@ -188,7 +188,7 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = false\
+					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -219,7 +219,7 @@ self.used = true";
 					["buffDuration"] = 0;
 					["buffID"] = -1;
 					["category"] = 2;
-					["comparator"] = 1;
+					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
 					["contentid"] = -1;
@@ -1277,7 +1277,7 @@ self.used = true";
 					["buffDuration"] = 0;
 					["buffID"] = -1;
 					["category"] = 2;
-					["comparator"] = 1;
+					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
 					["contentid"] = -1;
