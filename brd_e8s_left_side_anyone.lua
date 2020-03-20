@@ -1103,8 +1103,8 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_Safe = true\
+		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_Safe = true\
 		self.used = true\
 end";
 			["executeType"] = 2;
@@ -1127,7 +1127,7 @@ end";
 			["enabled"] = true;
 			["eventArgs"] = {
 			};
-			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom_Safe = false\
+			["execute"] = "ACR_TensorRequiem_Hotbar_HeadGraze_Custom_Safe = false\
 self.used = true";
 			["executeType"] = 2;
 			["loop"] = false;
@@ -1197,8 +1197,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -1241,8 +1241,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -2112,8 +2112,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -2156,8 +2156,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;

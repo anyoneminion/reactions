@@ -188,7 +188,7 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = true\
+					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
