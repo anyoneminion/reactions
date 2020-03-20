@@ -192,48 +192,6 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["name"] = "disable battle voice";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -20;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "d415979d-bc96-ab61-8621-fb57e40ba507";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRequiem_Songs";
 					["gVarIndex"] = 3;
 					["gVarValue"] = 2;
@@ -266,7 +224,7 @@ local obj1 = {
 			["used"] = false;
 			["uuid"] = "2483e149-c35f-761f-ad85-9f390c31325f";
 		};
-		[3] = {
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -307,6 +265,71 @@ local obj1 = {
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "a4c5e2da-d755-a646-ab12-a13e2ce49eec";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "hold bv/rs";
+			["time"] = 201.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 34;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "01881976-49ba-305a-ae73-69042e4ff86c";
 		};
 	};
 	[36] = {
@@ -401,48 +424,6 @@ local obj1 = {
 	};
 	[37] = {
 		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["name"] = "disable battle voice";
-			["time"] = 229.2;
-			["timeRange"] = false;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 4;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "1e66c433-9e42-6b3a-91e9-72cc85263c86";
-		};
-		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -618,7 +599,7 @@ local obj1 = {
 			["used"] = false;
 			["uuid"] = "517f8810-ada0-9629-872a-e70aac65b972";
 		};
-		[3] = {
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -661,6 +642,71 @@ local obj1 = {
 			["timerStartOffset"] = -3;
 			["used"] = false;
 			["uuid"] = "f4607ad4-c29b-8f0b-a8a2-acce29556393";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "hold bv/rs";
+			["time"] = 229.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 37;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 2;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "faaf9b0d-1325-82ed-9c04-38e8c71f5763";
 		};
 	};
 	[39] = {
@@ -1331,6 +1377,29 @@ self.used = true";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRequiem_DoTs";
 					["gVarIndex"] = 7;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[4] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
