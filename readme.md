@@ -9,9 +9,13 @@ Make sure you're downloading the version of e8s that fits which side of adds pha
 Most of the timings are from The's profiles, so there shouldn't be much difference in changing between the machinist and bard profiles, outside of actually working for the respective class. Thank you 'The'.
 
 # FAQ
-**Q: Where do I place these?**
+**Q: Where do I place the reactions?**
 
 A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions\TimelineTriggers
+
+**Q: Where do I place dotblacklist.lua?**
+
+A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorRequiem
 
 **Q: My reactions aren't working?**
 
