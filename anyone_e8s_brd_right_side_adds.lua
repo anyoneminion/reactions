@@ -1751,7 +1751,7 @@ self.used = true";
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 20;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = -2;
+			["timerStartOffset"] = -2.2000000476837;
 			["used"] = false;
 			["uuid"] = "15a03fd4-0742-961e-9c26-bf128b56516b";
 		};
