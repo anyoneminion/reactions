@@ -80,7 +80,7 @@ local obj1 = {
 			["uuid"] = "ac8081d0-07ca-17a8-a071-6806900ecfee";
 		};
 	};
-	[17] = {
+	[16] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -91,8 +91,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -113,37 +113,41 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "toggle off battle voice";
-			["time"] = 122;
+			["name"] = "disable dots";
+			["time"] = 119.4;
 			["timeRange"] = false;
-			["timelineIndex"] = 17;
-			["timerEndOffset"] = -4.1;
-			["timerOffset"] = -18;
-			["timerStartOffset"] = -4.1;
+			["timelineIndex"] = 16;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6ff293da-3dbc-c64a-ac2b-4d3ca8661821";
+			["uuid"] = "c4e2f3e7-55f5-64dd-b195-66b2553a87cc";
 		};
-		[2] = {
+	};
+	[17] = {
+	};
+	[18] = {
+		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
+					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
-					["setTarget"] = true;
+					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
 					["targetSubType"] = 1;
-					["targetType"] = 5;
+					["targetType"] = 1;
 					["untarget"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
@@ -155,34 +159,15 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "target boss";
-			["time"] = 122;
-			["timeRange"] = true;
-			["timelineIndex"] = 17;
-			["timerEndOffset"] = 4;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -1;
-			["used"] = false;
-			["uuid"] = "7f26a56c-26a0-68db-8462-3a822d66e0e5";
-		};
-		[3] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["name"] = "toggle on battle voice";
-			["time"] = 122;
+			["name"] = "enable dots";
+			["time"] = 122.5;
 			["timeRange"] = false;
-			["timelineIndex"] = 17;
-			["timerEndOffset"] = 1.4;
-			["timerOffset"] = -1;
-			["timerStartOffset"] = 1.4;
+			["timelineIndex"] = 18;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -0.5;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c67d7fcf-32ad-2ee3-b407-c72fd4bb2f96";
+			["uuid"] = "0d09e158-94d6-f1a3-b102-ef6d5ddf9cc9";
 		};
 	};
 	[23] = {
@@ -354,15 +339,135 @@ local obj1 = {
 			["time"] = 159.2;
 			["timeRange"] = false;
 			["timelineIndex"] = 23;
-			["timerEndOffset"] = 0.10000000000002;
+			["timerEndOffset"] = -0.59999999999997;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = 0.10000000000002;
+			["timerStartOffset"] = -0.59999999999997;
 			["used"] = false;
-			["uuid"] = "1367bd68-0a11-52d3-bd63-16320066d0c6";
+			["uuid"] = "753c91f9-251e-79bf-87dd-b49b49b23ced";
+		};
+	};
+	[26] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if not Argus then\
+		self.used = true\
+		return\
+end\
+local markedClones = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+		if not markedClones[id] and ent.contentid == 9288 and ent.castinginfo.channelingid == 19473 then\
+				Argus.addTimedRectFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 15, 5, ent.pos.h, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, true, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				markedClones[id] = true	\
+		end\
+end\
+self.used = table.size(markedClones) >= 4\
+\
+";
+			["executeType"] = 2;
+			["loop"] = false;
+			["name"] = "draw safe spot with argus";
+			["time"] = 184.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 26;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6587030c-3686-3040-b698-4e1e487d61dc";
 		};
 	};
 	[35] = {
+	};
+	[36] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable songs";
+			["time"] = 240.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 36;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "858954d6-2782-217f-b988-ea1fb810554d";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable dots";
+			["time"] = 240.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 36;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c48796c3-a033-8f55-8c81-a8441c98a0b6";
+		};
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -394,17 +499,17 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "toggle off battle voice";
-			["time"] = 235.7;
+			["name"] = "disable battle voice";
+			["time"] = 240.9;
 			["timeRange"] = false;
-			["timelineIndex"] = 35;
-			["timerEndOffset"] = 4.2;
-			["timerOffset"] = -15;
-			["timerStartOffset"] = 4.2;
+			["timelineIndex"] = 36;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5ad5b129-6d2b-3448-9996-01962a0e904d";
+			["uuid"] = "ca4e6143-2f51-ee9a-84bb-9c5756b055d8";
 		};
-		[2] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -414,9 +519,9 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_SmartDoT";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 2;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
 					["stopCasting"] = false;
@@ -437,9 +542,9 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_SmartJaws";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 2;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
 					["stopCasting"] = false;
@@ -459,19 +564,107 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "toggle off smart dot/jaws";
-			["time"] = 235.7;
+			["name"] = "disable smart jaws/smart dot";
+			["time"] = 240.9;
 			["timeRange"] = false;
-			["timelineIndex"] = 35;
-			["timerEndOffset"] = 4.2;
-			["timerOffset"] = 4;
-			["timerStartOffset"] = 4.2;
+			["timelineIndex"] = 36;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "cf549ded-768a-076b-82c1-3845e9d83960";
+			["uuid"] = "23d9b39a-1ae3-f238-9688-09dcdd107393";
 		};
 	};
 	[37] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable";
+			["time"] = 245.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 37;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "1862fa76-9719-95e6-84e1-fdfcff828891";
+		};
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -502,58 +695,16 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target nearest boss";
 			["time"] = 245.1;
 			["timeRange"] = true;
 			["timelineIndex"] = 37;
 			["timerEndOffset"] = 3;
-			["timerOffset"] = -0.025000000000006;
-			["timerStartOffset"] = -2;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "99cadda6-15eb-6f68-92b5-dd244d482e32";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["name"] = "toggle on battle voice";
-			["time"] = 245.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "457c64c6-f940-2835-962e-9feed059127c";
+			["uuid"] = "5e2473d6-4dcc-0bcb-81d3-a2c59b47cdb8";
 		};
 		[3] = {
 			["actions"] = {
@@ -565,8 +716,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_AOE";
-					["gVarIndex"] = 2;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -587,15 +738,15 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "disable aoe after debuffs go out";
+			["name"] = "disable pot";
 			["time"] = 245.1;
 			["timeRange"] = false;
 			["timelineIndex"] = 37;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 2.2999999523163;
+			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "820b45cc-7e2d-a377-b2db-c1069033435f";
+			["uuid"] = "170b88e8-e8a4-f202-80e4-fdb2e6888c8f";
 		};
 	};
 	[38] = {
@@ -730,9 +881,137 @@ local obj1 = {
 			["used"] = false;
 			["uuid"] = "e856596e-16f2-fbad-b7c4-aa24c68ee202";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_AOE";
+					["gVarIndex"] = 2;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable aoe";
+			["time"] = 248.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -0.10000000149012;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c1c9027b-7063-d22b-b95e-15960318da57";
+		};
 	};
 	[55] = {
+	};
+	[56] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable songs";
+			["time"] = 303.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 56;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "7ab2d10d-66a9-8937-88e3-1287a4b5a3d1";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable dots";
+			["time"] = 303.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 56;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "fa8c0929-4c00-195d-a828-06a95373b58a";
+		};
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -764,17 +1043,21 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "toggle off battle voice";
-			["time"] = 298.6;
+			["name"] = "disable battle voice";
+			["time"] = 303.3;
 			["timeRange"] = false;
-			["timelineIndex"] = 55;
-			["timerEndOffset"] = 4.1;
-			["timerOffset"] = -13;
-			["timerStartOffset"] = 4.1;
+			["timelineIndex"] = 56;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2b0e9194-f156-d119-bec0-d882876f9100";
+			["uuid"] = "c37d5ff9-d171-02ea-968e-983f61fdbf2f";
 		};
-		[2] = {
+	};
+	[58] = {
+	};
+	[59] = {
+		[1] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -784,8 +1067,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_SmartDoT";
-					["gVarIndex"] = 10;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -807,8 +1090,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_AOE";
-					["gVarIndex"] = 2;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -830,8 +1113,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_SmartJaws";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -852,19 +1135,17 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "reset aoe/smart jaws/dot";
-			["time"] = 298.6;
+			["name"] = "reenable";
+			["time"] = 324.5;
 			["timeRange"] = false;
-			["timelineIndex"] = 55;
-			["timerEndOffset"] = 4.1;
-			["timerOffset"] = 6;
-			["timerStartOffset"] = 4.1;
+			["timelineIndex"] = 59;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8df7df2d-5ae3-1cbd-9be0-bbe857a55e13";
+			["uuid"] = "0e7ec827-43cc-a76f-8867-4253b4543ee5";
 		};
-	};
-	[58] = {
-		[1] = {
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -895,18 +1176,18 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target boss";
-			["time"] = 320.4;
+			["time"] = 324.5;
 			["timeRange"] = true;
-			["timelineIndex"] = 58;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 4.775;
-			["timerStartOffset"] = 2.5;
+			["timelineIndex"] = 59;
+			["timerEndOffset"] = 2;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "ef21e32c-208b-a15a-b420-9c0d83e26aa8";
+			["uuid"] = "685b1251-cb08-2554-ae3d-560b138c172f";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -916,8 +1197,8 @@ local obj1 = {
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["setTarget"] = false;
@@ -938,15 +1219,15 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "toggle on battle voice";
-			["time"] = 320.4;
+			["name"] = "enable pots";
+			["time"] = 324.5;
 			["timeRange"] = false;
-			["timelineIndex"] = 58;
-			["timerEndOffset"] = 4.8;
-			["timerOffset"] = 2;
-			["timerStartOffset"] = 4.8;
+			["timelineIndex"] = 59;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -1;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2958074a-d06e-b6eb-a9c5-2365f1e350dd";
+			["uuid"] = "3a8d8a18-2afb-c1a0-b431-14a17e91541a";
 		};
 	};
 	[66] = {
@@ -1125,6 +1406,38 @@ local obj1 = {
 			["uuid"] = "c4fc8899-d956-d4bb-abcf-f8e38b8040dc";
 		};
 	};
+	[69] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if not Argus then\
+		self.used = true\
+		return\
+end\
+local markedClones = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+		if not markedClones[id] and ent.contentid == 9289 and ent.castinginfo.channelingid == 19473 then\
+				Argus.addTimedRectFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 15, 5, ent.pos.h, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, true, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				markedClones[id] = true\
+		end\
+end\
+self.used = table.size(markedClones) >= 4";
+			["executeType"] = 2;
+			["loop"] = false;
+			["name"] = "draw safe spot with argus";
+			["time"] = 394.8;
+			["timeRange"] = true;
+			["timelineIndex"] = 69;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "603ab28e-12d8-8b5c-afd9-d2edf2bb1fb8";
+		};
+	};
 	[78] = {
 		[1] = {
 			["actions"] = {
@@ -1204,6 +1517,69 @@ local obj1 = {
 		[2] = {
 			["actions"] = {
 				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable dot";
+			["time"] = 436.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 78;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "3b3b3b31-da9a-5529-96fd-d912a91be4f3";
+		};
+		[3] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable battle voice";
+			["time"] = 436.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 78;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6f44d28e-9c13-c9c3-a384-8fbf925f1824";
+		};
+	};
+	[79] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
 					["aType"] = 3;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -1232,16 +1608,81 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target boss";
-			["time"] = 436.7;
+			["time"] = 441;
 			["timeRange"] = true;
-			["timelineIndex"] = 78;
-			["timerEndOffset"] = 5;
-			["timerOffset"] = -0.72499999999999;
-			["timerStartOffset"] = 2;
+			["timelineIndex"] = 79;
+			["timerEndOffset"] = 2;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "507a190c-eecb-7aae-a334-a9189334dae0";
+			["uuid"] = "7040b857-b8d6-ca31-8b58-898dc27aed4a";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable";
+			["time"] = 441;
+			["timeRange"] = false;
+			["timelineIndex"] = 79;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -2;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "bc185c63-8654-9d7d-98df-d5152de3fad9";
 		};
 	};
 	[97] = {
@@ -1527,7 +1968,7 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "retarget boss";
 			["time"] = 603.3;
 			["timeRange"] = true;

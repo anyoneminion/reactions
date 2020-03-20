@@ -3,6 +3,610 @@ local multiRefObjects = {
 
 } -- multiRefObjects
 local obj1 = {
+	[22] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable things to avoid turning";
+			["time"] = 116.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 22;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 7;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "7c7a640d-7bf9-b423-9b66-70a41d6b5a80";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 3;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[4] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 4;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2240;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2241;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[3] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2242;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[4] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2243;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable assist before teleport";
+			["time"] = 116.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 22;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "1f55a5fa-5b38-1ad6-b29c-5b96a2408aac";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 5;
+						[2] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 3;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 2;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 2;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable assist once stunned/dead";
+			["time"] = 116.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 22;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "07c95632-1b1b-8a4e-8b64-1eb09ebfe87a";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable once stunned";
+			["time"] = 116.7;
+			["timeRange"] = true;
+			["timelineIndex"] = 22;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "af17c9ae-329a-cdd2-9905-47db6efdc698";
+		};
+	};
 	[27] = {
 		[1] = {
 			["actions"] = {
@@ -179,28 +783,74 @@ local obj1 = {
 			["uuid"] = "2ef81da2-44c8-dc93-9afe-c2b4ad465a57";
 		};
 	};
-	[43] = {
+	[38] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
+					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
-					["setTarget"] = true;
+					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
 					["targetSubType"] = 1;
-					["targetType"] = 5;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
 					["untarget"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
@@ -212,17 +862,619 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "target nearest add";
-			["time"] = 191.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 43;
-			["timerEndOffset"] = 16;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = 10;
+			["name"] = "disable things to avoid turning";
+			["time"] = 177.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 7;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "640f2648-1125-ce0c-a938-68189c273f44";
+			["uuid"] = "66169c34-db3e-50a3-8333-0788f4fc363c";
 		};
 		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 3;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[4] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 4;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2240;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2241;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[3] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2242;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[4] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2243;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable assist before teleport";
+			["time"] = 177.5;
+			["timeRange"] = true;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "d9315a4c-c52b-e417-aca8-d85bd4426b91";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 5;
+						[2] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 3;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 2;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 2;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable assist once stunned/dead";
+			["time"] = 177.5;
+			["timeRange"] = true;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "a54aefb0-349a-6737-bf76-74685e9ccd24";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable once stunned";
+			["time"] = 177.5;
+			["timeRange"] = true;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "403c7400-f712-743f-ac92-4025bcacc356";
+		};
+	};
+	[43] = {
+	};
+	[47] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable songs";
+			["time"] = 198.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 47;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0eae9bc8-fe19-b8f3-bbf8-97fe6c108351";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable dots";
+			["time"] = 198.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 47;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "19392d74-37f2-eb1a-87f3-a947a7a32500";
+		};
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -254,15 +1506,902 @@ local obj1 = {
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
-			["name"] = "disable bv";
-			["time"] = 191.7;
+			["name"] = "disable battle voice";
+			["time"] = 198.5;
 			["timeRange"] = false;
-			["timelineIndex"] = 43;
+			["timelineIndex"] = 47;
 			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "7b235355-8dc6-72c5-a4ac-aed8569f86a0";
+		};
+	};
+	[51] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable";
+			["time"] = 205.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ff567262-f945-b1f0-ade0-1e0db107dc29";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = true;
+			["name"] = "target nearest add";
+			["time"] = 205.6;
+			["timeRange"] = true;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "d2331392-0c14-081f-a4f3-b09c6bfc2421";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable pot";
+			["time"] = 205.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "51ed0034-83eb-6612-aa5a-13f5fd211639";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "enable smart jaws/dot";
+			["time"] = 205.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "fa79299c-0a09-9254-b3c6-e90418a6220f";
+		};
+	};
+	[58] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable things to avoid turning";
+			["time"] = 264.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 58;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 7;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "68fcc757-5ceb-5550-94a9-fed38d978c76";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 3;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[4] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 4;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2240;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2241;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[3] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2242;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[4] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 3;
+					["buffDuration"] = 1.5;
+					["buffID"] = 2243;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable assist before teleport";
+			["time"] = 264.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 58;
+			["timerEndOffset"] = 20;
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b40a7ffb-41bc-cca6-9918-8aabd3c1c29a";
+			["uuid"] = "36a7d06a-8ece-eeec-adfc-467f7fd8a45c";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 5;
+						[2] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if not FFXIV_Common_BotRunning then\
+		ml_global_information.ToggleRun()\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 3;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 2;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 2;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable assist once stunned/dead";
+			["time"] = 264.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 58;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "825aa4f8-fad4-2972-917c-b4ad6d625ce0";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartDoT";
+					["gVarIndex"] = 10;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_SmartJaws";
+					["gVarIndex"] = 11;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = 149;
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable once stunned";
+			["time"] = 264.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 58;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0f61b438-889d-49cd-90ae-f53638e1913d";
+		};
+	};
+	[62] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable battle voice";
+			["time"] = 291.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 62;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6c8a96cd-3bda-9b45-97d1-db4aa4a8fa03";
 		};
 	};
 	[71] = {
@@ -438,10 +2577,268 @@ local obj1 = {
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9cbef76c-14c9-667f-a54d-e47123277271";
+			["uuid"] = "90b4b156-7bc1-4185-ac97-8356bcff7908";
+		};
+	};
+	[74] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "enable battle voice";
+			["time"] = 510.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 74;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "b3da683b-9a55-f0da-b197-4731c4842342";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = true;
+			["name"] = "target boss";
+			["time"] = 510.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 74;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "e9ba9e53-b79a-ee3a-8d3f-ae61936cfd3a";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Potion";
+					["gVarIndex"] = 12;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "enable pot";
+			["time"] = 510.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 74;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6b394534-357e-d83c-bbe5-7eb3a48c4471";
 		};
 	};
 	[75] = {
+	};
+	[104] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable songs";
+			["time"] = 658.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 104;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "69b46353-cac3-9074-ae5d-db78a65426ba";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable dots";
+			["time"] = 658.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 104;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "fbbf0dd5-aa46-aeec-a636-c9e0da5f3d06";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "disable battle voice";
+			["time"] = 658.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 104;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0c8c4c40-c278-1a2b-bd67-46594fa2efc4";
+		};
+	};
+	[107] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -473,61 +2870,107 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target boss";
-			["time"] = 514.4;
+			["time"] = 673.5;
 			["timeRange"] = true;
-			["timelineIndex"] = 75;
-			["timerEndOffset"] = 2;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -6;
+			["timelineIndex"] = 107;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "03838b87-ccf1-685a-af4b-0a1dc0cc56f7";
+			["uuid"] = "4bae0b29-d986-a482-94c8-06529ddfb71a";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_Songs";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_DoTs";
+					["gVarIndex"] = 7;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "reenable";
+			["time"] = 673.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 107;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f5f3bc83-33ef-25c3-8a1a-52ebb26b9b48";
 		};
 	};
 	[108] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 5;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["name"] = "target boss";
-			["time"] = 677.6;
-			["timeRange"] = true;
-			["timelineIndex"] = 108;
-			["timerEndOffset"] = 2;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "ae9605aa-f37c-abfb-9a68-c0d971252dda";
-		};
 	};
 	[113] = {
 		[1] = {

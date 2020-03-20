@@ -256,6 +256,94 @@ local obj1 = {
 			["uuid"] = "6888c6f0-c6fa-9d46-974c-432f4aff4ea1";
 		};
 	};
+	[18] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "hold bv";
+			["time"] = 127.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 18;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "1f08e041-f9d7-4593-88c9-cb81456b25d3";
+		};
+	};
+	[20] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRequiem_BattleVoice";
+					["gVarIndex"] = 6;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["name"] = "unhold bv";
+			["time"] = 128.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 20;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f8a05051-f8f4-527c-9ba8-647e6035ea01";
+		};
+	};
 	[22] = {
 		[1] = {
 			["actions"] = {
@@ -433,6 +521,10 @@ local obj1 = {
 		};
 	};
 	[35] = {
+	};
+	[37] = {
+	};
+	[38] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -466,17 +558,17 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["name"] = "toggle off battle voice";
-			["time"] = 253;
+			["time"] = 263.4;
 			["timeRange"] = false;
-			["timelineIndex"] = 35;
+			["timelineIndex"] = 38;
 			["timerEndOffset"] = -0.84399999999999;
-			["timerOffset"] = -10;
+			["timerOffset"] = -20;
 			["timerStartOffset"] = -0.84399999999999;
 			["used"] = false;
-			["uuid"] = "5cbd2d61-1698-10a5-83bc-b0769dd4a41c";
+			["uuid"] = "7a777512-8127-213b-a626-fd4ac3b78016";
 		};
 	};
-	[37] = {
+	[39] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -510,14 +602,14 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["name"] = "toggle on battle voice";
-			["time"] = 262.3;
+			["time"] = 265.6;
 			["timeRange"] = false;
-			["timelineIndex"] = 37;
+			["timelineIndex"] = 39;
 			["timerEndOffset"] = -0.28500000000003;
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -0.28500000000003;
 			["used"] = false;
-			["uuid"] = "4b97851a-b003-dfc2-ad11-4a9c41cceec6";
+			["uuid"] = "9cae0d17-a80d-ac4e-91a5-02ce4738a2ed";
 		};
 	};
 	[41] = {
@@ -552,16 +644,16 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target boss";
 			["time"] = 267.3;
 			["timeRange"] = true;
 			["timelineIndex"] = 41;
-			["timerEndOffset"] = 5;
-			["timerOffset"] = -0.28500000000003;
-			["timerStartOffset"] = -2;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "4b600476-e2e0-12b6-8c60-18444a515ee7";
+			["uuid"] = "131c1e5e-c6e0-79bc-a41e-11acfadae5cf";
 		};
 	};
 	[52] = {
@@ -741,6 +833,10 @@ local obj1 = {
 		};
 	};
 	[68] = {
+	};
+	[70] = {
+	};
+	[71] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -774,17 +870,17 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["name"] = "toggle off battle voice";
-			["time"] = 420.1;
+			["time"] = 430.6;
 			["timeRange"] = false;
-			["timelineIndex"] = 68;
-			["timerEndOffset"] = -0.58500000000004;
-			["timerOffset"] = -10;
-			["timerStartOffset"] = -0.58500000000004;
+			["timelineIndex"] = 71;
+			["timerEndOffset"] = -0.84399999999999;
+			["timerOffset"] = -20;
+			["timerStartOffset"] = -0.84399999999999;
 			["used"] = false;
-			["uuid"] = "dde4704f-84c6-cd65-89d9-f673dc7a5b74";
+			["uuid"] = "4725dab2-fd51-5e1d-ac43-3818c7478872";
 		};
 	};
-	[70] = {
+	[72] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -818,14 +914,14 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["name"] = "toggle on battle voice";
-			["time"] = 429.4;
+			["time"] = 432.7;
 			["timeRange"] = false;
-			["timelineIndex"] = 70;
-			["timerEndOffset"] = -0.05699999999996;
-			["timerOffset"] = 1;
-			["timerStartOffset"] = -0.05699999999996;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = -0.28500000000003;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -0.28500000000003;
 			["used"] = false;
-			["uuid"] = "ecb8130a-907b-7bde-90c6-e5a945c36c27";
+			["uuid"] = "a468da72-ca1e-06ef-b64b-b2cc9d9d3d0e";
 		};
 	};
 	[73] = {
@@ -860,16 +956,16 @@ local obj1 = {
 			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
-			["loop"] = false;
+			["loop"] = true;
 			["name"] = "target boss";
 			["time"] = 434.4;
 			["timeRange"] = true;
 			["timelineIndex"] = 73;
-			["timerEndOffset"] = 5;
-			["timerOffset"] = -0.28500000000003;
-			["timerStartOffset"] = -2;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "26c06dda-1215-5119-8430-ea8e6c3549f5";
+			["uuid"] = "5f430909-d66a-9271-8f20-d3383e39fde8";
 		};
 	};
 	[81] = {
