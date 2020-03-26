@@ -1014,7 +1014,7 @@ self.used = table.size(markedClones) >= 4\
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRequiem_AOE";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
