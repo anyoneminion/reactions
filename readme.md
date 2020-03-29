@@ -1,7 +1,3 @@
-Discontinued my machinist reactions until further notice, expect more diverse stuff in the future. Check Rikudou's discord to get replacement machinist reactions in the meantime from user 'The', their reactions are the most up to date.
-
-I'm leaving up the machinist e8s right side adds profile, it's the exact same as The's profile outside of being optimized for the right side of adds phase. It'll still do the same optimization for getting out of adds phase with 100/100 guage, so make sure to disable those if your group is struggling with adds.
-
 # e6s-e8s read me
 
 These fights all use custom potion timing, if you don't want to waste pots while progging these fights, either stash your potions in your chocobo saddlebag or disable the reactions.
@@ -14,6 +10,8 @@ There is an option to disable assist 3 seconds before the teleports go out for A
 Make sure you're downloading the version of e8s that fits which side of adds phase you'll be doing. Outside of adds phase, they are the exact same profiles.
 
 Most of the timings are from The's profiles, so there shouldn't be much difference in changing between the machinist and bard profiles, outside of actually working for the respective class. Thank you 'The'.
+
+If you are doing the uptime strat for knockback mirrors, go to "535.1 - Reflected Wings (G)" on the timeline and check the box "Enabled" on the top right corner for ALL THREE reactions, ie 'disable assist', 'arm's length', and 'reenable assist'. This should work fully automated. If you have 30-100 ping, you can lower the timer offset to "-1.200" for safer usage. If you have above 180 ping, you can make it higher. I do not recommend going over -1.500. 
 
 # FAQ
 **Q: Where do I place the reactions?**
