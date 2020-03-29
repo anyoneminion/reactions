@@ -2991,7 +2991,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["timeRange"] = false;
 			["timelineIndex"] = 62;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -18;
+			["timerOffset"] = -13;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "620ac6fb-d018-4e97-969d-02b583a83939";
