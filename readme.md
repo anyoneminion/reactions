@@ -31,3 +31,7 @@ A: To be safe, after placing these files in the above folder, reload your LUA, t
 **Q: How do I download these?**
 
 A: Look for the button on the top right of this page called "Clone or download", click that and then "Download ZIP".
+
+**Q: Can you make reactions for X job?**
+
+A: Buy me the ACR :^)
