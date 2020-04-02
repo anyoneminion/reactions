@@ -2075,7 +2075,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 103;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
+			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "42dd07e1-4f20-7703-acd5-c53aee897743";
@@ -2147,56 +2147,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 107;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
+			["timerOffset"] = -28;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "7eb4a37e-1d4f-35ff-8a8a-574dfc2b5c6f";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable pot";
-			["time"] = 722.9;
-			["timeRange"] = false;
-			["timelineIndex"] = 107;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "744a0418-ae74-3dcd-9cef-b3c549955515";
 		};
 	};
 	[109] = {
@@ -2633,52 +2587,6 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "80dd1f1f-8eee-bdd9-a7e8-e797362baa05";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable pot";
-			["time"] = 798.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 115;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "41880fbe-3d05-64df-8d09-f18c1213430c";
 		};
 	};
 	[116] = {
