@@ -3,6 +3,78 @@ local multiRefObjects = {
 
 } -- multiRefObjects
 local obj1 = {
+	[2] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "data.currentQueenSetting = ACR_TensorMagnum_SummonQueen_Gauge\
+ACR_TensorMagnum_SummonQueen_Gauge = 80\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "p1 use queen at 80";
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "daff5435-e424-e389-b238-cee69bc63998";
+		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "-- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
+\
+-- this is only in effect for phase 1. you will be required to download riku's mch v6 general reactions and have it\
+\
+-- as your currently selected reactions in the general tab. ";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- read me --";
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "89474ed5-2890-c729-bac7-2be5ab5f063b";
+		};
+	};
 	[9] = {
 		[1] = {
 			["actions"] = {
@@ -186,6 +258,158 @@ self.used = true";
 	};
 	[11] = {
 	};
+	[30] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_Hypercharge";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_Hypercharge";
+					["gVarIndex"] = 3;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[4] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 6;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 2;
+					["gaugeValue"] = 80;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "hold hc for queen";
+			["time"] = 173;
+			["timeRange"] = true;
+			["timelineIndex"] = 30;
+			["timerEndOffset"] = 20;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "cbffb6fc-5b24-a4c6-b8f0-dbb7975f1eb0";
+		};
+	};
 	[31] = {
 	};
 	[32] = {
@@ -237,7 +461,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "36641d59-7bcb-1330-8454-54320308286e";
+			["uuid"] = "a8f0d2ee-6d36-a14c-bdb3-e0709eb6c124";
 		};
 		[2] = {
 			["actions"] = {
@@ -265,29 +489,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wildfire";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "aa1aa3c9-2ee3-7456-a16b-8aaa012134c4";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -321,15 +523,62 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hypercharge";
+			["name"] = "disable wf/hc";
 			["time"] = 201.5;
 			["timeRange"] = false;
 			["timelineIndex"] = 34;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "dc2f6d5b-a225-9e9b-996e-71c23a861553";
+			["uuid"] = "587d52ff-fe65-2835-9b13-30df44943081";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if data.currentQueenSetting ~= nil then\
+    ACR_TensorMagnum_SummonQueen_Gauge = data.currentQueenSetting\
+end\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "set use queen to normal";
+			["time"] = 201.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 34;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ea0d9724-fbce-e483-8d83-2da2ffb096b6";
 		};
 	};
 	[36] = {
@@ -1800,8 +2049,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1814,7 +2061,7 @@ self.used = true";
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "04164e02-8e93-416b-b122-02c93c100e46";
+			["uuid"] = "d35e1b17-97bd-7c54-97b0-d979d3bbfca7";
 		};
 		[2] = {
 			["actions"] = {
@@ -1846,8 +2093,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1860,7 +2105,7 @@ self.used = true";
 			["timerOffset"] = -1.2999999523163;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7782bd55-d7f4-13fd-ab9a-f98ac325d557";
+			["uuid"] = "461ae23e-2eab-291f-8500-c2cbd06fb8c6";
 		};
 		[3] = {
 			["actions"] = {
@@ -1989,8 +2234,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = false;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2003,7 +2246,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "8da8109b-4a8b-9942-a82f-bb8d97ad5485";
+			["uuid"] = "98bc49fd-ed08-8690-88df-4a659cadbcfa";
 		};
 		[4] = {
 			["actions"] = {
@@ -2012,6 +2255,7 @@ self.used = true";
 			};
 			["enabled"] = false;
 			["execute"] = "-- this reaction is untested and experimental, in theory the timings should be fine\
+\
 -- if AL goes off too late try changing -1.4 to -1.5 and then -1.6 if still not enough";
 			["executeType"] = 2;
 			["loop"] = false;
@@ -2024,7 +2268,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "cf641912-6770-2756-954a-4d326a2a59cb";
+			["uuid"] = "f1c4664e-25cc-1e53-acc1-71cc872be1b3";
 		};
 	};
 	[73] = {

@@ -154,27 +154,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 119.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 16;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "eefb6dfe-0020-56d4-a627-fa1fb6fdadc1";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -202,21 +182,23 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 119.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 16;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ad26294a-8e76-a9de-919f-9bf4531f360e";
+			["uuid"] = "d9795f57-28d4-4d5b-a5d7-519f94e8fabb";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -744,27 +726,7 @@ self.used = table.size(markedClones) >= 4\
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 240.9;
-			["timeRange"] = false;
-			["timelineIndex"] = 36;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "4a795e0c-e874-e3c0-9c2e-b3fd799c387f";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -792,21 +754,23 @@ self.used = table.size(markedClones) >= 4\
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 240.9;
 			["timeRange"] = false;
 			["timelineIndex"] = 36;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6210e307-2d17-9187-8067-f93855051e96";
+			["uuid"] = "a324affc-d6b5-b4a7-8f9a-24c499c706c1";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -826,7 +790,7 @@ self.used = table.size(markedClones) >= 4\
 			["used"] = false;
 			["uuid"] = "5b8f8a8d-cea5-85ba-bc55-d8b5629bf2ef";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -894,7 +858,7 @@ self.used = table.size(markedClones) >= 4\
 			["used"] = false;
 			["uuid"] = "429d24cd-a9d2-26d7-8391-4c996c1c7d65";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1681,27 +1645,7 @@ self.used = table.size(markedClones) >= 4\
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 303.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 56;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3fc813e5-d4fa-0a72-ac04-4d2a0a609fa0";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -1729,21 +1673,23 @@ self.used = table.size(markedClones) >= 4\
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 303.3;
 			["timeRange"] = false;
 			["timelineIndex"] = 56;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6bc44c0f-11c7-16b2-a7e2-dd4dc02a1fba";
+			["uuid"] = "8f9090ab-5434-edb7-85d6-b3ff8f314ae5";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -1763,7 +1709,7 @@ self.used = table.size(markedClones) >= 4\
 			["used"] = false;
 			["uuid"] = "eb74ec41-f5b1-54ff-8949-2e90f00c3ce5";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1831,7 +1777,7 @@ self.used = table.size(markedClones) >= 4\
 			["used"] = false;
 			["uuid"] = "037d1a88-771c-6f55-bc5e-33d3bc7195bb";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -2379,27 +2325,7 @@ self.used = table.size(markedClones) >= 4";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 436.7;
-			["timeRange"] = false;
-			["timelineIndex"] = 78;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "170c252b-164f-23aa-8d1f-da286231b611";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -2427,21 +2353,23 @@ self.used = table.size(markedClones) >= 4";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 436.7;
 			["timeRange"] = false;
 			["timelineIndex"] = 78;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d252393d-8f58-06c5-af93-9efbcd5cff7a";
+			["uuid"] = "2ce0a73b-4fe8-a0b1-96bf-935b85fb52d1";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -2461,7 +2389,7 @@ self.used = table.size(markedClones) >= 4";
 			["used"] = false;
 			["uuid"] = "6f51112e-07ba-2086-b16d-261314926efd";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4;
@@ -2539,7 +2467,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "3b6a7575-5aff-9965-80b3-8239e2e2c725";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -2607,7 +2535,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "686e5e78-aa6a-53b9-a292-ccd0913f17c4";
 		};
-		[7] = {
+		[6] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;

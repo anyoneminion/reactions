@@ -289,27 +289,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 127.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 18;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "19537148-491c-5f41-a82b-b66bd3399fff";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -341,15 +321,15 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 127.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 18;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "79867c5c-4f9d-445c-9fa7-676218d5b03f";
+			["uuid"] = "19537148-491c-5f41-a82b-b66bd3399fff";
 		};
 	};
 	[19] = {
@@ -676,27 +656,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 263.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 38;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "d2284cd3-f694-8d0a-9758-3028c507087e";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -724,21 +684,23 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 263.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 38;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "aada88be-899c-b925-86c8-c508a1289fc3";
+			["uuid"] = "87ecaed3-738a-e1c4-a811-20f7ba8fa65f";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -758,7 +720,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "aa68880b-0866-9d40-9cb4-f71cf93386d6";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -826,7 +788,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "1db4cc14-c1f8-ffc0-83de-d706f0d7f017";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1522,27 +1484,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 430.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 71;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "68495157-b1dd-6b57-ac28-49eda17702b0";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -1570,21 +1512,23 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable wf/hc";
 			["time"] = 430.6;
 			["timeRange"] = false;
 			["timelineIndex"] = 71;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "0ab2cd30-695e-7717-8df0-1568b2d48f87";
+			["uuid"] = "6c1fe5e9-4f87-c3cc-90a2-09ae55dcd42e";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -1604,7 +1548,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "3513e033-5ad1-0aff-92e6-cc66b47da6d9";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1672,7 +1616,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "fea2b3be-4a5b-31bb-a6b1-e2485f90c8d4";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
