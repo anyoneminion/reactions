@@ -921,7 +921,7 @@ self.used = table.size(markedClones) >= 4\
 			["timeRange"] = false;
 			["timelineIndex"] = 36;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
+			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "5b8f8a8d-cea5-85ba-bc55-d8b5629bf2ef";
@@ -1840,7 +1840,7 @@ self.used = table.size(markedClones) >= 4\
 			["timeRange"] = false;
 			["timelineIndex"] = 56;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
+			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "eb74ec41-f5b1-54ff-8949-2e90f00c3ce5";
@@ -2520,7 +2520,7 @@ self.used = table.size(markedClones) >= 4";
 			["timeRange"] = false;
 			["timelineIndex"] = 78;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
+			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "6f51112e-07ba-2086-b16d-261314926efd";
