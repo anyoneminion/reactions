@@ -232,15 +232,15 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable reasemble";
+			["name"] = "no reass";
 			["time"] = 119.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 16;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
+			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2ec7e983-067e-76f1-bef0-1d661325a16f";
+			["uuid"] = "9de96ee3-4824-218b-837f-054554d62d03";
 		};
 		[4] = {
 			["actions"] = {
@@ -305,7 +305,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 16;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "346f002f-ee7c-9438-b769-84f646e39087";
@@ -908,6 +908,30 @@ self.used = table.size(markedClones) >= 4\
 		};
 		[3] = {
 			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_Reassemble";
+					["gVarIndex"] = 4;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
 			};
 			["conditions"] = {
 			};
@@ -916,7 +940,7 @@ self.used = table.size(markedClones) >= 4\
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable rea";
+			["name"] = "no reass";
 			["time"] = 240.9;
 			["timeRange"] = false;
 			["timelineIndex"] = 36;
@@ -924,7 +948,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5b8f8a8d-cea5-85ba-bc55-d8b5629bf2ef";
+			["uuid"] = "013a07c4-2247-04b6-a1f7-0c5753c99d01";
 		};
 		[4] = {
 			["actions"] = {
@@ -989,7 +1013,7 @@ self.used = table.size(markedClones) >= 4\
 			["timeRange"] = false;
 			["timelineIndex"] = 36;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "1a67d380-8725-d4e4-a7f7-f906aa4276dd";
@@ -1827,6 +1851,30 @@ self.used = table.size(markedClones) >= 4\
 		};
 		[3] = {
 			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_Reassemble";
+					["gVarIndex"] = 4;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
 			};
 			["conditions"] = {
 			};
@@ -1835,7 +1883,7 @@ self.used = table.size(markedClones) >= 4\
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable rea";
+			["name"] = "no reass";
 			["time"] = 303.3;
 			["timeRange"] = false;
 			["timelineIndex"] = 56;
@@ -1843,7 +1891,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "eb74ec41-f5b1-54ff-8949-2e90f00c3ce5";
+			["uuid"] = "541e8353-f2e3-4707-846e-408699f5e4ae";
 		};
 		[4] = {
 			["actions"] = {
@@ -1908,7 +1956,7 @@ self.used = table.size(markedClones) >= 4\
 			["timeRange"] = false;
 			["timelineIndex"] = 56;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "77484041-4fcb-738c-b048-1de0669218f0";
@@ -2507,26 +2555,6 @@ self.used = table.size(markedClones) >= 4";
 		};
 		[3] = {
 			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable rea";
-			["time"] = 436.7;
-			["timeRange"] = false;
-			["timelineIndex"] = 78;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "6f51112e-07ba-2086-b16d-261314926efd";
-		};
-		[4] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
@@ -2603,6 +2631,50 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "3b6a7575-5aff-9965-80b3-8239e2e2c725";
 		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_Reassemble";
+					["gVarIndex"] = 4;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "no reass";
+			["time"] = 436.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 78;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9a599342-8a2d-2e40-ad17-e49c9ff5c377";
+		};
 		[5] = {
 			["actions"] = {
 				[1] = {
@@ -2666,7 +2738,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 78;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "98e5e8f1-feea-860d-bb8b-b20384210135";
