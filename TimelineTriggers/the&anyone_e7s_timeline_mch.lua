@@ -2826,6 +2826,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_SummonQueen";
@@ -2846,23 +2847,53 @@ This way you keep a higher uptime and this is proper legit behavior.\
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 1;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 3;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 15;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable queen";
+			["name"] = "disable queen at 15% hp";
 			["time"] = 291.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 62;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -20;
-			["timerStartOffset"] = 0;
+			["timerEndOffset"] = 30;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "9757eced-b9e0-fd1d-91e9-ec1d3392e88d";
+			["uuid"] = "34980f98-8389-cb0f-bead-caba2fe87d90";
 		};
 		[2] = {
 			["actions"] = {
@@ -2872,6 +2903,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_CD";
@@ -2890,34 +2922,13 @@ This way you keep a higher uptime and this is proper legit behavior.\
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 291.8;
-			["timeRange"] = false;
-			["timelineIndex"] = 62;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -20;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "42edf227-77ba-0edc-89a2-9d04b79efd49";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_Hypercharge";
@@ -2938,25 +2949,55 @@ This way you keep a higher uptime and this is proper legit behavior.\
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 1;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 3;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 8;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hc";
+			["name"] = "disable hypercharge/wf at 8% hp";
 			["time"] = 291.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 62;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -13;
-			["timerStartOffset"] = 0;
+			["timerEndOffset"] = 30;
+			["timerOffset"] = -30;
+			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "620ac6fb-d018-4e97-969d-02b583a83939";
+			["uuid"] = "511b357a-e299-706e-a864-3a4bd3b52887";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -2964,6 +3005,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_AirAnchor";
@@ -2984,51 +3026,61 @@ This way you keep a higher uptime and this is proper legit behavior.\
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 1;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 3;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 3;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable air anchor";
+			["name"] = "disable air anchor at 3% hp";
 			["time"] = 291.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 62;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 40;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "5529a05c-a19f-112b-9e6e-c49e8561d410";
-		};
-		[5] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable drill late";
-			["time"] = 291.8;
-			["timeRange"] = false;
-			["timelineIndex"] = 62;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 20;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "92a4e8b8-0bea-9691-9cb7-a968bbdad47e";
+			["uuid"] = "2869b7d0-401b-092a-ad88-20a444f11bbb";
 		};
 	};
 	[71] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
+					["aType"] = 1;
+					["actionID"] = 16889;
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
@@ -3198,7 +3250,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 71;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
+			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "fdf2e96e-16f5-4585-9e66-745cb41c1356";
