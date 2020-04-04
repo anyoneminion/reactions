@@ -16,11 +16,7 @@ If you are doing the uptime strat for knockback mirrors, go to "535.1 - Reflecte
 # FAQ
 **Q: Where do I place the reactions?**
 
-A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions\TimelineTriggers
-
-**Q: Where do I place dotblacklist.lua?**
-
-A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorRequiem
+A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions
 
 **Q: My reactions aren't working?**
 
