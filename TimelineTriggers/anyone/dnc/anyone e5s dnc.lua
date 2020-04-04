@@ -7,9 +7,10 @@ local obj1 = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
@@ -18,9 +19,9 @@ local obj1 = {
 						[4] = 4;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_Troubadour";
+					["gVar"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -38,7 +39,7 @@ local obj1 = {
 			["conditions"] = {
 				[1] = {
 					["actionCDValue"] = 1;
-					["actionID"] = 7405;
+					["actionID"] = 16012;
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
@@ -166,11 +167,13 @@ local obj1 = {
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "Troubador";
+			["name"] = "Shield Samba";
 			["time"] = 63.3;
 			["timeRange"] = false;
 			["timelineIndex"] = 7;
@@ -178,23 +181,24 @@ local obj1 = {
 			["timerOffset"] = -4;
 			["timerStartOffset"] = -0.33199999999999;
 			["used"] = false;
-			["uuid"] = "62a0b26a-7844-a741-bb64-389c4dda2739";
+			["uuid"] = "7749835b-edc1-87bd-ad7a-f29ff50bbb02";
 		};
 	};
 	[14] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_ArmsLength";
-					["gVarIndex"] = 2;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -207,7 +211,7 @@ local obj1 = {
 					["targetType"] = 1;
 					["untarget"] = false;
 					["used"] = false;
-					["variableTogglesType"] = 2;
+					["variableTogglesType"] = 1;
 				};
 			};
 			["conditions"] = {
@@ -253,51 +257,29 @@ local obj1 = {
 			["time"] = 96.2;
 			["timeRange"] = false;
 			["timelineIndex"] = 14;
-			["timerEndOffset"] = -0.95;
+			["timerEndOffset"] = 0;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = -0.95;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6888c6f0-c6fa-9d46-974c-432f4aff4ea1";
+			["uuid"] = "d2acf2e3-e0dd-c80e-a212-24fd76108918";
 		};
 	};
 	[18] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = false\
+SallyDNC.SkillSettings.TechStep.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -319,7 +301,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "hold bv/rs";
+			["name"] = "disable standard/tech";
+			["time"] = 127.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 18;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6cf9eb51-e861-4c4e-b38e-3d26f1155fd4";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = false\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable devilment";
 			["time"] = 127.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 18;
@@ -327,45 +354,23 @@ local obj1 = {
 			["timerOffset"] = -20;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1f08e041-f9d7-4593-88c9-cb81456b25d3";
+			["uuid"] = "c6ad52a8-9b95-cd42-a0ef-6f3125e22dfc";
 		};
 	};
 	[20] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = true\
+SallyDNC.SkillSettings.TechStep.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -389,7 +394,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "unhold";
+			["name"] = "enable standard/tech";
+			["time"] = 128.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 20;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -1;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "04e1131a-fa61-3396-8cb8-2447e30c3ac7";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable devilment";
 			["time"] = 128.9;
 			["timeRange"] = false;
 			["timelineIndex"] = 20;
@@ -397,16 +447,172 @@ local obj1 = {
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f8a05051-f8f4-527c-9ba8-647e6035ea01";
+			["uuid"] = "d9b38dc5-8b72-9efb-9b4e-79b550a048d4";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 15997;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 15997;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "precast standard if up";
+			["time"] = 128.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 20;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "a4f3132c-135b-fa96-ac22-82aae95fa214";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 5;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "if not Player:GetTarget() then return true end\
+return false";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = true;
+			["luaReturnsAction"] = false;
+			["name"] = "target boss";
+			["time"] = 128.9;
+			["timeRange"] = true;
+			["timelineIndex"] = 20;
+			["timerEndOffset"] = 8;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = -8;
+			["used"] = false;
+			["uuid"] = "29321ab2-7dcb-db49-b6a3-c7300d1d524d";
 		};
 	};
 	[22] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
@@ -415,9 +621,9 @@ local obj1 = {
 						[4] = 4;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_Troubadour";
+					["gVar"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -435,7 +641,7 @@ local obj1 = {
 			["conditions"] = {
 				[1] = {
 					["actionCDValue"] = 1;
-					["actionID"] = 7405;
+					["actionID"] = 16012;
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
@@ -563,63 +769,39 @@ local obj1 = {
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "Troub";
+			["name"] = "Shield Samba";
 			["time"] = 148.3;
 			["timeRange"] = false;
 			["timelineIndex"] = 22;
-			["timerEndOffset"] = -0.37800000000001;
+			["timerEndOffset"] = -0.33199999999999;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = -0.37800000000001;
+			["timerStartOffset"] = -0.33199999999999;
 			["used"] = false;
-			["uuid"] = "2a4a7c38-17bf-455d-ac2c-48f067e5799b";
+			["uuid"] = "62f79e95-0e13-4ae9-8ae7-df2ff002259e";
 		};
-	};
-	[35] = {
-	};
-	[37] = {
 	};
 	[38] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = false\
+SallyDNC.SkillSettings.TechStep.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -641,7 +823,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "hold bv/rs";
+			["name"] = "disable standard/tech";
+			["time"] = 263.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8028d6af-5a05-7338-b197-42cb8b6ef6a3";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = false\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable devilment";
 			["time"] = 263.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 38;
@@ -649,45 +876,23 @@ local obj1 = {
 			["timerOffset"] = -20;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4f1186c7-5213-20af-9228-2615ecaa473b";
+			["uuid"] = "1253332e-9a0e-621d-a695-591b3ecdedc5";
 		};
 	};
 	[39] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = true\
+SallyDNC.SkillSettings.TechStep.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -711,7 +916,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "unhold";
+			["name"] = "enable standard/tech";
+			["time"] = 265.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 39;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -1;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f4d9c8de-d274-6f86-a300-65eb909090d4";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable devilment";
 			["time"] = 265.6;
 			["timeRange"] = false;
 			["timelineIndex"] = 39;
@@ -719,11 +969,86 @@ local obj1 = {
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "02c15c05-0901-56ef-8950-c39a1f3816a6";
+			["uuid"] = "5b888a8e-b427-7765-acb5-338cb785ee2c";
 		};
-	};
-	[41] = {
-		[1] = {
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 15997;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 15997;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "precast standard if up";
+			["time"] = 265.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 39;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0ac5d193-ec0c-f515-ab51-5a0938dbc6c0";
+		};
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -731,6 +1056,7 @@ local obj1 = {
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "";
@@ -751,6 +1077,39 @@ local obj1 = {
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "if not Player:GetTarget() then return true end\
+return false";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
 			["enabled"] = true;
 			["execute"] = "";
@@ -758,23 +1117,26 @@ local obj1 = {
 			["loop"] = true;
 			["luaReturnsAction"] = false;
 			["name"] = "target boss";
-			["time"] = 267.3;
+			["time"] = 265.6;
 			["timeRange"] = true;
-			["timelineIndex"] = 41;
-			["timerEndOffset"] = 3;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
+			["timelineIndex"] = 39;
+			["timerEndOffset"] = 8;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "131c1e5e-c6e0-79bc-a41e-11acfadae5cf";
+			["uuid"] = "37d092a0-1322-ab14-b297-3c1bcc24f272";
 		};
+	};
+	[41] = {
 	};
 	[52] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
@@ -783,9 +1145,9 @@ local obj1 = {
 						[4] = 4;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_Troubadour";
+					["gVar"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -803,7 +1165,7 @@ local obj1 = {
 			["conditions"] = {
 				[1] = {
 					["actionCDValue"] = 1;
-					["actionID"] = 7405;
+					["actionID"] = 16012;
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
@@ -931,63 +1293,39 @@ local obj1 = {
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "Troub";
+			["name"] = "Shield Samba";
 			["time"] = 317.4;
 			["timeRange"] = false;
 			["timelineIndex"] = 52;
-			["timerEndOffset"] = -0.087999999999965;
+			["timerEndOffset"] = -0.33199999999999;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = -0.087999999999965;
+			["timerStartOffset"] = -0.33199999999999;
 			["used"] = false;
-			["uuid"] = "6ecf4055-3ef9-f4f5-b9b1-97a170bc68c1";
+			["uuid"] = "113b1488-f09b-1de1-9ac5-1c13718e02b4";
 		};
-	};
-	[68] = {
-	};
-	[70] = {
 	};
 	[71] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = false\
+SallyDNC.SkillSettings.TechStep.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -1009,7 +1347,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "hold bv/rs";
+			["name"] = "disable standard/tech";
+			["time"] = 430.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 71;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c4bde156-9989-9b36-b312-645ba329baf8";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = false\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable devilment";
 			["time"] = 430.6;
 			["timeRange"] = false;
 			["timelineIndex"] = 71;
@@ -1017,45 +1400,23 @@ local obj1 = {
 			["timerOffset"] = -20;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e47a3a1c-1d90-7559-92ea-7f3140f5eff4";
+			["uuid"] = "df205e5a-bdef-50c7-92ec-73521943a45e";
 		};
 	};
 	[72] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = true\
+SallyDNC.SkillSettings.TechStep.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_BattleVoice";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -1079,7 +1440,52 @@ local obj1 = {
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "unhold";
+			["name"] = "enable standard/tech";
+			["time"] = 432.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -1;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "4c844e77-4990-feca-b8dc-5e928bf75b37";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable devilment";
 			["time"] = 432.7;
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
@@ -1087,11 +1493,86 @@ local obj1 = {
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "77492d55-7bda-ea2c-b30a-c2b5a171d340";
+			["uuid"] = "21bf4135-2046-b5aa-8092-50c27befc84c";
 		};
-	};
-	[73] = {
-		[1] = {
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 15997;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 15997;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "precast standard if up";
+			["time"] = 432.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c1718205-a4ad-972a-a4b0-46bc1ed390d1";
+		};
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -1099,6 +1580,7 @@ local obj1 = {
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "";
@@ -1119,6 +1601,39 @@ local obj1 = {
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "if not Player:GetTarget() then return true end\
+return false";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
 			["enabled"] = true;
 			["execute"] = "";
@@ -1126,30 +1641,33 @@ local obj1 = {
 			["loop"] = true;
 			["luaReturnsAction"] = false;
 			["name"] = "target boss";
-			["time"] = 434.4;
+			["time"] = 432.7;
 			["timeRange"] = true;
-			["timelineIndex"] = 73;
-			["timerEndOffset"] = 3;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = 8;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "5f430909-d66a-9271-8f20-d3383e39fde8";
+			["uuid"] = "c97e92a4-c724-4583-8211-e4c970453a69";
 		};
+	};
+	[73] = {
 	};
 	[81] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.Armslength.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_ArmsLength";
-					["gVarIndex"] = 2;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -1162,7 +1680,7 @@ local obj1 = {
 					["targetType"] = 1;
 					["untarget"] = false;
 					["used"] = false;
-					["variableTogglesType"] = 2;
+					["variableTogglesType"] = 1;
 				};
 			};
 			["conditions"] = {
@@ -1208,20 +1726,21 @@ local obj1 = {
 			["time"] = 477;
 			["timeRange"] = false;
 			["timelineIndex"] = 81;
-			["timerEndOffset"] = -0.70299999999997;
+			["timerEndOffset"] = 0;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = -0.70299999999997;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "28dc4ca8-827a-d9fe-9c1f-b3b6ec63ed26";
+			["uuid"] = "5acbfa48-486d-deec-9c3f-cce42cd39d4e";
 		};
 	};
 	[90] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
@@ -1230,9 +1749,9 @@ local obj1 = {
 						[4] = 4;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRequiem_Hotbar_Troubadour";
+					["gVar"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -1250,7 +1769,7 @@ local obj1 = {
 			["conditions"] = {
 				[1] = {
 					["actionCDValue"] = 1;
-					["actionID"] = 7405;
+					["actionID"] = 16012;
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
@@ -1378,19 +1897,21 @@ local obj1 = {
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "Troub";
+			["name"] = "Shield Samba";
 			["time"] = 523.2;
 			["timeRange"] = false;
 			["timelineIndex"] = 90;
-			["timerEndOffset"] = -0.075000000000045;
+			["timerEndOffset"] = -0.33199999999999;
 			["timerOffset"] = -4;
-			["timerStartOffset"] = -0.075000000000045;
+			["timerStartOffset"] = -0.33199999999999;
 			["used"] = false;
-			["uuid"] = "4a66f53e-9b29-9375-9cf6-69f29a3a09d7";
+			["uuid"] = "9b8a81b8-56e6-3c52-bcac-8cd6749c0d5d";
 		};
 	};
 	["mapID"] = 906;
