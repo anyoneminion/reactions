@@ -80,7 +80,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4cae668a-db62-14e3-9385-178b8a6e7503";
+			["uuid"] = "d6dafee5-dbf1-73d2-a397-fae52881f49a";
 		};
 	};
 	[16] = {
@@ -126,7 +126,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c94e84c5-3d04-88b6-88d6-1be629a032a6";
+			["uuid"] = "c958a0ea-c024-33cf-9a55-9272a6eb2d33";
 		};
 		[2] = {
 			["actions"] = {
@@ -196,7 +196,7 @@ self.used = true";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d9795f57-28d4-4d5b-a5d7-519f94e8fabb";
+			["uuid"] = "93a98228-905d-b247-9476-47a0727642b7";
 		};
 		[3] = {
 			["actions"] = {
@@ -240,7 +240,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9de96ee3-4824-218b-837f-054554d62d03";
+			["uuid"] = "353a2aa0-5c78-7a7c-b226-5bf3c38a7936";
 		};
 		[4] = {
 			["actions"] = {
@@ -308,7 +308,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "346f002f-ee7c-9438-b769-84f646e39087";
+			["uuid"] = "2cc425b1-40ea-a11c-9ac7-925d389c0e49";
 		};
 		[5] = {
 			["actions"] = {
@@ -376,7 +376,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ec655d53-5f27-6815-ac7b-2efc57328e77";
+			["uuid"] = "cb15d45a-c236-ae9b-9f04-2bf14583136e";
 		};
 	};
 	[17] = {
@@ -496,7 +496,7 @@ self.used = true";
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "14fa4e61-8dd4-ce4b-bf33-4d2e9248ef82";
+			["uuid"] = "eb812460-28fc-aa8d-89e5-dc7791885c98";
 		};
 		[2] = {
 			["actions"] = {
@@ -540,7 +540,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "5a7a4d0e-6ab5-005c-a949-e73a8c127d89";
+			["uuid"] = "9a7ef569-48e5-186d-bb3f-4c52bdf93999";
 		};
 		[3] = {
 			["actions"] = {
@@ -617,7 +617,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ac670251-0494-24bd-ad24-2aa607ab9175";
+			["uuid"] = "a6fb37cf-a08e-666e-aca7-7ef05689215a";
 		};
 		[4] = {
 			["actions"] = {
@@ -751,7 +751,7 @@ self.used = true";
 			["timerOffset"] = -2.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "28bbeca9-7d80-c069-b3b8-a4d331f878cf";
+			["uuid"] = "e3e25f6c-0e64-259b-81c0-f4064a7a9a8e";
 		};
 	};
 	[26] = {
@@ -786,7 +786,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b34e6050-c115-1c47-a30b-e43e7af803cc";
+			["uuid"] = "ec66697a-a8ab-2b9b-b596-10c7fd30962b";
 		};
 	};
 	[35] = {
@@ -834,7 +834,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e7e8203a-5e88-a0e3-8b36-e1be0fd25189";
+			["uuid"] = "7788c529-49e7-517b-9611-74ab764bc33a";
 		};
 		[2] = {
 			["actions"] = {
@@ -904,7 +904,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a324affc-d6b5-b4a7-8f9a-24c499c706c1";
+			["uuid"] = "34d8aa34-0518-b888-9cd6-6c17a286d770";
 		};
 		[3] = {
 			["actions"] = {
@@ -948,7 +948,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "013a07c4-2247-04b6-a1f7-0c5753c99d01";
+			["uuid"] = "8e6e00d9-d6f0-f108-9466-c8bfbca8afad";
 		};
 		[4] = {
 			["actions"] = {
@@ -1016,7 +1016,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1a67d380-8725-d4e4-a7f7-f906aa4276dd";
+			["uuid"] = "4113721a-4991-1eb7-b498-ccf6b04ea7af";
 		};
 		[5] = {
 			["actions"] = {
@@ -1084,7 +1084,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6d5e6c63-31e8-3c7e-9b16-665f80ff5203";
+			["uuid"] = "0fb3e511-5d79-9804-a2b0-032becd5a71e";
 		};
 	};
 	[37] = {
@@ -1154,7 +1154,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "06fa6abd-1e02-1fd5-8bff-781e95fffcc3";
+			["uuid"] = "650df7bd-c01c-6640-93d2-a741fbc878d7";
 		};
 		[2] = {
 			["actions"] = {
@@ -1198,7 +1198,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "5159347a-21de-ed81-ad70-1575b538cf28";
+			["uuid"] = "b69ec84c-5bbd-6b7c-8c8d-4b9aafe4f5c6";
 		};
 		[3] = {
 			["actions"] = {
@@ -1275,7 +1275,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4a465adc-dc85-e2cf-852d-e9de899227d3";
+			["uuid"] = "dcc985b1-f52c-5263-87e9-33701694f6b4";
 		};
 		[4] = {
 			["actions"] = {
@@ -1409,7 +1409,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3da6dab7-042d-9948-831a-b00f253685a0";
+			["uuid"] = "06b67246-b9b4-5e30-a122-ddf56dfc1633";
 		};
 	};
 	[38] = {
@@ -1729,7 +1729,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "db4a03ba-1d7e-c124-9a3a-02f379976f5f";
+			["uuid"] = "9c016ce0-fa36-9069-950c-8bb17e47de5b";
 		};
 	};
 	[55] = {
@@ -1777,7 +1777,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f31d8fe2-492a-4cdb-8c9b-d35ed78253f9";
+			["uuid"] = "c2b24b01-a12c-8a18-85ae-14835db74ddb";
 		};
 		[2] = {
 			["actions"] = {
@@ -1847,7 +1847,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8f9090ab-5434-edb7-85d6-b3ff8f314ae5";
+			["uuid"] = "d5a65880-2658-97b9-be73-ef1dfa2f8b94";
 		};
 		[3] = {
 			["actions"] = {
@@ -1891,7 +1891,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "541e8353-f2e3-4707-846e-408699f5e4ae";
+			["uuid"] = "4ef6db77-2c5b-d6b7-b406-7e11ae90be72";
 		};
 		[4] = {
 			["actions"] = {
@@ -1959,7 +1959,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "77484041-4fcb-738c-b048-1de0669218f0";
+			["uuid"] = "7ec851aa-4a8d-5d38-9f19-2e166093efed";
 		};
 		[5] = {
 			["actions"] = {
@@ -2027,7 +2027,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "034125f3-654a-9c14-98db-cec64e1e6b37";
+			["uuid"] = "10e84f4e-5af8-f0f5-affa-52cb35576211";
 		};
 	};
 	[58] = {
@@ -2147,7 +2147,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c31b6e73-663a-e7bf-a91e-280dea1f7ded";
+			["uuid"] = "4a19b15c-11f9-656c-8b17-d150c8d9d327";
 		};
 		[2] = {
 			["actions"] = {
@@ -2191,7 +2191,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "842ac774-9ca4-b166-ac95-0b9b5d70eafc";
+			["uuid"] = "fe18ea1b-94aa-395b-a27e-d8681d23f116";
 		};
 		[3] = {
 			["actions"] = {
@@ -2268,7 +2268,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b81e036c-0611-ec44-8656-36f7a586c0c4";
+			["uuid"] = "60c4add6-08a2-4c0b-a39e-0c7b0b91f11e";
 		};
 		[4] = {
 			["actions"] = {
@@ -2402,7 +2402,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "085e6bb7-0a05-d9c7-a0f7-a168627510f4";
+			["uuid"] = "86931755-e688-d34c-a696-5276d04204ef";
 		};
 	};
 	[69] = {
@@ -2435,7 +2435,7 @@ self.used = table.size(markedClones) >= 4";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8cc65abc-3d5c-5bd0-b3eb-976423f04b1e";
+			["uuid"] = "36a82022-e6e8-3094-a4fa-7f3e67e89d8d";
 		};
 	};
 	[78] = {
@@ -2481,7 +2481,7 @@ self.used = table.size(markedClones) >= 4";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a26e2f36-7ed1-7c14-b74c-26f3e5584345";
+			["uuid"] = "70c20f1c-5c7f-88a6-b68b-24dc0c26da7c";
 		};
 		[2] = {
 			["actions"] = {
@@ -2551,7 +2551,7 @@ self.used = table.size(markedClones) >= 4";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2ce0a73b-4fe8-a0b1-96bf-935b85fb52d1";
+			["uuid"] = "3269c81e-d4e6-604a-bfae-44c92081a63c";
 		};
 		[3] = {
 			["actions"] = {
@@ -2629,7 +2629,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3b6a7575-5aff-9965-80b3-8239e2e2c725";
+			["uuid"] = "06832be0-c133-20da-9909-bcb024b2eda8";
 		};
 		[4] = {
 			["actions"] = {
@@ -2673,7 +2673,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9a599342-8a2d-2e40-ad17-e49c9ff5c377";
+			["uuid"] = "26e7e9e1-b151-9d22-bfe6-6695ceedaec9";
 		};
 		[5] = {
 			["actions"] = {
@@ -2741,7 +2741,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "98e5e8f1-feea-860d-bb8b-b20384210135";
+			["uuid"] = "5295155e-a035-5c1a-8bc1-a11ef1fd610b";
 		};
 		[6] = {
 			["actions"] = {
@@ -2755,7 +2755,7 @@ self.used = true";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_Drill";
 					["gVarIndex"] = 8;
-					["gVarValue"] = 2;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -2779,7 +2779,7 @@ self.used = true";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_AirAnchor";
 					["gVarIndex"] = 10;
-					["gVarValue"] = 2;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -2809,7 +2809,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "569c154d-6123-d745-a18b-fe5d04b02e56";
+			["uuid"] = "2c8be9a0-36d6-6cf2-a0ad-1bafdb753b94";
 		};
 	};
 	[79] = {
@@ -2927,7 +2927,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a42fff0b-a909-243e-b934-3dddb0a33976";
+			["uuid"] = "6ec6730e-b9d5-875a-b5d5-055c9874b67e";
 		};
 		[2] = {
 			["actions"] = {
@@ -2971,7 +2971,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "6c611743-22f3-29bf-89ec-abd9e2cc2860";
+			["uuid"] = "023859fb-b12e-f85d-b7e2-0c276d4c66a7";
 		};
 		[3] = {
 			["actions"] = {
@@ -3048,7 +3048,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6f5d2f96-b685-b4ae-afd3-35bccc325978";
+			["uuid"] = "ebfbe02a-8f64-8cf9-a819-0040643b3871";
 		};
 		[4] = {
 			["actions"] = {
@@ -3182,7 +3182,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e878385d-4f83-793d-81c4-61e39a356726";
+			["uuid"] = "b3d00bb0-f3a2-5ce3-a4e4-b6cdb36f90c4";
 		};
 	};
 	[97] = {
@@ -3361,7 +3361,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9d3ff068-c225-7415-8d9d-edc597a60f41";
+			["uuid"] = "c6d5ff9a-f87a-4d11-baa9-2438599c7ae3";
 		};
 	};
 	[114] = {
