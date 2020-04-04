@@ -1164,7 +1164,7 @@ self.used = true";
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or target.contentid ~= 9320";
+return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["conditionType"] = 1;
 					["contentid"] = -1;
 					["enmityValue"] = 0;
@@ -1425,7 +1425,7 @@ end";
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or target.contentid ~= 9321";
+return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)";
 					["conditionType"] = 1;
 					["contentid"] = -1;
 					["enmityValue"] = 0;
@@ -1506,7 +1506,7 @@ return target == nil or target.contentid ~= 9321";
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or target.contentid ~= 9320";
+return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["conditionType"] = 1;
 					["contentid"] = -1;
 					["enmityValue"] = 0;
@@ -1573,6 +1573,31 @@ self.used = true";
 	[43] = {
 		[1] = {
 			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "-- this is to save up gauge for the big reopener after adds\
+-- cooldowns should not be needed at this point in any static able to clear the fight\
+-- I  will soon disable all big cooldowns such as queen wf hc from the addphase so we exit it with 100/100 gauge\
+-- addphase is excluded from fflogs";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- read me --";
+			["time"] = 271.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 43;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8e760d2a-445d-4506-94ed-bacfc88c83b6";
+		};
+		[2] = {
+			["actions"] = {
 				[1] = {
 					["aType"] = 2;
 					["actionID"] = -1;
@@ -1617,7 +1642,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "fd64af57-5950-14d4-a19d-a0ac461a2aba";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1662,31 +1687,6 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "200c0f7b-fa39-d727-93c4-e022c079a985";
-		};
-		[3] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "-- this is to save up gauge for the big reopener after adds\
--- cooldowns should not be needed at this point in any static able to clear the fight\
--- I  will soon disable all big cooldowns such as queen wf hc from the addphase so we exit it with 100/100 gauge\
--- addphase is excluded from fflogs";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "READ ME!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-			["time"] = 271.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 43;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "8e760d2a-445d-4506-94ed-bacfc88c83b6";
 		};
 	};
 	[44] = {
