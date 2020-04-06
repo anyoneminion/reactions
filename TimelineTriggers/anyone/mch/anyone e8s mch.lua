@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-
+{};
 } -- multiRefObjects
 local obj1 = {
 	[2] = {
@@ -115,6 +115,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -128,6 +129,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -147,6 +149,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -160,6 +163,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -179,6 +183,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -192,6 +197,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -211,6 +217,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -224,6 +231,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -439,6 +447,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -452,6 +461,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -945,6 +955,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -958,6 +969,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -977,6 +989,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -990,6 +1003,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -1009,6 +1023,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -1022,6 +1037,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -1041,6 +1057,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -1054,6 +1071,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -1083,9 +1101,122 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "033785db-1be5-db4f-a044-255789db2b7c";
+			["uuid"] = "56f3d337-3b1d-fe2a-8580-db4dc5fdf309";
 		};
 		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+return EA and EA.castinginfo.castinginterruptible -- head graze";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+if EA and EA.castinginfo.castinginterruptible then\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+		self.used = true\
+end";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable custom head graze";
+			["time"] = 229.2;
+			["timeRange"] = true;
+			["timelineIndex"] = 37;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "afbb32d4-e52d-ebf7-bb71-2c0e2aa2901a";
+		};
+		[3] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
+self.used = true";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable custom head graze";
+			["time"] = 229.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 37;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 10;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "af34e5a8-c675-3add-a28d-9076a4e771ab";
+		};
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3;
@@ -1129,118 +1260,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "a77cebbb-d290-6672-839e-3fc2ccc33a92";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
-ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
-self.used = true";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-return EA and EA.castinginfo.castinginterruptible -- head graze";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible then\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
-		self.used = true\
-end";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "enable custom head graze";
-			["time"] = 229.2;
-			["timeRange"] = true;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 10;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "b572f19e-51a4-800f-88a8-23b015535381";
-		};
-		[4] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
-self.used = true";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable custom head graze";
-			["time"] = 229.2;
-			["timeRange"] = false;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3db8147a-8602-16f1-847e-3d3667c3a6a4";
+			["uuid"] = "c7ddf72f-a9c0-4157-b91f-b36086468a0b";
 		};
 		[5] = {
 			["actions"] = {
@@ -1278,6 +1298,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
@@ -1292,6 +1313,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -1321,10 +1343,123 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "e9b18c59-4e59-b97a-9526-82ee7e158f47";
+			["uuid"] = "745a4771-5a3a-a2a9-8e23-7891247f5782";
 		};
 	};
 	[39] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+return EA and EA.castinginfo.castinginterruptible -- head graze";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+if EA and EA.castinginfo.castinginterruptible then\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+		self.used = true\
+end";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable custom head graze";
+			["time"] = 243.3;
+			["timeRange"] = true;
+			["timelineIndex"] = 39;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9f0bc0b4-55c2-02cb-a76a-68fe92e825ac";
+		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
+self.used = true";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable custom head graze";
+			["time"] = 243.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 39;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 10;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f521d8cd-b17e-4a8a-8ca7-1e63f3e6a24a";
+		};
 	};
 	[41] = {
 		[1] = {
@@ -1371,7 +1506,203 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "9c38b74d-5b6e-24c4-b088-f3a1afbd226c";
+			["uuid"] = "dc406d64-f815-d535-b888-e2395fa2a54c";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+						[2] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = 9321;
+					["targetName"] = "Aqueous Aether";
+					["targetSubType"] = 1;
+					["targetType"] = 3;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "local target = Player:GetTarget()\
+return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "target earthen after aqua dies";
+			["time"] = 257.4;
+			["timeRange"] = true;
+			["timelineIndex"] = 41;
+			["timerEndOffset"] = 40;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "157a89a5-4bf2-51e9-baa4-e83bf7686339";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+return EA and EA.castinginfo.castinginterruptible -- head graze";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+if EA and EA.castinginfo.castinginterruptible then\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+		self.used = true\
+end";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "enable custom head graze";
+			["time"] = 257.4;
+			["timeRange"] = true;
+			["timelineIndex"] = 41;
+			["timerEndOffset"] = 10;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "4e9135fe-b628-a45f-bffc-fe45fa22280f";
+		};
+		[4] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
+			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
+self.used = true";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "disable custom head graze";
+			["time"] = 257.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 41;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 10;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "4d9d843b-419b-8213-a2c3-bfb4fab9a760";
 		};
 	};
 	[43] = {
@@ -1413,6 +1744,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
@@ -1427,6 +1759,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -1461,7 +1794,7 @@ end";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "72553fe0-ec52-375e-aaa9-d442992b5231";
+			["uuid"] = "2e758c77-299d-02f4-8793-593ecfa2535a";
 		};
 		[2] = {
 			["actions"] = {
@@ -1484,90 +1817,9 @@ self.used = true";
 			["timerOffset"] = 10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f3fdee69-9b75-efe8-81db-4091c1cb10fb";
+			["uuid"] = "d028303d-5997-3c4d-8241-3597e1c9f3f7";
 		};
 		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9321;
-					["targetName"] = "Aqueous Aether";
-					["targetSubType"] = 1;
-					["targetType"] = 3;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target earthen after aqua dies";
-			["time"] = 271.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 43;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "3d967e39-9d13-7e72-b9c0-145a3cf3cb3e";
-		};
-		[4] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -1590,9 +1842,9 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a0251a8b-e27b-79e0-af14-1526ce0d14eb";
+			["uuid"] = "f8bb0c2c-9f4e-e349-977c-ae4948ebea76";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1636,9 +1888,9 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["timerOffset"] = -14;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "feb06699-7dca-4a36-82d8-bef8b3f110c0";
+			["uuid"] = "875be746-0671-ed5c-83c9-3c3ff6d4d770";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1682,7 +1934,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e0a92a8f-b4da-83e4-bc50-3ec77f40c1a2";
+			["uuid"] = "78310941-98fb-0053-8efa-b7bdb751ea23";
 		};
 	};
 	[44] = {
@@ -1864,6 +2116,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -1877,6 +2130,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2047,6 +2301,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -2060,6 +2315,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2079,6 +2335,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2092,6 +2349,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2111,6 +2369,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2124,6 +2383,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2143,6 +2403,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2156,6 +2417,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2261,6 +2523,50 @@ self.used = true";
 		[3] = {
 			["actions"] = {
 				[1] = {
+					["aType"] = 1;
+					["actionID"] = 7548;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "arm's length";
+			["time"] = 535.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -1.6000000238419;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "461ae23e-2eab-291f-8500-c2cbd06fb8c6";
+		};
+		[4] = {
+			["actions"] = {
+				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
 					["actionLua"] = "if not FFXIV_Common_BotRunning then\
@@ -2325,6 +2631,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -2338,6 +2645,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = 7548;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2357,6 +2665,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -2370,6 +2679,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2399,20 +2709,31 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "98bc49fd-ed08-8690-88df-4a659cadbcfa";
 		};
-		[4] = {
+	};
+	[73] = {
+	};
+	[88] = {
+	};
+	[90] = {
+		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7548;
-					["actionLua"] = "";
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
+						[1] = 1;
+						[2] = 2;
+						[3] = 3;
+						[4] = 4;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVar"] = "ACR_TensorMagnum_Hotbar_Tactician";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = true;
+					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
 					["stopCasting"] = false;
@@ -2423,32 +2744,164 @@ self.used = true";
 					["targetType"] = 1;
 					["untarget"] = false;
 					["used"] = false;
-					["variableTogglesType"] = 1;
+					["variableTogglesType"] = 2;
 				};
 			};
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 1;
+					["actionID"] = 16889;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 2;
+					["buffDuration"] = 0;
+					["buffID"] = 1826;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[3] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 2;
+					["buffDuration"] = 0;
+					["buffID"] = 1934;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[4] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 2;
+					["buffDuration"] = 0;
+					["buffID"] = 1951;
+					["buffIDList"] = multiRefObjects[1];
+					["category"] = 2;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "arm's length";
-			["time"] = 535.1;
+			["name"] = "tactician (safe)";
+			["time"] = 655.4;
 			["timeRange"] = false;
-			["timelineIndex"] = 72;
+			["timelineIndex"] = 90;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.6000000238419;
+			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "461ae23e-2eab-291f-8500-c2cbd06fb8c6";
+			["uuid"] = "293a307e-4659-5697-bd6d-36380aaa0d03";
 		};
-	};
-	[73] = {
-	};
-	[88] = {
-	};
-	[90] = {
 	};
 	[103] = {
 		[1] = {
@@ -2575,185 +3028,6 @@ self.used = true";
 	[110] = {
 	};
 	[113] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
-self.used = true";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 3;
-						[4] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Hotbar_Tactician";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 16889;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1826;
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1934;
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1951;
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "tactician (safe)";
-			["time"] = 777;
-			["timeRange"] = false;
-			["timelineIndex"] = 113;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -13;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "74b9b4d3-f3f2-e6f5-813c-74617559a708";
-		};
 	};
 	[115] = {
 		[1] = {
@@ -2809,7 +3083,7 @@ self.used = true";
 			};
 			["conditions"] = {
 			};
-			["enabled"] = true;
+			["enabled"] = false;
 			["eventArgs"] = {
 			};
 			["execute"] = "";
@@ -2865,6 +3139,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -2878,6 +3153,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2897,6 +3173,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2910,6 +3187,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2929,6 +3207,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2942,6 +3221,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
@@ -2961,6 +3241,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2974,6 +3255,7 @@ self.used = true";
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["partyHpType"] = 1;
