@@ -2457,13 +2457,23 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["execute"] = "-- this reaction is untested and experimental, in theory the timings should be fine\
+			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
 \
--- if AL goes off too late try changing -1.4 to -1.5 and then -1.6 if still not enough";
+-- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
+\
+-- this reaction is experimental, in theory the timings should be fine\
+\
+-- if you get knocked off on the first hit, increase the timing, by .1 second until it works\
+\
+-- if you get knocked off on the second hit, decrease the timing, by .1 second until it works\
+\
+-- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+\
+-- and low ping players will have problems on the second hit.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "READ ME!!!";
+			["name"] = "-- read me --";
 			["time"] = 535.1;
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
@@ -2471,7 +2481,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f1c4664e-25cc-1e53-acc1-71cc872be1b3";
+			["uuid"] = "2347fb24-3e44-dc3a-8763-ccc559d98979";
 		};
 		[2] = {
 			["actions"] = {
@@ -2559,7 +2569,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.6000000238419;
+			["timerOffset"] = -1.25;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "461ae23e-2eab-291f-8500-c2cbd06fb8c6";

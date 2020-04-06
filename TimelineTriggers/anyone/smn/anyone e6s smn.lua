@@ -195,7 +195,7 @@ local obj1 = {
 			["timeRange"] = false;
 			["timelineIndex"] = 8;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
+			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "0485f670-1e9b-057a-b914-2c18c17ba2e7";
@@ -1332,7 +1332,7 @@ return false";
 			["timeRange"] = false;
 			["timelineIndex"] = 56;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -4;
+			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "c942bacd-bf85-b66a-8596-2cf19dd8e5db";

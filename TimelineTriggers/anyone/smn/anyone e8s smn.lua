@@ -1360,11 +1360,19 @@ return false";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["execute"] = "-- this reaction is untested and experimental, in theory the timings should be fine\
+			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
 \
--- if surecast goes off too early, try changing the -1.6 timer to something later, like -1.5, 1.4, or 1.3.\
+-- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
 \
-";
+-- this reaction is experimental, in theory the timings should be fine\
+\
+-- if you get knocked off on the first hit, increase the timing, by .1 second until it works\
+\
+-- if you get knocked off on the second hit, decrease the timing, by .1 second until it works\
+\
+-- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+\
+-- and low ping players will have problems on the second hit.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
@@ -1376,7 +1384,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c08f034d-fdf1-3f1f-b6bd-27845b17f499";
+			["uuid"] = "f3979fe3-7db5-a924-b87e-e3ecb8b9a1c8";
 		};
 		[2] = {
 			["actions"] = {

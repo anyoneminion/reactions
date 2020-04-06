@@ -1637,6 +1637,38 @@ self.used = true";
 	[72] = {
 		[1] = {
 			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
+\
+-- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
+\
+-- this reaction is experimental, in theory the timings should be fine\
+\
+-- if you get knocked off on the first hit, increase the timing, by .1 second until it works\
+\
+-- if you get knocked off on the second hit, decrease the timing, by .1 second until it works\
+\
+-- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+\
+-- and low ping players will have problems on the second hit.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- read me --";
+			["time"] = 535.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 72;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "23d8da7f-3cf4-751a-9bf7-d8806f6eea0d";
+		};
+		[2] = {
+			["actions"] = {
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
@@ -1682,7 +1714,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "122e7f46-8a23-a82f-8a5f-31ace722b89b";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 1;
@@ -1721,12 +1753,12 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.2999999523163;
+			["timerOffset"] = -1.25;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "a3934157-fad1-3ada-a33f-9e31d4ad1fb6";
 		};
-		[3] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4;
@@ -1870,27 +1902,6 @@ self.used = true";
 			["timerStartOffset"] = -2;
 			["used"] = false;
 			["uuid"] = "a2e2ceea-09c1-17ac-b604-3a9ddd1f1f6a";
-		};
-		[4] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = false;
-			["execute"] = "-- this reaction is untested and experimental, in theory the timings should be fine\
--- if AL goes off too late try changing -1.4 to -1.5 and then -1.6 if still not enough";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "READ ME!!!";
-			["time"] = 535.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 72;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3a581573-2acb-3687-beb2-f8733db20c20";
 		};
 	};
 	[90] = {
