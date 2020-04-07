@@ -1366,9 +1366,9 @@ return false";
 \
 -- this reaction is experimental, in theory the timings should be fine\
 \
--- if you get knocked off on the first hit, increase the timing, by .1 second until it works\
+-- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
 \
--- if you get knocked off on the second hit, decrease the timing, by .1 second until it works\
+-- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
 \
 -- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 \
