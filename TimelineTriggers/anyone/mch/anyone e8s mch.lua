@@ -623,6 +623,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["actionLua"] = "if data.currentQueenSetting ~= nil then\
     ACR_TensorMagnum_SummonQueen_Gauge = data.currentQueenSetting\
 end\
+data.currentQueenSetting = nil\
 self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -2469,7 +2470,15 @@ self.used = true";
 \
 -- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 \
--- and low ping players will have problems on the second hit.";
+-- and low ping players will have problems on the second hit.\
+\
+-- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
+\
+-- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
+\
+-- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
+\
+-- THEY WILL NOT WORK WITH ALL THREE ENABLED.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
