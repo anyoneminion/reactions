@@ -82,6 +82,8 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -622,6 +624,8 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -808,6 +812,8 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -902,6 +908,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1442,6 +1450,8 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1490,6 +1500,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1534,6 +1546,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1602,6 +1616,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1720,6 +1736,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1764,6 +1782,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = true;
@@ -1808,6 +1828,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1876,6 +1898,8 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1923,6 +1947,8 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2086,6 +2112,8 @@ end";
 				};
 			};
 			["enabled"] = false;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2180,6 +2208,8 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2720,6 +2750,8 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2826,6 +2858,8 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2907,6 +2941,8 @@ dotBlacklist[9301] = true -- add idolatry contentid to blacklist\
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2986,6 +3022,8 @@ dotBlacklist[9301] = true -- add idolatry contentid to blacklist\
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3172,6 +3210,8 @@ dotBlacklist[9301] = true -- add idolatry contentid to blacklist\
 				};
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3266,6 +3306,8 @@ dotBlacklist[9301] = true -- add idolatry contentid to blacklist\
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3310,6 +3352,8 @@ dotBlacklist[9301] = true -- add idolatry contentid to blacklist\
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = true;
@@ -3401,6 +3445,8 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
