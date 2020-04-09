@@ -72,7 +72,7 @@ local obj1 = {
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "92e7278c-f578-313f-8116-fd5a4213c57e";
+			["uuid"] = "56c92fb4-4de5-32b7-ae3c-72a00139c2ee";
 		};
 		[2] = {
 			["actions"] = {
@@ -116,7 +116,7 @@ local obj1 = {
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7c909926-2232-420f-ba6d-a1ac61888774";
+			["uuid"] = "5fcbe086-24a0-fedf-9c85-3c3a88683f2c";
 		};
 		[3] = {
 			["actions"] = {
@@ -142,7 +142,7 @@ located at 177.5\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6b7ab83b-9481-7922-baf5-f45626aa4062";
+			["uuid"] = "55061342-3159-79db-bdf7-fa79310457ec";
 		};
 		[4] = {
 			["actions"] = {
@@ -410,7 +410,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9d5df62f-1451-0f80-9a69-e3696388a9ed";
+			["uuid"] = "142ffd75-33a9-cfc1-a713-663bd292760e";
 		};
 		[5] = {
 			["actions"] = {
@@ -458,7 +458,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "27b48311-0ed8-14b7-93c1-ac7451a0c579";
+			["uuid"] = "5ca9fde6-0b28-6954-8e8b-e2808bc0e2e5";
 		};
 		[6] = {
 			["actions"] = {
@@ -624,7 +624,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5f5edbe2-3291-1513-99f0-ece745448946";
+			["uuid"] = "a41e34b3-5cb9-74fb-b34b-091f0a2a07ba";
 		};
 		[7] = {
 			["actions"] = {
@@ -703,7 +703,7 @@ self.used = true";
 			["timerOffset"] = 8;
 			["timerStartOffset"] = 8;
 			["used"] = false;
-			["uuid"] = "df2aa85c-e2cc-1b02-9373-4dda81fe3b21";
+			["uuid"] = "fee81424-8d7c-c346-b808-c77212d4fac4";
 		};
 	};
 	[27] = {
@@ -892,7 +892,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "eb7fe8d6-de02-822b-8ea5-2159bf65969e";
+			["uuid"] = "a09aee7a-8416-3901-9b80-6773d246b4d2";
 		};
 	};
 	[38] = {
@@ -920,7 +920,7 @@ located at 177.5\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b981bd2e-4983-9cae-bbb5-395c77ce314e";
+			["uuid"] = "a5315ec5-3c66-657c-aa05-1615511f0eb7";
 		};
 		[2] = {
 			["actions"] = {
@@ -990,7 +990,7 @@ located at 177.5\
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "803164a1-3f55-ee9d-a33f-4d68da5baeff";
+			["uuid"] = "b3148d90-a875-6e00-b4f9-302d76adc6dd";
 		};
 		[3] = {
 			["actions"] = {
@@ -1034,7 +1034,7 @@ located at 177.5\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "feebd770-186c-2527-a157-7b14dc0684c6";
+			["uuid"] = "e35920f9-e12d-876d-a0f6-8210fb0b9287";
 		};
 		[4] = {
 			["actions"] = {
@@ -1302,7 +1302,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "20600efe-f06a-1155-a880-a39f44262e10";
+			["uuid"] = "5a5c825b-f335-4d6f-bdb4-142d14d9b4fc";
 		};
 		[5] = {
 			["actions"] = {
@@ -1350,7 +1350,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4c41d67f-819d-575f-b399-e3c40605a561";
+			["uuid"] = "53ebcc90-c3c0-0de3-a0b6-683ecec8c55f";
 		};
 		[6] = {
 			["actions"] = {
@@ -1516,7 +1516,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b64f4a85-1419-0917-8cee-9789b5e07fc7";
+			["uuid"] = "cfd86058-e2ba-493d-8b00-53da661ab814";
 		};
 		[7] = {
 			["actions"] = {
@@ -1595,7 +1595,7 @@ self.used = true";
 			["timerOffset"] = 8;
 			["timerStartOffset"] = 8;
 			["used"] = false;
-			["uuid"] = "dd6554f1-1fd4-4d47-8e2d-7a827c0d6850";
+			["uuid"] = "2031b553-33a4-f7ae-a9e0-64ff0681b7f5";
 		};
 	};
 	[43] = {
@@ -1645,7 +1645,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c08e5f29-5958-3ec7-a73d-98edd38e7e15";
+			["uuid"] = "a706235b-ed02-e31a-aaf5-b9f5da6baaf0";
 		};
 		[2] = {
 			["actions"] = {
@@ -1691,7 +1691,7 @@ self.used = true";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2171e81f-f546-210c-9dec-2d7f680844e4";
+			["uuid"] = "7b0561d9-b24e-5a3b-a2c5-0fb6ae7dd438";
 		};
 		[3] = {
 			["actions"] = {
@@ -1735,7 +1735,7 @@ self.used = true";
 			["timerOffset"] = -8.3000001907349;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e690d657-ed98-f841-9261-6bda36891773";
+			["uuid"] = "29c4126e-6c09-ac1d-9249-95f0c8724f67";
 		};
 		[4] = {
 			["actions"] = {
@@ -1779,7 +1779,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "450cc167-6d0f-9ac6-ba0b-6993cfe4049d";
+			["uuid"] = "fbda1a9e-447e-722c-87a8-bdad05c79b2a";
 		};
 		[5] = {
 			["actions"] = {
@@ -1847,7 +1847,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9615e49b-b3f4-b5b4-9570-21e2245678a8";
+			["uuid"] = "1aa12405-a113-32f6-8375-a8b755444d07";
 		};
 		[6] = {
 			["actions"] = {
@@ -1915,7 +1915,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "12a745ff-51b2-7787-85d6-6469aadc3c50";
+			["uuid"] = "b5ffef34-ceaf-2464-b92e-3c0c7c314af8";
 		};
 	};
 	[51] = {
@@ -2035,7 +2035,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e5d12ab0-01b7-b9d7-a199-18982d2e3487";
+			["uuid"] = "895d33e9-99dd-1bdb-b7de-9ab88445af34";
 		};
 		[2] = {
 			["actions"] = {
@@ -2081,7 +2081,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "756b9cf7-c50b-df4c-bb92-06f2e80dc7bf";
+			["uuid"] = "052cf354-3ead-b2d6-8a90-dacf16e77271";
 		};
 		[3] = {
 			["actions"] = {
@@ -2162,7 +2162,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "59ab910a-5b72-4ca8-87b7-855b5796e031";
+			["uuid"] = "c043b3ec-2976-d627-b3c0-571963155300";
 		};
 		[4] = {
 			["actions"] = {
@@ -2302,7 +2302,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "60e6606e-97a2-f801-bbf8-81b311d6dc1a";
+			["uuid"] = "50e4b95e-d884-83a0-abf5-b784b162cd17";
 		};
 		[5] = {
 			["actions"] = {
@@ -2346,7 +2346,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8746ac67-0da7-a1fc-92fb-8cedf9339573";
+			["uuid"] = "52a605ed-3b8e-b84f-8484-343340a987b1";
 		};
 	};
 	[58] = {
@@ -2374,7 +2374,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "539c55e6-b039-adea-9a39-11e54d130cfe";
+			["uuid"] = "7dcfde92-4313-870a-a149-32d5ba7c071e";
 		};
 		[2] = {
 			["actions"] = {
@@ -2444,7 +2444,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8b2a5e3e-37f5-e07b-8fab-8bcedd3ad2c2";
+			["uuid"] = "8fea2ec1-161a-a73a-867b-d58f158359be";
 		};
 		[3] = {
 			["actions"] = {
@@ -2488,7 +2488,7 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "967cbd6b-7c6a-3b54-8c43-f4f0a7ab5df1";
+			["uuid"] = "2cbec487-caf3-027a-862c-4dc029007dde";
 		};
 		[4] = {
 			["actions"] = {
@@ -2756,7 +2756,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f285f288-d4be-5720-98f4-5116a3e230c5";
+			["uuid"] = "66f29644-ad95-2b22-8e6a-a811f23e3e33";
 		};
 		[5] = {
 			["actions"] = {
@@ -2804,7 +2804,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e7687013-cd61-ede1-8df9-dd185b2a7133";
+			["uuid"] = "25aeccc6-2108-59c7-8668-1b961abee38e";
 		};
 		[6] = {
 			["actions"] = {
@@ -2970,7 +2970,7 @@ self.used = true";
 			["timerOffset"] = 11;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c4572d62-df4c-229d-bec9-47c462fda614";
+			["uuid"] = "859e689b-fbae-f6cb-b5e3-799443f4e7f0";
 		};
 		[7] = {
 			["actions"] = {
@@ -3049,7 +3049,7 @@ self.used = true";
 			["timerOffset"] = 8;
 			["timerStartOffset"] = 8;
 			["used"] = false;
-			["uuid"] = "2a3d17c8-f4ea-8ef4-86f3-2ae2aa3fd38a";
+			["uuid"] = "da4fa72e-271d-34c6-9e8e-8d2d5af54a4a";
 		};
 	};
 	[62] = {
@@ -3130,7 +3130,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "34980f98-8389-cb0f-bead-caba2fe87d90";
+			["uuid"] = "81a1140d-b5c9-45a7-9a2b-a57c1802305d";
 		};
 		[2] = {
 			["actions"] = {
@@ -3234,7 +3234,7 @@ self.used = true";
 			["timerOffset"] = -30;
 			["timerStartOffset"] = -40;
 			["used"] = false;
-			["uuid"] = "511b357a-e299-706e-a864-3a4bd3b52887";
+			["uuid"] = "66f4570c-5241-acce-8c10-74e397621886";
 		};
 		[3] = {
 			["actions"] = {
@@ -3313,7 +3313,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "2869b7d0-401b-092a-ad88-20a444f11bbb";
+			["uuid"] = "c27b4b60-405e-ef58-884f-a0bb3bc9cb52";
 		};
 	};
 	[71] = {
@@ -3502,7 +3502,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fdf2e96e-16f5-4585-9e66-745cb41c1356";
+			["uuid"] = "b9c27820-0931-c80b-a36c-3314845a31c1";
 		};
 	};
 	[74] = {
@@ -3670,7 +3670,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a05b251b-45ae-81b2-8e8d-db2d9f7877da";
+			["uuid"] = "8bf54994-35d0-e418-9209-bc7592809abd";
 		};
 		[2] = {
 			["actions"] = {
@@ -3716,7 +3716,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "4955c330-aa16-4540-80f2-d244edd4f9fd";
+			["uuid"] = "1bedb373-17a8-c931-990f-3989d072aff2";
 		};
 		[3] = {
 			["actions"] = {
@@ -3797,7 +3797,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "85575922-9d00-0026-a56d-bbcf37ab54d6";
+			["uuid"] = "d738797f-401b-b40e-9017-a88011adc318";
 		};
 		[4] = {
 			["actions"] = {
@@ -3937,7 +3937,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "826b7503-c88a-2e19-ab14-b971752a9707";
+			["uuid"] = "06bb3cfa-9e61-39d9-ac86-12c42979d198";
 		};
 	};
 	[75] = {
@@ -3989,7 +3989,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7b0f307c-f64b-6d66-948d-5779526f78cf";
+			["uuid"] = "a244e74a-66de-b474-9adb-022d16a641d3";
 		};
 		[2] = {
 			["actions"] = {
@@ -4035,7 +4035,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d8bfaaad-9d44-70d5-926f-d9e2e5cc1efb";
+			["uuid"] = "7fc3c7dd-2f09-5929-ab36-de439a618029";
 		};
 		[3] = {
 			["actions"] = {
@@ -4105,7 +4105,7 @@ self.used = true";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a69ef8c6-75ed-c432-a0c1-b236360aa944";
+			["uuid"] = "5e43fa30-4b26-c926-9106-59532b048be6";
 		};
 		[4] = {
 			["actions"] = {
@@ -4173,7 +4173,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "40d6784a-f681-0f65-acfd-706b045e152c";
+			["uuid"] = "bf53bf69-eec4-ea7c-a2c2-b915c624b6b4";
 		};
 		[5] = {
 			["actions"] = {
@@ -4241,7 +4241,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "0b0306ae-8f97-efa3-b3c3-9f251494546a";
+			["uuid"] = "d73ec0d5-5f1d-b00e-824b-a23ac7ac74fa";
 		};
 	};
 	[106] = {
@@ -4411,7 +4411,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b095fef7-9ac3-6de3-9c37-3bd6122c174a";
+			["uuid"] = "2ee46b2b-ccbb-e7f1-afaa-f3eb542ab88c";
 		};
 		[2] = {
 			["actions"] = {
@@ -4457,7 +4457,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "74c3e466-fb0e-9a98-a14b-f83465548844";
+			["uuid"] = "dbcd926d-2406-5c1a-857c-752c6dbb7a9e";
 		};
 		[3] = {
 			["actions"] = {
@@ -4538,7 +4538,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "938eca1b-fcdf-79b5-8d30-9db122164ea7";
+			["uuid"] = "8b7f7a6e-003f-e93e-a8f0-b0b57061958c";
 		};
 		[4] = {
 			["actions"] = {
@@ -4678,7 +4678,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ebe92e30-17cf-3205-bd5a-6c0c27b60b67";
+			["uuid"] = "c2275626-0ff6-2eed-ad34-e0d6e6ee398f";
 		};
 	};
 	[108] = {
@@ -4869,7 +4869,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "eeb7387f-7952-bc71-a081-abedab7df286";
+			["uuid"] = "9f6624b9-dab8-7275-b511-eb52fc55f55f";
 		};
 	};
 	["mapID"] = 908;
