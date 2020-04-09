@@ -304,7 +304,7 @@ local obj1 = {
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_Demi";
 					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["setTarget"] = false;
@@ -331,7 +331,7 @@ local obj1 = {
 			["timeRange"] = false;
 			["timelineIndex"] = 16;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
+			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "8f9a877a-4539-2da7-9b55-663a348ca026";
@@ -719,7 +719,7 @@ self.used = table.size(markedClones) >= 4\
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_RushFBT";
+					["gVar"] = "ACR_TensorRuin_SmartAOE";
 					["gVarIndex"] = 13;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
