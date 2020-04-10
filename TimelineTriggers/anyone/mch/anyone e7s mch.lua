@@ -1673,29 +1673,7 @@ self.used = true";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["eventArgs"] = {
-			};
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable wf";
-			["time"] = 198.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 47;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "7b0561d9-b24e-5a3b-a2c5-0fb6ae7dd438";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -1723,21 +1701,23 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["eventArgs"] = {
+			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable hypercharge";
+			["name"] = "disable wf/hc";
 			["time"] = 198.5;
 			["timeRange"] = false;
 			["timelineIndex"] = 47;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -8.3000001907349;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "29c4126e-6c09-ac1d-9249-95f0c8724f67";
+			["uuid"] = "7b0561d9-b24e-5a3b-a2c5-0fb6ae7dd438";
 		};
-		[4] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1781,7 +1761,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "fbda1a9e-447e-722c-87a8-bdad05c79b2a";
 		};
-		[5] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -1849,7 +1829,7 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "1aa12405-a113-32f6-8375-a8b755444d07";
 		};
-		[6] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;

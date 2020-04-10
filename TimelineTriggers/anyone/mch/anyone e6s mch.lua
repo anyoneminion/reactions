@@ -1182,10 +1182,10 @@ self.used = table.size(markedClones) >= 4\
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
-					["targetContentID"] = 9288;
+					["targetContentID"] = -1;
 					["targetName"] = "";
 					["targetSubType"] = 1;
-					["targetType"] = 3;
+					["targetType"] = 5;
 					["untarget"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
@@ -1198,7 +1198,7 @@ self.used = table.size(markedClones) >= 4\
 			["executeType"] = 1;
 			["loop"] = true;
 			["luaReturnsAction"] = false;
-			["name"] = "target ifrit";
+			["name"] = "target nearest";
 			["time"] = 245.1;
 			["timeRange"] = true;
 			["timelineIndex"] = 37;
@@ -1206,7 +1206,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "b69ec84c-5bbd-6b7c-8c8d-4b9aafe4f5c6";
+			["uuid"] = "d8fbf0d8-f5f0-fc46-b178-50b64e99e92f";
 		};
 		[3] = {
 			["actions"] = {
