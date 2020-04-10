@@ -2294,8 +2294,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -2318,7 +2318,7 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable pot";
+			["name"] = "hold wf until away with thee";
 			["time"] = 205.6;
 			["timeRange"] = false;
 			["timelineIndex"] = 51;
@@ -2326,7 +2326,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "52a605ed-3b8e-b84f-8484-343340a987b1";
+			["uuid"] = "c5b992e3-4dfd-a02d-a7a4-198e32a94fba";
 		};
 	};
 	[58] = {
@@ -3036,12 +3036,204 @@ self.used = true";
 		[1] = {
 			["actions"] = {
 				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 1;
+						[2] = 2;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 20;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+						[1] = 2;
+						[2] = 3;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = true;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = 9300;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 3;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if ent.contentid == 9301 and ent.hp.current > 0 then\
+        -- swap to other add that's alive\
+        reaction.eventArgs.targetID = id\
+        return true\
+    end\
+end\
+return false";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "local t = Player:GetTarget()\
+return t == nil or t.hp.current <= 0 -- no target or target dead, then swap";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[3] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if ent.contentid == 9301 and ent.hp.current > 0 then\
+        -- other add is alive, don't swap to blasphemy\
+        return false\
+    end\
+end\
+return true";
+					["conditionType"] = 1;
+					["contentid"] = -1;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "retarget next add";
+			["time"] = 291.8;
+			["timeRange"] = true;
+			["timelineIndex"] = 62;
+			["timerEndOffset"] = 30;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -30;
+			["used"] = false;
+			["uuid"] = "6260a0c6-c25b-1fb0-b2b0-8759a9bfb7d2";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
+						[2] = 2;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_SummonQueen";
@@ -3078,7 +3270,42 @@ self.used = true";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
-					["hpValue"] = 15;
+					["hpValue"] = 80;
+					["inCombatType"] = 1;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["setFirstMatch"] = false;
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 1;
+					["comparator"] = 1;
+					["conditionLua"] = "";
+					["conditionType"] = 2;
+					["contentid"] = 9300;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
@@ -3102,17 +3329,17 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable queen at 15% hp";
+			["name"] = "hold queen at blasphemy 80%";
 			["time"] = 291.8;
 			["timeRange"] = true;
 			["timelineIndex"] = 62;
-			["timerEndOffset"] = 30;
+			["timerEndOffset"] = 40;
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
 			["uuid"] = "81a1140d-b5c9-45a7-9a2b-a57c1802305d";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2;
@@ -3120,32 +3347,8 @@ self.used = true";
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
+						[1] = 2;
+						[2] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_Hypercharge";
@@ -3172,7 +3375,8 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = {
+					};
 					["category"] = 1;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -3182,7 +3386,7 @@ self.used = true";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
-					["hpValue"] = 8;
+					["hpValue"] = 40;
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
@@ -3200,68 +3404,24 @@ self.used = true";
 					["partyTargetType"] = 1;
 					["setFirstMatch"] = false;
 				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable hypercharge/wf at 8% hp";
-			["time"] = 291.8;
-			["timeRange"] = true;
-			["timelineIndex"] = 62;
-			["timerEndOffset"] = 30;
-			["timerOffset"] = -30;
-			["timerStartOffset"] = -40;
-			["used"] = false;
-			["uuid"] = "66f4570c-5241-acce-8c10-74e397621886";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_AirAnchor";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
+				[2] = {
 					["actionCDValue"] = 0;
 					["actionID"] = -1;
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = {
+					};
 					["category"] = 1;
-					["comparator"] = 2;
+					["comparator"] = 1;
 					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["contentid"] = -1;
+					["conditionType"] = 2;
+					["contentid"] = 9300;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
-					["hpValue"] = 3;
+					["hpValue"] = 0;
 					["inCombatType"] = 1;
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
@@ -3285,7 +3445,7 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable air anchor at 3% hp";
+			["name"] = "hold hc at blasphemy 40%";
 			["time"] = 291.8;
 			["timeRange"] = true;
 			["timelineIndex"] = 62;
@@ -3293,7 +3453,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "c27b4b60-405e-ef58-884f-a0bb3bc9cb52";
+			["uuid"] = "8a3c3847-e48c-f00e-872c-4e655043cdab";
 		};
 	};
 	[71] = {
