@@ -184,8 +184,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -898,8 +896,6 @@ self.used = table.size(markedClones) >= 4\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1855,8 +1851,6 @@ self.used = table.size(markedClones) >= 4\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1925,30 +1919,6 @@ self.used = table.size(markedClones) >= 4\
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Drill";
-					["gVarIndex"] = 8;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_AirAnchor";
 					["gVarIndex"] = 10;
 					["gVarValue"] = 2;
@@ -1981,35 +1951,11 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7ec851aa-4a8d-5d38-9f19-2e166093efed";
+			["uuid"] = "e3226306-c1ae-dd4a-9c5a-1a77f1a6ecf2";
 		};
 		[5] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Drill";
-					["gVarIndex"] = 8;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
 					["aType"] = 2;
 					["actionID"] = -1;
 					["actionLua"] = "";
@@ -2049,7 +1995,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "10e84f4e-5af8-f0f5-affa-52cb35576211";
+			["uuid"] = "6586cf2b-d3b1-2ff0-a39e-ca69d35e8e76";
 		};
 	};
 	[58] = {
@@ -2565,8 +2511,6 @@ self.used = table.size(markedClones) >= 4";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;

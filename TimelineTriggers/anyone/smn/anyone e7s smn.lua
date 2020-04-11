@@ -352,8 +352,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -835,8 +833,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1601,8 +1597,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2062,6 +2056,30 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 2;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorRuin_DoTs";
+					["gVarIndex"] = 9;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;

@@ -58,8 +58,6 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -610,8 +608,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -878,8 +874,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -976,8 +970,6 @@ located at 177.5\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1502,8 +1494,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1631,8 +1621,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1701,8 +1689,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1827,7 +1813,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1aa12405-a113-32f6-8375-a8b755444d07";
+			["uuid"] = "4a9069dd-4861-e77f-9616-ea9c6d1372ad";
 		};
 		[5] = {
 			["actions"] = {
@@ -1895,7 +1881,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b5ffef34-ceaf-2464-b92e-3c0c7c314af8";
+			["uuid"] = "1888b07e-3d46-2274-99b7-9561d226224b";
 		};
 	};
 	[51] = {
@@ -2001,8 +1987,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2047,8 +2031,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = true;
@@ -2128,8 +2110,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2268,8 +2248,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2410,8 +2388,6 @@ This way you keep a higher uptime and this is proper legit behavior.\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2936,8 +2912,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3628,8 +3602,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3796,8 +3768,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3842,8 +3812,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = true;
@@ -3923,8 +3891,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4063,8 +4029,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4115,8 +4079,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4161,8 +4123,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4231,8 +4191,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4537,8 +4495,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4583,8 +4539,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = true;
@@ -4664,8 +4618,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4804,8 +4756,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -4995,8 +4945,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;

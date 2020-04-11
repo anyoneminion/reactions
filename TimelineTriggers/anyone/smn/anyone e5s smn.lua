@@ -3,6 +3,8 @@ local multiRefObjects = {
 {};
 } -- multiRefObjects
 local obj1 = {
+	[1] = {
+	};
 	[7] = {
 		[1] = {
 			["actions"] = {

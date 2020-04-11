@@ -6,6 +6,30 @@ local obj1 = {
 	[2] = {
 		[1] = {
 			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "-- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
+\
+-- this is only in effect for phase 1. you will be required to download riku's mch v6 general reactions and have it\
+\
+-- as your currently selected reactions in the general tab. ";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- queen read me --";
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "89474ed5-2890-c729-bac7-2be5ab5f063b";
+		};
+		[2] = {
+			["actions"] = {
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
@@ -50,21 +74,27 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "daff5435-e424-e389-b238-cee69bc63998";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["execute"] = "-- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
+			["execute"] = "-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
 \
--- this is only in effect for phase 1. you will be required to download riku's mch v6 general reactions and have it\
+-- Go to \"243.3 - Heart Asunder\" on the timeline and DISABLE BOTH of the following reactions:\
 \
--- as your currently selected reactions in the general tab. ";
+-- \"enable head graze (left 1)\" & \"disable head graze (left 1)\"\
+\
+-- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
+\
+-- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
+\
+-- If you are interrupting the first Earthen Aether, no changes are required.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "-- read me --";
+			["name"] = "-- left siders read me --";
 			["time"] = 16;
 			["timeRange"] = false;
 			["timelineIndex"] = 2;
@@ -72,7 +102,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "89474ed5-2890-c729-bac7-2be5ab5f063b";
+			["uuid"] = "fbde67bf-56c4-1793-939c-f905ebe6e9d6";
 		};
 	};
 	[9] = {
@@ -247,8 +277,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -273,8 +301,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -308,8 +334,6 @@ self.used = table.size(drawnOrbs) >= 4";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -529,8 +553,6 @@ self.used = table.size(drawnOrbs) >= 4";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -571,41 +593,15 @@ self.used = table.size(drawnOrbs) >= 4";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Hypercharge";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
 			};
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "disable wf/hc";
+			["name"] = "disable wf";
 			["time"] = 201.5;
 			["timeRange"] = false;
 			["timelineIndex"] = 34;
@@ -662,210 +658,6 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "ea0d9724-fbce-e483-8d83-2da2ffb096b6";
-		};
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Reassemble";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "no reass";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "b089083f-190a-9573-8233-4478a0e6702d";
-		};
-		[5] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Drill";
-					["gVarIndex"] = 8;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_AirAnchor";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "anti-ghosting disable";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -1;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "823f2875-398a-bd85-b640-f01dafeafee3";
-		};
-		[6] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Drill";
-					["gVarIndex"] = 8;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_AirAnchor";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Reassemble";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "anti-ghosting enable";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 1;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "2c5e3d9a-4386-dfdd-af9e-cdccb1b3f087";
 		};
 	};
 	[36] = {
@@ -929,8 +721,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1118,8 +908,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1164,8 +952,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1247,8 +1033,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1364,8 +1148,6 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1391,8 +1173,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1516,8 +1296,6 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1543,8 +1321,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1630,8 +1406,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1714,8 +1488,6 @@ return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1797,8 +1569,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1882,8 +1652,6 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1909,8 +1677,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1997,8 +1763,6 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -2024,8 +1788,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -2047,8 +1809,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "-- this is to save up gauge for the big reopener after adds\
 -- cooldowns should not be needed at this point in any static able to clear the fight\
 -- I  will soon disable all big cooldowns such as queen wf hc from the addphase so we exit it with 100/100 gauge\
@@ -2096,8 +1856,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2142,8 +1900,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2242,8 +1998,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2288,8 +2042,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2368,8 +2120,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2414,8 +2164,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2460,8 +2208,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2651,8 +2397,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2844,8 +2588,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3315,8 +3057,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3363,8 +3103,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3437,8 +3175,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3515,8 +3251,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -3702,8 +3436,6 @@ self.used = true";
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
