@@ -66,6 +66,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -74,6 +75,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -90,6 +92,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -98,6 +101,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -114,6 +118,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -122,6 +127,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -138,6 +144,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -146,6 +153,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -162,6 +170,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -170,6 +179,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -186,6 +196,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -194,6 +205,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -210,6 +222,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -218,6 +231,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -234,6 +248,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -242,6 +257,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
@@ -258,6 +274,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -266,6 +283,267 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[10] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_RushFBT";
+				["gVarIndex"] = 12;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[11] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_HardDoTs";
+				["gVarIndex"] = 21;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[12] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_Demi";
+				["gVarIndex"] = 6;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[13] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_AOE";
+				["gVarIndex"] = 3;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[14] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_DoTs";
+				["gVarIndex"] = 9;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[15] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_EnergyDrain";
+				["gVarIndex"] = 8;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[16] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_Aetherpact";
+				["gVarIndex"] = 7;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[17] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_CD";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[18] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_DWT";
+				["gVarIndex"] = 5;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[19] = {
+				["aType"] = 2;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["conditions"] = {
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "ACR_TensorRuin_PetCD";
+				["gVarIndex"] = 2;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
@@ -303,6 +581,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -311,6 +590,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -327,6 +607,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -335,6 +616,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -351,6 +633,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -359,6 +642,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -375,6 +659,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -383,6 +668,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -399,6 +685,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -407,6 +694,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -423,6 +711,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -431,6 +720,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
@@ -447,6 +737,7 @@ end\
 				["gVarValue"] = 2;
 				["ignoreWeaveRules"] = false;
 				["luaReturnsAction"] = false;
+				["potType"] = 1;
 				["setTarget"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
@@ -455,6 +746,7 @@ end\
 				["targetSubType"] = 1;
 				["targetType"] = 1;
 				["untarget"] = false;
+				["usePot"] = false;
 				["used"] = false;
 				["variableTogglesType"] = 2;
 			};
