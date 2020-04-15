@@ -3,6 +3,82 @@ local multiRefObjects = {
 {};
 } -- multiRefObjects
 local obj1 = {
+	[2] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "--Frequently Asked Questions:\
+--\
+--Question: \"Something isn't working\"\
+--\
+--Answer: First of all, make sure you're using the most up to date version of my reactions\
+--Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+--Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+--of your problem. Try to be as precise as possible with the issue.\
+--Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+--You can reach me on discord at Anyone#9549.\
+--\
+--\
+--Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
+--\
+--Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+--All of the information is in there.\
+--\
+--\
+--Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+--\
+--Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+--\
+--\
+--Question: \"Why don't you do something this way instead of that way?\"\
+--\
+--Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- general read me --";
+			["time"] = 18;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ad35aefa-011f-63cd-91bb-7fc6c58fb76a";
+		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "-- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
+\
+-- tank defensives, tank swapping, or anything like that.\
+\
+-- The reactions for automatically using arm's length during the knockback mirror uptime strat are\
+\
+-- are disabled by default. Go to \"535.1 - Reflected Wings (G)\" to enable them. \
+\
+-- Read the \"read me\" there for more info.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- tanks read me --";
+			["time"] = 18;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c52fb17f-dfbf-e4c5-a02c-a0ba91f23d8b";
+		};
+	};
 	[8] = {
 		[1] = {
 			["actions"] = {
@@ -21,6 +97,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -29,6 +106,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -67,6 +145,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -103,6 +182,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -111,6 +191,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -118,8 +199,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -154,6 +233,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -162,6 +242,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -201,6 +282,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -217,7 +299,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "77d84bdc-1cad-a5fa-94da-85b7d4ba7bc1";
+			["uuid"] = "59e5bdc4-5af8-e548-be51-1cd1472df2e4";
 		};
 		[2] = {
 			["actions"] = {
@@ -235,6 +317,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -243,6 +326,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -286,6 +370,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -294,6 +379,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -332,6 +418,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -367,6 +454,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -383,7 +471,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "355198e3-3b88-cc6c-b074-640bcf8f270e";
+			["uuid"] = "78a173d0-dfb0-acb2-aa34-44dccb16b9d5";
 		};
 	};
 	[26] = {
@@ -418,7 +506,7 @@ self.used = table.size(markedClones) >= 4\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2d0c341c-bc9f-85da-9d12-03a6a0d14be6";
+			["uuid"] = "600acfde-4073-1954-b37f-a953c2785428";
 		};
 	};
 	[34] = {
@@ -442,6 +530,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -450,6 +539,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -457,8 +547,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -491,6 +579,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -499,6 +588,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -538,6 +628,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -554,7 +645,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "d9fa81ad-3d5a-783f-b474-d025c8576d9e";
+			["uuid"] = "daa7e2e1-e0ff-8a26-a3e4-be7cdf3f68d3";
 		};
 		[2] = {
 			["actions"] = {
@@ -572,6 +663,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -580,6 +672,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -619,6 +712,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -627,6 +721,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -644,6 +739,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -652,6 +748,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -689,6 +786,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -723,6 +821,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -739,7 +838,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "3197836e-ed21-79f5-b179-d8841a61072d";
+			["uuid"] = "a5714361-5255-68b4-872f-2db32d416c14";
 		};
 	};
 	[43] = {
@@ -763,6 +862,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -771,6 +871,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -778,8 +879,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -814,6 +913,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -822,6 +922,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -861,6 +962,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -877,7 +979,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "716a7b74-11a3-b4ee-b271-8470c7107328";
+			["uuid"] = "704b1128-e257-bf80-93f3-c656703b10d9";
 		};
 		[2] = {
 			["actions"] = {
@@ -895,6 +997,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -903,6 +1006,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -922,7 +1026,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e5b496d0-1172-d2f0-8af1-eb5e782dbb76";
+			["uuid"] = "37d56b4f-67d1-b8e0-ac9b-c920b2a18bda";
 		};
 		[3] = {
 			["actions"] = {
@@ -940,6 +1044,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -948,6 +1053,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -989,6 +1095,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -997,6 +1104,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1035,6 +1143,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1070,6 +1179,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1086,7 +1196,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b093f62f-903d-9d66-b545-5dfa3a683ae3";
+			["uuid"] = "7d259fd8-64d0-22e2-a2ea-919048fd9889";
 		};
 	};
 	[69] = {
@@ -1119,7 +1229,7 @@ self.used = table.size(markedClones) >= 4";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "16763080-13dc-f72d-9cd2-ca745472aec9";
+			["uuid"] = "71b7a737-6985-ec93-9cd5-4addf810ab5c";
 		};
 	};
 	[76] = {
@@ -1142,6 +1252,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1150,6 +1261,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1188,6 +1300,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1222,6 +1335,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1230,6 +1344,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1237,8 +1352,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1271,6 +1384,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1279,6 +1393,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1318,6 +1433,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1334,7 +1450,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "7062a237-237c-e4fe-b66c-2fc837dcbb67";
+			["uuid"] = "f8fc926a-68dd-cfad-832d-6af92488a8e4";
 		};
 		[2] = {
 			["actions"] = {
@@ -1352,6 +1468,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1360,6 +1477,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1401,6 +1519,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1409,6 +1528,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1447,6 +1567,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1482,6 +1603,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1498,7 +1620,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "772c2f68-9fc6-e6c1-a78d-e8310775ca06";
+			["uuid"] = "35d41c53-3b43-614f-bbf9-6edb7876a14c";
 		};
 	};
 	[110] = {
@@ -1520,6 +1642,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1528,6 +1651,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1567,6 +1691,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1583,7 +1708,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "7d7b5a9e-4865-84c6-ba0d-16ef9139d995";
+			["uuid"] = "cc120eea-e4c3-d893-8c6d-21bfba9adba0";
 		};
 		[2] = {
 			["actions"] = {
@@ -1602,6 +1727,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1610,6 +1736,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1648,6 +1775,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};

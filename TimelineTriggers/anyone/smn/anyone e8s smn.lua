@@ -3,6 +3,54 @@ local multiRefObjects = {
 {};
 } -- multiRefObjects
 local obj1 = {
+	[2] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "--Frequently Asked Questions:\
+--\
+--Question: \"Something isn't working\"\
+--\
+--Answer: First of all, make sure you're using the most up to date version of my reactions\
+--Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+--Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+--of your problem. Try to be as precise as possible with the issue.\
+--Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+--You can reach me on discord at Anyone#9549.\
+--\
+--\
+--Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
+--\
+--Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+--All of the information is in there.\
+--\
+--\
+--Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+--\
+--Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+--\
+--\
+--Question: \"Why don't you do something this way instead of that way?\"\
+--\
+--Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- general read me --";
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0657c26b-b272-910c-a4fd-10a45b83c76d";
+		};
+	};
 	[11] = {
 		[1] = {
 			["actions"] = {
@@ -22,6 +70,7 @@ local obj1 = {
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -30,6 +79,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -67,6 +117,7 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -101,6 +152,7 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -127,8 +179,6 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -162,8 +212,6 @@ self.used = table.size(drawnOrbs) >= 4";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -211,6 +259,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -219,6 +268,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -256,6 +306,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -290,6 +341,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -325,6 +377,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -333,6 +386,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -369,6 +423,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -377,6 +432,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -393,6 +449,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -401,6 +458,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -437,6 +495,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -445,6 +504,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -484,6 +544,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -492,6 +553,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -530,6 +592,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -563,6 +626,7 @@ return false";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -571,6 +635,7 @@ return false";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -610,6 +675,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -618,6 +684,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -654,6 +721,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -662,6 +730,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -678,6 +747,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -686,6 +756,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -724,6 +795,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -732,6 +804,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -739,8 +812,6 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -772,6 +843,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -780,6 +852,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -818,12 +891,11 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -855,6 +927,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -863,6 +936,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -870,8 +944,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -903,6 +975,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -911,6 +984,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -949,12 +1023,11 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -984,6 +1057,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -992,6 +1066,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1030,6 +1105,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1038,6 +1114,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1054,6 +1131,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1062,6 +1140,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1078,6 +1157,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1086,6 +1166,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1102,6 +1183,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1110,6 +1192,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1126,6 +1209,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1134,6 +1218,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1171,6 +1256,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1179,6 +1265,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1217,6 +1304,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1255,6 +1343,7 @@ return false";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1263,6 +1352,7 @@ return false";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1300,6 +1390,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1334,6 +1425,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1368,7 +1460,7 @@ return false";
 \
 -- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
 \
--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+-- if you get knocked off on the second hit, decrease the timing on \"surecast\", by .1 second until it works\
 \
 -- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 \
@@ -1378,9 +1470,9 @@ return false";
 \
 -- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
 \
--- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
+-- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"surecast\" AND \"reenable assist\".\
 \
--- THEY WILL NOT WORK WITH ALL THREE ENABLED.";
+-- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
@@ -1412,6 +1504,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1420,6 +1513,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1456,6 +1550,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = true;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1464,6 +1559,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1475,7 +1571,7 @@ self.used = true";
 			["executeType"] = 1;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "arm's length";
+			["name"] = "surecast";
 			["time"] = 535.1;
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
@@ -1505,6 +1601,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1513,6 +1610,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1533,6 +1631,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1541,6 +1640,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1578,6 +1678,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1612,6 +1713,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1650,6 +1752,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1658,6 +1761,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1695,6 +1799,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1729,6 +1834,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1765,6 +1871,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1773,6 +1880,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1790,6 +1898,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1798,6 +1907,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1835,6 +1945,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1869,6 +1980,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -1907,6 +2019,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1915,6 +2028,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -1952,6 +2066,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -1986,6 +2101,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};

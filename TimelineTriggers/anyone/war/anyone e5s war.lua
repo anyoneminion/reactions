@@ -10,13 +10,37 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["execute"] = "-- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
-\
--- tank defensives, tank swapping, or anything like that.";
+			["execute"] = "--Frequently Asked Questions:\
+--\
+--Question: \"Something isn't working\"\
+--\
+--Answer: First of all, make sure you're using the most up to date version of my reactions\
+--Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+--Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+--of your problem. Try to be as precise as possible with the issue.\
+--Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+--You can reach me on discord at Anyone#9549.\
+--\
+--\
+--Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
+--\
+--Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+--All of the information is in there.\
+--\
+--\
+--Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+--\
+--Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+--\
+--\
+--Question: \"Why don't you do something this way instead of that way?\"\
+--\
+--Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "-- read me --";
+			["name"] = "-- general read me --";
 			["time"] = 12;
 			["timeRange"] = false;
 			["timelineIndex"] = 1;
@@ -24,8 +48,38 @@ local obj1 = {
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c393b45a-4b19-1e8c-b9d3-50f4fbbfe98d";
+			["uuid"] = "2694d3cb-e4a4-7935-bf7e-082adb21a34d";
 		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "-- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
+\
+-- tank defensives, tank swapping, or anything like that.\
+\
+-- The reactions for automatically using arm's length during the knockback mirror uptime strat are\
+\
+-- are disabled by default. Go to \"535.1 - Reflected Wings (G)\" to enable them. \
+\
+-- Read the \"read me\" there for more info.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- tanks read me --";
+			["time"] = 12;
+			["timeRange"] = false;
+			["timelineIndex"] = 1;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6166b75c-8b37-b6b0-9b88-d620f6d2181b";
+		};
+	};
+	[2] = {
 	};
 	[7] = {
 	};
@@ -49,6 +103,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -57,6 +112,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -94,6 +150,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -110,7 +167,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "38fd53a2-defe-ccde-bde7-bdf7643ad121";
+			["uuid"] = "06a489d0-e52e-9188-8c28-3c4c0d40705e";
 		};
 	};
 	[18] = {
@@ -130,6 +187,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -138,6 +196,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -145,8 +204,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -159,7 +216,7 @@ self.used = true";
 			["timerOffset"] = -11;
 			["timerStartOffset"] = -12;
 			["used"] = false;
-			["uuid"] = "d0b6af86-4ddd-469b-8ee4-74eb8b4da0f2";
+			["uuid"] = "1c1aaccc-76a3-aad9-846f-9c22644e784b";
 		};
 	};
 	[19] = {
@@ -181,6 +238,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -189,6 +247,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -227,6 +286,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -243,7 +303,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "7ac592d3-4ae9-f729-8d1d-ffdbc3263619";
+			["uuid"] = "0bd412e6-e56d-c3f7-82a6-53f16a2e10f3";
 		};
 		[2] = {
 			["actions"] = {
@@ -261,6 +321,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -269,6 +330,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -288,7 +350,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "612e7b11-6cd2-ecf1-b52e-117c2c79444c";
+			["uuid"] = "6ebf1e65-fc5e-226a-8d11-95a3272d96e4";
 		};
 	};
 	[21] = {
@@ -316,6 +378,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -324,6 +387,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -331,8 +395,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -365,6 +427,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -373,6 +436,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -412,6 +476,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -428,7 +493,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "96f37a11-e2cf-f425-8de7-9b8807ad309d";
+			["uuid"] = "6ab0eb5b-5287-7b67-8e2a-c7f3ba544e95";
 		};
 		[2] = {
 			["actions"] = {
@@ -446,6 +511,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -454,6 +520,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -503,6 +570,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -511,6 +579,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -518,8 +587,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -552,6 +619,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -560,6 +628,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -599,6 +668,7 @@ return false";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -615,7 +685,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "8403f4d1-15f6-cf31-b532-84a0a29872bb";
+			["uuid"] = "3de4036e-7f5d-d1e4-9293-957c0947d87c";
 		};
 		[2] = {
 			["actions"] = {
@@ -633,6 +703,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -641,6 +712,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -683,6 +755,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -691,6 +764,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -729,6 +803,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -745,7 +820,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "effa34ec-84e3-4112-a10a-9de8e6e56792";
+			["uuid"] = "b95ea1a8-e583-a78a-b10b-523f8333bfe4";
 		};
 	};
 	[85] = {

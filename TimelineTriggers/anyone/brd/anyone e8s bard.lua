@@ -3,6 +3,54 @@ local multiRefObjects = {
 {};
 } -- multiRefObjects
 local obj1 = {
+	[2] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "--Frequently Asked Questions:\
+--\
+--Question: \"Something isn't working\"\
+--\
+--Answer: First of all, make sure you're using the most up to date version of my reactions\
+--Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+--Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+--of your problem. Try to be as precise as possible with the issue.\
+--Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+--You can reach me on discord at Anyone#9549.\
+--\
+--\
+--Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
+--\
+--Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+--All of the information is in there.\
+--\
+--\
+--Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+--\
+--Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+--\
+--\
+--Question: \"Why don't you do something this way instead of that way?\"\
+--\
+--Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.";
+			["executeType"] = 2;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- general read me --";
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "246f10f2-6fd0-e8c9-a26e-725c45f9de0c";
+		};
+	};
 	[9] = {
 		[1] = {
 			["actions"] = {
@@ -23,6 +71,7 @@ local obj1 = {
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -31,6 +80,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -68,6 +118,7 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -102,6 +153,7 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[3] = {
@@ -136,6 +188,7 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[4] = {
@@ -170,12 +223,11 @@ local obj1 = {
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -207,6 +259,7 @@ local obj1 = {
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -215,6 +268,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -251,6 +305,7 @@ local obj1 = {
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -259,6 +314,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -295,6 +351,7 @@ local obj1 = {
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -303,6 +360,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -319,6 +377,7 @@ local obj1 = {
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -327,6 +386,7 @@ local obj1 = {
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -366,6 +426,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -374,6 +435,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -393,6 +455,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -401,6 +464,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -420,6 +484,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -428,6 +493,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -466,6 +532,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -474,6 +541,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -490,6 +558,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -498,6 +567,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -514,6 +584,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -522,6 +593,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -560,6 +632,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -568,6 +641,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -606,6 +680,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -614,6 +689,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -654,6 +730,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -662,6 +739,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -699,6 +777,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -733,6 +812,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[3] = {
@@ -767,6 +847,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[4] = {
@@ -801,12 +882,11 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -836,6 +916,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -844,6 +925,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -851,8 +933,6 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -884,6 +964,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -892,6 +973,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -930,12 +1012,11 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -969,6 +1050,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -977,6 +1059,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1015,12 +1098,11 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1046,8 +1128,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorRequiem_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1084,6 +1164,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1092,6 +1173,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1130,12 +1212,11 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1161,8 +1242,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorRequiem_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1195,6 +1274,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1203,6 +1283,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1210,8 +1291,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1243,6 +1322,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1251,6 +1331,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 3;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1289,12 +1370,11 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1328,6 +1408,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1336,6 +1417,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1374,12 +1456,11 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1405,8 +1486,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1443,6 +1522,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1451,6 +1531,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1489,12 +1570,11 @@ return EA and EA.castinginfo.castinginterruptible -- head graze";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 if EA and EA.castinginfo.castinginterruptible then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
@@ -1520,8 +1600,6 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
 self.used = true";
 			["executeType"] = 2;
@@ -1552,6 +1630,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1560,6 +1639,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1596,6 +1676,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1604,6 +1685,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1642,6 +1724,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1650,6 +1733,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1657,8 +1741,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1688,6 +1770,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1696,6 +1779,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1703,8 +1787,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1734,6 +1816,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = true;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1742,6 +1825,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 5;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1749,8 +1833,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -1780,6 +1862,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1788,6 +1871,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1804,6 +1888,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1812,6 +1897,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1828,6 +1914,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1836,6 +1923,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1852,6 +1940,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1860,6 +1949,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1899,6 +1989,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1907,6 +1998,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1926,6 +2018,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1934,6 +2027,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -1953,6 +2047,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1961,6 +2056,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2003,6 +2099,7 @@ end";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2011,6 +2108,7 @@ end";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -2048,6 +2146,7 @@ end";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -2082,6 +2181,7 @@ end";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[3] = {
@@ -2116,6 +2216,7 @@ end";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[4] = {
@@ -2150,12 +2251,11 @@ end";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2198,7 +2298,7 @@ end";
 \
 -- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
 \
--- THEY WILL NOT WORK WITH ALL THREE ENABLED.";
+-- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.";
 			["executeType"] = 2;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
@@ -2230,6 +2330,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2238,6 +2339,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2279,6 +2381,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2287,6 +2390,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2307,6 +2411,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2315,6 +2420,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2352,6 +2458,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -2386,6 +2493,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
@@ -2419,6 +2527,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = true;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2427,6 +2536,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2469,6 +2579,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2477,6 +2588,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -2514,6 +2626,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -2548,6 +2661,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[3] = {
@@ -2582,6 +2696,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[4] = {
@@ -2616,12 +2731,11 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2653,6 +2767,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2661,6 +2776,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2699,6 +2815,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2707,6 +2824,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2723,6 +2841,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2731,6 +2850,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2738,8 +2858,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2769,6 +2887,7 @@ self.used = true";
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2777,6 +2896,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
@@ -2784,8 +2904,6 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
@@ -2819,6 +2937,7 @@ self.used = true";
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
+					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2827,6 +2946,7 @@ self.used = true";
 					["targetSubType"] = 1;
 					["targetType"] = 1;
 					["untarget"] = false;
+					["usePot"] = false;
 					["used"] = false;
 					["variableTogglesType"] = 2;
 				};
@@ -2864,6 +2984,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[2] = {
@@ -2898,6 +3019,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[3] = {
@@ -2932,6 +3054,7 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 				[4] = {
@@ -2966,12 +3089,11 @@ self.used = true";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
 					["partyTargetType"] = 1;
+					["setEventTargetSubtype"] = 1;
 					["setFirstMatch"] = false;
 				};
 			};
 			["enabled"] = true;
-			["eventArgs"] = {
-			};
 			["execute"] = "";
 			["executeType"] = 1;
 			["loop"] = false;
