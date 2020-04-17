@@ -1,15 +1,15 @@
 -- Persistent Data
 local multiRefObjects = {
-{};
+{},
 } -- multiRefObjects
 local obj1 = {
 	[2] = {
 		[1] = {
 			["actions"] = {
-			};
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
+			},
+			["enabled"] = true,
 			["execute"] = "--Frequently Asked Questions:\
 --\
 --Question: \"Something isn't working\"\
@@ -36,149 +36,150 @@ local obj1 = {
 --\
 --Question: \"Why don't you do something this way instead of that way?\"\
 --\
---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "-- general read me --";
-			["time"] = 16;
-			["timeRange"] = false;
-			["timelineIndex"] = 2;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "0657c26b-b272-910c-a4fd-10a45b83c76d";
-		};
-	};
+--Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+			["executeType"] = 2,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- general read me --",
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "0820e0fe-0ecf-eef5-a1fe-0f652c9616f2",
+		},
+	},
 	[11] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Hotbar_Addle";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
+						[1] = 1,
+						[2] = 2,
+						[3] = 4,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Hotbar_Addle",
+					["gVarIndex"] = 3,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 2,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 7560;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 1,
+					["actionID"] = 7560,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 4,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "addle";
-			["time"] = 76.9;
-			["timeRange"] = false;
-			["timelineIndex"] = 11;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "497962eb-149e-f480-ac72-8001a2cfdd56";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 2,
+					["buffDuration"] = 0,
+					["buffID"] = 1203,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 1,
+					["conditionLua"] = "",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "addle",
+			["time"] = 76.9,
+			["timeRange"] = false,
+			["timelineIndex"] = 11,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -3,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "3aed70a2-70b7-f1e6-8c19-581cd972ebca",
+		},
+	},
 	[24] = {
 		[1] = {
 			["actions"] = {
-			};
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
+			},
+			["enabled"] = true,
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -192,26 +193,26 @@ for id, ent in pairs(EntityList(\"\")) do\
                 end\
 end\
 \
-self.used = table.size(drawnOrbs) >= 4";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "draw orb";
-			["time"] = 137.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 24;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "cf2b01a6-8864-44b9-93d5-a45ff42e93db";
-		};
+self.used = table.size(drawnOrbs) >= 4",
+			["executeType"] = 2,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw orb",
+			["time"] = 137.4,
+			["timeRange"] = false,
+			["timelineIndex"] = 24,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "02716d10-f25e-a8b7-b7c4-e571985bb29b",
+		},
 		[2] = {
 			["actions"] = {
-			};
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
+			},
+			["enabled"] = true,
 			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
@@ -225,1233 +226,1255 @@ for id, ent in pairs(EntityList(\"\")) do\
                 end\
 end\
 \
-self.used = table.size(drawnOrbs) >= 4";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "draw orb";
-			["time"] = 137.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 24;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 15;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "47baeb1d-8257-8aac-96b7-1a6ce94f94f7";
-		};
-	};
+self.used = table.size(drawnOrbs) >= 4",
+			["executeType"] = 2,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw orb",
+			["time"] = 137.4,
+			["timeRange"] = false,
+			["timelineIndex"] = 24,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 15,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "e4d1c6a5-0ec6-54b9-89ad-75aac589da6e",
+		},
+	},
 	[33] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Hotbar_Addle";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
+						[1] = 1,
+						[2] = 2,
+						[3] = 4,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Hotbar_Addle",
+					["gVarIndex"] = 3,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 2,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 7560;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 1,
+					["actionID"] = 7560,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 4,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "addle";
-			["time"] = 193.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 33;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -8;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "f4f75dee-2b66-fc45-a683-da94da1877e3";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 2,
+					["buffDuration"] = 0,
+					["buffID"] = 1203,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 1,
+					["conditionLua"] = "",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "addle",
+			["time"] = 193.3,
+			["timeRange"] = false,
+			["timelineIndex"] = 33,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -8,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "d1e45788-bc53-2ef5-9c7b-3f8f91e9041a",
+		},
+	},
 	[34] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_DoTs",
+					["gVarIndex"] = 9,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "dont redot";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "7087f950-0dcd-5bfc-a5f1-8cbfe5eab27b";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "dont redot",
+			["time"] = 201.5,
+			["timeRange"] = false,
+			["timelineIndex"] = 34,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -12.5,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "4dbfcb49-f14e-a709-9a5c-2aa2f5fac145",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Demi",
+					["gVarIndex"] = 6,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_PetCD",
+					["gVarIndex"] = 2,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "hold demi/pet cd";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -15;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "8fa035af-1346-943b-9742-c30037ae3cf4";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "hold demi/pet cd",
+			["time"] = 201.5,
+			["timeRange"] = false,
+			["timelineIndex"] = 34,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -15,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "aef6a515-2831-8e5d-a0f5-5b08f29de279",
+		},
 		[3] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_CD",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "hold cd";
-			["time"] = 201.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 34;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -4;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "e09615cf-68a8-155e-98fb-9bbfec53bba6";
-		};
-	};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "hold cd",
+			["time"] = 201.5,
+			["timeRange"] = false,
+			["timelineIndex"] = 34,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -4,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "d114c2ca-662d-a896-94d2-b19cefd9b3bf",
+		},
+	},
 	[36] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 5;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 5,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 4;
-					["comparator"] = 1;
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 4,
+					["comparator"] = 1,
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = true;
-			["luaReturnsAction"] = false;
-			["name"] = "target nearest";
-			["time"] = 213;
-			["timeRange"] = true;
-			["timelineIndex"] = 36;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "cf8b5cca-526e-7b9d-92a4-5a6b7746d3af";
-		};
+return false",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = true,
+			["luaReturnsAction"] = false,
+			["name"] = "target nearest",
+			["time"] = 213,
+			["timeRange"] = true,
+			["timelineIndex"] = 36,
+			["timerEndOffset"] = 8,
+			["timerOffset"] = 1.375,
+			["timerStartOffset"] = -8,
+			["used"] = false,
+			["uuid"] = "978507cb-8a56-140a-8c48-cadc2c6545d1",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_CD",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "enable cd";
-			["time"] = 213;
-			["timeRange"] = false;
-			["timelineIndex"] = 36;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "4f980077-4255-713e-a9e3-ffb91995569d";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "enable cd",
+			["time"] = 213,
+			["timeRange"] = false,
+			["timelineIndex"] = 36,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -2,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "19646d93-91c4-d609-aa4b-db50a28671d2",
+		},
 		[3] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
+					["aType"] = 4,
+					["actionID"] = -1,
 					["actionLua"] = "local dotBlacklist = TensorCore.API.TensorRuin.getDotblacklist()\
 dotBlacklist[9319] = true -- add electric aether to blacklist\
 dotBlacklist[9321] = true -- add earthen aether to blacklist\
-";
-					["allowInterrupt"] = false;
+",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "dotblacklist earthen/electric";
-			["time"] = 213;
-			["timeRange"] = false;
-			["timelineIndex"] = 36;
-			["timerEndOffset"] = 30;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -30;
-			["used"] = false;
-			["uuid"] = "f267701c-e709-fbfe-ad99-40fc310aff4c";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "dotblacklist earthen/electric",
+			["time"] = 213,
+			["timeRange"] = false,
+			["timelineIndex"] = 36,
+			["timerEndOffset"] = 30,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -30,
+			["used"] = false,
+			["uuid"] = "1f94888f-654c-d74e-872f-d84bb2cb123a",
+		},
 		[4] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_DoTs",
+					["gVarIndex"] = 9,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_HardDoTs";
-					["gVarIndex"] = 21;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_HardDoTs",
+					["gVarIndex"] = 21,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable hard dots, enable dots";
-			["time"] = 213;
-			["timeRange"] = false;
-			["timelineIndex"] = 36;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "22a25d77-b31b-0377-9f9d-077fca9812d0";
-		};
-	};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "disable hard dots, enable dots",
+			["time"] = 213,
+			["timeRange"] = false,
+			["timelineIndex"] = 36,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "ef9fa2e6-330e-d83a-aa71-2bd8981620de",
+		},
+	},
 	[37] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9320;
-					["targetName"] = "Aqueous Aether";
-					["targetSubType"] = 1;
-					["targetType"] = 3;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = 9320,
+					["targetName"] = "Aqueous Aether",
+					["targetSubType"] = 1,
+					["targetType"] = 3,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target aqueous aether";
-			["time"] = 229.2;
-			["timeRange"] = true;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 3;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "d86941a2-e1db-b4f9-82ee-9dea63ea8342";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "target aqueous aether",
+			["time"] = 229.2,
+			["timeRange"] = true,
+			["timelineIndex"] = 37,
+			["timerEndOffset"] = 3,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -3,
+			["used"] = false,
+			["uuid"] = "2de0234e-3216-23e6-ad4d-bfdf20ec5feb",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 2;
-						[2] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9321;
-					["targetName"] = "Aqueous Aether";
-					["targetSubType"] = 1;
-					["targetType"] = 3;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 2,
+						[2] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = 9321,
+					["targetName"] = "Aqueous Aether",
+					["targetSubType"] = 1,
+					["targetType"] = 3,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 4;
-					["comparator"] = 1;
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 4,
+					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target earthen after aqua dies";
-			["time"] = 229.2;
-			["timeRange"] = true;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 25;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "94ddb5b5-affd-8e93-80b5-a81af68740a5";
-		};
-	};
+return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "target earthen after aqua dies",
+			["time"] = 229.2,
+			["timeRange"] = true,
+			["timelineIndex"] = 37,
+			["timerEndOffset"] = 25,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -3,
+			["used"] = false,
+			["uuid"] = "7acc02c3-43ce-654d-a204-3776b596b209",
+		},
+	},
 	[41] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9320;
-					["targetName"] = "Aqueous Aether";
-					["targetSubType"] = 1;
-					["targetType"] = 3;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = 9320,
+					["targetName"] = "Aqueous Aether",
+					["targetSubType"] = 1,
+					["targetType"] = 3,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target aqueous aether";
-			["time"] = 257.4;
-			["timeRange"] = true;
-			["timelineIndex"] = 41;
-			["timerEndOffset"] = 3;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "85cd0f2b-49c0-366b-9fb2-fd8e54cbaddc";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "target aqueous aether",
+			["time"] = 257.4,
+			["timeRange"] = true,
+			["timelineIndex"] = 41,
+			["timerEndOffset"] = 3,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -3,
+			["used"] = false,
+			["uuid"] = "4f237fee-ee2a-57ff-994c-60d7bf60494d",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 2;
-						[2] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9321;
-					["targetName"] = "Aqueous Aether";
-					["targetSubType"] = 1;
-					["targetType"] = 3;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 2,
+						[2] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = 9321,
+					["targetName"] = "Aqueous Aether",
+					["targetSubType"] = 1,
+					["targetType"] = 3,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 4;
-					["comparator"] = 1;
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 4,
+					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
-return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target earthen after aqua dies";
-			["time"] = 257.4;
-			["timeRange"] = true;
-			["timelineIndex"] = 41;
-			["timerEndOffset"] = 25;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "c33c7d08-f506-e2c8-a728-8c8156dcfcfa";
-		};
+return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "target earthen after aqua dies",
+			["time"] = 257.4,
+			["timeRange"] = true,
+			["timelineIndex"] = 41,
+			["timerEndOffset"] = 25,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -3,
+			["used"] = false,
+			["uuid"] = "37df62ea-ed83-9388-baaf-6b3fe5e6edd8",
+		},
 		[3] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Demi",
+					["gVarIndex"] = 6,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "enable demi for aqua";
-			["time"] = 257.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 41;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "d61970e0-ab19-ac64-934f-669b4c159e38";
-		};
-	};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "enable demi for aqua",
+			["time"] = 257.4,
+			["timeRange"] = false,
+			["timelineIndex"] = 41,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -2,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "15ac2562-4f4b-35f4-8c78-04ebc2dcaa6e",
+		},
+	},
 	[46] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_CD",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_PetCD",
+					["gVarIndex"] = 2,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Demi",
+					["gVarIndex"] = 6,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_DoTs",
+					["gVarIndex"] = 9,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[5] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_HardDoTs";
-					["gVarIndex"] = 21;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_HardDoTs",
+					["gVarIndex"] = 21,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "enable all";
-			["time"] = 350.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 46;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "23419018-86b0-f16e-9234-5420c2dd5085";
-		};
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "enable all",
+			["time"] = 350.5,
+			["timeRange"] = false,
+			["timelineIndex"] = 46,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -3,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "02fba998-3a6c-aeb3-b70c-cfb0ac2e8792",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 3,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = true;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 5;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = true,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 5,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 4;
-					["comparator"] = 1;
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 4,
+					["comparator"] = 1,
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = true;
-			["luaReturnsAction"] = false;
-			["name"] = "target boss";
-			["time"] = 350.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 46;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "80a51e27-ce4d-3f4f-93af-c9ab93f9074c";
-		};
-	};
+return false",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = true,
+			["luaReturnsAction"] = false,
+			["name"] = "target boss",
+			["time"] = 350.5,
+			["timeRange"] = true,
+			["timelineIndex"] = 46,
+			["timerEndOffset"] = 8,
+			["timerOffset"] = 1.375,
+			["timerStartOffset"] = -8,
+			["used"] = false,
+			["uuid"] = "190cf54c-d028-a175-b1a1-af14a80e8c84",
+		},
+	},
 	[48] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Hotbar_Addle";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
+						[1] = 1,
+						[2] = 2,
+						[3] = 4,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Hotbar_Addle",
+					["gVarIndex"] = 3,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 2,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 7560;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 1,
+					["actionID"] = 7560,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 4,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "addle";
-			["time"] = 368.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 48;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "a23ca81c-b272-11c6-9178-8ad9f05b9156";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 2,
+					["buffDuration"] = 0,
+					["buffID"] = 1203,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 1,
+					["conditionLua"] = "",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "addle",
+			["time"] = 368.6,
+			["timeRange"] = false,
+			["timelineIndex"] = 48,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -3,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "4d62044c-7cac-d77b-ab44-9433c71a325f",
+		},
+	},
 	[72] = {
 		[1] = {
 			["actions"] = {
-			};
+			},
 			["conditions"] = {
-			};
-			["enabled"] = false;
+			},
+			["enabled"] = false,
 			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
 \
 -- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
@@ -1472,656 +1495,664 @@ return false";
 \
 -- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"surecast\" AND \"reenable assist\".\
 \
--- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.";
-			["executeType"] = 2;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "-- read me --";
-			["time"] = 535.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 72;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "f3979fe3-7db5-a924-b87e-e3ecb8b9a1c8";
-		};
+-- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.",
+			["executeType"] = 2,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- read me --",
+			["time"] = 535.1,
+			["timeRange"] = false,
+			["timelineIndex"] = 72,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "07618685-7a95-a54d-b94d-01bc11be0c74",
+		},
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
+					["aType"] = 4,
+					["actionID"] = -1,
 					["actionLua"] = "if FFXIV_Common_BotRunning then\
 		ml_global_information.ToggleRun()\
 end\
-self.used = true";
-					["allowInterrupt"] = false;
+self.used = true",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = false;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable assist";
-			["time"] = 535.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 72;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "efecde37-0467-3434-9c1b-24b547af1738";
-		};
+			},
+			["enabled"] = false,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "disable assist",
+			["time"] = 535.1,
+			["timeRange"] = false,
+			["timelineIndex"] = 72,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -2,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "76e447e2-3063-b719-a370-ad6330e86520",
+		},
 		[3] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7559;
-					["actionLua"] = "";
-					["allowInterrupt"] = true;
+					["aType"] = 1,
+					["actionID"] = 7559,
+					["actionLua"] = "",
+					["allowInterrupt"] = true,
 					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = true;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorMagnum_CD",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = true,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
-			};
-			["enabled"] = false;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "surecast";
-			["time"] = 535.1;
-			["timeRange"] = false;
-			["timelineIndex"] = 72;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.2999999523163;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "298def53-d02d-fd7f-a618-a1b50b3172d6";
-		};
+			},
+			["enabled"] = false,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "surecast",
+			["time"] = 535.1,
+			["timeRange"] = false,
+			["timelineIndex"] = 72,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -1.2999999523163,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "3b3a7576-e542-0c77-9996-87f490b88140",
+		},
 		[4] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
+					["aType"] = 4,
+					["actionID"] = -1,
 					["actionLua"] = "if not FFXIV_Common_BotRunning then\
 		ml_global_information.ToggleRun()\
 end\
-self.used = true";
-					["allowInterrupt"] = false;
+self.used = true",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 5;
-						[2] = 1;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+						[1] = 5,
+						[2] = 1,
+					},
+					["endIfUsed"] = true,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
+					["aType"] = 4,
+					["actionID"] = -1,
 					["actionLua"] = "if not FFXIV_Common_BotRunning then\
 		ml_global_information.ToggleRun()\
 end\
-self.used = true";
-					["allowInterrupt"] = false;
+self.used = true",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 2,
+					},
+					["endIfUsed"] = true,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 3;
-					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 5;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = 7559;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 3,
+					["buffID"] = 1209,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 5,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = 7559,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 2;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 2;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = false;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "reenable assist";
-			["time"] = 535.1;
-			["timeRange"] = true;
-			["timelineIndex"] = 72;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -2;
-			["used"] = false;
-			["uuid"] = "ba3d2920-336f-5c8a-8e04-f77032323508";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 2,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 2,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = false,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "reenable assist",
+			["time"] = 535.1,
+			["timeRange"] = true,
+			["timelineIndex"] = 72,
+			["timerEndOffset"] = 20,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = -2,
+			["used"] = false,
+			["uuid"] = "a67d2a1e-c10f-ba0c-94e1-8492e8d3cc1d",
+		},
+	},
 	[86] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Hotbar_Addle";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
+						[1] = 1,
+						[2] = 2,
+						[3] = 4,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Hotbar_Addle",
+					["gVarIndex"] = 3,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 2,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 7560;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 1,
+					["actionID"] = 7560,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 4,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "addle";
-			["time"] = 620.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 86;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "778ace27-87a9-b174-a19f-d82268319890";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 2,
+					["buffDuration"] = 0,
+					["buffID"] = 1203,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 1,
+					["conditionLua"] = "",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "addle",
+			["time"] = 620.4,
+			["timeRange"] = false,
+			["timelineIndex"] = 86,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -3,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "c8e545fd-b578-c7be-96c8-23add497ec3d",
+		},
+	},
 	[108] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_BurnR4";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
+						[1] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_BurnR4",
+					["gVarIndex"] = 10,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
 				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_BurnR4";
-					["gVarIndex"] = 10;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
+						[1] = 2,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_BurnR4",
+					["gVarIndex"] = 10,
+					["gVarValue"] = 2,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 1;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 2;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 1,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 3,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 2,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 1;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "burn r4 if under 2% hp";
-			["time"] = 732.1;
-			["timeRange"] = true;
-			["timelineIndex"] = 108;
-			["timerEndOffset"] = 108;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3be55821-889a-a2a7-af0d-44ce5e82f5ca";
-		};
-	};
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 1,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 3,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "burn r4 if under 2% hp",
+			["time"] = 732.1,
+			["timeRange"] = true,
+			["timelineIndex"] = 108,
+			["timerEndOffset"] = 108,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "11f5586f-e288-d2fc-81a2-7ee4e29c25d1",
+		},
+	},
 	[114] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
+					["aType"] = 2,
+					["actionID"] = -1,
+					["actionLua"] = "",
+					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Hotbar_Addle";
-					["gVarIndex"] = 3;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-			};
+						[1] = 1,
+						[2] = 2,
+						[3] = 4,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "ACR_TensorRuin_Hotbar_Addle",
+					["gVarIndex"] = 3,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 2,
+				},
+			},
 			["conditions"] = {
 				[1] = {
-					["actionCDValue"] = 1;
-					["actionID"] = 7560;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 4;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
+					["actionCDValue"] = 1,
+					["actionID"] = 7560,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 2,
+					["conditionLua"] = "",
+					["conditionType"] = 4,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
 				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
-					["category"] = 2;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "addle";
-			["time"] = 784.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 114;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "283b8df5-9d1a-6916-8bbd-29f28f56f283";
-		};
-	};
-	["mapID"] = 909;
-	["version"] = 1;
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 2,
+					["buffDuration"] = 0,
+					["buffID"] = 1203,
+					["buffIDList"] = multiRefObjects[1],
+					["category"] = 2,
+					["comparator"] = 1,
+					["conditionLua"] = "",
+					["conditionType"] = 1,
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "addle",
+			["time"] = 784.3,
+			["timeRange"] = false,
+			["timelineIndex"] = 114,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -5,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "9b641eb6-1890-bb94-aa1a-766126215df6",
+		},
+	},
+	["mapID"] = 909,
+	["version"] = 1,
 }
 return obj1
