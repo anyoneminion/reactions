@@ -1,17 +1,6 @@
-# e6s-e8s read me
+# read me
 
-These fights all use custom potion timing, if you don't want to waste pots while progging these fights, either stash your potions in your chocobo saddlebag or disable the reactions.
-
-# e7s read me
-
-There is an option to disable assist 3 seconds before the teleports go out for Away With Thee, but they are disabled by default. Search for Away With Thee and enable all of these reactions to make it work. You also have the option to changing the timer to a lower number, but this depends on your ping. So adjust as you are comfortable.
-
-# e8s read me
-Make sure you're downloading the version of e8s that fits which side of adds phase you'll be doing. Outside of adds phase, they are the exact same profiles.
-
-Most of the timings are from The's profiles, so there shouldn't be much difference in changing between the machinist and bard profiles, outside of actually working for the respective class. Thank you 'The'.
-
-If you are doing the uptime strat for knockback mirrors, go to "535.1 - Reflected Wings (G)" on the timeline and check the box "Enabled" on the top right corner for ALL THREE reactions, ie 'disable assist', 'arm's length', and 'reenable assist'. This should work fully automated. If you have 30-100 ping, you can lower the timer offset to "-1.200" for safer usage. If you have above 180 ping, you can make it higher. I do not recommend going over -1.500. 
+Each fight contains "read me" reactions on the very first mechanic on the timeline. Make sure to read them for more information.
 
 # FAQ
 **Q: Where do I place the reactions?**
