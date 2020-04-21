@@ -10,6 +10,48 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
+			["execute"] = "--- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
+data.KnockbackMirrorUptime = false\
+\
+--- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
+---Set to false to disable.\
+data.DrawOrbs = true\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "E8S REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "37102846-6127-5074-9666-fe15225ef9df",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
 			["execute"] = "---Frequently Asked Questions:\
 --\
 ---Question: \"Something isn't working\"\
@@ -22,7 +64,7 @@ local obj1 = {
 --\
 --\
 ---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
----Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+---Answer: Go to e8s, and on the first mechanic of the timeline, check out \"E8S REACTION SETTINGS\"\
 ---All of the information is in there.\
 --\
 --\
@@ -46,16 +88,18 @@ local obj1 = {
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "be688b82-db34-99c6-b291-64b022c6a30b",
+			["uuid"] = "8c4ea4d7-3456-c8f4-8342-540ea5d33064",
 		},
-		[2] = {
+		[3] = {
 			["actions"] = {
 			},
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--- If you're doing the knockback mirror uptime strat, make sure to go to \"535.1 - Reflected wings (G)\" on the timeline.\
---- The reactions are not enabled by default, so make sure to read the 'read me' reactions there to figure out how to enable them.",
+			["execute"] = "--\
+-- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
+--- If you're doing this strategy, make sure to go to \"E8S REACTION SETTINGS\" and set data.KnockbackMirrorUptime to true\
+--- You may still need to adjust the timings if you're getting knocked off. Go to \"535.1 - Reflected Wings\" for more info.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -69,9 +113,9 @@ local obj1 = {
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "a88a58a7-4a08-14c5-a13f-501901275c3b",
+			["uuid"] = "823f1fdf-4e07-639e-b166-682bc066678a",
 		},
-		[3] = {
+		[4] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -96,7 +140,7 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "6c346d54-b2f7-4667-ad6f-4e68bafb27b9",
 		},
-		[4] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
@@ -192,7 +236,7 @@ self.used = true",
 			["used"] = false,
 			["uuid"] = "54a471de-4369-e12a-9012-d0e3b416b07a",
 		},
-		[5] = {
+		[6] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
@@ -239,7 +283,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -282,7 +326,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -382,7 +426,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -425,7 +469,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1256,7 +1300,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1299,7 +1343,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1450,7 +1494,7 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -1477,7 +1521,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "33c17f68-2cee-d68d-836c-78e44955df47",
+			["uuid"] = "40cea6f9-fbfc-dcad-8051-9a233423c565",
 		},
 		[4] = {
 			["actions"] = {
@@ -1485,7 +1529,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -1512,7 +1556,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["timerOffset"] = 15,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "52df2bce-3d4e-dbca-93bc-4de48474ba53",
+			["uuid"] = "0de2e4b3-356e-9cae-9e3d-1355180a5983",
 		},
 	},
 	[27] = {
@@ -3069,7 +3113,8 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = {
+					},
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3367,7 +3412,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3410,7 +3455,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3512,7 +3557,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3555,7 +3600,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3653,7 +3698,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3696,7 +3741,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4353,8 +4398,10 @@ self.used = true",
 \
 --- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
 --- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
---- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
---- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.",
+\
+--- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
+--- Set \"data.KnockbackMirrorUptime\" to true\
+",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -4368,14 +4415,14 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "deb7635e-cb14-3ec0-97b4-0a892694eaa8",
+			["uuid"] = "c748e820-7f9b-12ab-8364-c14fca159fbb",
 		},
 		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.KnockbackMirrorUptime == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -4406,7 +4453,7 @@ self.used = true",
 			},
 			["conditions"] = {
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -4421,7 +4468,7 @@ self.used = true",
 			["timerOffset"] = -2,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "0f47675f-f18b-d856-9fd8-b98a2b7d944d",
+			["uuid"] = "c1ea3f8f-d996-0f98-a633-4624f4025bfe",
 		},
 		[5] = {
 			["actions"] = {
@@ -4431,6 +4478,7 @@ self.used = true",
 					["actionLua"] = "",
 					["allowInterrupt"] = false,
 					["conditions"] = {
+						[1] = 1,
 					},
 					["endIfUsed"] = false,
 					["gVar"] = "ACR_TensorMagnum_CD",
@@ -4455,8 +4503,57 @@ self.used = true",
 				},
 			},
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = {
+					},
+					["category"] = 4,
+					["comparator"] = 1,
+					["conditionLua"] = "if data.KnockbackMirrorUptime == true then\
+		return true\
+end\
+\
+return false",
+					["conditionType"] = 1,
+					["conditions"] = {
+					},
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["inRangeValue"] = 0,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["name"] = "",
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["rangeCheckSourceSubType"] = 1,
+					["rangeCheckSourceType"] = 1,
+					["rangeSourceContentID"] = -1,
+					["rangeSourceName"] = "",
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+					["targetName"] = "",
+				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -4471,7 +4568,7 @@ self.used = true",
 			["timerOffset"] = -1.25,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "aa0e10ed-3ee8-2b1d-8203-3e07a2964bcd",
+			["uuid"] = "268cd264-af75-5e8c-9a99-bf1cd16ae491",
 		},
 		[6] = {
 			["actions"] = {
@@ -4548,12 +4645,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4590,12 +4687,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4627,7 +4724,7 @@ self.used = true",
 					["setFirstMatch"] = false,
 				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -4642,7 +4739,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = -2,
 			["used"] = false,
-			["uuid"] = "ab165f7b-9f51-935f-83f7-dcba9eab178f",
+			["uuid"] = "6b45d30d-8cc5-1ed3-8079-6b178eff41ac",
 		},
 	},
 	[73] = {
@@ -4891,7 +4988,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4934,7 +5031,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -6035,7 +6132,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -6078,7 +6175,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

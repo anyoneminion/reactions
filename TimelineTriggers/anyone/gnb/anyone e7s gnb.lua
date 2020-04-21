@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-{},{},{},{},
+{},{},{},{},{},
 } -- multiRefObjects
 local obj1 = {
 	[2] = {
@@ -10,38 +10,22 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--Frequently Asked Questions:\
---\
---Question: \"Something isn't working\"\
---\
---Answer: First of all, make sure you're using the most up to date version of my reactions\
---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
---of your problem. Try to be as precise as possible with the issue.\
---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
---You can reach me on discord at Anyone#9549.\
---\
---\
---Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
---\
---Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
---All of the information is in there.\
---\
---\
---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
---\
---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
---\
---\
---\
---Question: \"Why don't you do something this way instead of that way?\"\
---\
---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+			["execute"] = "--- Set to true to disable MMOMinion Assist before Away With Thee teleports to avoid character turning before the teleports.\
+--- False is full manual for positioning during Away With Thee teleports.\
+data.DisableAssist = false\
+\
+\
+\
+\
+\
+\
+\
+self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "-- general read me --",
+			["name"] = "E7S REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 13,
 			["timeRange"] = false,
@@ -50,7 +34,7 @@ local obj1 = {
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "93a34970-7973-4420-9e88-dd7dcb3ef875",
+			["uuid"] = "f8b56cac-8534-40c9-95da-dcb38549cd49",
 		},
 		[2] = {
 			["actions"] = {
@@ -81,6 +65,77 @@ local obj1 = {
 			["timerStartOffset"] = 0,
 			["used"] = false,
 			["uuid"] = "4c059bc4-c4ef-ceb8-bcff-da6b83dd4369",
+		},
+		[3] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "---Frequently Asked Questions:\
+--\
+---Question: \"Something isn't working\"\
+---Answer: First of all, make sure you're using the most up to date version of my reactions\
+---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+---of your problem. Try to be as precise as possible with the issue.\
+---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+---You can reach me on discord at Anyone#9549.\
+--\
+--\
+---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+---Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+---All of the information is in there.\
+--\
+--\
+---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+--\
+--\
+---Question: \"Why don't you do something this way instead of that way?\"\
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- general read me --",
+			["throttleTime"] = 0,
+			["time"] = 13,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "e184303b-913f-4c60-ae13-30b8b6230e65",
+		},
+		[4] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "--\
+--On this timeline, you have the option of enabling reactions that will help you with Away With Thee. To enable this:\
+---Go to \"E7S REACTION SETTINGS\" and change data.DisableAssist to true.\
+---You will still need to face your character the correct way.\
+--\
+--",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- e7s read me --",
+			["throttleTime"] = 0,
+			["time"] = 13,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "819bc977-dbf4-ea35-8c96-50aec8f4f9b3",
 		},
 	},
 	[22] = {
@@ -142,13 +197,9 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--[[\
-\
-'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
-to use them, then enable them on both this timeline and later in the timeline on the second away with thee\
-located at 177.5\
-\
-]]",
+			["execute"] = "\
+--- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
+--- to use them, then change the settings in the \"E7S REACTION SETTINGS\" located at \"13 - Empty Wave\" on the timeline.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -162,14 +213,14 @@ located at 177.5\
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "edec3f3a-9e34-c063-96b7-92348b4745b1",
+			["uuid"] = "2ff72185-4dd3-e127-ab3f-35fa9b6acdc0",
 		},
 		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -201,7 +252,7 @@ self.used = true",
 				[2] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -233,7 +284,7 @@ self.used = true",
 				[3] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -265,7 +316,7 @@ self.used = true",
 				[4] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -302,7 +353,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -344,7 +395,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -386,7 +437,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -428,7 +479,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -465,7 +516,7 @@ self.used = true",
 					["setFirstMatch"] = false,
 				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -480,7 +531,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "b024716d-0c21-b3d9-b162-924724407c61",
+			["uuid"] = "0a01ccdf-fde2-2257-a61a-656ef3ea4d6a",
 		},
 		[4] = {
 			["actions"] = {
@@ -493,9 +544,8 @@ end\
 self.used = true",
 					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 5,
 					},
-					["endIfUsed"] = true,
+					["endIfUsed"] = false,
 					["gVar"] = "",
 					["gVarIndex"] = 1,
 					["gVarValue"] = 1,
@@ -516,29 +566,7 @@ self.used = true",
 					["used"] = false,
 					["variableTogglesType"] = 1,
 				},
-			},
-			["conditions"] = {
-			},
-			["enabled"] = false,
-			["execute"] = "",
-			["executeType"] = 1,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "reenable assist after stunned",
-			["throttleTime"] = 0,
-			["time"] = 116.7,
-			["timeRange"] = false,
-			["timelineIndex"] = 22,
-			["timerEndOffset"] = 20,
-			["timerOffset"] = 11,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "6899d2f3-7429-f9fd-abb4-c7e3d12e28f1",
-		},
-		[5] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 4,
 					["actionID"] = -1,
 					["actionLua"] = "SallyGNB.SkillSettings.NoMercy.enabled = true\
@@ -548,7 +576,7 @@ self.used = true",
 					["conditions"] = {
 					},
 					["endIfUsed"] = false,
-					["gVar"] = "ACR_TensorMagnum_CD",
+					["gVar"] = "",
 					["gVarIndex"] = 1,
 					["gVarValue"] = 1,
 					["ignoreWeaveRules"] = false,
@@ -582,11 +610,11 @@ self.used = true",
 			["time"] = 116.7,
 			["timeRange"] = false,
 			["timelineIndex"] = 22,
-			["timerEndOffset"] = 0,
+			["timerEndOffset"] = 20,
 			["timerOffset"] = 11,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "893b8e5e-66f8-ba36-99ea-f614b3e1991f",
+			["uuid"] = "bae5faad-cc73-c7c8-8fc6-cc98bdebc8cd",
 		},
 	},
 	[23] = {
@@ -646,7 +674,7 @@ self.used = true",
 			["timerOffset"] = -5,
 			["timerStartOffset"] = -12,
 			["used"] = false,
-			["uuid"] = "af101de7-b683-529a-9532-e6c130b5da45",
+			["uuid"] = "fe1ca128-4939-9ba5-9b3f-edbf16ac8499",
 		},
 		[2] = {
 			["actions"] = {
@@ -654,13 +682,9 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--[[\
-\
-'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
-to use them, then enable them on both this timeline and later in the timeline on the second away with thee\
-located at 177.5\
-\
-]]",
+			["execute"] = "\
+--- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
+--- to use them, then change the settings in the \"E7S REACTION SETTINGS\" located at \"13 - Empty Wave\" on the timeline.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -674,14 +698,14 @@ located at 177.5\
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "fcd74302-1f25-88df-8668-a4e917e3c85a",
+			["uuid"] = "f804ecad-b4bf-97c9-85b3-3da72c29858b",
 		},
 		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -713,7 +737,7 @@ self.used = true",
 				[2] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -745,7 +769,7 @@ self.used = true",
 				[3] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -777,7 +801,7 @@ self.used = true",
 				[4] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.DisableAssist == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -814,12 +838,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -856,12 +880,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -898,12 +922,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -940,12 +964,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -977,7 +1001,7 @@ self.used = true",
 					["setFirstMatch"] = false,
 				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -992,7 +1016,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "b1b4011c-8b2a-10c5-bce3-0fea3e2aa3e2",
+			["uuid"] = "da6ceee2-1fcb-8bdf-a065-218c07c27d01",
 		},
 		[4] = {
 			["actions"] = {
@@ -1005,9 +1029,8 @@ end\
 self.used = true",
 					["allowInterrupt"] = false,
 					["conditions"] = {
-						[1] = 5,
 					},
-					["endIfUsed"] = true,
+					["endIfUsed"] = false,
 					["gVar"] = "",
 					["gVarIndex"] = 1,
 					["gVarValue"] = 1,
@@ -1028,29 +1051,7 @@ self.used = true",
 					["used"] = false,
 					["variableTogglesType"] = 1,
 				},
-			},
-			["conditions"] = {
-			},
-			["enabled"] = false,
-			["execute"] = "",
-			["executeType"] = 1,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "reenable assist after stunned",
-			["throttleTime"] = 0,
-			["time"] = 177.5,
-			["timeRange"] = false,
-			["timelineIndex"] = 38,
-			["timerEndOffset"] = 20,
-			["timerOffset"] = 11,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "e7c8315c-d5c6-1487-9692-d92ab9050591",
-		},
-		[5] = {
-			["actions"] = {
-				[1] = {
+				[2] = {
 					["aType"] = 4,
 					["actionID"] = -1,
 					["actionLua"] = "SallyGNB.SkillSettings.NoMercy.enabled = true\
@@ -1060,7 +1061,7 @@ self.used = true",
 					["conditions"] = {
 					},
 					["endIfUsed"] = false,
-					["gVar"] = "ACR_TensorMagnum_CD",
+					["gVar"] = "",
 					["gVarIndex"] = 1,
 					["gVarValue"] = 1,
 					["ignoreWeaveRules"] = false,
@@ -1094,11 +1095,11 @@ self.used = true",
 			["time"] = 177.5,
 			["timeRange"] = false,
 			["timelineIndex"] = 38,
-			["timerEndOffset"] = 0,
+			["timerEndOffset"] = 20,
 			["timerOffset"] = 11,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "2f9d7a09-4ac6-8b43-92c7-9be0cf82312a",
+			["uuid"] = "51152c18-4cf2-49b6-affc-02d9fbcb0bbc",
 		},
 	},
 	[43] = {
@@ -1203,7 +1204,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1414,406 +1415,6 @@ self.used = true",
 		},
 		[2] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--[[\
-\
-'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
-to use them, then enable them on both this timeline and later in the timeline on the second away with thee\
-located at 177.5\
-\
-]]",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- read me --",
-			["throttleTime"] = 0,
-			["time"] = 264.3,
-			["timeRange"] = false,
-			["timelineIndex"] = 58,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "7aaa3834-429d-aa2f-a7e5-466cc174ad9f",
-		},
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 1,
-					},
-					["endIfUsed"] = true,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-				[2] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 2,
-					},
-					["endIfUsed"] = true,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-				[3] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 3,
-					},
-					["endIfUsed"] = true,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-				[4] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 4,
-					},
-					["endIfUsed"] = true,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-			},
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0,
-					["actionID"] = -1,
-					["buffCheckType"] = 3,
-					["buffDuration"] = 1.5,
-					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[4],
-					["category"] = 2,
-					["comparator"] = 2,
-					["conditionLua"] = "",
-					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
-					["contentid"] = -1,
-					["enmityValue"] = 0,
-					["gaugeIndex"] = 1,
-					["gaugeValue"] = 0,
-					["hpType"] = 1,
-					["hpValue"] = 0,
-					["inCombatType"] = 1,
-					["inRangeValue"] = 0,
-					["lastSkillID"] = -1,
-					["localmapid"] = -1,
-					["matchAnyBuff"] = false,
-					["mpType"] = 1,
-					["mpValue"] = 0,
-					["name"] = "",
-					["partyHpType"] = 1,
-					["partyHpValue"] = 0,
-					["partyMpType"] = 1,
-					["partyMpValue"] = 0,
-					["partyTargetContentID"] = -1,
-					["partyTargetName"] = "",
-					["partyTargetNumber"] = 1,
-					["partyTargetSubType"] = 1,
-					["partyTargetType"] = 1,
-					["rangeCheckSourceSubType"] = 1,
-					["rangeCheckSourceType"] = 1,
-					["rangeSourceContentID"] = -1,
-					["rangeSourceName"] = "",
-					["setEventTargetSubtype"] = 1,
-					["setFirstMatch"] = false,
-				},
-				[2] = {
-					["actionCDValue"] = 0,
-					["actionID"] = -1,
-					["buffCheckType"] = 3,
-					["buffDuration"] = 1.5,
-					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[4],
-					["category"] = 2,
-					["comparator"] = 2,
-					["conditionLua"] = "",
-					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
-					["contentid"] = -1,
-					["enmityValue"] = 0,
-					["gaugeIndex"] = 1,
-					["gaugeValue"] = 0,
-					["hpType"] = 1,
-					["hpValue"] = 0,
-					["inCombatType"] = 1,
-					["inRangeValue"] = 0,
-					["lastSkillID"] = -1,
-					["localmapid"] = -1,
-					["matchAnyBuff"] = false,
-					["mpType"] = 1,
-					["mpValue"] = 0,
-					["name"] = "",
-					["partyHpType"] = 1,
-					["partyHpValue"] = 0,
-					["partyMpType"] = 1,
-					["partyMpValue"] = 0,
-					["partyTargetContentID"] = -1,
-					["partyTargetName"] = "",
-					["partyTargetNumber"] = 1,
-					["partyTargetSubType"] = 1,
-					["partyTargetType"] = 1,
-					["rangeCheckSourceSubType"] = 1,
-					["rangeCheckSourceType"] = 1,
-					["rangeSourceContentID"] = -1,
-					["rangeSourceName"] = "",
-					["setEventTargetSubtype"] = 1,
-					["setFirstMatch"] = false,
-				},
-				[3] = {
-					["actionCDValue"] = 0,
-					["actionID"] = -1,
-					["buffCheckType"] = 3,
-					["buffDuration"] = 1.5,
-					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[4],
-					["category"] = 2,
-					["comparator"] = 2,
-					["conditionLua"] = "",
-					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
-					["contentid"] = -1,
-					["enmityValue"] = 0,
-					["gaugeIndex"] = 1,
-					["gaugeValue"] = 0,
-					["hpType"] = 1,
-					["hpValue"] = 0,
-					["inCombatType"] = 1,
-					["inRangeValue"] = 0,
-					["lastSkillID"] = -1,
-					["localmapid"] = -1,
-					["matchAnyBuff"] = false,
-					["mpType"] = 1,
-					["mpValue"] = 0,
-					["name"] = "",
-					["partyHpType"] = 1,
-					["partyHpValue"] = 0,
-					["partyMpType"] = 1,
-					["partyMpValue"] = 0,
-					["partyTargetContentID"] = -1,
-					["partyTargetName"] = "",
-					["partyTargetNumber"] = 1,
-					["partyTargetSubType"] = 1,
-					["partyTargetType"] = 1,
-					["rangeCheckSourceSubType"] = 1,
-					["rangeCheckSourceType"] = 1,
-					["rangeSourceContentID"] = -1,
-					["rangeSourceName"] = "",
-					["setEventTargetSubtype"] = 1,
-					["setFirstMatch"] = false,
-				},
-				[4] = {
-					["actionCDValue"] = 0,
-					["actionID"] = -1,
-					["buffCheckType"] = 3,
-					["buffDuration"] = 1.5,
-					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[4],
-					["category"] = 2,
-					["comparator"] = 2,
-					["conditionLua"] = "",
-					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
-					["contentid"] = -1,
-					["enmityValue"] = 0,
-					["gaugeIndex"] = 1,
-					["gaugeValue"] = 0,
-					["hpType"] = 1,
-					["hpValue"] = 0,
-					["inCombatType"] = 1,
-					["inRangeValue"] = 0,
-					["lastSkillID"] = -1,
-					["localmapid"] = -1,
-					["matchAnyBuff"] = false,
-					["mpType"] = 1,
-					["mpValue"] = 0,
-					["name"] = "",
-					["partyHpType"] = 1,
-					["partyHpValue"] = 0,
-					["partyMpType"] = 1,
-					["partyMpValue"] = 0,
-					["partyTargetContentID"] = -1,
-					["partyTargetName"] = "",
-					["partyTargetNumber"] = 1,
-					["partyTargetSubType"] = 1,
-					["partyTargetType"] = 1,
-					["rangeCheckSourceSubType"] = 1,
-					["rangeCheckSourceType"] = 1,
-					["rangeSourceContentID"] = -1,
-					["rangeSourceName"] = "",
-					["setEventTargetSubtype"] = 1,
-					["setFirstMatch"] = false,
-				},
-			},
-			["enabled"] = false,
-			["execute"] = "",
-			["executeType"] = 1,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "disable assist before teleport",
-			["throttleTime"] = 0,
-			["time"] = 264.3,
-			["timeRange"] = true,
-			["timelineIndex"] = 58,
-			["timerEndOffset"] = 20,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "53d17f7f-f8f8-c53a-a977-b9de431735fa",
-		},
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "if not FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 5,
-					},
-					["endIfUsed"] = true,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-			},
-			["conditions"] = {
-			},
-			["enabled"] = false,
-			["execute"] = "",
-			["executeType"] = 1,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "reenable assist after stunned",
-			["throttleTime"] = 0,
-			["time"] = 264.3,
-			["timeRange"] = false,
-			["timelineIndex"] = 58,
-			["timerEndOffset"] = 20,
-			["timerOffset"] = 11,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "906eaa32-c375-e85f-b2e3-37eb25d8b2d3",
-		},
-		[5] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
@@ -1915,7 +1516,7 @@ self.used = true\
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 3,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2016,7 +1617,7 @@ self.used = true\
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2276,7 +1877,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

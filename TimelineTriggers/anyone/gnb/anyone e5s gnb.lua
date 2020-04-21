@@ -10,33 +10,29 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--Frequently Asked Questions:\
+			["execute"] = "---Frequently Asked Questions:\
 --\
---Question: \"Something isn't working\"\
---\
---Answer: First of all, make sure you're using the most up to date version of my reactions\
---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
---of your problem. Try to be as precise as possible with the issue.\
---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
---You can reach me on discord at Anyone#9549.\
---\
---\
---Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
---\
---Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
---All of the information is in there.\
+---Question: \"Something isn't working\"\
+---Answer: First of all, make sure you're using the most up to date version of my reactions\
+---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+---of your problem. Try to be as precise as possible with the issue.\
+---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+---You can reach me on discord at Anyone#9549.\
 --\
 --\
---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+---Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+---All of the information is in there.\
 --\
---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
 --\
 --\
 --\
---Question: \"Why don't you do something this way instead of that way?\"\
---\
---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+---Question: \"Why don't you do something this way instead of that way?\"\
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -128,12 +124,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -278,13 +274,13 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -493,7 +489,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -704,7 +700,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -854,7 +850,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[2],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

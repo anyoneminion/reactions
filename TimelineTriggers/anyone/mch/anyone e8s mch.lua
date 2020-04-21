@@ -10,6 +10,54 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
+			["execute"] = "--- Set this to false if you are on the right side for adds phase.\
+data.LeftSide = true\
+\
+--- Only matters if you're on the left side, this will make it so you only use interrupt on the second add.\
+data.InterruptSecondAdd = false\
+\
+--- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
+data.KnockbackMirrorUptime = false\
+\
+--- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
+---Set to false to disable.\
+data.DrawOrbs = true\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "E8S REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "5f21604f-4199-6912-9ed0-a20bcac24b56",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
 			["execute"] = "---Frequently Asked Questions:\
 --\
 ---Question: \"Something isn't working\"\
@@ -22,7 +70,7 @@ local obj1 = {
 --\
 --\
 ---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
----Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
+---Answer: Go to e8s, and on the first mechanic of the timeline, check out \"E8S REACTION SETTINGS\"\
 ---All of the information is in there.\
 --\
 --\
@@ -48,26 +96,29 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "2197db29-5ec3-6f2c-9702-2ada46b777f1",
 		},
-		[2] = {
+		[3] = {
 			["actions"] = {
 			},
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
---- this is only in effect for phase 1. you will be required to download riku's mch v6 general reactions and have it\
---- as your currently selected reactions in the general tab. \
+			["execute"] = "--\
+-- QUEEN GAUGE INFORMATION:\
+--- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
+--- this is only in effect for phase 1. you will be required to download riku's mch v7 or higher general reactions and have it\
+--- as your currently selected reactions in the 'General' tab. \
 --\
 --\
---- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
---- Go to \"243.3 - Heart Asunder\" on the timeline and DISABLE BOTH of the following reactions:\
---- \"enable head graze (left 1)\" & \"disable head graze (left 1)\"\
+-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: \
+--- Go to \"E8S REACTION SETTINGS\" and change data.InterruptSecond to true\
 --- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
 --- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
 --- If you are interrupting the first Earthen Aether, no changes are required.\
-\
---- If you're doing the knockback mirror uptime strat, make sure to go to \"535.1 - Reflected wings (G)\" on the timeline.\
---- The reactions are not enabled by default, so make sure to read the 'read me' reactions there to figure out how to enable them.",
+--\
+--\
+-- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
+--- If you're doing this strategy, make sure to go to \"E8S REACTION SETTINGS\" and set data.KnockbackMirrorUptime to true\
+--- You may still need to adjust the timings if you're getting knocked off. Go to \"535.1 - Reflected Wings\" for more info.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -83,7 +134,7 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "89474ed5-2890-c729-bac7-2be5ab5f063b",
 		},
-		[3] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
@@ -180,7 +231,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -222,7 +273,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -264,7 +315,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -306,7 +357,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -370,7 +421,7 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -405,7 +456,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -560,7 +611,7 @@ self.used = table.size(drawnOrbs) >= 4",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -784,17 +835,14 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
+			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
 \
--- Go to \"243.3 - Heart Asunder\" on the timeline and DISABLE BOTH of the following reactions:\
+--- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
+--- Change \"data.InterruptSecondAdd\" to true\
 \
--- \"enable head graze (left 1)\" & \"disable head graze (left 1)\"\
-\
--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
-\
--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
-\
--- If you are interrupting the first Earthen Aether, no changes are required.",
+--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
+--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
+--- If you are interrupting the first Earthen Aether, no changes are required.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -808,7 +856,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "5ab272f0-1c75-4eb0-b465-4e761152945b",
+			["uuid"] = "b1c53657-6a48-0dd5-a146-4a1ec0deca81",
 		},
 	},
 	[37] = {
@@ -855,7 +903,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -897,7 +945,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -939,7 +987,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -981,7 +1029,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -1125,7 +1173,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
@@ -1186,19 +1234,14 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
+			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
 \
--- Go to \"243.3 - Heart Asunder\" on the timeline and DISABLE BOTH of the following reactions:\
+--- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
+--- Change \"data.InterruptSecondAdd\" to true\
 \
--- \"enable head graze (left 1)\" & \"disable head graze (left 1)\"\
-\
--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
-\
--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
-\
--- If you are interrupting the first Earthen Aether, no changes are required.\
-\
-",
+--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
+--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
+--- If you are interrupting the first Earthen Aether, no changes are required.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -1256,7 +1299,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
@@ -1296,7 +1339,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible then\
+if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1347,24 +1390,14 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
+			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
 \
--- Go to \"243.3 - Heart Asunder\" on the timeline and DISABLE BOTH of the following reactions:\
+--- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
+--- Change \"data.InterruptSecondAdd\" to true\
 \
--- \"enable head graze (left 1)\" & \"disable head graze (left 1)\"\
-\
--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
-\
--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
-\
--- If you are interrupting the first Earthen Aether, no changes are required.\
-\
-\
-\
-\
--- The two reactions underneath this read me are the ones you want to disable. DISABLE BOTH.\
-\
-",
+--- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
+--- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
+--- If you are interrupting the first Earthen Aether, no changes are required.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -1378,7 +1411,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "a3cafc8e-df74-3afc-9992-4f8abf2f3717",
+			["uuid"] = "ce7fe0e0-4078-9b14-b2e1-629168973cce",
 		},
 		[2] = {
 			["actions"] = {
@@ -1422,7 +1455,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
@@ -1462,7 +1495,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible then\
+if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1508,6 +1541,131 @@ self.used = true",
 	},
 	[41] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4,
+					["actionID"] = -1,
+					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+self.used = true",
+					["allowInterrupt"] = false,
+					["conditions"] = {
+						[1] = 1,
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["name"] = "",
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = multiRefObjects[2],
+					["category"] = 4,
+					["comparator"] = 1,
+					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+return EA and EA.castinginfo.castinginterruptible -- head graze",
+					["conditionType"] = 1,
+					["conditions"] = multiRefObjects[3],
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["inRangeValue"] = 0,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["name"] = "",
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["rangeCheckSourceSubType"] = 1,
+					["rangeCheckSourceType"] = 1,
+					["rangeSourceContentID"] = -1,
+					["rangeSourceName"] = "",
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+				},
+			},
+			["enabled"] = true,
+			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
+if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == true then\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
+		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
+		self.used = true\
+end",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "enable head graze (left 2)",
+			["throttleTime"] = 0,
+			["time"] = 257.4,
+			["timeRange"] = true,
+			["timelineIndex"] = 41,
+			["timerEndOffset"] = 10,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "4e9135fe-b628-a45f-bffc-fe45fa22280f",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "disable head graze (left 2)",
+			["throttleTime"] = 0,
+			["time"] = 257.4,
+			["timeRange"] = false,
+			["timelineIndex"] = 41,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 10,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "4d9d843b-419b-8213-a2c3-bfb4fab9a760",
+		},
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3,
@@ -1603,7 +1761,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 			["used"] = false,
 			["uuid"] = "882225de-2fec-fcf1-865e-d5ea36b51c32",
 		},
-		[2] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3,
@@ -1699,7 +1857,7 @@ return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)",
 			["used"] = false,
 			["uuid"] = "15651788-b874-c7de-8082-c148dac0ff36",
 		},
-		[3] = {
+		[5] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 3,
@@ -1739,7 +1897,7 @@ return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
@@ -1794,131 +1952,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 			["used"] = false,
 			["uuid"] = "157a89a5-4bf2-51e9-baa4-e83bf7686339",
 		},
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
-ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-						[1] = 1,
-					},
-					["endIfUsed"] = false,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-			},
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0,
-					["actionID"] = -1,
-					["buffCheckType"] = 1,
-					["buffDuration"] = 0,
-					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
-					["category"] = 4,
-					["comparator"] = 1,
-					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-return EA and EA.castinginfo.castinginterruptible -- head graze",
-					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
-					["contentid"] = -1,
-					["enmityValue"] = 0,
-					["gaugeIndex"] = 1,
-					["gaugeValue"] = 0,
-					["hpType"] = 1,
-					["hpValue"] = 0,
-					["inCombatType"] = 1,
-					["inRangeValue"] = 0,
-					["lastSkillID"] = -1,
-					["localmapid"] = -1,
-					["matchAnyBuff"] = false,
-					["mpType"] = 1,
-					["mpValue"] = 0,
-					["name"] = "",
-					["partyHpType"] = 1,
-					["partyHpValue"] = 0,
-					["partyMpType"] = 1,
-					["partyMpValue"] = 0,
-					["partyTargetContentID"] = -1,
-					["partyTargetName"] = "",
-					["partyTargetNumber"] = 1,
-					["partyTargetSubType"] = 1,
-					["partyTargetType"] = 1,
-					["rangeCheckSourceSubType"] = 1,
-					["rangeCheckSourceType"] = 1,
-					["rangeSourceContentID"] = -1,
-					["rangeSourceName"] = "",
-					["setEventTargetSubtype"] = 1,
-					["setFirstMatch"] = false,
-				},
-			},
-			["enabled"] = true,
-			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible then\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
-		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
-		self.used = true\
-end",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "enable head graze (left 2)",
-			["throttleTime"] = 0,
-			["time"] = 257.4,
-			["timeRange"] = true,
-			["timelineIndex"] = 41,
-			["timerEndOffset"] = 10,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "4e9135fe-b628-a45f-bffc-fe45fa22280f",
-		},
-		[5] = {
-			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
-self.used = true",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "disable head graze (left 2)",
-			["throttleTime"] = 0,
-			["time"] = 257.4,
-			["timeRange"] = false,
-			["timelineIndex"] = 41,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 10,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "4d9d843b-419b-8213-a2c3-bfb4fab9a760",
-		},
 	},
 	[43] = {
 		[1] = {
@@ -1963,7 +1996,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
@@ -2003,7 +2036,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible then\
+if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -2372,7 +2405,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2573,7 +2606,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2615,7 +2648,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2657,7 +2690,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2699,7 +2732,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2802,7 +2835,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2844,7 +2877,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2886,7 +2919,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2928,7 +2961,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2990,27 +3023,23 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = false,
-			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
-\
--- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
+			["execute"] = "--- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
+--- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
 \
 -- this reaction is experimental, in theory the timings should be fine\
 \
--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
+--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
+--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
 \
--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+--- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+--- and low ping players will have problems on the second hit.\
 \
--- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+--- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
+--- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
 \
--- and low ping players will have problems on the second hit.\
-\
--- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
-\
--- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
-\
--- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
-\
--- THEY WILL NOT WORK WITHOUT ALL THREE ENABLED.",
+--- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
+--- Set \"data.KnockbackMirrorUptime\" to true\
+",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -3031,7 +3060,7 @@ self.used = true",
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.KnockbackMirrorUptime == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -3062,7 +3091,7 @@ self.used = true",
 			},
 			["conditions"] = {
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -3087,6 +3116,7 @@ self.used = true",
 					["actionLua"] = "",
 					["allowInterrupt"] = false,
 					["conditions"] = {
+						[1] = 1,
 					},
 					["endIfUsed"] = false,
 					["gVar"] = "ACR_TensorMagnum_CD",
@@ -3111,8 +3141,57 @@ self.used = true",
 				},
 			},
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = {
+					},
+					["category"] = 4,
+					["comparator"] = 1,
+					["conditionLua"] = "if data.KnockbackMirrorUptime == true then\
+		return true\
+end\
+\
+return false",
+					["conditionType"] = 1,
+					["conditions"] = {
+					},
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["inRangeValue"] = 0,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["name"] = "",
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["rangeCheckSourceSubType"] = 1,
+					["rangeCheckSourceType"] = 1,
+					["rangeSourceContentID"] = -1,
+					["rangeSourceName"] = "",
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+					["targetName"] = "",
+				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -3204,7 +3283,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3246,7 +3325,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3283,7 +3362,7 @@ self.used = true",
 					["setFirstMatch"] = false,
 				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -3349,7 +3428,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3391,7 +3470,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -3433,7 +3512,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -3475,7 +3554,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -3792,7 +3871,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3834,7 +3913,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -3876,7 +3955,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -3918,7 +3997,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",

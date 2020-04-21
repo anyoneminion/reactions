@@ -10,33 +10,71 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--Frequently Asked Questions:\
+			["execute"] = "--- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
+data.KnockbackMirrorUptime = false\
+\
+--- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
+---Set to false to disable.\
+data.DrawOrbs = true\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "E8S REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "6d2a71de-0adb-37c4-925d-5a81dd2922bb",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "---Frequently Asked Questions:\
 --\
---Question: \"Something isn't working\"\
---\
---Answer: First of all, make sure you're using the most up to date version of my reactions\
---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
---of your problem. Try to be as precise as possible with the issue.\
---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
---You can reach me on discord at Anyone#9549.\
---\
---\
---Question: \"How do I get the knockback mirror uptime strat to work?\" or \"I got killed during knockback mirrors\"\
---\
---Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
---All of the information is in there.\
+---Question: \"Something isn't working\"\
+---Answer: First of all, make sure you're using the most up to date version of my reactions\
+---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+---of your problem. Try to be as precise as possible with the issue.\
+---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+---You can reach me on discord at Anyone#9549.\
 --\
 --\
---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+---Answer: Go to e8s, and on the first mechanic of the timeline, check out \"E8S REACTION SETTINGS\"\
+---All of the information is in there.\
 --\
---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+--\
+---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
 --\
 --\
 --\
---Question: \"Why don't you do something this way instead of that way?\"\
---\
---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+---Question: \"Why don't you do something this way instead of that way?\"\
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -50,23 +88,44 @@ local obj1 = {
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "05e52e8e-8760-1a7b-ae1a-ed776f01dde6",
+			["uuid"] = "663fe982-66f0-d1f5-a4d7-37134c8aab25",
 		},
-		[2] = {
+		[3] = {
 			["actions"] = {
 			},
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "-- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
+			["execute"] = "--\
+-- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
+--- If you're doing this strategy, make sure to go to \"E8S REACTION SETTINGS\" and set data.KnockbackMirrorUptime to true\
+--- You may still need to adjust the timings if you're getting knocked off. Go to \"535.1 - Reflected Wings\" for more info.",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- e8s read me --",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "d9059df3-409f-86a3-bc9c-d52f3c419218",
+		},
+		[4] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "--- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
+--- tank defensives, tank swapping, or anything like that.\
 \
--- tank defensives, tank swapping, or anything like that.\
-\
--- The reactions for automatically using arm's length during the knockback mirror uptime strat are\
-\
--- are disabled by default. Go to \"535.1 - Reflected Wings (G)\" to enable them. \
-\
--- Read the \"read me\" there for more info.",
+--- The reactions for automatically using arm's length during the knockback mirror uptime strat are\
+--- are disabled by default. Go to \"E8S REACTION SETTINGS\" for more info.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -80,7 +139,7 @@ local obj1 = {
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "e02cf039-e1ff-19d0-a6fc-0bdb9d23528a",
+			["uuid"] = "031b3271-a7cd-713a-9743-342eff948e89",
 		},
 	},
 	[9] = {
@@ -100,7 +159,7 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -127,7 +186,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "03002b04-2f71-5517-a3cc-4a335fce0f84",
+			["uuid"] = "754f62b4-149b-2097-900f-626199a89fb0",
 		},
 		[2] = {
 			["actions"] = {
@@ -135,7 +194,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil then\
+			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
                 self.used = true\
 end\
 \
@@ -162,7 +221,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["timerOffset"] = 15,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "ca23709b-96c1-21fa-b7e0-1ebb2097cc52",
+			["uuid"] = "d69cb804-f7f7-3e0a-9db6-c7cd060c6627",
 		},
 	},
 	[30] = {
@@ -595,7 +654,8 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = {
+					},
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -764,27 +824,23 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = false,
-			["execute"] = "-- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
-\
--- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
+			["execute"] = "--- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
+--- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
 \
 -- this reaction is experimental, in theory the timings should be fine\
 \
--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
+--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
+--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
 \
--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+--- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+--- and low ping players will have problems on the second hit.\
 \
--- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
+--- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
+--- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
 \
--- and low ping players will have problems on the second hit.\
-\
--- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
-\
--- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
-\
--- FINALLY, MAKE SURE YOU ENABLE ALL THREE REACTIONS, \"disable assist\", \"arm's length\" AND \"reenable assist\".\
-\
--- THEY WILL NOT WORK WITH ALL THREE ENABLED.",
+--- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
+--- Set \"data.KnockbackMirrorUptime\" to true\
+",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -798,14 +854,14 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "553618f0-40bb-1e4f-a45f-5c5224f62994",
+			["uuid"] = "6c8322c2-c713-2c93-9cd8-33cb1a4e69f4",
 		},
 		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and data.KnockbackMirrorUptime == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -836,7 +892,7 @@ self.used = true",
 			},
 			["conditions"] = {
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -851,7 +907,7 @@ self.used = true",
 			["timerOffset"] = -2,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "7e9414d0-9635-d868-b562-ea354073b050",
+			["uuid"] = "0da4509d-5f59-63b8-a4c2-5bfd7b58389f",
 		},
 		[3] = {
 			["actions"] = {
@@ -861,6 +917,7 @@ self.used = true",
 					["actionLua"] = "",
 					["allowInterrupt"] = false,
 					["conditions"] = {
+						[1] = 1,
 					},
 					["endIfUsed"] = false,
 					["gVar"] = "ACR_TensorMagnum_CD",
@@ -885,8 +942,57 @@ self.used = true",
 				},
 			},
 			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0,
+					["actionID"] = -1,
+					["buffCheckType"] = 1,
+					["buffDuration"] = 0,
+					["buffID"] = -1,
+					["buffIDList"] = {
+					},
+					["category"] = 4,
+					["comparator"] = 1,
+					["conditionLua"] = "if data.KnockbackMirrorUptime == true then\
+		return true\
+end\
+\
+return false",
+					["conditionType"] = 1,
+					["conditions"] = {
+					},
+					["contentid"] = -1,
+					["enmityValue"] = 0,
+					["gaugeIndex"] = 1,
+					["gaugeValue"] = 0,
+					["hpType"] = 1,
+					["hpValue"] = 0,
+					["inCombatType"] = 1,
+					["inRangeValue"] = 0,
+					["lastSkillID"] = -1,
+					["localmapid"] = -1,
+					["matchAnyBuff"] = false,
+					["mpType"] = 1,
+					["mpValue"] = 0,
+					["name"] = "",
+					["partyHpType"] = 1,
+					["partyHpValue"] = 0,
+					["partyMpType"] = 1,
+					["partyMpValue"] = 0,
+					["partyTargetContentID"] = -1,
+					["partyTargetName"] = "",
+					["partyTargetNumber"] = 1,
+					["partyTargetSubType"] = 1,
+					["partyTargetType"] = 1,
+					["rangeCheckSourceSubType"] = 1,
+					["rangeCheckSourceType"] = 1,
+					["rangeSourceContentID"] = -1,
+					["rangeSourceName"] = "",
+					["setEventTargetSubtype"] = 1,
+					["setFirstMatch"] = false,
+					["targetName"] = "",
+				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -901,7 +1007,7 @@ self.used = true",
 			["timerOffset"] = -1.25,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "be11c0bd-17ef-8ac3-82ea-1d133175ecd9",
+			["uuid"] = "af4f2e71-20ac-f15b-a10f-f548c92c7f32",
 		},
 		[4] = {
 			["actions"] = {
@@ -978,12 +1084,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1020,12 +1126,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1057,7 +1163,7 @@ self.used = true",
 					["setFirstMatch"] = false,
 				},
 			},
-			["enabled"] = false,
+			["enabled"] = true,
 			["execute"] = "",
 			["executeType"] = 1,
 			["lastUse"] = 0,
@@ -1072,7 +1178,7 @@ self.used = true",
 			["timerOffset"] = 0,
 			["timerStartOffset"] = -2,
 			["used"] = false,
-			["uuid"] = "45d90d01-c1df-d0b0-bd5b-157abf32f6c2",
+			["uuid"] = "c81a978b-d390-81b1-9795-415ec537132f",
 		},
 	},
 	[73] = {
