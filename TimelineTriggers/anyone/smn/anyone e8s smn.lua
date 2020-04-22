@@ -17,7 +17,8 @@ data.KnockbackMirrorUptime = false\
 ---Set to false to disable.\
 data.DrawOrbs = true\
 \
-\
+--- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
+data.DrawDragonHeads = true\
 \
 \
 \
@@ -158,7 +159,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -200,7 +201,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1203,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -369,7 +370,7 @@ self.used = table.size(drawnOrbs) >= 4",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -411,7 +412,7 @@ self.used = table.size(drawnOrbs) >= 4",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1203,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -686,7 +687,7 @@ self.used = table.size(drawnOrbs) >= 4",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
@@ -1014,7 +1015,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
@@ -1161,7 +1162,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "local target = Player:GetTarget()\
@@ -1469,7 +1470,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 4,
 					["comparator"] = 1,
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
@@ -1567,7 +1568,7 @@ return false",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -1609,7 +1610,7 @@ return false",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1203,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -1662,6 +1663,45 @@ return false",
 			["timerStartOffset"] = 0,
 			["used"] = false,
 			["uuid"] = "4d62044c-7cac-d77b-ab44-9433c71a325f",
+		},
+	},
+	[58] = {
+		[1] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+                if ent.contentid == 9323 and not drawnOrbs[id] then\
+																													if data.DrawDragonHeads == true then\
+                                drawnOrbs[id] = true\
+                                Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+																													end				\
+                end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 1",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw head aoe",
+			["throttleTime"] = 0,
+			["time"] = 427.9,
+			["timeRange"] = true,
+			["timelineIndex"] = 58,
+			["timerEndOffset"] = 20,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "c6568a53-f892-3598-bdf9-25c71a61c7ac",
 		},
 	},
 	[72] = {
@@ -1936,7 +1976,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1978,7 +2018,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2070,7 +2110,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2112,7 +2152,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1203,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2236,7 +2276,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 1,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2278,7 +2318,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 1,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2333,6 +2373,45 @@ self.used = true",
 			["uuid"] = "11f5586f-e288-d2fc-81a2-7ee4e29c25d1",
 		},
 	},
+	[109] = {
+		[1] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+                if ent.contentid == 9323 and not drawnOrbs[id] then\
+																													if data.DrawDragonHeads == true then\
+                                drawnOrbs[id] = true\
+                                Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+																													end\
+                end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw head aoe",
+			["throttleTime"] = 0,
+			["time"] = 738.3,
+			["timeRange"] = true,
+			["timelineIndex"] = 109,
+			["timerEndOffset"] = 20,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "8a239a6b-99d4-f871-823b-ea238b79d250",
+		},
+	},
 	[114] = {
 		[1] = {
 			["actions"] = {
@@ -2375,7 +2454,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -2417,7 +2496,7 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1203,
-					["buffIDList"] = multiRefObjects[4],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",

@@ -17,7 +17,8 @@ data.KnockbackMirrorUptime = false\
 ---Set to false to disable.\
 data.DrawOrbs = true\
 \
-\
+--- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
+data.DrawDragonHeads = true\
 \
 \
 \
@@ -813,6 +814,45 @@ self.used = true",
 	},
 	[53] = {
 	},
+	[58] = {
+		[1] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+                if ent.contentid == 9323 and not drawnOrbs[id] then\
+																													if data.DrawDragonHeads == true then\
+                                drawnOrbs[id] = true\
+                                Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+																													end				\
+                end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 1",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw head aoe",
+			["throttleTime"] = 0,
+			["time"] = 427.9,
+			["timeRange"] = true,
+			["timelineIndex"] = 58,
+			["timerEndOffset"] = 20,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "f161f49f-1973-e73f-b4db-ad03236972fa",
+		},
+	},
 	[66] = {
 	},
 	[71] = {
@@ -1084,12 +1124,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1126,12 +1166,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1245,6 +1285,43 @@ self.used = true",
 		},
 	},
 	[109] = {
+		[1] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+                if ent.contentid == 9323 and not drawnOrbs[id] then\
+																													if data.DrawDragonHeads == true then\
+                                drawnOrbs[id] = true\
+                                Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+																													end				\
+                end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "draw head aoe",
+			["throttleTime"] = 0,
+			["time"] = 738.3,
+			["timeRange"] = true,
+			["timelineIndex"] = 109,
+			["timerEndOffset"] = 20,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "7289d148-c16d-8bbb-aae1-7c0962d8a141",
+		},
 	},
 	[110] = {
 	},
