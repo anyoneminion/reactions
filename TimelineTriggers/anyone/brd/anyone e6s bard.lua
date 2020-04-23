@@ -22,17 +22,22 @@ local obj1 = {
 --\
 --\
 ---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
----Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
----All of the information is in there.\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
 --\
 --\
 ---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
----Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
 --\
 --\
 --\
 ---Question: \"Why don't you do something this way instead of that way?\"\
----Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
+--\
+--\
+--\
+---Question: \"How do I change the settins for my reactions?\"\
+---Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+---an option named \"AnyoneReactions\". Click that and change the settings as you please.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,

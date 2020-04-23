@@ -5,122 +5,6 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 9,
-		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
-SallyDRK.HotBarConfig.Shirk.enabled = true\
-SallyDRK.HotBarConfig.Reprisal.enabled = true\
-SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
-SallyDRK.HotBarConfig.Rampart.enabled = true\
-SallyDRK.HotBarConfig.LowBlow.enabled = true\
-SallyDRK.HotBarConfig.DarkMind.enabled = true\
-SallyDRK.HotBarConfig.LivingDead.enabled = true\
-SallyDRK.HotBarConfig.TBN.enabled = true\
-SallyDRK.HotBarConfig.TBN_OT.enabled = true\
-SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
-SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
-SallyDRK.HotBarConfig.Delirium.enabled = true\
-SallyDRK.HotBarConfig.Sprint.enabled = true\
-SallyDRK.HotBarConfig.Interject.enabled = true\
-SallyDRK.HotBarConfig.ArmsLength.enabled = true\
-SallyDRK.HotBarConfig.LivingShadow.enabled = true\
-SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
-SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
-SallyDRK.HotBarConfig.Plunge.enabled = true\
-SallyDRK.HotBarConfig.LimitBreak.enabled = true\
-\
-SallyDRK.SkillSettings.Opener.enabled = false\
-SallyDRK.SkillSettings.Delirium.enabled = true\
-SallyDRK.SkillSettings.LivingShadow.enabled = true\
-SallyDRK.SkillSettings.SaveCD.enabled = false\
-SallyDRK.SkillSettings.Range.enabled = true\
-SallyDRK.SkillSettings.BloodWeapon.enabled = true\
-SallyDRK.SkillSettings.CarveAndSpit.enabled = true\
-SallyDRK.SkillSettings.AbyssalDrain.enabled = true\
-SallyDRK.SkillSettings.UseAOE.enabled = true\
-SallyDRK.SkillSettings.JumpRange.enabled = true\
-SallyDRK.SkillSettings.SaltedEarth.enabled = true\
--- SallyDRK.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
-self.used = true\
-\
-if Player.job ~= 32 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "reset hotbar/qt on wipe",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "dd236dc5-7267-26cc-aa6c-b31ef3abad67",
-	},
-	[2] = {
-		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 10,
-		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
-SallyDRK.HotBarConfig.Shirk.enabled = true\
-SallyDRK.HotBarConfig.Reprisal.enabled = true\
-SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
-SallyDRK.HotBarConfig.Rampart.enabled = true\
-SallyDRK.HotBarConfig.LowBlow.enabled = true\
-SallyDRK.HotBarConfig.DarkMind.enabled = true\
-SallyDRK.HotBarConfig.LivingDead.enabled = true\
-SallyDRK.HotBarConfig.TBN.enabled = true\
-SallyDRK.HotBarConfig.TBN_OT.enabled = true\
-SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
-SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
-SallyDRK.HotBarConfig.Delirium.enabled = true\
-SallyDRK.HotBarConfig.Sprint.enabled = true\
-SallyDRK.HotBarConfig.Interject.enabled = true\
-SallyDRK.HotBarConfig.ArmsLength.enabled = true\
-SallyDRK.HotBarConfig.LivingShadow.enabled = true\
-SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
-SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
-SallyDRK.HotBarConfig.Plunge.enabled = true\
-SallyDRK.HotBarConfig.LimitBreak.enabled = true\
-self.used = true\
-\
-if Player.job ~= 32 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "reset hotbar on death",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "6d180639-e778-d7ec-bfb6-cf30a446e1b6",
-	},
-	[3] = {
-		["actions"] = {
 			[1] = {
 				["aType"] = 4,
 				["actionID"] = -1,
@@ -457,7 +341,139 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "0fca283f-c697-1a20-ba5a-efa63f185559",
+		["uuid"] = "a526d71a-b37b-9fa2-b0b0-e8fd880ffdc3",
+	},
+	[2] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = false,
+		["eventType"] = 10,
+		["execute"] = "if Player.job ~= 38 then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+data.nilsPlayground.timeOfDeath = Now()\
+\
+if SallyDNC ~= nil then\
+  -- reset hotbar\
+  SallyDNC.HotBarConfig.Armslength.enabled = true\
+  SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
+  SallyDNC.HotBarConfig.Devilment.enabled = true\
+  SallyDNC.HotBarConfig.EnAvant.enabled = true\
+  SallyDNC.HotBarConfig.Flourish.enabled = true\
+  SallyDNC.HotBarConfig.Improv.enabled = true\
+  SallyDNC.HotBarConfig.LB.enabled = true\
+  SallyDNC.HotBarConfig.SecondWind.enabled = true\
+  SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
+  SallyDNC.HotBarConfig.Sprint.enabled = true\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true \
+return nil",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset: on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 10,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5",
+	},
+	[3] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
+		["execute"] = "if Player.job ~= 38 or SallyDNC == nil then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+\
+-- reset hotbar\
+SallyDNC.HotBarConfig.Armslength.enabled = true\
+SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
+SallyDNC.HotBarConfig.Devilment.enabled = true\
+SallyDNC.HotBarConfig.EnAvant.enabled = true\
+SallyDNC.HotBarConfig.Flourish.enabled = true\
+SallyDNC.HotBarConfig.Improv.enabled = true\
+SallyDNC.HotBarConfig.LB.enabled = true\
+SallyDNC.HotBarConfig.SecondWind.enabled = true\
+SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
+SallyDNC.HotBarConfig.Sprint.enabled = true\
+\
+\
+-- reset quick toggles\
+SallyDNC.SkillSettings.BurnCD.enabled = false\
+SallyDNC.SkillSettings.Devilment.enabled = true\
+SallyDNC.SkillSettings.FanDance3IsAOE.enabled = true\
+SallyDNC.SkillSettings.Flourish.enabled = true\
+SallyDNC.SkillSettings.Opener.enabled = false\
+-- SallyDNC.SkillSettings.Potion.enabled = true\
+SallyDNC.SkillSettings.SaberDance.enabled = true\
+SallyDNC.SkillSettings.SaberIsAOE.enabled = true\
+SallyDNC.SkillSettings.SaveCD.enabled = false\
+SallyDNC.SkillSettings.StandardStep.enabled = true\
+SallyDNC.SkillSettings.TechStep.enabled = true\
+SallyDNC.SkillSettings.UseAOE.enabled = true\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true \
+return nil",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset: toggles on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 10,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1",
+	},
+	[4] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
+		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
+---alternatively just disable this if you're 3000 iq and remember to use dance partner\
+SallyDNC.SkillSettings.AutoPartner.enabled = true\
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "auto partner once at map change",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf",
 	},
 }
 return obj1

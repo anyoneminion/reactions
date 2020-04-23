@@ -10,47 +10,8 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "--- Set to true to disable MMOMinion Assist before Away With Thee teleports to avoid character turning before the teleports.\
---- False is full manual for positioning during Away With Thee teleports.\
-data.DisableAssist = false\
-\
-\
-\
-\
-\
-\
-\
-self.used = true",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "E7S REACTION SETTINGS",
-			["throttleTime"] = 0,
-			["time"] = 13,
-			["timeRange"] = false,
-			["timelineIndex"] = 2,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "f8b56cac-8534-40c9-95da-dcb38549cd49",
-		},
-		[2] = {
-			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "-- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
-\
--- tank defensives, tank swapping, or anything like that.\
-\
--- The reactions for automatically using arm's length during the knockback mirror uptime strat are\
-\
--- are disabled by default. Go to \"535.1 - Reflected Wings (G)\" to enable them. \
-\
--- Read the \"read me\" there for more info.",
+			["execute"] = "--- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
+--- tank defensives, tank swapping, or anything like that.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -66,7 +27,7 @@ self.used = true",
 			["used"] = false,
 			["uuid"] = "4c059bc4-c4ef-ceb8-bcff-da6b83dd4369",
 		},
-		[3] = {
+		[2] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -84,17 +45,22 @@ self.used = true",
 --\
 --\
 ---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
----Answer: Go to e8s, and read the readme file at \"535.1 - Reflected Wings (G)\" on the timeline.\
----All of the information is in there.\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
 --\
 --\
 ---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
----Answer: Go to e7s, and read the readme file there, either on the first timer or on the Away With Thee timer.\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
 --\
 --\
 --\
 ---Question: \"Why don't you do something this way instead of that way?\"\
----Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.",
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
+--\
+--\
+--\
+---Question: \"How do I change the settins for my reactions?\"\
+---Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+---an option named \"AnyoneReactions\". Click that and change the settings as you please.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -110,7 +76,7 @@ self.used = true",
 			["used"] = false,
 			["uuid"] = "e184303b-913f-4c60-ae13-30b8b6230e65",
 		},
-		[4] = {
+		[3] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -118,10 +84,10 @@ self.used = true",
 			["enabled"] = true,
 			["execute"] = "--\
 --On this timeline, you have the option of enabling reactions that will help you with Away With Thee. To enable this:\
----Go to \"E7S REACTION SETTINGS\" and change data.DisableAssist to true.\
----You will still need to face your character the correct way.\
+---Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
 --\
---",
+--\
+",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -136,6 +102,98 @@ self.used = true",
 			["timerStartOffset"] = 0,
 			["used"] = false,
 			["uuid"] = "819bc977-dbf4-ea35-8c96-50aec8f4f9b3",
+		},
+		[4] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
+--- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+--- an option named \"AnyoneReactions\". Click that and change the settings as you please.\
+\
+---If you do not see an option named that, follow these steps to troubleshoot:\
+---1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
+---2) Reload LUA\
+---3) Make sure you are on the most up to date version of my general reactions.\
+---4) Check console for errors.\
+---5) Send any additional problems to me on Discord at Anyone#9549\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+--- Set to true to disable MMOMinion Assist before Away With Thee teleports to avoid character turning before the teleports.\
+--- False is full manual for positioning during Away With Thee teleports.\
+data.DisableAssist = AnyoneReactionSettings.Settings.DisableAssist\
+\
+\
+--- Set to true to pot during adds phase, will help get a 3rd pot in the fight if your kill times are over 9 minutes 30 seconds.\
+--- Must be set to false if your kill times are under 9 minutes 25 seconds.\
+data.AddsPhasePot = AnyoneReactionSettings.Settings.AddsPhasePot\
+\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "E7S REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 13,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "f8b56cac-8534-40c9-95da-dcb38549cd49",
 		},
 	},
 	[22] = {
@@ -353,12 +411,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -395,12 +453,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -437,12 +495,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -479,12 +537,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[3],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -838,12 +896,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -880,12 +938,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -922,12 +980,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -964,12 +1022,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[2],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1204,7 +1262,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1516,7 +1574,7 @@ self.used = true\
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 3,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1617,7 +1675,7 @@ self.used = true\
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1877,7 +1935,7 @@ self.used = true",
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
