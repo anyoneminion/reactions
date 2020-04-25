@@ -348,7 +348,7 @@ self.used = true",
 		},
 		["conditions"] = {
 		},
-		["enabled"] = false,
+		["enabled"] = true,
 		["eventType"] = 10,
 		["execute"] = "if Player.job ~= 38 then\
 		self.eventConditionMismatch = true -- suppressing the log\

@@ -222,7 +222,7 @@ self.used = true",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
+			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
 \
@@ -230,8 +230,10 @@ local drawnOrbs = {}\
 \
 for id, ent in pairs(EntityList(\"\")) do\
                 if ent.contentid == 9318 and not drawnOrbs[id] then\
+																							if AnyoneReactionSettings.Settings.DrawOrbs == true then\
                                 drawnOrbs[id] = true\
                                 Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+                							end\
                 end\
 end\
 \
@@ -257,7 +259,7 @@ self.used = table.size(drawnOrbs) >= 4",
 			["conditions"] = {
 			},
 			["enabled"] = true,
-			["execute"] = "if Argus == nil or data.DrawOrbs == false then\
+			["execute"] = "if Argus == nil then\
                 self.used = true\
 end\
 \
@@ -265,8 +267,10 @@ local drawnOrbs = {}\
 \
 for id, ent in pairs(EntityList(\"\")) do\
                 if ent.contentid == 9318 and not drawnOrbs[id] then\
+																							if AnyoneReactionSettings.Settings.DrawOrbs == true then\
                                 drawnOrbs[id] = true\
                                 Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+                							end\
                 end\
 end\
 \
@@ -891,7 +895,7 @@ local drawnOrbs = {}\
 \
 for id, ent in pairs(EntityList(\"\")) do\
                 if ent.contentid == 9323 and not drawnOrbs[id] then\
-																													if data.DrawDragonHeads == true then\
+																													if AnyoneReactionSettings.Settings.DrawDragonHeads == true then\
                                 drawnOrbs[id] = true\
                                 Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 																													end				\
@@ -963,7 +967,7 @@ self.used = table.size(drawnOrbs) >= 1",
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "if FFXIV_Common_BotRunning and data.KnockbackMirrorUptime == true then\
+					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneReactionSettings.Settings.KnockbackMirrorUptime == true then\
 		ml_global_information.ToggleRun()\
 end\
 self.used = true",
@@ -1054,7 +1058,7 @@ self.used = true",
 					},
 					["category"] = 4,
 					["comparator"] = 1,
-					["conditionLua"] = "if data.KnockbackMirrorUptime == true then\
+					["conditionLua"] = "if AnyoneReactionSettings.Settings.KnockbackMirrorUptime == true then\
 		return true\
 end\
 \
@@ -1361,10 +1365,10 @@ local drawnOrbs = {}\
 \
 for id, ent in pairs(EntityList(\"\")) do\
                 if ent.contentid == 9323 and not drawnOrbs[id] then\
-																													if data.DrawDragonHeads == true then\
+																													if AnyoneReactionSettings.Settings.DrawDragonHeads == true then\
                                 drawnOrbs[id] = true\
                                 Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 10, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-																													end				\
+																													end\
                 end\
 end\
 \

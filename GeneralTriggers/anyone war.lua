@@ -515,13 +515,13 @@ return nil",
 		["eventType"] = 10,
 		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
 SallyWAR.HotBarConfig.Provoke.enabled = true\
-SallyWAR.HotBarConfig.Shirk.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
 SallyWAR.HotBarConfig.Reprisal.enabled = true\
 SallyWAR.HotBarConfig.RawIntuition.enabled = true\
 SallyWAR.HotBarConfig.Rampart.enabled = true\
 SallyWAR.HotBarConfig.LowBlow.enabled = true\
 SallyWAR.HotBarConfig.Vengeance.enabled = true\
-SallyWAR.HotBarConfig.Holmgang.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
 SallyWAR.HotBarConfig.Thrill.enabled = true\
 SallyWAR.HotBarConfig.Equilibrium.enabled = true\
 SallyWAR.HotBarConfig.NascentFlash.enabled = true\
@@ -529,7 +529,7 @@ SallyWAR.HotBarConfig.InnerRelease.enabled = true\
 SallyWAR.HotBarConfig.Onslaught.enabled = true\
 SallyWAR.HotBarConfig.Sprint.enabled = true\
 SallyWAR.HotBarConfig.Interject.enabled = true\
-SallyWAR.HotBarConfig.ArmsLength.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
 SallyWAR.HotBarConfig.Upheaval.enabled = true\
 self.used = true\
 \
@@ -562,13 +562,13 @@ end\
 		["eventType"] = 9,
 		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
 SallyWAR.HotBarConfig.Provoke.enabled = true\
-SallyWAR.HotBarConfig.Shirk.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
 SallyWAR.HotBarConfig.Reprisal.enabled = true\
 SallyWAR.HotBarConfig.RawIntuition.enabled = true\
 SallyWAR.HotBarConfig.Rampart.enabled = true\
 SallyWAR.HotBarConfig.LowBlow.enabled = true\
 SallyWAR.HotBarConfig.Vengeance.enabled = true\
-SallyWAR.HotBarConfig.Holmgang.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
 SallyWAR.HotBarConfig.Thrill.enabled = true\
 SallyWAR.HotBarConfig.Equilibrium.enabled = true\
 SallyWAR.HotBarConfig.NascentFlash.enabled = true\
@@ -576,7 +576,7 @@ SallyWAR.HotBarConfig.InnerRelease.enabled = true\
 SallyWAR.HotBarConfig.Onslaught.enabled = true\
 SallyWAR.HotBarConfig.Sprint.enabled = true\
 SallyWAR.HotBarConfig.Interject.enabled = true\
-SallyWAR.HotBarConfig.ArmsLength.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
 SallyWAR.HotBarConfig.Upheaval.enabled = true\
 \
 SallyWAR.SkillSettings.Opener.enabled = false\

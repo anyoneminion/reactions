@@ -351,7 +351,7 @@ self.used = true",
 		["enabled"] = true,
 		["eventType"] = 9,
 		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirk.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
 SallyGNB.HotBarConfig.Reprisal.enabled = true\
 SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
 SallyGNB.HotBarConfig.Rampart.enabled = true\
@@ -365,12 +365,11 @@ SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
 SallyGNB.HotBarConfig.BloodFest.enabled = true\
 SallyGNB.HotBarConfig.Sprint.enabled = true\
 SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.ArmsLength.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
 SallyGNB.HotBarConfig.BlastingZone.enabled = true\
 SallyGNB.HotBarConfig.BowShock.enabled = true\
 SallyGNB.HotBarConfig.NoMercy.enabled = true\
 SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-SallyGNB.HotBarConfig.LimitBreak.enabled = true\
 \
 SallyGNB.SkillSettings.Opener.enabled = false\
 SallyGNB.SkillSettings.BloodFest.enabled = true\
@@ -423,7 +422,7 @@ end\
 		["enabled"] = true,
 		["eventType"] = 10,
 		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirk.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
 SallyGNB.HotBarConfig.Reprisal.enabled = true\
 SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
 SallyGNB.HotBarConfig.Rampart.enabled = true\
@@ -437,12 +436,11 @@ SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
 SallyGNB.HotBarConfig.BloodFest.enabled = true\
 SallyGNB.HotBarConfig.Sprint.enabled = true\
 SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.ArmsLength.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
 SallyGNB.HotBarConfig.BlastingZone.enabled = true\
 SallyGNB.HotBarConfig.BowShock.enabled = true\
 SallyGNB.HotBarConfig.NoMercy.enabled = true\
 SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-SallyGNB.HotBarConfig.LimitBreak.enabled = true\
 self.used = true\
 \
 if Player.job ~= 37 then\
