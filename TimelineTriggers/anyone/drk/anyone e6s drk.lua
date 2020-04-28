@@ -10,6 +10,84 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
+			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
+--- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+--- an option named \"AnyoneReactions\". Click that and change the settings as you please.\
+\
+---If you do not see an option named that, follow these steps to troubleshoot:\
+---1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
+---2) Reload LUA\
+---3) Make sure you are on the most up to date version of my general reactions.\
+---4) Check console for errors.\
+---5) Send any additional problems to me on Discord at Anyone#9549\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 18,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -17.5,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "cc2cc75c-cdf9-2a9b-aa00-35c0c569d382",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
 			["execute"] = "---Frequently Asked Questions:\
 --\
 ---Question: \"Something isn't working\"\
@@ -53,7 +131,7 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "19cd5088-6305-f2d0-be38-34ecd02cbdc3",
 		},
-		[2] = {
+		[3] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -83,7 +161,7 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "0cd7050a-64fd-74eb-93a1-1b8767bfc516",
 		},
-		[3] = {
+		[4] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
@@ -130,7 +208,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -173,7 +251,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2609,7 +2687,7 @@ return false",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = 2235,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -2651,7 +2729,7 @@ return false",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = 2236,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
@@ -4190,7 +4268,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4233,7 +4311,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -5609,7 +5687,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[6],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -5652,7 +5730,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[6],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

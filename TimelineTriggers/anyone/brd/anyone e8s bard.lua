@@ -10,6 +10,84 @@ local obj1 = {
 			["conditions"] = {
 			},
 			["enabled"] = true,
+			["execute"] = "---Frequently Asked Questions:\
+--\
+---Question: \"Something isn't working\"\
+---Answer: First of all, make sure you're using the most up to date version of my reactions\
+---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+---of your problem. Try to be as precise as possible with the issue.\
+---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+---You can reach me on discord at Anyone#9549.\
+--\
+--\
+---Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
+--\
+--\
+---Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
+--\
+--\
+--\
+---Question: \"Why don't you do something this way instead of that way?\"\
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
+--\
+--\
+--\
+---Question: \"How do I change the settins for my reactions?\"\
+---Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+---an option named \"AnyoneReactions\". Click that and change the settings as you please.",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- general read me --",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "246f10f2-6fd0-e8c9-a26e-725c45f9de0c",
+		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "--\
+-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: \
+--- Open the Anyone's Reactions Settings menu and enable \"Interrupt Second Earthen Aether\"\
+--\
+--\
+-- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
+--- If you're doing this strategy, make sure to open the Anyone's Reactions Settings menu\
+--- and enable \"Knockback Mirror Uptime Strat\"",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "-- e8s read me --",
+			["throttleTime"] = 0,
+			["time"] = 16,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "69e248b9-fcc8-2dee-a3bb-5557d5943ab3",
+		},
+		[3] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
 			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
 --- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
 --- an option named \"AnyoneReactions\". Click that and change the settings as you please.\
@@ -61,129 +139,26 @@ local obj1 = {
 \
 \
 \
---- Set this to false if you are on the right side for adds phase.\
-data.LeftSide = AnyoneReactionSettings.Settings.LeftSide\
-\
---- Only matters if you're on the left side, this will make it so you only use interrupt on the second add.\
-data.InterruptSecondAdd = AnyoneReactionSettings.Settings.InterruptSecondAdd\
-\
---- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
-data.KnockbackMirrorUptime = AnyoneReactionSettings.Settings.KnockbackMirrorUptime\
-\
---- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
----Set to false to disable.\
-data.DrawOrbs = AnyoneReactionSettings.Settings.DrawOrbs\
-\
---- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
-data.DrawDragonHeads = AnyoneReactionSettings.Settings.DrawDragonHeads\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
 self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "E8S REACTION SETTINGS",
+			["name"] = "REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 16,
 			["timeRange"] = false,
 			["timelineIndex"] = 2,
 			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
+			["timerOffset"] = -15.5,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "a217f96f-0501-5fa6-8213-174d51a4ba30",
-		},
-		[2] = {
-			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "---Frequently Asked Questions:\
---\
----Question: \"Something isn't working\"\
----Answer: First of all, make sure you're using the most up to date version of my reactions\
----Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
----Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
----of your problem. Try to be as precise as possible with the issue.\
----Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
----You can reach me on discord at Anyone#9549.\
---\
---\
----Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
----Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
---\
---\
----Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
----Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
---\
---\
---\
----Question: \"Why don't you do something this way instead of that way?\"\
----Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
---\
---\
---\
----Question: \"How do I change the settins for my reactions?\"\
----Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
----an option named \"AnyoneReactions\". Click that and change the settings as you please.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- general read me --",
-			["throttleTime"] = 0,
-			["time"] = 16,
-			["timeRange"] = false,
-			["timelineIndex"] = 2,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "246f10f2-6fd0-e8c9-a26e-725c45f9de0c",
-		},
-		[3] = {
-			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--\
--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: \
---- Open the Anyone's Reactions Settings menu and enable \"Interrupt Second Earthen Aether\"\
---\
---\
--- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
---- If you're doing this strategy, make sure to open the Anyone's Reactions Settings menu\
---- and enable \"Knockback Mirror Uptime Strat\"",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- e8s read me --",
-			["throttleTime"] = 0,
-			["time"] = 16,
-			["timeRange"] = false,
-			["timelineIndex"] = 2,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "69e248b9-fcc8-2dee-a3bb-5557d5943ab3",
+			["uuid"] = "14822b81-031d-5b04-81b5-23dc3de396b8",
 		},
 	},
 	[9] = {
@@ -229,12 +204,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -271,12 +246,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -313,12 +288,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -355,12 +330,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -736,35 +711,6 @@ end",
 	[36] = {
 		[1] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 213,
-			["timeRange"] = false,
-			["timelineIndex"] = 36,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "01fda97c-233a-8972-a08c-07cfc9176e05",
-		},
-		[2] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 2,
 					["actionID"] = -1,
@@ -869,7 +815,7 @@ end",
 			["used"] = false,
 			["uuid"] = "0141bbb4-379d-6e89-ba73-5abc8a4dc422",
 		},
-		[3] = {
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4,
@@ -921,7 +867,7 @@ dotBlacklist[9319] = true -- add electric aether to blacklist\
 			["used"] = false,
 			["uuid"] = "8af23cba-6e57-2b22-aa35-43b8b6fdde58",
 		},
-		[4] = {
+		[3] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 2,
@@ -1016,12 +962,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1058,12 +1004,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1100,12 +1046,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1142,12 +1088,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[5],
+					["buffIDList"] = multiRefObjects[4],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1345,35 +1291,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 		},
 		[4] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 229.2,
-			["timeRange"] = false,
-			["timelineIndex"] = 37,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "770b2dfa-c803-56a0-9873-7aa14af3fff1",
-		},
-		[5] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
@@ -1456,7 +1373,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == false then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1476,7 +1393,7 @@ end",
 			["used"] = false,
 			["uuid"] = "4463dfc5-e8ab-c927-8cef-fca847aa9aae",
 		},
-		[6] = {
+		[5] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -1503,35 +1420,6 @@ self.used = true",
 	[39] = {
 		[1] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 243.3,
-			["timeRange"] = false,
-			["timelineIndex"] = 39,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "20e31b9b-1f59-ad79-a4ec-32e8ee57b324",
-		},
-		[2] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
@@ -1614,7 +1502,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == true and AnyoneReactionSettings.Settings.InterruptSecondAdd == false then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1634,7 +1522,7 @@ end",
 			["used"] = false,
 			["uuid"] = "8384ce41-f233-e7c2-9d19-914ed1c0fcc7",
 		},
-		[3] = {
+		[2] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -1743,7 +1631,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == true then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == true and AnyoneReactionSettings.Settings.InterruptSecondAdd == true then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -2163,7 +2051,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == false then\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorRequiem_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -2751,12 +2639,12 @@ end",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2793,12 +2681,12 @@ end",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2835,12 +2723,12 @@ end",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2877,12 +2765,12 @@ end",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3014,12 +2902,12 @@ self.used = table.size(drawnOrbs) >= 1",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3056,12 +2944,12 @@ self.used = table.size(drawnOrbs) >= 1",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3098,12 +2986,12 @@ self.used = table.size(drawnOrbs) >= 1",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3140,12 +3028,12 @@ self.used = table.size(drawnOrbs) >= 1",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3462,7 +3350,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[7],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3504,7 +3392,7 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[7],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -3602,12 +3490,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3644,12 +3532,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3686,12 +3574,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3728,12 +3616,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4125,12 +4013,12 @@ self.used = table.size(drawnOrbs) >= 2",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4167,12 +4055,12 @@ self.used = table.size(drawnOrbs) >= 2",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4209,12 +4097,12 @@ self.used = table.size(drawnOrbs) >= 2",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4251,12 +4139,12 @@ self.used = table.size(drawnOrbs) >= 2",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

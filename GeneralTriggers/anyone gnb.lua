@@ -5,6 +5,127 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
+		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
+SallyGNB.HotBarConfig.Reprisal.enabled = true\
+SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
+SallyGNB.HotBarConfig.Rampart.enabled = true\
+SallyGNB.HotBarConfig.Camouflage.enabled = true\
+SallyGNB.HotBarConfig.Nebula.enabled = true\
+SallyGNB.HotBarConfig.SuperBolide.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
+SallyGNB.HotBarConfig.Aurora.enabled = true\
+SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
+SallyGNB.HotBarConfig.BloodFest.enabled = true\
+SallyGNB.HotBarConfig.Sprint.enabled = true\
+SallyGNB.HotBarConfig.Interject.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
+SallyGNB.HotBarConfig.BlastingZone.enabled = true\
+SallyGNB.HotBarConfig.BowShock.enabled = true\
+SallyGNB.HotBarConfig.NoMercy.enabled = true\
+SallyGNB.HotBarConfig.RoughDivide.enabled = true\
+\
+SallyGNB.SkillSettings.Opener.enabled = false\
+SallyGNB.SkillSettings.BloodFest.enabled = true\
+SallyGNB.SkillSettings.BowShock.enabled = true\
+SallyGNB.SkillSettings.SaveCD.enabled = false\
+SallyGNB.SkillSettings.Range.enabled = true\
+SallyGNB.SkillSettings.RoughDivide.enabled = true\
+SallyGNB.SkillSettings.SonicBreak.enabled = true\
+SallyGNB.SkillSettings.NoMercy.enabled = true\
+SallyGNB.SkillSettings.UseAOE.enabled = true\
+SallyGNB.SkillSettings.JumpRange.enabled = true\
+SallyGNB.SkillSettings.BlastingZone.enabled = true\
+SallyGNB.SkillSettings.Ammo.enabled = true\
+SallyGNB.SkillSettings.BurnBoss.enabled = false\
+SallyGNB.SkillSettings.RangeComboBreak.enabled = true\
+SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
+SallyGNB.SkillSettings.GnashingFang.enabled = true\
+\
+\
+-- SallyGNB.SkillSettings.Potion.enabled = true\
+--- remove \"--\" from the above line to have it enable potions on wipe.\
+self.used = true\
+\
+if Player.job ~= 37 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+\
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar/qt on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85",
+	},
+	[2] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 10,
+		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
+SallyGNB.HotBarConfig.Reprisal.enabled = true\
+SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
+SallyGNB.HotBarConfig.Rampart.enabled = true\
+SallyGNB.HotBarConfig.Camouflage.enabled = true\
+SallyGNB.HotBarConfig.Nebula.enabled = true\
+SallyGNB.HotBarConfig.SuperBolide.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
+SallyGNB.HotBarConfig.Aurora.enabled = true\
+SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
+SallyGNB.HotBarConfig.BloodFest.enabled = true\
+SallyGNB.HotBarConfig.Sprint.enabled = true\
+SallyGNB.HotBarConfig.Interject.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
+SallyGNB.HotBarConfig.BlastingZone.enabled = true\
+SallyGNB.HotBarConfig.BowShock.enabled = true\
+SallyGNB.HotBarConfig.NoMercy.enabled = true\
+SallyGNB.HotBarConfig.RoughDivide.enabled = true\
+self.used = true\
+\
+if Player.job ~= 37 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+\
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700",
+	},
+	[3] = {
+		["actions"] = {
 			[1] = {
 				["aType"] = 4,
 				["actionID"] = -1,
@@ -141,6 +262,11 @@ self.used = true",
 		open = false,\
 	}\
 \
+	if Settings.AnyoneReactionSettings.AutoSetCameraZoom == true then\
+		gDevHackMaxZoom = 35.0\
+		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
+	end\
+\
 	if Settings.AnyoneReactionSettings.DrawOrbs == nil then\
 		Settings.AnyoneReactionSettings.DrawOrbs = true -- true is default\
 		Settings.AnyoneReactionSettings.DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs -- hoping to god it saves\
@@ -176,6 +302,16 @@ self.used = true",
 		Settings.AnyoneReactionSettings.AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot -- hoping to god it saves\
 	end	\
 	\
+	if Settings.AnyoneReactionSettings.AutoSetSpeedHacks == nil then\
+		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = false -- false is default\
+		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks -- hoping to god it saves\
+	end\
+	\
+	if Settings.AnyoneReactionSettings.AutoSetCameraZoom == nil then\
+		Settings.AnyoneReactionSettings.AutoSetCameraZoom = false -- false is default\
+		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom -- hoping to god it saves\
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -183,7 +319,9 @@ self.used = true",
 			InterruptSecondAdd = Settings.AnyoneReactionSettings.InterruptSecondAdd,\
 			LeftSide = Settings.AnyoneReactionSettings.LeftSide,\
 			DisableAssist = Settings.AnyoneReactionSettings.DisableAssist,\
-			AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot\
+			AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot,\
+			AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks,\
+			AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -207,13 +345,22 @@ self.used = true",
 		\
 		Settings.AnyoneReactionSettings.AddsPhasePot = AnyoneReactionSettings.Settings.AddsPhasePot\
 		Settings.AnyoneReactionSettings.AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot	\
+		\
+		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = AnyoneReactionSettings.Settings.AutoSetSpeedHacks\
+		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks\
+		\
+		Settings.AnyoneReactionSettings.AutoSetCameraZoom = AnyoneReactionSettings.Settings.AutoSetCameraZoom\
+		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom\
 	end\
 		\
+	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Hacks\")\
 	function AnyoneReactionSettings.draw()\
 		if self.reference.enabled and AnyoneReactionSettings.enabled and AnyoneReactionSettings.open then\
 			GUI:SetNextWindowSize(250,400,GUI.SetCond_FirstUseEver)\
 			AnyoneReactionSettings.visible, AnyoneReactionSettings.open = GUI:Begin(\"Anyone's Reactions Settings\", AnyoneReactionSettings.open)\
 			if AnyoneReactionSettings.visible then\
+				local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
+				if (tabname == GetString(\"General\")) then\
 				local changed = false\
 				\
 				GUI:Text(\"e7s settings\")\
@@ -314,6 +461,37 @@ self.used = true",
 					GUI:EndTooltip()\
 				end\
 				end\
+				\
+			elseif (tabname == GetString(\"Hacks\")) then\
+			\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Auto Set Speed Hacks\", AnyoneReactionSettings.Settings.AutoSetSpeedHacks)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Sets your character speed to 7.2 (default is 6.0) at the start of a fight. Changes it back upon wiping.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:TextColored(1,0,0,1,\"Changing the speed is safe, but I wouldn't recommend using this if someone on your team is streaming. It could be dangerous if someone spots you running slightly faster than the rest of the group.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.AutoSetCameraZoom, changed = GUI:Checkbox(\"Auto Set Max Camera Zoom\", AnyoneReactionSettings.Settings.AutoSetCameraZoom)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20).\\n\")\
+					GUI:TextColored(1,1,0,1,\"Reload lua after enabling. Disable and reload lua to change it back.\")\
+					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+			end -- end of tabs\
 			end\
 			GUI:End()\
 		end\
@@ -331,7 +509,7 @@ self.used = true",
 		["executeType"] = 2,
 		["lastUse"] = 0,
 		["luaReturnsAction"] = false,
-		["name"] = "draw gui",
+		["name"] = "Anyone's Reaction Menu GUI",
 		["throttleTime"] = 0,
 		["time"] = 0,
 		["timeRange"] = false,
@@ -341,128 +519,7 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "c8ca173e-611a-0827-8040-9524027ed423",
-	},
-	[2] = {
-		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 9,
-		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirks.enabled = true\
-SallyGNB.HotBarConfig.Reprisal.enabled = true\
-SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
-SallyGNB.HotBarConfig.Rampart.enabled = true\
-SallyGNB.HotBarConfig.Camouflage.enabled = true\
-SallyGNB.HotBarConfig.Nebula.enabled = true\
-SallyGNB.HotBarConfig.SuperBolide.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
-SallyGNB.HotBarConfig.Aurora.enabled = true\
-SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
-SallyGNB.HotBarConfig.BloodFest.enabled = true\
-SallyGNB.HotBarConfig.Sprint.enabled = true\
-SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.Armslength.enabled = true\
-SallyGNB.HotBarConfig.BlastingZone.enabled = true\
-SallyGNB.HotBarConfig.BowShock.enabled = true\
-SallyGNB.HotBarConfig.NoMercy.enabled = true\
-SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-\
-SallyGNB.SkillSettings.Opener.enabled = false\
-SallyGNB.SkillSettings.BloodFest.enabled = true\
-SallyGNB.SkillSettings.BowShock.enabled = true\
-SallyGNB.SkillSettings.SaveCD.enabled = false\
-SallyGNB.SkillSettings.Range.enabled = true\
-SallyGNB.SkillSettings.RoughDivide.enabled = true\
-SallyGNB.SkillSettings.SonicBreak.enabled = true\
-SallyGNB.SkillSettings.NoMercy.enabled = true\
-SallyGNB.SkillSettings.UseAOE.enabled = true\
-SallyGNB.SkillSettings.JumpRange.enabled = true\
-SallyGNB.SkillSettings.BlastingZone.enabled = true\
-SallyGNB.SkillSettings.Ammo.enabled = true\
-SallyGNB.SkillSettings.BurnBoss.enabled = false\
-SallyGNB.SkillSettings.RangeComboBreak.enabled = true\
-SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
-SallyGNB.SkillSettings.GnashingFang.enabled = true\
-\
-\
--- SallyGNB.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
-self.used = true\
-\
-if Player.job ~= 37 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "reset hotbar/qt on wipe",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85",
-	},
-	[3] = {
-		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 10,
-		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirks.enabled = true\
-SallyGNB.HotBarConfig.Reprisal.enabled = true\
-SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
-SallyGNB.HotBarConfig.Rampart.enabled = true\
-SallyGNB.HotBarConfig.Camouflage.enabled = true\
-SallyGNB.HotBarConfig.Nebula.enabled = true\
-SallyGNB.HotBarConfig.SuperBolide.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
-SallyGNB.HotBarConfig.Aurora.enabled = true\
-SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
-SallyGNB.HotBarConfig.BloodFest.enabled = true\
-SallyGNB.HotBarConfig.Sprint.enabled = true\
-SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.Armslength.enabled = true\
-SallyGNB.HotBarConfig.BlastingZone.enabled = true\
-SallyGNB.HotBarConfig.BowShock.enabled = true\
-SallyGNB.HotBarConfig.NoMercy.enabled = true\
-SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-self.used = true\
-\
-if Player.job ~= 37 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "reset hotbar on death",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700",
+		["uuid"] = "ec19dddf-670f-1e57-aa3a-3e22b026ce51",
 	},
 }
 return obj1

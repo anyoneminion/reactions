@@ -61,40 +61,26 @@ local obj1 = {
 \
 \
 \
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
---- Set to true to disable MMOMinion Assist before Away With Thee teleports to avoid character turning before the teleports.\
---- False is full manual for positioning during Away With Thee teleports.\
-data.DisableAssist = AnyoneReactionSettings.Settings.DisableAssist\
-\
-\
---- Set to true to pot during adds phase, will help get a 3rd pot in the fight if your kill times are over 9 minutes 30 seconds.\
---- Must be set to false if your kill times are under 9 minutes 25 seconds.\
-data.AddsPhasePot = AnyoneReactionSettings.Settings.AddsPhasePot\
-\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
 self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "E7S REACTION SETTINGS",
+			["name"] = "REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 13,
 			["timeRange"] = false,
 			["timelineIndex"] = 2,
 			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
+			["timerOffset"] = -12.5,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "b1963b76-739a-1cdc-9896-64c1b323bd4b",
+			["uuid"] = "156b9cab-585f-0cbe-a83e-4e18763cf2de",
 		},
 		[2] = {
 			["actions"] = {
@@ -182,7 +168,7 @@ self.used = true",
 			["enabled"] = true,
 			["execute"] = "\
 --- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
---- to use them, then change the settings in the \"E7S REACTION SETTINGS\" located at \"13 - Empty Wave\" on the timeline.",
+--- to use them, then change the settings in your \"Anyone's Reaction Settings\" menu.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -389,12 +375,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -431,12 +417,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -473,12 +459,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -515,12 +501,12 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[2],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[2],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -804,7 +790,7 @@ self.used = true",
 			["enabled"] = true,
 			["execute"] = "\
 --- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
---- to use them, then change the settings in the \"E7S REACTION SETTINGS\" located at \"13 - Empty Wave\" on the timeline.",
+--- to use them, then change the settings in your \"Anyone's Reaction Settings\" menu.",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
@@ -958,7 +944,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2240,
-					["buffIDList"] = multiRefObjects[3],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -1000,7 +986,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2241,
-					["buffIDList"] = multiRefObjects[3],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -1042,7 +1028,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2242,
-					["buffIDList"] = multiRefObjects[3],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
@@ -1084,7 +1070,7 @@ self.used = true",
 					["buffCheckType"] = 3,
 					["buffDuration"] = 1.5,
 					["buffID"] = 2243,
-					["buffIDList"] = multiRefObjects[3],
+					["buffIDList"] = multiRefObjects[1],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",

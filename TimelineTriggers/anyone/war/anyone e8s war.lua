@@ -61,51 +61,26 @@ local obj1 = {
 \
 \
 \
---- Set this to false if you are on the right side for adds phase.\
-data.LeftSide = AnyoneReactionSettings.Settings.LeftSide\
-\
---- Only matters if you're on the left side, this will make it so you only use interrupt on the second add.\
-data.InterruptSecondAdd = AnyoneReactionSettings.Settings.InterruptSecondAdd\
-\
---- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
-data.KnockbackMirrorUptime = AnyoneReactionSettings.Settings.KnockbackMirrorUptime\
-\
---- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
----Set to false to disable.\
-data.DrawOrbs = AnyoneReactionSettings.Settings.DrawOrbs\
-\
---- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
-data.DrawDragonHeads = AnyoneReactionSettings.Settings.DrawDragonHeads\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
 self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "E8S REACTION SETTINGS",
+			["name"] = "REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 16,
 			["timeRange"] = false,
 			["timelineIndex"] = 2,
 			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
+			["timerOffset"] = -15.5,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "f80539a4-b9c7-c56e-80bf-e99035e90014",
+			["uuid"] = "ecfd9776-f068-4429-b994-44dcb3ce64f5",
 		},
 		[2] = {
 			["actions"] = {
@@ -492,7 +467,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -535,7 +510,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[5],
+					["conditions"] = multiRefObjects[8],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1415,7 +1390,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1458,7 +1433,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[6],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3531,7 +3506,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3574,7 +3549,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3854,7 +3829,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3897,7 +3872,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[1],
+					["conditions"] = multiRefObjects[5],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4801,12 +4776,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 3,
 					["buffID"] = 1209,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4843,12 +4818,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[8],
+					["buffIDList"] = multiRefObjects[6],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[4],
+					["conditions"] = multiRefObjects[7],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -5144,7 +5119,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -5187,7 +5162,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -6325,7 +6300,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -6368,7 +6343,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[7],
+					["conditions"] = multiRefObjects[4],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

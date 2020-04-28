@@ -61,48 +61,27 @@ local obj1 = {
 \
 \
 \
---- Set this to false if you are on the right side for adds phase.\
-data.LeftSide = AnyoneReactionSettings.Settings.LeftSide\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
 \
---- Only matters if you're on the left side, this will make it so you only use interrupt on the second add.\
-data.InterruptSecondAdd = AnyoneReactionSettings.Settings.InterruptSecondAdd\
-\
---- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
-data.KnockbackMirrorUptime = AnyoneReactionSettings.Settings.KnockbackMirrorUptime\
-\
---- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
----Set to false to disable.\
-data.DrawOrbs = AnyoneReactionSettings.Settings.DrawOrbs\
-\
---- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
-data.DrawDragonHeads = AnyoneReactionSettings.Settings.DrawDragonHeads\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
+---sets queen gauge to 80 at start of fight\
+data.currentQueenSetting = ACR_TensorMagnum_SummonQueen_Gauge\
+ACR_TensorMagnum_SummonQueen_Gauge = 80\
 self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "E8S REACTION SETTINGS",
+			["name"] = "REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 16,
 			["timeRange"] = false,
 			["timelineIndex"] = 2,
 			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
+			["timerOffset"] = -15.5,
 			["timerStartOffset"] = 0,
 			["used"] = false,
 			["uuid"] = "5f21604f-4199-6912-9ed0-a20bcac24b56",
@@ -191,58 +170,6 @@ self.used = true",
 			["used"] = false,
 			["uuid"] = "89474ed5-2890-c729-bac7-2be5ab5f063b",
 		},
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4,
-					["actionID"] = -1,
-					["actionLua"] = "data.currentQueenSetting = ACR_TensorMagnum_SummonQueen_Gauge\
-ACR_TensorMagnum_SummonQueen_Gauge = 80\
-self.used = true",
-					["allowInterrupt"] = false,
-					["conditions"] = {
-					},
-					["endIfUsed"] = false,
-					["gVar"] = "",
-					["gVarIndex"] = 1,
-					["gVarValue"] = 1,
-					["ignoreWeaveRules"] = false,
-					["luaReturnsAction"] = false,
-					["name"] = "",
-					["potType"] = 1,
-					["setTarget"] = false,
-					["stopCasting"] = false,
-					["stopMoving"] = false,
-					["targetContentID"] = -1,
-					["targetName"] = "",
-					["targetSubType"] = 1,
-					["targetType"] = 1,
-					["untarget"] = false,
-					["useForWeaving"] = false,
-					["usePot"] = false,
-					["used"] = false,
-					["variableTogglesType"] = 1,
-				},
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "",
-			["executeType"] = 1,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "p1 use queen at 80",
-			["throttleTime"] = 0,
-			["time"] = 16,
-			["timeRange"] = false,
-			["timelineIndex"] = 2,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "daff5435-e424-e389-b238-cee69bc63998",
-		},
 	},
 	[9] = {
 		[1] = {
@@ -293,7 +220,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -335,7 +262,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -377,7 +304,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -419,7 +346,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -677,7 +604,7 @@ self.used = table.size(drawnOrbs) >= 4",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 6,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 2,
@@ -890,35 +817,6 @@ self.used = true",
 		},
 	},
 	[36] = {
-		[1] = {
-			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 213,
-			["timeRange"] = false,
-			["timelineIndex"] = 36,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "b1c53657-6a48-0dd5-a146-4a1ec0deca81",
-		},
 	},
 	[37] = {
 		[1] = {
@@ -969,7 +867,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1011,7 +909,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1053,7 +951,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1095,7 +993,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1240,7 +1138,7 @@ self.used = true",
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1291,35 +1189,6 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 		},
 		[4] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 229.2,
-			["timeRange"] = false,
-			["timelineIndex"] = 37,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "5635cff8-d8a9-41e9-9b61-258f83ba91a8",
-		},
-		[5] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
@@ -1366,7 +1235,7 @@ self.used = true",
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 return EA and EA.castinginfo.castinginterruptible -- head graze",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1400,7 +1269,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1420,7 +1289,7 @@ end",
 			["used"] = false,
 			["uuid"] = "afbb32d4-e52d-ebf7-bb71-2c0e2aa2901a",
 		},
-		[6] = {
+		[5] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -1447,35 +1316,6 @@ self.used = true",
 	[39] = {
 		[1] = {
 			["actions"] = {
-			},
-			["conditions"] = {
-			},
-			["enabled"] = true,
-			["execute"] = "--- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: --\
-\
---- Go to \"16 - Absolute Zero\" on the timeline, look for the reaction \"E8S REACTION SETTINGS\"\
---- Change \"data.InterruptSecondAdd\" to true\
-\
---- The current way the reactions are setup, the first Earthen Aether that spawns on the second heart asunder\
---- will always be the one that gets interrupted. You need to make the above change in order for it work on 2nd aether.\
---- If you are interrupting the first Earthen Aether, no changes are required.",
-			["executeType"] = 2,
-			["lastUse"] = 0,
-			["loop"] = false,
-			["luaReturnsAction"] = false,
-			["name"] = "-- left side read me --",
-			["throttleTime"] = 0,
-			["time"] = 243.3,
-			["timeRange"] = false,
-			["timelineIndex"] = 39,
-			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
-			["timerStartOffset"] = 0,
-			["used"] = false,
-			["uuid"] = "ce7fe0e0-4078-9b14-b2e1-629168973cce",
-		},
-		[2] = {
-			["actions"] = {
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
@@ -1522,7 +1362,7 @@ self.used = true",
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 return EA and EA.castinginfo.castinginterruptible -- head graze",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1556,7 +1396,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == true and AnyoneReactionSettings.Settings.InterruptSecondAdd == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1576,7 +1416,7 @@ end",
 			["used"] = false,
 			["uuid"] = "9f0bc0b4-55c2-02cb-a76a-68fe92e825ac",
 		},
-		[3] = {
+		[2] = {
 			["actions"] = {
 			},
 			["conditions"] = {
@@ -1649,7 +1489,7 @@ self.used = true",
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 return EA and EA.castinginfo.castinginterruptible -- head graze",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1683,7 +1523,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == true and data.InterruptSecondAdd == true then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == true and AnyoneReactionSettings.Settings.InterruptSecondAdd == true then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -1773,7 +1613,7 @@ self.used = true",
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1869,7 +1709,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -1964,7 +1804,7 @@ return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)",
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2063,7 +1903,7 @@ self.used = true",
 					["conditionLua"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
 return EA and EA.castinginfo.castinginterruptible -- head graze",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2097,7 +1937,7 @@ return EA and EA.castinginfo.castinginterruptible -- head graze",
 			},
 			["enabled"] = true,
 			["execute"] = "local EA = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9321, subgroup = \"Nearest\"})\
-if EA and EA.castinginfo.castinginterruptible and data.LeftSide == false then\
+if EA and EA.castinginfo.castinginterruptible and AnyoneReactionSettings.Settings.LeftSide == false then\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom_TargetID = EA.id\
 		ACR_TensorMagnum_Hotbar_HeadGraze_Custom = true\
 		self.used = true\
@@ -2148,7 +1988,6 @@ self.used = true",
 			["enabled"] = true,
 			["execute"] = "-- this is to save up gauge for the big reopener after adds\
 -- cooldowns should not be needed at this point in any static able to clear the fight\
--- I  will soon disable all big cooldowns such as queen wf hc from the addphase so we exit it with 100/100 gauge\
 -- addphase is excluded from fflogs",
 			["executeType"] = 2,
 			["lastUse"] = 0,
@@ -2471,7 +2310,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 6,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 2,
@@ -2667,12 +2506,12 @@ self.used = true",
 					["buffCheckType"] = 1,
 					["buffDuration"] = 0,
 					["buffID"] = -1,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2709,12 +2548,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1826,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2751,12 +2590,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1934,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2793,12 +2632,12 @@ self.used = true",
 					["buffCheckType"] = 2,
 					["buffDuration"] = 0,
 					["buffID"] = 1951,
-					["buffIDList"] = multiRefObjects[1],
+					["buffIDList"] = multiRefObjects[3],
 					["category"] = 2,
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2940,7 +2779,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -2982,7 +2821,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3024,7 +2863,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3066,7 +2905,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3388,7 +3227,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 5,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3430,7 +3269,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 2,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3533,7 +3372,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3575,7 +3414,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3617,7 +3456,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -3659,7 +3498,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4013,7 +3852,7 @@ self.used = true",
 					["comparator"] = 2,
 					["conditionLua"] = "",
 					["conditionType"] = 4,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4055,7 +3894,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4097,7 +3936,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,
@@ -4139,7 +3978,7 @@ self.used = true",
 					["comparator"] = 1,
 					["conditionLua"] = "",
 					["conditionType"] = 1,
-					["conditions"] = multiRefObjects[3],
+					["conditions"] = multiRefObjects[1],
 					["contentid"] = -1,
 					["enmityValue"] = 0,
 					["gaugeIndex"] = 1,

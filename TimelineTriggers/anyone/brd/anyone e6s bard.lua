@@ -53,6 +53,84 @@ local obj1 = {
 			["used"] = false,
 			["uuid"] = "2f938205-8035-82e5-8940-d34c7db7cfc2",
 		},
+		[2] = {
+			["actions"] = {
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
+--- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+--- an option named \"AnyoneReactions\". Click that and change the settings as you please.\
+\
+---If you do not see an option named that, follow these steps to troubleshoot:\
+---1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
+---2) Reload LUA\
+---3) Make sure you are on the most up to date version of my general reactions.\
+---4) Check console for errors.\
+---5) Send any additional problems to me on Discord at Anyone#9549\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
+self.used = true",
+			["executeType"] = 2,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "REACTION SETTINGS",
+			["throttleTime"] = 0,
+			["time"] = 18,
+			["timeRange"] = false,
+			["timelineIndex"] = 2,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = -17.5,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "c022741f-6822-18c1-a98b-51107e5262f1",
+		},
 	},
 	[8] = {
 		[1] = {

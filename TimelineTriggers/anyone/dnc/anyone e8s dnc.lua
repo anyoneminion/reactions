@@ -61,37 +61,26 @@ local obj1 = {
 \
 \
 \
---- Set this to false if you are on the right side for adds phase.\
-data.LeftSide = AnyoneReactionSettings.Settings.LeftSide\
-\
---- Only matters if you're on the left side, this will make it so you only use interrupt on the second add.\
-data.InterruptSecondAdd = AnyoneReactionSettings.Settings.InterruptSecondAdd\
-\
---- Only applicable if your team is doing the uptime strat for knockback mirrors in final phase. \
-data.KnockbackMirrorUptime = AnyoneReactionSettings.Settings.KnockbackMirrorUptime\
-\
---- If you own Argus & moogle telegraphs, the explosion radius of the orbs during Light's Rampant will be drawn. \
----Set to false to disable.\
-data.DrawOrbs = AnyoneReactionSettings.Settings.DrawOrbs\
-\
---- Additionally if you own argus, draw the AOE radius of the dragon heads during Wyrm's Lament.\
-data.DrawDragonHeads = AnyoneReactionSettings.Settings.DrawDragonHeads\
-\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7.2\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
 self.used = true",
 			["executeType"] = 2,
 			["lastUse"] = 0,
 			["loop"] = false,
 			["luaReturnsAction"] = false,
-			["name"] = "E8S REACTION SETTINGS",
+			["name"] = "REACTION SETTINGS",
 			["throttleTime"] = 0,
 			["time"] = 16,
 			["timeRange"] = false,
 			["timelineIndex"] = 2,
 			["timerEndOffset"] = 0,
-			["timerOffset"] = 0,
+			["timerOffset"] = -15.5,
 			["timerStartOffset"] = 0,
 			["used"] = false,
-			["uuid"] = "91600ffe-4f66-cfb4-a415-5a21f0decefb",
+			["uuid"] = "33b12a25-678b-7d51-a5dc-90c5e3c498b8",
 		},
 		[2] = {
 			["actions"] = {
