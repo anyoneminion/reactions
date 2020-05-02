@@ -1087,6 +1087,62 @@ self.used = true",
 			["used"] = false,
 			["uuid"] = "22e33a28-6a1f-1d72-a769-e32dc8491cf9",
 		},
+		[6] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4,
+					["actionID"] = -1,
+					["actionLua"] = "if AnyoneReactionSettings.Settings.InterruptSecondAdd == true then\
+SallyDNC.SkillSettings.Interrupt.enabled = false\
+self.used = true\
+elseif AnyoneReactionSettings.Settings.InterruptSecondAdd == false or AnyoneReactionSettings.Settings.LeftSide == false then\
+SallyDNC.SkillSettings.Interrupt.enabled = true\
+self.used = true\
+end",
+					["allowInterrupt"] = false,
+					["conditions"] = {
+					},
+					["endIfUsed"] = false,
+					["gVar"] = "",
+					["gVarIndex"] = 1,
+					["gVarValue"] = 1,
+					["ignoreWeaveRules"] = false,
+					["luaReturnsAction"] = false,
+					["name"] = "",
+					["potType"] = 1,
+					["setTarget"] = false,
+					["stopCasting"] = false,
+					["stopMoving"] = false,
+					["targetContentID"] = -1,
+					["targetName"] = "",
+					["targetSubType"] = 1,
+					["targetType"] = 1,
+					["untarget"] = false,
+					["useForWeaving"] = false,
+					["usePot"] = false,
+					["used"] = false,
+					["variableTogglesType"] = 1,
+				},
+			},
+			["conditions"] = {
+			},
+			["enabled"] = true,
+			["execute"] = "",
+			["executeType"] = 1,
+			["lastUse"] = 0,
+			["loop"] = false,
+			["luaReturnsAction"] = false,
+			["name"] = "interrupt second check",
+			["throttleTime"] = 0,
+			["time"] = 229.2,
+			["timeRange"] = false,
+			["timelineIndex"] = 37,
+			["timerEndOffset"] = 0,
+			["timerOffset"] = 0,
+			["timerStartOffset"] = 0,
+			["used"] = false,
+			["uuid"] = "ad7dacf5-128e-a744-ade6-883f1b637b45",
+		},
 	},
 	[38] = {
 	},

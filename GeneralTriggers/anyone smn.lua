@@ -1136,7 +1136,7 @@ self.used = true",
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 or Player.job == 23 then\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.LeftSide, changed = GUI:Checkbox(\"Left Side Adds\", AnyoneReactionSettings.Settings.LeftSide)\
 				if changed then AnyoneReactionSettings.save() end\
@@ -1163,7 +1163,7 @@ self.used = true",
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
+				end --end job check\
 				\
 			elseif (tabname == GetString(\"Hacks\")) then\
 			\
@@ -1222,7 +1222,7 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "a8a7dea4-2f12-066a-a7cf-ba4ca8897a0d",
+		["uuid"] = "14551645-727b-284a-bba5-14d6be4da68e",
 	},
 }
 return obj1

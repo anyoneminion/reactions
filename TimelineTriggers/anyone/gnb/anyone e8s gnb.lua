@@ -500,7 +500,7 @@ self.used = true",
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "SallyDRK.SkillSettings.SaveCD.enabled = true\
+					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = true\
 self.used = true",
 					["allowInterrupt"] = false,
 					["conditions"] = {
@@ -604,7 +604,7 @@ self.used = true",
 				[1] = {
 					["aType"] = 4,
 					["actionID"] = -1,
-					["actionLua"] = "SallyGNB.SkillSettings.BloodFest.enabled = false\
+					["actionLua"] = "SallyGNB.SkillSettings.BloodFest.enabled = true\
 self.used = true",
 					["allowInterrupt"] = false,
 					["conditions"] = {
