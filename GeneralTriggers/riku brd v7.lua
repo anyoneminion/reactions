@@ -269,6 +269,13 @@ ACR_TensorRequiem_Hotbar_LockFace = false\
 ACR_TensorRequiem_Hotbar_NaturesMinne_Custom = false\
 ACR_TensorRequiem_Hotbar_TheWardensPaean_Custom = false\
 ACR_TensorRequiem_Hotbar_HeadGraze_Custom = false\
+\
+if Player.localmapid == 908 then\
+-- disable ttk\
+TensorCore_UseTTK = false\
+ACR_TensorRequiem_UseTTKForIJ = false\
+end\
+\
 self.used = true",
 				["allowInterrupt"] = false,
 				["conditions"] = {
