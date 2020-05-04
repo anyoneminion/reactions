@@ -10,120 +10,27 @@ local obj1 = {
 		},
 		["enabled"] = true,
 		["eventType"] = 10,
-		["execute"] = "if Player.job ~= 38 then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-data.nilsPlayground.timeOfDeath = Now()\
-\
-if SallyDNC ~= nil then\
-  -- reset hotbar\
-  SallyDNC.HotBarConfig.Armslength.enabled = true\
-  SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
-  SallyDNC.HotBarConfig.Devilment.enabled = true\
-  SallyDNC.HotBarConfig.EnAvant.enabled = true\
-  SallyDNC.HotBarConfig.Flourish.enabled = true\
-  SallyDNC.HotBarConfig.Improv.enabled = true\
-  SallyDNC.HotBarConfig.LB.enabled = true\
-  SallyDNC.HotBarConfig.SecondWind.enabled = true\
-  SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
-  SallyDNC.HotBarConfig.Sprint.enabled = true\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: on death",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5",
-	},
-	[2] = {
-		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 9,
-		["execute"] = "if Player.job ~= 38 or SallyDNC == nil then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-\
--- reset hotbar\
-SallyDNC.HotBarConfig.Armslength.enabled = true\
-SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
-SallyDNC.HotBarConfig.Devilment.enabled = true\
-SallyDNC.HotBarConfig.EnAvant.enabled = true\
-SallyDNC.HotBarConfig.Flourish.enabled = true\
-SallyDNC.HotBarConfig.Improv.enabled = true\
-SallyDNC.HotBarConfig.LB.enabled = true\
-SallyDNC.HotBarConfig.SecondWind.enabled = true\
-SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
-SallyDNC.HotBarConfig.Sprint.enabled = true\
-\
-\
--- reset quick toggles\
-SallyDNC.SkillSettings.BurnCD.enabled = false\
-SallyDNC.SkillSettings.Devilment.enabled = true\
-SallyDNC.SkillSettings.FanDance3IsAOE.enabled = true\
-SallyDNC.SkillSettings.Flourish.enabled = true\
-SallyDNC.SkillSettings.Opener.enabled = false\
--- SallyDNC.SkillSettings.Potion.enabled = true\
-SallyDNC.SkillSettings.SaberDance.enabled = true\
-SallyDNC.SkillSettings.SaberIsAOE.enabled = true\
-SallyDNC.SkillSettings.SaveCD.enabled = false\
-SallyDNC.SkillSettings.StandardStep.enabled = true\
-SallyDNC.SkillSettings.TechStep.enabled = true\
-SallyDNC.SkillSettings.UseAOE.enabled = true\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: toggles on wipe",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1",
-	},
-	[3] = {
-		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 11,
-		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
----alternatively just disable this if you're 3000 iq and remember to use dance partner\
-SallyDNC.SkillSettings.AutoPartner.enabled = true\
+		["execute"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
+SallySAM.HotBarConfig.Bloodbath.enabled = true\
+SallySAM.HotBarConfig.Feint.enabled = true\
+SallySAM.HotBarConfig.Gyoten.enabled = true\
+SallySAM.HotBarConfig.Hagakure.enabled = true\
+SallySAM.HotBarConfig.Kaiten.enabled = true\
+SallySAM.HotBarConfig.LB.enabled = true\
+SallySAM.HotBarConfig.LegSweep.enabled = true\
+SallySAM.HotBarConfig.Meditate.enabled = true\
+SallySAM.HotBarConfig.Meikyo.enabled = true\
+SallySAM.HotBarConfig.Potion.enabled = true\
+SallySAM.HotBarConfig.SecondWind.enabled = true\
+SallySAM.HotBarConfig.Sprint.enabled = true\
+SallySAM.HotBarConfig.ThirdEye.enabled = true\
+SallySAM.HotBarConfig.TrueNorth.enabled = true\
+SallySAM.HotBarConfig.Yaten.enabled = true\
 self.used = true",
 		["executeType"] = 2,
 		["lastUse"] = 0,
 		["luaReturnsAction"] = false,
-		["name"] = "auto partner once at map change",
+		["name"] = "Reset Hotbars On Death",
 		["throttleTime"] = 0,
 		["time"] = 0,
 		["timeRange"] = false,
@@ -133,7 +40,122 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf",
+		["uuid"] = "cc74ea10-a699-6b85-aad2-b42ee8108e5b",
+	},
+	[2] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
+		["execute"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
+SallySAM.HotBarConfig.Bloodbath.enabled = true\
+SallySAM.HotBarConfig.Feint.enabled = true\
+SallySAM.HotBarConfig.Gyoten.enabled = true\
+SallySAM.HotBarConfig.Hagakure.enabled = true\
+SallySAM.HotBarConfig.Kaiten.enabled = true\
+SallySAM.HotBarConfig.LB.enabled = true\
+SallySAM.HotBarConfig.LegSweep.enabled = true\
+SallySAM.HotBarConfig.Meditate.enabled = true\
+SallySAM.HotBarConfig.Meikyo.enabled = true\
+SallySAM.HotBarConfig.Potion.enabled = true\
+SallySAM.HotBarConfig.SecondWind.enabled = true\
+SallySAM.HotBarConfig.Sprint.enabled = true\
+SallySAM.HotBarConfig.ThirdEye.enabled = true\
+SallySAM.HotBarConfig.TrueNorth.enabled = true\
+SallySAM.HotBarConfig.Yaten.enabled = true\
+\
+if AnyoneReactionSettings.Settings.NeverEnpi == false then\
+SallySAM.SkillSettings.Enpi.enabled = false\
+end\
+SallySAM.SkillSettings.Guren.enabled = true\
+SallySAM.SkillSettings.Hagakure.enabled = true\
+SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.Ikishoten.enabled = true\
+SallySAM.SkillSettings.Kaiten.enabled = true\
+SallySAM.SkillSettings.Kyuten.enabled = true\
+SallySAM.SkillSettings.Meikyo.enabled = true\
+SallySAM.SkillSettings.Omni.enabled = false\
+SallySAM.SkillSettings.Opener.enabled = true\
+SallySAM.resetOpener()\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+SallySAM.SkillSettings.Senei.enabled = true\
+SallySAM.SkillSettings.Shinten.enabled = true\
+SallySAM.SkillSettings.Shoha.enabled = true\
+SallySAM.SkillSettings.SmartTrueNorth.enabled = true\
+SallySAM.SkillSettings.Tsubame.enabled = true\
+SallySAM.SkillSettings.UseAOE.enabled = true\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallySAM.SkillSettings.Potion.enabled = true\
+end\
+self.used = true\
+\
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset Hotbars/QT on Wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "988f24bc-c22b-a456-b8df-eb36ab571ec2",
+	},
+	[3] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
+		["execute"] = "local selectedACR = gACRSelectedProfiles[Player.job]\
+if Player.localmapid == 906 and Player.job == 34 and selectedACR == \"SallySAM\" then\
+ SallySAM.openerInfo.index = 2\
+ SallySAM.openerInfo.idex = 2\
+ self.used = true\
+end\
+\
+if Player.localmapid == 907 and Player.job == 34 and selectedACR == \"SallySAM\" then\
+ SallySAM.openerInfo.index = 1\
+ SallySAM.openerInfo.idex = 1\
+ self.used = true\
+end\
+\
+if Player.localmapid == 908 and Player.job == 34 and selectedACR == \"SallySAM\" then\
+ SallySAM.openerInfo.index = 2\
+ SallySAM.openerInfo.idex = 2\
+ self.used = true\
+end\
+\
+if Player.localmapid == 909 and Player.job == 34 and selectedACR == \"SallySAM\" then\
+ SallySAM.openerInfo.index = 2\
+ SallySAM.openerInfo.idex = 2\
+ self.used = true\
+end\
+self.used = true\
+self.eventConditionMismatch = true\
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "Change Opener Based On Zone",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "589f5e30-520f-3986-b8f7-fc7927c74492",
 	},
 	[4] = {
 		["actions"] = {
@@ -633,7 +655,7 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106",
+		["uuid"] = "06e6f379-c1d3-32ac-ac2f-2bc211212ea6",
 	},
 }
 return obj1

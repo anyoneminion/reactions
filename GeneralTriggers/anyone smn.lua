@@ -1015,6 +1015,26 @@ self.used = true",
 		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom -- hoping to god it saves\
 	end\
 	\
+	if Settings.AnyoneReactionSettings.NeverSprint == nil then\
+		Settings.AnyoneReactionSettings.NeverSprint = false -- false is default\
+		Settings.AnyoneReactionSettings.NeverSprint = Settings.AnyoneReactionSettings.NeverSprint -- hoping to god it saves\
+	end\
+	\
+	if Settings.AnyoneReactionSettings.NeverEnpi == nil then\
+		Settings.AnyoneReactionSettings.NeverEnpi = false -- false is default\
+		Settings.AnyoneReactionSettings.NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi -- hoping to god it saves\
+	end\
+	\
+	if Settings.AnyoneReactionSettings.AttackingGaruda == nil then\
+		Settings.AnyoneReactionSettings.AttackingGaruda = false -- false is default\
+		Settings.AnyoneReactionSettings.AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda -- hoping to god it saves\
+	end\
+\
+	if Settings.AnyoneReactionSettings.UseMoogleTTS == nil then\
+		Settings.AnyoneReactionSettings.UseMoogleTTS = false -- false is default\
+		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS -- hoping to god it saves\
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -1024,7 +1044,11 @@ self.used = true",
 			DisableAssist = Settings.AnyoneReactionSettings.DisableAssist,\
 			AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot,\
 			AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks,\
-			AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom\
+			AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom,\
+			NeverSprint = Settings.AnyoneReactionSettings.NeverSprint,\
+			NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi,\
+			AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda,\
+			UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -1052,11 +1076,20 @@ self.used = true",
 		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = AnyoneReactionSettings.Settings.AutoSetSpeedHacks\
 		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks\
 		\
-		Settings.AnyoneReactionSettings.AutoSetCameraZoom = AnyoneReactionSettings.Settings.AutoSetCameraZoom\
-		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom\
+		Settings.AnyoneReactionSettings.NeverSprint = AnyoneReactionSettings.Settings.NeverSprint\
+		Settings.AnyoneReactionSettings.NeverSprint = Settings.AnyoneReactionSettings.NeverSprint\
+		\
+		Settings.AnyoneReactionSettings.NeverEnpi = AnyoneReactionSettings.Settings.NeverEnpi\
+		Settings.AnyoneReactionSettings.NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi\
+		\
+		Settings.AnyoneReactionSettings.AttackingGaruda = AnyoneReactionSettings.Settings.AttackingGaruda\
+		Settings.AnyoneReactionSettings.AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda\
+		\
+		Settings.AnyoneReactionSettings.UseMoogleTTS = AnyoneReactionSettings.Settings.UseMoogleTTS\
+		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS\
 	end\
 		\
-	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Hacks\")\
+	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Job Specific,Hacks\")\
 	function AnyoneReactionSettings.draw()\
 		if self.reference.enabled and AnyoneReactionSettings.enabled and AnyoneReactionSettings.open then\
 			GUI:SetNextWindowSize(250,400,GUI.SetCond_FirstUseEver)\
@@ -1065,6 +1098,12 @@ self.used = true",
 				local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
 				if (tabname == GetString(\"General\")) then\
 				local changed = false\
+				\
+				--GUI:Text(\"e5s settings\")\
+				--GUI:Text(\"Current job doesn't have any settings for e5s.\\n\")\
+				\
+				--GUI:Text(\"e6s settings\")\
+				--GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
 				GUI:Text(\"e7s settings\")\
 				local hovered = false\
@@ -1080,21 +1119,7 @@ self.used = true",
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 then\
-				local hovered = false\
-				AnyoneReactionSettings.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneReactionSettings.Settings.AddsPhasePot)\
-				if changed then AnyoneReactionSettings.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses pot during adds phase immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
-					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
+\
 				\
 				GUI:Text(\"e8s settings\")\
 				local hovered = false\
@@ -1136,7 +1161,7 @@ self.used = true",
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
+				if Player.job == 31 or Player.job == 23 then\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.LeftSide, changed = GUI:Checkbox(\"Left Side Adds\", AnyoneReactionSettings.Settings.LeftSide)\
 				if changed then AnyoneReactionSettings.save() end\
@@ -1163,8 +1188,86 @@ self.used = true",
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end --end job check\
+				end -- end of brd/mch job check\
 				\
+			elseif (tabname == GetString(\"Job Specific\")) then\
+				if Player.job == 34 then -- check for samurai\
+				local hovered = false\
+				GUI:Text(\"Samurai\")\
+				AnyoneReactionSettings.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneReactionSettings.Settings.NeverSprint)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Enable/Disable Enpi For Me\", AnyoneReactionSettings.Settings.NeverEnpi)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate With MoogleTTS\", AnyoneReactionSettings.Settings.UseMoogleTTS)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Reminds you using MoogleTTS to press Meditate when the boss goes untargetable.\\n\")\
+					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed, will do nothing otherwise. Check pins in FFXIVMinion Discord's #addon-file-sharing channel to download.\")\
+					GUI:TextColored(1,0,0,1,\"Do not recommend using if you're streaming or recording to show other people, it will be heard. You can probably pass it off as an ACT trigger, but be careful.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.AttackingGaruda, changed = GUI:Checkbox(\"Attacking Garuda During Split\", AnyoneReactionSettings.Settings.AttackingGaruda)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Only enable if you're specifically attacking garuda during the e6s split phase. If enabled, will not waste the time re-applying Higanbana to ifrit if it won't last long enough to be worth it.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only matters if you're using my e6s timeline.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end -- end of samurai job check\
+				\
+				if Player.job == 31 then -- check for machinist\
+				local hovered = false\
+				GUI:Text(\"Machinist\")\
+				AnyoneReactionSettings.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneReactionSettings.Settings.AddsPhasePot)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses pot during adds phase immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
+					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end -- end of machinist job check\
+				\
+				if Player.job ~= 31 and Player.job ~= 34 then\
+				GUI:Text(\"No settings for current job.\")\
+				end\
+			\
 			elseif (tabname == GetString(\"Hacks\")) then\
 			\
 				local hovered = false\
@@ -1174,9 +1277,9 @@ self.used = true",
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sets your character speed to 7.2 (default is 6.0) at the start of a fight. Changes it back upon wiping.\\n\")\
+					GUI:Text(\"Sets your character speed to 7.2 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15% faster walking speed.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:TextColored(1,0,0,1,\"Changing the speed is safe, but I wouldn't recommend using this if someone on your team is streaming. It could be dangerous if someone spots you running slightly faster than the rest of the group.\")\
+					GUI:TextColored(1,0,0,1,\"Changing the speed is safe detection-wise FOR NOW, but someone can report you. It could be especially dangerous if someone spots you running slightly faster than the rest of the group and saves a video of you doing so. In that case, it is dangerous to use, so use at your own discretion.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
