@@ -91,6 +91,10 @@ SallyDNC.SkillSettings.StandardStep.enabled = true\
 SallyDNC.SkillSettings.TechStep.enabled = true\
 SallyDNC.SkillSettings.UseAOE.enabled = true\
 \
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyDNC.SkillSettings.Potion.enabled = true\
+end\
+\
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true \
 return nil";
