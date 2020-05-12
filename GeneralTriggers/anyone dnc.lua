@@ -5,11 +5,11 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 10,
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
 		["execute"] = "if Player.job ~= 38 then\
 		self.eventConditionMismatch = true -- suppressing the log\
 		self.used = true \
@@ -34,29 +34,29 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: on death",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5",
-	},
+return nil";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5";
+	};
 	[2] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 9,
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
 		["execute"] = "if Player.job ~= 38 or SallyDNC == nil then\
 		self.eventConditionMismatch = true -- suppressing the log\
 		self.used = true \
@@ -97,53 +97,53 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: toggles on wipe",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1",
-	},
+return nil";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: toggles on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1";
+	};
 	[3] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 11,
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
 		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
 ---alternatively just disable this if you're 3000 iq and remember to use dance partner\
 SallyDNC.SkillSettings.AutoPartner.enabled = true\
-self.used = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "auto partner once at map change",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf",
-	},
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaReturnsAction"] = false;
+		["name"] = "auto partner once at map change";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf";
+	};
 	[4] = {
 		["actions"] = {
 			[1] = {
-				["aType"] = 4,
-				["actionID"] = -1,
+				["aType"] = 4;
+				["actionID"] = -1;
 				["actionLua"] = "if not gReactionAddonInit then\
     AnyoneReactionSettings = {\
         enabled = true,\
@@ -178,97 +178,97 @@ self.used = true",
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true",
-				["allowInterrupt"] = false,
+self.used = true";
+				["allowInterrupt"] = false;
 				["conditions"] = {
-				},
-				["endIfUsed"] = false,
-				["gVar"] = "",
-				["gVarIndex"] = 1,
-				["gVarValue"] = 1,
-				["ignoreWeaveRules"] = false,
-				["luaReturnsAction"] = false,
-				["name"] = "",
-				["potType"] = 1,
-				["setTarget"] = false,
-				["stopCasting"] = false,
-				["stopMoving"] = false,
-				["targetContentID"] = -1,
-				["targetName"] = "",
-				["targetSubType"] = 1,
-				["targetType"] = 1,
-				["untarget"] = false,
-				["useForWeaving"] = false,
-				["usePot"] = false,
-				["used"] = false,
-				["variableTogglesType"] = 1,
-			},
-		},
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
 		["conditions"] = {
 			[1] = {
-				["actionCDValue"] = 0,
-				["actionID"] = -1,
-				["buffCheckType"] = 1,
-				["buffDuration"] = 0,
-				["buffID"] = -1,
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
 				["buffIDList"] = {
-				},
-				["category"] = 4,
-				["comparator"] = 1,
-				["conditionLua"] = "return AnyoneReactionSettings == nil",
-				["conditionType"] = 1,
+				};
+				["category"] = 4;
+				["comparator"] = 1;
+				["conditionLua"] = "return AnyoneReactionSettings == nil";
+				["conditionType"] = 1;
 				["conditions"] = {
-				},
-				["contentid"] = -1,
-				["enmityValue"] = 0,
-				["eventArgOptionType"] = 1,
-				["eventArgType"] = 1,
-				["eventBuffDuration"] = 0,
-				["eventBuffID"] = -1,
-				["eventChatLine"] = "",
-				["eventEntityContentID"] = -1,
-				["eventEntityID"] = -1,
-				["eventEntityName"] = "",
-				["eventMarkerID"] = -1,
-				["eventOwnerContentID"] = -1,
-				["eventOwnerID"] = -1,
-				["eventOwnerName"] = "",
-				["eventSpellID"] = -1,
-				["eventSpellName"] = -1,
-				["eventTargetContentID"] = -1,
-				["eventTargetID"] = -1,
-				["eventTargetName"] = "",
-				["gaugeIndex"] = 1,
-				["gaugeValue"] = 0,
-				["hpType"] = 1,
-				["hpValue"] = 0,
-				["inCombatType"] = 1,
-				["inRangeValue"] = 0,
-				["lastSkillID"] = -1,
-				["localmapid"] = -1,
-				["matchAnyBuff"] = false,
-				["mpType"] = 1,
-				["mpValue"] = 0,
-				["name"] = "",
-				["partyHpType"] = 1,
-				["partyHpValue"] = 0,
-				["partyMpType"] = 1,
-				["partyMpValue"] = 0,
-				["partyTargetContentID"] = -1,
-				["partyTargetName"] = "",
-				["partyTargetNumber"] = 1,
-				["partyTargetSubType"] = 1,
-				["partyTargetType"] = 1,
-				["rangeCheckSourceSubType"] = 1,
-				["rangeCheckSourceType"] = 1,
-				["rangeSourceContentID"] = -1,
-				["rangeSourceName"] = "",
-				["setEventTargetSubtype"] = 1,
-				["setFirstMatch"] = false,
-			},
-		},
-		["enabled"] = true,
-		["eventType"] = 1,
+				};
+				["contentid"] = -1;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
 		["execute"] = "if not gAnyoneReactionAddonInit then\
 	AnyoneReactionSettings = {\
 		enabled = true,\
@@ -347,6 +347,11 @@ self.used = true",
 		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS -- hoping to god it saves\
 	end\
 	\
+	if Settings.AnyoneReactionSettings.UnderstandDanger == nil then\
+		Settings.AnyoneReactionSettings.UnderstandDanger = false -- false is default\
+		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger -- hoping to god it saves\
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -360,7 +365,8 @@ self.used = true",
 			NeverSprint = Settings.AnyoneReactionSettings.NeverSprint,\
 			NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi,\
 			AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda,\
-			UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS\
+			UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS,\
+			UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -399,6 +405,9 @@ self.used = true",
 		\
 		Settings.AnyoneReactionSettings.UseMoogleTTS = AnyoneReactionSettings.Settings.UseMoogleTTS\
 		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS\
+\
+		Settings.AnyoneReactionSettings.UnderstandDanger = AnyoneReactionSettings.Settings.UnderstandDanger\
+		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
 	end\
 		\
 	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Job Specific,Hacks\")\
@@ -473,7 +482,7 @@ self.used = true",
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 or Player.job == 23 then\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.LeftSide, changed = GUI:Checkbox(\"Left Side Adds\", AnyoneReactionSettings.Settings.LeftSide)\
 				if changed then AnyoneReactionSettings.save() end\
@@ -500,7 +509,7 @@ self.used = true",
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end -- end of brd/mch job check\
+				end -- end of brd/mch/dnc job check\
 				\
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 34 then -- check for samurai\
@@ -582,6 +591,22 @@ self.used = true",
 			\
 			elseif (tabname == \"Hacks\") then\
 			\
+			\
+			if AnyoneReactionSettings.Settings.UnderstandDanger == false then\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.UnderstandDanger, changed = GUI:Checkbox(\"I understand that these options are dangerous to use and can get me banned\", AnyoneReactionSettings.Settings.UnderstandDanger)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:TextColored(1,0,0,1,\"These options will not get you automatically banned from Square Enix's detection FOR NOW, but getting caught with speed hacks is an extreme possibility if someone records you moving slightly faster than normal. IT HAS HAPPENED IN THE PAST AND THE PERSON WAS POSTED ALL OVER REDDIT AND THE BALANCE DISCORD. The zoom hacks can't be seen by other people but if you post screenshots, videos or stream your gameplay, then it can be fairly obvious you are zoomed out more than normally allowed.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				elseif AnyoneReactionSettings.Settings.UnderstandDanger == true then\
+				\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Auto Set Speed Hacks\", AnyoneReactionSettings.Settings.AutoSetSpeedHacks)\
 				if changed then AnyoneReactionSettings.save() end\
@@ -589,7 +614,7 @@ self.used = true",
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sets your character speed to 7.2 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15% faster walking speed.\\n\")\
+					GUI:Text(\"Sets your character speed to 7 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15% faster walking speed.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:TextColored(1,0,0,1,\"Changing the speed is safe detection-wise FOR NOW, but someone can report you. It could be especially dangerous if someone spots you running slightly faster than the rest of the group and saves a video of you doing so. In that case, it is dangerous to use, so use at your own discretion.\")\
 					GUI:PopTextWrapPos()\
@@ -609,6 +634,7 @@ self.used = true",
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+			end\
 			end -- end of tabs\
 			end\
 			GUI:End()\
@@ -623,21 +649,21 @@ self.used = true",
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaReturnsAction"] = false,
-		["name"] = "Anyone's Reaction Menu GUI",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106",
-	},
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaReturnsAction"] = false;
+		["name"] = "Anyone's Reaction Menu GUI";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106";
+	};
 }
 return obj1
