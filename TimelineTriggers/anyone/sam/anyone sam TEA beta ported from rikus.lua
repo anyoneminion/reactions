@@ -92,12 +92,10 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "if TensorCore ~= nil then\
-local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["actionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
 if LL and LH then\
 		TensorCore.resetTTKTargets(LL.id, LH.id)\
-end\
 end";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -218,19 +216,17 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
 if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 10 and TensorCore.calcTimeToKill(LH.id, 1000) <= 10 then -- wildfire\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -269,19 +265,17 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
 if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 18 and TensorCore.calcTimeToKill(LH.id, 1000) <= 18 then -- higanbana\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -408,7 +402,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -421,7 +415,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -704,19 +698,17 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
 local BJ = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9218, subgroup = \"Nearest\"})\
 if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 10 then -- wildfire\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -755,19 +747,17 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
 local BJ = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9218, subgroup = \"Nearest\"})\
 if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 18 then -- queen\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -1284,7 +1274,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -1297,7 +1287,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -1520,18 +1510,16 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
 if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -1570,18 +1558,16 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if TensorCore ~= nil then\
-local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
+					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
 if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 18 -- queen\
 		  return true\
 end\
-return false\
-end";
+return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
