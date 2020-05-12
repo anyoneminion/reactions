@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-{};{};{};{};
+{};{};
 } -- multiRefObjects
 local obj1 = {
 	[2] = {
@@ -57,13 +57,14 @@ local obj1 = {
 \
 \
 \
-\
-if ACR_TensorRuin_Potion == true then\
+if SallySAM.SkillSettings.Potion.enabled == true then\
 data.PotsEnabled = true\
 end\
 \
+local selectedACR = gACRSelectedProfiles[Player.job]\
+data.selectedACR = selectedACR\
 \
----if you want a higher or lower speed, you can change 7 to anything you want. you will have to change on each timeline.\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
 if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
 		gDevHackWalkSpeed = 7\
 		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
@@ -79,10 +80,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 2;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -15.5;
+			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13c8baa6-a5fd-31ef-8371-838d3feac8ed";
+			["uuid"] = "e63bc6e9-87d3-48cb-bea4-a7256bc62459";
 		};
 	};
 	[3] = {
@@ -91,10 +92,12 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["actionLua"] = "if TensorCore ~= nil then\
+local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
 if LL and LH then\
 		TensorCore.resetTTKTargets(LL.id, LH.id)\
+end\
 end";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -140,28 +143,29 @@ end";
 			["timerOffset"] = 2.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5b32e4ef-d0c4-2c8f-8df3-55fe7b1ff087";
+			["uuid"] = "cf629786-7150-f9e8-83f7-ee66442dbd0f";
 		};
 	};
 	[37] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
-						[1] = 3;
+						[1] = 2;
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
-					["name"] = "";
+					["name"] = "Toggle Higanbana";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
 					["setTarget"] = false;
@@ -178,80 +182,20 @@ end";
 					["variableTogglesType"] = 1;
 				};
 				[2] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 1;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 2;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
-					["name"] = "";
+					["name"] = "Save CD";
 					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
@@ -274,17 +218,19 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
 if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 10 and TensorCore.calcTimeToKill(LH.id, 1000) <= 10 then -- wildfire\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -323,68 +269,19 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
-if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 15 and TensorCore.calcTimeToKill(LH.id, 1000) <= 15 then -- queen\
+if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 18 and TensorCore.calcTimeToKill(LH.id, 1000) <= 18 then -- higanbana\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["ignoreMissingBuffs"] = true;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["matchAtLeastOneBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
-local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
-if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 4 and TensorCore.calcTimeToKill(LH.id, 1000) <= 4 then -- queen\
-		  return true\
-end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -433,7 +330,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "f8ea130a-d9e1-5c62-bceb-0b2495505207";
+			["uuid"] = "5b29de5b-7baf-9f56-9966-98c1f59017ad";
 		};
 	};
 	[39] = {
@@ -441,7 +338,7 @@ return false";
 			["actions"] = {
 				[1] = {
 					["aType"] = 1;
-					["actionID"] = 7559;
+					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -511,7 +408,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -524,7 +421,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -564,7 +461,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "surecast";
+			["name"] = "arm's length";
 			["throttleTime"] = 0;
 			["time"] = 200;
 			["timeRange"] = true;
@@ -573,7 +470,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "20ce3978-b7ae-ac29-8326-1d981b15fcd6";
+			["uuid"] = "b5a2f8aa-b489-1d8b-8a3d-289162b58fbe";
 		};
 		[2] = {
 			["actions"] = {
@@ -613,117 +510,31 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "d2d71f64-e9c2-844c-9d71-692fa316fc54";
+			["uuid"] = "db4f10ec-bdc8-204f-8c67-f35fa72dbbd3";
 		};
 	};
 	[58] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -755,7 +566,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1c5f0e12-3725-997e-ac9b-6dd42399f3c6";
+			["uuid"] = "5cc45dfe-4d7f-a830-8e0a-458809cd643c";
 		};
 	};
 	[81] = {
@@ -815,23 +626,24 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7080715a-fdd7-7d50-8f7e-27adc6a3f946";
+			["uuid"] = "73dc8380-bf1a-c562-9bf6-4641be320e00";
 		};
 	};
 	[86] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
-						[1] = 3;
+						[1] = 1;
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
@@ -853,81 +665,24 @@ self.used = true";
 					["variableTogglesType"] = 1;
 				};
 				[2] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 2;
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -952,12 +707,14 @@ self.used = true";
 					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
 local BJ = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9218, subgroup = \"Nearest\"})\
-if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 10 then -- dots\
+if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 10 then -- wildfire\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
 					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
@@ -1001,65 +758,16 @@ return false";
 					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
 local BJ = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9218, subgroup = \"Nearest\"})\
-if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 15 then -- demi/pet cd\
+if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 18 then -- queen\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
 					["conditions"] = multiRefObjects[1];
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["ignoreMissingBuffs"] = true;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["matchAtLeastOneBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
-local BJ = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9218, subgroup = \"Nearest\"})\
-if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.calcTimeToKill(BJ.id, 1000) <= 4 then -- cd\
-		  return true\
-end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -1108,7 +816,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "25744806-6a81-e813-a910-4a43797a3679";
+			["uuid"] = "766d9273-2a6a-710a-a2ad-dc4f0e76910e";
 		};
 	};
 	[88] = {
@@ -1117,98 +825,18 @@ return false";
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "hold pet cd until after heart";
-			["throttleTime"] = 0;
-			["time"] = 511.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 95;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "aeb75357-8aad-c015-ad8d-3a010615582f";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -1237,7 +865,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle on cd/dots";
+			["name"] = "toggle on hc/queen";
 			["throttleTime"] = 0;
 			["time"] = 511.4;
 			["timeRange"] = false;
@@ -1246,23 +874,24 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "06ff2f5c-97af-147c-bb4f-9e54c0905c1e";
+			["uuid"] = "ae6f72bc-30cf-7467-8207-9325e1699964";
 		};
 	};
 	[101] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -1291,30 +920,31 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off cd";
+			["name"] = "toggle off dot";
 			["throttleTime"] = 0;
 			["time"] = 541;
 			["timeRange"] = false;
 			["timelineIndex"] = 101;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
+			["timerOffset"] = -18;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8ad3fd57-9549-d616-862a-a5f06256c242";
+			["uuid"] = "3e0616b9-a044-6f5f-afaf-d689e5eadfa4";
 		};
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
+					["gVar"] = "ACR_TensorMagnum_Hypercharge";
+					["gVarIndex"] = 3;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -1343,7 +973,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off dots";
+			["name"] = "save cd";
 			["throttleTime"] = 0;
 			["time"] = 541;
 			["timeRange"] = false;
@@ -1352,7 +982,7 @@ return false";
 			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "00d7fc74-4782-f0c1-a1ed-81a7e2160c84";
+			["uuid"] = "643f93a7-220d-6e51-8cef-baf6c2ce4b16";
 		};
 	};
 	[103] = {
@@ -1361,15 +991,17 @@ return false";
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -1377,94 +1009,6 @@ return false";
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -1496,134 +1040,23 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "72e5fc63-bafa-8a2d-a5b6-ad1dbc94e6be";
+			["uuid"] = "4c5ff2e1-1a19-a0fa-80a9-993a7439a810";
 		};
 	};
 	[120] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
-					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "toggle off demi";
-			["throttleTime"] = 0;
-			["time"] = 632.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 120;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "03c0225f-55d5-14c8-b6d0-f80b3976d85b";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "";
 					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -1651,7 +1084,60 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off cds";
+			["name"] = "toggle off dot";
+			["throttleTime"] = 0;
+			["time"] = 632.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 120;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e48c7006-38a6-31b2-80d9-a34d5244fb44";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["conditions"] = {
+					};
+					["detectionTargetNumber"] = 1;
+					["endIfUsed"] = false;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 2;
+					["ignoreWeaveRules"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setDetectionTargetPriority"] = 1;
+					["setTarget"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "save cd";
 			["throttleTime"] = 0;
 			["time"] = 632.3;
 			["timeRange"] = false;
@@ -1660,7 +1146,7 @@ return false";
 			["timerOffset"] = -7.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13e02190-9b06-7da3-8efd-2728a336b542";
+			["uuid"] = "3fe4887b-8ba9-13db-900c-aca6449526ae";
 		};
 	};
 	[125] = {
@@ -1720,7 +1206,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "eb1f2074-593c-5e95-a241-b101955633d8";
+			["uuid"] = "9e2993ca-4d71-7839-8fc5-c4b269017584";
 		};
 	};
 	[126] = {
@@ -1728,7 +1214,7 @@ self.used = true";
 			["actions"] = {
 				[1] = {
 					["aType"] = 1;
-					["actionID"] = 7559;
+					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -1798,7 +1284,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -1811,7 +1297,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -1851,7 +1337,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "surecast";
+			["name"] = "arm's length";
 			["throttleTime"] = 0;
 			["time"] = 650.9;
 			["timeRange"] = true;
@@ -1860,7 +1346,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "1ce3625a-8688-e2d8-8de8-047b55a5fbdc";
+			["uuid"] = "9b577935-6279-41bf-bac0-f4d2029e311d";
 		};
 		[2] = {
 			["actions"] = {
@@ -1900,22 +1386,24 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "f4a968e7-d538-17cf-a978-c813de964d0a";
+			["uuid"] = "e5abc23b-6443-5bd5-b7ef-def9eda495f8";
 		};
 	};
 	[141] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -1923,94 +1411,6 @@ end\
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2042,23 +1442,24 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7e8d4e42-238e-b7d5-b7c3-796f3fa4423a";
+			["uuid"] = "bf0a4dca-5ee5-59f7-b049-65ee43d90ca4";
 		};
 	};
 	[152] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
-						[1] = 3;
+						[1] = 1;
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
@@ -2080,83 +1481,24 @@ end\
 					["variableTogglesType"] = 1;
 				};
 				[2] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 						[1] = 2;
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2178,16 +1520,18 @@ end\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
 if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -2226,66 +1570,18 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
-if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 15 -- queen\
+					["conditionLua"] = "if TensorCore ~= nil then\
+local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
+if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 18 -- queen\
 		  return true\
 end\
-return false";
+return false\
+end";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
-					["contentid"] = -1;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["ignoreMissingBuffs"] = true;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["matchAtLeastOneBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
-if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 4 -- queen\
-		  return true\
-end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
@@ -2334,22 +1630,24 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "8418759e-a1b6-8f3c-a00f-a31dd6c3550e";
+			["uuid"] = "6d70369c-ad7f-0262-91d2-af16c5b403e4";
 		};
 	};
 	[153] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -2357,94 +1655,6 @@ return false";
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2476,23 +1686,24 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "94ee026c-b1c7-903c-a255-2198e9c8d5ff";
+			["uuid"] = "4d429636-9c57-434c-9771-dece89bbe17f";
 		};
 	};
 	[168] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -2521,7 +1732,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off dots";
+			["name"] = "toggle off cds";
 			["throttleTime"] = 0;
 			["time"] = 985.6;
 			["timeRange"] = false;
@@ -2530,21 +1741,22 @@ return false";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8bc74c35-44f5-be50-9dac-074ea0d0a6a8";
+			["uuid"] = "a768a3fc-b128-2335-b1db-880de71a0aa0";
 		};
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -2564,34 +1776,6 @@ return false";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
 			};
 			["conditions"] = {
 			};
@@ -2601,81 +1785,33 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off demi";
+			["name"] = "toggle off queen";
 			["throttleTime"] = 0;
 			["time"] = 985.6;
 			["timeRange"] = false;
 			["timelineIndex"] = 168;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -15;
+			["timerOffset"] = -18;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ac58f4d8-8f30-80bc-b2ac-56f025f0525c";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "toggle off cd";
-			["throttleTime"] = 0;
-			["time"] = 985.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 168;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -4;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "f4a87b7e-3ea8-7c73-859c-c4f3625e2b97";
+			["uuid"] = "93631e33-f398-4e97-a459-a7959eccc513";
 		};
 	};
 	[173] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -2683,94 +1819,6 @@ return false";
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -2802,23 +1850,24 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "16113891-ea52-873b-a923-3cd610182a17";
+			["uuid"] = "4f869925-8f58-cb7b-8811-e52b94c0d847";
 		};
 	};
 	[186] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
+					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -2847,7 +1896,7 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off dots";
+			["name"] = "toggle off cds";
 			["throttleTime"] = 0;
 			["time"] = 1073.3;
 			["timeRange"] = false;
@@ -2856,21 +1905,22 @@ return false";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a7c5c1c4-c3eb-62f2-89ff-c26448c892fa";
+			["uuid"] = "5738c21a-9f26-b697-bc74-fb08d0ab4884";
 		};
 		[2] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
+					["gVar"] = "ACR_TensorMagnum_SummonQueen";
+					["gVarIndex"] = 5;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["luaReturnsAction"] = false;
@@ -2890,34 +1940,6 @@ return false";
 					["used"] = false;
 					["variableTogglesType"] = 1;
 				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
 			};
 			["conditions"] = {
 			};
@@ -2927,81 +1949,33 @@ return false";
 			["lastUse"] = 0;
 			["loop"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "toggle off queen";
+			["name"] = "toggle off dot";
 			["throttleTime"] = 0;
 			["time"] = 1073.3;
 			["timeRange"] = false;
 			["timelineIndex"] = 186;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -15;
+			["timerOffset"] = -18;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1f25130c-9ad8-da76-98d5-b2f5c90eb538";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "toggle off cd";
-			["throttleTime"] = 0;
-			["time"] = 1073.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 186;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -4;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "f4ee59ac-4922-22df-b1b6-dd0232c7305f";
+			["uuid"] = "689d00c3-4cdc-7411-89f6-98884d75f51a";
 		};
 	};
 	[192] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
+					["gVar"] = "ACR_TensorMagnum_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -3009,94 +1983,6 @@ return false";
 					["name"] = "";
 					["potType"] = 1;
 					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_PetCD";
-					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["detectionTargetNumber"] = 1;
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_Demi";
-					["gVarIndex"] = 6;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setDetectionTargetPriority"] = 1;
-					["setTarget"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_DoTs";
-					["gVarIndex"] = 9;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
 					["setTarget"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
@@ -3128,7 +2014,7 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c717504f-3772-e304-a18f-f982c1aded3a";
+			["uuid"] = "2f950e30-68bf-64c6-8879-694ec8add343";
 		};
 	};
 	["mapID"] = 887;
