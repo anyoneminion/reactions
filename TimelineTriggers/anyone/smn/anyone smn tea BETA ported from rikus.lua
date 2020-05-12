@@ -74,7 +74,7 @@ end";
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVar"] = "ACR_TensorRuin_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
@@ -296,7 +296,7 @@ return false";
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
 local LH = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9212, subgroup = \"Nearest\"})\
-if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 15 and TensorCore.calcTimeToKill(LH.id, 1000) <= 4 then -- queen\
+if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 4 and TensorCore.calcTimeToKill(LH.id, 1000) <= 4 then -- queen\
 		  return true\
 end\
 return false";
@@ -749,7 +749,7 @@ self.used = true";
 					};
 					["detectionTargetNumber"] = 1;
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_CD";
+					["gVar"] = "ACR_TensorRuin_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
