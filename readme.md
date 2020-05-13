@@ -4,26 +4,14 @@ Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbr
 
 ### Machinist
 
-Eden's Verse 5-8
-
-TEA (rikudou's version)
-
-UCoB
+Eden's Verse 5-8, TEA (rikudou's version), UCoB
 
 ### Bard
 
-Eden's Verse 5-8
-
-TEA (rikudou's version)
-
-UCoB
+Eden's Verse 5-8, TEA (rikudou's version), UCoB
 
 ### Summoner
-Eden's Verse 5-8
-
-TEA 
-
-UCoB
+Eden's Verse 5-8, TEA, UCoB
 
 ### Dancer
 
@@ -31,9 +19,7 @@ Eden's Verse 5-8
 
 ### Samurai
 
-Eden's Verse 5-8
-
-TEA
+Eden's Verse 5-8, TEA
 
 ### Dark Knight
 
