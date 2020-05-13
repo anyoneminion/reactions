@@ -1,3 +1,56 @@
+# Supported Jobs
+
+Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbreaker
+
+### Machinist
+
+Eden's Verse 5-8
+
+TEA (rikudou's version)
+
+UCoB
+
+### Bard
+
+Eden's Verse 5-8
+
+TEA (rikudou's version)
+
+UCoB
+
+### Summoner
+Eden's Verse 5-8
+
+TEA 
+
+UCoB
+
+### Dancer
+
+Eden's Verse 5-8
+
+### Samurai
+
+Eden's Verse 5-8
+
+TEA
+
+### Dark Knight
+
+Eden's Verse 5-8 (tanking)
+
+### Warrior
+
+Eden's Verse 5-8 (tanking)
+
+### Paladin
+
+Eden's Verse 5-8 (tanking)
+
+### Gunbreaker
+
+Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking)
+
 # read me
 
 Each fight contains "read me" reactions on the very first mechanic on the timeline. Make sure to read them for more information.
