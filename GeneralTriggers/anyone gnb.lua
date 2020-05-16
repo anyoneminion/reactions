@@ -5,11 +5,11 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
 		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
 SallyGNB.HotBarConfig.Shirks.enabled = true\
 SallyGNB.HotBarConfig.Reprisal.enabled = true\
@@ -58,29 +58,29 @@ self.eventConditionMismatch = true\
 self.used = true\
 end\
 \
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar/qt on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar/qt on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85",
+	},
 	[2] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
+		},
+		["enabled"] = true,
+		["eventType"] = 10,
 		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
 SallyGNB.HotBarConfig.Shirks.enabled = true\
 SallyGNB.HotBarConfig.Reprisal.enabled = true\
@@ -108,27 +108,27 @@ self.eventConditionMismatch = true\
 self.used = true\
 end\
 \
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700",
+	},
 	[3] = {
 		["actions"] = {
 			[1] = {
-				["aType"] = 4;
-				["actionID"] = -1;
+				["aType"] = 4,
+				["actionID"] = -1,
 				["actionLua"] = "if not gReactionAddonInit then\
     AnyoneReactionSettings = {\
         enabled = true,\
@@ -163,97 +163,97 @@ end\
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true";
-				["allowInterrupt"] = false;
+self.used = true",
+				["allowInterrupt"] = false,
 				["conditions"] = {
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+		},
 		["conditions"] = {
 			[1] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
 				["buffIDList"] = {
-				};
-				["category"] = 4;
-				["comparator"] = 1;
-				["conditionLua"] = "return AnyoneReactionSettings == nil";
-				["conditionType"] = 1;
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return AnyoneReactionSettings == nil",
+				["conditionType"] = 1,
 				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
+				},
+				["contentid"] = -1,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
 		["execute"] = "if not gAnyoneReactionAddonInit then\
 	AnyoneReactionSettings = {\
 		enabled = true,\
@@ -634,21 +634,21 @@ self.used = true";
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaReturnsAction"] = false;
-		["name"] = "Anyone's Reaction Menu GUI";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "e27b8cfe-0069-644e-8f76-2f443b91c65f";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "Anyone's Reaction Menu GUI",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "e27b8cfe-0069-644e-8f76-2f443b91c65f",
+	},
 }
 return obj1
