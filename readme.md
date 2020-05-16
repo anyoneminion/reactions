@@ -1,3 +1,42 @@
+# Supported Jobs
+
+Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbreaker
+
+### Machinist
+
+Eden's Verse 5-8, TEA (rikudou's version), UCoB
+
+### Bard
+
+Eden's Verse 5-8, TEA (rikudou's version), UCoB
+
+### Summoner
+Eden's Verse 5-8, TEA, UCoB
+
+### Dancer
+
+Eden's Verse 5-8
+
+### Samurai
+
+Eden's Verse 5-8, TEA
+
+### Dark Knight
+
+Eden's Verse 5-8 (tanking)
+
+### Warrior
+
+Eden's Verse 5-8 (tanking)
+
+### Paladin
+
+Eden's Verse 5-8 (tanking)
+
+### Gunbreaker
+
+Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking)
+
 # read me
 
 Each fight contains "read me" reactions on the very first mechanic on the timeline. Make sure to read them for more information.
@@ -15,8 +54,6 @@ A: To be safe, after placing these files in the above folder, reload your LUA, t
 
 A: Look for the button on the top right of this page called "Clone or download", click that and then "Download ZIP".
 
-**Q: Can you make reactions for X job?**
+**Q: Where can I donate to thank you?**
 
 https://ko-fi.com/anyoneminion
-
-If you'd like me to work on reactions for another job, I'll first have to purchase the ACR. You can use the above link to donate money to me so that I can purchase the ACR and begin working on it. If you'd like the reactions to be as optimized as possible, you can spend more to allow me to purchase a jump potion on an alt and I'll dedicate an alt character entirely to raiding on that job to optimize the reactions in a live setting.
