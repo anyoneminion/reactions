@@ -55,7 +55,14 @@ local obj1 = {
 \
 \
 \
-\
+		if Player.job ~= 34 and AnyoneReactionSettings.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong timeline triggers. Check that your timeline triggers is set to the samurai profile.\")\
+		elseif Player.job == 34 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 34 and AnyoneReactionSettings.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
 \
 if SallySAM.SkillSettings.Potion.enabled == true then\
 data.PotsEnabled = true\

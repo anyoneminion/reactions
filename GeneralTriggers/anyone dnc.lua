@@ -90,6 +90,7 @@ SallyDNC.SkillSettings.SaveCD.enabled = false\
 SallyDNC.SkillSettings.StandardStep.enabled = true\
 SallyDNC.SkillSettings.TechStep.enabled = true\
 SallyDNC.SkillSettings.UseAOE.enabled = true\
+SallyDNC.SkillSettings.HoldFans.enabled = false\
 \
 if eventArgs.oldData.PotsEnabled ~= nil then\
 SallyDNC.SkillSettings.Potion.enabled = true\
@@ -352,6 +353,11 @@ self.used = true",
 		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger -- hoping to god it saves\
 	end\
 	\
+	if Settings.AnyoneReactionSettings.JobCheck == nil then\
+		Settings.AnyoneReactionSettings.JobCheck = false -- false is default\
+		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck -- hoping to god it saves\
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -366,7 +372,8 @@ self.used = true",
 			NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi,\
 			AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda,\
 			UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS,\
-			UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
+			UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger,\
+			JobCheck = Settings.AnyoneReactionSettings.JobCheck\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -408,23 +415,39 @@ self.used = true",
 \
 		Settings.AnyoneReactionSettings.UnderstandDanger = AnyoneReactionSettings.Settings.UnderstandDanger\
 		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
+		\
+		Settings.AnyoneReactionSettings.JobCheck = AnyoneReactionSettings.Settings.JobCheck\
+		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck\
 	end\
 		\
-	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Job Specific,Hacks\")\
+	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Fight Specific,Job Specific,Hacks\")\
 	function AnyoneReactionSettings.draw()\
 		if self.reference.enabled and AnyoneReactionSettings.enabled and AnyoneReactionSettings.open then\
 			GUI:SetNextWindowSize(250,400,GUI.SetCond_FirstUseEver)\
 			AnyoneReactionSettings.visible, AnyoneReactionSettings.open = GUI:Begin(\"Anyone's Reactions Settings\", AnyoneReactionSettings.open)\
 			if AnyoneReactionSettings.visible then\
-				local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
-				if (tabname == \"General\") then\
+			local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
+			if (tabname == \"General\") then\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneReactionSettings.Settings.JobCheck)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Sends a text message to the chat box (client sided) when you're currently using the wrong profile relative to what job you're playing. Message is sent upon entering a savage/ultimate fight for general triggers, and is sent upon the fight starting if the timeline is wrong.\\n\")\
+					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+			elseif (tabname == \"Fight Specific\") then\
 				local changed = false\
 				\
-				--GUI:Text(\"e5s settings\")\
-				--GUI:Text(\"Current job doesn't have any settings for e5s.\\n\")\
+				GUI:Text(\"e5s settings\")\
+				GUI:Text(\"Current job doesn't have any settings for e5s.\\n\")\
 				\
-				--GUI:Text(\"e6s settings\")\
-				--GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
+				GUI:Text(\"e6s settings\")\
+				GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
 				GUI:Text(\"e7s settings\")\
 				local hovered = false\
@@ -664,6 +687,39 @@ self.used = true",
 		["timerStartOffset"] = 0,
 		["used"] = false,
 		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106",
+	},
+	[5] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 38 and AnyoneReactionSettings.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the dancer profile.\")\
+		elseif Player.job == 38 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 38 and AnyoneReactionSettings.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e",
 	},
 }
 return obj1

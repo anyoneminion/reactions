@@ -1071,6 +1071,11 @@ self.used = true",
 		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger -- hoping to god it saves\
 	end\
 	\
+	if Settings.AnyoneReactionSettings.JobCheck == nil then\
+		Settings.AnyoneReactionSettings.JobCheck = false -- false is default\
+		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck -- hoping to god it saves\
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -1085,7 +1090,8 @@ self.used = true",
 			NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi,\
 			AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda,\
 			UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS,\
-			UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
+			UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger,\
+			JobCheck = Settings.AnyoneReactionSettings.JobCheck\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -1127,23 +1133,39 @@ self.used = true",
 \
 		Settings.AnyoneReactionSettings.UnderstandDanger = AnyoneReactionSettings.Settings.UnderstandDanger\
 		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger\
+		\
+		Settings.AnyoneReactionSettings.JobCheck = AnyoneReactionSettings.Settings.JobCheck\
+		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck\
 	end\
 		\
-	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Job Specific,Hacks\")\
+	AnyoneReactionSettings.main_tabs = GUI_CreateTabs(\"General,Fight Specific,Job Specific,Hacks\")\
 	function AnyoneReactionSettings.draw()\
 		if self.reference.enabled and AnyoneReactionSettings.enabled and AnyoneReactionSettings.open then\
 			GUI:SetNextWindowSize(250,400,GUI.SetCond_FirstUseEver)\
 			AnyoneReactionSettings.visible, AnyoneReactionSettings.open = GUI:Begin(\"Anyone's Reactions Settings\", AnyoneReactionSettings.open)\
 			if AnyoneReactionSettings.visible then\
-				local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
-				if (tabname == \"General\") then\
+			local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
+			if (tabname == \"General\") then\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneReactionSettings.Settings.JobCheck)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Sends a text message to the chat box (client sided) when you're currently using the wrong profile relative to what job you're playing. Message is sent upon entering a savage/ultimate fight for general triggers, and is sent upon the fight starting if the timeline is wrong.\\n\")\
+					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+			elseif (tabname == \"Fight Specific\") then\
 				local changed = false\
 				\
-				--GUI:Text(\"e5s settings\")\
-				--GUI:Text(\"Current job doesn't have any settings for e5s.\\n\")\
+				GUI:Text(\"e5s settings\")\
+				GUI:Text(\"Current job doesn't have any settings for e5s.\\n\")\
 				\
-				--GUI:Text(\"e6s settings\")\
-				--GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
+				GUI:Text(\"e6s settings\")\
+				GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
 				GUI:Text(\"e7s settings\")\
 				local hovered = false\
@@ -1390,6 +1412,39 @@ self.used = true",
 		["conditions"] = {
 		},
 		["enabled"] = true,
+		["eventType"] = 11,
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 27 and AnyoneReactionSettings.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the summoner profile.\")\
+		elseif Player.job == 27 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 27 and AnyoneReactionSettings.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "54bf0c11-8a47-96ce-abd6-42388e8f650e",
+	},
+	[6] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
 		["eventType"] = 1,
 		["execute"] = "",
 		["executeType"] = 1,
@@ -1407,7 +1462,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "096830bd-4be8-d758-a9fb-130ac1f90e67",
 	},
-	[6] = {
+	[7] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2,
@@ -1480,12 +1535,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[12],
+				["buffIDList"] = multiRefObjects[9],
 				["category"] = 5,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[11],
+				["conditions"] = multiRefObjects[8],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 2,
@@ -1539,12 +1594,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[12],
+				["buffIDList"] = multiRefObjects[9],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[11],
+				["conditions"] = multiRefObjects[8],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -1598,12 +1653,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[12],
+				["buffIDList"] = multiRefObjects[9],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 7,
-				["conditions"] = multiRefObjects[11],
+				["conditions"] = multiRefObjects[8],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -1670,7 +1725,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "f0c119cf-94f2-9ca4-a339-65abdda0b26f",
 	},
-	[7] = {
+	[8] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2,
@@ -1743,12 +1798,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[6],
+				["buffIDList"] = multiRefObjects[19],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return data.dollsAoeToggled == true and not TensorCore.isEntityAlive(9214)",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[5],
+				["conditions"] = multiRefObjects[22],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -1802,12 +1857,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[6],
+				["buffIDList"] = multiRefObjects[19],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[5],
+				["conditions"] = multiRefObjects[22],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -1861,12 +1916,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[6],
+				["buffIDList"] = multiRefObjects[19],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 7,
-				["conditions"] = multiRefObjects[5],
+				["conditions"] = multiRefObjects[22],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -1933,7 +1988,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "9d5232e9-1c2d-d15c-b558-6d182da6786c",
 	},
-	[8] = {
+	[9] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -1973,12 +2028,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[18],
+				["buffIDList"] = multiRefObjects[20],
 				["category"] = 5,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[17],
+				["conditions"] = multiRefObjects[18],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2032,12 +2087,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[18],
+				["buffIDList"] = multiRefObjects[20],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[17],
+				["conditions"] = multiRefObjects[18],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2104,7 +2159,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "cb3a21d3-67e7-a857-af75-bc7dc100d423",
 	},
-	[9] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2,
@@ -2205,12 +2260,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[21],
+				["buffIDList"] = multiRefObjects[2],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[19],
+				["conditions"] = multiRefObjects[21],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2264,12 +2319,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[21],
+				["buffIDList"] = multiRefObjects[2],
 				["category"] = 1,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 2,
-				["conditions"] = multiRefObjects[19],
+				["conditions"] = multiRefObjects[21],
 				["contentid"] = 9214,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2336,7 +2391,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "3094e03c-f3d8-5503-8ece-857e86cdebcd",
 	},
-	[10] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2,
@@ -2438,12 +2493,12 @@ self.used = true\
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[13],
+				["buffIDList"] = multiRefObjects[16],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[14],
+				["conditions"] = multiRefObjects[1],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2497,12 +2552,12 @@ self.used = true\
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[13],
+				["buffIDList"] = multiRefObjects[16],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return data.dollsToggled == true and Player:GetTarget() and Player:GetTarget().contentid ~= 9214",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[14],
+				["conditions"] = multiRefObjects[1],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2569,7 +2624,7 @@ self.used = true\
 		["used"] = false,
 		["uuid"] = "3d9c7be9-1979-8076-a77b-0d51111fd60b",
 	},
-	[11] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -2647,12 +2702,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[15],
+				["buffIDList"] = multiRefObjects[13],
 				["category"] = 5,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[22],
+				["conditions"] = multiRefObjects[12],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 2,
@@ -2708,12 +2763,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[15],
+				["buffIDList"] = multiRefObjects[13],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[22],
+				["conditions"] = multiRefObjects[12],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2769,12 +2824,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[15],
+				["buffIDList"] = multiRefObjects[13],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return Player:GetTarget() == nil or Player:GetTarget().contentid ~= 8658",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[22],
+				["conditions"] = multiRefObjects[12],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2843,7 +2898,7 @@ end",
 		["used"] = false,
 		["uuid"] = "0c7c7156-ad52-001b-99c6-dce8d4f33f43",
 	},
-	[12] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -2886,12 +2941,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[10],
+				["buffIDList"] = multiRefObjects[11],
 				["category"] = 1,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 2,
-				["conditions"] = multiRefObjects[9],
+				["conditions"] = multiRefObjects[10],
 				["contentid"] = 9214,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -2945,12 +3000,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[10],
+				["buffIDList"] = multiRefObjects[11],
 				["category"] = 1,
 				["comparator"] = 2,
 				["conditionLua"] = "",
 				["conditionType"] = 3,
-				["conditions"] = multiRefObjects[9],
+				["conditions"] = multiRefObjects[10],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3004,12 +3059,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[10],
+				["buffIDList"] = multiRefObjects[11],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[9],
+				["conditions"] = multiRefObjects[10],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3076,7 +3131,7 @@ end",
 		["used"] = false,
 		["uuid"] = "a37b72b6-8c38-23f5-8ff6-cc56eaa8d222",
 	},
-	[13] = {
+	[14] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -3153,12 +3208,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[8],
+				["buffIDList"] = multiRefObjects[7],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return data.shieldTargeted == true and (not Player:GetTarget() or (Player:GetTarget().contentid == 8658 and Player:GetTarget().hp.percent <= 5))",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[7],
+				["conditions"] = multiRefObjects[6],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3214,12 +3269,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[8],
+				["buffIDList"] = multiRefObjects[7],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[7],
+				["conditions"] = multiRefObjects[6],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3275,12 +3330,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[8],
+				["buffIDList"] = multiRefObjects[7],
 				["category"] = 1,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 2,
-				["conditions"] = multiRefObjects[7],
+				["conditions"] = multiRefObjects[6],
 				["contentid"] = 9216,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3349,7 +3404,7 @@ end",
 		["used"] = false,
 		["uuid"] = "d2d09472-40a0-46bb-af51-1ba95737d02e",
 	},
-	[14] = {
+	[15] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -3428,12 +3483,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[4],
+				["buffIDList"] = multiRefObjects[5],
 				["category"] = 5,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[3],
+				["conditions"] = multiRefObjects[4],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 2,
@@ -3489,12 +3544,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[4],
+				["buffIDList"] = multiRefObjects[5],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[3],
+				["conditions"] = multiRefObjects[4],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3550,12 +3605,12 @@ end",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[4],
+				["buffIDList"] = multiRefObjects[5],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return Player:GetTarget() == nil or Player:GetTarget().contentid ~= 8658",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[3],
+				["conditions"] = multiRefObjects[4],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3624,7 +3679,7 @@ end",
 		["used"] = false,
 		["uuid"] = "02f11bc8-3b6d-1a6d-983c-1704ddfc7a1f",
 	},
-	[15] = {
+	[16] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4,
@@ -3700,12 +3755,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[2],
+				["buffIDList"] = multiRefObjects[17],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[1],
+				["conditions"] = multiRefObjects[15],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3759,12 +3814,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[2],
+				["buffIDList"] = multiRefObjects[17],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[1],
+				["conditions"] = multiRefObjects[15],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3818,12 +3873,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[2],
+				["buffIDList"] = multiRefObjects[17],
 				["category"] = 4,
 				["comparator"] = 1,
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[1],
+				["conditions"] = multiRefObjects[15],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3890,7 +3945,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "9911803f-9a2f-b3a0-94e8-937ef71f8667",
 	},
-	[16] = {
+	[17] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3,
@@ -3930,12 +3985,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[20],
+				["buffIDList"] = multiRefObjects[3],
 				["category"] = 5,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 1,
-				["conditions"] = multiRefObjects[16],
+				["conditions"] = multiRefObjects[14],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -3989,12 +4044,12 @@ self.used = true",
 				["buffCheckType"] = 1,
 				["buffDuration"] = 0,
 				["buffID"] = -1,
-				["buffIDList"] = multiRefObjects[20],
+				["buffIDList"] = multiRefObjects[3],
 				["category"] = 2,
 				["comparator"] = 1,
 				["conditionLua"] = "",
 				["conditionType"] = 8,
-				["conditions"] = multiRefObjects[16],
+				["conditions"] = multiRefObjects[14],
 				["contentid"] = -1,
 				["enmityValue"] = 0,
 				["eventArgOptionType"] = 1,
@@ -4061,7 +4116,7 @@ self.used = true",
 		["used"] = false,
 		["uuid"] = "a6a2cfe4-36a7-5691-a8d9-8359f9e6d9ec",
 	},
-	[17] = {
+	[18] = {
 		["actions"] = {
 		},
 		["conditions"] = {
