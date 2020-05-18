@@ -104,7 +104,7 @@ local obj1 = {
 \
 \
 \
-\
+data.currentFBTWeaveMode = ACR_TensorRuin_FBTMode\
 \
 		if Player.job ~= 27 and AnyoneReactionSettings.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
@@ -1440,7 +1440,10 @@ return false";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "ACR_TensorRuin_FBTMode = \"middle\"\
+					["actionLua"] = "if data.currentFBTWeaveMode ~= nil then\
+    ACR_TensorRuin_FBTMode = data.currentFBTWeaveMode\
+end\
+data.currentFBTWeaveMode = nil\
 self.used = true";
 					["allowInterrupt"] = false;
 					["conditions"] = {
@@ -1477,7 +1480,7 @@ self.used = true";
 			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "middle weave";
+			["name"] = "change weave back";
 			["throttleTime"] = 0;
 			["time"] = 245.1;
 			["timeRange"] = false;
