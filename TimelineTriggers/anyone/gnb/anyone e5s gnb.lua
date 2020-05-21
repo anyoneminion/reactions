@@ -151,7 +151,7 @@ local obj1 = {
 \
 ---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
 if AnyoneReactionSettings.Settings.AutoSetSpeedHacks == true then\
-		gDevHackWalkSpeed = 7.2\
+		gDevHackWalkSpeed = 7\
 		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
 end\
 self.used = true";
@@ -185,6 +185,9 @@ self.used = true";
 					["actionLua"] = "SallyGNB.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -193,11 +196,13 @@ self.used = true";
 					["gVarIndex"] = 2;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -284,6 +289,9 @@ self.used = true";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -291,11 +299,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -340,6 +350,9 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -348,11 +361,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = true;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -438,6 +453,9 @@ return false";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -445,11 +463,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -501,6 +521,9 @@ self.used = true";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -508,11 +531,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -555,6 +580,9 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -563,11 +591,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = true;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -654,6 +684,9 @@ return false";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -661,11 +694,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -719,6 +754,9 @@ self.used = true";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -726,11 +764,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -773,6 +813,9 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -781,11 +824,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = true;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -872,6 +917,9 @@ return false";
 					["actionLua"] = "SallyGNB.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -879,11 +927,13 @@ self.used = true";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
@@ -929,6 +979,9 @@ self.used = true";
 					["actionLua"] = "SallyGNB.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -937,11 +990,13 @@ self.used = true";
 					["gVarIndex"] = 2;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
+					["showPositionPreview"] = false;
 					["stopCasting"] = false;
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
