@@ -972,9 +972,14 @@ return false";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "local dotBlacklist = TensorCore.API.TensorRuin.getDotblacklist()\
-dotBlacklist[9319] = true -- add electric aether to blacklist\
-dotBlacklist[9321] = true -- add earthen aether to blacklist\
+					["actionLua"] = "local blEntry = TensorCore.API.TensorRuin.getBlacklistEntry(9319)\
+		if blEntry ~= nil then\
+				blEntry.enabled = true\
+				blEntry.allowBane = true\
+		elseif blEntry == nil then\
+				local blEntry = TensorCore.API.TensorRuin.addBlacklistEntry(9319)\
+		end\
+self.used = true\
 ";
 					["allowInterrupt"] = false;
 					["castPosX"] = 0;
@@ -990,7 +995,49 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
-					["name"] = "";
+					["name"] = "Earthen";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local blEntry = TensorCore.API.TensorRuin.getBlacklistEntry(9321)\
+		if blEntry ~= nil then\
+				blEntry.enabled = true\
+				blEntry.allowBane = true\
+		elseif blEntry == nil then\
+				local blEntry = TensorCore.API.TensorRuin.addBlacklistEntry(9321)\
+		end\
+self.used = true\
+";
+					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "Electric";
 					["potType"] = 1;
 					["setTarget"] = false;
 					["showPositionPreview"] = false;
@@ -1016,7 +1063,7 @@ dotBlacklist[9321] = true -- add earthen aether to blacklist\
 			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "dotblacklist earthen/electric";
+			["name"] = "blacklist earthen/electric";
 			["throttleTime"] = 0;
 			["time"] = 213;
 			["timeRange"] = false;
