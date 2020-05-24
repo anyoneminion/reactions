@@ -157,6 +157,71 @@ end";
 			["used"] = false;
 			["uuid"] = "5b32e4ef-d0c4-2c8f-8df3-55fe7b1ff087";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local blEntry = TensorCore.API.TensorRuin.getBlacklistEntry(9214)\
+		if blEntry ~= nil then\
+				blEntry.enabled = true\
+				blEntry.allowIfTarget = true\
+		elseif blEntry == nil then\
+				TensorCore.API.TensorRuin.addBlacklistEntry(9214)\
+		end\
+self.used = true\
+";
+					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "Jagd Doll";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "blacklist doll";
+			["throttleTime"] = 0;
+			["time"] = 19.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 3;
+			["timerEndOffset"] = 30;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -30;
+			["used"] = false;
+			["uuid"] = "f2eb20e5-2e55-a04c-b385-05e98f8850ce";
+		};
 	};
 	[9] = {
 		[1] = {
@@ -567,7 +632,7 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -577,7 +642,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -617,7 +682,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -627,7 +692,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 15 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -820,7 +885,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -833,7 +898,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1317,7 +1382,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -1327,7 +1392,7 @@ if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1367,7 +1432,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -1377,7 +1442,7 @@ if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2274,7 +2339,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -2287,7 +2352,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2706,7 +2771,7 @@ end\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
@@ -2715,7 +2780,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2755,7 +2820,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
@@ -2764,7 +2829,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 15 -- queen\
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

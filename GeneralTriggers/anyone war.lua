@@ -47,6 +47,9 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -56,11 +59,13 @@ return nil";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
 				["name"] = "use if no weakness/brink";
 				["potType"] = 1;
 				["setTarget"] = false;
+				["showPositionPreview"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
@@ -115,6 +120,9 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 3;
 				};
@@ -123,11 +131,13 @@ return nil";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
 				["name"] = "dont if weak > 95s";
 				["potType"] = 1;
 				["setTarget"] = false;
+				["showPositionPreview"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
@@ -182,6 +192,9 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 4;
 				};
@@ -190,11 +203,13 @@ return nil";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
 				["name"] = "dont if brink > 95s";
 				["potType"] = 1;
 				["setTarget"] = false;
+				["showPositionPreview"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
@@ -665,6 +680,9 @@ end\
 self.eventConditionMismatch = true\
 self.used = true";
 				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
 				["conditions"] = {
 				};
 				["endIfUsed"] = false;
@@ -672,11 +690,13 @@ self.used = true";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
 				["name"] = "";
 				["potType"] = 1;
 				["setTarget"] = false;
+				["showPositionPreview"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
 				["targetContentID"] = -1;

@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-{};{};{};{};
+{};{};{};{};{};{};{};{};{};{};
 } -- multiRefObjects
 local obj1 = {
 	[2] = {
@@ -217,12 +217,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -260,12 +260,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -311,7 +311,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 11;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "3aed70a2-70b7-f1e6-8c19-581cd972ebca";
@@ -443,12 +443,12 @@ self.used = table.size(drawnOrbs) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -486,12 +486,12 @@ self.used = table.size(drawnOrbs) >= 4";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -853,13 +853,13 @@ self.used = table.size(drawnOrbs) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1110,7 +1110,7 @@ self.used = true\
 				blEntry.enabled = true\
 				blEntry.allowBane = true\
 		elseif blEntry == nil then\
-				local blEntry = TensorCore.API.TensorRuin.addBlacklistEntry(9321)\
+				TensorCore.API.TensorRuin.addBlacklistEntry(9321)\
 		end\
 self.used = true\
 ";
@@ -1270,13 +1270,13 @@ self.used = true\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1432,13 +1432,13 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local target = Player:GetTarget()\
 return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1820,13 +1820,13 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1879,6 +1879,8 @@ return false";
 		};
 	};
 	[48] = {
+	};
+	[49] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -2016,14 +2018,14 @@ return false";
 			["luaReturnsAction"] = false;
 			["name"] = "addle";
 			["throttleTime"] = 0;
-			["time"] = 368.6;
+			["time"] = 378;
 			["timeRange"] = false;
-			["timelineIndex"] = 48;
+			["timelineIndex"] = 49;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4d62044c-7cac-d77b-ab44-9433c71a325f";
+			["uuid"] = "b9f8576a-c211-a81b-bc79-938701870141";
 		};
 	};
 	[58] = {
@@ -2568,6 +2570,8 @@ self.used = true";
 		};
 	};
 	[86] = {
+	};
+	[88] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -2615,12 +2619,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2658,12 +2662,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2705,14 +2709,14 @@ self.used = true";
 			["luaReturnsAction"] = false;
 			["name"] = "addle";
 			["throttleTime"] = 0;
-			["time"] = 620.4;
+			["time"] = 630.8;
 			["timeRange"] = false;
-			["timelineIndex"] = 86;
+			["timelineIndex"] = 88;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c8e545fd-b578-c7be-96c8-23add497ec3d";
+			["uuid"] = "b3ed54f7-db2c-8bd8-add3-ca9aad345dc4";
 		};
 	};
 	[108] = {
@@ -2796,12 +2800,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 1;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2839,12 +2843,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 1;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2937,6 +2941,8 @@ self.used = table.size(drawnOrbs) >= 2";
 		};
 	};
 	[114] = {
+	};
+	[115] = {
 		[1] = {
 			["actions"] = {
 				[1] = {
@@ -2984,12 +2990,12 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[10];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3027,12 +3033,12 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[10];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3074,14 +3080,14 @@ self.used = table.size(drawnOrbs) >= 2";
 			["luaReturnsAction"] = false;
 			["name"] = "addle";
 			["throttleTime"] = 0;
-			["time"] = 784.3;
+			["time"] = 798.1;
 			["timeRange"] = false;
-			["timelineIndex"] = 114;
+			["timelineIndex"] = 115;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
+			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9b641eb6-1890-bb94-aa1a-766126215df6";
+			["uuid"] = "4cc61bc2-1e0f-af2a-bc8c-6440da9c6caf";
 		};
 	};
 	["mapID"] = 909;

@@ -184,6 +184,9 @@ end\
 self.eventConditionMismatch = true\
 self.used = true";
 				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
 				["conditions"] = {
 				};
 				["endIfUsed"] = false;
@@ -191,11 +194,13 @@ self.used = true";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
 				["name"] = "";
 				["potType"] = 1;
 				["setTarget"] = false;
+				["showPositionPreview"] = false;
 				["stopCasting"] = false;
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
