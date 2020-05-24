@@ -99,8 +99,9 @@ SallyPLD.SkillSettings.CirceOfScorn.enabled = true\
 SallyPLD.SkillSettings.SaveJumpStack.enabled = false\
 SallyPLD.SkillSettings.UseAOE.enabled = true\
 SallyPLD.SkillSettings.JumpRange.enabled = true\
--- SallyPLD.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyPLD.SkillSettings.Potion.enabled = true\
+end\
 self.used = true\
 \
 ";

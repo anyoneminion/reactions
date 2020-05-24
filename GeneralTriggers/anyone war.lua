@@ -556,6 +556,10 @@ SallyWAR.HotBarConfig.Armslength.enabled = true\
 SallyWAR.HotBarConfig.Upheaval.enabled = true\
 self.used = true\
 \
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyPLD.SkillSettings.Potion.enabled = true\
+end\
+\
 if Player.job ~= 21 then\
 self.eventConditionMismatch = true\
 self.used = true\

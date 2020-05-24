@@ -43,8 +43,11 @@ SallyDRK.SkillSettings.AbyssalDrain.enabled = true\
 SallyDRK.SkillSettings.UseAOE.enabled = true\
 SallyDRK.SkillSettings.JumpRange.enabled = true\
 SallyDRK.SkillSettings.SaltedEarth.enabled = true\
--- SallyDRK.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyDRK.SkillSettings.Potion.enabled = true\
+end\
+\
 self.used = true\
 ";
 		["executeType"] = 2;

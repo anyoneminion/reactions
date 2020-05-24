@@ -49,8 +49,10 @@ SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
 SallyGNB.SkillSettings.GnashingFang.enabled = true\
 \
 \
--- SallyGNB.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyGNB.SkillSettings.Potion.enabled = true\
+end\
+\
 self.used = true\
 \
 if Player.job ~= 37 then\

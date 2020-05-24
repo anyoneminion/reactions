@@ -1625,7 +1625,9 @@ self.used = true\
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallyDNC.SkillSettings.Potion.enabled = true\
+					["actionLua"] = "if data.PotsEnabled == true then\
+SallyDNC.SkillSettings.Potion.enabled = true\
+end\
 self.used = true";
 					["allowInterrupt"] = false;
 					["castPosX"] = 0;
@@ -1634,8 +1636,8 @@ self.used = true";
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorMagnum_Potion";
-					["gVarIndex"] = 11;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
@@ -1667,16 +1669,16 @@ self.used = true";
 			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
-			["name"] = "pot";
+			["name"] = "enable pot if it was on";
 			["throttleTime"] = 0;
 			["time"] = 350.5;
 			["timeRange"] = false;
 			["timelineIndex"] = 46;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "717f056a-faee-4d3d-a21d-6a4b33403008";
+			["uuid"] = "0da9bfda-d59c-3c4c-8a5f-43d79042543a";
 		};
 		[2] = {
 			["actions"] = {
