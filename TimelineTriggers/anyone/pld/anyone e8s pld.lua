@@ -97,10 +97,11 @@ self.used = true";
 			};
 			["conditions"] = {
 			};
-			["enabled"] = true;
-			["execute"] = "---Frequently Asked Questions:\
---\
----Question: \"Something isn't working\"\
+			["enabled"] = false;
+			["execute"] = "--\
+-- Frequently Asked Questions:\
+---\
+-- Question: \"Something isn't working\"\
 ---Answer: First of all, make sure you're using the most up to date version of my reactions\
 ---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
 ---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
@@ -109,21 +110,21 @@ self.used = true";
 ---You can reach me on discord at Anyone#9549.\
 --\
 --\
----Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+-- Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
 ---Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
 --\
 --\
----Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+-- Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
 ---Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
 --\
 --\
---\
----Question: \"Why don't you do something this way instead of that way?\"\
+---\
+-- Question: \"Why don't you do something this way instead of that way?\"\
 ---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
 --\
 --\
---\
----Question: \"How do I change the settins for my reactions?\"\
+---\
+-- Question: \"How do I change the settins for my reactions?\"\
 ---Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
 ---an option named \"AnyoneReactions\". Click that and change the settings as you please.";
 			["executeType"] = 2;
@@ -147,7 +148,7 @@ self.used = true";
 			};
 			["conditions"] = {
 			};
-			["enabled"] = true;
+			["enabled"] = false;
 			["execute"] = "--\
 -- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
 --- If you're doing this strategy, make sure to open the Anyone's Reactions Settings menu\
@@ -173,7 +174,7 @@ self.used = true";
 			};
 			["conditions"] = {
 			};
-			["enabled"] = true;
+			["enabled"] = false;
 			["execute"] = "--- If you are not using tank invulns for the first Double Slap:\
 --- Make sure to go to \"101.7 - Double Slap\" and read the \"read me\".\
 \
@@ -351,7 +352,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -395,7 +396,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1305,7 +1306,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1349,7 +1350,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1645,7 +1646,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1689,7 +1690,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3011,7 +3012,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3055,7 +3056,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4109,12 +4110,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4152,12 +4153,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

@@ -93,6 +93,93 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "3590c7d9-9687-bca2-889e-789cd45972b1";
 		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "--\
+-- Frequently Asked Questions:\
+---\
+-- Question: \"Something isn't working\"\
+---Answer: First of all, make sure you're using the most up to date version of my reactions\
+---Secondly, make sure your debug logs are ENABLED. Check the debug tab in the TensorReactions window and enable it.\
+---Finally, send me the debug log, located in TensorReactions/logs in your minion folder, along with a description\
+---of your problem. Try to be as precise as possible with the issue.\
+---Additionally, if it's a rotational error, send me the link to the fflogs of the run in question.\
+---You can reach me on discord at Anyone#9549.\
+--\
+--\
+-- Question: \"How do I get the knockback mirror arm's length strat to work?\" or \"I got killed during knockback mirrors\"\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Knockback Mirror Uptime Strat\"\
+--\
+--\
+-- Question: \"How do I get the assist toggle during Away With Thee to work on e7s?\"\
+---Answer: Open the Anyone's Reactions Settings menu and enable \"Disable Assist for Away With Thee\"\
+--\
+--\
+---\
+-- Question: \"Why don't you do something this way instead of that way?\"\
+---Answer: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.\
+--\
+--\
+---\
+-- Question: \"How do I change the settins for my reactions?\"\
+---Answer: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+---an option named \"AnyoneReactions\". Click that and change the settings as you please.";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- general read me --";
+			["throttleTime"] = 0;
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e1b4052a-6710-cb20-aec2-7234e9a629d4";
+		};
+		[3] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "--\
+-- QUEEN GAUGE INFORMATION:\
+--- in order to effectively use queen during the course of this fight, we change it to enable queen usage at 80\
+--- this is only in effect for phase 1. you will be required to download the latest general reactions file and have it\
+--- as your currently selected reactions in the 'General' tab. \
+--\
+--\
+-- FOR LEFT SIDE ONLY: If you are set to interrupt the SECOND Earthen Aether, PLEASE READ: \
+--- Open the Anyone's Reactions Settings menu and enable \"Interrupt Second Earthen Aether\"\
+--\
+--\
+-- KNOCKBACK MIRROR UPTIME STRAT INFORMATION:\
+--- If you're doing this strategy, make sure to open the Anyone's Reactions Settings menu\
+--- and enable \"Knockback Mirror Uptime Strat\"";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "-- e8s read me --";
+			["throttleTime"] = 0;
+			["time"] = 16;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "def58b4b-c09e-7f6b-9f8d-7c8c115769cd";
+		};
 	};
 	[8] = {
 		[1] = {
@@ -3108,6 +3195,7 @@ SallySAM.SkillSettings.Senei.enabled = false\
 SallySAM.SkillSettings.Hagakure.enabled = false\
 SallySAM.SkillSettings.Shinten.enabled = false\
 SallySAM.SkillSettings.Guren.enabled = false\
+SallySAM.SkillSettings.Midare.enabled = false\
 self.used = true\
 \
 ---there's currently no way to save sen, I requested xsalice add a way though";
@@ -3442,6 +3530,7 @@ SallySAM.SkillSettings.Hagakure.enabled = true\
 SallySAM.SkillSettings.Shinten.enabled = true\
 SallySAM.SkillSettings.Guren.enabled = true\
 SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.Midare.enabled = true\
 if data.PotsEnabled == true then\
 SallySAM.SkillSettings.Potion.enabled = true\
 end\
