@@ -81,17 +81,19 @@ SallyDNC.HotBarConfig.Sprint.enabled = true\
 -- reset quick toggles\
 SallyDNC.SkillSettings.BurnCD.enabled = false\
 SallyDNC.SkillSettings.Devilment.enabled = true\
-SallyDNC.SkillSettings.FanDance3IsAOE.enabled = true\
+SallyDNC.SkillSettings.FanDance3IsAOE.enabled = false\
 SallyDNC.SkillSettings.Flourish.enabled = true\
 SallyDNC.SkillSettings.Opener.enabled = false\
 -- SallyDNC.SkillSettings.Potion.enabled = true\
 SallyDNC.SkillSettings.SaberDance.enabled = true\
-SallyDNC.SkillSettings.SaberIsAOE.enabled = true\
+SallyDNC.SkillSettings.SaberIsAOE.enabled = false\
 SallyDNC.SkillSettings.SaveCD.enabled = false\
 SallyDNC.SkillSettings.StandardStep.enabled = true\
 SallyDNC.SkillSettings.TechStep.enabled = true\
 SallyDNC.SkillSettings.UseAOE.enabled = true\
 SallyDNC.SkillSettings.HoldFans.enabled = false\
+SallyDNC.SkillSettings.WindMillIsAOE.enabled = false\
+SallyDNC.SkillSettings.BloodShowerIsAOE.enabled = false\
 \
 if eventArgs.oldData.PotsEnabled ~= nil then\
 SallyDNC.SkillSettings.Potion.enabled = true\
