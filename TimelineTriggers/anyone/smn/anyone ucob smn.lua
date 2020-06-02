@@ -198,63 +198,6 @@ return false";
 			["used"] = false;
 			["uuid"] = "4b6835f6-2756-2713-997d-2ba75fdcd09a";
 		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorRuin_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "ex";
-			["throttleTime"] = 0;
-			["time"] = 212;
-			["timeRange"] = false;
-			["timelineIndex"] = 37;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3d698bec-0f5b-b16c-9375-28960e8c7dfc";
-		};
 	};
 	[38] = {
 	};
@@ -416,7 +359,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -456,7 +399,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "62aefe58-6185-1dd1-afc5-2043b574f100";
+			["uuid"] = "6bd6fd42-8489-1660-ba7f-c9852f904934";
 		};
 		[2] = {
 			["actions"] = {
@@ -890,7 +833,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -930,7 +873,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "37bc8944-eb83-b095-93c5-c3b08f395775";
+			["uuid"] = "fac3abc1-3133-a291-83c6-f212f749070b";
 		};
 		[2] = {
 			["actions"] = {
@@ -1362,7 +1305,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -1402,7 +1345,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f7fbec97-263c-85b6-9fea-8882a20d104e";
+			["uuid"] = "6aedbbae-ad6a-509d-ad11-076227c06f00";
 		};
 		[2] = {
 			["actions"] = {
@@ -1834,7 +1777,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -1874,7 +1817,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3d9ca595-a637-775a-8045-771d4ce24c61";
+			["uuid"] = "70ec8b32-8351-09ad-a7d0-d128e107079e";
 		};
 		[2] = {
 			["actions"] = {
@@ -2306,7 +2249,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -2346,7 +2289,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "64256517-20a4-dea3-a56f-531b41c6f421";
+			["uuid"] = "f9dabe0a-20bf-d199-b36a-73c2007b1a99";
 		};
 		[2] = {
 			["actions"] = {
@@ -2778,7 +2721,7 @@ return false";
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorRuin_PetCD";
 					["gVarIndex"] = 2;
-					["gVarValue"] = 1;
+					["gVarValue"] = 2;
 					["ignoreWeaveRules"] = false;
 					["isAreaTarget"] = false;
 					["luaNeedsWeaveWindow"] = false;
@@ -2818,7 +2761,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fb0dcdba-b970-a416-a9ce-ad6888ca60c3";
+			["uuid"] = "afb2951e-c6c3-abcf-be21-ce2f82051426";
 		};
 		[2] = {
 			["actions"] = {
