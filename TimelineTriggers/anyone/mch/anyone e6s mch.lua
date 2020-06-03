@@ -65,6 +65,8 @@ elseif Player.job ~= 31 and AnyoneReactionSettings.Settings.JobCheck == false th
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 end\
 \
+ACR_TensorMagnum_SummonQueen_Gauge = AnyoneReactionSettings.Settings.e6sQueenGauge\
+\
 if ACR_TensorMagnum_Potion == true then\
 data.PotsEnabled = true\
 end\

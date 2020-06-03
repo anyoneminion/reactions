@@ -155,7 +155,7 @@ end";
 			["timerOffset"] = 2.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5b32e4ef-d0c4-2c8f-8df3-55fe7b1ff087";
+			["uuid"] = "a3fcbacc-891f-0609-883d-489604178f94";
 		};
 		[2] = {
 			["actions"] = {
@@ -632,7 +632,7 @@ self.used = true\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -642,7 +642,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -682,7 +682,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -692,7 +692,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 15 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -885,7 +885,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -898,7 +898,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -949,7 +949,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "20ce3978-b7ae-ac29-8326-1d981b15fcd6";
+			["uuid"] = "a4c27a0a-4cdb-8a44-a448-bdec079e18cd";
 		};
 		[2] = {
 			["actions"] = {
@@ -990,7 +990,7 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "d2d71f64-e9c2-844c-9d71-692fa316fc54";
+			["uuid"] = "2c31a8b4-e771-7038-8a39-8af7d8a0b662";
 		};
 	};
 	[58] = {
@@ -1157,7 +1157,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1c5f0e12-3725-997e-ac9b-6dd42399f3c6";
+			["uuid"] = "eb0e4a47-2cad-ac8f-a8ea-be0a9603c15d";
 		};
 	};
 	[81] = {
@@ -1224,7 +1224,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7080715a-fdd7-7d50-8f7e-27adc6a3f946";
+			["uuid"] = "74c3b7cb-6237-9882-b335-420cee88e4b7";
 		};
 	};
 	[86] = {
@@ -1382,7 +1382,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -1432,7 +1432,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -1608,7 +1608,7 @@ return false";
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "aeb75357-8aad-c015-ad8d-3a010615582f";
+			["uuid"] = "666a3909-5df8-3252-af05-9faa4926b1ae";
 		};
 		[2] = {
 			["actions"] = {
@@ -1703,7 +1703,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "06ff2f5c-97af-147c-bb4f-9e54c0905c1e";
+			["uuid"] = "a28a4a6a-9ded-1745-8826-04eb785538fb";
 		};
 	};
 	[101] = {
@@ -1764,7 +1764,7 @@ return false";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8ad3fd57-9549-d616-862a-a5f06256c242";
+			["uuid"] = "349ae029-6c49-1cde-845f-aeccef9e1f36";
 		};
 		[2] = {
 			["actions"] = {
@@ -1823,7 +1823,7 @@ return false";
 			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "00d7fc74-4782-f0c1-a1ed-81a7e2160c84";
+			["uuid"] = "02454cd8-ced2-f31d-8979-f5504d3e24a8";
 		};
 	};
 	[103] = {
@@ -1992,7 +1992,7 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "72e5fc63-bafa-8a2d-a5b6-ad1dbc94e6be";
+			["uuid"] = "9d5d67d2-8a5f-bfb9-a45b-dc4aac1eb422";
 		};
 	};
 	[120] = {
@@ -2053,7 +2053,7 @@ return false";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "03c0225f-55d5-14c8-b6d0-f80b3976d85b";
+			["uuid"] = "534295a7-fd51-2d2b-8450-c45c29970673";
 		};
 		[2] = {
 			["actions"] = {
@@ -2182,7 +2182,7 @@ return false";
 			["timerOffset"] = -7.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13e02190-9b06-7da3-8efd-2728a336b542";
+			["uuid"] = "f3aaae16-10da-cb28-86ef-b74a1a3fe667";
 		};
 	};
 	[125] = {
@@ -2249,7 +2249,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "eb1f2074-593c-5e95-a241-b101955633d8";
+			["uuid"] = "d3095912-2f6d-afd4-9c2c-c24abab1ec3b";
 		};
 	};
 	[126] = {
@@ -2339,7 +2339,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -2352,7 +2352,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2403,7 +2403,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "1ce3625a-8688-e2d8-8de8-047b55a5fbdc";
+			["uuid"] = "5925f4b5-55e1-682f-9c89-4f0b91b226cf";
 		};
 		[2] = {
 			["actions"] = {
@@ -2444,7 +2444,7 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -10;
 			["used"] = false;
-			["uuid"] = "f4a968e7-d538-17cf-a978-c813de964d0a";
+			["uuid"] = "32015a0b-3271-29b5-825c-6c400fd2ed94";
 		};
 	};
 	[141] = {
@@ -2611,7 +2611,7 @@ end\
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7e8d4e42-238e-b7d5-b7c3-796f3fa4423a";
+			["uuid"] = "fc54a71e-3c78-1d47-973b-596ad9e90a7f";
 		};
 	};
 	[152] = {
@@ -2771,7 +2771,7 @@ end\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
@@ -2780,7 +2780,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2820,7 +2820,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
@@ -2829,7 +2829,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 15 -- queen\
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2931,7 +2931,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "8418759e-a1b6-8f3c-a00f-a31dd6c3550e";
+			["uuid"] = "126dff21-37ad-b0b1-a684-2d7c3540ea89";
 		};
 	};
 	[153] = {
@@ -3098,7 +3098,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "94ee026c-b1c7-903c-a255-2198e9c8d5ff";
+			["uuid"] = "c08417c3-3713-01d2-92ec-1e8a300d1f21";
 		};
 	};
 	[168] = {
@@ -3159,7 +3159,7 @@ return false";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8bc74c35-44f5-be50-9dac-074ea0d0a6a8";
+			["uuid"] = "646d1f61-5045-6cac-b910-a9c695658e29";
 		};
 		[2] = {
 			["actions"] = {
@@ -3252,7 +3252,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ac58f4d8-8f30-80bc-b2ac-56f025f0525c";
+			["uuid"] = "a0db6622-e866-a858-87c5-2dac0f58cd30";
 		};
 		[3] = {
 			["actions"] = {
@@ -3476,7 +3476,7 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "16113891-ea52-873b-a923-3cd610182a17";
+			["uuid"] = "43df8430-a11a-9828-a623-3de802d6d8aa";
 		};
 	};
 	[186] = {
@@ -3537,7 +3537,7 @@ return false";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a7c5c1c4-c3eb-62f2-89ff-c26448c892fa";
+			["uuid"] = "084bf261-f2a3-c220-86af-925cbef531d5";
 		};
 		[2] = {
 			["actions"] = {
@@ -3630,7 +3630,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1f25130c-9ad8-da76-98d5-b2f5c90eb538";
+			["uuid"] = "d48c38c4-c5c8-ce77-82c9-d00ec3efe093";
 		};
 		[3] = {
 			["actions"] = {
