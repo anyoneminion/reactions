@@ -795,97 +795,102 @@ self.used = true";
 \
 	if Settings.AnyoneReactionSettings.DrawOrbs == nil then\
 		Settings.AnyoneReactionSettings.DrawOrbs = true -- true is default\
-		Settings.AnyoneReactionSettings.DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.DrawDragonHeads == nil then\
 		Settings.AnyoneReactionSettings.DrawDragonHeads = true -- true is default\
-		Settings.AnyoneReactionSettings.DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.KnockbackMirrorUptime == nil then\
 		Settings.AnyoneReactionSettings.KnockbackMirrorUptime = true -- true is default\
-		Settings.AnyoneReactionSettings.KnockbackMirrorUptime = Settings.AnyoneReactionSettings.KnockbackMirrorUptime -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.KnockbackMirrorUptime = Settings.AnyoneReactionSettings.KnockbackMirrorUptime \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.InterruptSecondAdd == nil then\
 		Settings.AnyoneReactionSettings.InterruptSecondAdd = false -- false is default\
-		Settings.AnyoneReactionSettings.InterruptSecondAdd = Settings.AnyoneReactionSettings.InterruptSecondAdd -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.InterruptSecondAdd = Settings.AnyoneReactionSettings.InterruptSecondAdd \
 	end\
 \
 	if Settings.AnyoneReactionSettings.LeftSide == nil then\
 		Settings.AnyoneReactionSettings.LeftSide = true -- true is default\
-		Settings.AnyoneReactionSettings.LeftSide = Settings.AnyoneReactionSettings.LeftSide -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.LeftSide = Settings.AnyoneReactionSettings.LeftSide \
 	end	\
 	\
 	if Settings.AnyoneReactionSettings.DisableAssist == nil then\
 		Settings.AnyoneReactionSettings.DisableAssist = false -- false is default\
-		Settings.AnyoneReactionSettings.DisableAssist = Settings.AnyoneReactionSettings.DisableAssist -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.DisableAssist = Settings.AnyoneReactionSettings.DisableAssist \
 	end	\
 	\
 	if Settings.AnyoneReactionSettings.AddsPhasePot == nil then\
 		Settings.AnyoneReactionSettings.AddsPhasePot = true -- true is default\
-		Settings.AnyoneReactionSettings.AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.AddsPhasePot = Settings.AnyoneReactionSettings.AddsPhasePot \
 	end	\
 	\
 	if Settings.AnyoneReactionSettings.AutoSetSpeedHacks == nil then\
 		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = false -- false is default\
-		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.AutoSetSpeedHacks = Settings.AnyoneReactionSettings.AutoSetSpeedHacks \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.AutoSetCameraZoom == nil then\
 		Settings.AnyoneReactionSettings.AutoSetCameraZoom = false -- false is default\
-		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.AutoSetCameraZoom = Settings.AnyoneReactionSettings.AutoSetCameraZoom \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.NeverSprint == nil then\
 		Settings.AnyoneReactionSettings.NeverSprint = false -- false is default\
-		Settings.AnyoneReactionSettings.NeverSprint = Settings.AnyoneReactionSettings.NeverSprint -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.NeverSprint = Settings.AnyoneReactionSettings.NeverSprint \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.NeverEnpi == nil then\
 		Settings.AnyoneReactionSettings.NeverEnpi = false -- false is default\
-		Settings.AnyoneReactionSettings.NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.NeverEnpi = Settings.AnyoneReactionSettings.NeverEnpi \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.AttackingGaruda == nil then\
 		Settings.AnyoneReactionSettings.AttackingGaruda = false -- false is default\
-		Settings.AnyoneReactionSettings.AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.AttackingGaruda = Settings.AnyoneReactionSettings.AttackingGaruda \
 	end\
 \
 	if Settings.AnyoneReactionSettings.UseMoogleTTS == nil then\
 		Settings.AnyoneReactionSettings.UseMoogleTTS = false -- false is default\
-		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.UseMoogleTTS = Settings.AnyoneReactionSettings.UseMoogleTTS \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.UnderstandDanger == nil then\
 		Settings.AnyoneReactionSettings.UnderstandDanger = false -- false is default\
-		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.UnderstandDanger = Settings.AnyoneReactionSettings.UnderstandDanger \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.JobCheck == nil then\
 		Settings.AnyoneReactionSettings.JobCheck = false -- false is default\
-		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.e5sQueenGauge == nil then\
 		Settings.AnyoneReactionSettings.e5sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneReactionSettings.e5sQueenGauge = Settings.AnyoneReactionSettings.e5sQueenGauge -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.e5sQueenGauge = Settings.AnyoneReactionSettings.e5sQueenGauge \
 	end\
 	\
 	if Settings.AnyoneReactionSettings.e6sQueenGauge == nil then\
 		Settings.AnyoneReactionSettings.e6sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneReactionSettings.e6sQueenGauge = Settings.AnyoneReactionSettings.e6sQueenGauge -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.e6sQueenGauge = Settings.AnyoneReactionSettings.e6sQueenGauge \
 	end\
 \
 	if Settings.AnyoneReactionSettings.e7sQueenGauge == nil then\
 		Settings.AnyoneReactionSettings.e7sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneReactionSettings.e7sQueenGauge = Settings.AnyoneReactionSettings.e7sQueenGauge -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.e7sQueenGauge = Settings.AnyoneReactionSettings.e7sQueenGauge \
 	end\
 \
 	if Settings.AnyoneReactionSettings.e8sQueenGauge == nil then\
 		Settings.AnyoneReactionSettings.e8sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneReactionSettings.e8sQueenGauge = Settings.AnyoneReactionSettings.e8sQueenGauge -- hoping to god it saves\
+		Settings.AnyoneReactionSettings.e8sQueenGauge = Settings.AnyoneReactionSettings.e8sQueenGauge \
+	end\
+	\
+	if Settings.AnyoneReactionSettings.AntiGhosting == nil then\
+		Settings.AnyoneReactionSettings.AntiGhosting = true -- true is default\
+		Settings.AnyoneReactionSettings.AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting \
 	end\
 	\
 	AnyoneReactionSettings.Settings = {\
@@ -907,7 +912,8 @@ self.used = true";
 			e5sQueenGauge = Settings.AnyoneReactionSettings.e5sQueenGauge,\
 			e6sQueenGauge = Settings.AnyoneReactionSettings.e6sQueenGauge,\
 			e7sQueenGauge = Settings.AnyoneReactionSettings.e7sQueenGauge,\
-			e8sQueenGauge = Settings.AnyoneReactionSettings.e8sQueenGauge\
+			e8sQueenGauge = Settings.AnyoneReactionSettings.e8sQueenGauge,\
+			AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -952,6 +958,9 @@ self.used = true";
 		\
 		Settings.AnyoneReactionSettings.JobCheck = AnyoneReactionSettings.Settings.JobCheck\
 		Settings.AnyoneReactionSettings.JobCheck = Settings.AnyoneReactionSettings.JobCheck\
+		\
+		Settings.AnyoneReactionSettings.AntiGhosting = AnyoneReactionSettings.Settings.AntiGhosting\
+		Settings.AnyoneReactionSettings.AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting\
 		\
 		if AnyoneReactionSettings.Settings.e5sQueenGauge > 80 then\
 			AnyoneReactionSettings.Settings.e5sQueenGauge = 80\
@@ -1115,6 +1124,19 @@ self.used = true";
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 31 then -- check for machinist\
 				\
+				GUI:Text(\"Machinist General\")\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneReactionSettings.Settings.AntiGhosting)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Sometimes if your ping is too high and you cast a skill right as the boss is going away, the skill will be used but it will deal no damage. But if you use a skill that generates gauge, you will gain that gauge but not deal any damage. So we can disable drill shortly before a phase transition to use a gauge skill instead.\\n\")\
+					GUI:TextColored(1,1,0,1,\"You can disable this if you have a fairly low ping, like under 30 ping. If your drills are still getting used but dealing no damage, you can just turn it back on.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
 				GUI:Text(\"Machinist e5s settings\")\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneReactionSettings.Settings.e5sQueenGauge)\
@@ -1176,7 +1198,7 @@ self.used = true";
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e7s machinist reactions.\")\
+					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e8s machinist reactions.\")\
 					GUI:TextColored(1,0,0,1,\"Queen gauge will ALWAYS be set to 80 at the start of the fight. This is what the value will be changed to AFTER phase 1.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\

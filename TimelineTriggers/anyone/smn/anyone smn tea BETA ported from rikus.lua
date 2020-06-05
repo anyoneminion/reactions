@@ -642,7 +642,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -692,7 +692,7 @@ if LL and LH and TensorCore.calcTimeToKill(LL.id, 1000) <= 15 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -898,7 +898,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1392,7 +1392,7 @@ if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1442,7 +1442,7 @@ if CC and BJ and TensorCore.calcTimeToKill(CC.id, 1000) <= 10 and TensorCore.cal
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2352,7 +2352,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2780,7 +2780,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2829,7 +2829,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 15 -- queen\
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
