@@ -243,9 +243,10 @@ self.used = true";
 					["variableTogglesType"] = 1;
 				};
 				[2] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "--- currently does nothing\
+self.used = true";
 					["allowInterrupt"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -255,7 +256,7 @@ self.used = true";
 						[2] = 3;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "";
+					["gVar"] = "ACR_TensorWeeb_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
@@ -484,9 +485,10 @@ self.used = true";
 					["variableTogglesType"] = 1;
 				};
 				[2] = {
-					["aType"] = 2;
+					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "";
+					["actionLua"] = "--- currently does nothing\
+self.used = true";
 					["allowInterrupt"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -496,7 +498,7 @@ self.used = true";
 						[2] = 3;
 					};
 					["endIfUsed"] = false;
-					["gVar"] = "";
+					["gVar"] = "ACR_TensorWeeb_CD";
 					["gVarIndex"] = 1;
 					["gVarValue"] = 1;
 					["ignoreWeaveRules"] = false;
