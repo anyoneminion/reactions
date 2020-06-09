@@ -5,11 +5,11 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 10,
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
 		["execute"] = "if Player.job ~= 38 then\
 		self.eventConditionMismatch = true -- suppressing the log\
 		self.used = true \
@@ -34,30 +34,30 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: on death",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5",
-	},
+return nil";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5";
+	};
 	[2] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 9,
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
 		["execute"] = "if Player.job ~= 38 or SallyDNC == nil then\
 		self.eventConditionMismatch = true -- suppressing the log\
 		self.used = true \
@@ -103,57 +103,57 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true \
-return nil",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "Reset: toggles on wipe",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 10,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1",
-	},
+return nil";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: toggles on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1";
+	};
 	[3] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 11,
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
 		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
 ---alternatively just disable this if you're 3000 iq and remember to use dance partner\
 SallyDNC.SkillSettings.AutoPartner.enabled = true\
-self.used = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "auto partner once at map change",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf",
-	},
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "auto partner once at map change";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf";
+	};
 	[4] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 1,
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
 		enabled = true,\
@@ -162,7 +162,7 @@ self.used = true",
 		open = false,\
 	}\
 \
-	if Settings.AnyoneCore.AutoSetCameraZoom == true then\
+	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true then\
 		gDevHackMaxZoom = 35.0\
 		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
 	end\
@@ -207,9 +207,9 @@ self.used = true",
 		Settings.AnyoneCore.AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks \
 	end\
 	\
-	if Settings.AnyoneCore.AutoSetCameraZoom == nil then\
-		Settings.AnyoneCore.AutoSetCameraZoom = false -- false is default\
-		Settings.AnyoneCore.AutoSetCameraZoom = Settings.AnyoneCore.AutoSetCameraZoom \
+	if Settings.AnyoneCore.AutoSetMaxCameraZoom == nil then\
+		Settings.AnyoneCore.AutoSetMaxCameraZoom = false -- false is default\
+		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom \
 	end\
 	\
 	if Settings.AnyoneCore.NeverSprint == nil then\
@@ -286,7 +286,7 @@ self.used = true",
 			DisableAssist = Settings.AnyoneCore.DisableAssist,\
 			AddsPhasePot = Settings.AnyoneCore.AddsPhasePot,\
 			AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks,\
-			AutoSetCameraZoom = Settings.AnyoneCore.AutoSetCameraZoom,\
+			AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom,\
 			NeverSprint = Settings.AnyoneCore.NeverSprint,\
 			NeverEnpi = Settings.AnyoneCore.NeverEnpi,\
 			AttackingGaruda = Settings.AnyoneCore.AttackingGaruda,\
@@ -326,6 +326,9 @@ self.used = true",
 		\
 		Settings.AnyoneCore.AutoSetSpeedHacks = AnyoneCore.Settings.AutoSetSpeedHacks\
 		Settings.AnyoneCore.AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks\
+		\
+		Settings.AnyoneCore.AutoSetMaxCameraZoom = AnyoneCore.Settings.AutoSetMaxCameraZoom\
+		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom\
 		\
 		Settings.AnyoneCore.NeverSprint = AnyoneCore.Settings.NeverSprint\
 		Settings.AnyoneCore.NeverSprint = Settings.AnyoneCore.NeverSprint\
@@ -728,7 +731,7 @@ self.used = true",
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AutoSetCameraZoom, changed = GUI:Checkbox(\"Auto Set Max Camera Zoom\", AnyoneCore.Settings.AutoSetCameraZoom)\
+				AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Auto Set Max Camera Zoom\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -755,30 +758,30 @@ self.used = true",
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "AnyoneCore",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106",
-	},
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "AnyoneCore";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106";
+	};
 	[5] = {
 		["actions"] = {
-		},
+		};
 		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 11,
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
 		if Player.job ~= 38 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
@@ -789,22 +792,22 @@ self.used = true",
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
-self.used = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "job check",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e",
-	},
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e";
+	};
 }
 return obj1
