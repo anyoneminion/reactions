@@ -371,6 +371,11 @@ self.used = true";
 		Settings.AnyoneReactionSettings.AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting \
 	end\
 	\
+	if Settings.AnyoneReactionSettings.PrepullHelper == nil then\
+		Settings.AnyoneReactionSettings.PrepullHelper = false -- false is default\
+		Settings.AnyoneReactionSettings.PrepullHelper = Settings.AnyoneReactionSettings.PrepullHelper \
+	end\
+	\
 	AnyoneReactionSettings.Settings = {\
 			DrawOrbs = Settings.AnyoneReactionSettings.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneReactionSettings.DrawDragonHeads,\
@@ -391,7 +396,8 @@ self.used = true";
 			e6sQueenGauge = Settings.AnyoneReactionSettings.e6sQueenGauge,\
 			e7sQueenGauge = Settings.AnyoneReactionSettings.e7sQueenGauge,\
 			e8sQueenGauge = Settings.AnyoneReactionSettings.e8sQueenGauge,\
-			AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting\
+			AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting,\
+			PrepullHelper = Settings.AnyoneReactionSettings.PrepullHelper\
 		}\
 \
 	function AnyoneReactionSettings.save()\
@@ -439,6 +445,9 @@ self.used = true";
 		\
 		Settings.AnyoneReactionSettings.AntiGhosting = AnyoneReactionSettings.Settings.AntiGhosting\
 		Settings.AnyoneReactionSettings.AntiGhosting = Settings.AnyoneReactionSettings.AntiGhosting\
+		\
+		Settings.AnyoneReactionSettings.PrepullHelper = AnyoneReactionSettings.Settings.PrepullHelper\
+		Settings.AnyoneReactionSettings.PrepullHelper = Settings.AnyoneReactionSettings.PrepullHelper\
 		\
 		if AnyoneReactionSettings.Settings.e5sQueenGauge > 80 then\
 			AnyoneReactionSettings.Settings.e5sQueenGauge = 80\
@@ -493,6 +502,21 @@ self.used = true";
 			if AnyoneReactionSettings.visible then\
 			local tabindex, tabname = GUI_DrawTabs(AnyoneReactionSettings.main_tabs)\
 			if (tabname == \"General\") then\
+				if Player.job == 23 or Player.job == 27 or Player.job == 31 then\
+				local hovered = false\
+				AnyoneReactionSettings.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneReactionSettings.Settings.PrepullHelper)\
+				if changed then AnyoneReactionSettings.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
+				\
 				local hovered = false\
 				AnyoneReactionSettings.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneReactionSettings.Settings.JobCheck)\
 				if changed then AnyoneReactionSettings.save() end\
@@ -505,6 +529,7 @@ self.used = true";
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+				\
 			elseif (tabname == \"Fight Specific\") then\
 				local changed = false\
 				\

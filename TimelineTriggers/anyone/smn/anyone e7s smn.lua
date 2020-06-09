@@ -90,7 +90,7 @@ self.used = true";
 			["timerOffset"] = -12.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "979a471f-5183-98d8-8b5c-ced9fe6da6f1";
+			["uuid"] = "7c743bcd-27ae-1722-903d-438acc63df1a";
 		};
 		[2] = {
 			["actions"] = {
@@ -140,7 +140,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3a97bd4d-3d83-8e82-bcf0-0d6b34f56d94";
+			["uuid"] = "e4f2a154-7c36-3d72-9415-769cfed30e6e";
 		};
 		[3] = {
 			["actions"] = {
@@ -168,7 +168,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "98c840cb-305b-a54a-af87-1b42113e4dd5";
+			["uuid"] = "0f501040-7fc1-289e-af77-fc2b66d47644";
 		};
 	};
 	[22] = {
@@ -195,7 +195,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ddeff1f7-eee0-89d4-b1ab-90685b9267c4";
+			["uuid"] = "88d6987d-ffbf-bc55-ac51-7611dbc5c3d8";
 		};
 		[2] = {
 			["actions"] = {
@@ -359,12 +359,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -402,12 +402,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -445,12 +445,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -488,12 +488,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -542,7 +542,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1c426b7f-050c-e88e-9825-bf8130660d50";
+			["uuid"] = "05a1f83c-1fd2-2cfb-ba97-97054faa1deb";
 		};
 		[3] = {
 			["actions"] = {
@@ -602,7 +602,7 @@ self.used = true";
 			["timerOffset"] = 12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2edd5de9-5a2b-bd55-bf83-4f3bc525cdad";
+			["uuid"] = "c5ec6017-0b40-f1f0-905c-aa71f1491a4a";
 		};
 		[4] = {
 			["actions"] = {
@@ -659,7 +659,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "484b997d-596c-5e3e-b778-6dc51a220a70";
+			["uuid"] = "430b90c0-fea7-4f29-857e-90faccbc0afe";
 		};
 		[5] = {
 			["actions"] = {
@@ -716,7 +716,7 @@ self.used = true";
 			["timerOffset"] = 10.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2fe61392-0540-a946-abd1-bda0ef1b84d0";
+			["uuid"] = "9ec185a3-828a-49df-9a78-ce41fa368e08";
 		};
 		[6] = {
 			["actions"] = {
@@ -773,7 +773,7 @@ self.used = true";
 			["timerOffset"] = 7;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "34d20637-4b51-c703-9394-d90e97de0d16";
+			["uuid"] = "db661fcd-bd88-bc97-a9f4-b3009d372de5";
 		};
 	};
 	[27] = {
@@ -921,7 +921,7 @@ self.used = true";
 			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "706d0671-fc0d-b11f-a82f-bb8145b00f77";
+			["uuid"] = "03a91e09-b98d-cfb4-8c55-1ff079ec3248";
 		};
 	};
 	[38] = {
@@ -948,7 +948,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "520e4f74-0a44-6a74-a0bf-264d01287364";
+			["uuid"] = "b434ba3c-30cf-3289-86c3-52ad07fe17e5";
 		};
 		[2] = {
 			["actions"] = {
@@ -1112,12 +1112,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1155,12 +1155,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1198,12 +1198,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1241,12 +1241,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1295,7 +1295,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d07430ca-70dc-5072-92f8-067d86d1c65d";
+			["uuid"] = "bb215aaa-9b27-cfae-a85b-b1064bd11729";
 		};
 		[3] = {
 			["actions"] = {
@@ -1355,7 +1355,7 @@ self.used = true";
 			["timerOffset"] = 12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "caaf3b2e-3d84-e364-8576-ae7062261d92";
+			["uuid"] = "a003e4d0-ca4e-1269-b4cb-6138253a8ae2";
 		};
 	};
 	[47] = {
@@ -1414,7 +1414,7 @@ self.used = true";
 			["timerOffset"] = -12.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e2588d35-768a-0049-969a-19bf799b6393";
+			["uuid"] = "8c18931d-bc66-a8fb-aebb-a3cc40751ae4";
 		};
 		[2] = {
 			["actions"] = {
@@ -1505,7 +1505,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "930efe70-7a27-3b0b-a3e0-c7abb6b86d7d";
+			["uuid"] = "b4dce647-3243-1886-9c90-f14511269b92";
 		};
 		[3] = {
 			["actions"] = {
@@ -1562,7 +1562,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "70dc13c4-dc19-7670-801c-df85ea667500";
+			["uuid"] = "23a2c7cb-13d2-84a8-95f9-59ea55e1ec86";
 		};
 	};
 	[51] = {
@@ -1666,7 +1666,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "95562c30-7a85-24bf-a470-cd35c36738b4";
+			["uuid"] = "ddd21f5e-3b6f-d728-8199-48706140c52c";
 		};
 		[2] = {
 			["actions"] = {
@@ -1825,7 +1825,7 @@ return false";
 			["timerOffset"] = -2;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e363d0bc-24b1-ab52-b020-1b38c0e428e3";
+			["uuid"] = "af095c58-f29f-d6ef-a1c4-a92a6d17e346";
 		};
 		[3] = {
 			["actions"] = {
@@ -1882,7 +1882,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7f1cd1e1-a134-5338-a759-7ab056f41fc8";
+			["uuid"] = "421d0d1d-1ac3-f519-be89-bfa54ce48aca";
 		};
 		[4] = {
 			["actions"] = {
@@ -1939,7 +1939,7 @@ return false";
 			["timerOffset"] = -1.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1abfda54-388d-2667-a737-fd202d82ee03";
+			["uuid"] = "89f8d4c0-9f6e-637f-a532-4de2ddfc9809";
 		};
 		[5] = {
 			["actions"] = {
@@ -1997,7 +1997,7 @@ self.used = true";
 			["timerOffset"] = -2.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "035f1c89-05a5-50e3-8847-b89f3526b379";
+			["uuid"] = "2429be3b-f148-bab5-9b3b-97733b631712";
 		};
 	};
 	[58] = {
@@ -2147,7 +2147,7 @@ self.used = true";
 			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6ca8d463-20cb-7a9c-9d96-46f260a68934";
+			["uuid"] = "f03b2bcb-122b-2072-858d-e10211368bdf";
 		};
 	};
 	[62] = {
@@ -2246,7 +2246,7 @@ self.used = true";
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2291,7 +2291,7 @@ return false";
 					["conditionLua"] = "local t = Player:GetTarget()\
 return t == nil or t.hp.current / t.hp.max <= 0.04-- no target or target dead, then swap";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2341,7 +2341,7 @@ return t == nil or t.hp.current / t.hp.max <= 0.04-- no target or target dead, t
 end\
 return true";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2390,7 +2390,7 @@ return true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "566ed66e-7fb9-eee3-9ed1-a832ca1605e1";
+			["uuid"] = "415c7864-0e07-7b39-833d-713134746346";
 		};
 		[2] = {
 			["actions"] = {
@@ -2516,7 +2516,7 @@ return true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2560,7 +2560,7 @@ return true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = 9300;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2609,7 +2609,7 @@ return true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "9e599aec-4d0c-9efa-b5c5-2812367b2d71";
+			["uuid"] = "f1f6b9cd-41d7-7c34-8c47-d63ab8d28230";
 		};
 		[3] = {
 			["actions"] = {
@@ -2663,7 +2663,7 @@ return true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2707,7 +2707,7 @@ return true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = 9300;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2756,7 +2756,7 @@ return true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "21bdf6d8-fad5-f218-ae34-ccaa5d985627";
+			["uuid"] = "c536aff7-81c3-8844-8a36-3992fe813b8a";
 		};
 	};
 	[74] = {
@@ -2860,7 +2860,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "8ad3b30c-a7bd-2c23-ab50-9295ed3276da";
+			["uuid"] = "057d4264-5d26-1d0d-8489-08b21b9be6c6";
 		};
 		[2] = {
 			["actions"] = {
@@ -2985,7 +2985,7 @@ return false";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "533d1950-7cf7-6d3a-8243-9db72a4c1655";
+			["uuid"] = "1cc76268-135c-7a4f-a84f-cf612c152838";
 		};
 	};
 	[101] = {
@@ -3133,7 +3133,7 @@ return false";
 			["timerOffset"] = -8;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "0584369b-8c41-b8bc-985e-bd9a2b385010";
+			["uuid"] = "cb151b3a-fbd1-f04e-9b50-f050ef58ec41";
 		};
 	};
 	[104] = {
@@ -3192,7 +3192,7 @@ return false";
 			["timerOffset"] = -12.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4a3e4222-b212-6c3e-973f-c6acabbbb1bd";
+			["uuid"] = "70bc38a3-2663-9328-a0d8-bcd4e812f9f0";
 		};
 		[2] = {
 			["actions"] = {
@@ -3249,7 +3249,7 @@ return false";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "83d2aa35-770e-70b2-87d3-91b92e27bb52";
+			["uuid"] = "4adefb40-26ca-9ebc-947a-d930e950e1e4";
 		};
 		[3] = {
 			["actions"] = {
@@ -3306,7 +3306,7 @@ return false";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "0421d4c3-8306-ca45-bc5a-6466389b4691";
+			["uuid"] = "5b9860e0-01f9-a2b8-9ad7-e8c57ff49eb7";
 		};
 		[4] = {
 			["actions"] = {
@@ -3363,7 +3363,7 @@ return false";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "284e1a40-f9b5-7fb8-b4bd-e4cd3be0f144";
+			["uuid"] = "eb6925d2-2dea-ef75-94ed-33cd8b830a07";
 		};
 	};
 	[107] = {
@@ -3467,7 +3467,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "6abe35a9-7527-f7d2-9e4a-99200e2dbeba";
+			["uuid"] = "c80d350f-1351-a7f9-a374-c256c71dda77";
 		};
 		[2] = {
 			["actions"] = {
@@ -3626,7 +3626,7 @@ return false";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "33d8ba9a-15a7-3018-8da3-f3aa5f82b7b4";
+			["uuid"] = "d2da3217-642a-17ae-b69e-55b2ba29a164";
 		};
 	};
 	[108] = {
@@ -3807,7 +3807,7 @@ return false";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f3957f35-9486-e190-a28f-0325460d7f6f";
+			["uuid"] = "01877286-af3a-b2b5-871c-daa55f88291f";
 		};
 	};
 	[111] = {
@@ -3955,7 +3955,7 @@ return false";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f56cf020-f810-e8f9-ad28-1680df179d9c";
+			["uuid"] = "3f32d4ef-fe6d-ec3b-842e-76f21a159583";
 		};
 	};
 	[113] = {

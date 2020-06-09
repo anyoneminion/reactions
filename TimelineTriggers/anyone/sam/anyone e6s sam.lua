@@ -4250,7 +4250,9 @@ end";
 					["aType"] = 4;
 					["actionID"] = -1;
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
+if data.PotsEnabled == true then\
 SallySAM.SkillSettings.Potion.enabled = true\
+end\
 self.used = true";
 					["allowInterrupt"] = false;
 					["castPosX"] = 0;
@@ -4303,6 +4305,43 @@ self.used = true";
 					["luaNeedsWeaveWindow"] = false;
 					["luaReturnsAction"] = false;
 					["name"] = "TensorWeeb";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[3] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if data.PotsEnabled == true then\
+ACR_TensorWeeb_Potion = true\
+end";
+					["allowInterrupt"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 2;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
 					["potType"] = 1;
 					["setTarget"] = false;
 					["showPositionPreview"] = false;
@@ -6052,7 +6091,7 @@ return false";
 			["time"] = 603.3;
 			["timeRange"] = true;
 			["timelineIndex"] = 114;
-			["timerEndOffset"] = 3;
+			["timerEndOffset"] = 5;
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -3;
 			["used"] = false;
