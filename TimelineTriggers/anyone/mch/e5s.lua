@@ -91,7 +91,7 @@ self.used = true";
 			["timerOffset"] = -11.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d5c142e4-1fcc-00f9-b2ed-7ae41189468b";
+			["uuid"] = "03066591-d8ad-e021-95ad-324e3fc262e9";
 		};
 		[2] = {
 			["actions"] = {
@@ -141,7 +141,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3b5deb75-b563-5086-b182-3d8dfdc78cfa";
+			["uuid"] = "6b614d4b-c10d-a520-94c8-799b565926a5";
 		};
 		[3] = {
 			["actions"] = {
@@ -198,7 +198,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f54c4c03-905c-1ac5-b648-db13ebe8792c";
+			["uuid"] = "f821b401-9507-c843-8e61-0ab9bf23d7b3";
 		};
 	};
 	[7] = {
@@ -434,7 +434,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c4d874f0-2927-e98d-8192-8660c8032a38";
+			["uuid"] = "52bd0f90-a14f-3c18-a91b-2e3024e324c3";
 		};
 	};
 	[14] = {
@@ -538,7 +538,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e17acba7-04c3-328c-b5fe-72b5265a4288";
+			["uuid"] = "f1597d15-73f7-0144-a91a-f0e9586339c7";
 		};
 	};
 	[18] = {
@@ -677,7 +677,7 @@ self.used = true";
 			["timerOffset"] = -11;
 			["timerStartOffset"] = -12;
 			["used"] = false;
-			["uuid"] = "19af952e-d227-23d5-967e-f2cf6ba8c0d5";
+			["uuid"] = "2c6a89f1-1b43-34ee-b8f8-0e85fddc6ebf";
 		};
 		[2] = {
 			["actions"] = {
@@ -734,7 +734,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "368d52df-f638-01ef-8feb-7b5ebc4967de";
+			["uuid"] = "cdf97b89-d322-d0a7-8c98-daf15babb469";
 		};
 		[3] = {
 			["actions"] = {
@@ -873,7 +873,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "77ddf908-2fe0-1887-93c6-9d32d2675eec";
+			["uuid"] = "ea210eab-4626-5674-9fff-0eb2d28d733d";
 		};
 		[4] = {
 			["actions"] = {
@@ -998,7 +998,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e683f856-5e47-42d8-bbae-29c7c38f112c";
+			["uuid"] = "6b65696b-b2c0-8475-bc55-b47e8a92bec2";
 		};
 	};
 	[19] = {
@@ -1093,7 +1093,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "0e9fa74d-7b45-5c19-9571-4420f77067b5";
+			["uuid"] = "edd0e8b1-6699-c8c7-afb6-13f1c2a07e61";
 		};
 		[2] = {
 			["actions"] = {
@@ -1140,13 +1140,15 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = {
+					};
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = {
+					};
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1183,7 +1185,7 @@ return false";
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
-			["loop"] = true;
+			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
 			["name"] = "target boss";
@@ -1195,7 +1197,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "b27fbe42-9cd7-b7a3-9512-8d4f4ee9521d";
+			["uuid"] = "ac2ab4ed-6d2e-f818-8532-6a80a79ec51e";
 		};
 	};
 	[22] = {
@@ -1431,7 +1433,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8de6bf6f-cc83-6dda-ad36-eeb95f869400";
+			["uuid"] = "374be2f7-d1fe-c876-8c4e-ffac9c5b313f";
 		};
 	};
 	[37] = {
@@ -1492,7 +1494,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "bfce97b1-15f1-1337-9e3c-60339dd1921e";
+			["uuid"] = "fb297bae-96be-4d14-8f42-cb33cb3b258d";
 		};
 		[2] = {
 			["actions"] = {
@@ -1629,7 +1631,7 @@ self.used = true";
 			["timerOffset"] = -11;
 			["timerStartOffset"] = -12;
 			["used"] = false;
-			["uuid"] = "57527214-fa73-a21a-af59-be7750d719fc";
+			["uuid"] = "e43a5580-71f3-2930-a4ff-3b850102e452";
 		};
 		[3] = {
 			["actions"] = {
@@ -1686,7 +1688,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "611877b6-caf9-885d-ae60-4dd47165a635";
+			["uuid"] = "6da73793-dcb4-206a-a1bb-aa315a831509";
 		};
 		[4] = {
 			["actions"] = {
@@ -1825,7 +1827,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4a961f8f-1609-4bed-96d3-6dcba53abd01";
+			["uuid"] = "be3d37e1-37f4-af91-b39c-0a3a93f0132c";
 		};
 		[5] = {
 			["actions"] = {
@@ -1950,7 +1952,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b7f285bd-7650-8f85-ac8b-75b56977b2d1";
+			["uuid"] = "4a1a50bc-ec61-738a-a33e-f468db942dc7";
 		};
 	};
 	[39] = {
@@ -2111,7 +2113,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6ce665bb-c3a7-98f2-b421-03a9f8c5c70c";
+			["uuid"] = "6ba6c866-20c2-dc53-b052-7bf0f0d7ff79";
 		};
 		[2] = {
 			["actions"] = {
@@ -2212,7 +2214,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4e76c140-aa66-5aea-b034-0351bf218be6";
+			["uuid"] = "6a21d0e6-17e8-7037-a346-6533453987cd";
 		};
 		[3] = {
 			["actions"] = {
@@ -2391,7 +2393,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fcce4b82-d954-70d8-b3de-57c7c51113ab";
+			["uuid"] = "3b89ff56-28b4-cd16-8df6-a0cc8238bc74";
 		};
 		[4] = {
 			["actions"] = {
@@ -2438,13 +2440,15 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = {
+					};
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = {
+					};
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2481,7 +2485,7 @@ return false";
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
-			["loop"] = true;
+			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
 			["name"] = "target boss";
@@ -2493,7 +2497,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "228382bb-f30d-c352-bc51-a5889fe41ed2";
+			["uuid"] = "37d4924a-eab6-4c68-b851-99c6523896bb";
 		};
 	};
 	[41] = {
@@ -2731,7 +2735,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "cd1d5735-8898-5995-8d40-2e646aeee2f8";
+			["uuid"] = "308f4208-3b7c-4567-a690-febe6e2fc02f";
 		};
 	};
 	[70] = {
@@ -2792,7 +2796,7 @@ self.used = true";
 			["timerOffset"] = -15;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "af41dce1-c8c8-8b19-92ee-b8abf4702d11";
+			["uuid"] = "20b976f8-211f-3e68-8a1e-87b9c2426f3d";
 		};
 		[2] = {
 			["actions"] = {
@@ -2883,7 +2887,7 @@ self.used = true";
 			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "68b5ab4e-9dd4-a971-bff9-5797221976c6";
+			["uuid"] = "ae16013e-1edc-635a-9def-04e68f665cc9";
 		};
 		[3] = {
 			["actions"] = {
@@ -2940,7 +2944,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13b8343b-cec1-ba05-a9ea-ac8cb6346b4a";
+			["uuid"] = "cd034de5-17af-d7c8-a067-da093e026d1c";
 		};
 		[4] = {
 			["actions"] = {
@@ -3079,7 +3083,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f3cdfbaf-5da8-541d-8b2f-b9064cdc9068";
+			["uuid"] = "d4e7375f-fe6f-2f4b-9b11-4f808b6de764";
 		};
 		[5] = {
 			["actions"] = {
@@ -3204,7 +3208,7 @@ self.used = true";
 			["timerOffset"] = 1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "02330af4-46fd-4f73-8441-e6c9a806a4e3";
+			["uuid"] = "9d26ec35-abdd-5de1-8c55-134c8f86a83d";
 		};
 	};
 	[72] = {
@@ -3365,7 +3369,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "71df382a-616f-ce2d-bed3-a9f8c9e004fd";
+			["uuid"] = "0482f3a0-0e38-345d-b02a-2e9531088d94";
 		};
 		[2] = {
 			["actions"] = {
@@ -3466,7 +3470,7 @@ self.used = true";
 			["timerOffset"] = -4;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9f0810f4-9472-bbb1-aee3-2a980735b528";
+			["uuid"] = "1622d4ce-6581-2305-8d72-a68091376d07";
 		};
 		[3] = {
 			["actions"] = {
@@ -3645,7 +3649,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4bad2d89-c820-b916-b70e-0a86db244ae2";
+			["uuid"] = "1cee634d-151c-6a42-a815-501acc0e845e";
 		};
 		[4] = {
 			["actions"] = {
@@ -3692,13 +3696,15 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = {
+					};
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = {
+					};
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3735,7 +3741,7 @@ return false";
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
-			["loop"] = true;
+			["loop"] = false;
 			["luaNeedsWeaveWindow"] = false;
 			["luaReturnsAction"] = false;
 			["name"] = "target boss";
@@ -3747,7 +3753,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "64754c69-e064-a067-873f-8cc142fa5cb2";
+			["uuid"] = "3af98017-ac04-58e7-ac35-3dd9de8ab616";
 		};
 	};
 	[73] = {
@@ -3853,7 +3859,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9a103923-effe-624e-ad48-27554155112c";
+			["uuid"] = "84cb3e09-f931-7dce-999c-f40a2d5c4564";
 		};
 	};
 	[90] = {
@@ -4089,7 +4095,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "79704110-2e27-c5e5-ad06-dccd3d11b621";
+			["uuid"] = "71128db5-fdba-bc14-a6e8-303295c59ff9";
 		};
 	};
 	["mapID"] = 906;
