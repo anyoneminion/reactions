@@ -5,11 +5,11 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
 		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
 SallyDRK.HotBarConfig.Shirks.enabled = true\
 SallyDRK.HotBarConfig.Reprisal.enabled = true\
@@ -51,30 +51,30 @@ SallyDRK.SkillSettings.Potion.enabled = true\
 end\
 \
 self.used = true\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar/qt on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "dd236dc5-7267-26cc-aa6c-b31ef3abad67";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar/qt on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "dd236dc5-7267-26cc-aa6c-b31ef3abad67",
+	},
 	[2] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
+		},
+		["enabled"] = true,
+		["eventType"] = 10,
 		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
 SallyDRK.HotBarConfig.Shirks.enabled = true\
 SallyDRK.HotBarConfig.Reprisal.enabled = true\
@@ -96,30 +96,30 @@ SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
 SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
 SallyDRK.HotBarConfig.Plunge.enabled = true\
 SallyDRK.HotBarConfig.LB.enabled = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "6d180639-e778-d7ec-bfb6-cf30a446e1b6";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "reset hotbar on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "6d180639-e778-d7ec-bfb6-cf30a446e1b6",
+	},
 	[3] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
 		if Player.job ~= 32 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
@@ -130,30 +130,30 @@ self.used = true";
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "d9f00aed-358b-eda6-bdbd-d46d769fe1db";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "d9f00aed-358b-eda6-bdbd-d46d769fe1db",
+	},
 	[4] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
 		enabled = true,\
@@ -273,7 +273,7 @@ self.used = true";
 	end\
 	\
 	if Settings.AnyoneCore.NorthStratMitigation == nil then\
-		Settings.AnyoneCore.NorthStratMitigation = false -- false is default\
+		Settings.AnyoneCore.NorthStratMitigation = true -- true is default\
 		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
 	end\
 	\
@@ -434,6 +434,7 @@ self.used = true";
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				local hovered = false\
@@ -754,22 +755,22 @@ self.used = true";
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "AnyoneCore";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "604a0704-23cb-90e9-9484-b3a0c06cf8cb";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "AnyoneCore",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "604a0704-23cb-90e9-9484-b3a0c06cf8cb",
+	},
 }
 return obj1

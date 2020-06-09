@@ -5,11 +5,11 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
+		},
+		["enabled"] = true,
+		["eventType"] = 10,
 		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
 SallyPLD.HotBarConfig.Provoke.enabled = true\
 SallyPLD.HotBarConfig.Shirks.enabled = true\
@@ -35,30 +35,30 @@ SallyPLD.HotBarConfig.InterventionOT.enabled = true\
 SallyPLD.HotBarConfig.Passage.enabled = true\
 SallyPLD.HotBarConfig.SmartPassage.enabled = true\
 self.used = true\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "e8738461-c3dd-c0bb-9e54-79779f9dc7f5";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset Hotbar on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "e8738461-c3dd-c0bb-9e54-79779f9dc7f5",
+	},
 	[2] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
 		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
 SallyPLD.HotBarConfig.Provoke.enabled = true\
 SallyPLD.HotBarConfig.Shirks.enabled = true\
@@ -107,30 +107,30 @@ Player:ClearTarget()\
 \
 self.used = true\
 \
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar/QT on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "10c80885-5136-300c-977e-4259385c88f1";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset Hotbar/QT on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "10c80885-5136-300c-977e-4259385c88f1",
+	},
 	[3] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
 		if Player.job ~= 19 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
@@ -141,30 +141,30 @@ self.used = true\
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "336d8baf-f749-db77-a527-0ef59a848557";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "336d8baf-f749-db77-a527-0ef59a848557",
+	},
 	[4] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
 		enabled = true,\
@@ -284,7 +284,7 @@ self.used = true";
 	end\
 	\
 	if Settings.AnyoneCore.NorthStratMitigation == nil then\
-		Settings.AnyoneCore.NorthStratMitigation = false -- false is default\
+		Settings.AnyoneCore.NorthStratMitigation = true -- true is default\
 		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
 	end\
 	\
@@ -445,6 +445,7 @@ self.used = true";
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				local hovered = false\
@@ -765,22 +766,22 @@ self.used = true";
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "AnyoneCore";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "1fb826ce-b891-f1b2-b606-35bf9bd03e05";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "AnyoneCore",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "1fb826ce-b891-f1b2-b606-35bf9bd03e05",
+	},
 }
 return obj1

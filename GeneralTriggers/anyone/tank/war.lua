@@ -6,8 +6,8 @@ local obj1 = {
 	[1] = {
 		["actions"] = {
 			[1] = {
-				["aType"] = 4;
-				["actionID"] = -1;
+				["aType"] = 4,
+				["actionID"] = -1,
 				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
 \
 if Player.job ~= 21 or Player.level < 58 then\
@@ -45,42 +45,42 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
+return nil",
+				["allowInterrupt"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
 				["conditions"] = {
-					[1] = 1;
-					[2] = 2;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "use if no weakness/brink";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
+					[1] = 1,
+					[2] = 2,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "use if no weakness/brink",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
 			[2] = {
-				["aType"] = 4;
-				["actionID"] = -1;
+				["aType"] = 4,
+				["actionID"] = -1,
 				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
 \
 if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
@@ -118,41 +118,41 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
+return nil",
+				["allowInterrupt"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
 				["conditions"] = {
-					[1] = 3;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "dont if weak > 95s";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
+					[1] = 3,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "dont if weak > 95s",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
 			[3] = {
-				["aType"] = 4;
-				["actionID"] = -1;
+				["aType"] = 4,
+				["actionID"] = -1,
 				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
 \
 if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
@@ -190,291 +190,291 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
+return nil",
+				["allowInterrupt"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
 				["conditions"] = {
-					[1] = 4;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "dont if brink > 95s";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
+					[1] = 4,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "dont if brink > 95s",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+		},
 		["conditions"] = {
 			[1] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 2;
-				["buffDuration"] = 0;
-				["buffID"] = 43;
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 2,
+				["buffDuration"] = 0,
+				["buffID"] = 43,
 				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
+				},
+				["category"] = 2,
+				["comparator"] = 1,
+				["conditionLua"] = "",
+				["conditionType"] = 1,
 				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
 			[2] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 2;
-				["buffDuration"] = 0;
-				["buffID"] = 44;
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 2,
+				["buffDuration"] = 0,
+				["buffID"] = 44,
 				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
+				},
+				["category"] = 2,
+				["comparator"] = 1,
+				["conditionLua"] = "",
+				["conditionType"] = 1,
 				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
 			[3] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 3;
-				["buffDuration"] = 95;
-				["buffID"] = 43;
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 3,
+				["buffDuration"] = 95,
+				["buffID"] = 43,
 				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
+				},
+				["category"] = 2,
+				["comparator"] = 2,
+				["conditionLua"] = "",
+				["conditionType"] = 1,
 				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
 			[4] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 3;
-				["buffDuration"] = 95;
-				["buffID"] = 44;
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 3,
+				["buffDuration"] = 95,
+				["buffID"] = 44,
 				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
+				},
+				["category"] = 2,
+				["comparator"] = 2,
+				["conditionLua"] = "",
+				["conditionType"] = 1,
 				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
 		["execute"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
 \
 if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
@@ -512,30 +512,30 @@ end\
 \
 self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
-return nil";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Nil's Equilibrium";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "9c5c6bf8-f542-6db3-a285-1fc22155277f";
-	};
+return nil",
+		["executeType"] = 1,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "Nil's Equilibrium",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "9c5c6bf8-f542-6db3-a285-1fc22155277f",
+	},
 	[2] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
+		},
+		["enabled"] = true,
+		["eventType"] = 10,
 		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
 SallyWAR.HotBarConfig.Provoke.enabled = true\
 SallyWAR.HotBarConfig.Shirks.enabled = true\
@@ -564,30 +564,30 @@ if Player.job ~= 21 then\
 self.eventConditionMismatch = true\
 self.used = true\
 end\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "d08a15b1-8d18-955d-a632-b0369b4dda97";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset Hotbar on death",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "d08a15b1-8d18-955d-a632-b0369b4dda97",
+	},
 	[3] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
+		},
+		["enabled"] = true,
+		["eventType"] = 9,
 		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
 SallyWAR.HotBarConfig.Provoke.enabled = true\
 SallyWAR.HotBarConfig.Shirks.enabled = true\
@@ -628,30 +628,30 @@ self.eventConditionMismatch = true\
 self.used = true\
 end\
 \
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar/QT on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "c4bdc4b6-1bf0-6fa3-8e73-655ba34e5f23";
-	};
+",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "Reset Hotbar/QT on wipe",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "c4bdc4b6-1bf0-6fa3-8e73-655ba34e5f23",
+	},
 	[4] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
 		enabled = true,\
@@ -771,7 +771,7 @@ end\
 	end\
 	\
 	if Settings.AnyoneCore.NorthStratMitigation == nil then\
-		Settings.AnyoneCore.NorthStratMitigation = false -- false is default\
+		Settings.AnyoneCore.NorthStratMitigation = true -- true is default\
 		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
 	end\
 	\
@@ -932,6 +932,7 @@ end\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				local hovered = false\
@@ -1252,30 +1253,30 @@ end\
 end\
 \
 self.eventConditionMismatch = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "AnyoneCore";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "57e01a58-d834-6524-87d1-2331c000c3ce";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "AnyoneCore",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "57e01a58-d834-6524-87d1-2331c000c3ce",
+	},
 	[5] = {
 		["actions"] = {
-		};
+		},
 		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
 		if Player.job ~= 21 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
@@ -1286,22 +1287,22 @@ self.used = true";
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "1b98bc17-3afa-ac91-af04-f943f83f4e97";
-	};
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "1b98bc17-3afa-ac91-af04-f943f83f4e97",
+	},
 }
 return obj1
