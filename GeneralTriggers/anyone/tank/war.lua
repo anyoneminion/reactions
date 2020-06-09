@@ -5,36 +5,565 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
+			[1] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 2;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "use if no weakness/brink";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 3;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "dont if weak > 95s";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[3] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 4;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "dont if brink > 95s";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 2;
+				["buffDuration"] = 0;
+				["buffID"] = 43;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 2;
+				["buffDuration"] = 0;
+				["buffID"] = 44;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 3;
+				["buffDuration"] = 95;
+				["buffID"] = 43;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 3;
+				["buffDuration"] = 95;
+				["buffID"] = 44;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Nil's Equilibrium";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "9c5c6bf8-f542-6db3-a285-1fc22155277f";
+	};
+	[2] = {
+		["actions"] = {
 		};
 		["conditions"] = {
 		};
 		["enabled"] = true;
 		["eventType"] = 10;
-		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
-SallyPLD.HotBarConfig.Provoke.enabled = true\
-SallyPLD.HotBarConfig.Shirks.enabled = true\
-SallyPLD.HotBarConfig.Reprisal.enabled = true\
-SallyPLD.HotBarConfig.Sheltron.enabled = true\
-SallyPLD.HotBarConfig.Rampart.enabled = true\
-SallyPLD.HotBarConfig.LowBlow.enabled = true\
-SallyPLD.HotBarConfig.Sentinel.enabled = true\
-SallyPLD.HotBarConfig.HollowGround.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.FoF.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.Sprint.enabled = true\
-SallyPLD.HotBarConfig.Interject.enabled = true\
-SallyPLD.HotBarConfig.Armslength.enabled = true\
-SallyPLD.HotBarConfig.Requiescat.enabled = true\
-SallyPLD.HotBarConfig.CoverTarget.enabled = true\
-SallyPLD.HotBarConfig.ShieldBash.enabled = true\
-SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
-SallyPLD.HotBarConfig.CoverOT.enabled = true\
-SallyPLD.HotBarConfig.Clemency.enabled = true\
-SallyPLD.HotBarConfig.InterventionOT.enabled = true\
-SallyPLD.HotBarConfig.Passage.enabled = true\
-SallyPLD.HotBarConfig.SmartPassage.enabled = true\
+		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
+SallyWAR.HotBarConfig.Provoke.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
+SallyWAR.HotBarConfig.Reprisal.enabled = true\
+SallyWAR.HotBarConfig.RawIntuition.enabled = true\
+SallyWAR.HotBarConfig.Rampart.enabled = true\
+SallyWAR.HotBarConfig.LowBlow.enabled = true\
+SallyWAR.HotBarConfig.Vengeance.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
+SallyWAR.HotBarConfig.Thrill.enabled = true\
+SallyWAR.HotBarConfig.Equilibrium.enabled = true\
+SallyWAR.HotBarConfig.NascentFlash.enabled = true\
+SallyWAR.HotBarConfig.InnerRelease.enabled = true\
+SallyWAR.HotBarConfig.Onslaught.enabled = true\
+SallyWAR.HotBarConfig.Sprint.enabled = true\
+SallyWAR.HotBarConfig.Interject.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
+SallyWAR.HotBarConfig.Upheaval.enabled = true\
 self.used = true\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyPLD.SkillSettings.Potion.enabled = true\
+end\
+\
+if Player.job ~= 21 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
 ";
 		["executeType"] = 2;
 		["lastUse"] = 0;
@@ -50,62 +579,54 @@ self.used = true\
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e8738461-c3dd-c0bb-9e54-79779f9dc7f5";
+		["uuid"] = "d08a15b1-8d18-955d-a632-b0369b4dda97";
 	};
-	[2] = {
+	[3] = {
 		["actions"] = {
 		};
 		["conditions"] = {
 		};
 		["enabled"] = true;
 		["eventType"] = 9;
-		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
-SallyPLD.HotBarConfig.Provoke.enabled = true\
-SallyPLD.HotBarConfig.Shirks.enabled = true\
-SallyPLD.HotBarConfig.Reprisal.enabled = true\
-SallyPLD.HotBarConfig.Sheltron.enabled = true\
-SallyPLD.HotBarConfig.Rampart.enabled = true\
-SallyPLD.HotBarConfig.LowBlow.enabled = true\
-SallyPLD.HotBarConfig.Sentinel.enabled = true\
-SallyPLD.HotBarConfig.HollowGround.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.FoF.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.Sprint.enabled = true\
-SallyPLD.HotBarConfig.Interject.enabled = true\
-SallyPLD.HotBarConfig.Armslength.enabled = true\
-SallyPLD.HotBarConfig.Requiescat.enabled = true\
-SallyPLD.HotBarConfig.CoverTarget.enabled = true\
-SallyPLD.HotBarConfig.ShieldBash.enabled = true\
-SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
-SallyPLD.HotBarConfig.CoverOT.enabled = true\
-SallyPLD.HotBarConfig.Clemency.enabled = true\
-SallyPLD.HotBarConfig.InterventionOT.enabled = true\
-SallyPLD.HotBarConfig.Passage.enabled = true\
-SallyPLD.HotBarConfig.SmartPassage.enabled = true\
+		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
+SallyWAR.HotBarConfig.Provoke.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
+SallyWAR.HotBarConfig.Reprisal.enabled = true\
+SallyWAR.HotBarConfig.RawIntuition.enabled = true\
+SallyWAR.HotBarConfig.Rampart.enabled = true\
+SallyWAR.HotBarConfig.LowBlow.enabled = true\
+SallyWAR.HotBarConfig.Vengeance.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
+SallyWAR.HotBarConfig.Thrill.enabled = true\
+SallyWAR.HotBarConfig.Equilibrium.enabled = true\
+SallyWAR.HotBarConfig.NascentFlash.enabled = true\
+SallyWAR.HotBarConfig.InnerRelease.enabled = true\
+SallyWAR.HotBarConfig.Onslaught.enabled = true\
+SallyWAR.HotBarConfig.Sprint.enabled = true\
+SallyWAR.HotBarConfig.Interject.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
+SallyWAR.HotBarConfig.Upheaval.enabled = true\
 \
-SallyPLD.SkillSettings.Opener.enabled = false\
-SallyPLD.SkillSettings.FoF.enabled = true\
-SallyPLD.SkillSettings.Requiescat.enabled = true\
-SallyPLD.SkillSettings.SaveCD.enabled = false\
-SallyPLD.SkillSettings.Range.enabled = true\
-SallyPLD.SkillSettings.BurnBoss.enabled = false\
-SallyPLD.SkillSettings.Confiteor.enabled = true\
-SallyPLD.SkillSettings.Atonement.enabled = true\
-SallyPLD.SkillSettings.Intervene.enabled = true\
-SallyPLD.SkillSettings.DoTs.enabled = true\
-SallyPLD.SkillSettings.SpiritWithin.enabled = true\
-SallyPLD.SkillSettings.CirceOfScorn.enabled = true\
-SallyPLD.SkillSettings.SaveJumpStack.enabled = false\
-SallyPLD.SkillSettings.UseAOE.enabled = true\
-SallyPLD.SkillSettings.JumpRange.enabled = true\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyPLD.SkillSettings.Potion.enabled = true\
-end\
+SallyWAR.SkillSettings.Opener.enabled = false\
+SallyWAR.SkillSettings.InnerRelease.enabled = true\
+SallyWAR.SkillSettings.Onslaught.enabled = true\
+SallyWAR.SkillSettings.SaveCD.enabled = false\
+SallyWAR.SkillSettings.Range.enabled = true\
+SallyWAR.SkillSettings.RefreshEye.enabled = true\
+SallyWAR.SkillSettings.Upheaval.enabled = true\
+SallyWAR.SkillSettings.Infuriate.enabled = true\
+SallyWAR.SkillSettings.UseAOE.enabled = true\
+SallyWAR.SkillSettings.JumpRange.enabled = true\
+-- SallyWAR.SkillSettings.Potion.enabled = true\
+--- remove \"--\" from the above line to have it enable potions on wipe.\
+self.used = true\
 \
 Player:ClearTarget()\
 \
+if Player.job ~= 21 then\
+self.eventConditionMismatch = true\
 self.used = true\
+end\
 \
 ";
 		["executeType"] = 2;
@@ -122,9 +643,9 @@ self.used = true\
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "10c80885-5136-300c-977e-4259385c88f1";
+		["uuid"] = "c4bdc4b6-1bf0-6fa3-8e73-655ba34e5f23";
 	};
-	[3] = {
+	[4] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -249,6 +770,11 @@ self.used = true\
 		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper \
 	end\
 	\
+	if Settings.AnyoneCore.NorthStratMitigation == nil then\
+		Settings.AnyoneCore.NorthStratMitigation = false -- false is default\
+		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -270,7 +796,8 @@ self.used = true\
 			e7sQueenGauge = Settings.AnyoneCore.e7sQueenGauge,\
 			e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge,\
 			AntiGhosting = Settings.AnyoneCore.AntiGhosting,\
-			PrepullHelper = Settings.AnyoneCore.PrepullHelper\
+			PrepullHelper = Settings.AnyoneCore.PrepullHelper,\
+			NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
 		}\
 \
 	function AnyoneCore.save()\
@@ -321,6 +848,9 @@ self.used = true\
 		\
 		Settings.AnyoneCore.PrepullHelper = AnyoneCore.Settings.PrepullHelper\
 		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper\
+		\
+		Settings.AnyoneCore.NorthStratMitigation = AnyoneCore.Settings.NorthStratMitigation\
+		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
 		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
@@ -390,6 +920,20 @@ self.used = true\
 				end\
 				end\
 				\
+				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
+				local hovered = false\
+				AnyoneCore.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneCore.Settings.NeverSprint)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -406,13 +950,28 @@ self.used = true\
 			elseif (tabname == \"Fight Specific\") then\
 				local changed = false\
 				\
-				---GUI:Text(\"e5s settings\")\
+				---GUI:Text(\"			e5s settings\")\
 				---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
-				\
-				---GUI:Text(\"e6s settings\")\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
+				GUI:Text(\"			e6s settings\")\
+				local hovered = false\
+				AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses rdps mitigation before Strike Spark.\")\
+					GUI:TextColored(1,1,0,1,\"Sometimes teams will choose to go north for Strike Spark for the sake of melee uptime. Since there's a lot of outgoing damage here, it's usually a good idea to use rdps mitigations. So enable this to throw out tactician/shield samba/troubador before strike spark.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				---else\
 				---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
-				GUI:Text(\"e7s settings\")\
+				end ---end bard/mch/dnc job check\
+				\
+				GUI:Text(\"			e7s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Disable Assist for Away With Thee\", AnyoneCore.Settings.DisableAssist)\
 				if changed then AnyoneCore.save() end\
@@ -428,7 +987,7 @@ self.used = true\
 				\
 \
 				\
-				GUI:Text(\"e8s settings\")\
+				GUI:Text(\"			e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback Mirror Uptime Strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
 				if changed then AnyoneCore.save() end\
@@ -500,7 +1059,7 @@ self.used = true\
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 31 then -- check for machinist\
 				\
-				GUI:Text(\"Machinist General\")\
+				GUI:Text(\"			Machinist General\")\
 				local hovered = false\
 				AnyoneCore.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneCore.Settings.AntiGhosting)\
 				if changed then AnyoneCore.save() end\
@@ -513,7 +1072,7 @@ self.used = true\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e5s settings\")\
+				GUI:Text(\"			Machinist e5s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneCore.Settings.e5sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -526,7 +1085,7 @@ self.used = true\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end			\
-				GUI:Text(\"Machinist e6s settings\")\
+				GUI:Text(\"			Machinist e6s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e6sQueenGauge, changed = GUI:InputInt(\"e6s queen gauge\", AnyoneCore.Settings.e6sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -539,7 +1098,7 @@ self.used = true\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e7s settings\")\
+				GUI:Text(\"			Machinist e7s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
 				if changed then AnyoneCore.save() end\
@@ -565,7 +1124,7 @@ self.used = true\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e8s settings\")\
+				GUI:Text(\"			Machinist e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e8sQueenGauge, changed = GUI:InputInt(\"e8s queen gauge\", AnyoneCore.Settings.e8sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -584,20 +1143,8 @@ self.used = true\
 				\
 				\
 				if Player.job == 34 then -- check for samurai\
-				local hovered = false\
-				GUI:Text(\"Samurai\")\
-				AnyoneCore.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneCore.Settings.NeverSprint)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
 				\
+				GUI:Text(\"			Samurai\")\
 				local hovered = false\
 				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Enable/Disable Enpi For Me\", AnyoneCore.Settings.NeverEnpi)\
 				if changed then AnyoneCore.save() end\
@@ -720,9 +1267,9 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "1fb826ce-b891-f1b2-b606-35bf9bd03e05";
+		["uuid"] = "57e01a58-d834-6524-87d1-2331c000c3ce";
 	};
-	[4] = {
+	[5] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -730,12 +1277,12 @@ self.used = true";
 		["enabled"] = true;
 		["eventType"] = 11;
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 19 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 21 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the paladin profile.\")\
-		elseif Player.job == 19 then\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the warrior profile.\")\
+		elseif Player.job == 21 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 19 and AnyoneCore.Settings.JobCheck == false then\
+		elseif Player.job ~= 21 and AnyoneCore.Settings.JobCheck == false then\
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
@@ -754,7 +1301,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "336d8baf-f749-db77-a527-0ef59a848557";
+		["uuid"] = "1b98bc17-3afa-ac91-af04-f943f83f4e97";
 	};
 }
 return obj1

@@ -135,6 +135,40 @@ end\
 		["conditions"] = {
 		};
 		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the gunbreaker profile.\")\
+		elseif Player.job == 37 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "99239944-d834-3fa3-991f-0620a5fa13bb";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
@@ -254,6 +288,11 @@ end\
 		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper \
 	end\
 	\
+	if Settings.AnyoneCore.NorthStratMitigation == nil then\
+		Settings.AnyoneCore.NorthStratMitigation = false -- false is default\
+		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -275,7 +314,8 @@ end\
 			e7sQueenGauge = Settings.AnyoneCore.e7sQueenGauge,\
 			e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge,\
 			AntiGhosting = Settings.AnyoneCore.AntiGhosting,\
-			PrepullHelper = Settings.AnyoneCore.PrepullHelper\
+			PrepullHelper = Settings.AnyoneCore.PrepullHelper,\
+			NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
 		}\
 \
 	function AnyoneCore.save()\
@@ -326,6 +366,9 @@ end\
 		\
 		Settings.AnyoneCore.PrepullHelper = AnyoneCore.Settings.PrepullHelper\
 		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper\
+		\
+		Settings.AnyoneCore.NorthStratMitigation = AnyoneCore.Settings.NorthStratMitigation\
+		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
 		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
@@ -395,6 +438,20 @@ end\
 				end\
 				end\
 				\
+				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
+				local hovered = false\
+				AnyoneCore.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneCore.Settings.NeverSprint)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -411,13 +468,28 @@ end\
 			elseif (tabname == \"Fight Specific\") then\
 				local changed = false\
 				\
-				---GUI:Text(\"e5s settings\")\
+				---GUI:Text(\"			e5s settings\")\
 				---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
-				\
-				---GUI:Text(\"e6s settings\")\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
+				GUI:Text(\"			e6s settings\")\
+				local hovered = false\
+				AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses rdps mitigation before Strike Spark.\")\
+					GUI:TextColored(1,1,0,1,\"Sometimes teams will choose to go north for Strike Spark for the sake of melee uptime. Since there's a lot of outgoing damage here, it's usually a good idea to use rdps mitigations. So enable this to throw out tactician/shield samba/troubador before strike spark.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				---else\
 				---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
-				GUI:Text(\"e7s settings\")\
+				end ---end bard/mch/dnc job check\
+				\
+				GUI:Text(\"			e7s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Disable Assist for Away With Thee\", AnyoneCore.Settings.DisableAssist)\
 				if changed then AnyoneCore.save() end\
@@ -433,7 +505,7 @@ end\
 				\
 \
 				\
-				GUI:Text(\"e8s settings\")\
+				GUI:Text(\"			e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback Mirror Uptime Strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
 				if changed then AnyoneCore.save() end\
@@ -505,7 +577,7 @@ end\
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 31 then -- check for machinist\
 				\
-				GUI:Text(\"Machinist General\")\
+				GUI:Text(\"			Machinist General\")\
 				local hovered = false\
 				AnyoneCore.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneCore.Settings.AntiGhosting)\
 				if changed then AnyoneCore.save() end\
@@ -518,7 +590,7 @@ end\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e5s settings\")\
+				GUI:Text(\"			Machinist e5s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneCore.Settings.e5sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -531,7 +603,7 @@ end\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end			\
-				GUI:Text(\"Machinist e6s settings\")\
+				GUI:Text(\"			Machinist e6s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e6sQueenGauge, changed = GUI:InputInt(\"e6s queen gauge\", AnyoneCore.Settings.e6sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -544,7 +616,7 @@ end\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e7s settings\")\
+				GUI:Text(\"			Machinist e7s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
 				if changed then AnyoneCore.save() end\
@@ -570,7 +642,7 @@ end\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"Machinist e8s settings\")\
+				GUI:Text(\"			Machinist e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e8sQueenGauge, changed = GUI:InputInt(\"e8s queen gauge\", AnyoneCore.Settings.e8sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -589,20 +661,8 @@ end\
 				\
 				\
 				if Player.job == 34 then -- check for samurai\
-				local hovered = false\
-				GUI:Text(\"Samurai\")\
-				AnyoneCore.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneCore.Settings.NeverSprint)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
 				\
+				GUI:Text(\"			Samurai\")\
 				local hovered = false\
 				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Enable/Disable Enpi For Me\", AnyoneCore.Settings.NeverEnpi)\
 				if changed then AnyoneCore.save() end\
@@ -726,40 +786,6 @@ self.used = true";
 		["timerStartOffset"] = 0;
 		["used"] = false;
 		["uuid"] = "e27b8cfe-0069-644e-8f76-2f443b91c65f";
-	};
-	[4] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the gunbreaker profile.\")\
-		elseif Player.job == 37 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "99239944-d834-3fa3-991f-0620a5fa13bb";
 	};
 }
 return obj1
