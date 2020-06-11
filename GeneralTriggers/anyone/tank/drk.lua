@@ -277,6 +277,11 @@ self.used = true";
 		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
 	end\
 	\
+	if Settings.AnyoneCore.DiamondFrostUptime == nil then\
+		Settings.AnyoneCore.DiamondFrostUptime = false -- false is default\
+		Settings.AnyoneCore.DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -299,7 +304,8 @@ self.used = true";
 			e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge,\
 			AntiGhosting = Settings.AnyoneCore.AntiGhosting,\
 			PrepullHelper = Settings.AnyoneCore.PrepullHelper,\
-			NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
+			NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation,\
+			DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime\
 		}\
 \
 	function AnyoneCore.save()\
@@ -356,6 +362,9 @@ self.used = true";
 		\
 		Settings.AnyoneCore.NorthStratMitigation = AnyoneCore.Settings.NorthStratMitigation\
 		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
+		\
+		Settings.AnyoneCore.DiamondFrostUptime = AnyoneCore.Settings.DiamondFrostUptime\
+		Settings.AnyoneCore.DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime\
 		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
@@ -503,6 +512,19 @@ self.used = true";
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors. Will allow you to nullify both knockbacks.\\n\")\
 					GUI:TextColored(1,1,0,1,\"If you're getting knocked back still, check the read me for more information on how to modify the timing based on your needs.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost Uptime Strat\", AnyoneCore.Settings.DiamondFrostUptime)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Automatically uses Arm's Length or Surecast during Diamond Frost. \\n\")\
+					GUI:TextColored(1,1,0,1,\"Definitely do not have this enabled if you're not doing this strat.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
