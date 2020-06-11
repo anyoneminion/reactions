@@ -228,9 +228,9 @@ self.used = true";
 		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom \
 	end\
 	\
-	if Settings.AnyoneCore.NeverSprint == nil then\
-		Settings.AnyoneCore.NeverSprint = false -- false is default\
-		Settings.AnyoneCore.NeverSprint = Settings.AnyoneCore.NeverSprint \
+	if Settings.AnyoneCore.UseSprint == nil then\
+		Settings.AnyoneCore.UseSprint = false -- false is default\
+		Settings.AnyoneCore.UseSprint = Settings.AnyoneCore.UseSprint \
 	end\
 	\
 	if Settings.AnyoneCore.NeverEnpi == nil then\
@@ -303,7 +303,7 @@ self.used = true";
 			AddsPhasePot = Settings.AnyoneCore.AddsPhasePot,\
 			AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks,\
 			AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom,\
-			NeverSprint = Settings.AnyoneCore.NeverSprint,\
+			UseSprint = Settings.AnyoneCore.UseSprint,\
 			NeverEnpi = Settings.AnyoneCore.NeverEnpi,\
 			AttackingGaruda = Settings.AnyoneCore.AttackingGaruda,\
 			UseMoogleTTS = Settings.AnyoneCore.UseMoogleTTS,\
@@ -346,8 +346,8 @@ self.used = true";
 		Settings.AnyoneCore.AutoSetMaxCameraZoom = AnyoneCore.Settings.AutoSetMaxCameraZoom\
 		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom\
 		\
-		Settings.AnyoneCore.NeverSprint = AnyoneCore.Settings.NeverSprint\
-		Settings.AnyoneCore.NeverSprint = Settings.AnyoneCore.NeverSprint\
+		Settings.AnyoneCore.UseSprint = AnyoneCore.Settings.UseSprint\
+		Settings.AnyoneCore.UseSprint = Settings.AnyoneCore.UseSprint\
 		\
 		Settings.AnyoneCore.NeverEnpi = AnyoneCore.Settings.NeverEnpi\
 		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi\
@@ -443,13 +443,13 @@ self.used = true";
 				\
 				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
 				local hovered = false\
-				AnyoneCore.Settings.NeverSprint, changed = GUI:Checkbox(\"Never Sprint For Me\", AnyoneCore.Settings.NeverSprint)\
+				AnyoneCore.Settings.UseSprint, changed = GUI:Checkbox(\"Use Sprint\", AnyoneCore.Settings.UseSprint)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never use sprint. Lets you manually do it yourself.\\n\")\
+					GUI:Text(\"Enables reactions to use sprint for you..\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
