@@ -179,6 +179,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -415,6 +416,7 @@ self.used = true";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_ArmsLength_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -567,6 +569,7 @@ self.used = true";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -717,6 +720,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -827,6 +831,7 @@ end";
 SallyDNC.SkillSettings.TechStep.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -885,6 +890,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -943,6 +949,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.TechStep.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1003,6 +1010,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.StandardStep.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1061,6 +1069,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1294,6 +1303,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1351,6 +1361,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1457,6 +1468,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["actionLua"] = "SallyDNC.SkillSettings.Potion.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1520,6 +1532,7 @@ SallyDNC.SkillSettings.Interrupt.enabled = true\
 self.used = true\
 end";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1583,6 +1596,7 @@ end";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1688,6 +1702,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1793,6 +1808,7 @@ return target == nil or (target.contentid ~= 9321 and target.hp.current == 0)";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1900,6 +1916,7 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1964,6 +1981,7 @@ SallyDNC.SkillSettings.Potion.enabled = true\
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2022,6 +2040,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.Potion.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2079,6 +2098,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2139,6 +2159,7 @@ SallyDNC.SkillSettings.TechStep.enabled = true\
 SallyDNC.SkillSettings.Devilment.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2239,6 +2260,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2516,6 +2538,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2573,6 +2596,7 @@ self.used = true";
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2684,6 +2708,7 @@ return false";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2723,6 +2748,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2870,6 +2896,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3105,6 +3132,7 @@ self.used = true";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3214,6 +3242,7 @@ end";
 					["actionLua"] = "SallyDNC.SkillSettings.TechStep.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3274,6 +3303,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.Potion.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3309,6 +3339,7 @@ self.used = true";
 					["actionLua"] = "SallyDNC.SkillSettings.TechStep.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3409,6 +3440,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["actionLua"] = "SallyDNC.HotBarConfig.ShieldSamba.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;

@@ -11,6 +11,7 @@ local obj1 = {
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -70,6 +71,7 @@ local obj1 = {
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -130,6 +132,7 @@ local obj1 = {
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -165,6 +168,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -323,6 +327,7 @@ end\
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -358,6 +363,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -516,6 +522,7 @@ end\
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -551,6 +558,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -708,6 +716,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -767,6 +776,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -826,6 +836,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -885,6 +896,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -944,6 +956,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1003,6 +1016,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1062,6 +1076,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1121,6 +1136,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1181,6 +1197,7 @@ end\
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1216,6 +1233,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1374,6 +1392,7 @@ end\
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1409,6 +1428,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1566,6 +1586,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1625,6 +1646,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1684,6 +1706,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1743,6 +1766,7 @@ end\
 					["actionID"] = 7498;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1802,6 +1826,7 @@ end\
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;

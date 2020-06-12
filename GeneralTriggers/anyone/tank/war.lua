@@ -47,6 +47,7 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -120,6 +121,7 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -192,6 +194,7 @@ self.eventConditionMismatch = true -- suppressing the log\
 self.used = true\
 return nil";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -1474,6 +1477,7 @@ self.used = true";
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -1723,6 +1727,7 @@ return false";
 				["actionID"] = 7388;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -2270,6 +2275,7 @@ return false";
 				["actionID"] = 7538;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
@@ -2608,6 +2614,7 @@ return false";
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;

@@ -106,6 +106,7 @@ if LL and LH then\
 		TensorCore.resetTTKTargets(LL.id, LH.id)\
 end";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -271,6 +272,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -308,6 +310,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -468,6 +471,7 @@ return false";
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -507,6 +511,7 @@ return false";
 data.limitCutTime = nil\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -665,6 +670,7 @@ end\
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -732,6 +738,7 @@ if t and Argus then\
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -794,6 +801,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -832,6 +840,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -998,6 +1007,7 @@ return false";
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1060,6 +1070,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1120,6 +1131,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1185,6 +1197,7 @@ self.used = true";
 SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1247,6 +1260,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1305,6 +1319,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1372,6 +1387,7 @@ if t and Argus then\
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1433,6 +1449,7 @@ self.used = true";
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1472,6 +1489,7 @@ self.used = true";
 data.limitCutTime = nil\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1630,6 +1648,7 @@ end\
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1692,6 +1711,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1730,6 +1750,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1892,6 +1913,7 @@ return false";
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1954,6 +1976,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2014,6 +2037,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2077,6 +2101,7 @@ self.used = true";
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2139,6 +2164,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2199,6 +2225,7 @@ self.used = true";
 					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2262,6 +2289,7 @@ self.used = true";
 SallySAM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;

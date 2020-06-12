@@ -181,6 +181,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -285,6 +286,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -330,7 +332,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -374,7 +376,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -435,6 +437,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -540,6 +543,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -598,6 +602,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -658,6 +663,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -763,6 +769,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -867,6 +874,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -925,6 +933,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -986,6 +995,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1025,6 +1035,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1266,6 +1277,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1304,6 +1316,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1547,6 +1560,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1592,7 +1606,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1636,7 +1650,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1736,6 +1750,7 @@ self.used = table.size(markedClones) >= 4\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1775,6 +1790,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2016,6 +2032,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2054,6 +2071,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2299,6 +2317,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2357,6 +2376,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2416,6 +2436,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2520,6 +2541,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.Infuriate.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2555,6 +2577,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2613,6 +2636,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2672,6 +2696,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2707,6 +2732,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2745,7 +2771,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = 2235;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2788,7 +2814,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = 2236;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2855,6 +2881,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2893,6 +2920,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3134,6 +3162,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Vengeance.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3173,6 +3202,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3212,6 +3242,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3545,6 +3576,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3745,6 +3777,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3803,6 +3836,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3861,6 +3895,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.Infuriate.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3921,6 +3956,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4026,6 +4062,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4130,6 +4167,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.Potion.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4188,6 +4226,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4246,6 +4285,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.Infuriate.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4281,6 +4321,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4341,6 +4382,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4447,6 +4489,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4595,6 +4638,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4738,6 +4782,7 @@ self.used = table.size(markedClones) >= 4";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4777,6 +4822,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5018,6 +5064,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5056,6 +5103,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5299,6 +5347,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5402,6 +5451,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5460,6 +5510,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5519,6 +5570,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5623,6 +5675,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.Infuriate.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5658,6 +5711,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5716,6 +5770,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.RefreshEye.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5777,6 +5832,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5814,6 +5870,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5851,6 +5908,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6047,6 +6105,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6151,6 +6210,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6299,6 +6359,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6405,6 +6466,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6512,6 +6574,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6551,6 +6614,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6792,6 +6856,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -6830,6 +6895,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -7072,6 +7138,7 @@ self.used = true\
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -7176,6 +7243,7 @@ return false";
 					["actionLua"] = "SallyWAR.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;

@@ -203,6 +203,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -307,6 +308,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -352,7 +354,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -396,7 +398,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -459,6 +461,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -607,6 +610,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -712,6 +716,7 @@ self.used = true";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_ArmsLength_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -865,6 +870,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.HollowGround.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1049,6 +1055,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sentinel.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1086,6 +1093,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1123,6 +1131,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sheltron.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1412,6 +1421,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1457,7 +1467,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1501,7 +1511,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1560,6 +1570,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1714,6 +1725,7 @@ self.used = table.size(drawnOrbs) >= 4";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1759,7 +1771,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1803,7 +1815,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1866,6 +1878,7 @@ self.used = true";
 SallyPLD.HotBarConfig.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1926,6 +1939,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.SkillSettings.Potion.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -1986,6 +2000,7 @@ self.used = true";
 SallyPLD.HotBarConfig.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2046,6 +2061,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2150,6 +2166,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.LowBlow.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2350,6 +2367,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.LowBlow.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2555,6 +2573,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2660,6 +2679,7 @@ return false";
 					["actionLua"] = "SallyPLD.SkillSettings.Potion.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2720,6 +2740,7 @@ SallyPLD.SkillSettings.Potion.enabled = true\
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2780,6 +2801,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -2886,6 +2908,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3080,6 +3103,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3228,6 +3252,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3264,6 +3289,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sheltron.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3458,6 +3484,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.InterventionOT.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3566,6 +3593,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3670,6 +3698,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sentinel.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3706,6 +3735,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sheltron.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3742,6 +3772,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -3978,6 +4009,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4035,6 +4067,7 @@ self.used = true";
 					["actionID"] = 7548;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4146,6 +4179,7 @@ return false";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4185,6 +4219,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4223,12 +4258,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4266,12 +4301,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4336,6 +4371,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4442,6 +4478,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4594,6 +4631,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sheltron.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4743,6 +4781,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4851,6 +4890,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.SkillSettings.Potion.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -4951,6 +4991,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sentinel.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5057,6 +5098,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.HollowGround.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5209,6 +5251,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Rampart.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5315,6 +5358,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.HollowGround.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5469,6 +5513,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5617,6 +5662,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5721,6 +5767,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sentinel.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
@@ -5757,6 +5804,7 @@ self.used = true";
 					["actionLua"] = "SallyPLD.HotBarConfig.Sheltron.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
