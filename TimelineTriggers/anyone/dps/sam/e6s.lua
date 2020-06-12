@@ -504,7 +504,8 @@ end";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -557,7 +558,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e07e1f01-9979-25fe-9f46-db70017b4454";
+			["uuid"] = "a4c31345-8e8c-dde7-b538-81a835dd7788";
 		};
 	};
 	[8] = {
@@ -671,7 +672,8 @@ end";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -724,7 +726,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b6f0d382-302e-366b-bde3-0c7c2f10ca03";
+			["uuid"] = "ca4813c4-9ec0-2049-bc1b-ee9abb527ca5";
 		};
 		[2] = {
 			["actions"] = {
@@ -1458,7 +1460,8 @@ end\
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1511,7 +1514,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5c0504c5-2f2f-c816-ad7e-377436a4d240";
+			["uuid"] = "d2b041d7-724a-fc4c-b6ad-b3f8cedd833e";
 		};
 	};
 	[18] = {
@@ -1969,7 +1972,8 @@ return false";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -2022,7 +2026,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8f3a5f76-a051-dae3-8550-318919b18c91";
+			["uuid"] = "252f357e-5cbd-33a6-8877-541a73797b31";
 		};
 	};
 	[26] = {
@@ -4194,7 +4198,8 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -4247,7 +4252,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6d0ceec2-147f-9596-92d2-84fd622db905";
+			["uuid"] = "ada6fa4c-b290-63e4-9905-382078e7536c";
 		};
 	};
 	[59] = {
@@ -4747,7 +4752,8 @@ end";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -4800,7 +4806,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5cebfab3-dfd1-a8d0-a235-636a0e7af543";
+			["uuid"] = "d79fe941-eef0-1f0f-9a22-e23e38514cbd";
 		};
 	};
 	[69] = {
@@ -5188,7 +5194,8 @@ return false";
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
-end";
+end\
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -5241,7 +5248,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "244bb6dc-aa16-3c09-8dee-652a7085967a";
+			["uuid"] = "998a523d-985d-ae81-bded-ce2b23fd99e6";
 		};
 	};
 	[104] = {
