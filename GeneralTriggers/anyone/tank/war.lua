@@ -1291,7 +1291,6 @@ end\
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation Usage\", AnyoneCore.Settings.DutyHelperMitigation)\
 				if changed then AnyoneCore.save() end\
@@ -1305,6 +1304,7 @@ end\
 					GUI:EndTooltip()\
 				end\
 				\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Use Interrupts\", AnyoneCore.Settings.DutyHelperInterrupt)\
 				if changed then AnyoneCore.save() end\
@@ -2067,7 +2067,7 @@ return false";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 21 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};

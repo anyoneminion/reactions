@@ -790,7 +790,6 @@ return nil";
 					GUI:EndTooltip()\
 				end\
 				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation Usage\", AnyoneCore.Settings.DutyHelperMitigation)\
 				if changed then AnyoneCore.save() end\
@@ -804,6 +803,7 @@ return nil";
 					GUI:EndTooltip()\
 				end\
 				\
+				if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Use Interrupts\", AnyoneCore.Settings.DutyHelperInterrupt)\
 				if changed then AnyoneCore.save() end\
