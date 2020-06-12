@@ -4,38 +4,42 @@ Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbr
 
 ### Machinist
 
-Eden's Verse 5-8, TEA (rikudou's version), UCoB
+Eden's Verse 5-8, TEA, UCoB - TensorWeeb only
 
 ### Bard
 
-Eden's Verse 5-8, TEA (rikudou's version), UCoB
+Eden's Verse 5-8, TEA, UCoB - TensorRequiem only
 
 ### Summoner
-Eden's Verse 5-8, TEA, UCoB
+Eden's Verse 5-8, TEA, UCoB - TensorRuin only
 
 ### Dancer
 
-Eden's Verse 5-8
+Eden's Verse 5-8 - SallyDNC only
 
 ### Samurai
 
-Eden's Verse 5-8, TEA
+Eden's Verse 5-8, TEA - TensorWeeb/SallySAM only
+
+### Black Mage
+
+Eden's Verse 5-8 - TensorNuke/SallyBLM only
 
 ### Dark Knight
 
-Eden's Verse 5-8 (tanking)
+Eden's Verse 5-8 (tanking) - SallyDRK only
 
 ### Warrior
 
-Eden's Verse 5-8 (tanking)
+Eden's Verse 5-8 (tanking) - SallyWAR only
 
 ### Paladin
 
-Eden's Verse 5-8 (tanking)
+Eden's Verse 5-8 (tanking) - SallyPLD only
 
 ### Gunbreaker
 
-Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking)
+Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking) - SallyGNB only
 
 # read me
 
