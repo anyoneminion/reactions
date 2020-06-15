@@ -489,7 +489,7 @@ self.used = true";
 			if AnyoneCore.visible then\
 			local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs)\
 			if (tabname == \"General\") then\
-				if Player.job == 23 or Player.job == 27 or Player.job == 31 then\
+				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 then\
 				local hovered = false\
 				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneCore.Settings.PrepullHelper)\
 				if changed then AnyoneCore.save() end\
