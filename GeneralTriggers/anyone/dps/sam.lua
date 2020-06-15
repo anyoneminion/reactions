@@ -1087,6 +1087,11 @@ self.eventConditionMismatch = true\
 		Settings.AnyoneCore.DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback \
 	end\
 	\
+	if Settings.AnyoneCore.PrepullHelperPeloton == nil then\
+		Settings.AnyoneCore.PrepullHelperPeloton = true -- true is default\
+		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -1115,7 +1120,8 @@ self.eventConditionMismatch = true\
 			DutyHelperMitigation = Settings.AnyoneCore.DutyHelperMitigation,\
 			DutyHelperTargeting = Settings.AnyoneCore.DutyHelperTargeting,\
 			DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt,\
-			DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback\
+			DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback,\
+			PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton\
 		}\
 \
 	function AnyoneCore.save()\
@@ -1191,6 +1197,9 @@ self.eventConditionMismatch = true\
 		Settings.AnyoneCore.DutyHelperKnockback = AnyoneCore.Settings.DutyHelperKnockback\
 		Settings.AnyoneCore.DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback\
 		\
+		Settings.AnyoneCore.PrepullHelperPeloton = AnyoneCore.Settings.PrepullHelperPeloton\
+		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton\
+		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
 			AnyoneCore.save()\
@@ -1254,10 +1263,27 @@ self.eventConditionMismatch = true\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
+					GUI:TextColored(1,0,0,1,\"This will only work on the English client. As it works by detecting the text signalling the start of the countdown. You may be able to get it working if you properly translate the text.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end ---end of job check\
+				if Player.job == 23 or Player.job == 31 then\
+				if AnyoneCore.Settings.PrepullHelper == true then\
+				local hovered = false\
+				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelper)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enables the use of Peloton during prepull helper.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
 				end\
+				end ---end of job check\
 				\
 				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
 				local hovered = false\
@@ -2119,12 +2145,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[11];
+				["buffIDList"] = multiRefObjects[20];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.dollsAoeToggled == true and not TensorCore.isEntityAlive(9214)";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2179,12 +2205,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[11];
+				["buffIDList"] = multiRefObjects[20];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2239,12 +2265,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[11];
+				["buffIDList"] = multiRefObjects[20];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2360,12 +2386,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[15];
+				["buffIDList"] = multiRefObjects[18];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[14];
+				["conditions"] = multiRefObjects[15];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2420,12 +2446,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[15];
+				["buffIDList"] = multiRefObjects[18];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[14];
+				["conditions"] = multiRefObjects[15];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2582,12 +2608,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[16];
+				["buffIDList"] = multiRefObjects[17];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[20];
+				["conditions"] = multiRefObjects[13];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2642,12 +2668,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[16];
+				["buffIDList"] = multiRefObjects[17];
 				["category"] = 1;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
-				["conditions"] = multiRefObjects[20];
+				["conditions"] = multiRefObjects[13];
 				["contentid"] = 9214;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2805,12 +2831,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[13];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[12];
+				["conditions"] = multiRefObjects[11];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2865,12 +2891,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[13];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.dollsToggled == true and Player:GetTarget() and Player:GetTarget().contentid ~= 9214";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[12];
+				["conditions"] = multiRefObjects[11];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4098,12 +4124,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[18];
+				["buffIDList"] = multiRefObjects[16];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[17];
+				["conditions"] = multiRefObjects[19];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4158,12 +4184,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[18];
+				["buffIDList"] = multiRefObjects[16];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[17];
+				["conditions"] = multiRefObjects[19];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
