@@ -488,7 +488,7 @@ return nil";
 				if Player.job == 23 or Player.job == 31 then\
 				if AnyoneCore.Settings.PrepullHelper == true then\
 				local hovered = false\
-				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelper)\
+				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
