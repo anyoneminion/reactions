@@ -5,57 +5,6 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 and Player.job == 27 then\
- xivopeners.settings[Player.job].currentOpenerIndex = 5\
-	xivopeners.supportedJobs[Player.job].queueOpener()\
- self.used = true\
- self.eventConditionMismatch = true\
-end\
-\
-if Player.localmapid == 907 and Player.job == 27 then\
- xivopeners.settings[Player.job].currentOpenerIndex = 5\
- xivopeners.supportedJobs[Player.job].queueOpener()\
- self.used = true\
- self.eventConditionMismatch = true\
-end\
-\
-if Player.localmapid == 908 and Player.job == 27 then\
- xivopeners.settings[Player.job].currentOpenerIndex = 5\
- xivopeners.supportedJobs[Player.job].queueOpener()\
- self.used = true\
- self.eventConditionMismatch = true\
-end\
-\
-if Player.localmapid == 909 and Player.job == 27 then\
- xivopeners.settings[Player.job].currentOpenerIndex = 6\
- xivopeners.supportedJobs[Player.job].queueOpener()\
- self.used = true\
- self.eventConditionMismatch = true\
-end\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "opener based on zone";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "33fbde15-9cac-f716-bb7e-20ab22173577";
-	};
-	[2] = {
-		["actions"] = {
 			[1] = {
 				["aType"] = 2;
 				["actionID"] = -1;
@@ -821,7 +770,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "86f50c9f-d96f-5518-bef2-e9dd8fd31bc4";
 	};
-	[3] = {
+	[2] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2;
@@ -1089,6 +1038,40 @@ self.used = true";
 		["timerStartOffset"] = 0;
 		["used"] = false;
 		["uuid"] = "2175e95d-e4c9-ffd5-a1f8-f8a3f5b7d03b";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 27 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the summoner profile.\")\
+		elseif Player.job == 27 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 27 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "21d01e45-14cc-7f95-ab28-3805417d6b18";
 	};
 	[4] = {
 		["actions"] = {
@@ -1882,40 +1865,6 @@ self.used = true";
 	};
 	[5] = {
 		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 27 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the summoner profile.\")\
-		elseif Player.job == 27 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 27 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "21d01e45-14cc-7f95-ab28-3805417d6b18";
-	};
-	[6] = {
-		["actions"] = {
 			[1] = {
 				["aType"] = 4;
 				["actionID"] = -1;
@@ -2380,7 +2329,7 @@ return time ~= nil";
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
+				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 1;
@@ -2447,7 +2396,7 @@ return time ~= nil";
 		["used"] = false;
 		["uuid"] = "667899b5-2b87-f325-b821-3a16708d57f1";
 	};
-	[7] = {
+	[6] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -2570,7 +2519,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "b4db3e81-eaf2-38bc-b286-8066f38e0ca7";
 	};
-	[8] = {
+	[7] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -2594,7 +2543,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "38c1354d-454a-81b5-bae8-709e784aa6aa";
 	};
-	[9] = {
+	[8] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2;
@@ -2681,12 +2630,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[18];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2741,12 +2690,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[18];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2801,12 +2750,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[18];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2875,7 +2824,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "c2810696-5da0-da90-a98e-a625087bb4b2";
 	};
-	[10] = {
+	[9] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2;
@@ -2962,12 +2911,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[22];
+				["buffIDList"] = multiRefObjects[11];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.dollsAoeToggled == true and not TensorCore.isEntityAlive(9214)";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3022,12 +2971,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[22];
+				["buffIDList"] = multiRefObjects[11];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3082,12 +3031,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[22];
+				["buffIDList"] = multiRefObjects[11];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3156,7 +3105,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "37f002b6-4093-3650-a9bd-7fd172720a46";
 	};
-	[11] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2;
@@ -3278,12 +3227,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[17];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[21];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3338,12 +3287,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[17];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 1;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[21];
 				["contentid"] = 9214;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3412,7 +3361,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "21a1b81f-5644-7a32-91aa-36cea7674e10";
 	};
-	[12] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 2;
@@ -3535,12 +3484,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3595,12 +3544,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.dollsToggled == true and Player:GetTarget() and Player:GetTarget().contentid ~= 9214";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3669,7 +3618,7 @@ self.used = true\
 		["used"] = false;
 		["uuid"] = "e1c66368-0c86-7b59-876e-ab1e0f673bcf";
 	};
-	[13] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -3716,12 +3665,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[22];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[15];
+				["conditions"] = multiRefObjects[17];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3776,12 +3725,12 @@ self.used = true\
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[22];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[15];
+				["conditions"] = multiRefObjects[17];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3850,7 +3799,7 @@ self.used = true\
 		["used"] = false;
 		["uuid"] = "01fcb7c2-9ba4-cfd4-a809-4d3a21cc4df5";
 	};
-	[14] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -3942,12 +3891,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[16];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4004,12 +3953,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[16];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4066,12 +4015,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[16];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return Player:GetTarget() == nil or Player:GetTarget().contentid ~= 8658";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[19];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4142,7 +4091,7 @@ end";
 		["used"] = false;
 		["uuid"] = "d1863feb-0cd1-ac89-9057-912322ee26a8";
 	};
-	[15] = {
+	[14] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -4192,12 +4141,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[21];
+				["buffIDList"] = multiRefObjects[15];
 				["category"] = 1;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = 9214;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4252,12 +4201,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[21];
+				["buffIDList"] = multiRefObjects[15];
 				["category"] = 1;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 3;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4312,12 +4261,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[21];
+				["buffIDList"] = multiRefObjects[15];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[14];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4386,7 +4335,7 @@ end";
 		["used"] = false;
 		["uuid"] = "615bde4c-6c24-d7c6-9b49-d908203ef9f0";
 	};
-	[16] = {
+	[15] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -4477,12 +4426,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[13];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.shieldTargeted == true and (not Player:GetTarget() or (Player:GetTarget().contentid == 8658 and Player:GetTarget().hp.percent <= 5))";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[11];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4539,12 +4488,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[13];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[11];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4601,12 +4550,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[13];
 				["category"] = 1;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
-				["conditions"] = multiRefObjects[11];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = 9216;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4677,7 +4626,7 @@ end";
 		["used"] = false;
 		["uuid"] = "6455cc74-319e-3912-ac9e-91a614d41b40";
 	};
-	[17] = {
+	[16] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -4770,12 +4719,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[18];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[20];
+				["conditions"] = multiRefObjects[16];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4832,12 +4781,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[18];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[20];
+				["conditions"] = multiRefObjects[16];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4894,12 +4843,12 @@ end";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[18];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return Player:GetTarget() == nil or Player:GetTarget().contentid ~= 8658";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[20];
+				["conditions"] = multiRefObjects[16];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4970,7 +4919,7 @@ end";
 		["used"] = false;
 		["uuid"] = "2ebd32a2-0d00-a9e4-8edd-35070732b36e";
 	};
-	[18] = {
+	[17] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -5060,12 +5009,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[14];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[20];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5120,12 +5069,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[14];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[20];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5180,12 +5129,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[14];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[20];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5254,7 +5203,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "34c21688-180f-3829-958f-980a0b298230";
 	};
-	[19] = {
+	[18] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -5301,12 +5250,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[19];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[13];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5361,12 +5310,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[19];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[13];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5435,7 +5384,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "12507c5c-7630-4a85-b418-c408f276224d";
 	};
-	[20] = {
+	[19] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -5480,7 +5429,7 @@ self.eventConditionMismatch = true -- supress log";
 		["used"] = false;
 		["uuid"] = "a7d4b80e-1c87-0be8-9bfd-5c37f92b3535";
 	};
-	[21] = {
+	[20] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -5504,7 +5453,7 @@ self.eventConditionMismatch = true -- supress log";
 		["used"] = false;
 		["uuid"] = "6a7a9ee4-50c8-97c9-82b0-40641d3cb3e8";
 	};
-	[22] = {
+	[21] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -5754,7 +5703,7 @@ return false";
 		["used"] = false;
 		["uuid"] = "dcd7edc8-f737-c794-8bca-eefffbc83452";
 	};
-	[23] = {
+	[22] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -5932,35 +5881,6 @@ return false";
 [17436] = true,\
 [16631] = true,\
 [16632] = true,\
---e5-e8\
-[16650] = true,\
-[16682] = true,\
-[16699] = true,\
-[17384] = true,\
-[19353] = true,\
-[19354] = true,\
-[19382] = true,\
-[19383] = true,\
-[19415] = true,\
-[19441] = true,\
-[19447] = true,\
-[19476] = true,\
-[19538] = true,\
-[19594] = true,\
-[19927] = true,\
-[19937] = true,\
-[19944] = true,\
-[19948] = true,\
-[19949] = true,\
-[19820] = true,\
-[19827] = true,\
-[19833] = true,\
-[19838] = true,\
-[19839] = true,\
-[19840] = true,\
-[19841] = true,\
-[19864] = true,\
-[19916] = true,\
 --trials\
 [8230] = true,\
 [8246] = true,\
@@ -6299,7 +6219,7 @@ return false";
 		["used"] = false;
 		["uuid"] = "e383c743-693b-76bc-a252-62296846f35f";
 	};
-	[24] = {
+	[23] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -6383,9 +6303,6 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
---e5-e8\
-[19928] = true,\
-[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\

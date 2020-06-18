@@ -2717,9 +2717,6 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
---e5-e8\
-[19928] = true,\
-[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\

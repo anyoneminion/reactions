@@ -1086,6 +1086,46 @@ self.used = true";
 				["variableTogglesType"] = 1;
 			};
 			[3] = {
+				["aType"] = 1;
+				["actionID"] = 15997;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 2;
+					[2] = 1;
+					[3] = 3;
+					[4] = 7;
+					[5] = 6;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = true;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[4] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
@@ -1124,7 +1164,7 @@ self.used = true";
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
-			[4] = {
+			[5] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "gStartCombat = true\
@@ -1164,7 +1204,7 @@ self.used = true";
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
-			[5] = {
+			[6] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "if data.countdownCanceled == true or (data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 0) then\
@@ -1203,7 +1243,7 @@ end";
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
-			[6] = {
+			[7] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "self.used = true";
@@ -1569,7 +1609,7 @@ return time ~= nil";
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
+				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 1;
@@ -1631,7 +1671,7 @@ return time ~= nil";
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
+				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 1;
@@ -2712,9 +2752,6 @@ return false";
 [8983] = true,\
 [10933] = true,\
 [15757] = true,\
---e5-e8s\
-[19951] = true,\
-[19845] = true,\
 ---trials\
 [14324] = true,\
 ---24 man raids\
@@ -3037,7 +3074,7 @@ return false";
 				["comparator"] = 1;
 				["conditionLua"] = "local KnockbackTable = {\
 ---start of dungeon spell ids\
---dungeons\
+---dungeons\
 [8328] = true,\
 [8329] = true,\
 [8293] = true,\
@@ -3066,9 +3103,6 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
---e5-e8\
-[19928] = true,\
-[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\
