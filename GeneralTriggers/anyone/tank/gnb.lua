@@ -328,6 +328,11 @@ self.used = true";
 		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton \
 	end\
 	\
+	if Settings.AnyoneCore.DrawBlackWhiteOrbs == nil then\
+		Settings.AnyoneCore.DrawBlackWhiteOrbs = false -- false is default\
+		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -357,7 +362,8 @@ self.used = true";
 			DutyHelperTargeting = Settings.AnyoneCore.DutyHelperTargeting,\
 			DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt,\
 			DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback,\
-			PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton\
+			PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton,\
+			DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs\
 		}\
 \
 	function AnyoneCore.save()\
@@ -435,6 +441,9 @@ self.used = true";
 		\
 		Settings.AnyoneCore.PrepullHelperPeloton = AnyoneCore.Settings.PrepullHelperPeloton\
 		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton\
+		\
+		Settings.AnyoneCore.DrawBlackWhiteOrbs = AnyoneCore.Settings.DrawBlackWhiteOrbs\
+		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs\
 		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
@@ -583,6 +592,19 @@ self.used = true";
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Disables minion's assist function slightly before Away With Thee teleports go out. Allows you to position yourself correctly without getting mispositioned by a skill usage.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Alternatively, you can use LMB + RMB + S and then wiggle your camera while facing the correct direction. This will result in much better uptime. Test this on a striking dummy first to get the feel for it.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"Draw Black/White Orbs\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\

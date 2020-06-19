@@ -147,9 +147,10 @@ self.used = true";
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 1;
+					["aType"] = 4;
 					["actionID"] = 3;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.Sprint.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
@@ -194,9 +195,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverSprint == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.UseSprint == true";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -232,6 +231,52 @@ end";
 					["setFirstMatch"] = false;
 					["targetName"] = "";
 				};
+				[2] = {
+					["actionCDValue"] = 1;
+					["actionID"] = 3;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
 			};
 			["enabled"] = true;
 			["execute"] = "";
@@ -249,7 +294,7 @@ end";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9984dedf-8acb-8551-a061-6abfaf5863b4";
+			["uuid"] = "3619c5e5-99e7-4658-ab86-326cd14f14b2";
 		};
 	};
 	[7] = {
@@ -1414,9 +1459,10 @@ self.used = true";
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 1;
+					["aType"] = 4;
 					["actionID"] = 3;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.Sprint.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
@@ -1461,9 +1507,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverSprint == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.UseSprint == true";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1499,6 +1543,52 @@ end";
 					["setFirstMatch"] = false;
 					["targetName"] = "";
 				};
+				[2] = {
+					["actionCDValue"] = 1;
+					["actionID"] = 3;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
 			};
 			["enabled"] = true;
 			["execute"] = "";
@@ -1516,7 +1606,7 @@ end";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ffedf0e1-ac91-7a96-ad4b-bdb9a54316fe";
+			["uuid"] = "0c876075-09a1-b7c3-bc03-4b73a6aed763";
 		};
 	};
 	[38] = {
@@ -2342,9 +2432,10 @@ self.used = true";
 		[1] = {
 			["actions"] = {
 				[1] = {
-					["aType"] = 1;
+					["aType"] = 4;
 					["actionID"] = 3;
-					["actionLua"] = "";
+					["actionLua"] = "SallyDNC.HotBarConfig.Sprint.enabled = true\
+self.used = true";
 					["allowInterrupt"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
@@ -2389,9 +2480,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverSprint == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.UseSprint == true";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -2427,6 +2516,52 @@ end";
 					["setFirstMatch"] = false;
 					["targetName"] = "";
 				};
+				[2] = {
+					["actionCDValue"] = 1;
+					["actionID"] = 3;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
 			};
 			["enabled"] = true;
 			["execute"] = "";
@@ -2444,7 +2579,7 @@ end";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5e2633d0-6fad-f923-bceb-d23a3eaef9d3";
+			["uuid"] = "ec07a429-b72b-10b9-b5bf-abce406c4643";
 		};
 	};
 	[71] = {

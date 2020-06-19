@@ -644,7 +644,7 @@ self.used = true\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -694,7 +694,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local LL = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9211, subgroup = \"Nearest\"})\
@@ -899,7 +899,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -1405,7 +1405,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -1455,7 +1455,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local CC = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9216, subgroup = \"Nearest\"})\
@@ -2378,7 +2378,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.limitCutNumber ~= nil and data.limitCutTime ~= nil then\
@@ -2818,7 +2818,7 @@ end\
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\
@@ -2867,7 +2867,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "local alexPrime = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 9220, subgroup = \"Nearest\"})\

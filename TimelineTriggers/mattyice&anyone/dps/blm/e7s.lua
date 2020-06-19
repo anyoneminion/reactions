@@ -363,12 +363,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -406,12 +406,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -449,12 +449,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -492,12 +492,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -718,12 +718,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -761,12 +761,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -804,12 +804,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -847,12 +847,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1060,12 +1060,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1103,12 +1103,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1352,12 +1352,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1395,12 +1395,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1438,12 +1438,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1481,12 +1481,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1768,12 +1768,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1811,12 +1811,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1854,12 +1854,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1897,12 +1897,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2285,13 +2285,13 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2630,12 +2630,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2673,12 +2673,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3022,13 +3022,13 @@ return true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3129,12 +3129,12 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3172,12 +3172,12 @@ return false";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3337,13 +3337,13 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3680,6 +3680,521 @@ self.used = true";
 			["uuid"] = "81c2e392-2eae-f522-89d5-3153feec5b8e";
 		};
 	};
+	[109] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs 0s";
+			["throttleTime"] = 0;
+			["time"] = 683.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 109;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8f74a9bf-a8a4-8b40-8d8f-bca52f5248b9";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs +11s";
+			["throttleTime"] = 0;
+			["time"] = 683.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 109;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 11;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f5e6eb24-1b7e-1592-9ff2-d89f81030156";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs +22s";
+			["throttleTime"] = 0;
+			["time"] = 683.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 109;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "05bc8f9e-c777-cb9c-8355-008b1b32318b";
+		};
+	};
 	[110] = {
 		[1] = {
 			["actions"] = {
@@ -3849,12 +4364,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3892,12 +4407,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4012,6 +4527,521 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "bd6dff6a-d155-8b7a-aebb-ac5019275a8b";
+		};
+	};
+	[116] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs 0s";
+			["throttleTime"] = 0;
+			["time"] = 761.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 116;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "2ff4ce7c-1f58-5ad8-831b-cd5ec1328def";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs +11s";
+			["throttleTime"] = 0;
+			["time"] = 761.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 116;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 11;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0756ac2c-b92e-6bed-9c0f-9f0efbee5119";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9302 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+				[2] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "if Argus == nil then\
+                self.used = true\
+end\
+\
+local drawnOrbs = {}\
+\
+for id, ent in pairs(EntityList(\"\")) do\
+	if ent.contentid == 9303 and not drawnOrbs[id] then\
+		if AnyoneCore.Settings.DrawOrbs == true then\
+			drawnOrbs[id] = true\
+			Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+	end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 2";
+					["allowInterrupt"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawBlackWhiteOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw white/black orbs +22s";
+			["throttleTime"] = 0;
+			["time"] = 761.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 116;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "93ffd83b-8c8e-3371-ada1-839e12c4f6ae";
 		};
 	};
 	[117] = {
