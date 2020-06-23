@@ -18,11 +18,6 @@ local obj1 = {
 		open = false,\
 	}\
 \
-	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true then\
-		gDevHackMaxZoom = 35.0\
-		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
-	end\
-\
 	if Settings.AnyoneCore.DrawOrbs == nil then\
 		Settings.AnyoneCore.DrawOrbs = true -- true is default\
 		Settings.AnyoneCore.DrawOrbs = Settings.AnyoneCore.DrawOrbs \
@@ -173,6 +168,23 @@ local obj1 = {
 		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs \
 	end\
 	\
+	if Settings.AnyoneCore.CameraZoomValue == nil then\
+		Settings.AnyoneCore.CameraZoomValue = 35 -- 35 is default\
+		Settings.AnyoneCore.CameraZoomValue = Settings.AnyoneCore.CameraZoomValue\
+	end\
+	\
+	if Settings.AnyoneCore.DrawChainLightning == nil then\
+		Settings.AnyoneCore.DrawChainLightning = true -- false is default\
+		Settings.AnyoneCore.DrawChainLightning = Settings.AnyoneCore.DrawChainLightning \
+	end\
+	\
+	\
+	--camera zoom value, not related to above code\
+	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true then\
+		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
+		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -203,7 +215,9 @@ local obj1 = {
 			DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt,\
 			DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback,\
 			PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton,\
-			DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs\
+			DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs,\
+			CameraZoomValue = Settings.AnyoneCore.CameraZoomValue,\
+			DrawChainLightning = Settings.AnyoneCore.DrawChainLightning\
 		}\
 \
 	function AnyoneCore.save()\
@@ -285,6 +299,9 @@ local obj1 = {
 		Settings.AnyoneCore.DrawBlackWhiteOrbs = AnyoneCore.Settings.DrawBlackWhiteOrbs\
 		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs\
 		\
+		Settings.AnyoneCore.DrawChainLightning = AnyoneCore.Settings.DrawChainLightning\
+		Settings.AnyoneCore.DrawChainLightning = Settings.AnyoneCore.DrawChainLightning\
+		\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
 			AnyoneCore.save()\
@@ -328,9 +345,20 @@ local obj1 = {
 			Settings.AnyoneCore.e8sQueenGauge = AnyoneCore.Settings.e8sQueenGauge\
 			Settings.AnyoneCore.e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge\
 		end\
+		\
+		if AnyoneCore.Settings.CameraZoomValue > 100 then\
+			AnyoneCore.Settings.CameraZoomValue = 100\
+			AnyoneCore.save()\
+		elseif AnyoneCore.Settings.CameraZoomValue < 20 then\
+			AnyoneCore.Settings.CameraZoomValue = 20\
+			AnyoneCore.save()\
+		else\
+			Settings.AnyoneCore.CameraZoomValue = AnyoneCore.Settings.CameraZoomValue\
+			Settings.AnyoneCore.CameraZoomValue = Settings.AnyoneCore.CameraZoomValue\
+		end\
 	end\
 		\
-	AnyoneCore.main_tabs = GUI_CreateTabs(\"General,Fight Specific,Job Specific,Duty Helper,Hacks\")\
+	AnyoneCore.main_tabs = GUI_CreateTabs(\"General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks\")\
 	function AnyoneCore.draw()\
 		if self.reference.enabled and AnyoneCore.enabled and AnyoneCore.open then\
 			GUI:SetNextWindowSize(250,400,GUI.SetCond_FirstUseEver)\
@@ -379,7 +407,7 @@ local obj1 = {
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Enables reactions to use sprint for you..\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -394,6 +422,62 @@ local obj1 = {
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Sends a text message to the chat box (client sided) when you're currently using the wrong profile relative to what job you're playing. Message is sent upon entering a savage/ultimate fight for general triggers, and is sent upon the fight starting if the timeline is wrong.\\n\")\
 					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+			elseif (tabname == \"Argus\") then\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"Draw Chain Lightning AoE size in e5s\", AnyoneCore.Settings.DrawChainLightning)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Draws a circle around whoever has the Electrified debuff in e5s. Technically the AoE comes from the person it's passed to, but the circle should give you an idea of how far away you should be.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+					GUI:TextColored(1,0,0,1,\"EXPERIMENTAL, NOT GUARANTEED TO BE 100 PERCENT ACCURATE.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"Draw Black/White Orbs in e7s\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+					GUI:TextColored(1,0,0,1,\"EXPERIMENTAL, NOT GUARANTEED TO WORK.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"Draw Dragon Heads in e8s\", AnyoneCore.Settings.DrawDragonHeads)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Draws the explosion radius of the dragon heads during Wyrm's Lament in e8s.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"Draw Light Rampant Orbs in e7s\", AnyoneCore.Settings.DrawOrbs)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Draws the explosion radius of the orbs during Light's Rampant in e8s.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -436,21 +520,6 @@ local obj1 = {
 					GUI:EndTooltip()\
 				end\
 				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"Draw Black/White Orbs\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-\
-				\
 				GUI:Text(\"			e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback Mirror Uptime Strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
@@ -474,32 +543,6 @@ local obj1 = {
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Automatically uses Arm's Length or Surecast during Diamond Frost. \\n\")\
 					GUI:TextColored(1,1,0,1,\"Definitely do not have this enabled if you're not doing this strat.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"Draw Dragon Heads\", AnyoneCore.Settings.DrawDragonHeads)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the dragon heads during Wyrm's Lament in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"Draw Orbs\", AnyoneCore.Settings.DrawOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during Light's Rampant in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -536,7 +579,7 @@ local obj1 = {
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 31 then -- check for machinist\
 				\
-				GUI:Text(\"			Machinist General\")\
+				GUI:Text(\"			Machinist Settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneCore.Settings.AntiGhosting)\
 				if changed then AnyoneCore.save() end\
@@ -549,7 +592,19 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"			Machinist e5s settings\")\
+				local hovered = false\
+				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses pot during adds phase immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
+					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
 				local hovered = false\
 				AnyoneCore.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneCore.Settings.e5sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -561,8 +616,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e5s machinist reactions.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
-				end			\
-				GUI:Text(\"			Machinist e6s settings\")\
+				end\
 				local hovered = false\
 				AnyoneCore.Settings.e6sQueenGauge, changed = GUI:InputInt(\"e6s queen gauge\", AnyoneCore.Settings.e6sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -572,20 +626,6 @@ local obj1 = {
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e6s machinist reactions.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				GUI:Text(\"			Machinist e7s settings\")\
-				local hovered = false\
-				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses pot during adds phase immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
-					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -601,7 +641,6 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:Text(\"			Machinist e8s settings\")\
 				local hovered = false\
 				AnyoneCore.Settings.e8sQueenGauge, changed = GUI:InputInt(\"e8s queen gauge\", AnyoneCore.Settings.e8sQueenGauge)\
 				if changed then AnyoneCore.save() end\
@@ -783,6 +822,22 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+				if AnyoneCore.Settings.AutoSetMaxCameraZoom == true then\
+				local hovered = false\
+				AnyoneCore.Settings.CameraZoomValue, changed = GUI:InputInt(\"Max Camera Zoom Value\", AnyoneCore.Settings.CameraZoomValue)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Set the value you want your camera zoom to be set to.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Reload lua after changing.\")\
+					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
+				\
 			end\
 			end -- end of tabs\
 			end\
