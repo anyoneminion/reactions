@@ -150,6 +150,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -212,6 +213,7 @@ self.used = true";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -366,6 +368,7 @@ self.used = true";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -408,12 +411,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -451,12 +454,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -494,12 +497,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -537,12 +540,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -603,6 +606,7 @@ self.used = true";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_ArmsLength_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -642,12 +646,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -707,6 +711,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -743,6 +748,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -788,7 +794,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -846,6 +852,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -904,6 +911,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -940,6 +948,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1045,6 +1054,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1080,6 +1090,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1115,6 +1126,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1177,6 +1189,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1212,6 +1225,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1270,6 +1284,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1378,6 +1393,7 @@ return false";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1420,12 +1436,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1463,12 +1479,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1506,12 +1522,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1549,12 +1565,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1614,6 +1630,7 @@ self.used = true";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1767,6 +1784,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1825,6 +1843,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1861,6 +1880,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1906,7 +1926,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1964,6 +1984,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2022,6 +2043,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2058,6 +2080,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2163,6 +2186,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2198,6 +2222,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2233,6 +2258,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2293,6 +2319,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2328,6 +2355,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2363,6 +2391,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2398,6 +2427,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2456,6 +2486,7 @@ self.used = true";
 					["actionID"] = 16501;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2495,12 +2526,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 6;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2558,6 +2589,7 @@ self.used = true";
 					["actionID"] = 2876;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2594,6 +2626,7 @@ self.used = true";
 					["actionID"] = 2876;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2633,12 +2666,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2676,12 +2709,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2739,6 +2772,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2840,6 +2874,210 @@ return false";
 	};
 	[41] = {
 	};
+	[45] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 297.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "db84a914-e259-bcd1-996d-0d3a23b18f6e";
+		};
+	};
+	[46] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 301.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 46;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "91bfa2ae-628b-f838-81d9-1cc14c34987e";
+		};
+	};
+	[48] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 305.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 48;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "56f63655-5c59-ce73-ab63-b1ce3df42531";
+		};
+	};
+	[49] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 309;
+			["timeRange"] = false;
+			["timelineIndex"] = 49;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "92d17a50-7b66-dd1a-b12b-ef55436e1afa";
+		};
+	};
+	[50] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 312.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 50;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "19673d75-0148-e36e-91e8-e74878b17f26";
+		};
+	};
+	[51] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 316.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "b192c0ef-be83-dee8-be89-18bdb30d98ff";
+		};
+	};
 	[52] = {
 		[1] = {
 			["actions"] = {
@@ -2849,6 +3087,7 @@ return false";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2891,12 +3130,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2934,12 +3173,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2977,12 +3216,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3020,12 +3259,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3077,6 +3316,108 @@ self.used = true";
 			["uuid"] = "308f4208-3b7c-4567-a690-febe6e2fc02f";
 		};
 	};
+	[53] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 320.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 53;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f703417a-0f3f-796a-9537-e0e5e7d666aa";
+		};
+	};
+	[54] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 323.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 54;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f4b71fa7-851a-1823-82ab-ec7dd91f67e3";
+		};
+	};
+	[55] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 327.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 55;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0af6a2f0-dec3-6d82-8f87-f25d823ec9d1";
+		};
+	};
 	[70] = {
 		[1] = {
 			["actions"] = {
@@ -3085,6 +3426,7 @@ self.used = true";
 					["actionID"] = 3;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3238,6 +3580,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3296,6 +3639,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3331,6 +3675,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3389,6 +3734,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3447,6 +3793,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3483,6 +3830,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3588,6 +3936,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3623,6 +3972,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3658,6 +4008,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3718,6 +4069,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3753,6 +4105,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3788,6 +4141,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3823,6 +4177,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3881,6 +4236,7 @@ self.used = true";
 					["actionID"] = 16501;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3920,12 +4276,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 6;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3983,6 +4339,7 @@ self.used = true";
 					["actionID"] = 2876;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4019,6 +4376,7 @@ self.used = true";
 					["actionID"] = 2876;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4058,12 +4416,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4101,12 +4459,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4164,6 +4522,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4274,6 +4633,7 @@ return false";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_ArmsLength_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4313,12 +4673,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4370,6 +4730,210 @@ self.used = true";
 			["uuid"] = "84cb3e09-f931-7dce-999c-f40a2d5c4564";
 		};
 	};
+	[83] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 502.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 83;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "14012952-a9da-fdd0-b7a8-8f837c66ee6c";
+		};
+	};
+	[84] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 506.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 84;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "60e4d4c0-8890-b0b5-8fd1-57972027a289";
+		};
+	};
+	[86] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 510.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 86;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "858cdb6e-f0f8-cbdf-b378-e3e6acfd1f88";
+		};
+	};
+	[87] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 513.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 87;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8050d7fa-ca74-01a5-aad9-e8442cc7c252";
+		};
+	};
+	[88] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 517.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 88;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "27d45da1-871f-7680-865e-dbfb330f3631";
+		};
+	};
+	[89] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 521.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 89;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "840612c5-fef0-2e6d-bcea-72962d08f493";
+		};
+	};
 	[90] = {
 		[1] = {
 			["actions"] = {
@@ -4379,6 +4943,7 @@ self.used = true";
 					["actionLua"] = "ACR_TensorMagnum_Hotbar_Tactician_Safe = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4421,12 +4986,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4464,12 +5029,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4507,12 +5072,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4550,12 +5115,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4605,6 +5170,108 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "71128db5-fdba-bc14-a6e8-303295c59ff9";
+		};
+	};
+	[91] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 524.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 91;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "69deba0c-bda7-386b-ba5a-7de1a9018538";
+		};
+	};
+	[92] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 528.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 92;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e0fef45b-b7d1-b4db-b346-9ffd0ed19f03";
+		};
+	};
+	[93] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 532.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 93;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f6f693eb-87a4-b061-a201-952cfc3dc788";
 		};
 	};
 	["mapID"] = 906;

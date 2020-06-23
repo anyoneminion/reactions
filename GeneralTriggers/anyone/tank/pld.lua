@@ -9,161 +9,6 @@ local obj1 = {
 		["conditions"] = {
 		};
 		["enabled"] = true;
-		["eventType"] = 10;
-		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
-SallyPLD.HotBarConfig.Provoke.enabled = true\
-SallyPLD.HotBarConfig.Shirks.enabled = true\
-SallyPLD.HotBarConfig.Reprisal.enabled = true\
-SallyPLD.HotBarConfig.Sheltron.enabled = true\
-SallyPLD.HotBarConfig.Rampart.enabled = true\
-SallyPLD.HotBarConfig.LowBlow.enabled = true\
-SallyPLD.HotBarConfig.Sentinel.enabled = true\
-SallyPLD.HotBarConfig.HollowGround.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.FoF.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.Sprint.enabled = true\
-SallyPLD.HotBarConfig.Interject.enabled = true\
-SallyPLD.HotBarConfig.Armslength.enabled = true\
-SallyPLD.HotBarConfig.Requiescat.enabled = true\
-SallyPLD.HotBarConfig.CoverTarget.enabled = true\
-SallyPLD.HotBarConfig.ShieldBash.enabled = true\
-SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
-SallyPLD.HotBarConfig.CoverOT.enabled = true\
-SallyPLD.HotBarConfig.Clemency.enabled = true\
-SallyPLD.HotBarConfig.InterventionOT.enabled = true\
-SallyPLD.HotBarConfig.Passage.enabled = true\
-SallyPLD.HotBarConfig.SmartPassage.enabled = true\
-self.used = true\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "e8738461-c3dd-c0bb-9e54-79779f9dc7f5";
-	};
-	[2] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
-SallyPLD.HotBarConfig.Provoke.enabled = true\
-SallyPLD.HotBarConfig.Shirks.enabled = true\
-SallyPLD.HotBarConfig.Reprisal.enabled = true\
-SallyPLD.HotBarConfig.Sheltron.enabled = true\
-SallyPLD.HotBarConfig.Rampart.enabled = true\
-SallyPLD.HotBarConfig.LowBlow.enabled = true\
-SallyPLD.HotBarConfig.Sentinel.enabled = true\
-SallyPLD.HotBarConfig.HollowGround.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.FoF.enabled = true\
-SallyPLD.HotBarConfig.Intervention.enabled = true\
-SallyPLD.HotBarConfig.Sprint.enabled = true\
-SallyPLD.HotBarConfig.Interject.enabled = true\
-SallyPLD.HotBarConfig.Armslength.enabled = true\
-SallyPLD.HotBarConfig.Requiescat.enabled = true\
-SallyPLD.HotBarConfig.CoverTarget.enabled = true\
-SallyPLD.HotBarConfig.ShieldBash.enabled = true\
-SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
-SallyPLD.HotBarConfig.CoverOT.enabled = true\
-SallyPLD.HotBarConfig.Clemency.enabled = true\
-SallyPLD.HotBarConfig.InterventionOT.enabled = true\
-SallyPLD.HotBarConfig.Passage.enabled = true\
-SallyPLD.HotBarConfig.SmartPassage.enabled = true\
-\
-SallyPLD.SkillSettings.Opener.enabled = false\
-SallyPLD.SkillSettings.FoF.enabled = true\
-SallyPLD.SkillSettings.Requiescat.enabled = true\
-SallyPLD.SkillSettings.SaveCD.enabled = false\
-SallyPLD.SkillSettings.Range.enabled = true\
-SallyPLD.SkillSettings.BurnBoss.enabled = false\
-SallyPLD.SkillSettings.Confiteor.enabled = true\
-SallyPLD.SkillSettings.Atonement.enabled = true\
-SallyPLD.SkillSettings.Intervene.enabled = true\
-SallyPLD.SkillSettings.DoTs.enabled = true\
-SallyPLD.SkillSettings.SpiritWithin.enabled = true\
-SallyPLD.SkillSettings.CirceOfScorn.enabled = true\
-SallyPLD.SkillSettings.SaveJumpStack.enabled = false\
-SallyPLD.SkillSettings.UseAOE.enabled = true\
-SallyPLD.SkillSettings.JumpRange.enabled = true\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyPLD.SkillSettings.Potion.enabled = true\
-end\
-\
-Player:ClearTarget()\
-\
-self.used = true\
-\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar/QT on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "10c80885-5136-300c-977e-4259385c88f1";
-	};
-	[3] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 19 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the paladin profile.\")\
-		elseif Player.job == 19 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 19 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "336d8baf-f749-db77-a527-0ef59a848557";
-	};
-	[4] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
@@ -970,6 +815,151 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "1fb826ce-b891-f1b2-b606-35bf9bd03e05";
 	};
+	[2] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "         -RESETS-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "2191cd3c-9953-4596-9dd2-b884f63112f1";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
+		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
+SallyPLD.HotBarConfig.Provoke.enabled = true\
+SallyPLD.HotBarConfig.Shirks.enabled = true\
+SallyPLD.HotBarConfig.Reprisal.enabled = true\
+SallyPLD.HotBarConfig.Sheltron.enabled = true\
+SallyPLD.HotBarConfig.Rampart.enabled = true\
+SallyPLD.HotBarConfig.LowBlow.enabled = true\
+SallyPLD.HotBarConfig.Sentinel.enabled = true\
+SallyPLD.HotBarConfig.HollowGround.enabled = true\
+SallyPLD.HotBarConfig.Intervention.enabled = true\
+SallyPLD.HotBarConfig.FoF.enabled = true\
+SallyPLD.HotBarConfig.Intervention.enabled = true\
+SallyPLD.HotBarConfig.Sprint.enabled = true\
+SallyPLD.HotBarConfig.Interject.enabled = true\
+SallyPLD.HotBarConfig.Armslength.enabled = true\
+SallyPLD.HotBarConfig.Requiescat.enabled = true\
+SallyPLD.HotBarConfig.CoverTarget.enabled = true\
+SallyPLD.HotBarConfig.ShieldBash.enabled = true\
+SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
+SallyPLD.HotBarConfig.CoverOT.enabled = true\
+SallyPLD.HotBarConfig.Clemency.enabled = true\
+SallyPLD.HotBarConfig.InterventionOT.enabled = true\
+SallyPLD.HotBarConfig.Passage.enabled = true\
+SallyPLD.HotBarConfig.SmartPassage.enabled = true\
+self.used = true\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset Hotbar on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "e8738461-c3dd-c0bb-9e54-79779f9dc7f5";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "SallyPLD.HotBarConfig.DivineVeil.enabled = true\
+SallyPLD.HotBarConfig.Provoke.enabled = true\
+SallyPLD.HotBarConfig.Shirks.enabled = true\
+SallyPLD.HotBarConfig.Reprisal.enabled = true\
+SallyPLD.HotBarConfig.Sheltron.enabled = true\
+SallyPLD.HotBarConfig.Rampart.enabled = true\
+SallyPLD.HotBarConfig.LowBlow.enabled = true\
+SallyPLD.HotBarConfig.Sentinel.enabled = true\
+SallyPLD.HotBarConfig.HollowGround.enabled = true\
+SallyPLD.HotBarConfig.Intervention.enabled = true\
+SallyPLD.HotBarConfig.FoF.enabled = true\
+SallyPLD.HotBarConfig.Intervention.enabled = true\
+SallyPLD.HotBarConfig.Sprint.enabled = true\
+SallyPLD.HotBarConfig.Interject.enabled = true\
+SallyPLD.HotBarConfig.Armslength.enabled = true\
+SallyPLD.HotBarConfig.Requiescat.enabled = true\
+SallyPLD.HotBarConfig.CoverTarget.enabled = true\
+SallyPLD.HotBarConfig.ShieldBash.enabled = true\
+SallyPLD.HotBarConfig.ClemencyTarget.enabled = true\
+SallyPLD.HotBarConfig.CoverOT.enabled = true\
+SallyPLD.HotBarConfig.Clemency.enabled = true\
+SallyPLD.HotBarConfig.InterventionOT.enabled = true\
+SallyPLD.HotBarConfig.Passage.enabled = true\
+SallyPLD.HotBarConfig.SmartPassage.enabled = true\
+\
+SallyPLD.SkillSettings.Opener.enabled = false\
+SallyPLD.SkillSettings.FoF.enabled = true\
+SallyPLD.SkillSettings.Requiescat.enabled = true\
+SallyPLD.SkillSettings.SaveCD.enabled = false\
+SallyPLD.SkillSettings.Range.enabled = true\
+SallyPLD.SkillSettings.BurnBoss.enabled = false\
+SallyPLD.SkillSettings.Confiteor.enabled = true\
+SallyPLD.SkillSettings.Atonement.enabled = true\
+SallyPLD.SkillSettings.Intervene.enabled = true\
+SallyPLD.SkillSettings.DoTs.enabled = true\
+SallyPLD.SkillSettings.SpiritWithin.enabled = true\
+SallyPLD.SkillSettings.CirceOfScorn.enabled = true\
+SallyPLD.SkillSettings.SaveJumpStack.enabled = false\
+SallyPLD.SkillSettings.UseAOE.enabled = true\
+SallyPLD.SkillSettings.JumpRange.enabled = true\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyPLD.SkillSettings.Potion.enabled = true\
+end\
+\
+Player:ClearTarget()\
+\
+self.used = true\
+\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset Hotbar/QT on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "10c80885-5136-300c-977e-4259385c88f1";
+	};
 	[5] = {
 		["actions"] = {
 		};
@@ -982,7 +972,110 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "--duty helper--";
+		["name"] = "          -MISC-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "0a4f1e83-f791-25e2-96c2-2d6924ab6b39";
+	};
+	[6] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 19 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the paladin profile. <se.1>\")\
+		elseif Player.job == 19 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 19 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "336d8baf-f749-db77-a527-0ef59a848557";
+	};
+	[7] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "if IsControlOpen(\"_QTEMash\") then\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+end\
+self.used = true\
+self.eventConditionMismatch = true -- supress log";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "active time maneuver";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "064a3e85-4a9b-c55a-875f-e4cd56c74278";
+	};
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "        -DUTY HELPER-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -994,13 +1087,14 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "f4bc806d-8e29-a697-839f-00a598e99f19";
 	};
-	[6] = {
+	[9] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1244,13 +1338,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "c9842488-a935-b42d-9977-abd12bafe25c";
 	};
-	[7] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 3542;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1792,13 +1887,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "f1c13d4b-40fe-252e-bf7c-cfc46f1546f1";
 	};
-	[8] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7538;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2131,13 +2227,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "bce7efbf-cef4-b30b-bb19-019dc7c5b636";
 	};
-	[9] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2215,6 +2312,9 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
+--e5-e8\
+---[19928] = true,\
+---[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\
@@ -2234,10 +2334,8 @@ return false";
 [18627] = true,\
 }\
 \
-if KnockbackTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+local caster = EntityList:Get(eventArgs.entityID)\
+return KnockbackTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};

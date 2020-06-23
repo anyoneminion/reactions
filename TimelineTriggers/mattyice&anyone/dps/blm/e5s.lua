@@ -148,6 +148,7 @@ self.used = true";
 data.PotsEnabled = true\
 end";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -211,6 +212,7 @@ end";
 					["actionLua"] = "SallyBLM.HotBarConfig.AmMouse.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -271,6 +273,7 @@ self.used = true";
 					["actionID"] = 7560;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -312,12 +315,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[8];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -355,12 +358,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[8];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -421,6 +424,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.LeyLines.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -482,6 +486,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.LeyLines.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -543,6 +548,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.SureCast.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -650,6 +656,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -710,6 +717,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -816,6 +824,7 @@ return false";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -876,6 +885,7 @@ self.used = true";
 					["actionID"] = 7560;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -917,12 +927,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -960,12 +970,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1028,6 +1038,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1088,6 +1099,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1194,6 +1206,7 @@ return false";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1248,6 +1261,210 @@ self.used = true";
 	};
 	[41] = {
 	};
+	[45] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 297.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "12d7fa1a-a7e4-7270-8000-37b5f98e762c";
+		};
+	};
+	[46] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 301.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 46;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "2133a22d-87d7-844c-91cb-8382259e25df";
+		};
+	};
+	[48] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 305.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 48;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "744a9410-60eb-4e54-921e-cbc028ffc44b";
+		};
+	};
+	[49] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 309;
+			["timeRange"] = false;
+			["timelineIndex"] = 49;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8d0d02dc-6ce8-50e0-a0fd-61728105bb87";
+		};
+	};
+	[50] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 312.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 50;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "33545c71-40b2-9897-ac18-c6d028d030de";
+		};
+	};
+	[51] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 316.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f3f4126e-34a4-d444-a028-6773883a959c";
+		};
+	};
 	[52] = {
 		[1] = {
 			["actions"] = {
@@ -1256,6 +1473,7 @@ self.used = true";
 					["actionID"] = 7560;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1297,12 +1515,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1340,12 +1558,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1397,6 +1615,108 @@ self.used = true";
 			["uuid"] = "db54f321-32c9-9168-a3dd-65126f533fdf";
 		};
 	};
+	[53] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 320.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 53;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "c23ca165-f806-ee05-9c61-b237b6d74dae";
+		};
+	};
+	[54] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 323.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 54;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "3a65865c-d4fa-b158-85f2-422a29289b06";
+		};
+	};
+	[55] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 327.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 55;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "5e834b9b-933d-14d1-b8c4-81be0466fc28";
+		};
+	};
 	[71] = {
 		[1] = {
 			["actions"] = {
@@ -1406,6 +1726,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1466,6 +1787,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1572,6 +1894,7 @@ return false";
 					["actionLua"] = "SallyBLM.SkillSettings.SaveCD.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1635,6 +1958,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.SureCast.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1740,6 +2064,7 @@ self.used = true";
 					["actionLua"] = "SallyBLM.SkillSettings.BurnBoss.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1894,6 +2219,7 @@ self.used = true";
 					["actionID"] = 7560;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1935,12 +2261,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1978,12 +2304,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2035,6 +2361,312 @@ self.used = true";
 			["uuid"] = "b5c738f8-538a-d9a3-8d71-78f5e3f756d4";
 		};
 	};
+	[83] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 502.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 83;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "b555799c-aa56-0e94-b87b-2796ec85ef89";
+		};
+	};
+	[84] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 506.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 84;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6c63973b-d1c6-85d9-b074-cba7ef44e123";
+		};
+	};
+	[86] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 510.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 86;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "2a106d88-8bb8-9b19-ad08-e33bc04b7d3f";
+		};
+	};
+	[87] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 513.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 87;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "198b8ee3-cd15-3520-a93b-41dba9e01b1c";
+		};
+	};
+	[88] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 517.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 88;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "fbac9e13-e5ac-714d-bed9-aa364c2f75aa";
+		};
+	};
+	[89] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 521.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 89;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f8155efc-07d9-71a3-b26c-ad8bef0210ca";
+		};
+	};
+	[91] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 524.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 91;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e0458fb9-9ef1-5013-9e45-2a1d602cb2f3";
+		};
+	};
+	[92] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 528.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 92;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0792eff4-c927-4c86-a2b2-df90041aeeac";
+		};
+	};
+	[93] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 532.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 93;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "490f5b5c-0233-7f22-b68a-98edb4e675cf";
+		};
+	};
 	[99] = {
 		[1] = {
 			["actions"] = {
@@ -2043,6 +2675,7 @@ self.used = true";
 					["actionID"] = 7560;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2084,12 +2717,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2127,12 +2760,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

@@ -189,6 +189,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -235,7 +236,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -279,7 +280,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -338,6 +339,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -446,6 +448,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -553,6 +556,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -592,6 +596,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -834,6 +839,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -874,6 +880,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1118,6 +1125,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1162,7 +1170,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1223,6 +1231,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1330,6 +1339,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1392,6 +1402,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1437,7 +1448,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1496,6 +1507,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1558,6 +1570,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1597,6 +1610,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1839,6 +1853,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -1879,6 +1894,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2123,6 +2139,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2169,7 +2186,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2213,7 +2230,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2274,6 +2291,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2382,6 +2400,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2421,6 +2440,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2663,6 +2683,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2703,6 +2724,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2743,6 +2765,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -2783,6 +2806,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3117,6 +3141,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3271,6 +3296,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3378,6 +3404,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3483,6 +3510,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3529,7 +3557,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3573,7 +3601,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3634,6 +3662,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3741,6 +3770,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.RawIntuition.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3802,6 +3832,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3838,6 +3869,7 @@ self.used = true";
 					["actionID"] = 43;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3875,6 +3907,7 @@ self.used = true";
 					["actionID"] = 7531;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -3914,6 +3947,7 @@ self.used = true";
 					["actionID"] = 40;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4248,6 +4282,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4308,6 +4343,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4354,7 +4390,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4413,6 +4449,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4474,6 +4511,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4529,6 +4567,74 @@ self.used = true";
 	};
 	[41] = {
 	};
+	[45] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 297.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9dd8e71c-6ffc-27fc-9bb4-407e59192e79";
+		};
+	};
+	[46] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 301.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 46;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "1314e951-8269-9485-a673-eb343e359f5d";
+		};
+	};
 	[47] = {
 		[1] = {
 			["actions"] = {
@@ -4539,6 +4645,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4578,6 +4685,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4820,6 +4928,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4860,6 +4969,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4900,6 +5010,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -4940,6 +5051,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5266,6 +5378,142 @@ self.used = true\
 			["uuid"] = "ebb84e1c-7ec2-4674-b807-efcd2c18dd9a";
 		};
 	};
+	[48] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 305.3;
+			["timeRange"] = false;
+			["timelineIndex"] = 48;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "76dbae48-a5fa-5d10-9fa9-e8b637a77257";
+		};
+	};
+	[49] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 309;
+			["timeRange"] = false;
+			["timelineIndex"] = 49;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "a21f03bf-7f9c-bee3-ae11-16dd20c68a41";
+		};
+	};
+	[50] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 312.7;
+			["timeRange"] = false;
+			["timelineIndex"] = 50;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "faadd3b6-edd4-df7b-909a-3fc188858559";
+		};
+	};
+	[51] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 316.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "562cfaa2-c432-0886-9992-4d0028b224ee";
+		};
+	};
 	[52] = {
 		[1] = {
 			["actions"] = {
@@ -5275,6 +5523,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5380,6 +5629,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5426,7 +5676,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5470,7 +5720,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5522,6 +5772,108 @@ self.used = true";
 			["uuid"] = "830dcab9-58d6-3360-ada8-f2bd4ffab25e";
 		};
 	};
+	[53] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 320.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 53;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "36ee5f16-3fef-8f43-b450-26578e0555c0";
+		};
+	};
+	[54] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 323.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 54;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8f2fea0c-00c2-baf6-92f6-c2d9aebfc2e3";
+		};
+	};
+	[55] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 327.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 55;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ceb78f9f-4eca-eb43-9a3f-26ca050d669f";
+		};
+	};
 	[57] = {
 		[1] = {
 			["actions"] = {
@@ -5531,6 +5883,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5639,6 +5992,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5747,6 +6101,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -5786,6 +6141,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6028,6 +6384,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6068,6 +6425,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6108,6 +6466,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6148,6 +6507,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6483,6 +6843,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6529,7 +6890,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6573,7 +6934,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6634,6 +6995,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.RawIntuition.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6695,6 +7057,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6731,6 +7094,7 @@ self.used = true";
 					["actionID"] = 43;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6768,6 +7132,7 @@ self.used = true";
 					["actionID"] = 7531;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -6807,6 +7172,7 @@ self.used = true";
 					["actionID"] = 40;
 					["actionLua"] = "";
 					["allowInterrupt"] = true;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7141,6 +7507,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7201,6 +7568,7 @@ self.used = true";
 					["actionID"] = -1;
 					["actionLua"] = "";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7247,7 +7615,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7306,6 +7674,7 @@ return false";
 					["actionLua"] = "SallyWAR.SkillSettings.InnerRelease.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7367,6 +7736,7 @@ self.used = true";
 end\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7431,6 +7801,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7536,6 +7907,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7582,7 +7954,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7626,7 +7998,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7687,6 +8059,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7794,6 +8167,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Armslength.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7839,7 +8213,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7900,6 +8274,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -7946,7 +8321,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7990,7 +8365,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8042,6 +8417,74 @@ self.used = true";
 			["uuid"] = "8762d4b2-c36b-b9c6-92e4-2c3fd125a1ec";
 		};
 	};
+	[83] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 502.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 83;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f677554a-e840-6523-9bb3-45d0b2c72b6d";
+		};
+	};
+	[84] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 506.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 84;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "a0ca4cef-33b9-b6b0-b9e2-30e330cee817";
+		};
+	};
 	[85] = {
 		[1] = {
 			["actions"] = {
@@ -8052,6 +8495,7 @@ self.used = true";
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8091,6 +8535,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8333,6 +8778,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8373,6 +8819,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8413,6 +8860,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8453,6 +8901,7 @@ self.used = true\
 self.used = true\
 ";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8779,6 +9228,142 @@ self.used = true\
 			["uuid"] = "37b78d34-babf-2787-aec7-9255e70502cb";
 		};
 	};
+	[86] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 510.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 86;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "0b07666f-fa24-4f97-bee8-0820cc8f93ed";
+		};
+	};
+	[87] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 513.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 87;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "8f3ed42f-9f6b-9c66-aeab-dd04eb40313d";
+		};
+	};
+	[88] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 517.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 88;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "773cb2b6-0b41-0a40-bffc-ca3fea02d4ad";
+		};
+	};
+	[89] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 521.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 89;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "78b52d0d-ac26-4279-8055-fee55ab27e40";
+		};
+	};
 	[90] = {
 		[1] = {
 			["actions"] = {
@@ -8788,6 +9373,7 @@ self.used = true\
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -8834,7 +9420,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8878,7 +9464,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8930,6 +9516,108 @@ self.used = true";
 			["uuid"] = "ed695c57-89a8-fc47-8854-990a749700c0";
 		};
 	};
+	[91] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 524.8;
+			["timeRange"] = false;
+			["timelineIndex"] = 91;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "bafb6141-7831-cdb8-a71d-a03a85e54f30";
+		};
+	};
+	[92] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 528.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 92;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ff5898d1-fb97-42c6-af33-1bd7480c3626";
+		};
+	};
+	[93] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then\
+	self.used = true\
+end\
+\
+for id, ent in pairs(TensorCore.entityList(\"\")) do\
+    if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    end\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw cl aoe";
+			["throttleTime"] = 0;
+			["time"] = 532.2;
+			["timeRange"] = false;
+			["timelineIndex"] = 93;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "7db1086e-28e5-48de-9aa2-87a7cb329fb0";
+		};
+	};
 	[95] = {
 		[1] = {
 			["actions"] = {
@@ -8939,6 +9627,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9046,6 +9735,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Shake.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9151,6 +9841,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9197,7 +9888,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9241,7 +9932,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9302,6 +9993,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9348,7 +10040,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9392,7 +10084,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9453,6 +10145,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9499,7 +10192,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9543,7 +10236,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9602,6 +10295,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9709,6 +10403,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9755,7 +10450,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9799,7 +10494,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9860,6 +10555,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.Reprisal.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;
@@ -9906,7 +10602,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9950,7 +10646,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10011,6 +10707,7 @@ self.used = true";
 					["actionLua"] = "SallyWAR.HotBarConfig.NascentFlash.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
 					["castAtMouse"] = false;
 					["castPosX"] = 0;
 					["castPosY"] = 0;

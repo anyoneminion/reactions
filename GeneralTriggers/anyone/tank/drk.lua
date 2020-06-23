@@ -9,150 +9,6 @@ local obj1 = {
 		["conditions"] = {
 		};
 		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
-SallyDRK.HotBarConfig.Shirks.enabled = true\
-SallyDRK.HotBarConfig.Reprisal.enabled = true\
-SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
-SallyDRK.HotBarConfig.Rampart.enabled = true\
-SallyDRK.HotBarConfig.LowBlow.enabled = true\
-SallyDRK.HotBarConfig.DarkMind.enabled = true\
-SallyDRK.HotBarConfig.LivingDead.enabled = true\
-SallyDRK.HotBarConfig.TBN.enabled = true\
-SallyDRK.HotBarConfig.TBN_OT.enabled = true\
-SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
-SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
-SallyDRK.HotBarConfig.Delirium.enabled = true\
-SallyDRK.HotBarConfig.Sprint.enabled = true\
-SallyDRK.HotBarConfig.Interject.enabled = true\
-SallyDRK.HotBarConfig.Armslength.enabled = true\
-SallyDRK.HotBarConfig.LivingShadow.enabled = true\
-SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
-SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
-SallyDRK.HotBarConfig.Plunge.enabled = true\
-SallyDRK.HotBarConfig.LB.enabled = true\
-\
-SallyDRK.SkillSettings.Opener.enabled = false\
-SallyDRK.SkillSettings.Delirium.enabled = true\
-SallyDRK.SkillSettings.LivingShadow.enabled = true\
-SallyDRK.SkillSettings.SaveCD.enabled = false\
-SallyDRK.SkillSettings.Range.enabled = true\
-SallyDRK.SkillSettings.BloodWeapon.enabled = true\
-SallyDRK.SkillSettings.CarveAndSplit.enabled = true\
-SallyDRK.SkillSettings.AbyssalDrain.enabled = true\
-SallyDRK.SkillSettings.UseAOE.enabled = true\
-SallyDRK.SkillSettings.JumpRange.enabled = true\
-SallyDRK.SkillSettings.SaltedEarth.enabled = true\
-\
-Player:ClearTarget()\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyDRK.SkillSettings.Potion.enabled = true\
-end\
-\
-self.used = true\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar/qt on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "dd236dc5-7267-26cc-aa6c-b31ef3abad67";
-	};
-	[2] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
-		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
-SallyDRK.HotBarConfig.Shirks.enabled = true\
-SallyDRK.HotBarConfig.Reprisal.enabled = true\
-SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
-SallyDRK.HotBarConfig.Rampart.enabled = true\
-SallyDRK.HotBarConfig.LowBlow.enabled = true\
-SallyDRK.HotBarConfig.DarkMind.enabled = true\
-SallyDRK.HotBarConfig.LivingDead.enabled = true\
-SallyDRK.HotBarConfig.TBN.enabled = true\
-SallyDRK.HotBarConfig.TBN_OT.enabled = true\
-SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
-SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
-SallyDRK.HotBarConfig.Delirium.enabled = true\
-SallyDRK.HotBarConfig.Sprint.enabled = true\
-SallyDRK.HotBarConfig.Interject.enabled = true\
-SallyDRK.HotBarConfig.Armslength.enabled = true\
-SallyDRK.HotBarConfig.LivingShadow.enabled = true\
-SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
-SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
-SallyDRK.HotBarConfig.Plunge.enabled = true\
-SallyDRK.HotBarConfig.LB.enabled = true\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "6d180639-e778-d7ec-bfb6-cf30a446e1b6";
-	};
-	[3] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 32 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the dark knight profile.\")\
-		elseif Player.job == 32 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 32 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "d9f00aed-358b-eda6-bdbd-d46d769fe1db";
-	};
-	[4] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
@@ -959,6 +815,140 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "604a0704-23cb-90e9-9484-b3a0c06cf8cb";
 	};
+	[2] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "         -RESETS-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "08494ca3-78ed-f2e7-b9db-2c36561ae621";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
+SallyDRK.HotBarConfig.Shirks.enabled = true\
+SallyDRK.HotBarConfig.Reprisal.enabled = true\
+SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
+SallyDRK.HotBarConfig.Rampart.enabled = true\
+SallyDRK.HotBarConfig.LowBlow.enabled = true\
+SallyDRK.HotBarConfig.DarkMind.enabled = true\
+SallyDRK.HotBarConfig.LivingDead.enabled = true\
+SallyDRK.HotBarConfig.TBN.enabled = true\
+SallyDRK.HotBarConfig.TBN_OT.enabled = true\
+SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
+SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
+SallyDRK.HotBarConfig.Delirium.enabled = true\
+SallyDRK.HotBarConfig.Sprint.enabled = true\
+SallyDRK.HotBarConfig.Interject.enabled = true\
+SallyDRK.HotBarConfig.Armslength.enabled = true\
+SallyDRK.HotBarConfig.LivingShadow.enabled = true\
+SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
+SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
+SallyDRK.HotBarConfig.Plunge.enabled = true\
+SallyDRK.HotBarConfig.LB.enabled = true\
+\
+SallyDRK.SkillSettings.Opener.enabled = false\
+SallyDRK.SkillSettings.Delirium.enabled = true\
+SallyDRK.SkillSettings.LivingShadow.enabled = true\
+SallyDRK.SkillSettings.SaveCD.enabled = false\
+SallyDRK.SkillSettings.Range.enabled = true\
+SallyDRK.SkillSettings.BloodWeapon.enabled = true\
+SallyDRK.SkillSettings.CarveAndSplit.enabled = true\
+SallyDRK.SkillSettings.AbyssalDrain.enabled = true\
+SallyDRK.SkillSettings.UseAOE.enabled = true\
+SallyDRK.SkillSettings.JumpRange.enabled = true\
+SallyDRK.SkillSettings.SaltedEarth.enabled = true\
+\
+Player:ClearTarget()\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyDRK.SkillSettings.Potion.enabled = true\
+end\
+\
+self.used = true\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "reset hotbar/qt on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "dd236dc5-7267-26cc-aa6c-b31ef3abad67";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
+		["execute"] = "SallyDRK.HotBarConfig.Provoke.enabled = true\
+SallyDRK.HotBarConfig.Shirks.enabled = true\
+SallyDRK.HotBarConfig.Reprisal.enabled = true\
+SallyDRK.HotBarConfig.DarkMissionary.enabled = true\
+SallyDRK.HotBarConfig.Rampart.enabled = true\
+SallyDRK.HotBarConfig.LowBlow.enabled = true\
+SallyDRK.HotBarConfig.DarkMind.enabled = true\
+SallyDRK.HotBarConfig.LivingDead.enabled = true\
+SallyDRK.HotBarConfig.TBN.enabled = true\
+SallyDRK.HotBarConfig.TBN_OT.enabled = true\
+SallyDRK.HotBarConfig.SaltedEarth.enabled = true\
+SallyDRK.HotBarConfig.BloodWeapon.enabled = true\
+SallyDRK.HotBarConfig.Delirium.enabled = true\
+SallyDRK.HotBarConfig.Sprint.enabled = true\
+SallyDRK.HotBarConfig.Interject.enabled = true\
+SallyDRK.HotBarConfig.Armslength.enabled = true\
+SallyDRK.HotBarConfig.LivingShadow.enabled = true\
+SallyDRK.HotBarConfig.FloodOfShadow.enabled = true\
+SallyDRK.HotBarConfig.EdgeOfShadow.enabled = true\
+SallyDRK.HotBarConfig.Plunge.enabled = true\
+SallyDRK.HotBarConfig.LB.enabled = true\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "reset hotbar on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "6d180639-e778-d7ec-bfb6-cf30a446e1b6";
+	};
 	[5] = {
 		["actions"] = {
 		};
@@ -971,7 +961,110 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "--duty helper--";
+		["name"] = "          -MISC-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "040acb90-973c-ac83-b1e4-b8b992bee874";
+	};
+	[6] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 32 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the dark knight profile. <se.1>\")\
+		elseif Player.job == 32 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 32 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "d9f00aed-358b-eda6-bdbd-d46d769fe1db";
+	};
+	[7] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "if IsControlOpen(\"_QTEMash\") then\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+end\
+self.used = true\
+self.eventConditionMismatch = true -- supress log";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "active time maneuver";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "a9567017-f14e-9bfa-9b50-f895dd14d4d5";
+	};
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "        -DUTY HELPER-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -983,13 +1076,14 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "3941f33b-b9a8-2a65-96dc-c606f245eb72";
 	};
-	[6] = {
+	[9] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1233,13 +1327,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "5f3ab007-cd84-306c-a643-d9c66deb60ca";
 	};
-	[7] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 16471;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1279,6 +1374,7 @@ return false";
 				["actionID"] = 7393;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1879,13 +1975,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "f122fd77-4b3a-fab8-8a01-6568c5ed2715";
 	};
-	[8] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7538;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2218,13 +2315,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "b6a27685-b3bf-af55-91cc-611af8a91816";
 	};
-	[9] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2302,6 +2400,9 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
+--e5-e8\
+---[19928] = true,\
+---[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\
@@ -2321,10 +2422,8 @@ return false";
 [18627] = true,\
 }\
 \
-if KnockbackTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+local caster = EntityList:Get(eventArgs.entityID)\
+return KnockbackTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};

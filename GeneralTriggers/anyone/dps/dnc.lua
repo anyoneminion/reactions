@@ -8,147 +8,6 @@ local obj1 = {
 		};
 		["conditions"] = {
 		};
-		["enabled"] = false;
-		["eventType"] = 1;
-		["execute"] = "";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "--misc--";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "2bdcdaaa-921f-e5b0-9f29-838e8bb4f0e4";
-	};
-	[2] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
-		["execute"] = "if Player.job ~= 38 then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-data.nilsPlayground.timeOfDeath = Now()\
-\
-if SallyDNC ~= nil then\
-  -- reset hotbar\
-  SallyDNC.HotBarConfig.Armslength.enabled = true\
-  SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
-  SallyDNC.HotBarConfig.Devilment.enabled = true\
-  SallyDNC.HotBarConfig.EnAvant.enabled = true\
-  SallyDNC.HotBarConfig.Flourish.enabled = true\
-  SallyDNC.HotBarConfig.Improv.enabled = true\
-  SallyDNC.HotBarConfig.LB.enabled = true\
-  SallyDNC.HotBarConfig.SecondWind.enabled = true\
-  SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
-  SallyDNC.HotBarConfig.Sprint.enabled = true\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true \
-return nil";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset: on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 10;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5";
-	};
-	[3] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "if Player.job ~= 38 or SallyDNC == nil then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-\
--- reset hotbar\
-SallyDNC.HotBarConfig.Armslength.enabled = true\
-SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
-SallyDNC.HotBarConfig.Devilment.enabled = true\
-SallyDNC.HotBarConfig.EnAvant.enabled = true\
-SallyDNC.HotBarConfig.Flourish.enabled = true\
-SallyDNC.HotBarConfig.Improv.enabled = true\
-SallyDNC.HotBarConfig.LB.enabled = true\
-SallyDNC.HotBarConfig.SecondWind.enabled = true\
-SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
-SallyDNC.HotBarConfig.Sprint.enabled = true\
-\
-\
--- reset quick toggles\
-SallyDNC.SkillSettings.BurnCD.enabled = false\
-SallyDNC.SkillSettings.Devilment.enabled = true\
-SallyDNC.SkillSettings.FanDance3IsAOE.enabled = false\
-SallyDNC.SkillSettings.Flourish.enabled = true\
-SallyDNC.SkillSettings.Opener.enabled = false\
--- SallyDNC.SkillSettings.Potion.enabled = true\
-SallyDNC.SkillSettings.SaberDance.enabled = true\
-SallyDNC.SkillSettings.SaberIsAOE.enabled = false\
-SallyDNC.SkillSettings.SaveCD.enabled = false\
-SallyDNC.SkillSettings.StandardStep.enabled = true\
-SallyDNC.SkillSettings.TechStep.enabled = true\
-SallyDNC.SkillSettings.UseAOE.enabled = true\
-SallyDNC.SkillSettings.HoldFans.enabled = false\
-SallyDNC.SkillSettings.WindMillIsAOE.enabled = false\
-SallyDNC.SkillSettings.BloodShowerIsAOE.enabled = false\
-\
-Player:ClearTarget()\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyDNC.SkillSettings.Potion.enabled = true\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true \
-return nil";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset: toggles on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 10;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1";
-	};
-	[4] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
 		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
@@ -956,22 +815,135 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "7f10e422-8ebf-de76-a3c4-1781596a8106";
 	};
+	[2] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "         -RESETS-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "2bdcdaaa-921f-e5b0-9f29-838e8bb4f0e4";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
+		["execute"] = "  SallyDNC.HotBarConfig.Armslength.enabled = true\
+  SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
+  SallyDNC.HotBarConfig.Devilment.enabled = true\
+  SallyDNC.HotBarConfig.EnAvant.enabled = true\
+  SallyDNC.HotBarConfig.Flourish.enabled = true\
+  SallyDNC.HotBarConfig.Improv.enabled = true\
+  SallyDNC.HotBarConfig.LB.enabled = true\
+  SallyDNC.HotBarConfig.SecondWind.enabled = true\
+  SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
+  SallyDNC.HotBarConfig.Sprint.enabled = true\
+self.used = true ";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "a4e01799-ba95-a0f1-8e72-f997f037c8c5";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "-- reset hotbar\
+SallyDNC.HotBarConfig.Armslength.enabled = true\
+SallyDNC.HotBarConfig.CuringWaltz.enabled = true\
+SallyDNC.HotBarConfig.Devilment.enabled = true\
+SallyDNC.HotBarConfig.EnAvant.enabled = true\
+SallyDNC.HotBarConfig.Flourish.enabled = true\
+SallyDNC.HotBarConfig.Improv.enabled = true\
+SallyDNC.HotBarConfig.LB.enabled = true\
+SallyDNC.HotBarConfig.SecondWind.enabled = true\
+SallyDNC.HotBarConfig.ShieldSamba.enabled = true\
+SallyDNC.HotBarConfig.Sprint.enabled = true\
+\
+-- reset quick toggles\
+SallyDNC.SkillSettings.BurnCD.enabled = false\
+SallyDNC.SkillSettings.Devilment.enabled = true\
+SallyDNC.SkillSettings.FanDance3IsAOE.enabled = false\
+SallyDNC.SkillSettings.Flourish.enabled = true\
+SallyDNC.SkillSettings.Opener.enabled = false\
+SallyDNC.SkillSettings.SaberDance.enabled = true\
+SallyDNC.SkillSettings.SaberIsAOE.enabled = false\
+SallyDNC.SkillSettings.SaveCD.enabled = false\
+SallyDNC.SkillSettings.StandardStep.enabled = true\
+SallyDNC.SkillSettings.TechStep.enabled = true\
+SallyDNC.SkillSettings.UseAOE.enabled = true\
+SallyDNC.SkillSettings.HoldFans.enabled = false\
+SallyDNC.SkillSettings.WindMillIsAOE.enabled = false\
+SallyDNC.SkillSettings.BloodShowerIsAOE.enabled = false\
+\
+Player:ClearTarget()\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyDNC.SkillSettings.Potion.enabled = true\
+end\
+\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset: toggles on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "eb121c78-18a1-7114-8468-e7ddc1e349b1";
+	};
 	[5] = {
 		["actions"] = {
 		};
 		["conditions"] = {
 		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
----alternatively just disable this if you're 3000 iq and remember to use dance partner\
-SallyDNC.SkillSettings.AutoPartner.enabled = true\
-self.used = true";
-		["executeType"] = 2;
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "auto partner once at map change";
+		["name"] = "          -MISC-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -981,43 +953,9 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf";
+		["uuid"] = "2e508776-75e0-a783-8fc8-84023e31c8d3";
 	};
 	[6] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 38 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the dancer profile.\")\
-		elseif Player.job == 38 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 38 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e";
-	};
-	[7] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -1031,6 +969,7 @@ if time ~= nil then\
 end\
 self.used = true";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1068,6 +1007,7 @@ self.used = true";
 				["actionLua"] = "SallyDNC.SkillSettings.Opener.enabled = true\
 self.used = true";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPos"] = {
 				};
@@ -1112,6 +1052,7 @@ self.used = true";
 				["actionID"] = 15997;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1152,6 +1093,7 @@ self.used = true";
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1192,6 +1134,7 @@ self.used = true";
 				["actionLua"] = "gStartCombat = true\
 self.used = true";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1234,6 +1177,7 @@ self.used = true";
     self.used = true\
 end";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1270,6 +1214,7 @@ end";
 				["actionID"] = -1;
 				["actionLua"] = "self.used = true";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1748,7 +1693,7 @@ return time ~= nil";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "prepull shit";
+		["name"] = "prepull helper";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -1760,7 +1705,7 @@ return time ~= nil";
 		["used"] = false;
 		["uuid"] = "c705fb38-be90-8707-be36-30b1d3761973";
 	};
-	[8] = {
+	[7] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -1768,6 +1713,7 @@ return time ~= nil";
 				["actionLua"] = "data.countdownCanceled = true\
 self.used = true";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1871,7 +1817,7 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "countdown cancel";
+		["name"] = "prepull cancel";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -1883,7 +1829,68 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "40d38b51-fff3-604a-bdd7-384d8d9cd4cf";
 	};
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 38 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the dancer profile. <se.1>\")\
+		elseif Player.job == 38 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 38 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e";
+	};
 	[9] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "---enables auto partner after changing maps (ie loading into savage zones), can be disabled afterwards and won't be used again in that instance\
+---alternatively just disable this if you're 3000 iq and remember to use dance partner\
+SallyDNC.SkillSettings.AutoPartner.enabled = true\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "auto partner once at map change";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "32e7c405-5f17-35a4-bfce-e25fc47837cf";
+	};
+	[10] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -1895,7 +1902,7 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "--duty helper--";
+		["name"] = "        -DUTY HELPER-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -1907,13 +1914,14 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "d701ee61-07a2-61c8-a9df-819535b1bc04";
 	};
-	[10] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2157,13 +2165,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "bd5a21dd-c5d6-7e3c-883a-299270a9cf5e";
 	};
-	[11] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 16012;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2705,13 +2714,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "3e7e4fb9-2a27-03fa-9c15-2ad2fe7a900b";
 	};
-	[12] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7551;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -3041,13 +3051,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "2b3b04a3-f793-cf6d-aacb-5ee7d40d51ea";
 	};
-	[13] = {
+	[14] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -3096,7 +3107,7 @@ return false";
 				["comparator"] = 1;
 				["conditionLua"] = "local KnockbackTable = {\
 ---start of dungeon spell ids\
----dungeons\
+--dungeons\
 [8328] = true,\
 [8329] = true,\
 [8293] = true,\
@@ -3125,6 +3136,9 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
+--e5-e8\
+---[19928] = true,\
+---[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\
@@ -3144,10 +3158,8 @@ return false";
 [18627] = true,\
 }\
 \
-if KnockbackTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+local caster = EntityList:Get(eventArgs.entityID)\
+return KnockbackTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};

@@ -5,651 +5,6 @@ local multiRefObjects = {
 local obj1 = {
 	[1] = {
 		["actions"] = {
-			[1] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
-\
-if Player.job ~= 21 or Player.level < 58 then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- if action on cooldown\
-local actionskill = ActionList:Get(1, 3552)\
-local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
-\
-if isActionAvailable == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- check regen buffs\
-local hasRegen = false\
-if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
-		hasRegen = true\
-end\
-\
-if hasRegen and Player.hp.percent < 30 then\
-		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-if hasRegen == false and Player.hp.percent < 40 then\
-SallyWAR.HotBarConfig.Equilibrium.enabled = false\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["conditions"] = {
-					[1] = 1;
-					[2] = 2;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "use if no weakness/brink";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-			[2] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
-\
-if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- if action on cooldown\
-local actionskill = ActionList:Get(1, 3552)\
-local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
-\
-if isActionAvailable == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- check regen buffs\
-local hasRegen = false\
-if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
-		hasRegen = true\
-end\
-\
-if hasRegen and Player.hp.percent < 30 then\
-		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-if hasRegen == false and Player.hp.percent < 40 then\
-SallyWAR.HotBarConfig.Equilibrium.enabled = false\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["conditions"] = {
-					[1] = 3;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "dont if weak > 95s";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-			[3] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
-\
-if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- if action on cooldown\
-local actionskill = ActionList:Get(1, 3552)\
-local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
-\
-if isActionAvailable == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- check regen buffs\
-local hasRegen = false\
-if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
-		hasRegen = true\
-end\
-\
-if hasRegen and Player.hp.percent < 30 then\
-		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-if hasRegen == false and Player.hp.percent < 40 then\
-SallyWAR.HotBarConfig.Equilibrium.enabled = false\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true\
-return nil";
-				["allowInterrupt"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["conditions"] = {
-					[1] = 4;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "dont if brink > 95s";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
-		["conditions"] = {
-			[1] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 2;
-				["buffDuration"] = 0;
-				["buffID"] = 43;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[2] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 2;
-				["buffDuration"] = 0;
-				["buffID"] = 44;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[3] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 3;
-				["buffDuration"] = 95;
-				["buffID"] = 43;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[4] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 3;
-				["buffDuration"] = 95;
-				["buffID"] = 44;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-		};
-		["enabled"] = true;
-		["eventType"] = 1;
-		["execute"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
-\
-if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- if action on cooldown\
-local actionskill = ActionList:Get(1, 3552)\
-local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
-\
-if isActionAvailable == false then\
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
--- check regen buffs\
-local hasRegen = false\
-if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
-		hasRegen = true\
-end\
-\
-if hasRegen and Player.hp.percent < 30 then\
-		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
-		self.eventConditionMismatch = true -- suppressing the log\
-		self.used = true \
-		return nil\
-end\
-\
-if hasRegen == false and Player.hp.percent < 40 then\
-SallyWAR.HotBarConfig.Equilibrium.enabled = false\
-end\
-\
-self.eventConditionMismatch = true -- suppressing the log\
-self.used = true\
-return nil";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Nil's Equilibrium";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "9c5c6bf8-f542-6db3-a285-1fc22155277f";
-	};
-	[2] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
-		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
-SallyWAR.HotBarConfig.Provoke.enabled = true\
-SallyWAR.HotBarConfig.Shirks.enabled = true\
-SallyWAR.HotBarConfig.Reprisal.enabled = true\
-SallyWAR.HotBarConfig.RawIntuition.enabled = true\
-SallyWAR.HotBarConfig.Rampart.enabled = true\
-SallyWAR.HotBarConfig.LowBlow.enabled = true\
-SallyWAR.HotBarConfig.Vengeance.enabled = true\
-SallyWAR.HotBarConfig.Holm.enabled = true\
-SallyWAR.HotBarConfig.Thrill.enabled = true\
-SallyWAR.HotBarConfig.Equilibrium.enabled = true\
-SallyWAR.HotBarConfig.NascentFlash.enabled = true\
-SallyWAR.HotBarConfig.InnerRelease.enabled = true\
-SallyWAR.HotBarConfig.Onslaught.enabled = true\
-SallyWAR.HotBarConfig.Sprint.enabled = true\
-SallyWAR.HotBarConfig.Interject.enabled = true\
-SallyWAR.HotBarConfig.Armslength.enabled = true\
-SallyWAR.HotBarConfig.Upheaval.enabled = true\
-self.used = true\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyPLD.SkillSettings.Potion.enabled = true\
-end\
-\
-if Player.job ~= 21 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "d08a15b1-8d18-955d-a632-b0369b4dda97";
-	};
-	[3] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
-SallyWAR.HotBarConfig.Provoke.enabled = true\
-SallyWAR.HotBarConfig.Shirks.enabled = true\
-SallyWAR.HotBarConfig.Reprisal.enabled = true\
-SallyWAR.HotBarConfig.RawIntuition.enabled = true\
-SallyWAR.HotBarConfig.Rampart.enabled = true\
-SallyWAR.HotBarConfig.LowBlow.enabled = true\
-SallyWAR.HotBarConfig.Vengeance.enabled = true\
-SallyWAR.HotBarConfig.Holm.enabled = true\
-SallyWAR.HotBarConfig.Thrill.enabled = true\
-SallyWAR.HotBarConfig.Equilibrium.enabled = true\
-SallyWAR.HotBarConfig.NascentFlash.enabled = true\
-SallyWAR.HotBarConfig.InnerRelease.enabled = true\
-SallyWAR.HotBarConfig.Onslaught.enabled = true\
-SallyWAR.HotBarConfig.Sprint.enabled = true\
-SallyWAR.HotBarConfig.Interject.enabled = true\
-SallyWAR.HotBarConfig.Armslength.enabled = true\
-SallyWAR.HotBarConfig.Upheaval.enabled = true\
-\
-SallyWAR.SkillSettings.Opener.enabled = false\
-SallyWAR.SkillSettings.InnerRelease.enabled = true\
-SallyWAR.SkillSettings.Onslaught.enabled = true\
-SallyWAR.SkillSettings.SaveCD.enabled = false\
-SallyWAR.SkillSettings.Range.enabled = true\
-SallyWAR.SkillSettings.RefreshEye.enabled = true\
-SallyWAR.SkillSettings.Upheaval.enabled = true\
-SallyWAR.SkillSettings.Infuriate.enabled = true\
-SallyWAR.SkillSettings.UseAOE.enabled = true\
-SallyWAR.SkillSettings.JumpRange.enabled = true\
--- SallyWAR.SkillSettings.Potion.enabled = true\
---- remove \"--\" from the above line to have it enable potions on wipe.\
-self.used = true\
-\
-Player:ClearTarget()\
-\
-if Player.job ~= 21 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbar/QT on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "c4bdc4b6-1bf0-6fa3-8e73-655ba34e5f23";
-	};
-	[4] = {
-		["actions"] = {
 		};
 		["conditions"] = {
 		};
@@ -1460,7 +815,703 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "57e01a58-d834-6524-87d1-2331c000c3ce";
 	};
+	[2] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "         -RESETS-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "f6a788df-a69b-5571-8f34-05f0d9a061d4";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
+		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
+SallyWAR.HotBarConfig.Provoke.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
+SallyWAR.HotBarConfig.Reprisal.enabled = true\
+SallyWAR.HotBarConfig.RawIntuition.enabled = true\
+SallyWAR.HotBarConfig.Rampart.enabled = true\
+SallyWAR.HotBarConfig.LowBlow.enabled = true\
+SallyWAR.HotBarConfig.Vengeance.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
+SallyWAR.HotBarConfig.Thrill.enabled = true\
+SallyWAR.HotBarConfig.Equilibrium.enabled = true\
+SallyWAR.HotBarConfig.NascentFlash.enabled = true\
+SallyWAR.HotBarConfig.InnerRelease.enabled = true\
+SallyWAR.HotBarConfig.Onslaught.enabled = true\
+SallyWAR.HotBarConfig.Sprint.enabled = true\
+SallyWAR.HotBarConfig.Interject.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
+SallyWAR.HotBarConfig.Upheaval.enabled = true\
+self.used = true\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyPLD.SkillSettings.Potion.enabled = true\
+end\
+\
+if Player.job ~= 21 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset Hotbar on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "d08a15b1-8d18-955d-a632-b0369b4dda97";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "SallyWAR.HotBarConfig.Shake.enabled = true\
+SallyWAR.HotBarConfig.Provoke.enabled = true\
+SallyWAR.HotBarConfig.Shirks.enabled = true\
+SallyWAR.HotBarConfig.Reprisal.enabled = true\
+SallyWAR.HotBarConfig.RawIntuition.enabled = true\
+SallyWAR.HotBarConfig.Rampart.enabled = true\
+SallyWAR.HotBarConfig.LowBlow.enabled = true\
+SallyWAR.HotBarConfig.Vengeance.enabled = true\
+SallyWAR.HotBarConfig.Holm.enabled = true\
+SallyWAR.HotBarConfig.Thrill.enabled = true\
+SallyWAR.HotBarConfig.Equilibrium.enabled = true\
+SallyWAR.HotBarConfig.NascentFlash.enabled = true\
+SallyWAR.HotBarConfig.InnerRelease.enabled = true\
+SallyWAR.HotBarConfig.Onslaught.enabled = true\
+SallyWAR.HotBarConfig.Sprint.enabled = true\
+SallyWAR.HotBarConfig.Interject.enabled = true\
+SallyWAR.HotBarConfig.Armslength.enabled = true\
+SallyWAR.HotBarConfig.Upheaval.enabled = true\
+\
+SallyWAR.SkillSettings.Opener.enabled = false\
+SallyWAR.SkillSettings.InnerRelease.enabled = true\
+SallyWAR.SkillSettings.Onslaught.enabled = true\
+SallyWAR.SkillSettings.SaveCD.enabled = false\
+SallyWAR.SkillSettings.Range.enabled = true\
+SallyWAR.SkillSettings.RefreshEye.enabled = true\
+SallyWAR.SkillSettings.Upheaval.enabled = true\
+SallyWAR.SkillSettings.Infuriate.enabled = true\
+SallyWAR.SkillSettings.UseAOE.enabled = true\
+SallyWAR.SkillSettings.JumpRange.enabled = true\
+-- SallyWAR.SkillSettings.Potion.enabled = true\
+--- remove \"--\" from the above line to have it enable potions on wipe.\
+self.used = true\
+\
+Player:ClearTarget()\
+\
+if Player.job ~= 21 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset Hotbar/QT on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "c4bdc4b6-1bf0-6fa3-8e73-655ba34e5f23";
+	};
 	[5] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "          -MISC-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "8449ba12-fb1c-2a4a-aec7-911508d73cb8";
+	};
+	[6] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 2;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "use if no weakness/brink";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 3;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "dont if weak > 95s";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[3] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 4;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "dont if brink > 95s";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 2;
+				["buffDuration"] = 0;
+				["buffID"] = 43;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 2;
+				["buffDuration"] = 0;
+				["buffID"] = 44;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 3;
+				["buffDuration"] = 95;
+				["buffID"] = 43;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 3;
+				["buffDuration"] = 95;
+				["buffID"] = 44;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Nil's Equilibrium";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "9c5c6bf8-f542-6db3-a285-1fc22155277f";
+	};
+	[7] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -1470,7 +1521,7 @@ self.used = true";
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
 		if Player.job ~= 21 and AnyoneCore.Settings.JobCheck == true then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the warrior profile.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the warrior profile. <se.1>\")\
 		elseif Player.job == 21 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
 		elseif Player.job ~= 21 and AnyoneCore.Settings.JobCheck == false then\
@@ -1494,7 +1545,52 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "1b98bc17-3afa-ac91-af04-f943f83f4e97";
 	};
-	[6] = {
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "if IsControlOpen(\"_QTEMash\") then\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+end\
+self.used = true\
+self.eventConditionMismatch = true -- supress log";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "active time maneuver";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "1557c4fc-20f8-b268-a7b1-ee66d04c293c";
+	};
+	[9] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -1506,7 +1602,7 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "--duty helper--";
+		["name"] = "        -DUTY HELPER-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -1518,13 +1614,14 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "c2e45ef4-5015-b588-9c22-fdba5bbd8ed9";
 	};
-	[7] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1768,13 +1865,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "db68ecf4-55b1-ef54-95ac-b77624b692dc";
 	};
-	[8] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7388;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2316,13 +2414,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "08ed5ebe-8fc4-56d0-81d4-d2c8abb840a6";
 	};
-	[9] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7538;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2369,35 +2468,61 @@ return false";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "local InterruptTable = {\
----dungeons\
-[9042] = true,\
-[8612] = true,\
-[2145] = true,\
-[12507] = true,\
-[15786] = true,\
-[16776] = true,\
-[16815] = true,\
-[15802] = true,\
-[15808] = true,\
-[17164] = true,\
----8 man raids\
-[8983] = true,\
-[10933] = true,\
-[15757] = true,\
---e5-e8s\
-[19951] = true,\
-[19845] = true,\
----trials\
-[14324] = true,\
----24 man raids\
-[3344] = true,\
+				["conditionLua"] = "local KnockbackTable = {\
+---start of dungeon spell ids\
+--dungeons\
+[8328] = true,\
+[8329] = true,\
+[8293] = true,\
+[9606] = true,\
+[8173] = true,\
+[9810] = true,\
+[10132] = true,\
+[12618] = true,\
+[15520] = true,\
+[15596] = true,\
+--8 man raids\
+[9400] = true,\
+[9214] = true,\
+[9293] = true,\
+[10413] = true,\
+[10086] = true,\
+[10454] = true,\
+[10459] = true,\
+[12647] = true,\
+[12648] = true,\
+[13050] = true,\
+[15942] = true,\
+[15962] = true,\
+[16339] = true,\
+[16370] = true,\
+[16630] = true,\
+[16659] = true,\
+[16694] = true,\
+--e5-e8\
+---[19928] = true,\
+---[19809] = true,\
+--trials\
+[8075] = true,\
+[8080] = true,\
+[9690] = true,\
+[9695] = true,\
+[9750] = true,\
+[12848] = true,\
+[13018] = true,\
+[13019] = true,\
+[16741] = true,\
+[16742] = true,\
+[19182] = true,\
+[19674] = true,\
+--24 man raids\
+[9660] = true,\
+[11344] = true,\
+[18627] = true,\
 }\
 \
-if InterruptTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+local caster = EntityList:Get(eventArgs.entityID)\
+return KnockbackTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
@@ -2655,13 +2780,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "1ae460a2-8fe5-0e2d-9510-8667896f9d7f";
 	};
-	[10] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;

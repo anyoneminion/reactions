@@ -9,166 +9,6 @@ local obj1 = {
 		["conditions"] = {
 		};
 		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirks.enabled = true\
-SallyGNB.HotBarConfig.Reprisal.enabled = true\
-SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
-SallyGNB.HotBarConfig.Rampart.enabled = true\
-SallyGNB.HotBarConfig.Camouflage.enabled = true\
-SallyGNB.HotBarConfig.Nebula.enabled = true\
-SallyGNB.HotBarConfig.SuperBolide.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
-SallyGNB.HotBarConfig.Aurora.enabled = true\
-SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
-SallyGNB.HotBarConfig.BloodFest.enabled = true\
-SallyGNB.HotBarConfig.Sprint.enabled = true\
-SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.Armslength.enabled = true\
-SallyGNB.HotBarConfig.BlastingZone.enabled = true\
-SallyGNB.HotBarConfig.BowShock.enabled = true\
-SallyGNB.HotBarConfig.NoMercy.enabled = true\
-SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-\
-SallyGNB.SkillSettings.Opener.enabled = false\
-SallyGNB.SkillSettings.BloodFest.enabled = true\
-SallyGNB.SkillSettings.BowShock.enabled = true\
-SallyGNB.SkillSettings.SaveCD.enabled = false\
-SallyGNB.SkillSettings.Range.enabled = true\
-SallyGNB.SkillSettings.RoughDivide.enabled = true\
-SallyGNB.SkillSettings.SonicBreak.enabled = true\
-SallyGNB.SkillSettings.NoMercy.enabled = true\
-SallyGNB.SkillSettings.UseAOE.enabled = true\
-SallyGNB.SkillSettings.JumpRange.enabled = true\
-SallyGNB.SkillSettings.BlastingZone.enabled = true\
-SallyGNB.SkillSettings.Ammo.enabled = true\
-SallyGNB.SkillSettings.BurnBoss.enabled = false\
-SallyGNB.SkillSettings.RangeComboBreak.enabled = true\
-SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
-SallyGNB.SkillSettings.GnashingFang.enabled = true\
-\
-Player:ClearTarget()\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallyGNB.SkillSettings.Potion.enabled = true\
-end\
-\
-self.used = true\
-\
-if Player.job ~= 37 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar/qt on wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85";
-	};
-	[2] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 10;
-		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
-SallyGNB.HotBarConfig.Shirks.enabled = true\
-SallyGNB.HotBarConfig.Reprisal.enabled = true\
-SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
-SallyGNB.HotBarConfig.Rampart.enabled = true\
-SallyGNB.HotBarConfig.Camouflage.enabled = true\
-SallyGNB.HotBarConfig.Nebula.enabled = true\
-SallyGNB.HotBarConfig.SuperBolide.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
-SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
-SallyGNB.HotBarConfig.Aurora.enabled = true\
-SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
-SallyGNB.HotBarConfig.BloodFest.enabled = true\
-SallyGNB.HotBarConfig.Sprint.enabled = true\
-SallyGNB.HotBarConfig.Interject.enabled = true\
-SallyGNB.HotBarConfig.Armslength.enabled = true\
-SallyGNB.HotBarConfig.BlastingZone.enabled = true\
-SallyGNB.HotBarConfig.BowShock.enabled = true\
-SallyGNB.HotBarConfig.NoMercy.enabled = true\
-SallyGNB.HotBarConfig.RoughDivide.enabled = true\
-self.used = true\
-\
-if Player.job ~= 37 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-\
-";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "reset hotbar on death";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700";
-	};
-	[3] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
-		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the gunbreaker profile.\")\
-		elseif Player.job == 37 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "99239944-d834-3fa3-991f-0620a5fa13bb";
-	};
-	[4] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
@@ -975,6 +815,156 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "e27b8cfe-0069-644e-8f76-2f443b91c65f";
 	};
+	[2] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "         -RESETS-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "17381426-88af-3d4a-94fc-664b977622dc";
+	};
+	[3] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
+SallyGNB.HotBarConfig.Reprisal.enabled = true\
+SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
+SallyGNB.HotBarConfig.Rampart.enabled = true\
+SallyGNB.HotBarConfig.Camouflage.enabled = true\
+SallyGNB.HotBarConfig.Nebula.enabled = true\
+SallyGNB.HotBarConfig.SuperBolide.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
+SallyGNB.HotBarConfig.Aurora.enabled = true\
+SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
+SallyGNB.HotBarConfig.BloodFest.enabled = true\
+SallyGNB.HotBarConfig.Sprint.enabled = true\
+SallyGNB.HotBarConfig.Interject.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
+SallyGNB.HotBarConfig.BlastingZone.enabled = true\
+SallyGNB.HotBarConfig.BowShock.enabled = true\
+SallyGNB.HotBarConfig.NoMercy.enabled = true\
+SallyGNB.HotBarConfig.RoughDivide.enabled = true\
+\
+SallyGNB.SkillSettings.Opener.enabled = false\
+SallyGNB.SkillSettings.BloodFest.enabled = true\
+SallyGNB.SkillSettings.BowShock.enabled = true\
+SallyGNB.SkillSettings.SaveCD.enabled = false\
+SallyGNB.SkillSettings.Range.enabled = true\
+SallyGNB.SkillSettings.RoughDivide.enabled = true\
+SallyGNB.SkillSettings.SonicBreak.enabled = true\
+SallyGNB.SkillSettings.NoMercy.enabled = true\
+SallyGNB.SkillSettings.UseAOE.enabled = true\
+SallyGNB.SkillSettings.JumpRange.enabled = true\
+SallyGNB.SkillSettings.BlastingZone.enabled = true\
+SallyGNB.SkillSettings.Ammo.enabled = true\
+SallyGNB.SkillSettings.BurnBoss.enabled = false\
+SallyGNB.SkillSettings.RangeComboBreak.enabled = true\
+SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
+SallyGNB.SkillSettings.GnashingFang.enabled = true\
+\
+Player:ClearTarget()\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallyGNB.SkillSettings.Potion.enabled = true\
+end\
+\
+self.used = true\
+\
+if Player.job ~= 37 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "reset hotbar/qt on wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "19670044-75f0-27f5-bfce-3ba622db1f85";
+	};
+	[4] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 10;
+		["execute"] = "SallyGNB.HotBarConfig.Provoke.enabled = true\
+SallyGNB.HotBarConfig.Shirks.enabled = true\
+SallyGNB.HotBarConfig.Reprisal.enabled = true\
+SallyGNB.HotBarConfig.HeartOfLight.enabled = true\
+SallyGNB.HotBarConfig.Rampart.enabled = true\
+SallyGNB.HotBarConfig.Camouflage.enabled = true\
+SallyGNB.HotBarConfig.Nebula.enabled = true\
+SallyGNB.HotBarConfig.SuperBolide.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone.enabled = true\
+SallyGNB.HotBarConfig.HeartOfStone_OT.enabled = true\
+SallyGNB.HotBarConfig.Aurora.enabled = true\
+SallyGNB.HotBarConfig.Aurora_OT.enabled = true\
+SallyGNB.HotBarConfig.BloodFest.enabled = true\
+SallyGNB.HotBarConfig.Sprint.enabled = true\
+SallyGNB.HotBarConfig.Interject.enabled = true\
+SallyGNB.HotBarConfig.Armslength.enabled = true\
+SallyGNB.HotBarConfig.BlastingZone.enabled = true\
+SallyGNB.HotBarConfig.BowShock.enabled = true\
+SallyGNB.HotBarConfig.NoMercy.enabled = true\
+SallyGNB.HotBarConfig.RoughDivide.enabled = true\
+self.used = true\
+\
+if Player.job ~= 37 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end\
+\
+";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "reset hotbar on death";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "b574aadf-7e06-af4c-b9b7-6b5a3c1dc700";
+	};
 	[5] = {
 		["actions"] = {
 		};
@@ -987,7 +977,110 @@ self.used = true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "--duty helper--";
+		["name"] = "          -MISC-";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "8be6984b-67ba-78bc-b132-e0ce693adc46";
+	};
+	[6] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 then\
+		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong general triggers. Check that you're set to the gunbreaker profile. <se.1>\")\
+		elseif Player.job == 37 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "99239944-d834-3fa3-991f-0620a5fa13bb";
+	};
+	[7] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "if IsControlOpen(\"_QTEMash\") then\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+    PressKey(0x31)\
+    PressKey(0x32)\
+    PressKey(0x33)\
+    PressKey(0x34)\
+    PressKey(0x35)\
+    PressKey(0x36)\
+    PressKey(0x37)\
+    PressKey(0x38)\
+    PressKey(0x39)\
+end\
+self.used = true\
+self.eventConditionMismatch = true -- supress log";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "active time maneuver";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "954bafe4-228c-fae4-bfbb-44715ac35e9d";
+	};
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = false;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "        -DUTY HELPER-";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -999,13 +1092,14 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "a5a03c54-b035-5693-a2cc-0cd192b88741";
 	};
-	[6] = {
+	[9] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
 				["actionID"] = -1;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1249,13 +1343,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "e5967e8a-fc59-32a9-9d58-f4d17a1c4275";
 	};
-	[7] = {
+	[10] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 16160;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -1794,13 +1889,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "45b31906-6172-ffd5-adae-1bc711ad9233";
 	};
-	[8] = {
+	[11] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7538;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2133,13 +2229,14 @@ return false";
 		["used"] = false;
 		["uuid"] = "57a2ddd3-2c4a-d141-bc61-461fc686a83e";
 	};
-	[9] = {
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
 				["actionID"] = 7548;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
 				["castAtMouse"] = false;
 				["castPosX"] = 0;
 				["castPosY"] = 0;
@@ -2217,6 +2314,9 @@ return false";
 [16630] = true,\
 [16659] = true,\
 [16694] = true,\
+--e5-e8\
+---[19928] = true,\
+---[19809] = true,\
 --trials\
 [8075] = true,\
 [8080] = true,\
@@ -2236,10 +2336,8 @@ return false";
 [18627] = true,\
 }\
 \
-if KnockbackTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+local caster = EntityList:Get(eventArgs.entityID)\
+return KnockbackTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
