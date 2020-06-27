@@ -41,11 +41,8 @@ Eden's Verse 5-8 (tanking) - SallyPLD only
 
 Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking) - SallyGNB only
 
-# read me
-
-Each fight contains "read me" reactions on the very first mechanic on the timeline. Make sure to read them for more information.
-
 # FAQ
+
 **Q: "Something isn't working"**
 
 A: First of all, make sure you're using the most up to date version of my reactions
