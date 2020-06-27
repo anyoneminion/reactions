@@ -4,13 +4,14 @@ Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbr
 
 ### Machinist
 
-Eden's Verse 5-8, TEA, UCoB - TensorWeeb only
+Eden's Verse 5-8, TEA, UCoB - TensorMagnum only
 
 ### Bard
 
 Eden's Verse 5-8, TEA, UCoB - TensorRequiem only
 
 ### Summoner
+
 Eden's Verse 5-8, TEA, UCoB - TensorRuin only
 
 ### Dancer
@@ -23,7 +24,7 @@ Eden's Verse 5-8, TEA - TensorWeeb/SallySAM only
 
 ### Black Mage
 
-Eden's Verse 5-8 - TensorNuke/SallyBLM only
+Eden's Verse 5-8 - SallyBLM only
 
 ### Dark Knight
 
