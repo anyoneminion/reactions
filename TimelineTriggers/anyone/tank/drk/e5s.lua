@@ -228,7 +228,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[10];
+					["conditions"] = multiRefObjects[12];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -272,7 +272,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[10];
+					["conditions"] = multiRefObjects[12];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -382,7 +382,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[16];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -426,7 +426,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[16];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -732,7 +732,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -776,7 +776,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -820,7 +820,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -864,7 +864,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1358,12 +1358,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[11];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1711,13 +1711,13 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["comparator"] = 1;
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[11];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1866,7 +1866,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[14];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -1910,7 +1910,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[14];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -1954,7 +1954,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[14];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1998,7 +1998,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[14];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2391,7 +2391,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[19];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2435,7 +2435,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[19];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2804,7 +2804,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[12];
+					["conditions"] = multiRefObjects[14];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -2848,7 +2848,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[12];
+					["conditions"] = multiRefObjects[14];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -2892,7 +2892,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[12];
+					["conditions"] = multiRefObjects[14];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2936,7 +2936,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[12];
+					["conditions"] = multiRefObjects[14];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3486,7 +3486,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3530,7 +3530,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4551,7 +4551,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[11];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4683,7 +4683,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -4695,13 +4695,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 297.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 45;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "2d5bf037-0dd6-da83-b8de-2fec1f998948";
+			["uuid"] = "06c13097-d8e5-fa47-bac3-6ce780a565db";
 		};
 	};
 	[46] = {
@@ -4717,7 +4717,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -4729,13 +4729,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 301.6;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 46;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "766f27ee-df76-e8d1-bd4c-dbc754fb5cd8";
+			["uuid"] = "a90246e2-9b7d-e2a9-8e13-a1d34fdba0f5";
 		};
 	};
 	[47] = {
@@ -4835,7 +4835,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[16];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -4879,7 +4879,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[16];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -4923,7 +4923,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[16];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4967,7 +4967,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[16];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5317,7 +5317,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5329,13 +5329,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 305.3;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 48;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "7328c75b-7433-6a25-b850-bbde319fc2e1";
+			["uuid"] = "fa8bb07f-c3f7-193b-81f9-2b5a960a1572";
 		};
 	};
 	[49] = {
@@ -5351,7 +5351,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5363,13 +5363,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 309;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 49;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "31900124-b2e1-bb92-b0bd-dcd3c187de26";
+			["uuid"] = "d9b18f07-f085-623f-90cc-521e7cd4768a";
 		};
 	};
 	[50] = {
@@ -5385,7 +5385,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5397,13 +5397,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 312.7;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 50;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "724e1f44-2bdf-777c-a4fb-7ad8c6bd90ad";
+			["uuid"] = "1591dac3-0282-74d8-8d00-f25e88abd5fb";
 		};
 	};
 	[51] = {
@@ -5419,7 +5419,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5431,13 +5431,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 316.4;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 51;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "62810ed6-b156-3649-aa52-b00269a8289e";
+			["uuid"] = "2fcd5c0d-70ab-2499-945a-8235459f21cf";
 		};
 	};
 	[52] = {
@@ -5496,7 +5496,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[18];
+					["conditions"] = multiRefObjects[15];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5540,7 +5540,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[18];
+					["conditions"] = multiRefObjects[15];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5713,7 +5713,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5725,13 +5725,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 320.1;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 53;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "cfb6183a-e359-9013-bce1-e60a88d99663";
+			["uuid"] = "9d6a10cf-367c-de18-b6d5-7cda3f7fbd0d";
 		};
 	};
 	[54] = {
@@ -5747,7 +5747,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5759,13 +5759,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 323.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 54;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "d1a19340-a2a6-19e6-bc93-33ca5b7c161a";
+			["uuid"] = "da5f488d-b3ee-64cf-b186-9935daf08335";
 		};
 	};
 	[55] = {
@@ -5781,7 +5781,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -5793,13 +5793,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 327.5;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 55;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "7622c7ec-a6e6-8640-a50c-0e5fbd65d591";
+			["uuid"] = "581c971a-6194-2330-8386-2d3aebabb433";
 		};
 	};
 	[59] = {
@@ -6166,7 +6166,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[21];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -6210,7 +6210,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[21];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -6254,7 +6254,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[21];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6298,7 +6298,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[21];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6691,7 +6691,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[22];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6735,7 +6735,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[22];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7757,7 +7757,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[11];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7930,7 +7930,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[17];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -7974,7 +7974,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[17];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8189,7 +8189,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[11];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8297,7 +8297,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[15];
+					["conditions"] = multiRefObjects[18];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8341,7 +8341,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[15];
+					["conditions"] = multiRefObjects[18];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8514,7 +8514,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -8526,13 +8526,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 502.6;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 83;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "e0c3e974-f16b-8af1-839d-8b380075fa5c";
+			["uuid"] = "0d0304cc-f397-c218-b1e4-39f02d38bee2";
 		};
 	};
 	[84] = {
@@ -8548,7 +8548,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -8560,13 +8560,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 506.4;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 84;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "0bc96c71-2654-d7ed-8e80-4c071e17c0fe";
+			["uuid"] = "c9d9229c-5bc7-2afb-a33b-0508dcb51505";
 		};
 	};
 	[85] = {
@@ -8666,7 +8666,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[22];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 100;
@@ -8710,7 +8710,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[22];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 99;
@@ -8754,7 +8754,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[22];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -8798,7 +8798,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[22];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9148,7 +9148,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9160,13 +9160,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 510.1;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 86;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "474493df-7487-2b6a-90c9-74d177bf8e7e";
+			["uuid"] = "1925eb71-96d7-b3f1-bb85-4762b7b8b034";
 		};
 	};
 	[87] = {
@@ -9182,7 +9182,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9194,13 +9194,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 513.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 87;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "9c3eefa9-8cc8-561f-8d37-a2ecf05f88f7";
+			["uuid"] = "b7a52217-ff6e-b6b1-a151-0f6baccf02c3";
 		};
 	};
 	[88] = {
@@ -9216,7 +9216,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9228,13 +9228,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 517.5;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 88;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "772abd42-9974-23c9-8e44-34c227ef1304";
+			["uuid"] = "bc233171-169c-36d5-8360-8b8bbfde3636";
 		};
 	};
 	[89] = {
@@ -9250,7 +9250,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9262,13 +9262,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 521.2;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 89;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "cca89d8b-5af1-7fa4-8254-985e1f059173";
+			["uuid"] = "52275c23-c782-d9a0-a519-fd14cfa64ccf";
 		};
 	};
 	[90] = {
@@ -9327,7 +9327,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[13];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9371,7 +9371,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[13];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9544,7 +9544,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9556,13 +9556,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 524.8;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 91;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "17c1ea4a-3533-330f-bf85-689031106346";
+			["uuid"] = "3009e2d5-3256-6722-9342-624b5c48faab";
 		};
 	};
 	[92] = {
@@ -9578,7 +9578,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9590,13 +9590,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 528.5;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 92;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "99a84fd6-d915-37ce-b2b1-2f08ad5a0ac1";
+			["uuid"] = "17795d5d-9f90-740e-8189-15b6163c4142";
 		};
 	};
 	[93] = {
@@ -9612,7 +9612,7 @@ end\
 \
 for id, ent in pairs(TensorCore.entityList(\"\")) do\
     if TensorCore.hasBuff(ent, 2233) and AnyoneCore.Settings.DrawChainLightning == true then\
-        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 1.5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+        Argus.addTimedCircleFilled(3200, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
     end\
 end\
 self.used = true";
@@ -9624,13 +9624,13 @@ self.used = true";
 			["name"] = "draw cl aoe";
 			["throttleTime"] = 0;
 			["time"] = 532.2;
-			["timeRange"] = false;
+			["timeRange"] = true;
 			["timelineIndex"] = 93;
-			["timerEndOffset"] = 0;
+			["timerEndOffset"] = 2;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
+			["timerStartOffset"] = -2;
 			["used"] = false;
-			["uuid"] = "a90d35ca-a73e-62b4-ae9c-744a0ac6d2b8";
+			["uuid"] = "02a612ad-7bec-93e8-bd44-0f28325318fe";
 		};
 	};
 	[96] = {
@@ -9689,7 +9689,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[20];
+					["conditions"] = multiRefObjects[21];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9733,7 +9733,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[20];
+					["conditions"] = multiRefObjects[21];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9841,7 +9841,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[20];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9885,7 +9885,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[20];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -9993,7 +9993,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[13];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10037,7 +10037,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[13];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10145,7 +10145,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10189,7 +10189,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[10];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10297,7 +10297,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[17];
+					["conditions"] = multiRefObjects[19];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -10341,7 +10341,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[17];
+					["conditions"] = multiRefObjects[19];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

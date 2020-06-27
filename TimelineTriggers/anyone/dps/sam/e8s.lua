@@ -526,14 +526,13 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -565,7 +564,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -581,7 +580,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "af611c9e-4d50-4304-a41b-010143ddacac";
+			["uuid"] = "48886922-d694-da2f-9a16-f4fe9b63d826";
 		};
 	};
 	[11] = {
@@ -948,7 +947,7 @@ self.used = true";
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -1289,14 +1288,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -1328,7 +1326,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -1344,7 +1342,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "306be4b8-9780-6770-a187-c1c17a537de2";
+			["uuid"] = "0986fade-ff6f-ec1f-8c04-711f29704695";
 		};
 		[2] = {
 			["actions"] = {
@@ -1438,9 +1436,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1486,9 +1483,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -1535,9 +1530,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1590,7 +1583,7 @@ end";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2c4f812a-2d88-53de-9ca3-0f783bd84b52";
+			["uuid"] = "157d4bac-d37c-a7a3-ae04-9f8254919630";
 		};
 		[3] = {
 			["actions"] = {
@@ -1684,9 +1677,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1732,9 +1724,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -1781,9 +1771,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1923,7 +1911,7 @@ self.used = table.size(drawnOrbs) >= 4";
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -2242,9 +2230,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -2290,9 +2277,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -2339,9 +2324,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -2394,7 +2377,7 @@ end";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f56d33cc-7109-54a7-964d-b3e5495ef043";
+			["uuid"] = "b85a330c-5cf8-fe19-aecb-c61cb7eae9c8";
 		};
 		[3] = {
 			["actions"] = {
@@ -2695,14 +2678,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -2734,7 +2716,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -2750,7 +2732,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e56ca36f-5ee3-7e8d-a08d-670d110f6f78";
+			["uuid"] = "b0e84165-7d18-4ec8-af40-e9d61bba8fbf";
 		};
 	};
 	[34] = {
@@ -3456,14 +3438,13 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -3495,7 +3476,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -3511,7 +3492,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "310afd44-3a43-7142-806d-7820fb7b6b30";
+			["uuid"] = "c0b260bf-b2fa-c5db-adf4-54e7ace08d7e";
 		};
 		[2] = {
 			["actions"] = {
@@ -3932,14 +3913,13 @@ return target == nil or (target.contentid ~= 9320 and target.hp.current == 0)";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -3971,7 +3951,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -3987,7 +3967,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4b05004d-2b74-6691-b492-b5896eab1782";
+			["uuid"] = "cce463d0-17a3-f0d1-9880-f677dbb7d03b";
 		};
 	};
 	[41] = {
@@ -4042,14 +4022,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -4081,7 +4060,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -4097,7 +4076,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9084d647-1ee0-b49a-8a9e-a7871b89e0ce";
+			["uuid"] = "5446c571-5976-8257-9d82-35c10a5440c6";
 		};
 		[2] = {
 			["actions"] = {
@@ -5627,14 +5606,13 @@ return false";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -5666,7 +5644,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -5682,7 +5660,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fc0e4a88-6fd0-875b-a15e-defc0bf133e1";
+			["uuid"] = "f9210a61-d316-17b7-941b-e619c4c53e8b";
 		};
 	};
 	[58] = {
@@ -5737,14 +5715,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -5776,7 +5753,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -5792,7 +5769,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b45c8929-fd54-6596-9fba-bc0aaf110988";
+			["uuid"] = "e209e93c-d5df-832d-8728-b27823772819";
 		};
 	};
 	[66] = {
@@ -5908,14 +5885,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -5947,7 +5923,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -5963,7 +5939,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "509806df-4702-5df2-a7e9-96c9b40da6ec";
+			["uuid"] = "8fe02f81-7237-0c58-97f8-c7536f74eca2";
 		};
 		[2] = {
 			["actions"] = {
@@ -5971,22 +5947,11 @@ end";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["execute"] = "--- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
---- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
-\
--- this reaction is experimental, in theory the timings should be fine\
-\
---- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
---- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+			["execute"] = "--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works (i.e. to -2.3)\
+--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works (i.e. to -1.2)\
 \
 --- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 --- and low ping players will have problems on the second hit.\
-\
---- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
---- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
-\
---- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
---- Set \"data.KnockbackMirrorUptime\" to true\
 ";
 			["executeType"] = 2;
 			["lastUse"] = 0;
@@ -6061,7 +6026,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
+			["timerOffset"] = -2.2000000476837;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "2c11d0a3-76de-fc53-a2da-ffee2bd65fc7";
@@ -6167,7 +6132,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.25;
+			["timerOffset"] = -1.2999999523163;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "2d699101-b520-69f2-a3f7-8a35b060caae";
@@ -6263,12 +6228,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6306,12 +6271,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6358,7 +6323,7 @@ self.used = true";
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 20;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = -2;
+			["timerStartOffset"] = -2.2000000476837;
 			["used"] = false;
 			["uuid"] = "e522105b-50e2-4fa1-a4b6-a706d16089e2";
 		};
@@ -6415,14 +6380,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -6454,7 +6418,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -6470,7 +6434,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5772e19d-352c-fcef-9504-390a650b73fc";
+			["uuid"] = "b12f6a63-cd7e-d08e-b43c-db57062293dc";
 		};
 	};
 	[87] = {
@@ -6527,14 +6491,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -6566,7 +6529,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -6582,7 +6545,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "97074527-af9a-ca06-a6b5-144c93f5ec92";
+			["uuid"] = "d68622af-18ea-199e-aff8-d7e5cc48fe51";
 		};
 	};
 	[90] = {
@@ -6637,14 +6600,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -6676,7 +6638,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -6692,7 +6654,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c6a949d1-d194-16fe-9450-f78005f97e17";
+			["uuid"] = "2bf466f4-580d-4a6a-a60c-78b1252b1893";
 		};
 	};
 	[93] = {
@@ -6788,9 +6750,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -6836,9 +6797,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -6885,9 +6844,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -6937,10 +6894,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 93;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -15;
+			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c816a668-4085-dcab-aecb-c33c8e244deb";
+			["uuid"] = "4dafffb2-c90b-851b-b33a-a0847742dd66";
 		};
 		[2] = {
 			["actions"] = {
@@ -7233,7 +7190,7 @@ end";
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -7513,14 +7470,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -7552,7 +7508,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -7568,7 +7524,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "86ce0f6b-e9d5-ad47-a47d-cfc9b5fca81b";
+			["uuid"] = "29b48daf-f58e-d9ba-ac37-6fb5dae66096";
 		};
 	};
 	[108] = {
@@ -7902,14 +7858,13 @@ self.used = table.size(drawnOrbs) >= 2";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -7941,7 +7896,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -7957,7 +7912,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1e830b77-c335-e7f4-9383-c50bcb9b1263";
+			["uuid"] = "818d1f10-092f-6bc7-ae47-52dd0f0d5a7f";
 		};
 	};
 	[112] = {
@@ -8012,14 +7967,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -8051,7 +8005,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -8067,7 +8021,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b017d406-3590-e2e4-a1c8-8d5be3e13001";
+			["uuid"] = "c54a935e-e129-9e7e-b18e-f33def1fcf05";
 		};
 	};
 	[114] = {
@@ -8122,14 +8076,13 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -8161,7 +8114,7 @@ end";
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -8177,7 +8130,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "630aa3b0-7ca5-68e9-8b00-9077589df908";
+			["uuid"] = "37566944-365b-71b7-bb93-0a767c2d39f3";
 		};
 	};
 	[115] = {

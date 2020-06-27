@@ -510,7 +510,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -554,7 +554,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1477,7 +1477,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1521,7 +1521,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1783,7 +1783,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1827,7 +1827,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[7];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2977,7 +2977,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3021,7 +3021,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3173,7 +3173,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3217,7 +3217,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3997,22 +3997,11 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["execute"] = "--- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
---- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
-\
--- this reaction is experimental, in theory the timings should be fine\
-\
---- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
---- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+			["execute"] = "--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works (i.e. to -2.3)\
+--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works (i.e. to -1.2)\
 \
 --- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 --- and low ping players will have problems on the second hit.\
-\
---- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
---- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
-\
---- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
---- Set \"data.KnockbackMirrorUptime\" to true\
 ";
 			["executeType"] = 2;
 			["lastUse"] = 0;
@@ -4087,7 +4076,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
+			["timerOffset"] = -2.2000000476837;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "5b11fadb-98c1-f897-a85f-207c7d68f3e3";
@@ -4143,11 +4132,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.KnockbackMirrorUptime == true then\
-		return true\
-end\
-\
-return false";
+					["conditionLua"] = "return AnyoneCore.Settings.KnockbackMirrorUptime == true";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -4197,7 +4182,7 @@ return false";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.25;
+			["timerOffset"] = -1.2999999523163;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "a7a5fc54-1961-ffa5-ad57-1db1c36f53e9";
@@ -4293,12 +4278,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4336,12 +4321,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4388,7 +4373,7 @@ self.used = true";
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 20;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = -2;
+			["timerStartOffset"] = -2.2000000476837;
 			["used"] = false;
 			["uuid"] = "55768c43-43f8-b6eb-a45c-fe635dd83ec0";
 		};
@@ -4561,7 +4546,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4605,7 +4590,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5604,7 +5589,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5648,7 +5633,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

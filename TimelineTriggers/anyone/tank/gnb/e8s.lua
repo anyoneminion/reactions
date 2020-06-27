@@ -1132,22 +1132,11 @@ self.used = table.size(drawnOrbs) >= 1";
 			["conditions"] = {
 			};
 			["enabled"] = false;
-			["execute"] = "--- these reactions are for e8s knockback mirror uptime strat, activate this ONLY if your team\
---- is using arm's length/surecast to mitigate the knockbacks during this mechanic.\
-\
--- this reaction is experimental, in theory the timings should be fine\
-\
---- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works\
---- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works\
+			["execute"] = "--- if you get knocked off on the first hit, increase the timing on \"disable assist\", by .1 second until it works (i.e. to -2.3)\
+--- if you get knocked off on the second hit, decrease the timing on \"arm's length\", by .1 second until it works (i.e. to -1.2)\
 \
 --- this mechanic is very ping dependent. usually high ping players will have problems on the first hit\
 --- and low ping players will have problems on the second hit.\
-\
---- THESE REACTIONS ARE VERY VOLATILE AND DIFFERENT TIMES WORK FOR DIFFERENT PEOPLE DEPENDING ON MULTIPLE VARIABLES\
---- THEY WILL VERY LIKELY REQUIRE TWEAKING.\
-\
---- To activate, go to \"16 - Absolute Zero\" on the timeline and check the reaction \"E8S REACTION SETTINGS\"\
---- Set \"data.KnockbackMirrorUptime\" to true\
 ";
 			["executeType"] = 2;
 			["lastUse"] = 0;
@@ -1222,7 +1211,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -2;
+			["timerOffset"] = -2.2000000476837;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "0da4509d-5f59-63b8-a4c2-5bfd7b58389f";
@@ -1278,11 +1267,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.KnockbackMirrorUptime == true then\
-		return true\
-end\
-\
-return false";
+					["conditionLua"] = "return AnyoneCore.Settings.KnockbackMirrorUptime == true";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1332,7 +1317,7 @@ return false";
 			["timeRange"] = false;
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -1.25;
+			["timerOffset"] = -1.2999999523163;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "af4f2e71-20ac-f15b-a10f-f548c92c7f32";
@@ -1523,7 +1508,7 @@ self.used = true";
 			["timelineIndex"] = 72;
 			["timerEndOffset"] = 20;
 			["timerOffset"] = 0;
-			["timerStartOffset"] = -2;
+			["timerStartOffset"] = -2.2000000476837;
 			["used"] = false;
 			["uuid"] = "c81a978b-d390-81b1-9795-415ec537132f";
 		};

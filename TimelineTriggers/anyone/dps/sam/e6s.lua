@@ -440,15 +440,13 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -480,7 +478,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -496,7 +494,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a4c31345-8e8c-dde7-b538-81a835dd7788";
+			["uuid"] = "8d4d5ffc-7ea3-785f-95e5-9ef99be65fbf";
 		};
 		[2] = {
 			["actions"] = {
@@ -541,7 +539,7 @@ end\
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -766,7 +764,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5a1ced41-f4d1-7544-85d3-791a2a06d942";
+			["uuid"] = "fe7a81e1-7fe0-b848-9877-e39d22613699";
 		};
 	};
 	[8] = {
@@ -1041,6 +1039,122 @@ self.used = true";
 			["uuid"] = "1b5319a9-985a-ec6e-ad89-8158078df476";
 		};
 	};
+	[11] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local drawnOrbs = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+  if ent.contentid == 9290 and not drawnOrbs[id] then\
+    drawnOrbs[id] = true\
+    Argus.addTimedCircleFilled(11000, ent.pos.x, ent.pos.y, ent.pos.z, 7, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+  end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 7";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return argus ~= nil and AnyoneCore.Settings.DrawOccludedFrontOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw e6s orbs";
+			["throttleTime"] = 0;
+			["time"] = 95.2;
+			["timeRange"] = true;
+			["timelineIndex"] = 11;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "7542475f-e0a8-406f-bc46-33ddd63793ec";
+		};
+	};
 	[12] = {
 		[1] = {
 			["actions"] = {
@@ -1093,15 +1207,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -1133,7 +1245,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -1149,7 +1261,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ca4813c4-9ec0-2049-bc1b-ee9abb527ca5";
+			["uuid"] = "23fa5079-0407-1b3f-a181-6f047ab17368";
 		};
 		[2] = {
 			["actions"] = {
@@ -1243,9 +1355,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1291,9 +1402,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -1340,9 +1449,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1392,10 +1499,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 12;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "044c5248-3eb0-bdfc-b53c-562f302294b7";
+			["uuid"] = "fb600db9-91e6-76b0-a186-683054f4d79f";
 		};
 		[3] = {
 			["actions"] = {
@@ -1489,9 +1596,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1537,9 +1643,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -1586,9 +1690,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -1638,10 +1740,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 12;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 1.7000000476837;
+			["timerOffset"] = 30;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1a16e243-7bcf-db8b-a742-7ac403045bf8";
+			["uuid"] = "7fa5f28e-0774-e0cf-a0c0-4332d19bf096";
 		};
 	};
 	[14] = {
@@ -1895,15 +1997,13 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -1935,7 +2035,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -1951,7 +2051,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d2b041d7-724a-fc4c-b6ad-b3f8cedd833e";
+			["uuid"] = "cad4bdc3-c9f4-45b1-8f10-900f6c356737";
 		};
 	};
 	[18] = {
@@ -2417,15 +2517,13 @@ return false";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -2457,7 +2555,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -2473,7 +2571,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "252f357e-5cbd-33a6-8877-541a73797b31";
+			["uuid"] = "535bf792-ddfb-c54a-8dd9-805c08f3e838";
 		};
 	};
 	[26] = {
@@ -2558,7 +2656,7 @@ self.used = table.size(markedClones) >= 4\
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -2783,7 +2881,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a73a34bf-2d2d-ae9a-87b9-58d2c561363a";
+			["uuid"] = "8d3b3757-7140-42be-8b00-6532acf0b9e9";
 		};
 	};
 	[34] = {
@@ -3560,9 +3658,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\"";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -3608,10 +3704,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
-";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -3755,9 +3848,7 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return data.selectedACR == \"SallySAM\"";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -3970,6 +4061,122 @@ end\
 			["uuid"] = "25450961-2393-6cb4-ba94-d814b63a94c0";
 		};
 	};
+	[47] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local drawnOrbs = {}\
+for id, ent in pairs(EntityList(\"\")) do\
+  if ent.contentid == 9290 and not drawnOrbs[id] then\
+    drawnOrbs[id] = true\
+    Argus.addTimedCircleFilled(11000, ent.pos.x, ent.pos.y, ent.pos.z, 7, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+  end\
+end\
+\
+self.used = table.size(drawnOrbs) >= 7";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return argus ~= nil and AnyoneCore.Settings.DrawOccludedFrontOrbs == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw e6s orbs";
+			["throttleTime"] = 0;
+			["time"] = 284.2;
+			["timeRange"] = true;
+			["timelineIndex"] = 47;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "06d8a14c-450f-340e-aaee-1c66801bfc55";
+		};
+	};
 	[49] = {
 		[1] = {
 			["actions"] = {
@@ -4014,7 +4221,7 @@ end\
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -4239,7 +4446,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "32d17c41-4a52-f76a-ba54-ad78f896e681";
+			["uuid"] = "0b72855d-d0a7-ace3-8307-13bf1bff8d77";
 		};
 		[2] = {
 			["actions"] = {
@@ -4333,9 +4540,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -4381,9 +4587,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -4430,9 +4634,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -4482,10 +4684,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 49;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e23a0b1b-18e6-462d-8a0a-51259f13b918";
+			["uuid"] = "b3b1d8d4-9b1c-fb5d-be05-215fcd8b5a84";
 		};
 		[3] = {
 			["actions"] = {
@@ -5009,15 +5211,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -5049,7 +5249,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -5065,7 +5265,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ada6fa4c-b290-63e4-9905-382078e7536c";
+			["uuid"] = "bcfaba46-11b1-0729-8252-4269a6008fbd";
 		};
 	};
 	[59] = {
@@ -5457,7 +5657,7 @@ return false";
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -5682,7 +5882,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "201e13b3-2ae3-cd0f-a33e-4a94bf98c570";
+			["uuid"] = "1ad79338-8e12-bc08-88cc-a107c0c6b784";
 		};
 	};
 	[66] = {
@@ -5737,15 +5937,13 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -5777,7 +5975,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -5793,7 +5991,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d79fe941-eef0-1f0f-9a22-e23e38514cbd";
+			["uuid"] = "38e8b331-ba30-5018-ba40-53ae9b3a9503";
 		};
 	};
 	[69] = {
@@ -6426,15 +6624,13 @@ return false";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
 					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
+					["dequeueIfLuaFalse"] = true;
 					["enmityValue"] = 0;
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
@@ -6466,7 +6662,7 @@ end\
 					["targetName"] = "";
 				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -6482,7 +6678,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "998a523d-985d-ae81-bded-ce2b23fd99e6";
+			["uuid"] = "13c04165-41d7-07a3-9b5a-294d9ba6d495";
 		};
 	};
 	[104] = {
@@ -6529,7 +6725,7 @@ end\
 				[2] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = true\
+					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
@@ -6754,7 +6950,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5ebbb44f-243d-ab83-8aa7-5573d90d904b";
+			["uuid"] = "b7566189-9872-fac7-823d-031fa3bae603";
 		};
 		[2] = {
 			["actions"] = {
@@ -6848,9 +7044,8 @@ self.used = true";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
-return true\
-end";
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -6896,9 +7091,7 @@ end";
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
-return true\
-end\
+					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
 ";
 					["conditionType"] = 1;
 					["conditions"] = {
@@ -6945,9 +7138,7 @@ end\
 					};
 					["category"] = 4;
 					["comparator"] = 1;
-					["conditionLua"] = "if AnyoneCore.Settings.NeverEnpi == false then\
-return true\
-end";
+					["conditionLua"] = "return AnyoneCore.Settings.NeverEnpi == false ";
 					["conditionType"] = 1;
 					["conditions"] = {
 					};
@@ -6997,10 +7188,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 104;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ee1978b5-686f-5841-a467-d606089d89f9";
+			["uuid"] = "68f0bc6e-e255-b7c5-a038-4252b4091f94";
 		};
 		[3] = {
 			["actions"] = {
