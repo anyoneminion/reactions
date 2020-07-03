@@ -3208,6 +3208,9 @@ return false";
 [19160] = true,\
 [19204] = true,\
 [19209] = true,\
+[19657] = true,\
+[19774] = true,\
+[20107] = true,\
 --- start of 8 man raids spell ids\
 [9180] = true,\
 [9184] = true,\

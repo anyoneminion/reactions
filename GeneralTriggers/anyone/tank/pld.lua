@@ -2678,6 +2678,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [19158] = true,\
 [19160] = true,\
 [19204] = true,\
+[19657] = true,\
+[19774] = true,\
+[20107] = true,\
 --- start of 8 man raids spell ids\
 [9180] = true,\
 [9184] = true,\

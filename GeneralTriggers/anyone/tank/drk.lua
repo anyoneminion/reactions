@@ -2702,6 +2702,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [18380] = true,\
 [18384] = true,\
 [19209] = true,\
+[19657] = true,\
+[19774] = true,\
+[20107] = true,\
 --24 man raid\
 [9670] = true,\
 [9686] = true,\
