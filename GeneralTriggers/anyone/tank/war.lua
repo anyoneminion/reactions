@@ -4060,7 +4060,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 			};
 			[4] = {
 				["actionCDValue"] = 1;
-				["actionID"] = 16148;
+				["actionID"] = 44;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -4103,7 +4103,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "is nebula off cd";
+				["name"] = "is vengeance off cd";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -4122,7 +4122,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 			};
 			[5] = {
 				["actionCDValue"] = 1.0099999904633;
-				["actionID"] = 16148;
+				["actionID"] = 44;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -4289,7 +4289,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "use hos instead";
+				["name"] = "use raw intuition instead";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -4308,7 +4308,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 			};
 			[8] = {
 				["actionCDValue"] = 1;
-				["actionID"] = 16161;
+				["actionID"] = 3551;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -4351,7 +4351,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "is hos off cd";
+				["name"] = "is raw intuition off cd";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -4370,7 +4370,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 			};
 			[9] = {
 				["actionCDValue"] = 1.0099999904633;
-				["actionID"] = 16161;
+				["actionID"] = 3551;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -4413,7 +4413,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "use camo instead";
+				["name"] = "use tob instead";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -4432,7 +4432,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 			};
 			[10] = {
 				["actionCDValue"] = 1;
-				["actionID"] = 16140;
+				["actionID"] = 40;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -4475,7 +4475,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "is camo off cd";
+				["name"] = "is tob off cd";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
