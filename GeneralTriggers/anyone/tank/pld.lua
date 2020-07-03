@@ -2482,7 +2482,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
-				["actionID"] = 3542;
+				["actionID"] = 3540;
 				["actionLua"] = "";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
@@ -2600,6 +2600,12 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [19322] = true,\
 [19324] = true,\
 [19328] = true,\
+[19306] = true,\
+[19288] = true,\
+[19292] = true,\
+[19296] = true,\
+[19324] = true,\
+[19323] = true,\
 ---start of trials spell ids\
 [8230] = true,\
 [8246] = true,\
@@ -2745,6 +2751,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [16682] = true,\
 [16699] = true,\
 [17384] = true,\
+[19209] = true,\
 --24 man raids\
 [9670] = true,\
 [9760] = true,\
@@ -2883,7 +2890,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 			};
 			[3] = {
 				["actionCDValue"] = 1;
-				["actionID"] = 3542;
+				["actionID"] = 3540;
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
@@ -3281,6 +3288,10 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 [18371] = true,\
 [18385] = true,\
 [19696] = true,\
+[19204] = true,\
+[19199] = true,\
+[19344] = true,\
+\
 --24 man raids\
 [9687] = true,\
 [9773] = true,\

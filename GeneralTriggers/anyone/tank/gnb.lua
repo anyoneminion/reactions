@@ -2593,6 +2593,13 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [15878] = true,\
 [15895] = true,\
 [15908] = true,\
+[19315] = true,\
+[19306] = true,\
+[19288] = true,\
+[19292] = true,\
+[19296] = true,\
+[19324] = true,\
+[19323] = true,\
 --8 man raids party mitigation\
 [9180] = true,\
 [9184] = true,\
@@ -2710,6 +2717,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 [18367] = true,\
 [18380] = true,\
 [18384] = true,\
+[19209] = true,\
 --24 man raid\
 [9670] = true,\
 [9686] = true,\
@@ -3287,6 +3295,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 [18371] = true,\
 [18385] = true,\
 [19696] = true,\
+[19204] = true,\
+[19199] = true,\
+[19344] = true,\
 --24 man raids\
 [9687] = true,\
 [9773] = true,\
