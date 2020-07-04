@@ -1288,6 +1288,7 @@ self.eventConditionMismatch = true -- supress log",
 					[1] = 2,
 					[2] = 1,
 					[3] = 3,
+					[4] = 5,
 				},
 				["endIfUsed"] = false,
 				["gVar"] = "",
@@ -1346,6 +1347,44 @@ self.eventConditionMismatch = true -- supress log",
 				["targetSubType"] = 1,
 				["targetType"] = 1,
 				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[3] = {
+				["aType"] = 3,
+				["actionID"] = -1,
+				["actionLua"] = "",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 2,
+					[2] = 6,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = true,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = true,
 				["useForWeaving"] = false,
 				["usePot"] = false,
 				["used"] = false,
@@ -1552,8 +1591,132 @@ return false",
 				["comparator"] = 1,
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)",
+return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500) or (data.stopCast ~= nil and (data.stopCast == true))",
 				["conditionType"] = 5,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[5] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return data.stopAutoTarget == nil and data.stopAutoTargetDupe == nil",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[6] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return data.stopCast == true",
+				["conditionType"] = 1,
 				["conditions"] = {
 				},
 				["contentid"] = -1,
@@ -1623,9 +1786,679 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "0a134196-b426-1eb4-bed3-1bb4e625b4ca",
+		["uuid"] = "c555f623-9c16-f3f2-9473-a706d5cb555b",
 	},
 	[10] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "data.stopAutoTarget = true\
+self.used = true",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 1,
+					[2] = 3,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[2] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "data.stopAutoTarget = nil\
+self.used = true",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 2,
+					[2] = 3,
+					[3] = 4,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+		},
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "local StopCastingTable = {\
+--face away\
+[8066] = true,\
+[7949] = true,\
+[9829] = true,\
+[11159] = true,\
+[12587] = true,\
+[12708] = true,\
+[9485] = true,\
+[9071] = true,\
+[9211] = true,\
+[20303] = true,\
+[16025] = true,\
+[19198] = true,\
+[14200] = true,\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[2] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return data.stopAutoTarget == true",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[3] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperTargeting == true and AnyoneCore.Settings.DutyHelper == true",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[4] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 2,
+				["comparator"] = 1,
+				["conditionLua"] = "",
+				["conditionType"] = 7,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+		},
+		["enabled"] = true,
+		["eventType"] = 3,
+		["execute"] = "",
+		["executeType"] = 1,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "stop auto target - duty helper",
+		["throttleTime"] = 6000,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "229d0660-956b-085a-b116-1f774e04c6a9",
+	},
+	[11] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "data.stopCast = true\
+data.stopAutoTargetDupe = true\
+self.used = true",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 1,
+					[2] = 2,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[2] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "data.stopCast = nil\
+data.stopAutoTargetDupe = nil\
+self.used = true",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 3,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+		},
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "local ClearTargetTable = {\
+--stop cast and clear target\
+[639] = true,\
+[960] = true,\
+[1049] = true,\
+[1072] = true,\
+[1132] = true,\
+[1133] = true,\
+[1269] = true,\
+[1270] = true,\
+[1384] = true,\
+[1599] = true,\
+}\
+\
+return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 2",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[2] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperTargeting == true and AnyoneCore.Settings.DutyHelper == true",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[3] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return data.stopCast == true",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+		},
+		["enabled"] = true,
+		["eventType"] = 8,
+		["execute"] = "",
+		["executeType"] = 1,
+		["lastUse"] = 0,
+		["luaReturnsAction"] = false,
+		["name"] = "clear target - duty helper",
+		["throttleTime"] = 4000,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "99f65175-89b5-00e8-b697-5271389b0d8a",
+	},
+	[12] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1,
@@ -2140,7 +2973,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 		["used"] = false,
 		["uuid"] = "1826c69d-3bc1-e989-b72f-4710a1560296",
 	},
-	[11] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1,
@@ -2506,7 +3339,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 		["used"] = false,
 		["uuid"] = "43ff21cc-4c50-2339-9189-07b1a944dfa8",
 	},
-	[12] = {
+	[14] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1,
@@ -3025,9 +3858,50 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 		["used"] = false,
 		["uuid"] = "2f7d0f3d-fd90-f9fa-9f03-c9b0195afb65",
 	},
-	[13] = {
+	[15] = {
 		["actions"] = {
 			[1] = {
+				["aType"] = 1,
+				["actionID"] = 7535,
+				["actionLua"] = "",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 11,
+					[2] = 12,
+					[3] = 13,
+					[4] = 3,
+					[5] = 2,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = true,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[2] = {
 				["aType"] = 1,
 				["actionID"] = 16148,
 				["actionLua"] = "",
@@ -3067,7 +3941,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["used"] = false,
 				["variableTogglesType"] = 1,
 			},
-			[2] = {
+			[3] = {
 				["aType"] = 1,
 				["actionID"] = 7531,
 				["actionLua"] = "",
@@ -3108,7 +3982,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["used"] = false,
 				["variableTogglesType"] = 1,
 			},
-			[3] = {
+			[4] = {
 				["aType"] = 1,
 				["actionID"] = 16161,
 				["actionLua"] = "",
@@ -3149,7 +4023,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["used"] = false,
 				["variableTogglesType"] = 1,
 			},
-			[4] = {
+			[5] = {
 				["aType"] = 1,
 				["actionID"] = 16140,
 				["actionLua"] = "",
@@ -3352,7 +4226,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return TankMitigationTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 6",
+return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Player.id and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 6",
 				["conditionType"] = 2,
 				["conditions"] = {
 				},
@@ -3962,6 +4836,562 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["setEventTargetSubtype"] = 1,
 				["setFirstMatch"] = false,
 			},
+			[11] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "local ReprisalMitigationTable = {\
+--dungeons\
+[7963] = true,\
+[7974] = true,\
+[8331] = true,\
+[8332] = true,\
+[8290] = true,\
+[8153] = true,\
+[9807] = true,\
+[10131] = true,\
+[11156] = true,\
+[11174] = true,\
+[11527] = true,\
+[11848] = true,\
+[12586] = true,\
+[12597] = true,\
+[11634] = true,\
+[12691] = true,\
+[13401] = true,\
+[14121] = true,\
+[14122] = true,\
+[14190] = true,\
+[15812] = true,\
+[15823] = true,\
+[15831] = true,\
+[8857] = true,\
+[13732] = true,\
+[15497] = true,\
+[15505] = true,\
+[15513] = true,\
+[15589] = true,\
+[15595] = true,\
+[15611] = true,\
+[15625] = true,\
+[15634] = true,\
+[15717] = true,\
+[15853] = true,\
+[15867] = true,\
+[15876] = true,\
+[15907] = true,\
+--8 man raids tank mitigation\
+[9175] = true,\
+[7887] = true,\
+[9487] = true,\
+[9073] = true,\
+[8939] = true,\
+[9405] = true,\
+[9209] = true,\
+[9241] = true,\
+[9244] = true,\
+[10403] = true,\
+[10417] = true,\
+[10282] = true,\
+[10281] = true,\
+[10121] = true,\
+[10542] = true,\
+[10472] = true,\
+[10512] = true,\
+[10514] = true,\
+[12623] = true,\
+[12656] = true,\
+[12741] = true,\
+[12935] = true,\
+[12909] = true,\
+[13071] = true,\
+[13072] = true,\
+[13089] = true,\
+[13090] = true,\
+[13131] = true,\
+[13132] = true,\
+[13136] = true,\
+[13137] = true,\
+[13164] = true,\
+[15777] = true,\
+[15752] = true,\
+[15949] = true,\
+[15950] = true,\
+[15969] = true,\
+[15970] = true,\
+[16326] = true,\
+[16352] = true,\
+[16633] = true,\
+[16696] = true,\
+--trials tank mitigation\
+[8227] = true,\
+[8243] = true,\
+[9362] = true,\
+[9363] = true,\
+[8542] = true,\
+[8543] = true,\
+[8100] = true,\
+[8731] = true,\
+[9715] = true,\
+[9738] = true,\
+[9803] = true,\
+[10797] = true,\
+[10202] = true,\
+[11235] = true,\
+[11955] = true,\
+[11195] = true,\
+[11954] = true,\
+[12832] = true,\
+[12849] = true,\
+[13009] = true,\
+[13020] = true,\
+[14333] = true,\
+[15707] = true,\
+[15671] = true,\
+[15690] = true,\
+[16031] = true,\
+[16035] = true,\
+[16073] = true,\
+[16077] = true,\
+[16728] = true,\
+[18342] = true,\
+[18370] = true,\
+[18371] = true,\
+[18385] = true,\
+[19696] = true,\
+--24 man raids\
+[9687] = true,\
+[9773] = true,\
+[9856] = true,\
+[11326] = true,\
+[11354] = true,\
+[11377] = true,\
+[11483] = true,\
+[11598] = true,\
+[14137] = true,\
+[14162] = true,\
+[14438] = true,\
+[14506] = true,\
+[18260] = true,\
+[18638] = true,\
+[18672] = true,\
+[18677] = true,\
+---start of dungeon spell ids\
+[8028] = true, \
+[8039] = true,\
+[8064] = true,\
+[7946] = true,\
+[8357] = true,\
+[7958] = true,\
+[8269] = true,\
+[8271] = true,\
+[8301] = true,\
+[7287] = true,\
+[7843] = true,\
+[8150] = true,\
+[8167] = true,\
+[8175] = true,\
+[9808] = true,\
+[10162] = true,\
+[11178] = true,\
+[11178] = true,\
+[11179] = true,\
+[11184] = true,\
+[11185] = true,\
+[11528] = true,\
+[11850] = true,\
+[12588] = true,\
+[13216] = true,\
+[11635] = true,\
+[12619] = true,\
+[13397] = true,\
+[14119] = true,\
+[14120] = true,\
+[14191] = true,\
+[14195] = true,\
+[15813] = true,\
+[15824] = true,\
+[15832] = true,\
+[7822] = true,\
+[8915] = true,\
+[13708] = true,\
+[15499] = true,\
+[15506] = true,\
+[15515] = true,\
+[15524] = true,\
+[15590] = true,\
+[15601] = true,\
+[15612] = true,\
+[15627] = true,\
+[15636] = true,\
+[15587] = true,\
+[17108] = true,\
+[15716] = true,\
+[15868] = true,\
+[15878] = true,\
+[15895] = true,\
+[15908] = true,\
+[18204] = true,\
+[18277] = true,\
+[18282] = true,\
+[18851] = true,\
+[19288] = true,\
+[19295] = true,\
+[19306] = true,\
+[19315] = true,\
+[19321] = true,\
+[19322] = true,\
+[19324] = true,\
+[19328] = true,\
+---start of trials spell ids\
+[8230] = true,\
+[8246] = true,\
+[8588] = true,\
+[9347] = true,\
+[9374] = true,\
+[8519] = true,\
+[9373] = true,\
+[8107] = true,\
+[8108] = true,\
+[8109] = true,\
+[8110] = true,\
+[9722] = true,\
+[9692] = true,\
+[9693] = true,\
+[9694] = true,\
+[10018] = true,\
+[10799] = true,\
+[10204] = true,\
+[11234] = true,\
+[11238] = true,\
+[11255] = true,\
+[11256] = true,\
+[11259] = true,\
+[11194] = true,\
+[11196] = true,\
+[11197] = true,\
+[11223] = true,\
+[11224] = true,\
+[11228] = true,\
+[12833] = true,\
+[12852] = true,\
+[13010] = true,\
+[13023] = true,\
+[14334] = true,\
+[14347] = true,\
+[14275] = true,\
+[14322] = true,\
+[14376] = true,\
+[15697] = true,\
+[15702] = true,\
+[15703] = true,\
+[15708] = true,\
+[15667] = true,\
+[15674] = true,\
+[15681] = true,\
+[15691] = true,\
+[16026] = true,\
+[16030] = true,\
+[16072] = true,\
+[16106] = true,\
+[16190] = true,\
+[16768] = true,\
+[17815] = true,\
+[18344] = true,\
+[18360] = true,\
+[18367] = true,\
+[18380] = true,\
+[18380] = true,\
+[18384] = true,\
+[18398] = true,\
+[18419] = true,\
+[18420] = true,\
+[19112] = true,\
+[19139] = true,\
+[19141] = true,\
+[19144] = true,\
+[19134] = true,\
+[19156] = true,\
+[19158] = true,\
+[19160] = true,\
+[19204] = true,\
+--- start of 8 man raids spell ids\
+[9180] = true,\
+[9184] = true,\
+[7892] = true,\
+[7900] = true,\
+[9476] = true,\
+[9488] = true,\
+[9059] = true,\
+[9074] = true,\
+[9317] = true,\
+[8950] = true,\
+[9414] = true,\
+[9220] = true,\
+[9222] = true,\
+[9239] = true,\
+[9256] = true,\
+[9257] = true,\
+[10284] = true,\
+[10283] = true,\
+[10094] = true,\
+[10123] = true,\
+[10541] = true,\
+[10456] = true,\
+[10471] = true,\
+[10477] = true,\
+[12645] = true,\
+[12646] = true,\
+[12647] = true,\
+[12648] = true,\
+[12678] = true,\
+[12679] = true,\
+[12680] = true,\
+[12681] = true,\
+[12742] = true,\
+[12715] = true,\
+[12934] = true,\
+[12908] = true,\
+[14072] = true,\
+[14082] = true,\
+[13066] = true,\
+[13073] = true,\
+[13074] = true,\
+[13093] = true,\
+[13122] = true,\
+[13123] = true,\
+[13135] = true,\
+[13138] = true,\
+[13139] = true,\
+[13143] = true,\
+[13179] = true,\
+[13793] = true,\
+[15780] = true,\
+[15783] = true,\
+[15736] = true,\
+[15738] = true,\
+[15755] = true,\
+[15759] = true,\
+[15656] = true,\
+[15982] = true,\
+[15984] = true,\
+[15986] = true,\
+[16324] = true,\
+[17435] = true,\
+[16348] = true,\
+[16350] = true,\
+[16395] = true,\
+[17436] = true,\
+[16631] = true,\
+[17382] = true,\
+[16660] = true,\
+[16682] = true,\
+[16699] = true,\
+[17384] = true,\
+--24 man raids\
+[9670] = true,\
+[9760] = true,\
+[11308] = true,\
+[11318] = true,\
+[11325] = true,\
+[11364] = true,\
+[11484] = true,\
+[11612] = true,\
+[11613] = true,\
+[14139] = true,\
+[14206] = true,\
+[14439] = true,\
+[18261] = true,\
+[18437] = true,\
+[18639] = true,\
+[18675] = true,\
+[18678] = true,\
+[18753] = true,\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return TankMitigationTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 6",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "reprisal table",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[12] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 1,
+				["comparator"] = 2,
+				["conditionLua"] = "",
+				["conditionType"] = 6,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = true,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 5,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 19,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[13] = {
+				["actionCDValue"] = 1,
+				["actionID"] = 7535,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 2,
+				["comparator"] = 2,
+				["conditionLua"] = "",
+				["conditionType"] = 4,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
 		},
 		["enabled"] = true,
 		["eventType"] = 3,
@@ -3982,7 +5412,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 		["used"] = false,
 		["uuid"] = "317dc667-cc7b-3b92-90bf-2f4a3422c43f",
 	},
-	[14] = {
+	[16] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1,
@@ -4656,7 +6086,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 		["used"] = false,
 		["uuid"] = "b686ee00-f781-b899-a530-7e5342fe07d6",
 	},
-	[15] = {
+	[17] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1,
@@ -5088,7 +6518,364 @@ return false",
 		["used"] = false,
 		["uuid"] = "12a04d7f-e83f-8789-a3a6-35a3a1ddafa1",
 	},
-	[16] = {
+	[18] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 1,
+				["actionID"] = 16151,
+				["actionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 3,
+					[2] = 2,
+					[3] = 1,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = true,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "aurora",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+		},
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 2,
+				["comparator"] = 1,
+				["conditionLua"] = "",
+				["conditionType"] = 7,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[2] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+			[3] = {
+				["actionCDValue"] = 0,
+				["actionID"] = -1,
+				["buffCheckType"] = 1,
+				["buffDuration"] = 0,
+				["buffID"] = -1,
+				["buffIDList"] = {
+				},
+				["category"] = 4,
+				["comparator"] = 1,
+				["conditionLua"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 37 or Player.level < 45 then\
+		return false\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 16151)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		return false\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if HasBuff(Player.id, 43) or HasBuff(Player.id, 44) then\
+		return false\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		return true\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+		return true\
+end\
+\
+if (Player.hp.percent > 30 and hasRegen == true) or Player.hp.percent > 40 then\
+		return false\
+end",
+				["conditionType"] = 1,
+				["conditions"] = {
+				},
+				["contentid"] = -1,
+				["dequeueIfLuaFalse"] = false,
+				["enmityValue"] = 0,
+				["eventArgOptionType"] = 1,
+				["eventArgType"] = 1,
+				["eventBuffDuration"] = 0,
+				["eventBuffID"] = -1,
+				["eventChatLine"] = "",
+				["eventEntityContentID"] = -1,
+				["eventEntityID"] = -1,
+				["eventEntityName"] = "",
+				["eventMarkerID"] = -1,
+				["eventOwnerContentID"] = -1,
+				["eventOwnerID"] = -1,
+				["eventOwnerName"] = "",
+				["eventSpellID"] = -1,
+				["eventSpellName"] = -1,
+				["eventTargetContentID"] = -1,
+				["eventTargetID"] = -1,
+				["eventTargetName"] = "",
+				["gaugeIndex"] = 1,
+				["gaugeValue"] = 0,
+				["hpType"] = 1,
+				["hpValue"] = 0,
+				["inCombatType"] = 1,
+				["inRangeValue"] = 0,
+				["lastSkillID"] = -1,
+				["localmapid"] = -1,
+				["matchAnyBuff"] = false,
+				["mpType"] = 1,
+				["mpValue"] = 0,
+				["name"] = "",
+				["partyHpType"] = 1,
+				["partyHpValue"] = 0,
+				["partyMpType"] = 1,
+				["partyMpValue"] = 0,
+				["partyTargetContentID"] = -1,
+				["partyTargetName"] = "",
+				["partyTargetNumber"] = 1,
+				["partyTargetSubType"] = 1,
+				["partyTargetType"] = 1,
+				["rangeCheckSourceSubType"] = 1,
+				["rangeCheckSourceType"] = 1,
+				["rangeSourceContentID"] = -1,
+				["rangeSourceName"] = "",
+				["setEventTargetSubtype"] = 1,
+				["setFirstMatch"] = false,
+			},
+		},
+		["enabled"] = true,
+		["eventType"] = 1,
+		["execute"] = "--- This code is from Nil's general reactions. I've only minorly changed it. Credits go entirely to Nil for this concept.\
+\
+if Player.job ~= 21 or Player.level < 58 or Player.incombat == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- if action on cooldown\
+local actionskill = ActionList:Get(1, 3552)\
+local isActionAvailable = actionskill.cdmax - actionskill.cd < 1\
+\
+if isActionAvailable == false then\
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+-- check regen buffs\
+local hasRegen = false\
+if  HasBuff(Player.id, 158) or HasBuff(Player.id, 150) or HasBuff(Player.id, 839) then\
+		hasRegen = true\
+end\
+\
+if hasRegen and Player.hp.percent < 30 then\
+		SallyWAR.HotBarConfig.Equilibrium.enabled = false \
+		self.eventConditionMismatch = true -- suppressing the log\
+		self.used = true \
+		return nil\
+end\
+\
+if hasRegen == false and Player.hp.percent < 40 then\
+SallyWAR.HotBarConfig.Equilibrium.enabled = false\
+end\
+\
+self.eventConditionMismatch = true -- suppressing the log\
+self.used = true\
+return nil",
+		["executeType"] = 1,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "aurora - duty helper",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "4ecc49e1-bb84-2a90-9bf0-aa07c0e2394c",
+	},
+	[19] = {
 		["actions"] = {
 		},
 		["conditions"] = {
@@ -5112,7 +6899,7 @@ return false",
 		["used"] = false,
 		["uuid"] = "d137dd3a-5482-66ec-be1c-5b534c56c1fe",
 	},
-	[17] = {
+	[20] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4,
