@@ -1770,7 +1770,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "45371f39-e872-c27c-b529-8d69eef97a79",
+		["uuid"] = "a7a15c0d-7d3f-1e6b-b0f5-eb4a5b3a90ff",
 	},
 	[10] = {
 		["actions"] = {
@@ -2139,7 +2139,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "35222b24-98cf-e422-b0e8-4e0fe925c702",
+		["uuid"] = "f5014c45-31b9-16ce-8d4d-fcd80f159e00",
 	},
 	[11] = {
 		["actions"] = {
@@ -2442,7 +2442,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "38c9e415-0793-3350-99aa-eb34aa57ce17",
+		["uuid"] = "2adf90f4-7bc9-fda3-8b64-a98df7f33853",
 	},
 	[12] = {
 		["actions"] = {
@@ -5932,6 +5932,52 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 	[17] = {
 		["actions"] = {
 			[1] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=15,mindistance=4\")) do\
+		if (ent ~= nil) then\
+					if ent.aggropercentage <= 99 then\
+						Player:SetTarget(ent.id)\
+				 end\
+		end\
+end",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 5,
+					[2] = 1,
+					[3] = 2,
+					[4] = 3,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[2] = {
 				["aType"] = 1,
 				["actionID"] = 3624,
 				["actionLua"] = "",
@@ -5971,10 +6017,16 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["used"] = false,
 				["variableTogglesType"] = 1,
 			},
-			[2] = {
+			[3] = {
 				["aType"] = 4,
 				["actionID"] = -1,
-				["actionLua"] = "self.used = true",
+				["actionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=3\")) do\
+		if (ent ~= nil) then\
+					if ent.aggropercentage <= 99 then\
+						Player:SetTarget(ent.id)\
+				 end\
+		end\
+end",
 				["allowInterrupt"] = false,
 				["atomicPriority"] = false,
 				["castAtMouse"] = false,
@@ -5982,10 +6034,10 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosY"] = 0,
 				["castPosZ"] = 0,
 				["conditions"] = {
-					[1] = 1,
-					[2] = 4,
-					[3] = 3,
-					[4] = 5,
+					[1] = 5,
+					[2] = 1,
+					[3] = 4,
+					[4] = 3,
 				},
 				["endIfUsed"] = true,
 				["gVar"] = "",
@@ -6023,7 +6075,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 32 and AnyoneCore.Settings.DutyHelperGrabAggro == true and AnyoneCore.Settings.DutyHelper == true",
+				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 37 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -6088,7 +6140,6 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=15,mindistance=4\")) do\
 		if (ent ~= nil) then\
 					if ent.aggropercentage <= 99 then\
-						Player:SetTarget(ent.id)\
 						return true\
 					else return false\
 				 end\
@@ -6221,7 +6272,6 @@ return false",
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=3\")) do\
 		if (ent ~= nil) then\
 					if ent.aggropercentage <= 99 then\
-						Player:SetTarget(ent.id)\
 						return true\
 					else return false\
 				 end\
@@ -6359,7 +6409,7 @@ return false",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "a3d77d10-711d-9663-8c41-3760df220c8a",
+		["uuid"] = "19d517c3-a41b-6c1e-87e2-696a4d15a167",
 	},
 	[18] = {
 		["actions"] = {

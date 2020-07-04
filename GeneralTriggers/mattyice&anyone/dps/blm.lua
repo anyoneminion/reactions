@@ -3103,7 +3103,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "8494b846-ebab-d877-b3be-28a95cc37108",
+		["uuid"] = "a579e44b-0440-13b4-ba04-1a77d90534cb",
 	},
 	[13] = {
 		["actions"] = {
@@ -3472,7 +3472,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "7c641991-afe4-bc38-ac33-a729362cf501",
+		["uuid"] = "3bc342de-e6ef-064a-ad17-51a8b3f093b8",
 	},
 	[14] = {
 		["actions"] = {
@@ -3775,7 +3775,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "6ed82533-3634-d5e5-b95c-f6c3a2c448df",
+		["uuid"] = "a52d05f2-41aa-bf44-9a63-eed780302ea4",
 	},
 	[15] = {
 		["actions"] = {
