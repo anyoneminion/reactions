@@ -6091,6 +6091,52 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 	[17] = {
 		["actions"] = {
 			[1] = {
+				["aType"] = 4,
+				["actionID"] = -1,
+				["actionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=15,mindistance=4\")) do\
+		if (ent ~= nil) then\
+					if ent.aggropercentage <= 99 then\
+						Player:SetTarget(ent.id)\
+				 end\
+		end\
+end",
+				["allowInterrupt"] = false,
+				["atomicPriority"] = false,
+				["castAtMouse"] = false,
+				["castPosX"] = 0,
+				["castPosY"] = 0,
+				["castPosZ"] = 0,
+				["conditions"] = {
+					[1] = 5,
+					[2] = 1,
+					[3] = 2,
+					[4] = 3,
+				},
+				["endIfUsed"] = false,
+				["gVar"] = "",
+				["gVarIndex"] = 1,
+				["gVarValue"] = 1,
+				["ignoreWeaveRules"] = false,
+				["isAreaTarget"] = false,
+				["luaNeedsWeaveWindow"] = false,
+				["luaReturnsAction"] = false,
+				["name"] = "",
+				["potType"] = 1,
+				["setTarget"] = false,
+				["showPositionPreview"] = false,
+				["stopCasting"] = false,
+				["stopMoving"] = false,
+				["targetContentID"] = -1,
+				["targetName"] = "",
+				["targetSubType"] = 1,
+				["targetType"] = 1,
+				["untarget"] = false,
+				["useForWeaving"] = false,
+				["usePot"] = false,
+				["used"] = false,
+				["variableTogglesType"] = 1,
+			},
+			[2] = {
 				["aType"] = 1,
 				["actionID"] = 16143,
 				["actionLua"] = "",
@@ -6130,10 +6176,16 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["used"] = false,
 				["variableTogglesType"] = 1,
 			},
-			[2] = {
+			[3] = {
 				["aType"] = 4,
 				["actionID"] = -1,
-				["actionLua"] = "self.used = true",
+				["actionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=3\")) do\
+		if (ent ~= nil) then\
+					if ent.aggropercentage <= 99 then\
+						Player:SetTarget(ent.id)\
+				 end\
+		end\
+end",
 				["allowInterrupt"] = false,
 				["atomicPriority"] = false,
 				["castAtMouse"] = false,
@@ -6141,10 +6193,10 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosY"] = 0,
 				["castPosZ"] = 0,
 				["conditions"] = {
-					[1] = 1,
-					[2] = 4,
-					[3] = 3,
-					[4] = 5,
+					[1] = 5,
+					[2] = 1,
+					[3] = 4,
+					[4] = 3,
 				},
 				["endIfUsed"] = true,
 				["gVar"] = "",
@@ -6247,7 +6299,6 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=15,mindistance=4\")) do\
 		if (ent ~= nil) then\
 					if ent.aggropercentage <= 99 then\
-						Player:SetTarget(ent.id)\
 						return true\
 					else return false\
 				 end\
@@ -6380,7 +6431,6 @@ return false",
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=3\")) do\
 		if (ent ~= nil) then\
 					if ent.aggropercentage <= 99 then\
-						Player:SetTarget(ent.id)\
 						return true\
 					else return false\
 				 end\
