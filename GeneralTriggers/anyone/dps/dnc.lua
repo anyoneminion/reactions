@@ -2534,7 +2534,7 @@ return false",
 				["comparator"] = 1,
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500) or (data.stopCast ~= nil and (data.stopCast == true))",
+return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)",
 				["conditionType"] = 5,
 				["conditions"] = {
 				},
@@ -2658,7 +2658,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopCast == true",
+				["conditionLua"] = "return data.stopCast ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -2729,7 +2729,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "7222ce6b-2d44-e54d-855f-093e1f899ca3",
+		["uuid"] = "52d51b74-f904-bb4d-a1d0-df24aa6b6146",
 	},
 	[12] = {
 		["actions"] = {
@@ -2904,7 +2904,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopAutoTarget == true",
+				["conditionLua"] = "return data.stopAutoTarget ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -3086,6 +3086,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 		["execute"] = "",
 		["executeType"] = 1,
 		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
 		["luaReturnsAction"] = false,
 		["name"] = "stop auto target - duty helper",
 		["throttleTime"] = 6000,
@@ -3097,7 +3098,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "a4818859-acad-a9ae-b6b5-6beef86e9ac7",
+		["uuid"] = "323c51b4-6e12-4e6e-a8a6-5ba17f3b8e84",
 	},
 	[13] = {
 		["actions"] = {
@@ -3330,7 +3331,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopCast == true",
+				["conditionLua"] = "return data.stopCast ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -3388,6 +3389,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["execute"] = "",
 		["executeType"] = 1,
 		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
 		["luaReturnsAction"] = false,
 		["name"] = "clear target - duty helper",
 		["throttleTime"] = 4000,
@@ -3399,7 +3401,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "7e33852a-9472-8d7d-9347-e1d3c9b4c37b",
+		["uuid"] = "50cc2022-0863-e11b-8386-4342869f6a74",
 	},
 	[14] = {
 		["actions"] = {

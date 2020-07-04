@@ -2535,7 +2535,7 @@ return false",
 				["comparator"] = 1,
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500) or (data.stopCast ~= nil and (data.stopCast == true))",
+return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)",
 				["conditionType"] = 5,
 				["conditions"] = {
 				},
@@ -2659,7 +2659,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopCast == true",
+				["conditionLua"] = "return data.stopCast ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -2730,7 +2730,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "40f2b43a-450b-49af-965e-755f6561370d",
+		["uuid"] = "4e140a1b-2084-f011-86bb-c2532cc97a36",
 	},
 	[13] = {
 		["actions"] = {
@@ -2905,7 +2905,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopAutoTarget == true",
+				["conditionLua"] = "return data.stopAutoTarget ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -3099,7 +3099,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "014aeaa7-4f34-a27d-946c-3b99ea0ea5d5",
+		["uuid"] = "b8592080-7caf-33be-bab1-cedf2a4a7e84",
 	},
 	[14] = {
 		["actions"] = {
@@ -3332,7 +3332,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				},
 				["category"] = 4,
 				["comparator"] = 1,
-				["conditionLua"] = "return data.stopCast == true",
+				["conditionLua"] = "return data.stopCast ~= nil",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -3402,7 +3402,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "3e014555-d938-52fc-8a43-34ce22bc2539",
+		["uuid"] = "df189ac2-f728-0e53-8989-7b94ecd33288",
 	},
 	[15] = {
 		["actions"] = {
