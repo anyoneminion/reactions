@@ -2730,7 +2730,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375,
 		["timerStartOffset"] = -8,
 		["used"] = false,
-		["uuid"] = "4e140a1b-2084-f011-86bb-c2532cc97a36",
+		["uuid"] = "a2036ab4-a8d1-3bd3-9d63-65051a96328b",
 	},
 	[13] = {
 		["actions"] = {
@@ -2843,7 +2843,7 @@ self.used = true",
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5",
+return StopCastingTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -3099,7 +3099,7 @@ return StopCasting[eventArgs.spellID] == true and caster and caster.castinginfo.
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "b8592080-7caf-33be-bab1-cedf2a4a7e84",
+		["uuid"] = "dba573f0-a6c3-23be-ab94-e76f4817747b",
 	},
 	[14] = {
 		["actions"] = {
@@ -3402,7 +3402,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "df189ac2-f728-0e53-8989-7b94ecd33288",
+		["uuid"] = "9b32cf81-68c5-d8c4-bff1-3b33415ad0aa",
 	},
 	[15] = {
 		["actions"] = {
