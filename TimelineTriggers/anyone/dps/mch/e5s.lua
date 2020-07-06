@@ -1753,6 +1753,7 @@ self.used = true";
 					["castPosZ"] = 0;
 					["conditions"] = {
 						[1] = 1;
+						[2] = 2;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "ACR_TensorMagnum_Hotbar_Sprint_Safe";

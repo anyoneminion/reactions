@@ -91,6 +91,130 @@ self.used = true";
 			["used"] = false;
 			["uuid"] = "910a4160-6413-6fd5-8964-3fe9b7c3c6d7";
 		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 7;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "db2de3d9-2f7e-3d57-ae5e-1f03efac601a";
+		};
+	};
+	[6] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 27.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 6;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "084c593d-0629-09ed-be33-7b8cf4245ab0";
+		};
+	};
+	[17] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 86.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 17;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "ae1b35c8-a7f2-2929-bcb2-3950b20369b4";
+		};
 	};
 	[24] = {
 		[1] = {
@@ -145,12 +269,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -188,12 +312,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -231,12 +355,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -274,12 +398,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -434,6 +558,90 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "6e7027c8-133f-3857-a205-8e8f9fd686d0";
+		};
+	};
+	[26] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 136.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 26;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "0bda3f76-a660-2bb5-9650-3621c92e7d3e";
+		};
+	};
+	[29] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 151.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 29;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "e9b3a3ae-b9a0-e754-98e3-2e823a9fef6c";
 		};
 	};
 	[35] = {
@@ -1099,6 +1307,88 @@ self.used = true";
 			["timerStartOffset"] = -60;
 			["used"] = false;
 			["uuid"] = "3f50b064-5c06-3978-9207-55124c58f093";
+		};
+		[3] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 184;
+			["timeRange"] = false;
+			["timelineIndex"] = 35;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "8581b5fd-df20-64be-ae71-1a635c412449";
+		};
+	};
+	[38] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 199;
+			["timeRange"] = false;
+			["timelineIndex"] = 38;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "b25f4cdb-3970-ad23-8ff8-a6adb80b4c2b";
 		};
 	};
 	[39] = {
@@ -3507,6 +3797,48 @@ return false";
 			["uuid"] = "888d9fa9-c829-1094-9b95-770b20fca191";
 		};
 	};
+	[88] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 517;
+			["timeRange"] = false;
+			["timelineIndex"] = 88;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "474f2d37-eeef-0c08-b7db-c68efc35f634";
+		};
+	};
 	[91] = {
 		[1] = {
 			["actions"] = {
@@ -3902,6 +4234,213 @@ return false";
 			["uuid"] = "29b8bf07-f548-a126-a87b-f63e7158bee3";
 		};
 	};
+	[98] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local mt = TensorCore.getEntityByGroup(\"Main Tank\")\
+		if mt then\
+				Argus.addTimedCircleFilled(5000, mt.pos.x, mt.pos.y, mt.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, mt.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+\
+local ot = TensorCore.getEntityByGroup(\"Off Tank\")\
+		if ot then\
+				Argus.addTimedCircleFilled(5000, ot.pos.x, ot.pos.y, ot.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ot.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+		end\
+\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+						[2] = 2;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return Argus ~= nil";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = true;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+				[2] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["comparator"] = 1;
+					["conditionLua"] = "return AnyoneCore.Settings.DrawNaelQuotes == true";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+					["targetName"] = "";
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw tempest wings";
+			["throttleTime"] = 0;
+			["time"] = 552;
+			["timeRange"] = false;
+			["timelineIndex"] = 98;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9b538be4-fb43-566c-bb23-fd7bac5b9715";
+		};
+	};
+	[99] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 555.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 99;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "04ddc5a9-21ac-a994-9ed2-6c3f73bd3311";
+		};
+	};
 	[102] = {
 		[1] = {
 			["actions"] = {
@@ -4276,6 +4815,48 @@ return false";
 	};
 	[110] = {
 	};
+	[111] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(9000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath x3";
+			["throttleTime"] = 0;
+			["time"] = 605;
+			["timeRange"] = false;
+			["timelineIndex"] = 111;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e4b4357f-1cbe-5404-b26f-3008e2667d3e";
+		};
+	};
 	[115] = {
 		[1] = {
 			["actions"] = {
@@ -4649,6 +5230,88 @@ return false";
 		};
 	};
 	[122] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 651.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 122;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "ca7eebc2-656d-c2e3-bebf-5e07f0e19c62";
+		};
+	};
+	[124] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 665.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 124;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "d8e6afa4-bf35-1d93-8b3e-96363ea30e8e";
+		};
 	};
 	[126] = {
 		[1] = {
@@ -5075,12 +5738,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5118,12 +5781,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5161,12 +5824,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5204,12 +5867,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5367,6 +6030,48 @@ self.used = true";
 		};
 	};
 	[136] = {
+	};
+	[137] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(9000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 717.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 137;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "002b1de2-dde1-2533-b1cd-22267fc2e50c";
+		};
 	};
 	[141] = {
 		[1] = {
@@ -5816,6 +6521,48 @@ return false";
 			["timerStartOffset"] = -8;
 			["used"] = false;
 			["uuid"] = "be65f1f5-a1fe-adc6-a967-04f79a63f773";
+		};
+	};
+	[151] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 3210 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Flare Breath";
+			["throttleTime"] = 0;
+			["time"] = 781.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 151;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "819f2a26-6fa4-21ad-964e-c1757267ad44";
 		};
 	};
 	[153] = {
@@ -6503,6 +7250,90 @@ return false";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "44eca901-2ca3-76d9-b7e3-7d4ccf3621cf";
+		};
+	};
+	[170] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 852.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 170;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "dd46a3bd-e4ae-b5c4-a14a-f15bf6d87193";
+		};
+	};
+	[179] = {
+		[1] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "if Argus == nil then self.used = true return end\
+\
+if data.entitiesAdded == nil then\
+    data.entitiesAdded = {}\
+end\
+\
+local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
+for _,ent in pairs (EntityList(\"aggressive\")) do \
+if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
+data.entitiesAdded[ent.id] = true\
+Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+end\
+end\
+\
+self.used = table.size(data.entitiesAdded) >= 1\
+if self.used then\
+    data.entitiesAdded = nil\
+end";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "Draw Plummet";
+			["throttleTime"] = 0;
+			["time"] = 908.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 179;
+			["timerEndOffset"] = 5;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = -5;
+			["used"] = false;
+			["uuid"] = "83239234-c114-9261-ac5b-b155fc04027c";
 		};
 	};
 	[190] = {
