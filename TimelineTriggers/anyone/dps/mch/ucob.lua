@@ -107,7 +107,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -129,7 +129,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "db2de3d9-2f7e-3d57-ae5e-1f03efac601a";
+			["uuid"] = "1a9b4a8e-0e40-4716-a819-d97f673ec085";
 		};
 	};
 	[6] = {
@@ -149,7 +149,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -171,7 +171,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "084c593d-0629-09ed-be33-7b8cf4245ab0";
+			["uuid"] = "2c1f6529-7d19-6a63-958b-730a27ea6b70";
 		};
 	};
 	[17] = {
@@ -191,7 +191,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -213,7 +213,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "ae1b35c8-a7f2-2929-bcb2-3950b20369b4";
+			["uuid"] = "f790d77d-9ffb-a95c-9491-1b78de68b10c";
 		};
 	};
 	[24] = {
@@ -269,12 +269,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -312,12 +312,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -355,12 +355,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -398,12 +398,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -577,7 +577,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -599,7 +599,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "0bda3f76-a660-2bb5-9650-3621c92e7d3e";
+			["uuid"] = "03765135-6f91-26dc-a59d-d1e9ba980b2d";
 		};
 	};
 	[29] = {
@@ -619,7 +619,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -641,7 +641,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "e9b3a3ae-b9a0-e754-98e3-2e823a9fef6c";
+			["uuid"] = "a0f38cb9-4a9e-5ed4-8957-23b228f2eb4d";
 		};
 	};
 	[35] = {
@@ -1324,7 +1324,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -1346,7 +1346,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "8581b5fd-df20-64be-ae71-1a635c412449";
+			["uuid"] = "e3b54e75-a612-e67d-ab53-b215a75c73d1";
 		};
 	};
 	[38] = {
@@ -1366,7 +1366,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -1388,7 +1388,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "b25f4cdb-3970-ad23-8ff8-a6adb80b4c2b";
+			["uuid"] = "f4ee950c-f9a1-f137-9430-0407af372dd9";
 		};
 	};
 	[39] = {
@@ -1777,6 +1777,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "44794768-2811-b85e-90b5-6d6a16a37c07";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 213.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "97708ec3-c800-80c2-b09a-eddfdd651b4d";
+		};
 	};
 	[49] = {
 		[1] = {
@@ -1907,6 +2012,148 @@ end";
 			["timerStartOffset"] = -20;
 			["used"] = false;
 			["uuid"] = "4dbbdecf-b036-4b16-8ae8-9ceb06d86cb4";
+		};
+	};
+	[51] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "for id, tethers in pairs(Argus.getCurrentTethers()) do\
+    for _, tether in pairs(tethers) do\
+        local ent = tether.targetid\
+        local ttype = tether.type\
+								if ent then\
+										Argus.addTimedCircleFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    				end\
+				end\
+end\
+\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw fireball (doesnt work)";
+			["throttleTime"] = 0;
+			["time"] = 241.1;
+			["timeRange"] = true;
+			["timelineIndex"] = 51;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "9dbc2009-c424-c2d4-a203-180aeb32a429";
+		};
+	};
+	[54] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "for id, tethers in pairs(Argus.getCurrentTethers()) do\
+    for _, tether in pairs(tethers) do\
+        local ent = tether.targetid\
+        local ttype = tether.type\
+								if ent then\
+										Argus.addTimedCircleFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    				end\
+				end\
+end\
+\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw fireball";
+			["throttleTime"] = 0;
+			["time"] = 256;
+			["timeRange"] = true;
+			["timelineIndex"] = 54;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "3049f8e6-fe7c-6418-82e0-1ee4913367f4";
 		};
 	};
 	[56] = {
@@ -2169,6 +2416,148 @@ end";
 			["timerStartOffset"] = -20;
 			["used"] = false;
 			["uuid"] = "422dca60-363e-4ec0-87b9-0b281952adb7";
+		};
+	};
+	[60] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "for id, tethers in pairs(Argus.getCurrentTethers()) do\
+    for _, tether in pairs(tethers) do\
+        local ent = tether.targetid\
+        local ttype = tether.type\
+								if ent then\
+										Argus.addTimedCircleFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    				end\
+				end\
+end\
+\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw fireball";
+			["throttleTime"] = 0;
+			["time"] = 281.9;
+			["timeRange"] = true;
+			["timelineIndex"] = 60;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "5817c21b-6504-842e-be75-6cfcbc9e6e55";
+		};
+	};
+	[63] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "for id, tethers in pairs(Argus.getCurrentTethers()) do\
+    for _, tether in pairs(tethers) do\
+        local ent = tether.targetid\
+        local ttype = tether.type\
+								if ent then\
+										Argus.addTimedCircleFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 2, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+    				end\
+				end\
+end\
+\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = false;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw fireball";
+			["throttleTime"] = 0;
+			["time"] = 302.9;
+			["timeRange"] = true;
+			["timelineIndex"] = 63;
+			["timerEndOffset"] = 3;
+			["timerOffset"] = -5;
+			["timerStartOffset"] = -3;
+			["used"] = false;
+			["uuid"] = "c1aa7b9a-76af-2c2c-84c9-df2da3e6ef65";
 		};
 	};
 	[65] = {
@@ -2599,7 +2988,7 @@ return false";
 			["timelineIndex"] = 77;
 			["timerEndOffset"] = 8;
 			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
+			["timerStartOffset"] = -10;
 			["used"] = false;
 			["uuid"] = "41469dd9-37f4-0479-a31f-74e1514ba098";
 		};
@@ -3796,6 +4185,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "888d9fa9-c829-1094-9b95-770b20fca191";
 		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 511;
+			["timeRange"] = false;
+			["timelineIndex"] = 87;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "6f9bda1d-75ac-9073-9276-b5bfa0d82d6f";
+		};
 	};
 	[88] = {
 		[1] = {
@@ -4233,6 +4727,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "29b8bf07-f548-a126-a87b-f63e7158bee3";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 545;
+			["timeRange"] = false;
+			["timelineIndex"] = 94;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "452fd91d-ddfd-8b6a-85d8-741bd636be59";
+		};
 	};
 	[98] = {
 		[1] = {
@@ -4242,12 +4841,12 @@ return false";
 					["actionID"] = -1;
 					["actionLua"] = "local mt = TensorCore.getEntityByGroup(\"Main Tank\")\
 		if mt then\
-				Argus.addTimedCircleFilled(5000, mt.pos.x, mt.pos.y, mt.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, mt.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				Argus.addTimedCircleFilled(6000, mt.pos.x, mt.pos.y, mt.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 2500, mt.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 		end\
 \
 local ot = TensorCore.getEntityByGroup(\"Off Tank\")\
 		if ot then\
-				Argus.addTimedCircleFilled(5000, ot.pos.x, ot.pos.y, ot.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ot.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+				Argus.addTimedCircleFilled(6000, ot.pos.x, ot.pos.y, ot.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 2500, ot.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 		end\
 \
 self.used = true";
@@ -4396,7 +4995,7 @@ self.used = true";
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9b538be4-fb43-566c-bb23-fd7bac5b9715";
+			["uuid"] = "cc5051ad-f07c-3e3a-9054-14076bfbed19";
 		};
 	};
 	[99] = {
@@ -4568,10 +5167,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 102;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a80a3ab5-33fd-5508-8b82-e6fb63d95558";
+			["uuid"] = "fbb3013e-ec33-a79c-9632-5d80aa6348f2";
 		};
 		[2] = {
 			["actions"] = {
@@ -4812,6 +5411,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "e6da9cb3-cf92-3c95-b912-59394352c6b5";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 590;
+			["timeRange"] = false;
+			["timelineIndex"] = 109;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "62c3e005-072f-8b97-80a5-80f88b92744a";
+		};
 	};
 	[110] = {
 	};
@@ -4984,10 +5688,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 115;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "24b1c9ba-9774-4d1d-b583-6a0adc2b64b3";
+			["uuid"] = "e5d86854-ce81-4032-90cf-a78214b6de87";
 		};
 		[2] = {
 			["actions"] = {
@@ -5228,6 +5932,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "962fd1e4-64f0-8f81-a2f7-5bd9559a895f";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 640.1;
+			["timeRange"] = false;
+			["timelineIndex"] = 119;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "7abb289f-440d-b035-b6a4-06863780c969";
+		};
 	};
 	[122] = {
 		[1] = {
@@ -5440,10 +6249,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 126;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "552de879-ee1f-54ae-bf13-66405e38476e";
+			["uuid"] = "0b2e3a8d-3cd7-c058-b149-c39e65596572";
 		};
 		[2] = {
 			["actions"] = {
@@ -5684,6 +6493,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "121a20cf-0fb4-23ba-90a7-2c8431924d75";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 702.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 134;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "71fece7d-6313-01a6-b7fb-040b0f743d23";
+		};
 	};
 	[135] = {
 		[1] = {
@@ -5738,12 +6652,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5781,12 +6695,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5824,12 +6738,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5867,12 +6781,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -5963,7 +6877,7 @@ self.used = true";
 			["time"] = 703.5;
 			["timeRange"] = true;
 			["timelineIndex"] = 135;
-			["timerEndOffset"] = -4;
+			["timerEndOffset"] = -1;
 			["timerOffset"] = -13;
 			["timerStartOffset"] = -15;
 			["used"] = false;
@@ -6023,7 +6937,7 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 135;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3.5;
+			["timerOffset"] = -0.89999997615814;
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "5e7784d8-9a36-f7bf-ac08-3d685631c713";
@@ -6200,10 +7114,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 141;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8883f231-8b7c-01c6-b2dd-bed22d9f7476";
+			["uuid"] = "1e082358-fa5d-f373-92d4-bdd87f8583c7";
 		};
 		[2] = {
 			["actions"] = {
@@ -6383,7 +7297,7 @@ self.used = true";
 			["conditions"] = {
 			};
 			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
+			["execute"] = "if Argus == nil or AnyoneCore.Settings.DrawNaelQuotes == false then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Tank\")) do    \
 		if ent then                     \
@@ -6521,6 +7435,111 @@ return false";
 			["timerStartOffset"] = -8;
 			["used"] = false;
 			["uuid"] = "be65f1f5-a1fe-adc6-a967-04f79a63f773";
+		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 754.4;
+			["timeRange"] = false;
+			["timelineIndex"] = 146;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "e211d56b-908d-6566-afb0-80e636531440";
 		};
 	};
 	[151] = {
@@ -6692,10 +7711,10 @@ end";
 			["timeRange"] = false;
 			["timelineIndex"] = 153;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
+			["timerOffset"] = -12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f4fbfb3f-2317-5b3b-b365-77c9f0075b40";
+			["uuid"] = "f0c95dba-df97-a239-bec6-e67196a310f3";
 		};
 		[2] = {
 			["actions"] = {
@@ -7251,6 +8270,111 @@ return false";
 			["used"] = false;
 			["uuid"] = "44eca901-2ca3-76d9-b7e3-7d4ccf3621cf";
 		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 844.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 168;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9a7d427c-7229-9a28-975b-71afa7c2b451";
+		};
 	};
 	[170] = {
 		[1] = {
@@ -7269,7 +8393,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -7291,7 +8415,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "dd46a3bd-e4ae-b5c4-a14a-f15bf6d87193";
+			["uuid"] = "af66cfef-19a3-7bb8-8484-d9553fdfaa08";
 		};
 	};
 	[179] = {
@@ -7311,7 +8435,7 @@ local tank = TensorCore.getEntityByGroup(\"Main Tank\")\
 for _,ent in pairs (EntityList(\"aggressive\")) do \
 if ent and ent.contentid == 1482 and not data.entitiesAdded[ent.id] then\
 data.entitiesAdded[ent.id] = true\
-Argus.addTimedConeFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(120), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+Argus.addTimedConeFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 15, math.rad(90), 0, 30, {r = 1, g = 0, b = 0}, 0.1, 0.2, 0, ent.id, tank.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 end\
 end\
 \
@@ -7333,7 +8457,7 @@ end";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = -5;
 			["used"] = false;
-			["uuid"] = "83239234-c114-9261-ac5b-b155fc04027c";
+			["uuid"] = "e12ec982-6c13-37a9-a255-93681d1d0827";
 		};
 	};
 	[190] = {
@@ -7575,6 +8699,111 @@ return false";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "fb588b5a-0d89-f2e0-b9ef-c5151f6faece";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 1;
+					["actionID"] = 2876;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = true;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = true;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = 1;
+					["targetType"] = 1;
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 2;
+					["actionID"] = 16498;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 2;
+					["comparator"] = 2;
+					["conditionLua"] = "";
+					["conditionType"] = 4;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = 1;
+					["rangeCheckSourceSubType"] = 1;
+					["rangeCheckSourceType"] = 1;
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "prepull reassemble if up";
+			["throttleTime"] = 0;
+			["time"] = 1245;
+			["timeRange"] = false;
+			["timelineIndex"] = 193;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -3;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "dfe7d2dd-fe65-43c9-9533-97278f181b6e";
 		};
 	};
 	["mapID"] = 733;

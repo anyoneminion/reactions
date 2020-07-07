@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.84,\
+		version = 2.85,\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -210,16 +210,6 @@ local obj1 = {
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro \
 	end\
 	\
-	if Settings.AnyoneCore.FrenchPrepull == nil then\
-		Settings.AnyoneCore.FrenchPrepull = false -- false is default\
-		Settings.AnyoneCore.FrenchPrepull = Settings.AnyoneCore.FrenchPrepull \
-	end\
-	\
-	if Settings.AnyoneCore.ShowOtherLanguages == nil then\
-		Settings.AnyoneCore.ShowOtherLanguages = false -- false is default\
-		Settings.AnyoneCore.ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages \
-	end\
-	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -258,8 +248,6 @@ local obj1 = {
 			DrawClouds = Settings.AnyoneCore.DrawClouds,\
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
-			FrenchPrepull = Settings.AnyoneCore.FrenchPrepull,\
-			ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages\
 		}\
 \
 	function AnyoneCore.save()\
@@ -355,12 +343,7 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
-		\
-		Settings.AnyoneCore.FrenchPrepull = AnyoneCore.Settings.FrenchPrepull\
-		Settings.AnyoneCore.FrenchPrepull = Settings.AnyoneCore.FrenchPrepull\
-		\
-		Settings.AnyoneCore.ShowOtherLanguages = AnyoneCore.Settings.ShowOtherLanguages\
-		Settings.AnyoneCore.ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages\
+	\
 		\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -479,33 +462,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
-				end\
---[				local hovered = false\
-				AnyoneCore.Settings.ShowOtherLanguages, changed = GUI:Checkbox(\"Show Language Options For Prepull Helper\", AnyoneCore.Settings.ShowOtherLanguages)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enable to get additional language options to make Prepull Helper work with non-English clients.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Prepull Helper will not work without one of these languages selected if you use any of them for your client.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				if AnyoneCore.Settings.ShowOtherLanguages == true then\
-				local hovered = false\
-				AnyoneCore.Settings.FrenchPrepull, changed = GUI:Checkbox(\"French Client\", AnyoneCore.Settings.FrenchPrepull)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enable if you're using the French FFXIV client.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Prepull Helper will not work without one of these languages selected if you use any of them for your client.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end--language options end --]\
-				end\
+				end			\
 				end ---end of job check\
 				end ---end of prepullhelper enabled check\
 \
@@ -874,7 +831,7 @@ local obj1 = {
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Enables a multitude of features that help in dungeons. Automatic usage of mitigation like Tactician and Troubador. Automatic usage of Arm's Length, and Head Graze.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Any features after this one won't work unless this setting is enabled.\")\
+					GUI:TextColored(1,1,0,1,\"Not meant to be turned on for fights that have a timeline. The features will likely interfere with each other. Any features after this one won't work unless this setting is enabled.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -1039,7 +996,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "80265683-416e-0019-8456-8708bfbef631";
+		["uuid"] = "173d4d67-2ea6-267a-b2ee-290ec92bf5b0";
 	};
 	[2] = {
 		["actions"] = {

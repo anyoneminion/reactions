@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.84,\
+		version = 2.85,\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -210,16 +210,6 @@ local obj1 = {
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro \
 	end\
 	\
-	if Settings.AnyoneCore.FrenchPrepull == nil then\
-		Settings.AnyoneCore.FrenchPrepull = false -- false is default\
-		Settings.AnyoneCore.FrenchPrepull = Settings.AnyoneCore.FrenchPrepull \
-	end\
-	\
-	if Settings.AnyoneCore.ShowOtherLanguages == nil then\
-		Settings.AnyoneCore.ShowOtherLanguages = false -- false is default\
-		Settings.AnyoneCore.ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages \
-	end\
-	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -258,8 +248,6 @@ local obj1 = {
 			DrawClouds = Settings.AnyoneCore.DrawClouds,\
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
-			FrenchPrepull = Settings.AnyoneCore.FrenchPrepull,\
-			ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages\
 		}\
 \
 	function AnyoneCore.save()\
@@ -355,12 +343,7 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
-		\
-		Settings.AnyoneCore.FrenchPrepull = AnyoneCore.Settings.FrenchPrepull\
-		Settings.AnyoneCore.FrenchPrepull = Settings.AnyoneCore.FrenchPrepull\
-		\
-		Settings.AnyoneCore.ShowOtherLanguages = AnyoneCore.Settings.ShowOtherLanguages\
-		Settings.AnyoneCore.ShowOtherLanguages = Settings.AnyoneCore.ShowOtherLanguages\
+	\
 		\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -479,33 +462,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
-				end\
---[				local hovered = false\
-				AnyoneCore.Settings.ShowOtherLanguages, changed = GUI:Checkbox(\"Show Language Options For Prepull Helper\", AnyoneCore.Settings.ShowOtherLanguages)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enable to get additional language options to make Prepull Helper work with non-English clients.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Prepull Helper will not work without one of these languages selected if you use any of them for your client.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				if AnyoneCore.Settings.ShowOtherLanguages == true then\
-				local hovered = false\
-				AnyoneCore.Settings.FrenchPrepull, changed = GUI:Checkbox(\"French Client\", AnyoneCore.Settings.FrenchPrepull)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enable if you're using the French FFXIV client.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Prepull Helper will not work without one of these languages selected if you use any of them for your client.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end--language options end --]\
-				end\
+				end			\
 				end ---end of job check\
 				end ---end of prepullhelper enabled check\
 \
@@ -874,7 +831,7 @@ local obj1 = {
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Enables a multitude of features that help in dungeons. Automatic usage of mitigation like Tactician and Troubador. Automatic usage of Arm's Length, and Head Graze.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Any features after this one won't work unless this setting is enabled.\")\
+					GUI:TextColored(1,1,0,1,\"Not meant to be turned on for fights that have a timeline. The features will likely interfere with each other. Any features after this one won't work unless this setting is enabled.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -1039,7 +996,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "90fc3d35-06c1-ecf7-957f-6a7047c93b09";
+		["uuid"] = "46632637-388f-2ff2-8dbb-8c16540f8c43";
 	};
 	[2] = {
 		["actions"] = {
@@ -1186,12 +1143,31 @@ self.used = true";
 			[1] = {
 				["aType"] = 4;
 				["actionID"] = -1;
-				["actionLua"] = "local line = eventArgs.line.line\
-local time = line:match(\"Battle commencing in (%d+) seconds!\")\
+				["actionLua"] = "local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
+local CountdownStartChina = \"距离战斗开始还有(%d+)秒！\\n\"\
+local CountdownStartFrench = \"Début du combat dans (%d+) secondes!\\n\"\
+local CountdownStartGerman = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\"\
+local CountdownStartJapanese = \"戦闘開始(%d+)秒！\\n\" \
+local CountdownStartKorean = \"전투 시작 (%d+)초 전!\"\
+local line = eventArgs.line.line\
+local time\
+if line:match(CountdownStartEnglish) then\
+		time = line:match(CountdownStartEnglish)\
+elseif line:match(CountdownStartFrench) then\
+		time = line:match(CountdownStartFrench)\
+elseif line:match(CountdownStartChina) then\
+		time = line:match(CountdownStartChina)\
+elseif line:match(CountdownStartGerman) then\
+		time = line:match(CountdownStartGerman)\
+elseif line:match(CountdownStartJapanese) then\
+		time = line:match(CountdownStartJapanese)\
+elseif line:match(CountdownStartKorean) then\
+		time = line:match(CountdownStartKorean)\
+end\
+\
 if time ~= nil then\
 				data.countdownTime = Now()\
 				data.countdownDuration = tonumber(time)\
-				data.BadTeamDelay = AnyoneCore.Settings.BadTeamDelay\
 end\
 self.used = true";
 				["allowInterrupt"] = false;
@@ -1482,7 +1458,7 @@ end";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore ~= nil and AnyoneCore.Settings.BadTeamDelay ~= nil";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -1544,9 +1520,31 @@ end";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "local line = eventArgs.line.line\
-local time = line:match(\"Battle commencing in (%d+) seconds!\\n\")\
-return time ~= nil";
+				["conditionLua"] = "local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
+local CountdownStartChina = \"距离战斗开始还有(%d+)秒！\\n\"\
+local CountdownStartFrench = \"Début du combat dans (%d+) secondes!\\n\"\
+local CountdownStartGerman = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\"\
+local CountdownStartJapanese = \"戦闘開始(%d+)秒！\\n\" \
+local CountdownStartKorean = \"전투 시작 (%d+)초 전!\\n\"\
+local correct\
+\
+if eventArgs.line.code ~= 185 then return false end\
+\
+local line = eventArgs.line.line\
+if line:match(CountdownStartEnglish) then\
+        correct = true\
+elseif line:match(CountdownStartFrench) then\
+        correct = true\
+elseif line:match(CountdownStartChina) then\
+        correct = true\
+elseif line:match(CountdownStartGerman) then\
+        correct = true\
+elseif line:match(CountdownStartJapanese) then\
+        correct = true\
+elseif line:match(CountdownStartKorean) then\
+        correct = true\
+end\
+return correct ~= nil";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -1670,7 +1668,7 @@ return time ~= nil";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 0 + data.BadTeamDelay";
+				["conditionLua"] = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 0 + AnyoneCore.Settings.BadTeamDelay";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -1918,7 +1916,7 @@ return time ~= nil";
 				};
 				["category"] = 4;
 				["comparator"] = 1;
-				["conditionLua"] = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 1400 + data.BadTeamDelay";
+				["conditionLua"] = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 1400 + AnyoneCore.Settings.BadTeamDelay";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -2054,44 +2052,11 @@ return time ~= nil";
 	};
 	[7] = {
 		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = true;
-		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 38 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Dancer{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
-		elseif Player.job == 38 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 38 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-end\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "job check";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e";
-	};
-	[8] = {
-		["actions"] = {
 			[1] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
 self.used = true";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
@@ -2101,8 +2066,9 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 1;
+					[2] = 7;
 				};
-				["endIfUsed"] = false;
+				["endIfUsed"] = true;
 				["gVar"] = "";
 				["gVarIndex"] = 1;
 				["gVarValue"] = 1;
@@ -2110,7 +2076,207 @@ self.used = true";
 				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
-				["name"] = "";
+				["name"] = "English";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 2;
+					[2] = 7;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "China";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[3] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 3;
+					[2] = 7;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "French";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[4] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 4;
+					[2] = 7;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "German";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[5] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 5;
+					[2] = 7;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "Korean";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = 1;
+				["targetType"] = 1;
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[6] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "data.countdownCanceled = true\
+d(\"Countdown was canceled. Sending information back to Prepull Helper.\")\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["conditions"] = {
+					[1] = 6;
+					[2] = 7;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "Japanese";
 				["potType"] = 1;
 				["setTarget"] = false;
 				["showPositionPreview"] = false;
@@ -2173,6 +2339,378 @@ self.used = true";
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
+				["name"] = "English";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 5;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "取消了战斗开始倒计时";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "China";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 5;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "Le compte à rebours a été interrompu par";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "French";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 5;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "hat den Countdown abgebrochen.";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "German";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[5] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 5;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "님이 초읽기를 취소했습니다";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "Korean";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[6] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 5;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "戦闘開始.";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "Japanese";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[7] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["comparator"] = 1;
+				["conditionLua"] = "return eventArgs.line.code == 185";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
 				["name"] = "";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
@@ -2208,7 +2746,41 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "40d38b51-fff3-604a-bdd7-384d8d9cd4cf";
+		["uuid"] = "47acbdab-ab26-117a-bffe-e11cae0affec";
+	};
+	[8] = {
+		["actions"] = {
+		};
+		["conditions"] = {
+		};
+		["enabled"] = true;
+		["eventType"] = 11;
+		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
+		if Player.job ~= 38 and AnyoneCore.Settings.JobCheck == true then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Dancer{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
+		elseif Player.job == 38 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		elseif Player.job ~= 38 and AnyoneCore.Settings.JobCheck == false then\
+				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
+		end\
+end\
+self.used = true";
+		["executeType"] = 2;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "job check";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "108fc871-6ab0-327e-a2d3-e6abc692057e";
 	};
 	[9] = {
 		["actions"] = {
