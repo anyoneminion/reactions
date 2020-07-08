@@ -5138,6 +5138,8 @@ end\
 			["enabled"] = true;
 			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
 MoogleTTS.Speak(\"Use Meditate\")\
+elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
+TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
 end\
 self.used = true";
 			["executeType"] = 2;
@@ -6204,6 +6206,8 @@ self.used = table.size(markedClones) >= 4";
 			["enabled"] = true;
 			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
 MoogleTTS.Speak(\"Use Meditate\")\
+elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
+TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
 end\
 self.used = true";
 			["executeType"] = 2;

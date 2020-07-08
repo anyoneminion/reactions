@@ -66,8 +66,6 @@ local obj1 = {
 				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 \
-data.selectedACR = gACRSelectedProfiles[Player.job]\
-\
 ---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
 if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
 		gDevHackWalkSpeed = 7\
@@ -1169,7 +1167,6 @@ self.used = true";
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
 					["conditions"] = {
-						[1] = 1;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "";
@@ -1197,54 +1194,8 @@ self.used = true";
 				};
 			};
 			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["comparator"] = 1;
-					["conditionLua"] = "return table.size(Argus.getCurrentGroundAOEs()) == 0";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "";
 			["executeType"] = 1;
 			["lastUse"] = 0;
@@ -1254,10 +1205,10 @@ self.used = true";
 			["name"] = "dash in asap";
 			["throttleTime"] = 0;
 			["time"] = 35.6;
-			["timeRange"] = true;
+			["timeRange"] = false;
 			["timelineIndex"] = 4;
 			["timerEndOffset"] = 1;
-			["timerOffset"] = 0;
+			["timerOffset"] = 1.085000038147;
 			["timerStartOffset"] = -5;
 			["used"] = false;
 			["uuid"] = "46fb2bea-6608-2ec6-8000-45050943d23f";

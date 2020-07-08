@@ -497,15 +497,15 @@ local obj1 = {
 				\
 				if Player.job == 34 or Player.job == 38 then \
 				local hovered = false\
-				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv With MoogleTTS\", AnyoneCore.Settings.UseMoogleTTS)\
+				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv\", AnyoneCore.Settings.UseMoogleTTS)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reminds you using MoogleTTS to press Meditate/Improvisation when the boss goes untargetable.\\n\")\
-					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed, will do nothing otherwise. Check pins in FFXIVMinion Discord's #addon-file-sharing channel to download.\")\
-					GUI:TextColored(1,0,0,1,\"Do not recommend using if you're streaming or recording to show other people, it will be heard. You can probably pass it off as an ACT trigger, but be careful.\")\
+					GUI:Text(\"If you have MoogleTTS, it'll use TTS to remind you. Otherwise it'll remind you using a colored chat message along with a se.1 ping. \\n\")\
+					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed to use the TTS option, if it's not installed will automatically do it the alternative way.\")\
+					GUI:TextColored(1,0,0,1,\"If you're streaming or recording, the sound will show up on the stream, and if you're not using MoogleTTS, the chat message could be seen by other people.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -996,7 +996,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "7d2b93c9-0538-fbf1-8d15-c9b594028c59";
+		["uuid"] = "287c822a-b5d0-8114-b202-24ec5e690e6e";
 	};
 	[2] = {
 		["actions"] = {
@@ -1651,8 +1651,6 @@ local CountdownStartJapanese = \"戦闘開始(%d+)秒！\\n\" \
 local CountdownStartKorean = \"전투 시작 (%d+)초 전!\\n\"\
 local correct\
 \
-if eventArgs.line.code ~= 185 then return false end\
-\
 local line = eventArgs.line.line\
 if line:match(CountdownStartEnglish) then\
         correct = true\
@@ -2003,7 +2001,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 1;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2043,7 +2040,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 2;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2083,7 +2079,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 3;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2123,7 +2118,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 4;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2163,7 +2157,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 5;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2203,7 +2196,6 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 6;
-					[2] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -2603,68 +2595,6 @@ self.used = true";
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-			[7] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 4;
-				["comparator"] = 1;
-				["conditionLua"] = "return eventArgs.line.code == 185";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
 		};
 		["enabled"] = true;
 		["eventType"] = 7;
@@ -2683,7 +2613,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "bd42384e-faef-6603-a7b5-6b58873677d2";
+		["uuid"] = "267a5095-6c09-b880-aa53-fed406a88b94";
 	};
 	[8] = {
 		["actions"] = {

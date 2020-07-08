@@ -3134,6 +3134,8 @@ end\
 			["enabled"] = true;
 			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
 MoogleTTS.Speak(\"Use Meditate\")\
+elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
+TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
 end\
 self.used = true";
 			["executeType"] = 2;
@@ -4840,6 +4842,8 @@ end\
 			["enabled"] = true;
 			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
 MoogleTTS.Speak(\"Use Meditate\")\
+elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
+TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
 end\
 self.used = true";
 			["executeType"] = 2;
@@ -6334,12 +6338,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6377,12 +6381,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

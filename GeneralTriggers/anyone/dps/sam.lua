@@ -497,15 +497,15 @@ local obj1 = {
 				\
 				if Player.job == 34 or Player.job == 38 then \
 				local hovered = false\
-				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv With MoogleTTS\", AnyoneCore.Settings.UseMoogleTTS)\
+				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv\", AnyoneCore.Settings.UseMoogleTTS)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reminds you using MoogleTTS to press Meditate/Improvisation when the boss goes untargetable.\\n\")\
-					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed, will do nothing otherwise. Check pins in FFXIVMinion Discord's #addon-file-sharing channel to download.\")\
-					GUI:TextColored(1,0,0,1,\"Do not recommend using if you're streaming or recording to show other people, it will be heard. You can probably pass it off as an ACT trigger, but be careful.\")\
+					GUI:Text(\"If you have MoogleTTS, it'll use TTS to remind you. Otherwise it'll remind you using a colored chat message along with a se.1 ping. \\n\")\
+					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed to use the TTS option, if it's not installed will automatically do it the alternative way.\")\
+					GUI:TextColored(1,0,0,1,\"If you're streaming or recording, the sound will show up on the stream, and if you're not using MoogleTTS, the chat message could be seen by other people.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -996,7 +996,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "3ec1c33e-2aab-4cb7-ac74-b9867f3de88f";
+		["uuid"] = "438f926d-5657-82ba-946d-420cedc28894";
 	};
 	[2] = {
 		["actions"] = {
@@ -2042,12 +2042,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2102,12 +2102,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2272,7 +2272,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2332,7 +2332,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2450,7 +2450,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -2510,7 +2510,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
