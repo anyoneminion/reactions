@@ -16,7 +16,8 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.85,\
+		version = 2.87,\
+		helperVersion = 1.0\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -72,6 +73,11 @@ local obj1 = {
 	if Settings.AnyoneCore.NeverEnpi == nil then\
 		Settings.AnyoneCore.NeverEnpi = false -- false is default\
 		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi \
+	end\
+	\
+	if Settings.AnyoneCore.NeverDash == nil then\
+		Settings.AnyoneCore.NeverDash = false -- false is default\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash \
 	end\
 	\
 	if Settings.AnyoneCore.AttackingGaruda == nil then\
@@ -248,6 +254,7 @@ local obj1 = {
 			DrawClouds = Settings.AnyoneCore.DrawClouds,\
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
+			NeverDash = Settings.AnyoneCore.NeverDash,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -343,6 +350,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
+		\
+		Settings.AnyoneCore.NeverDash = AnyoneCore.Settings.NeverDash\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash\
 	\
 		\
 		---start of value selectors\
@@ -795,7 +805,20 @@ local obj1 = {
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:Text(\"Enabling this will make it so reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Dash For Me\", AnyoneCore.Settings.NeverEnpi)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enabling this will make it so reactions will never dash in for you. Dashes are mostly done after mechanics end when it's safe to do so, but could be annoying for teams with weird uptime strats.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -996,7 +1019,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "f20df1fe-9ed5-7192-9408-c55ecf9e44c9";
+		["uuid"] = "866a1d1f-ffd4-ff6d-8367-42bc80d1241e";
 	};
 	[2] = {
 		["actions"] = {
@@ -1673,7 +1696,8 @@ self.used = true";
 			[1] = {
 				["aType"] = 4;
 				["actionID"] = -1;
-				["actionLua"] = "local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
+				["actionLua"] = "local helperVersion = 1.0\
+local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
 local CountdownStartChina = \"距离战斗开始还有(%d+)秒！\\n\"\
 local CountdownStartFrench = \"Début du combat dans (%d+) secondes!\\n\"\
 local CountdownStartGerman = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\"\
@@ -1700,6 +1724,11 @@ if time ~= nil then\
 				data.countdownDuration = tonumber(time)\
 				data.pelotonDelay = math.random(500, 7000)\
 				data.targetDelay = math.random(100, 3500)\
+end\
+\
+if helperVersion ~= AnyoneCore.helperVersion then\
+				TensorCore.sendParsedChatMessage(\"/e {color:255, 10, 10} Your version of Prepull Helper does not match with what AnyoneCore believes to be the current version. Please reload lua if Prepull Helper isn't working.\")\
+				d(\"Prepull Helper version # and AnyoneCore version # do not match. Sending chat message as a warning.\")\
 end\
 self.used = true";
 				["allowInterrupt"] = false;
@@ -2205,7 +2234,8 @@ elseif line:match(CountdownStartJapanese) then\
 elseif line:match(CountdownStartKorean) then\
         correct = true\
 end\
-return correct ~= nil";
+return correct ~= nil\
+";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -3667,8 +3697,6 @@ self.used = true";
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Bard{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 23 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 23 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
 self.used = true";
@@ -3950,7 +3978,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4010,7 +4038,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4135,7 +4163,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4195,7 +4223,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4319,7 +4347,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4379,7 +4407,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4813,12 +4841,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4873,12 +4901,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5220,12 +5248,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5280,12 +5308,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5340,12 +5368,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;

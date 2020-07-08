@@ -16,7 +16,8 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.85,\
+		version = 2.87,\
+		helperVersion = 1.0\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -72,6 +73,11 @@ local obj1 = {
 	if Settings.AnyoneCore.NeverEnpi == nil then\
 		Settings.AnyoneCore.NeverEnpi = false -- false is default\
 		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi \
+	end\
+	\
+	if Settings.AnyoneCore.NeverDash == nil then\
+		Settings.AnyoneCore.NeverDash = false -- false is default\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash \
 	end\
 	\
 	if Settings.AnyoneCore.AttackingGaruda == nil then\
@@ -248,6 +254,7 @@ local obj1 = {
 			DrawClouds = Settings.AnyoneCore.DrawClouds,\
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
+			NeverDash = Settings.AnyoneCore.NeverDash,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -343,6 +350,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
+		\
+		Settings.AnyoneCore.NeverDash = AnyoneCore.Settings.NeverDash\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash\
 	\
 		\
 		---start of value selectors\
@@ -795,7 +805,20 @@ local obj1 = {
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:Text(\"Enabling this will make it so reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Dash For Me\", AnyoneCore.Settings.NeverEnpi)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enabling this will make it so reactions will never dash in for you. Dashes are mostly done after mechanics end when it's safe to do so, but could be annoying for teams with weird uptime strats.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -996,7 +1019,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "989a7c1c-91c5-9747-a037-ca13aab65731";
+		["uuid"] = "2344d2b5-917c-a461-ba02-cb937e565fed";
 	};
 	[2] = {
 		["actions"] = {
@@ -1185,8 +1208,6 @@ end\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Gunbreaker{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 37 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
 self.used = true";

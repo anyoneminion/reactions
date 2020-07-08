@@ -16,7 +16,8 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.85,\
+		version = 2.87,\
+		helperVersion = 1.0\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -72,6 +73,11 @@ local obj1 = {
 	if Settings.AnyoneCore.NeverEnpi == nil then\
 		Settings.AnyoneCore.NeverEnpi = false -- false is default\
 		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi \
+	end\
+	\
+	if Settings.AnyoneCore.NeverDash == nil then\
+		Settings.AnyoneCore.NeverDash = false -- false is default\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash \
 	end\
 	\
 	if Settings.AnyoneCore.AttackingGaruda == nil then\
@@ -248,6 +254,7 @@ local obj1 = {
 			DrawClouds = Settings.AnyoneCore.DrawClouds,\
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
+			NeverDash = Settings.AnyoneCore.NeverDash,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -343,6 +350,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
+		\
+		Settings.AnyoneCore.NeverDash = AnyoneCore.Settings.NeverDash\
+		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash\
 	\
 		\
 		---start of value selectors\
@@ -795,7 +805,20 @@ local obj1 = {
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:Text(\"Enabling this will make it so reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Dash For Me\", AnyoneCore.Settings.NeverEnpi)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enabling this will make it so reactions will never dash in for you. Dashes are mostly done after mechanics end when it's safe to do so, but could be annoying for teams with weird uptime strats.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -996,7 +1019,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "287c822a-b5d0-8114-b202-24ec5e690e6e";
+		["uuid"] = "01b61b67-a965-68cf-8ca9-8a79637c1521";
 	};
 	[2] = {
 		["actions"] = {
@@ -1220,7 +1243,8 @@ self.used = true";
 			[1] = {
 				["aType"] = 4;
 				["actionID"] = -1;
-				["actionLua"] = "local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
+				["actionLua"] = "local helperVersion = 1.0\
+local CountdownStartEnglish = \"Battle commencing in (%d+) seconds!\\n\"\
 local CountdownStartChina = \"距离战斗开始还有(%d+)秒！\\n\"\
 local CountdownStartFrench = \"Début du combat dans (%d+) secondes!\\n\"\
 local CountdownStartGerman = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\"\
@@ -1247,6 +1271,11 @@ if time ~= nil then\
 				data.countdownDuration = tonumber(time)\
 				data.openerDelay = math.random(0, 250)\
 				data.targetDelay = math.random(100, 7500)\
+end\
+\
+if helperVersion ~= AnyoneCore.helperVersion then\
+				TensorCore.sendParsedChatMessage(\"/e {color:255, 10, 10} Your version of Prepull Helper does not match with what AnyoneCore believes to be the current version. Please reload lua if Prepull Helper isn't working.\")\
+				d(\"Prepull Helper version # and AnyoneCore version # do not match. Sending chat message as a warning.\")\
 end\
 self.used = true";
 				["allowInterrupt"] = false;
@@ -2669,13 +2698,11 @@ self.eventConditionMismatch = true\
 		["enabled"] = true;
 		["eventType"] = 11;
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 35 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 35 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Red Mage{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 35 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 35 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 end\
 self.used = true";
