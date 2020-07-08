@@ -17,7 +17,7 @@ local obj1 = {
 		visible = true,\
 		open = false,\
 		version = 2.87,\
-		helperVersion = 1.0\
+		helperVersion = 1.0,\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -492,6 +492,7 @@ local obj1 = {
 				end\
 				end\
 				\
+				if Player.job == 1 then\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -503,6 +504,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				if Player.job == 34 or Player.job == 38 then \
@@ -997,7 +999,7 @@ local obj1 = {
 	end\
 \
 	-- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"AnyoneCore\"},\"FFXIVMINION##MENU_HEADER\")\
+	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	RegisterEventHandler(\"Gameloop.Draw\", AnyoneCore.draw, \"AnyoneCore\")\
 	d(\"Loaded AnyoneCore\")\
 	gAnyoneCoreInitialize = true\
@@ -1019,7 +1021,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "088c2106-0280-9d1a-95ff-a54f3e27dd28";
+		["uuid"] = "7852f23e-0d13-9abb-b03e-60276dd117cb";
 	};
 	[2] = {
 		["actions"] = {
@@ -1088,977 +1090,68 @@ self.used = true";
 		};
 		["enabled"] = true;
 		["eventType"] = 10;
-		["execute"] = "if not gAnyoneCoreInitialize then\
-	AnyoneCore = {\
-		enabled = true,\
-		data = {},\
-		visible = true,\
-		open = false,\
-		version = 2.84,\
-	}\
+		["execute"] = "-- Quick Toggles\
+ACR_TensorMagnum_CD = true\
+ACR_TensorMagnum_AOE = false\
+ACR_TensorMagnum_Hypercharge = true\
+ACR_TensorMagnum_Reassemble = true\
+ACR_TensorMagnum_SummonQueen = true\
+ACR_TensorMagnum_WildfireInAOE = true\
+ACR_TensorMagnum_Flamethrower = false\
+ACR_TensorMagnum_Drill = true\
+ACR_TensorMagnum_Bioblaster = true\
+ACR_TensorMagnum_AirAnchor = true\
+ACR_TensorMagnum_Peloton = false\
+ACR_TensorMagnum_HoldGR = false\
+ACR_TensorMagnum_HoldRico = false\
+-- Normal Hotbar\
+ACR_TensorMagnum_Hotbar_Tactician = false\
+ACR_TensorMagnum_Hotbar_ArmsLength = false\
+ACR_TensorMagnum_Hotbar_SummonQueen = false\
+ACR_TensorMagnum_Hotbar_QueenOverdrive = false\
+ACR_TensorMagnum_Hotbar_Detonate = false\
+ACR_TensorMagnum_Hotbar_HeadGraze = false\
+ACR_TensorMagnum_Hotbar_SecondWind = false\
+ACR_TensorMagnum_Hotbar_Potion = false\
+ACR_TensorMagnum_Hotbar_Sprint = false\
+ACR_TensorMagnum_Hotbar_LimitBreak = false\
+ACR_TensorMagnum_Hotbar_Flamethrower = false\
+-- Safe Hotbar \
+ACR_TensorMagnum_Hotbar_Tactician_Safe = false\
+ACR_TensorMagnum_Hotbar_ArmsLength_Safe = false\
+ACR_TensorMagnum_Hotbar_SummonQueen_Safe = false\
+ACR_TensorMagnum_Hotbar_QueenOverdrive_Safe = false\
+ACR_TensorMagnum_Hotbar_Detonate_Safe = false\
+ACR_TensorMagnum_Hotbar_Potion_Safe = false\
+ACR_TensorMagnum_Hotbar_HeadGraze_Safe = false\
+ACR_TensorMagnum_Hotbar_SecondWind_Safe = false\
+ACR_TensorMagnum_Hotbar_Sprint_Safe = false\
+ACR_TensorMagnum_Hotbar_LimitBreak_Safe = false\
+ACR_TensorMagnum_Hotbar_Flamethrower_Safe = false\
+ACR_TensorMagnum_Wildfire = true\
 \
-	if Settings.AnyoneCore.DrawOrbs == nil then\
-		Settings.AnyoneCore.DrawOrbs = true -- true is default\
-		Settings.AnyoneCore.DrawOrbs = Settings.AnyoneCore.DrawOrbs \
-	end\
-	\
-	if Settings.AnyoneCore.DrawDragonHeads == nil then\
-		Settings.AnyoneCore.DrawDragonHeads = true -- true is default\
-		Settings.AnyoneCore.DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads \
-	end\
-	\
-	if Settings.AnyoneCore.KnockbackMirrorUptime == nil then\
-		Settings.AnyoneCore.KnockbackMirrorUptime = true -- true is default\
-		Settings.AnyoneCore.KnockbackMirrorUptime = Settings.AnyoneCore.KnockbackMirrorUptime \
-	end\
-	\
-	if Settings.AnyoneCore.InterruptSecondAdd == nil then\
-		Settings.AnyoneCore.InterruptSecondAdd = false -- false is default\
-		Settings.AnyoneCore.InterruptSecondAdd = Settings.AnyoneCore.InterruptSecondAdd \
-	end\
+-- Custom Hotbar\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom = false\
+ACR_TensorMagnum_Hotbar_HeadGraze_Custom_Safe = false\
 \
-	if Settings.AnyoneCore.LeftSide == nil then\
-		Settings.AnyoneCore.LeftSide = true -- true is default\
-		Settings.AnyoneCore.LeftSide = Settings.AnyoneCore.LeftSide \
-	end	\
-	\
-	if Settings.AnyoneCore.DisableAssist == nil then\
-		Settings.AnyoneCore.DisableAssist = false -- false is default\
-		Settings.AnyoneCore.DisableAssist = Settings.AnyoneCore.DisableAssist \
-	end	\
-	\
-	if Settings.AnyoneCore.AddsPhasePot == nil then\
-		Settings.AnyoneCore.AddsPhasePot = true -- true is default\
-		Settings.AnyoneCore.AddsPhasePot = Settings.AnyoneCore.AddsPhasePot \
-	end	\
-	\
-	if Settings.AnyoneCore.AutoSetSpeedHacks == nil then\
-		Settings.AnyoneCore.AutoSetSpeedHacks = false -- false is default\
-		Settings.AnyoneCore.AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks \
-	end\
-	\
-	if Settings.AnyoneCore.AutoSetMaxCameraZoom == nil then\
-		Settings.AnyoneCore.AutoSetMaxCameraZoom = false -- false is default\
-		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom \
-	end\
-	\
-	if Settings.AnyoneCore.UseSprint == nil then\
-		Settings.AnyoneCore.UseSprint = false -- false is default\
-		Settings.AnyoneCore.UseSprint = Settings.AnyoneCore.UseSprint \
-	end\
-	\
-	if Settings.AnyoneCore.NeverEnpi == nil then\
-		Settings.AnyoneCore.NeverEnpi = false -- false is default\
-		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi \
-	end\
-	\
-	if Settings.AnyoneCore.AttackingGaruda == nil then\
-		Settings.AnyoneCore.AttackingGaruda = false -- false is default\
-		Settings.AnyoneCore.AttackingGaruda = Settings.AnyoneCore.AttackingGaruda \
-	end\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+		ACR_TensorMagnum_Potion = true\
+end\
+self.used = true\
 \
-	if Settings.AnyoneCore.UseMoogleTTS == nil then\
-		Settings.AnyoneCore.UseMoogleTTS = false -- false is default\
-		Settings.AnyoneCore.UseMoogleTTS = Settings.AnyoneCore.UseMoogleTTS \
-	end\
-	\
-	if Settings.AnyoneCore.UnderstandDanger == nil then\
-		Settings.AnyoneCore.UnderstandDanger = false -- false is default\
-		Settings.AnyoneCore.UnderstandDanger = Settings.AnyoneCore.UnderstandDanger \
-	end\
-	\
-	if Settings.AnyoneCore.JobCheck == nil then\
-		Settings.AnyoneCore.JobCheck = false -- false is default\
-		Settings.AnyoneCore.JobCheck = Settings.AnyoneCore.JobCheck \
-	end\
-	\
-	if Settings.AnyoneCore.e5sQueenGauge == nil then\
-		Settings.AnyoneCore.e5sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneCore.e5sQueenGauge = Settings.AnyoneCore.e5sQueenGauge \
-	end\
-	\
-	if Settings.AnyoneCore.e6sQueenGauge == nil then\
-		Settings.AnyoneCore.e6sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneCore.e6sQueenGauge = Settings.AnyoneCore.e6sQueenGauge \
-	end\
-\
-	if Settings.AnyoneCore.e7sQueenGauge == nil then\
-		Settings.AnyoneCore.e7sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneCore.e7sQueenGauge = Settings.AnyoneCore.e7sQueenGauge \
-	end\
-\
-	if Settings.AnyoneCore.e8sQueenGauge == nil then\
-		Settings.AnyoneCore.e8sQueenGauge = 50 -- 50 is default\
-		Settings.AnyoneCore.e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge \
-	end\
-	\
-	if Settings.AnyoneCore.AntiGhosting == nil then\
-		Settings.AnyoneCore.AntiGhosting = true -- true is default\
-		Settings.AnyoneCore.AntiGhosting = Settings.AnyoneCore.AntiGhosting \
-	end\
-	\
-	if Settings.AnyoneCore.PrepullHelper == nil then\
-		Settings.AnyoneCore.PrepullHelper = false -- false is default\
-		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper \
-	end\
-	\
-	if Settings.AnyoneCore.NorthStratMitigation == nil then\
-		Settings.AnyoneCore.NorthStratMitigation = true -- true is default\
-		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation \
-	end\
-	\
-	if Settings.AnyoneCore.DiamondFrostUptime == nil then\
-		Settings.AnyoneCore.DiamondFrostUptime = false -- false is default\
-		Settings.AnyoneCore.DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelper == nil then\
-		Settings.AnyoneCore.DutyHelper = false -- false is default\
-		Settings.AnyoneCore.DutyHelper = Settings.AnyoneCore.DutyHelper \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelperMitigation == nil then\
-		Settings.AnyoneCore.DutyHelperMitigation = true -- true is default\
-		Settings.AnyoneCore.DutyHelperMitigation = Settings.AnyoneCore.DutyHelperMitigation \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelperTargeting == nil then\
-		Settings.AnyoneCore.DutyHelperTargeting = true -- true is default\
-		Settings.AnyoneCore.DutyHelperTargeting = Settings.AnyoneCore.DutyHelperTargeting \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelperInterrupt == nil then\
-		Settings.AnyoneCore.DutyHelperInterrupt = true -- true is default\
-		Settings.AnyoneCore.DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelperKnockback == nil then\
-		Settings.AnyoneCore.DutyHelperKnockback = true -- true is default\
-		Settings.AnyoneCore.DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback \
-	end\
-	\
-	if Settings.AnyoneCore.PrepullHelperPeloton == nil then\
-		Settings.AnyoneCore.PrepullHelperPeloton = true -- true is default\
-		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton \
-	end\
-	\
-	if Settings.AnyoneCore.DrawBlackWhiteOrbs == nil then\
-		Settings.AnyoneCore.DrawBlackWhiteOrbs = false -- false is default\
-		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs \
-	end\
-	\
-	if Settings.AnyoneCore.CameraZoomValue == nil then\
-		Settings.AnyoneCore.CameraZoomValue = 35 -- 35 is default\
-		Settings.AnyoneCore.CameraZoomValue = Settings.AnyoneCore.CameraZoomValue\
-	end\
-	\
-	if Settings.AnyoneCore.DrawChainLightning == nil then\
-		Settings.AnyoneCore.DrawChainLightning = true -- false is default\
-		Settings.AnyoneCore.DrawChainLightning = Settings.AnyoneCore.DrawChainLightning \
-	end\
-	\
-	if Settings.AnyoneCore.DrawOccludedFrontOrbs == nil then\
-		Settings.AnyoneCore.DrawOccludedFrontOrbs = true -- false is default\
-		Settings.AnyoneCore.DrawOccludedFrontOrbs = Settings.AnyoneCore.DrawOccludedFrontOrbs \
-	end\
-	\
-	if Settings.AnyoneCore.BadTeamDelay == nil then\
-		Settings.AnyoneCore.BadTeamDelay = 200 -- 200 is default\
-		Settings.AnyoneCore.BadTeamDelay = Settings.AnyoneCore.BadTeamDelay\
-	end\
-	\
-	--camera zoom value, not related to above code\
-	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true then\
-		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
-		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
-	end\
-	\
-	if Settings.AnyoneCore.DrawClouds == nil then\
-		Settings.AnyoneCore.DrawClouds = true -- true is default\
-		Settings.AnyoneCore.DrawClouds = Settings.AnyoneCore.DrawClouds \
-	end\
-	\
-	if Settings.AnyoneCore.DrawNaelQuotes == nil then\
-		Settings.AnyoneCore.DrawNaelQuotes = true -- true is default\
-		Settings.AnyoneCore.DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes \
-	end\
-	\
-	if Settings.AnyoneCore.DutyHelperGrabAggro == nil then\
-		Settings.AnyoneCore.DutyHelperGrabAggro = true -- true is default\
-		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro \
-	end\
-	\
-	AnyoneCore.Settings = {\
-			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
-			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
-			KnockbackMirrorUptime = Settings.AnyoneCore.KnockbackMirrorUptime,\
-			InterruptSecondAdd = Settings.AnyoneCore.InterruptSecondAdd,\
-			LeftSide = Settings.AnyoneCore.LeftSide,\
-			DisableAssist = Settings.AnyoneCore.DisableAssist,\
-			AddsPhasePot = Settings.AnyoneCore.AddsPhasePot,\
-			AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks,\
-			AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom,\
-			UseSprint = Settings.AnyoneCore.UseSprint,\
-			NeverEnpi = Settings.AnyoneCore.NeverEnpi,\
-			AttackingGaruda = Settings.AnyoneCore.AttackingGaruda,\
-			UseMoogleTTS = Settings.AnyoneCore.UseMoogleTTS,\
-			UnderstandDanger = Settings.AnyoneCore.UnderstandDanger,\
-			JobCheck = Settings.AnyoneCore.JobCheck,\
-			e5sQueenGauge = Settings.AnyoneCore.e5sQueenGauge,\
-			e6sQueenGauge = Settings.AnyoneCore.e6sQueenGauge,\
-			e7sQueenGauge = Settings.AnyoneCore.e7sQueenGauge,\
-			e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge,\
-			AntiGhosting = Settings.AnyoneCore.AntiGhosting,\
-			PrepullHelper = Settings.AnyoneCore.PrepullHelper,\
-			NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation,\
-			DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime,\
-			DutyHelper = Settings.AnyoneCore.DutyHelper,\
-			DutyHelperMitigation = Settings.AnyoneCore.DutyHelperMitigation,\
-			DutyHelperTargeting = Settings.AnyoneCore.DutyHelperTargeting,\
-			DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt,\
-			DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback,\
-			PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton,\
-			DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs,\
-			CameraZoomValue = Settings.AnyoneCore.CameraZoomValue,\
-			DrawChainLightning = Settings.AnyoneCore.DrawChainLightning,\
-			DrawOccludedFrontOrbs = Settings.AnyoneCore.DrawOccludedFrontOrbs,\
-			BadTeamDelay = Settings.AnyoneCore.BadTeamDelay,\
-			DrawClouds = Settings.AnyoneCore.DrawClouds,\
-			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
-			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
-		}\
-\
-	function AnyoneCore.save()\
-		Settings.AnyoneCore.DrawOrbs = AnyoneCore.Settings.DrawOrbs\
-		Settings.AnyoneCore.DrawOrbs = Settings.AnyoneCore.DrawOrbs\
-\
-		Settings.AnyoneCore.DrawDragonHeads = AnyoneCore.Settings.DrawDragonHeads\
-		Settings.AnyoneCore.DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads\
-		\
-		Settings.AnyoneCore.KnockbackMirrorUptime = AnyoneCore.Settings.KnockbackMirrorUptime\
-		Settings.AnyoneCore.KnockbackMirrorUptime = Settings.AnyoneCore.KnockbackMirrorUptime\
-		\
-		Settings.AnyoneCore.InterruptSecondAdd = AnyoneCore.Settings.InterruptSecondAdd\
-		Settings.AnyoneCore.InterruptSecondAdd = Settings.AnyoneCore.InterruptSecondAdd\
-		\
-		Settings.AnyoneCore.LeftSide = AnyoneCore.Settings.LeftSide\
-		Settings.AnyoneCore.LeftSide = Settings.AnyoneCore.LeftSide	\
-\
-		Settings.AnyoneCore.DisableAssist = AnyoneCore.Settings.DisableAssist\
-		Settings.AnyoneCore.DisableAssist = Settings.AnyoneCore.DisableAssist		\
-		\
-		Settings.AnyoneCore.AddsPhasePot = AnyoneCore.Settings.AddsPhasePot\
-		Settings.AnyoneCore.AddsPhasePot = Settings.AnyoneCore.AddsPhasePot	\
-		\
-		Settings.AnyoneCore.AutoSetSpeedHacks = AnyoneCore.Settings.AutoSetSpeedHacks\
-		Settings.AnyoneCore.AutoSetSpeedHacks = Settings.AnyoneCore.AutoSetSpeedHacks\
-		\
-		Settings.AnyoneCore.AutoSetMaxCameraZoom = AnyoneCore.Settings.AutoSetMaxCameraZoom\
-		Settings.AnyoneCore.AutoSetMaxCameraZoom = Settings.AnyoneCore.AutoSetMaxCameraZoom\
-		\
-		Settings.AnyoneCore.UseSprint = AnyoneCore.Settings.UseSprint\
-		Settings.AnyoneCore.UseSprint = Settings.AnyoneCore.UseSprint\
-		\
-		Settings.AnyoneCore.NeverEnpi = AnyoneCore.Settings.NeverEnpi\
-		Settings.AnyoneCore.NeverEnpi = Settings.AnyoneCore.NeverEnpi\
-		\
-		Settings.AnyoneCore.AttackingGaruda = AnyoneCore.Settings.AttackingGaruda\
-		Settings.AnyoneCore.AttackingGaruda = Settings.AnyoneCore.AttackingGaruda\
-		\
-		Settings.AnyoneCore.UseMoogleTTS = AnyoneCore.Settings.UseMoogleTTS\
-		Settings.AnyoneCore.UseMoogleTTS = Settings.AnyoneCore.UseMoogleTTS\
-\
-		Settings.AnyoneCore.UnderstandDanger = AnyoneCore.Settings.UnderstandDanger\
-		Settings.AnyoneCore.UnderstandDanger = Settings.AnyoneCore.UnderstandDanger\
-		\
-		Settings.AnyoneCore.JobCheck = AnyoneCore.Settings.JobCheck\
-		Settings.AnyoneCore.JobCheck = Settings.AnyoneCore.JobCheck\
-		\
-		Settings.AnyoneCore.AntiGhosting = AnyoneCore.Settings.AntiGhosting\
-		Settings.AnyoneCore.AntiGhosting = Settings.AnyoneCore.AntiGhosting\
-		\
-		Settings.AnyoneCore.PrepullHelper = AnyoneCore.Settings.PrepullHelper\
-		Settings.AnyoneCore.PrepullHelper = Settings.AnyoneCore.PrepullHelper\
-		\
-		Settings.AnyoneCore.NorthStratMitigation = AnyoneCore.Settings.NorthStratMitigation\
-		Settings.AnyoneCore.NorthStratMitigation = Settings.AnyoneCore.NorthStratMitigation\
-		\
-		Settings.AnyoneCore.DiamondFrostUptime = AnyoneCore.Settings.DiamondFrostUptime\
-		Settings.AnyoneCore.DiamondFrostUptime = Settings.AnyoneCore.DiamondFrostUptime\
-		\
-		Settings.AnyoneCore.DutyHelper = AnyoneCore.Settings.DutyHelper\
-		Settings.AnyoneCore.DutyHelper = Settings.AnyoneCore.DutyHelper\
-		\
-		Settings.AnyoneCore.DutyHelperMitigation = AnyoneCore.Settings.DutyHelperMitigation\
-		Settings.AnyoneCore.DutyHelperMitigation = Settings.AnyoneCore.DutyHelperMitigation\
-		\
-		Settings.AnyoneCore.DutyHelperTargeting = AnyoneCore.Settings.DutyHelperTargeting\
-		Settings.AnyoneCore.DutyHelperTargeting = Settings.AnyoneCore.DutyHelperTargeting\
-		\
-		Settings.AnyoneCore.DutyHelperInterrupt = AnyoneCore.Settings.DutyHelperInterrupt\
-		Settings.AnyoneCore.DutyHelperInterrupt = Settings.AnyoneCore.DutyHelperInterrupt\
-		\
-		Settings.AnyoneCore.DutyHelperKnockback = AnyoneCore.Settings.DutyHelperKnockback\
-		Settings.AnyoneCore.DutyHelperKnockback = Settings.AnyoneCore.DutyHelperKnockback\
-		\
-		Settings.AnyoneCore.PrepullHelperPeloton = AnyoneCore.Settings.PrepullHelperPeloton\
-		Settings.AnyoneCore.PrepullHelperPeloton = Settings.AnyoneCore.PrepullHelperPeloton\
-		\
-		Settings.AnyoneCore.DrawBlackWhiteOrbs = AnyoneCore.Settings.DrawBlackWhiteOrbs\
-		Settings.AnyoneCore.DrawBlackWhiteOrbs = Settings.AnyoneCore.DrawBlackWhiteOrbs\
-		\
-		Settings.AnyoneCore.DrawChainLightning = AnyoneCore.Settings.DrawChainLightning\
-		Settings.AnyoneCore.DrawChainLightning = Settings.AnyoneCore.DrawChainLightning\
-		\
-		Settings.AnyoneCore.DrawOccludedFrontOrbs = AnyoneCore.Settings.DrawOccludedFrontOrbs\
-		Settings.AnyoneCore.DrawOccludedFrontOrbs = Settings.AnyoneCore.DrawOccludedFrontOrbs\
-		\
-		Settings.AnyoneCore.DrawClouds = AnyoneCore.Settings.DrawClouds\
-		Settings.AnyoneCore.DrawClouds = Settings.AnyoneCore.DrawClouds\
-		\
-		Settings.AnyoneCore.DrawNaelQuotes = AnyoneCore.Settings.DrawNaelQuotes\
-		Settings.AnyoneCore.DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes\
-		\
-		Settings.AnyoneCore.DutyHelperGrabAggro = AnyoneCore.Settings.DutyHelperGrabAggro\
-		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro\
-		\
-		---start of value selectors\
-		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
-			AnyoneCore.Settings.e5sQueenGauge = 80\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.e5sQueenGauge < 50 then\
-			AnyoneCore.Settings.e5sQueenGauge = 50\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.e5sQueenGauge = AnyoneCore.Settings.e5sQueenGauge\
-			Settings.AnyoneCore.e5sQueenGauge = Settings.AnyoneCore.e5sQueenGauge\
+if not AnyoneCore.Settings.AutoSetSpeedHacks == nil then\
+		if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
+				gDevHackWalkSpeed = 6.0\
+				Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
 		end\
-		\
-		if AnyoneCore.Settings.e6sQueenGauge > 80 then\
-			AnyoneCore.Settings.e6sQueenGauge = 80\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.e6sQueenGauge < 50 then\
-			AnyoneCore.Settings.e6sQueenGauge = 50\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.e6sQueenGauge = AnyoneCore.Settings.e6sQueenGauge\
-			Settings.AnyoneCore.e6sQueenGauge = Settings.AnyoneCore.e6sQueenGauge\
-		end\
-		\
-		if AnyoneCore.Settings.e7sQueenGauge > 80 then\
-			AnyoneCore.Settings.e7sQueenGauge = 80\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.e7sQueenGauge < 50 then\
-			AnyoneCore.Settings.e7sQueenGauge = 50\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.e7sQueenGauge = AnyoneCore.Settings.e7sQueenGauge\
-			Settings.AnyoneCore.e7sQueenGauge = Settings.AnyoneCore.e7sQueenGauge\
-		end\
-		\
-		if AnyoneCore.Settings.e8sQueenGauge > 80 then\
-			AnyoneCore.Settings.e8sQueenGauge = 80\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.e8sQueenGauge < 50 then\
-			AnyoneCore.Settings.e8sQueenGauge = 50\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.e8sQueenGauge = AnyoneCore.Settings.e8sQueenGauge\
-			Settings.AnyoneCore.e8sQueenGauge = Settings.AnyoneCore.e8sQueenGauge\
-		end\
-		\
-		if AnyoneCore.Settings.CameraZoomValue > 100 then\
-			AnyoneCore.Settings.CameraZoomValue = 100\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.CameraZoomValue < 20 then\
-			AnyoneCore.Settings.CameraZoomValue = 20\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.CameraZoomValue = AnyoneCore.Settings.CameraZoomValue\
-			Settings.AnyoneCore.CameraZoomValue = Settings.AnyoneCore.CameraZoomValue\
-		end\
-		\
-		if AnyoneCore.Settings.BadTeamDelay > 1500 then\
-			AnyoneCore.Settings.BadTeamDelay = 1500\
-			AnyoneCore.save()\
-		elseif AnyoneCore.Settings.BadTeamDelay < 0 then\
-			AnyoneCore.Settings.BadTeamDelay = 0\
-			AnyoneCore.save()\
-		else\
-			Settings.AnyoneCore.BadTeamDelay = AnyoneCore.Settings.BadTeamDelay\
-			Settings.AnyoneCore.BadTeamDelay = Settings.AnyoneCore.BadTeamDelay\
-		end\
-	end\
-		\
-	AnyoneCore.main_tabs = GUI_CreateTabs(\"General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks\")\
-	function AnyoneCore.draw()\
-		if self.reference.enabled and AnyoneCore.enabled and AnyoneCore.open then\
-			GUI:SetNextWindowSize(650,350,GUI.SetCond_FirstUseEver)\
-			AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
-			if AnyoneCore.visible then\
-			local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs)\
-			if (tabname == \" General \") then\
-				GUI:TextColored(1,1,0,1,\"AnyoneCore - Version #\".. tostring(AnyoneCore.version))\
-				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 or Player.job == 35 then\
-				local hovered = false\
-				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneCore.Settings.PrepullHelper)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
-					GUI:TextColored(1,0,0,1,\"This will only work on the English client. As it works by detecting the text signalling the start of the countdown. You may be able to get it working if you properly translate the text.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				if AnyoneCore.Settings.PrepullHelper == true then\
-				local hovered = false\
-				AnyoneCore.Settings.BadTeamDelay, changed = GUI:InputInt(\"Pull Early For Bad Teams\", AnyoneCore.Settings.BadTeamDelay)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Let's face it, most people don't pull on time. Sometimes people will even pull up to a full second early. Change this to make prepull helper pull the boss earlier if your team is consistently pulling early.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Based on milliseconds. Putting this to 200 means it will pull 200 milliseconds before the countdown ends.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
-				if (Player.job == 23 or Player.job == 31) and AnyoneCore.Settings.PrepullHelper == true then\
-				local hovered = false\
-				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables the use of Peloton during prepull helper.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end ---end of job check\
-				end ---end of prepullhelper enabled check\
-\
-				\
-				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
-				local hovered = false\
-				AnyoneCore.Settings.UseSprint, changed = GUI:Checkbox(\"Use Sprint\", AnyoneCore.Settings.UseSprint)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables reactions to use sprint for you..\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sends a text message to the chat box (client sided) when you're currently using the wrong profile relative to what job you're playing. Message is sent upon entering a savage/ultimate fight for general triggers, and is sent upon the fight starting if the timeline is wrong.\\n\")\
-					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				if Player.job == 34 or Player.job == 38 then \
-				local hovered = false\
-				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv With MoogleTTS\", AnyoneCore.Settings.UseMoogleTTS)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reminds you using MoogleTTS to press Meditate/Improvisation when the boss goes untargetable.\\n\")\
-					GUI:TextColored(1,1,0,1,\"MoogleTTS has to be installed, will do nothing otherwise. Check pins in FFXIVMinion Discord's #addon-file-sharing channel to download.\")\
-					GUI:TextColored(1,0,0,1,\"Do not recommend using if you're streaming or recording to show other people, it will be heard. You can probably pass it off as an ACT trigger, but be careful.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
-				\
-			elseif (tabname == \"Argus\") then\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"Draw Stormcloud AoE radius in e5s\", AnyoneCore.Settings.DrawClouds)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle on the floor to show you the area where you'll get hit by the Chaos Strikes to cleanse lightning debuffs.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"Bugs out badly if clouds combine.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"Draw Chain Lightning AoE size in e5s\", AnyoneCore.Settings.DrawChainLightning)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle around whoever has the Electrified debuff in e5s. Technically the AoE comes from the person it's passed to, but the circle should give you an idea of how far away you should be.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawOccludedFrontOrbs, changed = GUI:Checkbox(\"Draw Occluded Front Orb Explosions in e6s\", AnyoneCore.Settings.DrawOccludedFrontOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle around the orbs that spawn after Occluded Front during Garuda and Garuda/Ifrit phase.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"Standing in the safe spot is not enough to be safe still unfortunately, you still need to make sure you won't be knocked into the orb.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"Draw Black/White Orbs in e7s\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"EXPERIMENTAL, NOT GUARANTEED TO WORK.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"Draw Dragon Heads in e8s\", AnyoneCore.Settings.DrawDragonHeads)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the dragon heads during Wyrm's Lament in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"Draw Light Rampant Orbs in e8s\", AnyoneCore.Settings.DrawOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during Light's Rampant in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawNaelQuotes, changed = GUI:Checkbox(\"Draw Mechanics in UCoB\", AnyoneCore.Settings.DrawNaelQuotes)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Toggles all of the draws in UCoB, there's like 40 so there's only this one option. Draws EVERY Nael Quote, Earthshaker Cones, and people with Thunderstruck debuff.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-			elseif (tabname == \"Fight Specific\") then\
-				local changed = false\
-				\
-				---GUI:Text(\"			e5s settings\")\
-				---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
-				GUI:Text(\"			e6s settings\")\
-				local hovered = false\
-				AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses rdps mitigation before Strike Spark.\")\
-					GUI:TextColored(1,1,0,1,\"Sometimes teams will choose to go north for Strike Spark for the sake of melee uptime. Since there's a lot of outgoing damage here, it's usually a good idea to use rdps mitigations. So enable this to throw out tactician/shield samba/troubador before strike spark.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				---else\
-				---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
-				\
-				end ---end bard/mch/dnc job check\
-				\
-				GUI:Text(\"			e7s settings\")\
-				local hovered = false\
-				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Away With Thee Safe Strat\", AnyoneCore.Settings.DisableAssist)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Disables minion's assist function slightly before Away With Thee teleports go out. Allows you to position yourself correctly without getting mispositioned by a skill usage.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Alternatively, you can use LMB + RMB + S and then wiggle your camera while facing the correct direction. This will result in much better uptime. Test this on a striking dummy first to get the feel for it.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses pot during adds phase in e7s immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
-					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				GUI:Text(\"			e8s settings\")\
-				local hovered = false\
-				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback Mirror Uptime Strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors. Will allow you to nullify both knockbacks.\\n\")\
-					GUI:TextColored(1,1,0,1,\"If you're getting knocked back still, check the read me for more information on how to modify the timing based on your needs.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost Uptime Strat\", AnyoneCore.Settings.DiamondFrostUptime)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Automatically uses Arm's Length or Surecast during Diamond Frost. \\n\")\
-					GUI:TextColored(1,1,0,1,\"Definitely do not have this enabled if you're not doing this strat.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
-				local hovered = false\
-				AnyoneCore.Settings.LeftSide, changed = GUI:Checkbox(\"Left Side Adds\", AnyoneCore.Settings.LeftSide)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uncheck this if you're on the right side for adds phase. Affects Earthen Aether interrupt order.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're machinist or bard, it's disabled otherwise.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-\
-				local hovered = false\
-				AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt Second Earthen Aether\", AnyoneCore.Settings.InterruptSecondAdd)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"If checked, reactions will interrupt the second Earthen Aether instead of the first. Unchecked, it will interrupt the first.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're on left side.\")\
-					GUI:TextColored(2,2,0,2,\"Only matters if you're machinist or bard, it's disabled otherwise.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end -- end of brd/mch/dnc job check\
-				\
-			elseif (tabname == \"Job Specific\") then\
-				if Player.job == 31 then -- check for machinist\
-				\
-				GUI:Text(\"			Machinist Settings\")\
-				local hovered = false\
-				AnyoneCore.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneCore.Settings.AntiGhosting)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sometimes if your ping is too high and you cast a skill right as the boss is going away, the skill will be used but it will deal no damage. But if you use a skill that generates gauge, you will gain that gauge but not deal any damage. So we can disable drill shortly before a phase transition to use a gauge skill instead.\\n\")\
-					GUI:TextColored(1,1,0,1,\"You can disable this if you have a fairly low ping, like under 30 ping. If your drills are still getting used but dealing no damage, you can just turn it back on.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneCore.Settings.e5sQueenGauge)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e5s machinist reactions.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				local hovered = false\
-				AnyoneCore.Settings.e6sQueenGauge, changed = GUI:InputInt(\"e6s queen gauge\", AnyoneCore.Settings.e6sQueenGauge)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e6s machinist reactions.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				local hovered = false\
-				AnyoneCore.Settings.e7sQueenGauge, changed = GUI:InputInt(\"e7s queen gauge\", AnyoneCore.Settings.e7sQueenGauge)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e7s machinist reactions.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				local hovered = false\
-				AnyoneCore.Settings.e8sQueenGauge, changed = GUI:InputInt(\"e8s queen gauge\", AnyoneCore.Settings.e8sQueenGauge)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes when your Summon Queen is used in TensorMagnum settings when you start this fight.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. Make sure you're using my e8s machinist reactions.\")\
-					GUI:TextColored(1,0,0,1,\"Queen gauge will ALWAYS be set to 80 at the start of the fight. This is what the value will be changed to AFTER phase 1.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end -- end of machinist job check\
-\
-				\
-				\
-				if Player.job == 34 then -- check for samurai\
-				\
-				GUI:Text(\"			Samurai\")\
-				local hovered = false\
-				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Enable/Disable Enpi For Me\", AnyoneCore.Settings.NeverEnpi)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AttackingGaruda, changed = GUI:Checkbox(\"Attacking Garuda During Split\", AnyoneCore.Settings.AttackingGaruda)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Only enable if you're specifically attacking garuda during the e6s split phase. If enabled, will not waste the time re-applying Higanbana to ifrit if it won't last long enough to be worth it.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're using my e6s timeline.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end -- end of samurai job check\
-				\
-\
-				\
-				if Player.job ~= 31 and Player.job ~= 34 then\
-				GUI:Text(\"No settings for current job.\")\
-				end\
-			\
-			elseif (tabname == \"Duty Helper\") then\
-			\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelper, changed = GUI:Checkbox(\"Enable Duty Helper\", AnyoneCore.Settings.DutyHelper)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables a multitude of features that help in dungeons. Automatic usage of mitigation like Tactician and Troubador. Automatic usage of Arm's Length, and Head Graze.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Any features after this one won't work unless this setting is enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperTargeting, changed = GUI:Checkbox(\"Always Target Something\", AnyoneCore.Settings.DutyHelperTargeting)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with retargeting the boss or mobs in a dungeon. If you don't have a current target, while in combat and bot is enabled, then target nearest monster.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation Usage\", AnyoneCore.Settings.DutyHelperMitigation)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables spells like tactician/troubador/shield samba to be used alongside Duty Helper to mitigate incoming damage.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				if Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperGrabAggro, changed = GUI:Checkbox(\"Grab Aggro\", AnyoneCore.Settings.DutyHelperGrabAggro)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps regain aggro on mobs that you've lost aggro on. Will not work in 8/24 man raids, on purpose.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
-				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Use Interrupts\", AnyoneCore.Settings.DutyHelperInterrupt)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Interrupts stuff that is interruptable in duties.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end --end of job check\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperKnockback, changed = GUI:Checkbox(\"Use Anti-Knockback Spells\", AnyoneCore.Settings.DutyHelperKnockback)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Interrupts stuff that is interruptable in duties.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-			\
-			elseif (tabname == \" Hacks \") then\
-			\
-			\
-			if AnyoneCore.Settings.UnderstandDanger == false then\
-				local hovered = false\
-				AnyoneCore.Settings.UnderstandDanger, changed = GUI:Checkbox(\"I understand that these options are dangerous to use and can get me banned\", AnyoneCore.Settings.UnderstandDanger)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:TextColored(1,0,0,1,\"These options will not get you automatically banned from Square Enix's detection FOR NOW, but getting caught with speed hacks is an extreme possibility if someone records you moving slightly faster than normal. IT HAS HAPPENED IN THE PAST AND THE PERSON WAS POSTED ALL OVER REDDIT AND THE BALANCE DISCORD. The zoom hacks can't be seen by other people but if you post screenshots, videos or stream your gameplay, then it can be fairly obvious you are zoomed out more than normally allowed.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				elseif AnyoneCore.Settings.UnderstandDanger == true then\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Auto Set Speed Hacks\", AnyoneCore.Settings.AutoSetSpeedHacks)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sets your character speed to 7 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15 percent faster walking speed.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:TextColored(1,0,0,1,\"Changing the speed is safe detection-wise FOR NOW, but someone can report you. It could be especially dangerous if someone spots you running slightly faster than the rest of the group and saves a video of you doing so. In that case, it is dangerous to use, so use at your own discretion.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Auto Set Max Camera Zoom\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20).\\n\")\
-					GUI:TextColored(1,1,0,1,\"Reload lua after enabling. Disable and reload lua to change it back.\")\
-					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				if AnyoneCore.Settings.AutoSetMaxCameraZoom == true then\
-				local hovered = false\
-				AnyoneCore.Settings.CameraZoomValue, changed = GUI:InputInt(\"Max Camera Zoom Value\", AnyoneCore.Settings.CameraZoomValue)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Set the value you want your camera zoom to be set to.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Reload lua after changing.\")\
-					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
-				\
-			end\
-			end -- end of tabs\
-			end\
-			GUI:End()\
-		end\
-	end\
-\
-	-- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"AnyoneCore\"},\"FFXIVMINION##MENU_HEADER\")\
-	RegisterEventHandler(\"Gameloop.Draw\", AnyoneCore.draw, \"AnyoneCore\")\
-	d(\"Loaded AnyoneCore\")\
-	gAnyoneCoreInitialize = true\
 end\
 \
-self.eventConditionMismatch = true\
-self.used = true";
+Player:ClearTarget()\
+\
+--- End Reaction\
+self.used = true\
+\
+";
 		["executeType"] = 2;
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
@@ -4183,7 +3276,7 @@ self.used = true";
 		["enabled"] = true;
 		["eventType"] = 11;
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 31 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 31 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Machinist{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 31 then\
@@ -4467,12 +3560,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4527,12 +3620,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4712,12 +3805,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4772,12 +3865,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4894,12 +3987,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4954,12 +4047,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5147,12 +4240,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5207,12 +4300,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5267,12 +4360,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5398,12 +4491,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5458,12 +4551,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5652,12 +4745,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5712,12 +4805,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5772,12 +4865,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6223,7 +5316,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "aea72155-1634-f9cf-a5c2-dca5ed117020";
+		["uuid"] = "199574aa-4814-aad5-9fd0-54798a1fe7b1";
 	};
 	[19] = {
 		["actions"] = {
@@ -8070,7 +7163,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "deadfcd8-734b-dc6a-bc6d-32545ab2402f";
+		["uuid"] = "68cbee0e-da76-9427-bc86-589d9d54984f";
 	};
 	[20] = {
 		["actions"] = {
@@ -8375,7 +7468,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "91301304-975d-f14a-b307-d456e403a831";
+		["uuid"] = "4cd9ff50-691b-b6f6-96b6-56404105e091";
 	};
 	[21] = {
 		["actions"] = {

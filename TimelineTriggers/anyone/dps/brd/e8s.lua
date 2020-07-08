@@ -31,38 +31,11 @@ local obj1 = {
 \
 \
 \
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-		if Player.job ~= 23 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 23 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong timeline triggers. You're currently using the {color:255,0,0}Bard{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 23 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 23 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 \
 if ACR_TensorRequiem_Potion == true then\
@@ -225,7 +198,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -268,7 +241,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -311,7 +284,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -354,7 +327,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -1435,12 +1408,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1478,12 +1451,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1521,12 +1494,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1564,12 +1537,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3184,12 +3157,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3227,12 +3200,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3270,12 +3243,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3313,12 +3286,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3461,7 +3434,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -3504,7 +3477,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -3547,7 +3520,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -3590,7 +3563,7 @@ self.used = table.size(drawnOrbs) >= 1";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -3946,12 +3919,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 3;
 					["buffID"] = 1209;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 5;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3989,12 +3962,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4097,7 +4070,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -4140,7 +4113,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -4183,7 +4156,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -4226,7 +4199,7 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -4796,7 +4769,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -4839,7 +4812,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1826;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -4882,7 +4855,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1934;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -4925,7 +4898,7 @@ self.used = table.size(drawnOrbs) >= 2";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1951;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 2;
 					["comparator"] = 1;
 					["conditionLua"] = "";

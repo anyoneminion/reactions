@@ -10,6 +10,56 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
+--- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+--- an option named \"AnyoneCore\". Click that and change the settings as you please.\
+\
+---If you do not see an option named that, follow these steps to troubleshoot:\
+---1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
+---2) Reload LUA\
+---3) Make sure you are on the most up to date version of my general reactions.\
+---4) Check console for errors.\
+---5) Send any additional problems to me on Discord at Anyone#9549\
+\
+\
+		if Player.job ~= 35 then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				SendTextCommand(\"/e You're using the wrong timeline triggers. Check that your timeline triggers is set to the summoner profile.\")\
+		elseif Player.job == 35 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		end\
+\
+\
+SallyRDM.SkillSettings.UseAOE.enabled = false\
+\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "REACTION SETTINGS";
+			["throttleTime"] = 0;
+			["time"] = 12;
+			["timeRange"] = false;
+			["timelineIndex"] = 1;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -11.5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "3594d764-5b00-a6c7-93a6-a789bd4f7794";
+		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
 			["execute"] = "---Frequently Asked Questions:\
 --\
 ---Question: \"Something isn't working\"\
@@ -53,91 +103,6 @@ local obj1 = {
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "413510d8-3ca4-ffe4-9541-4430ef5fd84b";
-		};
-		[2] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
---- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
---- an option named \"AnyoneCore\". Click that and change the settings as you please.\
-\
----If you do not see an option named that, follow these steps to troubleshoot:\
----1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
----2) Reload LUA\
----3) Make sure you are on the most up to date version of my general reactions.\
----4) Check console for errors.\
----5) Send any additional problems to me on Discord at Anyone#9549\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-		if Player.job ~= 35 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				SendTextCommand(\"/e You're using the wrong timeline triggers. Check that your timeline triggers is set to the summoner profile.\")\
-		elseif Player.job == 35 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 35 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-\
-\
-SallyRDM.SkillSettings.UseAOE.enabled = false\
-\
----if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
-if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
-		gDevHackWalkSpeed = 7\
-		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
-end\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "REACTION SETTINGS";
-			["throttleTime"] = 0;
-			["time"] = 12;
-			["timeRange"] = false;
-			["timelineIndex"] = 1;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -11.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3594d764-5b00-a6c7-93a6-a789bd4f7794";
 		};
 		[3] = {
 			["actions"] = {
@@ -260,7 +225,7 @@ end";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -303,7 +268,7 @@ end";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[8];
+					["conditions"] = multiRefObjects[9];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -717,12 +682,12 @@ self.used = table.size(Clouds) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[10];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -934,7 +899,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
@@ -977,7 +942,7 @@ return false";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[11];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
@@ -2368,12 +2333,12 @@ self.used = table.size(Clouds) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[1];
+					["buffIDList"] = multiRefObjects[10];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[6];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2475,12 +2440,12 @@ self.used = table.size(Clouds) >= 4";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2518,12 +2483,12 @@ self.used = table.size(Clouds) >= 4";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[7];
+					["buffIDList"] = multiRefObjects[6];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[9];
+					["conditions"] = multiRefObjects[11];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2823,12 +2788,12 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 4;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2866,12 +2831,12 @@ self.used = true";
 					["buffCheckType"] = 2;
 					["buffDuration"] = 0;
 					["buffID"] = 1203;
-					["buffIDList"] = multiRefObjects[10];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 1;
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

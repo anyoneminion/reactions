@@ -21,53 +21,15 @@ local obj1 = {
 ---4) Check console for errors.\
 ---5) Send any additional problems to me on Discord at Anyone#9549\
 \
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
 if SallyGNB.SkillSettings.Potion.enabled == true then\
 data.PotsEnabled = true\
 end\
 \
-		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 37 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong timeline triggers. You're currently using the {color:255,0,0}Gunbreaker{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 37 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 \
 ---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
@@ -287,15 +249,14 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "local drawnOrbs = {}\
+					["actionLua"] = "local Orbs = {}\
 for id, ent in pairs(EntityList(\"\")) do\
-  if ent.contentid == 9290 and not drawnOrbs[id] then\
-    drawnOrbs[id] = true\
-    Argus.addTimedCircleFilled(11000, ent.pos.x, ent.pos.y, ent.pos.z, 8, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-  end\
+	if not Orbs[id] and ent.contentid == 9290 then\
+			Argus.addTimedCircleFilled(10300, ent.pos.x, ent.pos.y, ent.pos.z, 8, 45, {r = 1, g = 0, b = 0}, 0.1, 0.1, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 2)\
+			Orbs[id] = true	\
+	end\
 end\
-\
-self.used = table.size(drawnOrbs) >= 7";
+self.used = table.size(Orbs) >= 7";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
 					["castAtMouse"] = false;
@@ -390,11 +351,11 @@ self.used = table.size(drawnOrbs) >= 7";
 			["time"] = 95.2;
 			["timeRange"] = true;
 			["timelineIndex"] = 11;
-			["timerEndOffset"] = 3;
+			["timerEndOffset"] = 5;
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "52ad8a8e-2537-1b02-9667-cd484027d4ee";
+			["uuid"] = "e195cea4-0e63-e5ed-94fc-28e99da25d20";
 		};
 	};
 	[16] = {
@@ -1246,15 +1207,14 @@ self.used = true";
 				[1] = {
 					["aType"] = 4;
 					["actionID"] = -1;
-					["actionLua"] = "local drawnOrbs = {}\
+					["actionLua"] = "local Orbs = {}\
 for id, ent in pairs(EntityList(\"\")) do\
-  if ent.contentid == 9290 and not drawnOrbs[id] then\
-    drawnOrbs[id] = true\
-    Argus.addTimedCircleFilled(11000, ent.pos.x, ent.pos.y, ent.pos.z, 8, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-  end\
+	if not Orbs[id] and ent.contentid == 9290 then\
+			Argus.addTimedCircleFilled(10300, ent.pos.x, ent.pos.y, ent.pos.z, 8, 45, {r = 1, g = 0, b = 0}, 0.1, 0.1, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 2)\
+			Orbs[id] = true	\
+	end\
 end\
-\
-self.used = table.size(drawnOrbs) >= 7";
+self.used = table.size(Orbs) >= 7";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;
 					["castAtMouse"] = false;
@@ -1349,11 +1309,11 @@ self.used = table.size(drawnOrbs) >= 7";
 			["time"] = 284.2;
 			["timeRange"] = true;
 			["timelineIndex"] = 47;
-			["timerEndOffset"] = 3;
+			["timerEndOffset"] = 5;
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "c25658c8-b568-89b0-896a-ad05bdff69b3";
+			["uuid"] = "cfc28aef-9669-b20a-8361-37b2f7654da1";
 		};
 	};
 	[55] = {

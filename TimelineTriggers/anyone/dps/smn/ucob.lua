@@ -56,13 +56,11 @@ local obj1 = {
 \
 \
 \
-		if Player.job ~= 27 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 27 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong timeline triggers. You're currently using the {color:255,0,0}Summoner{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 27 then\
 				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 27 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
 		end\
 \
 if ACR_TensorRuin_Potion == true then\

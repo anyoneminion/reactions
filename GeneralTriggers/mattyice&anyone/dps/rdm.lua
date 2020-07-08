@@ -17,7 +17,7 @@ local obj1 = {
 		visible = true,\
 		open = false,\
 		version = 2.87,\
-		helperVersion = 1.0\
+		helperVersion = 1.0,\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -492,6 +492,7 @@ local obj1 = {
 				end\
 				end\
 				\
+				if Player.job == 1 then\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -503,6 +504,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				if Player.job == 34 or Player.job == 38 then \
@@ -997,7 +999,7 @@ local obj1 = {
 	end\
 \
 	-- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"AnyoneCore\"},\"FFXIVMINION##MENU_HEADER\")\
+	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	RegisterEventHandler(\"Gameloop.Draw\", AnyoneCore.draw, \"AnyoneCore\")\
 	d(\"Loaded AnyoneCore\")\
 	gAnyoneCoreInitialize = true\
@@ -1019,7 +1021,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "01b61b67-a965-68cf-8ca9-8a79637c1521";
+		["uuid"] = "35002e67-9ef7-2351-aefa-5a9f0abaf34b";
 	};
 	[2] = {
 		["actions"] = {

@@ -10,6 +10,57 @@ local obj1 = {
 			["conditions"] = {
 			};
 			["enabled"] = true;
+			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
+--- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
+--- an option named \"AnyoneCore\". Click that and change the settings as you please.\
+\
+---If you do not see an option named that, follow these steps to troubleshoot:\
+---1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
+---2) Reload LUA\
+---3) Make sure you are on the most up to date version of my general reactions.\
+---4) Check console for errors.\
+---5) Send any additional problems to me on Discord at Anyone#9549\
+\
+if SallyGNB.SkillSettings.Potion.enabled == true then\
+data.PotsEnabled = true\
+end\
+\
+\
+		if Player.job ~= 37 then\
+				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong timeline triggers. You're currently using the {color:255,0,0}Gunbreaker{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
+		elseif Player.job == 37 then\
+				d(\"[Anyone's Reactions] - Player job check succeeded\")\
+		end\
+\
+---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
+if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
+		gDevHackWalkSpeed = 7\
+		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
+end\
+self.used = true";
+			["executeType"] = 2;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "REACTION SETTINGS";
+			["throttleTime"] = 0;
+			["time"] = 13;
+			["timeRange"] = false;
+			["timelineIndex"] = 2;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -12.5;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "eaef8b45-47fb-ef70-aacf-1f03b03ca461";
+		};
+		[2] = {
+			["actions"] = {
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
 			["execute"] = "--- These reactions are for maximizing DPS uptime, they are absolutely not for automatically using\
 --- tank defensives, tank swapping, or anything like that.";
 			["executeType"] = 2;
@@ -28,7 +79,7 @@ local obj1 = {
 			["used"] = false;
 			["uuid"] = "4c059bc4-c4ef-ceb8-bcff-da6b83dd4369";
 		};
-		[2] = {
+		[3] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -78,7 +129,7 @@ local obj1 = {
 			["used"] = false;
 			["uuid"] = "e184303b-913f-4c60-ae13-30b8b6230e65";
 		};
-		[3] = {
+		[4] = {
 			["actions"] = {
 			};
 			["conditions"] = {
@@ -105,94 +156,6 @@ local obj1 = {
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "819bc977-dbf4-ea35-8c96-50aec8f4f9b3";
-		};
-		[4] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "--- Do not touch anything on this page. If you want to change the settings, then use the menu options.\
---- Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see\
---- an option named \"AnyoneCore\". Click that and change the settings as you please.\
-\
----If you do not see an option named that, follow these steps to troubleshoot:\
----1) Make sure your profile is set to one of my profiles (i.e. \"anyone smn\")\
----2) Reload LUA\
----3) Make sure you are on the most up to date version of my general reactions.\
----4) Check console for errors.\
----5) Send any additional problems to me on Discord at Anyone#9549\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-if SallyGNB.SkillSettings.Potion.enabled == true then\
-data.PotsEnabled = true\
-end\
-\
-\
-		if Player.job ~= 37 and AnyoneCore.Settings.JobCheck == true then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong timeline triggers. You're currently using the {color:255,0,0}Gunbreaker{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
-		elseif Player.job == 37 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		elseif Player.job ~= 37 and AnyoneCore.Settings.JobCheck == false then\
-				d(\"[Anyone's Reactions] - Job check failed, but player has not enabled the setting to send a warning in chat.\")\
-		end\
-\
----if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
-if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
-		gDevHackWalkSpeed = 7\
-		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
-end\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "REACTION SETTINGS";
-			["throttleTime"] = 0;
-			["time"] = 13;
-			["timeRange"] = false;
-			["timelineIndex"] = 2;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -12.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "eaef8b45-47fb-ef70-aacf-1f03b03ca461";
 		};
 	};
 	[22] = {
@@ -552,12 +515,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -595,12 +558,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -638,12 +601,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -681,12 +644,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[3];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1001,12 +964,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1044,12 +1007,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1087,12 +1050,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1130,12 +1093,12 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[4];
+					["buffIDList"] = multiRefObjects[3];
 					["category"] = 2;
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[5];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1406,7 +1369,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1764,7 +1727,7 @@ self.used = true\
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1875,7 +1838,7 @@ self.used = true\
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2172,7 +2135,7 @@ self.used = true";
 					["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

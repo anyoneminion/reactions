@@ -17,7 +17,7 @@ local obj1 = {
 		visible = true,\
 		open = false,\
 		version = 2.87,\
-		helperVersion = 1.0\
+		helperVersion = 1.0,\
 	}\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -492,6 +492,7 @@ local obj1 = {
 				end\
 				end\
 				\
+				if Player.job == 1 then\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -503,6 +504,7 @@ local obj1 = {
 					GUI:TextColored(1,1,0,1,\"The message is entirely client sided but could pose a problem if you stream and don't use a chat blocker (you should be using a chat blocker while streaming anyways), or if you take a screenshot with your chat visible.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
+				end\
 				end\
 				\
 				if Player.job == 34 or Player.job == 38 then \
@@ -997,7 +999,7 @@ local obj1 = {
 	end\
 \
 	-- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"AnyoneCore\"},\"FFXIVMINION##MENU_HEADER\")\
+	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	RegisterEventHandler(\"Gameloop.Draw\", AnyoneCore.draw, \"AnyoneCore\")\
 	d(\"Loaded AnyoneCore\")\
 	gAnyoneCoreInitialize = true\
@@ -1019,7 +1021,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "b266d007-7eca-574d-897c-ce521fde5b9c";
+		["uuid"] = "545e8e01-0dbb-734b-b389-bba8eb7e0fac";
 	};
 	[2] = {
 		["actions"] = {
@@ -1628,7 +1630,7 @@ end\
 		["enabled"] = true;
 		["eventType"] = 11;
 		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 21 and AnyoneCore.Settings.JobCheck == true then\
+		if Player.job ~= 21 then\
 				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Warrior{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
 		elseif Player.job == 21 then\
