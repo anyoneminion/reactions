@@ -16,9 +16,18 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.87,\
+		version = 2.89,\
 		helperVersion = 1.0,\
 	}\
+	\
+	if Settings.AnyoneCore.AlwaysMini == true then\
+		ml_global_information.drawMode = 0\
+	end\
+	\
+	if Settings.AnyoneCore.AlwaysMini == nil then\
+		Settings.AnyoneCore.AlwaysMini = true -- true is default\
+		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini \
+	end\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
 		Settings.AnyoneCore.DrawOrbs = true -- true is default\
@@ -255,6 +264,7 @@ local obj1 = {
 			DrawNaelQuotes = Settings.AnyoneCore.DrawNaelQuotes,\
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
 			NeverDash = Settings.AnyoneCore.NeverDash,\
+			AlwaysMini = Settings.AnyoneCore.AlwaysMini,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -353,6 +363,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.NeverDash = AnyoneCore.Settings.NeverDash\
 		Settings.AnyoneCore.NeverDash = Settings.AnyoneCore.NeverDash\
+		\
+		Settings.AnyoneCore.AlwaysMini = AnyoneCore.Settings.AlwaysMini\
+		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini\
 	\
 		\
 		---start of value selectors\
@@ -432,6 +445,9 @@ local obj1 = {
 			local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs)\
 			if (tabname == \" General\") then\
 				GUI:TextColored(1,1,0,1,\"AnyoneCore - Version #\".. tostring(AnyoneCore.version))\
+				GUI:Spacing( )\
+				GUI:Separator( )\
+				GUI:Spacing( )\
 				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 or Player.job == 35 then\
 				local hovered = false\
 				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneCore.Settings.PrepullHelper)\
@@ -446,20 +462,8 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+				GUI:SameLine()\
 				if AnyoneCore.Settings.PrepullHelper == true then\
-				local hovered = false\
-				AnyoneCore.Settings.BadTeamDelay, changed = GUI:InputInt(\"Pull Early For Bad Teams\", AnyoneCore.Settings.BadTeamDelay)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Let's face it, most people don't pull on time. Sometimes people will even pull up to a full second early. Change this to make prepull helper pull the boss earlier if your team is consistently pulling early.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Based on milliseconds. Putting this to 200 means it will pull 200 milliseconds before the countdown ends.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				end\
 				if (Player.job == 23 or Player.job == 31) and AnyoneCore.Settings.PrepullHelper == true then\
 				local hovered = false\
 				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
@@ -474,6 +478,30 @@ local obj1 = {
 					GUI:EndTooltip()\
 				end			\
 				end ---end of job check\
+				if (Player.job ~= 23 and Player.job ~= 31) then\
+					GUI:NewLine()\
+				end\
+				local hovered = false\
+				GUI:PushItemWidth(80)\
+				AnyoneCore.Settings.BadTeamDelay, changed = GUI:InputInt(\"Amount of milliseconds to pull early with Prepull Helper\", AnyoneCore.Settings.BadTeamDelay)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Let's face it, most people don't pull on time. Sometimes people will even pull up to a full second early. Change this to make prepull helper pull the boss earlier if your team is consistently pulling early.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Based on milliseconds. Putting this to 200 means it will pull 200 milliseconds before the countdown ends.\")\
+					GUI:TextColored(1,0,0,1,\"You usually want this setting to be about 200 to 300 milliseconds by default since most teams will never pull exactly on time.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+\
+				GUI:PopItemWidth( )\
+				GUI:Spacing( )\
+				GUI:Separator( )\
+				GUI:Spacing( )\
+				end\
+\
 				end ---end of prepullhelper enabled check\
 \
 				\
@@ -485,7 +513,7 @@ local obj1 = {
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables reactions to use sprint for you..\\n\")\
+					GUI:Text(\"Enables reactions to use sprint for you.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -509,7 +537,7 @@ local obj1 = {
 				\
 				if Player.job == 34 or Player.job == 38 then \
 				local hovered = false\
-				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind Me To Use Meditate/Improv\", AnyoneCore.Settings.UseMoogleTTS)\
+				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind me to use Meditate/Improv\", AnyoneCore.Settings.UseMoogleTTS)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -523,10 +551,22 @@ local obj1 = {
 				end\
 				end\
 				\
+				local hovered = false\
+				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Always change bot menu to mini mode on startup\", AnyoneCore.Settings.UseMoogleTTS)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"This is referring to the bot menu where you enable and disable assist. Enabling this means that on startup, that menu will always be put into the small version that you get when you press the arrow in the top right corner. \\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
 			elseif (tabname == \"Argus\") then\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"Draw Stormcloud AoE radius in e5s\", AnyoneCore.Settings.DrawClouds)\
+				AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"e5s - Draw Stormcloud AoE radius\", AnyoneCore.Settings.DrawClouds)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -540,7 +580,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"Draw Chain Lightning AoE size in e5s\", AnyoneCore.Settings.DrawChainLightning)\
+				AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"e5s - Draw Chain Lightning AoE size\", AnyoneCore.Settings.DrawChainLightning)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -551,9 +591,8 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				\
 				local hovered = false\
-				AnyoneCore.Settings.DrawOccludedFrontOrbs, changed = GUI:Checkbox(\"Draw Occluded Front Orb Explosions in e6s\", AnyoneCore.Settings.DrawOccludedFrontOrbs)\
+				AnyoneCore.Settings.DrawOccludedFrontOrbs, changed = GUI:Checkbox(\"e6s - Draw Occluded Front orb explosions\", AnyoneCore.Settings.DrawOccludedFrontOrbs)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -565,9 +604,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				\
+\
 				local hovered = false\
-				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"Draw Black/White Orbs in e7s\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
+				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"e7s - Draw black/white orbs\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -579,9 +618,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				\
+\
 				local hovered = false\
-				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"Draw Dragon Heads in e8s\", AnyoneCore.Settings.DrawDragonHeads)\
+				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"e8s - Draw dragon heads\", AnyoneCore.Settings.DrawDragonHeads)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -594,7 +633,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"Draw Light Rampant Orbs in e8s\", AnyoneCore.Settings.DrawOrbs)\
+				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"e8s - Draw Light Rampant Orbs\", AnyoneCore.Settings.DrawOrbs)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -605,15 +644,15 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				\
+\
 				local hovered = false\
-				AnyoneCore.Settings.DrawNaelQuotes, changed = GUI:Checkbox(\"Draw Mechanics in UCoB\", AnyoneCore.Settings.DrawNaelQuotes)\
+				AnyoneCore.Settings.DrawNaelQuotes, changed = GUI:Checkbox(\"UCoB - All drawing mechanics\", AnyoneCore.Settings.DrawNaelQuotes)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Toggles all of the draws in UCoB, there's like 40 so there's only this one option. Draws EVERY Nael Quote, Earthshaker Cones, and people with Thunderstruck debuff.\\n\")\
+					GUI:Text(\"Toggles all of the draws in UCoB, there's like 40 so there's only this one option. Draws EVERY Nael Quote, Earthshaker Cones, twisters/twisting dives and people with Thunderstruck debuff.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -625,7 +664,10 @@ local obj1 = {
 				---GUI:Text(\"			e5s settings\")\
 				---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
 				if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
-				GUI:Text(\"			e6s settings\")\
+				GUI:Spacing( )\
+				GUI:Indent( )\
+				GUI:Text(\"e6s settings\")\
+				GUI:Unindent( )\
 				local hovered = false\
 				AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
 				if changed then AnyoneCore.save() end\
@@ -642,10 +684,12 @@ local obj1 = {
 				---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
 				\
 				end ---end bard/mch/dnc job check\
-				\
-				GUI:Text(\"			e7s settings\")\
+				GUI:Spacing( )\
+				GUI:Indent( )\
+				GUI:Text(\"e7s settings\")\
+				GUI:Unindent( )\
 				local hovered = false\
-				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Away With Thee Safe Strat\", AnyoneCore.Settings.DisableAssist)\
+				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Away With Thee safe strat\", AnyoneCore.Settings.DisableAssist)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -658,7 +702,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds Phase Pot\", AnyoneCore.Settings.AddsPhasePot)\
+				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds phase potion\", AnyoneCore.Settings.AddsPhasePot)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -670,23 +714,25 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				\
-				GUI:Text(\"			e8s settings\")\
+				GUI:Spacing( )\
+				GUI:Indent( )\
+				GUI:Text(\"e8s settings\")\
+				GUI:Unindent( )\
 				local hovered = false\
-				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback Mirror Uptime Strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
+				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback mirrors uptime strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors. Will allow you to nullify both knockbacks.\\n\")\
+					GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors aka Reflected Wings. Will allow you to nullify both knockbacks.\\n\")\
 					GUI:TextColored(1,1,0,1,\"If you're getting knocked back still, check the read me for more information on how to modify the timing based on your needs.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost Uptime Strat\", AnyoneCore.Settings.DiamondFrostUptime)\
+				AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost uptime strat\", AnyoneCore.Settings.DiamondFrostUptime)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -700,7 +746,7 @@ local obj1 = {
 				\
 				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
-				AnyoneCore.Settings.LeftSide, changed = GUI:Checkbox(\"Left Side Adds\", AnyoneCore.Settings.LeftSide)\
+				AnyoneCore.Settings.LeftSide, changed = GUI:Checkbox(\"Left side adds\", AnyoneCore.Settings.LeftSide)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -711,9 +757,10 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-\
+				GUI:SameLine()\
+				if AnyoneCore.Settings.LeftSide == true then\
 				local hovered = false\
-				AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt Second Earthen Aether\", AnyoneCore.Settings.InterruptSecondAdd)\
+				AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt the second Earthen Aether instead\", AnyoneCore.Settings.InterruptSecondAdd)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -725,12 +772,15 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+				end -- end of left side check\
 				end -- end of brd/mch/dnc job check\
 				\
 			elseif (tabname == \"Job Specific\") then\
 				if Player.job == 31 then -- check for machinist\
 				\
-				GUI:Text(\"			Machinist Settings\")\
+				GUI:Indent( )\
+				GUI:Text(\"Machinist settings\")\
+				GUI:Unindent( )\
 				local hovered = false\
 				AnyoneCore.Settings.AntiGhosting, changed = GUI:Checkbox(\"Anti-ghosting tech\", AnyoneCore.Settings.AntiGhosting)\
 				if changed then AnyoneCore.save() end\
@@ -745,6 +795,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
+				GUI:PushItemWidth(70)\
 				AnyoneCore.Settings.e5sQueenGauge, changed = GUI:InputInt(\"e5s queen gauge\", AnyoneCore.Settings.e5sQueenGauge)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
@@ -757,6 +808,7 @@ local obj1 = {
 					GUI:EndTooltip()\
 				end\
 				local hovered = false\
+				GUI:PushItemWidth(70)\
 				AnyoneCore.Settings.e6sQueenGauge, changed = GUI:InputInt(\"e6s queen gauge\", AnyoneCore.Settings.e6sQueenGauge)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
@@ -769,6 +821,7 @@ local obj1 = {
 					GUI:EndTooltip()\
 				end\
 				local hovered = false\
+				GUI:PushItemWidth(70)\
 				AnyoneCore.Settings.e7sQueenGauge, changed = GUI:InputInt(\"e7s queen gauge\", AnyoneCore.Settings.e7sQueenGauge)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
@@ -781,6 +834,7 @@ local obj1 = {
 					GUI:EndTooltip()\
 				end\
 				local hovered = false\
+				GUI:PushItemWidth(70)\
 				AnyoneCore.Settings.e8sQueenGauge, changed = GUI:InputInt(\"e8s queen gauge\", AnyoneCore.Settings.e8sQueenGauge)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
@@ -798,23 +852,11 @@ local obj1 = {
 				\
 				\
 				if Player.job == 34 then -- check for samurai\
-				\
-				GUI:Text(\"			Samurai\")\
+				GUI:Indent( )\
+				GUI:Text(\"Samurai settings\")\
+				GUI:Unindent( )\
 				local hovered = false\
-				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Enable/Disable Enpi For Me\", AnyoneCore.Settings.NeverEnpi)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enabling this will make it so reactions will never enable/disable Enpi usage for you. Allows you to change it by yourself as you please.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never Dash For Me\", AnyoneCore.Settings.NeverEnpi)\
+				AnyoneCore.Settings.NeverEnpi, changed = GUI:Checkbox(\"Never dash for me\", AnyoneCore.Settings.NeverEnpi)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -827,7 +869,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AttackingGaruda, changed = GUI:Checkbox(\"Attacking Garuda During Split\", AnyoneCore.Settings.AttackingGaruda)\
+				AnyoneCore.Settings.AttackingGaruda, changed = GUI:Checkbox(\"Attack Garuda during split phase\", AnyoneCore.Settings.AttackingGaruda)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -862,7 +904,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DutyHelperTargeting, changed = GUI:Checkbox(\"Always Target Something\", AnyoneCore.Settings.DutyHelperTargeting)\
+				AnyoneCore.Settings.DutyHelperTargeting, changed = GUI:Checkbox(\"Always target something\", AnyoneCore.Settings.DutyHelperTargeting)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -875,7 +917,7 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation Usage\", AnyoneCore.Settings.DutyHelperMitigation)\
+				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation usage\", AnyoneCore.Settings.DutyHelperMitigation)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -889,7 +931,7 @@ local obj1 = {
 				\
 				if Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
-				AnyoneCore.Settings.DutyHelperGrabAggro, changed = GUI:Checkbox(\"Grab Aggro\", AnyoneCore.Settings.DutyHelperGrabAggro)\
+				AnyoneCore.Settings.DutyHelperGrabAggro, changed = GUI:Checkbox(\"Aggro management in dungeons\", AnyoneCore.Settings.DutyHelperGrabAggro)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -904,7 +946,7 @@ local obj1 = {
 				\
 				if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
-				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Use Interrupts\", AnyoneCore.Settings.DutyHelperInterrupt)\
+				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Automatically interrupt casts\", AnyoneCore.Settings.DutyHelperInterrupt)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -918,7 +960,7 @@ local obj1 = {
 				end --end of job check\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.DutyHelperKnockback, changed = GUI:Checkbox(\"Use Anti-Knockback Spells\", AnyoneCore.Settings.DutyHelperKnockback)\
+				AnyoneCore.Settings.DutyHelperKnockback, changed = GUI:Checkbox(\"Use anti-knockback spells\", AnyoneCore.Settings.DutyHelperKnockback)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -949,7 +991,7 @@ local obj1 = {
 				elseif AnyoneCore.Settings.UnderstandDanger == true then\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Auto Set Speed Hacks\", AnyoneCore.Settings.AutoSetSpeedHacks)\
+				AnyoneCore.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Automatically set speed hacks\", AnyoneCore.Settings.AutoSetSpeedHacks)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -963,21 +1005,23 @@ local obj1 = {
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Auto Set Max Camera Zoom\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
+				AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Automatically set max camera zoom on startup\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20).\\n\")\
+					GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20). Value can be changed with the input box.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Reload lua after enabling. Disable and reload lua to change it back.\")\
 					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
 				if AnyoneCore.Settings.AutoSetMaxCameraZoom == true then\
+				GUI:SameLine()\
 				local hovered = false\
-				AnyoneCore.Settings.CameraZoomValue, changed = GUI:InputInt(\"Max Camera Zoom Value\", AnyoneCore.Settings.CameraZoomValue)\
+				GUI:PushItemWidth(70)\
+				AnyoneCore.Settings.CameraZoomValue, changed = GUI:InputInt(\"\", AnyoneCore.Settings.CameraZoomValue)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
@@ -1021,7 +1065,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "5466e15d-3ae8-d9e5-b01b-305dd5f2f63c";
+		["uuid"] = "6c932592-cb6d-dfae-856d-c054585e9e6f";
 	};
 	[2] = {
 		["actions"] = {
