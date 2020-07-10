@@ -1919,6 +1919,7 @@ self.eventConditionMismatch = true -- supress log";
 				["conditions"] = {
 					[1] = 4;
 					[2] = 2;
+					[3] = 3;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -1957,6 +1958,7 @@ self.eventConditionMismatch = true -- supress log";
 				["conditions"] = {
 					[1] = 2;
 					[2] = 6;
+					[3] = 3;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2183,7 +2185,10 @@ return false";
 				["comparator"] = 1;
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)";
+local ent = EntityList(\"attackable\")\
+if mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil then\
+return (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)\
+end";
 				["conditionType"] = 5;
 				["conditions"] = {
 				};
@@ -2360,7 +2365,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 				["setFirstMatch"] = false;
 			};
 		};
-		["enabled"] = true;
+		["enabled"] = false;
 		["eventType"] = 1;
 		["execute"] = "";
 		["executeType"] = 1;
@@ -2378,7 +2383,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375;
 		["timerStartOffset"] = -8;
 		["used"] = false;
-		["uuid"] = "b0a6c88b-333e-31e8-9107-a5acfaa6809f";
+		["uuid"] = "0975d8be-c952-9baf-a3ec-30fa5142331a";
 	};
 	[10] = {
 		["actions"] = {
@@ -2396,6 +2401,7 @@ self.used = true";
 				["conditions"] = {
 					[1] = 1;
 					[2] = 3;
+					[3] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2435,7 +2441,6 @@ self.used = true";
 				["conditions"] = {
 					[1] = 2;
 					[2] = 3;
-					[3] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2766,6 +2771,7 @@ self.used = true";
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
+					[3] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2805,6 +2811,7 @@ self.used = true";
 				["castPosZ"] = 0;
 				["conditions"] = {
 					[1] = 3;
+					[2] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2982,6 +2989,68 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["comparator"] = 1;
 				["conditionLua"] = "return data.stopCast ~= nil";
 				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = 1;
+				["rangeCheckSourceSubType"] = 1;
+				["rangeCheckSourceType"] = 1;
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 2;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 7;
 				["conditions"] = {
 				};
 				["contentid"] = -1;

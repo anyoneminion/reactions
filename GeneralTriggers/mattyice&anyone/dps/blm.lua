@@ -3362,6 +3362,7 @@ self.eventConditionMismatch = true -- supress log";
 				["conditions"] = {
 					[1] = 4;
 					[2] = 2;
+					[3] = 3;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -3400,6 +3401,7 @@ self.eventConditionMismatch = true -- supress log";
 				["conditions"] = {
 					[1] = 2;
 					[2] = 6;
+					[3] = 3;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -3626,7 +3628,10 @@ return false";
 				["comparator"] = 1;
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)";
+local ent = EntityList(\"attackable\")\
+if mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil then\
+return (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)\
+end";
 				["conditionType"] = 5;
 				["conditions"] = {
 				};
@@ -3803,7 +3808,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 				["setFirstMatch"] = false;
 			};
 		};
-		["enabled"] = true;
+		["enabled"] = false;
 		["eventType"] = 1;
 		["execute"] = "";
 		["executeType"] = 1;
@@ -3821,7 +3826,7 @@ return mytarget ~= nil and cinfo ~= nil and (mytarget.id ~= cinfo.channeltargeti
 		["timerOffset"] = 1.375;
 		["timerStartOffset"] = -8;
 		["used"] = false;
-		["uuid"] = "a579e44b-0440-13b4-ba04-1a77d90534cb";
+		["uuid"] = "38c1fe09-5a80-758f-b1de-db72a5cbafe5";
 	};
 	[13] = {
 		["actions"] = {
