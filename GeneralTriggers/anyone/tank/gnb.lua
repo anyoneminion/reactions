@@ -7478,7 +7478,7 @@ end";
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.15";
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.05";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
