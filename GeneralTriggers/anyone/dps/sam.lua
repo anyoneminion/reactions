@@ -2399,7 +2399,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -2459,7 +2459,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -2581,7 +2581,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -2641,7 +2641,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -3060,10 +3060,7 @@ return false";
 				["comparator"] = 1;
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
-local ent = EntityList(\"attackable\")\
-if mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil then\
-return (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)\
-end";
+return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (mytarget.id ~= cinfo.channeltargetid) and (cinfo.casttime - cinfo.channeltime >= 0.500)";
 				["conditionType"] = 5;
 				["conditions"] = {
 				};
@@ -3240,7 +3237,7 @@ end";
 				["setFirstMatch"] = false;
 			};
 		};
-		["enabled"] = false;
+		["enabled"] = true;
 		["eventType"] = 1;
 		["execute"] = "";
 		["executeType"] = 1;
@@ -3258,7 +3255,7 @@ end";
 		["timerOffset"] = 1.375;
 		["timerStartOffset"] = -8;
 		["used"] = false;
-		["uuid"] = "7e0d3f61-9c66-a7e6-b336-2b3d00a36268";
+		["uuid"] = "c5cea7cd-cd87-32dc-becc-a9ea9b958aa6";
 	};
 	[14] = {
 		["actions"] = {
