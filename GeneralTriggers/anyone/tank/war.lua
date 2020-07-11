@@ -4870,7 +4870,10 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 [16352] = true,\
 [16633] = true,\
 [16696] = true,\
-\
+[19537] = true,\
+[19363] = true,\
+[19437] = true,\
+[19930] = true,\
 --trials tank mitigation\
 [8227] = true,\
 [8243] = true,\
