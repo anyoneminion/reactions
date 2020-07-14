@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.0,\
+		version = 3.01,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1189,7 +1189,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "9d1b1520-9a21-fb73-b381-a3150de96116";
+		["uuid"] = "0ed6db28-aad3-633f-a7ff-a54573b3e29e";
 	};
 	[2] = {
 		["actions"] = {
@@ -1283,6 +1283,7 @@ SallyDNC.SkillSettings.UseAOE.enabled = true\
 SallyDNC.SkillSettings.HoldFans.enabled = false\
 SallyDNC.SkillSettings.WindmillIsAOE.enabled = false\
 SallyDNC.SkillSettings.BloodShowerIsAOE.enabled = false\
+SallyDNC.SkillSettings.ForceMeleeProc.enabled = false\
 \
 Player:ClearTarget()\
 \
