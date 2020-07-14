@@ -16,17 +16,59 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 2.92,\
+		version = 3.0,\
 		helperVersion = 1.0,\
+		gitVersion,\
+		downloadStatus,\
+		checkStatus,\
 	}\
 	\
-	if Settings.AnyoneCore.AlwaysMini == true then\
-		ml_global_information.drawMode = 0\
+	local LuaModsPath = GetLuaModsPath()\
+	function checkForUpdate()\
+		local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Write-Output $versionCheck; stop-process -Id $PID\"]]) \
+		gitVersion = handle:read(\"*n\")\
+		handle:close()\
+	end\
+\
+	function download_files()\
+		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; stop-process -Id $PID\"]])\
+		downloadStatus = \"Wait a few seconds then reload LUA.\"\
+	end\
+	\
+	if Settings.AnyoneCore.WarnForUpdates == nil then\
+		Settings.AnyoneCore.WarnForUpdates = true -- true is default\
+		Settings.AnyoneCore.WarnForUpdates = Settings.AnyoneCore.WarnForUpdates \
+	end\
+	\
+	--checks for updates on first run, have to press button to check again\
+	if Settings.AnyoneCore.WarnForUpdates == true then\
+		checkForUpdate()\
+		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+			TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to automatically update.\")\
+		else\
+			d(\"[AnyoneCore] - No updates available.\")\
+		end\
+	end\
+	\
+	if Settings.AnyoneCore.AutomaticUpdates == true  then\
+		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+			download_files()\
+			TensorCore.sendParsedChatMessage(\"/e {color:255, 0, 0} The update to Anyone's reactions has been automatically downloaded. Simply Reload LUA to get it.\")\
+		end\
+	end\
+	\
+	if Settings.AnyoneCore.AutomaticUpdates == nil then\
+		Settings.AnyoneCore.AutomaticUpdates = false -- true is default\
+		Settings.AnyoneCore.AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates \
 	end\
 	\
 	if Settings.AnyoneCore.AlwaysMini == nil then\
 		Settings.AnyoneCore.AlwaysMini = true -- true is default\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini \
+	end\
+\
+	if Settings.AnyoneCore.AlwaysMini == true then\
+		ml_global_information.drawMode = 0\
 	end\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -265,6 +307,8 @@ local obj1 = {
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
 			NeverDash = Settings.AnyoneCore.NeverDash,\
 			AlwaysMini = Settings.AnyoneCore.AlwaysMini,\
+			WarnForUpdates = Settings.AnyoneCore.WarnForUpdates,\
+			AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -366,6 +410,12 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.AlwaysMini = AnyoneCore.Settings.AlwaysMini\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini\
+		\
+		Settings.AnyoneCore.WarnForUpdates = AnyoneCore.Settings.WarnForUpdates\
+		Settings.AnyoneCore.WarnForUpdates = Settings.AnyoneCore.WarnForUpdates\
+		\
+		Settings.AnyoneCore.AutomaticUpdates = AnyoneCore.Settings.AutomaticUpdates\
+		Settings.AnyoneCore.AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates\
 	\
 		\
 		---start of value selectors\
@@ -444,7 +494,65 @@ local obj1 = {
 			if AnyoneCore.visible then\
 			local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs)\
 			if (tabname == \" General\") then\
-				GUI:TextColored(1,1,0,1,\"AnyoneCore - Version #\".. tostring(AnyoneCore.version))\
+				GUI:Bullet()\
+				GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
+				GUI:Bullet()\
+				GUI:TextColored(1,1,0,1,\"Latest GitHub Release Version: \".. tostring(gitVersion))\
+				if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+					GUI:TextColored(0,1,0,1,\"New version available! Click 'update' to automatically download the newest update.\")\
+				end\
+\
+				if GUI:Button(\"Check for updates\") then checkForUpdate() checkStatus = \"Done\" end ---\
+				if checkStatus ~= nil then\
+				GUI:SameLine()\
+				GUI:TextColored(0,1,0,1,checkStatus)\
+				end\
+				\
+				if GUI:BeginPopupModal(\"ConfirmationWindow\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoMove + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
+					GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
+					GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now.\")\
+					GUI:Text(\"A backup of your files will be created in\") GUI:SameLine() GUI:TextColored(1,1,0,1,\"LuaMods/TensorReactionsBackup.\") \
+					GUI:TextColored(0,1,0,1,\"Currently backed up files will be overwritten.\")\
+					GUI:PushItemWidth(200)\
+					if GUI:Button(\"Yes\") then download_files() GUI:CloseCurrentPopup() end \
+					GUI:SameLine()\
+					if GUI:Button(\"No\") then GUI:CloseCurrentPopup() end\
+					GUI:EndPopup()\
+				end\
+				\
+				if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"ConfirmationWindow\") end ---download_files()\
+				if downloadStatus ~= nil then\
+				GUI:SameLine()\
+				GUI:TextColored(0,1,0,1,downloadStatus)\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.WarnForUpdates, changed = GUI:Checkbox(\"Warn me with a chat message if there's a new update\", AnyoneCore.Settings.WarnForUpdates)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Sends you a client-sided green colored chat message upon starting up if there's a new update available.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Turning this off will also disable the automatic version checking. You'll have to press the button to find the new version number.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.AutomaticUpdates, changed = GUI:Checkbox(\"Automatically download new updates when available\", AnyoneCore.Settings.AutomaticUpdates)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"If a new update is available, it will be automatically downloaded and applied. You'll just have to reload LUA to get it. Your current files will be backed up in LuaMods/TensorReactionsBackup.\\n\")\
+					GUI:TextColored(1,1,0,1,\"A red colored chat message will be sent to chat that a new update has been downloaded and tell you to reload LUA.\")\
+					GUI:TextColored(1,0,0,1,\"If you have personally edited reactions, then you NEED to rename the files. As long as they aren't the same name, they won't be replaced.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
 				GUI:Spacing( )\
 				GUI:Separator( )\
 				GUI:Spacing( )\
@@ -851,7 +959,7 @@ local obj1 = {
 \
 				\
 				\
-				if Player.job == 34 or Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for samurai\
+				if Player.job == 34 then -- check for samurai\
 				GUI:Indent( )\
 				GUI:Text(\"Samurai settings\")\
 				GUI:Unindent( )\
@@ -882,9 +990,25 @@ local obj1 = {
 				end\
 				end -- end of samurai job check\
 				\
-\
+				if Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for samurai\
+				GUI:Indent( )\
+				GUI:Text(\"Tank Settings\")\
+				GUI:Unindent( )\
+				local hovered = false\
+				AnyoneCore.Settings.NeverDash, changed = GUI:Checkbox(\"Never dash for me\", AnyoneCore.Settings.NeverDash)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enabling this will make it so reactions will never dash in for you. Dashes are mostly done after mechanics end when it's safe to do so, but could be annoying for teams with weird uptime strats.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
 				\
-				if Player.job ~= 31 and Player.job ~= 34 then\
+				if Player.job ~= 31 and Player.job ~= 34 and Player.job == 21 and Player.job == 19 and Player.job == 32 and Player.job == 37  then\
 				GUI:Text(\"No settings for current job.\")\
 				end\
 			\
@@ -1065,7 +1189,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "cfa7dad7-74ac-fcfb-8671-5e8fe56f7a89";
+		["uuid"] = "60d8073b-2455-987e-8bae-b946271eb246";
 	};
 	[2] = {
 		["actions"] = {
@@ -3590,12 +3714,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3650,12 +3774,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3835,12 +3959,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3895,12 +4019,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4017,12 +4141,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4077,12 +4201,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4270,12 +4394,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4330,12 +4454,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4390,12 +4514,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4521,12 +4645,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4581,12 +4705,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4775,12 +4899,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4835,12 +4959,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4895,12 +5019,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5513,7 +5637,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then             \
+		if ent and ent.alive == true then             \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -5567,7 +5691,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -5674,7 +5798,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then                     \
+		if ent and ent.alive == true then                     \
 				Argus.addTimedCircleFilled(7000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 7000, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -5787,13 +5911,13 @@ for id, ent in pairs(EntityList(\"\")) do\
 end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then                     \
+		if ent and ent.alive == true then                     \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 11000, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -5842,7 +5966,7 @@ self.used = true";
 \
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then \
+		if ent and ent.alive == true then \
 			Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 	end\
 end\
@@ -5908,7 +6032,7 @@ for id, ent in pairs(EntityList(\"\")) do\
 end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 4500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -5965,7 +6089,7 @@ for id, ent in pairs(EntityList(\"\")) do\
 end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 8000, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -6021,7 +6145,7 @@ end\
 ---wont draw thermionic beam\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 8000, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -6075,7 +6199,7 @@ for id, ent in pairs(EntityList(\"\")) do\
 end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then            \
+		if ent and ent.alive == true then            \
 				Argus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 5000, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -7203,7 +7327,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then             \
+		if ent and ent.alive == true then             \
 				Argus.addTimedCircleFilled(1700, ent.pos.x, ent.pos.y, ent.pos.z, 1, 30, {r = 1, g = 1, b = 0.4}, 0.1, 0.1, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 		end \
 end\
@@ -7250,7 +7374,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then             \
+		if ent and ent.alive == true then             \
 				Argus.addTimedCircleFilled(500, ent.pos.x, ent.pos.y, ent.pos.z, 1, 30, {r = 1, g = 0, b = 0}, 0.4, 0.4, 0, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
@@ -7508,7 +7632,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then             \
+		if ent and ent.alive == true then             \
 				Argus.addTimedCircleFilled(3900, ent.pos.x, ent.pos.y, ent.pos.z, 1, 30, {r = 1, g = 1, b = 0.4}, 0.1, 0.1, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 		end \
 end\
@@ -7555,8 +7679,8 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true end\
 \
 for id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \
-		if ent then             \
-				Argus.addTimedCircleFilled(500, ent.pos.x, ent.pos.y, ent.pos.z, 1, 30, {r = 1, g = 0, b = 0}, 0.4, 0.4, 0, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
+		if ent and ent.alive == true then             \
+				Argus.addTimedCircleFilled(1400, ent.pos.x, ent.pos.y, ent.pos.z, 1, 30, {r = 1, g = 0, b = 0}, 0.4, 0.4, 0, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
 		end \
 end\
 \
