@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.04,\
+		version = 3.05,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -33,7 +33,7 @@ local obj1 = {
 	\
 	function readChangelog()\
 		if changelog == nil then\
-			local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $changelog = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].body; Write-Output $changelog; stop-process -Id $PID\"]]) \
+			local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $changelog1 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].body; $changelog2 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[1].body; $changelog3 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[2].body; Write-Output $changelog1, $changelog2 $changelog3; stop-process -Id $PID\"]]) \
 			changelog = handle:read(\"*a\")\
 			handle:close()\
 		end\
@@ -50,8 +50,9 @@ local obj1 = {
 	end\
 	\
 	--checks for updates on first run, have to press button to check again\
-	if Settings.AnyoneCore.WarnForUpdates == true then\
+	if Settings.AnyoneCore.WarnForUpdates == true and gitVersion == nil then\
 		checkForUpdate()\
+		d(\"[AnyoneCore] Checking for new update on startup.\")\
 		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
 			TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to automatically update.\")\
 		else\
@@ -64,6 +65,12 @@ local obj1 = {
 			download_files()\
 			TensorCore.sendParsedChatMessage(\"/e {color:255, 0, 0} The update to Anyone's reactions has been automatically downloaded. Simply Reload LUA to get it.\")\
 		end\
+	end\
+	\
+		--camera zoom value, not related to above code\
+	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true and (gDevHackMaxZoom ~= Settings.AnyoneCore.CameraZoomValue) then\
+		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
+		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
 	end\
 	\
 	if Settings.AnyoneCore.AutomaticUpdates == nil then\
@@ -253,12 +260,6 @@ local obj1 = {
 	if Settings.AnyoneCore.BadTeamDelay == nil then\
 		Settings.AnyoneCore.BadTeamDelay = 200 -- 200 is default\
 		Settings.AnyoneCore.BadTeamDelay = Settings.AnyoneCore.BadTeamDelay\
-	end\
-	\
-	--camera zoom value, not related to above code\
-	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true then\
-		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
-		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
 	end\
 	\
 	if Settings.AnyoneCore.DrawClouds == nil then\
@@ -512,10 +513,25 @@ local obj1 = {
 				end\
 				\
 				if GUI:BeginPopup(\"Changelog\", GUI.WindowFlags_NoCollapse) then\
+					GUI:TextColored(1,1,0,1,\"Showing the last three updates.\")\
+					GUI:Spacing( )\
+					GUI:Separator( )\
+					GUI:Spacing( )\
 					GUI:Text(changelog)\
 					GUI:PushItemWidth(500)\
 					if GUI:Button(\"Close\") then GUI:CloseCurrentPopup() end\
+					GUI:SameLine()\
+					local hovered = false\
+					if GUI:Button(\"Refresh\") then readChangelog() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
 					GUI:EndPopup()\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:TextColored(1,1,0,1,\"Refreshes the change log. Don't spam this or you could get locked out of Github's API for an hour and be unable to update, check for updates, or read the changelog.\\n\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
 				end\
 				\
 				if GUI:Button(\"Check for updates\") then checkForUpdate() checkStatus = \"Done\" end ---\
@@ -526,7 +542,7 @@ local obj1 = {
 				end\
 				\
 				\
-				if GUI:BeginPopupModal(\"ConfirmationWindow\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoMove + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
+				if GUI:BeginPopupModal(\"Confirmation Window\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
 					GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
 					GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now.\")\
 					GUI:Text(\"A backup of your files will be created in\") GUI:SameLine() GUI:TextColored(1,1,0,1,\"LuaMods/TensorReactionsBackup.\") \
@@ -538,7 +554,7 @@ local obj1 = {
 					GUI:EndPopup()\
 				end\
 				\
-				if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"ConfirmationWindow\") end ---download_files()\
+				if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"Confirmation Window\") end ---download_files()\
 				if downloadStatus ~= nil then\
 				GUI:SameLine()\
 				GUI:TextColored(0,1,0,1,downloadStatus)\
@@ -1207,7 +1223,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "6d91a9bb-b35d-779b-8c47-24ea34c1552b";
+		["uuid"] = "2bece73d-7303-f67e-a911-d3020a396071";
 	};
 	[2] = {
 		["actions"] = {
@@ -3732,7 +3748,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
@@ -3792,7 +3808,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
@@ -3977,12 +3993,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4037,12 +4053,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4159,12 +4175,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 5;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4219,12 +4235,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4412,12 +4428,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4472,12 +4488,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4532,12 +4548,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[9];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -4663,7 +4679,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -4723,7 +4739,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
@@ -4917,12 +4933,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 4;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4977,12 +4993,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5037,12 +5053,12 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
