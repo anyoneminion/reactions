@@ -16,6 +16,9 @@ local obj1 = {
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -34,8 +37,8 @@ local obj1 = {
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -77,6 +80,9 @@ local obj1 = {
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -95,8 +101,8 @@ local obj1 = {
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -139,6 +145,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -158,8 +167,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -176,6 +185,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 2;
 					};
@@ -195,8 +207,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -214,6 +226,9 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
@@ -224,6 +239,8 @@ end";
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -244,9 +261,9 @@ end";
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -262,6 +279,9 @@ end";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
 return true\
@@ -273,6 +293,8 @@ end\
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -293,9 +315,9 @@ end\
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -336,6 +358,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -355,8 +380,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -373,6 +398,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 2;
 					};
@@ -392,8 +420,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -411,6 +439,9 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
@@ -421,6 +452,8 @@ end";
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -441,9 +474,9 @@ end";
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -459,6 +492,9 @@ end";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
 return true\
@@ -470,6 +506,8 @@ end\
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -490,9 +528,9 @@ end\
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -533,6 +571,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -552,8 +593,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -570,6 +611,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 2;
 					};
@@ -589,8 +633,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -608,6 +652,9 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
@@ -618,6 +665,8 @@ end";
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -638,9 +687,9 @@ end";
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -656,6 +705,9 @@ end";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
 return true\
@@ -667,6 +719,8 @@ end\
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -687,9 +741,9 @@ end\
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -729,6 +783,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -747,8 +804,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -790,6 +847,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -808,8 +868,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -851,6 +911,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -869,8 +932,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -912,6 +975,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -930,8 +996,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -973,6 +1039,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -991,8 +1060,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1034,6 +1103,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1052,8 +1124,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1095,6 +1167,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1113,8 +1188,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1156,6 +1231,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1174,8 +1252,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1218,6 +1296,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -1237,8 +1318,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1255,6 +1336,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 2;
 					};
@@ -1274,8 +1358,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1293,6 +1377,9 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
@@ -1303,6 +1390,8 @@ end";
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -1323,9 +1412,9 @@ end";
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -1341,6 +1430,9 @@ end";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
 return true\
@@ -1352,6 +1444,8 @@ end\
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -1372,9 +1466,9 @@ end\
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -1415,6 +1509,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
 					};
@@ -1434,8 +1531,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1452,6 +1549,9 @@ self.used = true";
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 2;
 					};
@@ -1471,8 +1571,8 @@ self.used = true";
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1490,6 +1590,9 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"SallySAM\" then\
 return true\
@@ -1500,6 +1603,8 @@ end";
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -1520,9 +1625,9 @@ end";
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -1538,6 +1643,9 @@ end";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["comparator"] = 1;
 					["conditionLua"] = "if data.selectedACR == \"TensorWeeb\" then\
 return true\
@@ -1549,6 +1657,8 @@ end\
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
 					["gaugeIndex"] = 1;
 					["gaugeValue"] = 0;
 					["hpType"] = 1;
@@ -1569,9 +1679,9 @@ end\
 					["partyTargetName"] = "";
 					["partyTargetNumber"] = 1;
 					["partyTargetSubType"] = 1;
-					["partyTargetType"] = 1;
-					["rangeCheckSourceSubType"] = 1;
-					["rangeCheckSourceType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
 					["rangeSourceContentID"] = -1;
 					["rangeSourceName"] = "";
 					["setEventTargetSubtype"] = 1;
@@ -1611,6 +1721,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1629,8 +1742,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1672,6 +1785,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1690,8 +1806,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1733,6 +1849,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1751,8 +1870,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1794,6 +1913,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1812,8 +1934,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;
@@ -1855,6 +1977,9 @@ end\
 					["castPosX"] = 0;
 					["castPosY"] = 0;
 					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
 					["conditions"] = {
 					};
 					["endIfUsed"] = false;
@@ -1873,8 +1998,8 @@ end\
 					["stopMoving"] = false;
 					["targetContentID"] = -1;
 					["targetName"] = "";
-					["targetSubType"] = 1;
-					["targetType"] = 1;
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
 					["untarget"] = false;
 					["useForWeaving"] = false;
 					["usePot"] = false;

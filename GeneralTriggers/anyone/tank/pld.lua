@@ -16,19 +16,29 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.05,\
+		version = 3.06,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
 		checkStatus,\
 		changelog,\
+		lastUpdateCheck,\
+		cancelCheck = false,\
 	}\
 	\
 	local LuaModsPath = GetLuaModsPath()\
 	function checkForUpdate()\
-		local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Write-Output $versionCheck; stop-process -Id $PID\"]]) \
-		gitVersion = handle:read(\"*n\")\
-		handle:close()\
+		local LuaModsPath = GetLuaModsPath()\
+		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } };[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Value $versionCheck; stop-process -Id $PID\"]]) \
+		local file = io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\") \
+		local output = file:read() \
+		file:close() \
+		gitVersion = tonumber(output) \
+		if AnyoneCore.version < gitVersion then \
+			WarnForUpdate()\
+		elseif AnyoneCore.version >= gitVersion then\
+			d(\"[AnyoneCore] No updates available.\")\
+		end\
 	end\
 	\
 	function readChangelog()\
@@ -40,29 +50,44 @@ local obj1 = {
 	end\
 \
 	function download_files()\
-		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; stop-process -Id $PID\"]])\
-		downloadStatus = \"Wait a few seconds then reload LUA.\"\
+		local handle = io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Write-Output 'Done. Please reload lua to get the changes.'; stop-process -Id $PID\"]])\
+		local status = handle:read(\"*a\")\
+		downloadStatus = status\
+		handle:close()\
 	end\
 	\
-	if Settings.AnyoneCore.WarnForUpdates == nil then\
-		Settings.AnyoneCore.WarnForUpdates = true -- true is default\
-		Settings.AnyoneCore.WarnForUpdates = Settings.AnyoneCore.WarnForUpdates \
+	function download_files_noreading()\
+		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Write-Output 'Done. Please reload lua to get the changes.'; stop-process -Id $PID\"]])\
+	end\
+	\
+	if Settings.AnyoneCore.WarnForUpdate == nil then\
+		Settings.AnyoneCore.WarnForUpdate = false -- false is default\
+		Settings.AnyoneCore.WarnForUpdate = Settings.AnyoneCore.WarnForUpdate \
 	end\
 	\
 	--checks for updates on first run, have to press button to check again\
-	if Settings.AnyoneCore.WarnForUpdates == true and gitVersion == nil then\
-		checkForUpdate()\
-		d(\"[AnyoneCore] Checking for new update on startup.\")\
-		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-			TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to automatically update.\")\
-		else\
-			d(\"[AnyoneCore] - No updates available.\")\
+	function WarnForUpdate()\
+		if Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == false then\
+			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to update.\")\
+				d(\"[AnyoneCore] - New update available!\")\
+			else\
+				d(\"[AnyoneCore] - No updates available.\")\
+			end\
+		elseif Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == true then\
+			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions was automatically downloaded. {color:255, 255, 0}Just reload LUA to get the changes.\")\
+				cancelCheck = true\
+				d(\"[AnyoneCore] - New update was downloaded automatically.\")\
+			else\
+				d(\"[AnyoneCore] - No updates available.\")\
+			end\
 		end\
 	end\
 	\
-	if Settings.AnyoneCore.AutomaticUpdates == true  then\
+	if Settings.AnyoneCore.AutomaticUpdater == true then\
 		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-			download_files()\
+			download_files_noreading()\
 			TensorCore.sendParsedChatMessage(\"/e {color:255, 0, 0} The update to Anyone's reactions has been automatically downloaded. Simply Reload LUA to get it.\")\
 		end\
 	end\
@@ -73,9 +98,9 @@ local obj1 = {
 		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
 	end\
 	\
-	if Settings.AnyoneCore.AutomaticUpdates == nil then\
-		Settings.AnyoneCore.AutomaticUpdates = false -- true is default\
-		Settings.AnyoneCore.AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates \
+	if Settings.AnyoneCore.AutomaticUpdater == nil then\
+		Settings.AnyoneCore.AutomaticUpdater = false -- false is default\
+		Settings.AnyoneCore.AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater \
 	end\
 	\
 	if Settings.AnyoneCore.AlwaysMini == nil then\
@@ -317,8 +342,8 @@ local obj1 = {
 			DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro,\
 			NeverDash = Settings.AnyoneCore.NeverDash,\
 			AlwaysMini = Settings.AnyoneCore.AlwaysMini,\
-			WarnForUpdates = Settings.AnyoneCore.WarnForUpdates,\
-			AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates,\
+			WarnForUpdate = Settings.AnyoneCore.WarnForUpdate,\
+			AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -421,11 +446,11 @@ local obj1 = {
 		Settings.AnyoneCore.AlwaysMini = AnyoneCore.Settings.AlwaysMini\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini\
 		\
-		Settings.AnyoneCore.WarnForUpdates = AnyoneCore.Settings.WarnForUpdates\
-		Settings.AnyoneCore.WarnForUpdates = Settings.AnyoneCore.WarnForUpdates\
+		Settings.AnyoneCore.WarnForUpdate = AnyoneCore.Settings.WarnForUpdate\
+		Settings.AnyoneCore.WarnForUpdate = Settings.AnyoneCore.WarnForUpdate\
 		\
-		Settings.AnyoneCore.AutomaticUpdates = AnyoneCore.Settings.AutomaticUpdates\
-		Settings.AnyoneCore.AutomaticUpdates = Settings.AnyoneCore.AutomaticUpdates\
+		Settings.AnyoneCore.AutomaticUpdater = AnyoneCore.Settings.AutomaticUpdater\
+		Settings.AnyoneCore.AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater\
 	\
 		\
 		---start of value selectors\
@@ -517,12 +542,14 @@ local obj1 = {
 					GUI:Spacing( )\
 					GUI:Separator( )\
 					GUI:Spacing( )\
+					GUI:PushTextWrapPos(650)\
 					GUI:Text(changelog)\
+					GUI:PopTextWrapPos()\
 					GUI:PushItemWidth(500)\
 					if GUI:Button(\"Close\") then GUI:CloseCurrentPopup() end\
 					GUI:SameLine()\
 					local hovered = false\
-					if GUI:Button(\"Refresh\") then readChangelog() end\
+					if GUI:Button(\"Refresh\") then changelog = nil readChangelog() end\
 					if not hovered then hovered = GUI:IsItemHovered() end\
 					GUI:EndPopup()\
 					if hovered then\
@@ -538,9 +565,7 @@ local obj1 = {
 				if checkStatus ~= nil then\
 				GUI:SameLine()\
 				GUI:TextColored(0,1,0,1,checkStatus)\
-				if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
 				end\
-				\
 				\
 				if GUI:BeginPopupModal(\"Confirmation Window\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
 					GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
@@ -560,28 +585,31 @@ local obj1 = {
 				GUI:TextColored(0,1,0,1,downloadStatus)\
 				end\
 				\
+				if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
+				\
 				local hovered = false\
-				AnyoneCore.Settings.WarnForUpdates, changed = GUI:Checkbox(\"Warn me with a chat message if there's a new update\", AnyoneCore.Settings.WarnForUpdates)\
+				AnyoneCore.Settings.WarnForUpdate, changed = GUI:Checkbox(\"Automatically check for new updates\", AnyoneCore.Settings.WarnForUpdate)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
 					GUI:Text(\"Sends you a client-sided green colored chat message upon starting up if there's a new update available.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Turning this off will also disable the automatic version checking. You'll have to press the button to find the new version number.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Checks for a new update every 15 minutes.\\n\")\
+					GUI:TextColored(1,0,0,1,\"Be careful not to include your chat in any screenshots if you have this setting enabled.\\n\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
 				\
 				local hovered = false\
-				AnyoneCore.Settings.AutomaticUpdates, changed = GUI:Checkbox(\"Automatically download new updates when available\", AnyoneCore.Settings.AutomaticUpdates)\
+				AnyoneCore.Settings.AutomaticUpdater, changed = GUI:Checkbox(\"Automatically download new updates when available\", AnyoneCore.Settings.AutomaticUpdater)\
 				if changed then AnyoneCore.save() end\
 				if not hovered then hovered = GUI:IsItemHovered() end\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"If a new update is available, it will be automatically downloaded and applied. You'll just have to reload LUA to get it. Your current files will be backed up in LuaMods/TensorReactionsBackup.\\n\")\
-					GUI:TextColored(1,1,0,1,\"A red colored chat message will be sent to chat that a new update has been downloaded and tell you to reload LUA.\")\
+					GUI:Text(\"If a new update is available, it will be automatically downloaded and applied as soon as it's available. You'll just have to reload LUA to get it. Your current files will be backed up in LuaMods/TensorReactionsBackup.\\n\")\
+					GUI:TextColored(1,1,0,1,\"A green colored chat message will be sent to chat that a new update has been downloaded and tell you to reload LUA.\")\
 					GUI:TextColored(1,0,0,1,\"If you have personally edited reactions, then you NEED to rename the files. As long as they aren't the same name, they won't be replaced.\\n\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
@@ -1207,6 +1235,24 @@ local obj1 = {
 	gAnyoneCoreInitialize = true\
 end\
 \
+\
+if (AnyoneCore ~= nil) and (AnyoneCore.Settings.WarnForUpdate ~= nil) then \
+	if AnyoneCore.Settings.WarnForUpdate == true then \
+		if AnyoneCore.lastUpdateCheck == nil then \
+			AnyoneCore.lastUpdateCheck = Now() \
+			checkForUpdate() \
+		end \
+		if TimeSince(AnyoneCore.lastUpdateCheck) > 900000 and cancelCheck == false then \
+			d(\"[AnyoneCore] 15 minutes have elapsed, checking for a new update.\") \
+			AnyoneCore.lastUpdateCheck = Now() \
+			checkForUpdate() \
+		elseif TimeSince(AnyoneCore.lastUpdateCheck) > 600000 and cancelCheck == true then\
+			d(\"[AnyoneCore] A new update was previously downloaded for Anyone's reactions. You still have to reload LUA to get the changes.\") \
+			AnyoneCore.lastUpdateCheck = Now() \
+		end \
+	end \
+end \
+\
 self.eventConditionMismatch = true\
 self.used = true";
 		["executeType"] = 2;
@@ -1223,7 +1269,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "25c8709d-8604-3cdc-bb9b-4425b24b7356";
+		["uuid"] = "7205d87d-f52d-d5ae-b270-6ab3ff70babb";
 	};
 	[2] = {
 		["actions"] = {
@@ -1457,6 +1503,9 @@ self.eventConditionMismatch = true -- supress log";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 				};
@@ -1476,8 +1525,8 @@ self.eventConditionMismatch = true -- supress log";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -1495,6 +1544,9 @@ self.eventConditionMismatch = true -- supress log";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return IsControlOpen(\"_QTEMash\")";
 				["conditionType"] = 1;
@@ -1520,6 +1572,8 @@ self.eventConditionMismatch = true -- supress log";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -1540,9 +1594,9 @@ self.eventConditionMismatch = true -- supress log";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -1604,6 +1658,9 @@ self.eventConditionMismatch = true -- supress log";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -1626,8 +1683,8 @@ self.eventConditionMismatch = true -- supress log";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 5;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Enemy";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -1644,6 +1701,9 @@ self.eventConditionMismatch = true -- supress log";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 4;
 					[2] = 2;
@@ -1665,8 +1725,8 @@ self.eventConditionMismatch = true -- supress log";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -1683,6 +1743,9 @@ self.eventConditionMismatch = true -- supress log";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 6;
@@ -1704,8 +1767,8 @@ self.eventConditionMismatch = true -- supress log";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = true;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -1723,6 +1786,9 @@ self.eventConditionMismatch = true -- supress log";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "if not Player:GetTarget() then return true end\
 return false";
@@ -1749,6 +1815,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -1769,9 +1837,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -1786,6 +1854,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperTargeting == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -1811,6 +1882,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -1831,9 +1904,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -1848,6 +1921,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -1873,6 +1949,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -1893,9 +1971,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -1910,6 +1988,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local mytarget = Player:GetTarget()\
 local cinfo = Player.castinginfo \
@@ -1937,6 +2018,8 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -1957,9 +2040,9 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -1974,6 +2057,9 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.stopAutoTarget == nil and data.stopAutoTargetDupe == nil";
 				["conditionType"] = 1;
@@ -1999,6 +2085,8 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2019,9 +2107,9 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2036,6 +2124,9 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.stopCast ~= nil";
 				["conditionType"] = 1;
@@ -2061,6 +2152,8 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2081,9 +2174,9 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2123,6 +2216,9 @@ self.used = true";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 3;
@@ -2143,8 +2239,8 @@ self.used = true";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2162,6 +2258,9 @@ self.used = true";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 3;
@@ -2183,8 +2282,8 @@ self.used = true";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2202,6 +2301,9 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local StopCastingTable = {\
 --face away\
@@ -2246,6 +2348,8 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2266,9 +2370,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2283,6 +2387,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.stopAutoTarget ~= nil";
 				["conditionType"] = 1;
@@ -2308,6 +2415,8 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2328,9 +2437,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2345,6 +2454,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperTargeting == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -2370,6 +2482,8 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2390,9 +2504,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2407,6 +2521,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -2432,6 +2549,8 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2452,9 +2571,9 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2494,6 +2613,9 @@ self.used = true";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -2514,8 +2636,8 @@ self.used = true";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2534,6 +2656,9 @@ self.used = true";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 3;
 				};
@@ -2553,8 +2678,8 @@ self.used = true";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2572,6 +2697,9 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local ClearTargetTable = {\
 --stop cast and clear target\
@@ -2611,6 +2739,8 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2631,9 +2761,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2648,6 +2778,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperTargeting == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -2673,6 +2806,8 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2693,9 +2828,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2710,6 +2845,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return data.stopCast ~= nil";
 				["conditionType"] = 1;
@@ -2735,6 +2873,8 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2755,9 +2895,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2795,6 +2935,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -2818,8 +2961,8 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 19;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Event Entity";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2836,6 +2979,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 5;
@@ -2858,8 +3004,8 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 19;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Event Entity";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -2877,6 +3023,9 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local KnockbackTable = {\
 [9042] = true,\
@@ -2929,6 +3078,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -2949,9 +3100,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -2966,6 +3117,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -2991,6 +3145,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3011,9 +3167,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3028,6 +3184,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -3053,6 +3212,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3073,9 +3234,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3090,6 +3251,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -3115,6 +3279,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3135,9 +3301,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3152,6 +3318,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local KnockbackTable = {\
 [15786] = true,\
@@ -3188,6 +3357,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3208,9 +3379,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3225,6 +3396,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 6;
@@ -3250,6 +3424,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3270,9 +3446,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 19;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Event Entity";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3310,6 +3486,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -3332,8 +3511,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -3351,6 +3530,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local KnockbackTable = {\
 ---start of dungeon spell ids\
@@ -3430,6 +3612,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3450,9 +3634,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3467,6 +3651,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -3492,6 +3679,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3512,9 +3701,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3529,6 +3718,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -3554,6 +3746,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3574,9 +3768,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3591,6 +3785,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -3616,6 +3813,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -3636,9 +3835,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -3676,6 +3875,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -3698,8 +3900,8 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -3717,6 +3919,9 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local MitigationTable = {\
 ---start of dungeon spell ids\
@@ -3987,6 +4192,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4007,9 +4214,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4024,6 +4231,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -4049,6 +4259,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4069,9 +4281,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4086,6 +4298,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -4111,6 +4326,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4131,9 +4348,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4148,6 +4365,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -4173,6 +4393,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4193,9 +4415,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4233,6 +4455,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 10;
@@ -4256,8 +4481,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -4274,6 +4499,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -4296,8 +4524,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -4314,6 +4542,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -4337,8 +4568,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -4355,6 +4586,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -4379,8 +4613,8 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -4398,6 +4632,9 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local TankMitigationTable = {\
 --dungeons\
@@ -4578,6 +4815,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4598,9 +4837,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4615,6 +4854,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -4640,6 +4882,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4660,9 +4904,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4677,6 +4921,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -4702,6 +4949,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4722,9 +4971,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4739,6 +4988,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -4764,6 +5016,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4784,9 +5038,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4801,6 +5055,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -4826,6 +5083,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4846,9 +5105,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4863,6 +5122,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -4888,6 +5150,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4908,9 +5172,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4925,6 +5189,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -4950,6 +5217,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -4970,9 +5239,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -4987,6 +5256,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -5012,6 +5284,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -5032,9 +5306,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -5049,6 +5323,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 6;
@@ -5074,6 +5351,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 50;
 				["hpType"] = 1;
@@ -5094,9 +5373,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -5111,6 +5390,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local ReprisalMitigationTable = {\
 --dungeons\
@@ -5516,6 +5798,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -5536,9 +5820,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -5553,6 +5837,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 6;
@@ -5578,6 +5865,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -5598,9 +5887,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 19;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Event Entity";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -5615,6 +5904,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 4;
@@ -5640,6 +5932,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -5660,9 +5954,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -5700,6 +5994,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -5723,8 +6020,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5741,6 +6038,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -5762,8 +6062,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5780,6 +6080,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -5801,8 +6104,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5819,6 +6122,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -5841,8 +6147,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5859,6 +6165,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -5881,8 +6190,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5899,6 +6208,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -5921,8 +6233,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -5940,6 +6252,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -5965,6 +6280,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -5985,9 +6302,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6002,6 +6319,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -6027,6 +6347,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6047,9 +6369,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6064,6 +6386,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return table.size(EntityList(\"targetingme,maxdistance=5,aggressive\")) >= 4";
 				["conditionType"] = 1;
@@ -6089,6 +6414,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6109,9 +6436,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6126,6 +6453,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
@@ -6151,6 +6481,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6171,9 +6503,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6188,6 +6520,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 6;
@@ -6213,6 +6548,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 50;
 				["hpType"] = 1;
@@ -6233,9 +6570,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6250,6 +6587,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return table.size(EntityList(\"targetingme,maxdistance=5,aggressive\")) >= 8";
 				["conditionType"] = 1;
@@ -6275,6 +6615,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6295,9 +6637,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6312,6 +6654,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
 				["conditionType"] = 2;
@@ -6337,6 +6682,8 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6357,9 +6704,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6403,6 +6750,9 @@ end";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 5;
 					[2] = 1;
@@ -6425,8 +6775,8 @@ end";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -6443,6 +6793,9 @@ end";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -6465,8 +6818,8 @@ end";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 4;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Current Target";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -6489,6 +6842,9 @@ end";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 5;
 					[2] = 1;
@@ -6511,8 +6867,8 @@ end";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -6530,6 +6886,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
@@ -6555,6 +6914,8 @@ end";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6575,9 +6936,9 @@ end";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6592,6 +6953,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=15,mindistance=4\")) do\
 		if (ent ~= nil) then\
@@ -6625,6 +6989,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6645,9 +7011,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6662,6 +7028,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
@@ -6687,6 +7056,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6707,9 +7078,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6724,6 +7095,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "for _, ent in pairs(EntityList(\"aggro,targetable,attackable,maxdistance=3\")) do\
 		if (ent ~= nil) then\
@@ -6757,6 +7131,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6777,9 +7153,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6794,6 +7170,9 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return table.size(TensorCore.getEntityGroupList(\"Party\")) <= 4";
 				["conditionType"] = 1;
@@ -6819,6 +7198,8 @@ return false";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -6839,9 +7220,9 @@ return false";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -6938,6 +7319,9 @@ end";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
@@ -6958,8 +7342,8 @@ end";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 1;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -6977,6 +7361,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
@@ -7002,6 +7389,8 @@ end";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -7022,9 +7411,9 @@ end";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -7039,6 +7428,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true";
 				["conditionType"] = 1;
@@ -7064,6 +7456,8 @@ end";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -7084,9 +7478,9 @@ end";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -7124,6 +7518,9 @@ end";
 				["castPosX"] = 0;
 				["castPosY"] = 0;
 				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
@@ -7145,8 +7542,8 @@ end";
 				["stopMoving"] = false;
 				["targetContentID"] = -1;
 				["targetName"] = "";
-				["targetSubType"] = 1;
-				["targetType"] = 4;
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Current Target";
 				["untarget"] = false;
 				["useForWeaving"] = false;
 				["usePot"] = false;
@@ -7164,6 +7561,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909";
 				["conditionType"] = 7;
@@ -7189,6 +7589,8 @@ end";
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -7209,9 +7611,9 @@ end";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -7226,6 +7628,9 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "local spellCheck = {\
 [19367] = true,\
@@ -7257,6 +7662,8 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -7277,9 +7684,9 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -7294,6 +7701,9 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
 				["comparator"] = 1;
 				["conditionLua"] = "return AnyoneCore.Settings.NeverDash == false";
 				["conditionType"] = 1;
@@ -7319,6 +7729,8 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["eventTargetContentID"] = -1;
 				["eventTargetID"] = -1;
 				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
 				["gaugeIndex"] = 1;
 				["gaugeValue"] = 0;
 				["hpType"] = 1;
@@ -7339,9 +7751,9 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = 1;
-				["rangeCheckSourceSubType"] = 1;
-				["rangeCheckSourceType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
