@@ -16,11 +16,12 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.02,\
+		version = 3.04,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
 		checkStatus,\
+		changelog,\
 	}\
 	\
 	local LuaModsPath = GetLuaModsPath()\
@@ -28,6 +29,14 @@ local obj1 = {
 		local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Write-Output $versionCheck; stop-process -Id $PID\"]]) \
 		gitVersion = handle:read(\"*n\")\
 		handle:close()\
+	end\
+	\
+	function readChangelog()\
+		if changelog == nil then\
+			local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $changelog1 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].body; $changelog2 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[1].body; $changelog3 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[2].body; Write-Output $changelog1, $changelog2 $changelog3; stop-process -Id $PID\"]]) \
+			changelog = handle:read(\"*a\")\
+			handle:close()\
+		end\
 	end\
 \
 	function download_files()\
@@ -501,12 +510,21 @@ local obj1 = {
 				if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
 					GUI:TextColored(0,1,0,1,\"New version available! Click 'update' to automatically download the newest update.\")\
 				end\
-\
+				\
+				if GUI:BeginPopup(\"Changelog\", GUI.WindowFlags_NoCollapse) then\
+					GUI:Text(changelog)\
+					GUI:PushItemWidth(500)\
+					if GUI:Button(\"Close\") then GUI:CloseCurrentPopup() end\
+					GUI:EndPopup()\
+				end\
+				\
 				if GUI:Button(\"Check for updates\") then checkForUpdate() checkStatus = \"Done\" end ---\
 				if checkStatus ~= nil then\
 				GUI:SameLine()\
 				GUI:TextColored(0,1,0,1,checkStatus)\
+				if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
 				end\
+				\
 				\
 				if GUI:BeginPopupModal(\"ConfirmationWindow\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoMove + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
 					GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
@@ -1189,7 +1207,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e18cea95-2a36-ee82-9f30-6e78dcef013a";
+		["uuid"] = "307b8209-3c45-fe2f-b282-11ed4e2ebd68";
 	};
 	[2] = {
 		["actions"] = {
@@ -8124,7 +8142,6 @@ end";
 				["comparator"] = 1;
 				["conditionLua"] = "local spellCheck = {\
 [19367] = true,\
-[19456] = true,\
 [19465] = true,\
 }\
 \

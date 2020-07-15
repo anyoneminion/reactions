@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.02,\
+		version = 3.04,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1189,7 +1189,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e1408f6e-6b9b-0865-b1fe-2c9ad018a75d";
+		["uuid"] = "68602d7a-e5be-3c64-af3e-4541bad0e885";
 	};
 	[2] = {
 		["actions"] = {
@@ -5668,7 +5668,6 @@ end";
 				["comparator"] = 1;
 				["conditionLua"] = "local spellCheck = {\
 [19367] = true,\
-[19456] = true,\
 [19465] = true,\
 }\
 \
