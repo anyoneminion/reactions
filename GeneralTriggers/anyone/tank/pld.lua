@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.071,\
+		version = 3.072,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1269,7 +1269,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "edcaa1b5-419c-1fbc-84ec-7ab8c587de82";
+		["uuid"] = "c5797758-63dd-f995-92e9-461770bf6213";
 	};
 	[2] = {
 		["actions"] = {
