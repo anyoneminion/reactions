@@ -233,10 +233,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 10;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13887cff-b4ca-062c-a8f4-44f843f12303";
+			["uuid"] = "ce41f5cd-ef36-f8f0-9828-1d61b04b2c97";
 		};
 		[2] = {
 			["actions"] = {
@@ -297,10 +297,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 10;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "533c1519-2f30-9bf8-8193-58061a501ff1";
+			["uuid"] = "b70c968d-f254-d02c-a80e-8fdef88ebaec";
 		};
 	};
 	[13] = {
@@ -363,10 +363,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 13;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "290c5f87-af03-a055-a202-abd81b6e490b";
+			["uuid"] = "43794003-0cba-3e16-84dd-716c1d53f441";
 		};
 		[2] = {
 			["actions"] = {
@@ -427,10 +427,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 13;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "76ba4bad-e6f9-51be-b00e-80d856d31660";
+			["uuid"] = "2e3dc765-e49f-5845-9c9c-c4b73f80a694";
 		};
 	};
 	[17] = {
@@ -535,10 +535,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 18;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "f3135b7c-b923-4576-bb9f-9cb4fcc73c7a";
+			["uuid"] = "8c62a63b-e2ed-347c-bc8e-dfdc127460af";
 		};
 		[2] = {
 			["actions"] = {
@@ -599,10 +599,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 18;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4a54595f-09cf-3b04-9526-7d527cfc1d92";
+			["uuid"] = "441567ac-bc65-d5af-8d1c-8ec3b80c1ca0";
 		};
 	};
 	[20] = {
@@ -665,10 +665,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 20;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "faf0aac8-fc69-dc0e-9e6d-5873c559b9e5";
+			["uuid"] = "167d52c3-6d8d-3299-9fd6-b28a22285321";
 		};
 		[2] = {
 			["actions"] = {
@@ -729,10 +729,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 20;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e053af0b-65ae-bac6-9ab5-e3a7cf91fa0c";
+			["uuid"] = "2211f344-109f-f46b-b534-9f73916b5333";
 		};
 	};
 	[26] = {
@@ -879,10 +879,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 30;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a183d409-06ed-383c-ad49-1fb3ad154ed7";
+			["uuid"] = "e2ce712c-0a80-8913-94c9-12bf47d9a46a";
 		};
 		[2] = {
 			["actions"] = {
@@ -943,10 +943,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 30;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "a3e214be-af53-3f28-8489-480e8f5ae4b2";
+			["uuid"] = "abac13a9-dddb-de5a-9a3a-ccbbb50068fe";
 		};
 	};
 	[35] = {
@@ -8947,10 +8947,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 171;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "36db5e28-9fc2-94ae-a5af-5f99a538e6ea";
+			["uuid"] = "405c12f3-49e5-f7e4-8a71-1f2b9f3f78ff";
 		};
 		[2] = {
 			["actions"] = {
@@ -9011,10 +9011,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 171;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4c177cdb-7bcf-a38b-88ac-a71676584221";
+			["uuid"] = "31f47c2d-986a-b664-bcc1-2ae1e6ab29fd";
 		};
 	};
 	[173] = {
@@ -9637,10 +9637,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 181;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
+			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3f3e9ea0-2ed2-b011-8800-b03d971a3d86";
+			["uuid"] = "b6053ddd-8055-db79-88ac-8f2fdca9a12d";
 		};
 		[2] = {
 			["actions"] = {
@@ -9701,10 +9701,10 @@ self.used = true";
 			["timeRange"] = false;
 			["timelineIndex"] = 181;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 10;
+			["timerOffset"] = 6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8cd1e8e8-6e78-7afb-a5a4-133705a0c30d";
+			["uuid"] = "98b07ddd-f533-a53e-a6fd-1e03e4bce26a";
 		};
 	};
 	[183] = {

@@ -9,63 +9,54 @@ local obj1 = {
 		["conditions"] = {
 		};
 		["enabled"] = true;
-		["eventType"] = 1;
+		["eventType"] = 13;
 		["execute"] = "if not gAnyoneCoreInitialize then\
 	AnyoneCore = {\
 		enabled = true,\
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.072,\
+		version = 3.081,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
 		checkStatus,\
 		changelog,\
 		lastUpdateCheck,\
-		cancelCheck = false,\
+		lastStatusCheck,\
+		lastStatusCheck2,\
+		lastStatusCheck3,\
+		lastStatusCheck4,\
 	}\
 	\
 	local LuaModsPath = GetLuaModsPath()\
 	function checkForUpdate()\
 		local LuaModsPath = GetLuaModsPath()\
+		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\",\"w\"):close()\
 		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } };[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Value $versionCheck; stop-process -Id $PID\"]]) \
-		local file = io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\") \
-		local output = file:read() \
-		file:close() \
-		gitVersion = tonumber(output) \
-		if AnyoneCore.version < gitVersion then \
-			WarnForUpdate()\
-		elseif AnyoneCore.version >= gitVersion then\
-			d(\"[AnyoneCore] No updates available.\")\
-		end\
+		lastStatusCheck4 = true\
 	end\
 	\
 	function readChangelog()\
 		if changelog == nil then\
-			local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $changelog1 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].body; $changelog2 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[1].body; $changelog3 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[2].body; Write-Output $changelog1, $changelog2 $changelog3; stop-process -Id $PID\"]]) \
+			local handle = io.popen([[powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $changelog1 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].body; $changelog2 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[1].body; $changelog3 = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[2].body; Write-Output $changelog1 $changelog2 $changelog3; stop-process -Id $PID\"]]) \
 			changelog = handle:read(\"*a\")\
 			handle:close()\
 		end\
 	end\
-\
-	function download_files()\
-		local handle = io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Write-Output 'Done. Please reload lua to get the changes.'; stop-process -Id $PID\"]])\
-		local status = handle:read(\"*a\")\
-		downloadStatus = status\
-		handle:close()\
-	end\
 	\
 	function download_files_noreading()\
-		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Write-Output 'Done. Please reload lua to get the changes.'; stop-process -Id $PID\"]])\
+		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\",\"w\"):close()\
+		io.popen([[powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
+		lastStatusCheck2 = true\
 	end\
 	\
-	if Settings.AnyoneCore.WarnForUpdate == nil then\
-		Settings.AnyoneCore.WarnForUpdate = false -- false is default\
-		Settings.AnyoneCore.WarnForUpdate = Settings.AnyoneCore.WarnForUpdate \
+	function AnyoneCoreReload()\
+		gAnyoneCoreInitialize = false\
+		TensorCore.API.TensorReactions.reloadGeneralTriggers()\
+		TensorCore.API.TensorReactions.reloadTimelineTriggers()\
 	end\
 	\
-	--checks for updates on first run, have to press button to check again\
 	function WarnForUpdate()\
 		if Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == false then\
 			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
@@ -74,28 +65,21 @@ local obj1 = {
 			else\
 				d(\"[AnyoneCore] - No updates available.\")\
 			end\
-		elseif Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == true then\
-			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions was automatically downloaded. {color:255, 255, 0}Just reload LUA to get the changes.\")\
-				cancelCheck = true\
-				d(\"[AnyoneCore] - New update was downloaded automatically.\")\
-			else\
-				d(\"[AnyoneCore] - No updates available.\")\
-			end\
 		end\
 	end\
 	\
-	if Settings.AnyoneCore.AutomaticUpdater == true then\
-		if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-			download_files_noreading()\
-			TensorCore.sendParsedChatMessage(\"/e {color:255, 0, 0} The update to Anyone's reactions has been automatically downloaded. Simply Reload LUA to get it.\")\
-		end\
-	end\
-	\
-		--camera zoom value, not related to above code\
 	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true and (gDevHackMaxZoom ~= Settings.AnyoneCore.CameraZoomValue) then\
 		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
 		Hacks:SetCamMaxZoom(gDevHackMinZoom,gDevHackMaxZoom)\
+	end\
+	\
+	if Settings.AnyoneCore.AlwaysMini == true then\
+		ml_global_information.drawMode = 0\
+	end\
+	\
+	if Settings.AnyoneCore.WarnForUpdate == nil then\
+		Settings.AnyoneCore.WarnForUpdate = false -- false is default\
+		Settings.AnyoneCore.WarnForUpdate = Settings.AnyoneCore.WarnForUpdate \
 	end\
 	\
 	if Settings.AnyoneCore.AutomaticUpdater == nil then\
@@ -106,10 +90,6 @@ local obj1 = {
 	if Settings.AnyoneCore.AlwaysMini == nil then\
 		Settings.AnyoneCore.AlwaysMini = true -- true is default\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini \
-	end\
-\
-	if Settings.AnyoneCore.AlwaysMini == true then\
-		ml_global_information.drawMode = 0\
 	end\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -520,105 +500,172 @@ local obj1 = {
 			Settings.AnyoneCore.BadTeamDelay = Settings.AnyoneCore.BadTeamDelay\
 		end\
 	end\
-		\
-	AnyoneCore.main_tabs = GUI_CreateTabs(\" General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks \")\
-	function AnyoneCore.draw()\
-		if self.reference.enabled and AnyoneCore.enabled and AnyoneCore.open then\
-			GUI:SetNextWindowSize(650,350,GUI.SetCond_FirstUseEver)\
-			AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
-			if AnyoneCore.visible then\
-			local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs)\
-			if (tabname == \" General\") then\
-				GUI:Bullet()\
-				GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
-				GUI:Bullet()\
-				GUI:TextColored(1,1,0,1,\"Latest GitHub Release Version: \".. tostring(gitVersion))\
-				if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-					GUI:TextColored(0,1,0,1,\"New version available! Click 'update' to automatically download the newest update.\")\
+\
+    -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\" General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks \")\
+	\
+	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
+	d(\"Loaded AnyoneCore\")\
+	gAnyoneCoreInitialize = true\
+end\
+\
+\
+if (AnyoneCore ~= nil) then \
+	if AnyoneCore.Settings.WarnForUpdate == true then \
+		if AnyoneCore.lastUpdateCheck == nil then \
+			AnyoneCore.lastUpdateCheck = Now() \
+			checkForUpdate() \
+		end \
+		if TimeSince(AnyoneCore.lastUpdateCheck) > 900000 then \
+			d(\"[AnyoneCore] 15 minutes have elapsed, checking for a new update.\")\
+			AnyoneCore.lastUpdateCheck = Now()\
+			checkForUpdate()\
+		end \
+	end \
+	if lastStatusCheck == nil and lastStatusCheck2 == true then\
+		lastStatusCheck = Now()\
+	end\
+	if lastStatusCheck ~= nil and lastStatusCheck2 == true then\
+		if TimeSince(lastStatusCheck) > 5000 then\
+			local LuaModsPath = GetLuaModsPath()\
+			local file = io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\") \
+			local output = file:read() \
+			file:close() \
+			if output ~= nil then\
+				io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\",\"w\"):close()\
+				lastStatusCheck = nil\
+				lastStatusCheck2 = nil\
+				AnyoneCoreReload()\
+			elseif output == nil then\
+				lastStatusCheck = Now()\
+			end\
+		end\
+	end\
+	if lastStatusCheck3 == nil and lastStatusCheck4 == true then\
+		lastStatusCheck3 = Now()\
+	end\
+	if lastStatusCheck3 ~= nil and lastStatusCheck4 == true then\
+		if TimeSince(lastStatusCheck3) > 2000 then\
+			local LuaModsPath = GetLuaModsPath()\
+			local file = io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\") \
+			local output = file:read() \
+			file:close() \
+			if output ~= nil then\
+				gitVersion = tonumber(output) \
+				io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\",\"w\"):close()\
+				lastStatusCheck3 = nil\
+				lastStatusCheck4 = nil\
+				checkStatus = \"Done\"\
+				if AnyoneCore.version < gitVersion then \
+					WarnForUpdate()\
+				elseif AnyoneCore.version >= gitVersion then\
+					d(\"[AnyoneCore] No updates available.\")\
 				end\
-				\
-				if GUI:BeginPopup(\"Changelog\", GUI.WindowFlags_NoCollapse) then\
-					GUI:TextColored(1,1,0,1,\"Showing the last three updates.\")\
-					GUI:Spacing( )\
-					GUI:Separator( )\
-					GUI:Spacing( )\
-					GUI:PushTextWrapPos(650)\
-					GUI:Text(changelog)\
-					GUI:PopTextWrapPos()\
-					GUI:PushItemWidth(500)\
-					if GUI:Button(\"Close\") then GUI:CloseCurrentPopup() end\
-					GUI:SameLine()\
-					local hovered = false\
-					if GUI:Button(\"Refresh\") then changelog = nil readChangelog() end\
-					if not hovered then hovered = GUI:IsItemHovered() end\
-					GUI:EndPopup()\
-					if hovered then\
-						GUI:BeginTooltip()\
-						GUI:PushTextWrapPos(300)\
-						GUI:TextColored(1,1,0,1,\"Refreshes the change log. Don't spam this or you could get locked out of Github's API for an hour and be unable to update, check for updates, or read the changelog.\\n\")\
-						GUI:PopTextWrapPos()\
-						GUI:EndTooltip()\
-					end\
-				end\
-				\
-				if GUI:Button(\"Check for updates\") then checkForUpdate() checkStatus = \"Done\" end ---\
-				if checkStatus ~= nil then\
-				GUI:SameLine()\
-				GUI:TextColored(0,1,0,1,checkStatus)\
-				end\
-				\
-				if GUI:BeginPopupModal(\"Confirmation Window\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
-					GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
-					GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now.\")\
-					GUI:Text(\"A backup of your files will be created in\") GUI:SameLine() GUI:TextColored(1,1,0,1,\"LuaMods/TensorReactionsBackup.\") \
-					GUI:TextColored(0,1,0,1,\"Currently backed up files will be overwritten.\")\
-					GUI:PushItemWidth(200)\
-					if GUI:Button(\"Yes\") then download_files() GUI:CloseCurrentPopup() end \
-					GUI:SameLine()\
-					if GUI:Button(\"No\") then GUI:CloseCurrentPopup() end\
-					GUI:EndPopup()\
-				end\
-				\
-				if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"Confirmation Window\") end ---download_files()\
-				if downloadStatus ~= nil then\
-				GUI:SameLine()\
-				GUI:TextColored(0,1,0,1,downloadStatus)\
-				end\
-				\
-				if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.WarnForUpdate, changed = GUI:Checkbox(\"Automatically check for new updates\", AnyoneCore.Settings.WarnForUpdate)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sends you a client-sided green colored chat message upon starting up if there's a new update available.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Checks for a new update every 15 minutes.\\n\")\
-					GUI:TextColored(1,0,0,1,\"Be careful not to include your chat in any screenshots if you have this setting enabled.\\n\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AutomaticUpdater, changed = GUI:Checkbox(\"Automatically download new updates when available\", AnyoneCore.Settings.AutomaticUpdater)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"If a new update is available, it will be automatically downloaded and applied as soon as it's available. You'll just have to reload LUA to get it. Your current files will be backed up in LuaMods/TensorReactionsBackup.\\n\")\
-					GUI:TextColored(1,1,0,1,\"A green colored chat message will be sent to chat that a new update has been downloaded and tell you to reload LUA.\")\
-					GUI:TextColored(1,0,0,1,\"If you have personally edited reactions, then you NEED to rename the files. As long as they aren't the same name, they won't be replaced.\\n\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				GUI:Spacing( )\
-				GUI:Separator( )\
-				GUI:Spacing( )\
-				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 or Player.job == 35 then\
+			elseif output == nil then\
+				lastStatusCheck3 = Now()\
+			end	\
+		end\
+	end\
+end\
+\
+\
+function AnyoneCore.draw()\
+    if AnyoneCore.enabled and AnyoneCore.open then\
+        GUI:SetNextWindowSize(650,365,GUI.SetCond_FirstUseEver)\
+        AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
+        if AnyoneCore.visible then\
+        local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs) \
+        if (tabname == \" General\") then\
+            GUI:Bullet()\
+            GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
+            GUI:Bullet()\
+            GUI:TextColored(1,1,0,1,\"Latest GitHub Release Version: \".. tostring(gitVersion))\
+            if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
+                GUI:TextColored(0,1,0,1,\"New version available! Click 'update' to automatically download the newest update.\")\
+            end\
+            \
+            if GUI:BeginPopup(\"Changelog\", GUI.WindowFlags_NoCollapse) then\
+                GUI:TextColored(1,1,0,1,\"Showing the last three updates.\")\
+                GUI:Spacing( )\
+                GUI:Separator( )\
+                GUI:Spacing( )\
+                GUI:PushTextWrapPos(650)\
+                GUI:Text(changelog)\
+                GUI:PopTextWrapPos()\
+                GUI:PushItemWidth(500)\
+                if GUI:Button(\"Close\") then GUI:CloseCurrentPopup() end\
+                GUI:SameLine()\
+                local hovered = false\
+                if GUI:Button(\"Refresh\") then changelog = nil readChangelog() end\
+                if not hovered then hovered = GUI:IsItemHovered() end\
+                GUI:EndPopup()\
+                if hovered then\
+                    GUI:BeginTooltip()\
+                    GUI:PushTextWrapPos(300)\
+                    GUI:TextColored(1,1,0,1,\"Refreshes the change log. Don't spam this or you could get locked out of Github's API for an hour and be unable to update, check for updates, or read the changelog.\\n\")\
+                    GUI:PopTextWrapPos()\
+                    GUI:EndTooltip()\
+                end\
+            end\
+            \
+            if GUI:Button(\"Check for updates\") then checkForUpdate() end ---\
+            if checkStatus ~= nil then\
+            GUI:SameLine()\
+            GUI:TextColored(0,1,0,1,checkStatus)\
+            end\
+            \
+            if GUI:BeginPopupModal(\"Confirmation Window\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
+                GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
+                GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now.\")\
+                GUI:Text(\"A backup of your files will be created in\") GUI:SameLine() GUI:TextColored(1,1,0,1,\"LuaMods/TensorReactionsBackup.\") \
+                GUI:TextColored(0,1,0,1,\"Currently backed up files will be overwritten.\")\
+                GUI:PushItemWidth(200)\
+                if GUI:Button(\"Yes\") then download_files_noreading() downloadStatus = \"Wait...\" GUI:CloseCurrentPopup() end \
+                GUI:SameLine()\
+                if GUI:Button(\"No\") then GUI:CloseCurrentPopup() end\
+                GUI:EndPopup()\
+            end\
+            \
+            if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"Confirmation Window\") end ---download_files()\
+            if downloadStatus ~= nil then\
+            GUI:SameLine()\
+            GUI:TextColored(0,1,0,1,downloadStatus)\
+            end\
+            \
+            if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.WarnForUpdate, changed = GUI:Checkbox(\"Automatically check for new updates\", AnyoneCore.Settings.WarnForUpdate)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Sends you a client-sided green colored chat message upon starting up if there's a new update available.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Checks for a new update every 15 minutes.\\n\")\
+                GUI:TextColored(1,0,0,1,\"Be careful not to include your chat in any screenshots if you have this setting enabled.\\n\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.AutomaticUpdater, changed = GUI:Checkbox(\"Automatically download new updates when available\", AnyoneCore.Settings.AutomaticUpdater)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"If a new update is available, it will be automatically downloaded and applied as soon as it's available. Your current files will be backed up in LuaMods/TensorReactionsBackup.\\n\")\
+                GUI:TextColored(1,1,0,1,\"A green colored chat message will be sent to chat that a new update has been downloaded.\")\
+                GUI:TextColored(1,0,0,1,\"If you have personally edited reactions, then you NEED to rename the files. As long as they aren't the same name, they won't be replaced.\\n\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            GUI:Spacing( )\
+            GUI:Separator( )\
+            GUI:Spacing( )\
+            if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 or Player.job == 35 then\
 				local hovered = false\
 				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneCore.Settings.PrepullHelper)\
 				if changed then AnyoneCore.save() end\
@@ -635,18 +682,18 @@ local obj1 = {
 				GUI:SameLine()\
 				if AnyoneCore.Settings.PrepullHelper == true then\
 				if (Player.job == 23 or Player.job == 31) and AnyoneCore.Settings.PrepullHelper == true then\
-				local hovered = false\
-				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables the use of Peloton during prepull helper.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end			\
+					local hovered = false\
+					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Enables the use of Peloton during prepull helper.\\n\")\
+						GUI:TextColored(1,1,0,1,\"Could turn it off if you feel like your team thinks you're too dumb to be using peloton in prepull. LUL\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end			\
 				end ---end of job check\
 				if (Player.job ~= 23 and Player.job ~= 31) then\
 					GUI:NewLine()\
@@ -672,10 +719,10 @@ local obj1 = {
 				GUI:Spacing( )\
 				end\
 \
-				end ---end of prepullhelper enabled check\
+            end ---end of prepullhelper enabled check\
 \
-				\
-				if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
+            \
+            if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneCore.Settings.UseSprint, changed = GUI:Checkbox(\"Use Sprint\", AnyoneCore.Settings.UseSprint)\
 				if changed then AnyoneCore.save() end\
@@ -688,9 +735,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-				if Player.job == 1 then\
+            end\
+            \
+            if Player.job == 1 then\
 				local hovered = false\
 				AnyoneCore.Settings.JobCheck, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.JobCheck)\
 				if changed then AnyoneCore.save() end\
@@ -703,9 +750,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-				if Player.job == 34 or Player.job == 38 then \
+            end\
+            \
+            if Player.job == 34 or Player.job == 38 then \
 				local hovered = false\
 				AnyoneCore.Settings.UseMoogleTTS, changed = GUI:Checkbox(\"Remind me to use Meditate/Improv\", AnyoneCore.Settings.UseMoogleTTS)\
 				if changed then AnyoneCore.save() end\
@@ -719,202 +766,202 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AlwaysMini, changed = GUI:Checkbox(\"Always change bot menu to mini mode on startup\", AnyoneCore.Settings.AlwaysMini)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"This is referring to the bot menu where you enable and disable assist. Enabling this means that on startup, that menu will always be put into the small version that you get when you press the arrow in the top right corner. \\n\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-			elseif (tabname == \"Argus\") then\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"e5s - Draw Stormcloud AoE radius\", AnyoneCore.Settings.DrawClouds)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle on the floor to show you the area where you'll get hit by the Chaos Strikes to cleanse lightning debuffs.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"Bugs out badly if clouds combine.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"e5s - Draw Chain Lightning AoE size\", AnyoneCore.Settings.DrawChainLightning)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle around whoever has the Electrified debuff in e5s. Technically the AoE comes from the person it's passed to, but the circle should give you an idea of how far away you should be.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				local hovered = false\
-				AnyoneCore.Settings.DrawOccludedFrontOrbs, changed = GUI:Checkbox(\"e6s - Draw Occluded Front orb explosions\", AnyoneCore.Settings.DrawOccludedFrontOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws a circle around the orbs that spawn after Occluded Front during Garuda and Garuda/Ifrit phase.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"Standing in the safe spot is not enough to be safe still unfortunately, you still need to make sure you won't be knocked into the orb.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.AlwaysMini, changed = GUI:Checkbox(\"Always change bot menu to mini mode on startup\", AnyoneCore.Settings.AlwaysMini)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"This is referring to the bot menu where you enable and disable assist. Enabling this means that on startup, that menu will always be put into the small version that you get when you press the arrow in the top right corner. \\n\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+        elseif (tabname == \"Argus\") then\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"e5s - Draw Stormcloud AoE radius\", AnyoneCore.Settings.DrawClouds)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws a circle on the floor to show you the area where you'll get hit by the Chaos Strikes to cleanse lightning debuffs.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:TextColored(1,0,0,1,\"Bugs out badly if clouds combine.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DrawChainLightning, changed = GUI:Checkbox(\"e5s - Draw Chain Lightning AoE size\", AnyoneCore.Settings.DrawChainLightning)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws a circle around whoever has the Electrified debuff in e5s. Technically the AoE comes from the person it's passed to, but the circle should give you an idea of how far away you should be.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            local hovered = false\
+            AnyoneCore.Settings.DrawOccludedFrontOrbs, changed = GUI:Checkbox(\"e6s - Draw Occluded Front orb explosions\", AnyoneCore.Settings.DrawOccludedFrontOrbs)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws a circle around the orbs that spawn after Occluded Front during Garuda and Garuda/Ifrit phase.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:TextColored(1,0,0,1,\"Standing in the safe spot is not enough to be safe still unfortunately, you still need to make sure you won't be knocked into the orb.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
 \
-				local hovered = false\
-				AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"e7s - Draw black/white orbs\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:TextColored(1,0,0,1,\"EXPERIMENTAL, NOT GUARANTEED TO WORK.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
+            local hovered = false\
+            AnyoneCore.Settings.DrawBlackWhiteOrbs, changed = GUI:Checkbox(\"e7s - Draw black/white orbs\", AnyoneCore.Settings.DrawBlackWhiteOrbs)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws the explosion radius of the orbs during tornado in e7s.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:TextColored(1,0,0,1,\"EXPERIMENTAL, NOT GUARANTEED TO WORK.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
 \
-				local hovered = false\
-				AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"e8s - Draw dragon heads\", AnyoneCore.Settings.DrawDragonHeads)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the dragon heads during Wyrm's Lament in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"e8s - Draw Light Rampant Orbs\", AnyoneCore.Settings.DrawOrbs)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Draws the explosion radius of the orbs during Light's Rampant in e8s.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
+            local hovered = false\
+            AnyoneCore.Settings.DrawDragonHeads, changed = GUI:Checkbox(\"e8s - Draw dragon heads\", AnyoneCore.Settings.DrawDragonHeads)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws the explosion radius of the dragon heads during Wyrm's Lament in e8s.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DrawOrbs, changed = GUI:Checkbox(\"e8s - Draw Light Rampant Orbs\", AnyoneCore.Settings.DrawOrbs)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Draws the explosion radius of the orbs during Light's Rampant in e8s.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
 \
-				local hovered = false\
-				AnyoneCore.Settings.DrawNaelQuotes, changed = GUI:Checkbox(\"UCoB - All drawing mechanics\", AnyoneCore.Settings.DrawNaelQuotes)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Toggles all of the draws in UCoB, there's like 40 so there's only this one option. Draws EVERY Nael Quote, Earthshaker Cones, twisters/twisting dives and people with Thunderstruck debuff.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-			elseif (tabname == \"Fight Specific\") then\
-				local changed = false\
-				\
-				---GUI:Text(\"			e5s settings\")\
-				---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
-				GUI:Spacing( )\
-				GUI:Indent( )\
-				GUI:Text(\"e6s settings\")\
-				GUI:Unindent( )\
-				local hovered = false\
-				AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses rdps mitigation before Strike Spark.\")\
-					GUI:TextColored(1,1,0,1,\"Sometimes teams will choose to go north for Strike Spark for the sake of melee uptime. Since there's a lot of outgoing damage here, it's usually a good idea to use rdps mitigations. So enable this to throw out tactician/shield samba/troubador before strike spark.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				---else\
-				---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
-				\
-				end ---end bard/mch/dnc job check\
-				GUI:Spacing( )\
-				GUI:Indent( )\
-				GUI:Text(\"e7s settings\")\
-				GUI:Unindent( )\
-				local hovered = false\
-				AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Away With Thee safe strat\", AnyoneCore.Settings.DisableAssist)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Disables minion's assist function slightly before Away With Thee teleports go out. Allows you to position yourself correctly without getting mispositioned by a skill usage.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Alternatively, you can use LMB + RMB + S and then wiggle your camera while facing the correct direction. This will result in much better uptime. Test this on a striking dummy first to get the feel for it.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds phase potion\", AnyoneCore.Settings.AddsPhasePot)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Uses pot during adds phase in e7s immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
-					GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				GUI:Spacing( )\
-				GUI:Indent( )\
-				GUI:Text(\"e8s settings\")\
-				GUI:Unindent( )\
-				local hovered = false\
-				AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback mirrors uptime strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors aka Reflected Wings. Will allow you to nullify both knockbacks.\\n\")\
-					GUI:TextColored(1,1,0,1,\"If you're getting knocked back still, check the read me for more information on how to modify the timing based on your needs.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost uptime strat\", AnyoneCore.Settings.DiamondFrostUptime)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Automatically uses Arm's Length or Surecast during Diamond Frost. \\n\")\
-					GUI:TextColored(1,1,0,1,\"Definitely do not have this enabled if you're not doing this strat.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
+            local hovered = false\
+            AnyoneCore.Settings.DrawNaelQuotes, changed = GUI:Checkbox(\"UCoB - All drawing mechanics\", AnyoneCore.Settings.DrawNaelQuotes)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Toggles all of the draws in UCoB, there's like 40 so there's only this one option. Draws EVERY Nael Quote, Earthshaker Cones, twisters/twisting dives and people with Thunderstruck debuff.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+        elseif (tabname == \"Fight Specific\") then\
+            local changed = false\
+            \
+            ---GUI:Text(\"			e5s settings\")\
+            ---GUI:Text(\"Currently don't have any settings for e5s.\\n\")\
+            if Player.job == 31 or Player.job == 23 or Player.job == 38 then ---brd/mch/dnc\
+            GUI:Spacing( )\
+            GUI:Indent( )\
+            GUI:Text(\"e6s settings\")\
+            GUI:Unindent( )\
+            local hovered = false\
+            AnyoneCore.Settings.NorthStratMitigation, changed = GUI:Checkbox(\"Mitigate Strike Spark\", AnyoneCore.Settings.NorthStratMitigation)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Uses rdps mitigation before Strike Spark.\")\
+                GUI:TextColored(1,1,0,1,\"Sometimes teams will choose to go north for Strike Spark for the sake of melee uptime. Since there's a lot of outgoing damage here, it's usually a good idea to use rdps mitigations. So enable this to throw out tactician/shield samba/troubador before strike spark.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            ---else\
+            ---GUI:Text(\"Current job doesn't have any settings for e6s.\\n\")\
+            \
+            end ---end bard/mch/dnc job check\
+            GUI:Spacing( )\
+            GUI:Indent( )\
+            GUI:Text(\"e7s settings\")\
+            GUI:Unindent( )\
+            local hovered = false\
+            AnyoneCore.Settings.DisableAssist, changed = GUI:Checkbox(\"Away With Thee safe strat\", AnyoneCore.Settings.DisableAssist)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Disables minion's assist function slightly before Away With Thee teleports go out. Allows you to position yourself correctly without getting mispositioned by a skill usage.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Alternatively, you can use LMB + RMB + S and then wiggle your camera while facing the correct direction. This will result in much better uptime. Test this on a striking dummy first to get the feel for it.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.AddsPhasePot, changed = GUI:Checkbox(\"Adds phase potion\", AnyoneCore.Settings.AddsPhasePot)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Uses pot during adds phase in e7s immediately after Away With Thee teleport ends. This will allow you to get in a 3rd pot usage if your kill time is over 9 minutes and 30 seconds long.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Only matters if you're playing machinist, it's disabled otherwise. If your kill time is shorter than 9 minutes and 30 seconds, turn this off.\")\
+                GUI:TextColored(1,1,0,1,\"Potions still need to be turned on with your quick toggles at the start of the fight for this to work.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            GUI:Spacing( )\
+            GUI:Indent( )\
+            GUI:Text(\"e8s settings\")\
+            GUI:Unindent( )\
+            local hovered = false\
+            AnyoneCore.Settings.KnockbackMirrorUptime, changed = GUI:Checkbox(\"Knockback mirrors uptime strat\", AnyoneCore.Settings.KnockbackMirrorUptime)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Automatically uses Arm's Length or Surecast during knockback mirrors aka Reflected Wings. Will allow you to nullify both knockbacks.\\n\")\
+                GUI:TextColored(1,1,0,1,\"If you're getting knocked back still, check the read me for more information on how to modify the timing based on your needs.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost uptime strat\", AnyoneCore.Settings.DiamondFrostUptime)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Automatically uses Arm's Length or Surecast during Diamond Frost. \\n\")\
+                GUI:TextColored(1,1,0,1,\"Definitely do not have this enabled if you're not doing this strat.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            if Player.job == 31 or Player.job == 23 or Player.job == 38 then\
 				local hovered = false\
 				AnyoneCore.Settings.LeftSide, changed = GUI:Checkbox(\"Left side adds\", AnyoneCore.Settings.LeftSide)\
 				if changed then AnyoneCore.save() end\
@@ -929,25 +976,25 @@ local obj1 = {
 				end\
 				GUI:SameLine()\
 				if AnyoneCore.Settings.LeftSide == true then\
-				local hovered = false\
-				AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt the second Earthen Aether instead\", AnyoneCore.Settings.InterruptSecondAdd)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"If checked, reactions will interrupt the second Earthen Aether instead of the first. Unchecked, it will interrupt the first.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only matters if you're on left side.\")\
-					GUI:TextColored(2,2,0,2,\"Only matters if you're machinist or bard, it's disabled otherwise.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
+					local hovered = false\
+					AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt the second Earthen Aether instead\", AnyoneCore.Settings.InterruptSecondAdd)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"If checked, reactions will interrupt the second Earthen Aether instead of the first. Unchecked, it will interrupt the first.\\n\")\
+						GUI:TextColored(1,1,0,1,\"Only matters if you're on left side.\")\
+						GUI:TextColored(2,2,0,2,\"Only matters if you're machinist or bard, it's disabled otherwise.\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
 				end -- end of left side check\
-				end -- end of brd/mch/dnc job check\
-				\
-			elseif (tabname == \"Job Specific\") then\
-				if Player.job == 31 then -- check for machinist\
-				\
+            end -- end of brd/mch/dnc job check\
+            \
+        elseif (tabname == \"Job Specific\") then\
+            if Player.job == 31 then -- check for machinist\
+            \
 				GUI:Indent( )\
 				GUI:Text(\"Machinist settings\")\
 				GUI:Unindent( )\
@@ -1017,11 +1064,11 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end -- end of machinist job check\
+            end -- end of machinist job check\
 \
-				\
-				\
-				if Player.job == 34 then -- check for samurai\
+            \
+            \
+            if Player.job == 34 then -- check for samurai\
 				GUI:Indent( )\
 				GUI:Text(\"Samurai settings\")\
 				GUI:Unindent( )\
@@ -1050,9 +1097,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end -- end of samurai job check\
-				\
-				if Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for samurai\
+            end -- end of samurai job check\
+            \
+            if Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for samurai\
 				GUI:Indent( )\
 				GUI:Text(\"Tank Settings\")\
 				GUI:Unindent( )\
@@ -1068,54 +1115,54 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-				if Player.job ~= 31 and Player.job ~= 34 and Player.job == 21 and Player.job == 19 and Player.job == 32 and Player.job == 37  then\
-				GUI:Text(\"No settings for current job.\")\
-				end\
-			\
-			elseif (tabname == \"Duty Helper\") then\
-			\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelper, changed = GUI:Checkbox(\"Enable Duty Helper\", AnyoneCore.Settings.DutyHelper)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables a multitude of features that help in dungeons. Automatic usage of mitigation like Tactician and Troubador. Automatic usage of Arm's Length, and Head Graze.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Not meant to be turned on for fights that have a timeline. The features will likely interfere with each other. Any features after this one won't work unless this setting is enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperTargeting, changed = GUI:Checkbox(\"Always target something\", AnyoneCore.Settings.DutyHelperTargeting)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with retargeting the boss or mobs in a dungeon. If you don't have a current target, while in combat and bot is enabled, then target nearest monster.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation usage\", AnyoneCore.Settings.DutyHelperMitigation)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Enables spells like tactician/troubador/shield samba to be used alongside Duty Helper to mitigate incoming damage.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				if Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
+            end\
+            \
+            if Player.job ~= 31 and Player.job ~= 34 and Player.job == 21 and Player.job == 19 and Player.job == 32 and Player.job == 37  then\
+            GUI:Text(\"No settings for current job.\")\
+            end\
+        \
+        elseif (tabname == \"Duty Helper\") then\
+        \
+            local hovered = false\
+            AnyoneCore.Settings.DutyHelper, changed = GUI:Checkbox(\"Enable Duty Helper\", AnyoneCore.Settings.DutyHelper)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Enables a multitude of features that help in dungeons. Automatic usage of mitigation like Tactician and Troubador. Automatic usage of Arm's Length, and Head Graze.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Not meant to be turned on for fights that have a timeline. The features will likely interfere with each other. Any features after this one won't work unless this setting is enabled.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DutyHelperTargeting, changed = GUI:Checkbox(\"Always target something\", AnyoneCore.Settings.DutyHelperTargeting)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Helps with retargeting the boss or mobs in a dungeon. If you don't have a current target, while in combat and bot is enabled, then target nearest monster.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DutyHelperMitigation, changed = GUI:Checkbox(\"Mitigation usage\", AnyoneCore.Settings.DutyHelperMitigation)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Enables spells like tactician/troubador/shield samba to be used alongside Duty Helper to mitigate incoming damage.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            if Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperGrabAggro, changed = GUI:Checkbox(\"Aggro management in dungeons\", AnyoneCore.Settings.DutyHelperGrabAggro)\
 				if changed then AnyoneCore.save() end\
@@ -1128,9 +1175,9 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-				if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
+            end\
+            \
+            if Player.job == 31 or Player.job == 23 or Player.job == 38 or Player.job == 32 or Player.job == 37 or Player.job == 19 or Player.job == 21 then\
 				local hovered = false\
 				AnyoneCore.Settings.DutyHelperInterrupt, changed = GUI:Checkbox(\"Automatically interrupt casts\", AnyoneCore.Settings.DutyHelperInterrupt)\
 				if changed then AnyoneCore.save() end\
@@ -1143,67 +1190,67 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end --end of job check\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.DutyHelperKnockback, changed = GUI:Checkbox(\"Use anti-knockback spells\", AnyoneCore.Settings.DutyHelperKnockback)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Interrupts stuff that is interruptable in duties.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-			\
-			elseif (tabname == \"Hacks \") then\
-			\
-			\
-			if AnyoneCore.Settings.UnderstandDanger == false then\
-				local hovered = false\
-				AnyoneCore.Settings.UnderstandDanger, changed = GUI:Checkbox(\"I understand that these options are dangerous to use and can get me banned\", AnyoneCore.Settings.UnderstandDanger)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:TextColored(1,0,0,1,\"These options will not get you automatically banned from Square Enix's detection FOR NOW, but getting caught with speed hacks is an extreme possibility if someone records you moving slightly faster than normal. IT HAS HAPPENED IN THE PAST AND THE PERSON WAS POSTED ALL OVER REDDIT AND THE BALANCE DISCORD. The zoom hacks can't be seen by other people but if you post screenshots, videos or stream your gameplay, then it can be fairly obvious you are zoomed out more than normally allowed.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				elseif AnyoneCore.Settings.UnderstandDanger == true then\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Automatically set speed hacks\", AnyoneCore.Settings.AutoSetSpeedHacks)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Sets your character speed to 7 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15 percent faster walking speed.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
-					GUI:TextColored(1,0,0,1,\"Changing the speed is safe detection-wise FOR NOW, but someone can report you. It could be especially dangerous if someone spots you running slightly faster than the rest of the group and saves a video of you doing so. In that case, it is dangerous to use, so use at your own discretion.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				\
-				local hovered = false\
-				AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Automatically set max camera zoom on startup\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
-				if changed then AnyoneCore.save() end\
-				if not hovered then hovered = GUI:IsItemHovered() end\
-				if hovered then\
-					GUI:BeginTooltip()\
-					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20). Value can be changed with the input box.\\n\")\
-					GUI:TextColored(1,1,0,1,\"Reload lua after enabling. Disable and reload lua to change it back.\")\
-					GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
-					GUI:PopTextWrapPos()\
-					GUI:EndTooltip()\
-				end\
-				if AnyoneCore.Settings.AutoSetMaxCameraZoom == true then\
+            end --end of job check\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.DutyHelperKnockback, changed = GUI:Checkbox(\"Use anti-knockback spells\", AnyoneCore.Settings.DutyHelperKnockback)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Interrupts stuff that is interruptable in duties.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Works regardless of timelines. Duty Helper must be enabled.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+        \
+        elseif (tabname == \"Hacks \") then\
+        \
+        \
+        if AnyoneCore.Settings.UnderstandDanger == false then\
+            local hovered = false\
+            AnyoneCore.Settings.UnderstandDanger, changed = GUI:Checkbox(\"I understand that these options are dangerous to use and can get me banned\", AnyoneCore.Settings.UnderstandDanger)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:TextColored(1,0,0,1,\"These options will not get you automatically banned from Square Enix's detection FOR NOW, but getting caught with speed hacks is an extreme possibility if someone records you moving slightly faster than normal. IT HAS HAPPENED IN THE PAST AND THE PERSON WAS POSTED ALL OVER REDDIT AND THE BALANCE DISCORD. The zoom hacks can't be seen by other people but if you post screenshots, videos or stream your gameplay, then it can be fairly obvious you are zoomed out more than normally allowed.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            elseif AnyoneCore.Settings.UnderstandDanger == true then\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.AutoSetSpeedHacks, changed = GUI:Checkbox(\"Automatically set speed hacks\", AnyoneCore.Settings.AutoSetSpeedHacks)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Sets your character speed to 7 (default is 6.0) at the start of a fight. Changes it back upon wiping. Approximately 15 percent faster walking speed.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Only works if you're using one of my timelines for e5s through e8s.\")\
+                GUI:TextColored(1,0,0,1,\"Changing the speed is safe detection-wise FOR NOW, but someone can report you. It could be especially dangerous if someone spots you running slightly faster than the rest of the group and saves a video of you doing so. In that case, it is dangerous to use, so use at your own discretion.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            \
+            local hovered = false\
+            AnyoneCore.Settings.AutoSetMaxCameraZoom, changed = GUI:Checkbox(\"Automatically set max camera zoom on startup\", AnyoneCore.Settings.AutoSetMaxCameraZoom)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Changes your maximum camera zoom to 35 upon attaching bot (default is 20). Value can be changed with the input box.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Reload lua after enabling. Disable and reload lua to change it back.\")\
+                GUI:TextColored(1,0,0,1,\"Absolutely do not use this while streaming. Be careful taking screenshots too. It is very noticable that your camera is zoomed out more than normal.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+            if AnyoneCore.Settings.AutoSetMaxCameraZoom == true then\
 				GUI:SameLine()\
 				local hovered = false\
 				GUI:PushItemWidth(70)\
@@ -1219,39 +1266,16 @@ local obj1 = {
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				end\
-				\
-			end\
-			end -- end of tabs\
-			end\
-			GUI:End()\
-		end\
-	end\
-\
-	-- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
-	RegisterEventHandler(\"Gameloop.Draw\", AnyoneCore.draw, \"AnyoneCore\")\
-	d(\"Loaded AnyoneCore\")\
-	gAnyoneCoreInitialize = true\
+            end\
+            \
+        end\
+        end -- end of tabs\
+        end\
+        GUI:End()\
+    end\
 end\
 \
-\
-if (AnyoneCore ~= nil) and (AnyoneCore.Settings.WarnForUpdate ~= nil) then \
-	if AnyoneCore.Settings.WarnForUpdate == true then \
-		if AnyoneCore.lastUpdateCheck == nil then \
-			AnyoneCore.lastUpdateCheck = Now() \
-			checkForUpdate() \
-		end \
-		if TimeSince(AnyoneCore.lastUpdateCheck) > 900000 and cancelCheck == false then \
-			d(\"[AnyoneCore] 15 minutes have elapsed, checking for a new update.\") \
-			AnyoneCore.lastUpdateCheck = Now() \
-			checkForUpdate() \
-		elseif TimeSince(AnyoneCore.lastUpdateCheck) > 600000 and cancelCheck == true then\
-			d(\"[AnyoneCore] A new update was previously downloaded for Anyone's reactions. You still have to reload LUA to get the changes.\") \
-			AnyoneCore.lastUpdateCheck = Now() \
-		end \
-	end \
-end \
+AnyoneCore.draw()\
 \
 self.eventConditionMismatch = true\
 self.used = true";
@@ -1269,7 +1293,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e26d01cb-0ae0-e315-a79d-36a221e47fda";
+		["uuid"] = "62ba77d8-47fa-24b9-845c-653a64ce2c8f";
 	};
 	[2] = {
 		["actions"] = {
