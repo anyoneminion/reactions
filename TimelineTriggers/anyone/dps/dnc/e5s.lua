@@ -2154,7 +2154,7 @@ self.used = true";
 					["aType"] = 4;
 					["actionID"] = -1;
 					["actionLua"] = "SallyDNC.SkillSettings.Devilment.enabled = true\
-SallyDNC.SkillSettings.Flourish.enabled = false\
+SallyDNC.SkillSettings.Flourish.enabled = true\
 self.used = true";
 					["allowInterrupt"] = false;
 					["atomicPriority"] = false;

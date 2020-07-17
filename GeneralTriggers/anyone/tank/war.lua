@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.092,\
+		version = 3.093,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -198,7 +198,7 @@ local obj1 = {
 		local CurrentTimeline = TensorCore.API.TensorReactions.getTimelineTriggerProfileName()\
 		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
 		if Settings.AnyoneCore.CheckJob == true then\
-			if CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid] then\
+			if (CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid]) and (AnyoneCore.timelineTable[Player.job][Player.localmapid] ~= nil) then\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
 				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
@@ -1452,7 +1452,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "db52bcaf-0216-a9ad-a209-b064f4982467";
+		["uuid"] = "10f2cb01-815d-de60-9ce8-c9c57fd1878e";
 	};
 	[2] = {
 		["actions"] = {
@@ -2091,123 +2091,15 @@ end";
 	};
 	[6] = {
 		["actions"] = {
-			[1] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "JobCheck()\
-self.used = true\
-";
-				["allowInterrupt"] = false;
-				["atomicPriority"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["conditions"] = {
-					[1] = 1;
-				};
-				["endIfUsed"] = false;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = "Nearest";
-				["targetType"] = "Self";
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
 		};
 		["conditions"] = {
-			[1] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 4;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 1;
-				["conditionLua"] = "return Player.localmapid == 906 or Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 777 or Player.localmapid == 887\
-";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = "Nearest";
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
 		};
 		["enabled"] = true;
 		["eventType"] = 11;
-		["execute"] = "";
-		["executeType"] = 1;
+		["execute"] = "JobCheck()\
+self.used = true\
+self.eventConditionMismatch = true";
+		["executeType"] = 2;
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
@@ -2221,7 +2113,7 @@ self.used = true\
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "be2cf6a2-9325-d259-b7ce-ceedee63375a";
+		["uuid"] = "da80ddc6-c356-f5b4-ac84-318f19461548";
 	};
 	[7] = {
 		["actions"] = {
