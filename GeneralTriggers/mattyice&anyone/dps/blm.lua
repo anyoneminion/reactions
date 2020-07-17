@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.09,\
+		version = 3.091,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -190,11 +190,9 @@ local obj1 = {
 		local CurrentTimeline = TensorCore.API.TensorReactions.getTimelineTriggerProfileName()\
 		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
 		if Settings.AnyoneCore.CheckJob == true then\
-			if Player.localmapid == AnyoneCore.timelineTable[Player.job] then\
-				if CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid] then\
-					TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
-					d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
-				end\
+			if CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid] then\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
+				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 			if CurrentGeneral ~= AnyoneCore.generalTable[Player.job] then\
 				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect general trigger profile selected for current job!\")\
@@ -1446,7 +1444,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "f21cc685-c93b-2db8-97c1-af1f2cab2da0";
+		["uuid"] = "f97939fb-7749-41bd-8a97-e2a009600c49";
 	};
 	[2] = {
 		["actions"] = {
