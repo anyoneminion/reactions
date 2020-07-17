@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.093,\
+		version = 3.094,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -423,6 +423,11 @@ local obj1 = {
 		Settings.AnyoneCore.DutyHelperGrabAggro = Settings.AnyoneCore.DutyHelperGrabAggro \
 	end\
 	\
+	if Settings.AnyoneCore.DrawYaten == nil then\
+		Settings.AnyoneCore.DrawYaten = true -- true is default\
+		Settings.AnyoneCore.DrawYaten = Settings.AnyoneCore.DrawYaten \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -466,6 +471,7 @@ local obj1 = {
 			WarnForUpdate = Settings.AnyoneCore.WarnForUpdate,\
 			AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater,\
 			CheckJob = Settings.AnyoneCore.CheckJob,\
+			DrawYaten = Settings.AnyoneCore.DrawYaten,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -576,6 +582,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.CheckJob = AnyoneCore.Settings.CheckJob\
 		Settings.AnyoneCore.CheckJob = Settings.AnyoneCore.CheckJob\
+		\
+		Settings.AnyoneCore.DrawYaten = AnyoneCore.Settings.DrawYaten\
+		Settings.AnyoneCore.DrawYaten = Settings.AnyoneCore.DrawYaten\
 	\
 		\
 		---start of value selectors\
@@ -1033,6 +1042,21 @@ function AnyoneCore.draw()\
                 GUI:PopTextWrapPos()\
                 GUI:EndTooltip()\
             end\
+			\
+			if Player.job == 34 then\
+				local hovered = false\
+				AnyoneCore.Settings.DrawYaten, changed = GUI:Checkbox(\"SAM - Draw Yaten distance\", AnyoneCore.Settings.DrawYaten)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"If Yaten is enabled on the ACR, Argus will draw the distance behind you that Yaten will backstep.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Does nothing if Argus is not purchased.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+			end\
             \
         elseif (tabname == \"Fight Specific\") then\
             local changed = false\
@@ -1452,7 +1476,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "984ddcd5-d324-10b5-9cbb-fd0fb9f24e31";
+		["uuid"] = "274008f4-4aca-19d9-b137-add2bda9938b";
 	};
 	[2] = {
 		["actions"] = {
