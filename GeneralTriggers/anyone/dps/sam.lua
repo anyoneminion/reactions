@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.081,\
+		version = 3.09,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -60,10 +60,144 @@ local obj1 = {
 	function WarnForUpdate()\
 		if Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == false then\
 			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to update.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to update.\")\
 				d(\"[AnyoneCore] - New update available!\")\
 			else\
 				d(\"[AnyoneCore] - No updates available.\")\
+			end\
+		end\
+	end\
+	\
+	\
+		AnyoneCore.timelineTable = {\
+			[31] = { -- machinist\
+				[906] = \"anyone\\\\dps\\\\mch\\\\e5s\", -- edens verse\
+				[907] = \"anyone\\\\dps\\\\mch\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\mch\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\mch\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\mch\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"rikudou\\\\mch\\\\tea\", -- tea\
+			},\
+			[23] = { -- bard\
+				[906] = \"anyone\\\\dps\\\\brd\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\brd\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\brd\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\brd\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\brd\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[38] = { -- dancer\
+				[906] = \"anyone\\\\dps\\\\dnc\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\dnc\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\dnc\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\dnc\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[27] = { -- summoner\
+				[906] = \"anyone\\\\dps\\\\smn\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\smn\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\smn\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\smn\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\smn\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\smn\\\\tea\", -- tea\
+			},\
+			[34] = { -- samurai\
+				[906] = \"anyone\\\\dps\\\\sam\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\sam\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\sam\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\sam\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\sam\\\\tea\", -- tea\
+			},\
+			[25] = { -- black mage\
+				[906] = \"mattyice&anyone\\\\dps\\\\blm\\\\e5s\", --edens verse\
+				[907] = \"mattyice&anyone\\\\dps\\\\blm\\\\e6s\",\
+				[908] = \"mattyice&anyone\\\\dps\\\\blm\\\\e7s\",\
+				[909] = \"mattyice&anyone\\\\dps\\\\blm\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[35] = { -- red mage\
+				[906] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e5s\", --edens verse\
+				[907] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e6s\",\
+				[908] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e7s\",\
+				[909] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[32] = { -- dark knight\
+				[906] = \"anyone\\\\dps\\\\drk\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\drk\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\drk\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\drk\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[21] = { -- warrior\
+				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[19] = { -- paladin\
+				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[37] = { -- gunbreaker\
+				[906] = \"anyone\\\\dps\\\\gnb\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\gnb\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\gnb\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\gnb\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+		}\
+		\
+		AnyoneCore.generalTable = {\
+			[31] = \"anyone\\\\dps\\\\mch\", --machinist\
+			[23] = \"anyone\\\\dps\\\\brd\", -- bard\
+			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
+			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
+			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
+			[25] = \"anyone\\\\dps\\\\blm\", -- black mage\
+			[35] = \"anyone\\\\dps\\\\rdm\", -- red mage\
+			[32] = \"anyone\\\\dps\\\\drk\", -- dark knight\
+			[21] = \"anyone\\\\dps\\\\war\", -- warrior\
+			[19] = \"anyone\\\\dps\\\\pld\", -- paladin\
+			[37] = \"anyone\\\\dps\\\\gnb\", -- gunbreaker\
+		}\
+	\
+	function JobCheck()\
+		local CurrentTimeline = TensorCore.API.TensorReactions.getTimelineTriggerProfileName()\
+		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
+		if Settings.AnyoneCore.CheckJob == true then\
+			if Player.localmapid == AnyoneCore.timelineTable[Player.job] then\
+				if CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid] then\
+					TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
+					d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
+				end\
+			end\
+			if CurrentGeneral ~= AnyoneCore.generalTable[Player.job] then\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect general trigger profile selected for current job!\")\
+				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 		end\
 	end\
@@ -90,6 +224,11 @@ local obj1 = {
 	if Settings.AnyoneCore.AlwaysMini == nil then\
 		Settings.AnyoneCore.AlwaysMini = true -- true is default\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini \
+	end\
+\
+	if Settings.AnyoneCore.CheckJob == nil then\
+		Settings.AnyoneCore.CheckJob = true -- true is default\
+		Settings.AnyoneCore.CheckJob = Settings.AnyoneCore.CheckJob \
 	end\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -165,11 +304,6 @@ local obj1 = {
 	if Settings.AnyoneCore.UnderstandDanger == nil then\
 		Settings.AnyoneCore.UnderstandDanger = false -- false is default\
 		Settings.AnyoneCore.UnderstandDanger = Settings.AnyoneCore.UnderstandDanger \
-	end\
-	\
-	if Settings.AnyoneCore.JobCheck == nil then\
-		Settings.AnyoneCore.JobCheck = false -- false is default\
-		Settings.AnyoneCore.JobCheck = Settings.AnyoneCore.JobCheck \
 	end\
 	\
 	if Settings.AnyoneCore.e5sQueenGauge == nil then\
@@ -324,6 +458,7 @@ local obj1 = {
 			AlwaysMini = Settings.AnyoneCore.AlwaysMini,\
 			WarnForUpdate = Settings.AnyoneCore.WarnForUpdate,\
 			AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater,\
+			CheckJob = Settings.AnyoneCore.CheckJob,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -431,6 +566,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.AutomaticUpdater = AnyoneCore.Settings.AutomaticUpdater\
 		Settings.AnyoneCore.AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater\
+		\
+		Settings.AnyoneCore.CheckJob = AnyoneCore.Settings.CheckJob\
+		Settings.AnyoneCore.CheckJob = Settings.AnyoneCore.CheckJob\
 	\
 		\
 		---start of value selectors\
@@ -766,6 +904,20 @@ function AnyoneCore.draw()\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+            end\
+			\
+			local hovered = false\
+            AnyoneCore.Settings.CheckJob, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.CheckJob)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Everytime you change map or wipe to a boss fight, AnyoneCore will check if you're currently loaded on the wrong profile for both General and Timeline triggers.\\n\")\
+				GUI:TextColored(1,1,0,1,\"If you're on the wrong profile, a yellow colored message will be sent to chat warning you about it.\")\
+				GUI:TextColored(0,1,0,1,\"If you use your own personal timeline or general triggers profile, I'd recommend turning this setting off since it'll go off.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
             end\
             \
             local hovered = false\
@@ -1293,7 +1445,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "93b61296-cb1c-4565-8976-f4321e9fbcaa";
+		["uuid"] = "ca14e17f-d085-b32b-93a9-04d1dbed7d25";
 	};
 	[2] = {
 		["actions"] = {
@@ -1320,6 +1472,371 @@ self.used = true";
 		["uuid"] = "fccac419-3418-e879-b90a-01f67509e931";
 	};
 	[3] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "ACR_TensorWeeb_Hotbar_ArmsLength = false\
+ACR_TensorWeeb_Hotbar_SecondWind = false\
+ACR_TensorWeeb_Hotbar_Gyoten = false\
+ACR_TensorWeeb_Hotbar_Yaten = false\
+ACR_TensorWeeb_Hotbar_ThirdEye = false\
+ACR_TensorWeeb_Hotbar_Feint = false\
+ACR_TensorWeeb_Hotbar_Potion = false\
+ACR_TensorWeeb_Hotbar_Sprint = false\
+ACR_TensorWeeb_Hotbar_LegSweep = false\
+ACR_TensorWeeb_Hotbar_Bloodbath = false\
+ACR_TensorWeeb_Hotbar_LimitBreak = false\
+ACR_TensorWeeb_Hotbar_LockFace = false\
+\
+ACR_TensorWeeb_CD = true\
+ACR_TensorWeeb_AOE = false\
+ACR_TensorWeeb_SmartAOE = false\
+ACR_TensorWeeb_DoTs = true \
+ACR_TensorWeeb_BurnKenki = false\
+ACR_TensorWeeb_HoldKenki = false\
+ACR_TensorWeeb_HoldSen = false\
+ACR_TensorWeeb_ThirdEye = true\
+ACR_TensorWeeb_Fillers = true\
+ACR_TensorWeeb_TrueNorth = true\
+ACR_TensorWeeb_MeikyoShisui = true\
+ACR_TensorWeeb_Senei = true\
+ACR_TensorWeeb_Jumps = true \
+ACR_TensorWeeb_Omni = false\
+\
+Player:ClearTarget()\
+\
+JobCheck()\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+ACR_TensorWeeb_Potion = true\
+end\
+self.used = true\
+\
+";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
+SallySAM.HotBarConfig.Bloodbath.enabled = true\
+SallySAM.HotBarConfig.Feint.enabled = true\
+SallySAM.HotBarConfig.Gyoten.enabled = true\
+SallySAM.HotBarConfig.Hagakure.enabled = true\
+SallySAM.HotBarConfig.Kaiten.enabled = true\
+SallySAM.HotBarConfig.LB.enabled = true\
+SallySAM.HotBarConfig.LegSweep.enabled = true\
+SallySAM.HotBarConfig.Meditate.enabled = true\
+SallySAM.HotBarConfig.Meikyo.enabled = true\
+SallySAM.HotBarConfig.Potion.enabled = true\
+SallySAM.HotBarConfig.SecondWind.enabled = true\
+SallySAM.HotBarConfig.Sprint.enabled = true\
+SallySAM.HotBarConfig.ThirdEye.enabled = true\
+SallySAM.HotBarConfig.TrueNorth.enabled = true\
+SallySAM.HotBarConfig.Yaten.enabled = true\
+\
+if AnyoneCore.Settings.NeverEnpi == false then\
+SallySAM.SkillSettings.Enpi.enabled = false\
+end\
+SallySAM.SkillSettings.Guren.enabled = true\
+SallySAM.SkillSettings.Hagakure.enabled = true\
+SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.Ikishoten.enabled = true\
+SallySAM.SkillSettings.Kaiten.enabled = true\
+SallySAM.SkillSettings.Kyuten.enabled = true\
+SallySAM.SkillSettings.Meikyo.enabled = true\
+SallySAM.SkillSettings.Omni.enabled = false\
+SallySAM.SkillSettings.Opener.enabled = true\
+SallySAM.resetOpener()\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+SallySAM.SkillSettings.Senei.enabled = true\
+SallySAM.SkillSettings.Shinten.enabled = true\
+SallySAM.SkillSettings.Shoha.enabled = true\
+SallySAM.SkillSettings.SmartTrueNorth.enabled = true\
+SallySAM.SkillSettings.Tsubame.enabled = true\
+SallySAM.SkillSettings.UseAOE.enabled = true\
+\
+JobCheck()\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallySAM.SkillSettings.Potion.enabled = true\
+end\
+self.used = true\
+\
+";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 2;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
+";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
+";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 9;
+		["execute"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
+SallySAM.HotBarConfig.Bloodbath.enabled = true\
+SallySAM.HotBarConfig.Feint.enabled = true\
+SallySAM.HotBarConfig.Gyoten.enabled = true\
+SallySAM.HotBarConfig.Hagakure.enabled = true\
+SallySAM.HotBarConfig.Kaiten.enabled = true\
+SallySAM.HotBarConfig.LB.enabled = true\
+SallySAM.HotBarConfig.LegSweep.enabled = true\
+SallySAM.HotBarConfig.Meditate.enabled = true\
+SallySAM.HotBarConfig.Meikyo.enabled = true\
+SallySAM.HotBarConfig.Potion.enabled = true\
+SallySAM.HotBarConfig.SecondWind.enabled = true\
+SallySAM.HotBarConfig.Sprint.enabled = true\
+SallySAM.HotBarConfig.ThirdEye.enabled = true\
+SallySAM.HotBarConfig.TrueNorth.enabled = true\
+SallySAM.HotBarConfig.Yaten.enabled = true\
+\
+if AnyoneCore.Settings.NeverEnpi == false then\
+SallySAM.SkillSettings.Enpi.enabled = false\
+end\
+SallySAM.SkillSettings.Guren.enabled = true\
+SallySAM.SkillSettings.Hagakure.enabled = true\
+SallySAM.SkillSettings.Higanbana.enabled = true\
+SallySAM.SkillSettings.Ikishoten.enabled = true\
+SallySAM.SkillSettings.Kaiten.enabled = true\
+SallySAM.SkillSettings.Kyuten.enabled = true\
+SallySAM.SkillSettings.Meikyo.enabled = true\
+SallySAM.SkillSettings.Omni.enabled = false\
+SallySAM.SkillSettings.Opener.enabled = true\
+SallySAM.resetOpener()\
+SallySAM.SkillSettings.SaveCD.enabled = false\
+SallySAM.SkillSettings.Senei.enabled = true\
+SallySAM.SkillSettings.Shinten.enabled = true\
+SallySAM.SkillSettings.Shoha.enabled = true\
+SallySAM.SkillSettings.SmartTrueNorth.enabled = true\
+SallySAM.SkillSettings.Tsubame.enabled = true\
+SallySAM.SkillSettings.UseAOE.enabled = true\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+SallySAM.SkillSettings.Potion.enabled = true\
+end\
+self.used = true\
+\
+";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Reset Hotbars/QT on Wipe";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "988f24bc-c22b-a456-b8df-eb36ab571ec2";
+	};
+	[4] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -1603,367 +2120,6 @@ self.used = true";
 		["timerStartOffset"] = 0;
 		["used"] = false;
 		["uuid"] = "cc74ea10-a699-6b85-aad2-b42ee8108e5b";
-	};
-	[4] = {
-		["actions"] = {
-			[1] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "ACR_TensorWeeb_Hotbar_ArmsLength = false\
-ACR_TensorWeeb_Hotbar_SecondWind = false\
-ACR_TensorWeeb_Hotbar_Gyoten = false\
-ACR_TensorWeeb_Hotbar_Yaten = false\
-ACR_TensorWeeb_Hotbar_ThirdEye = false\
-ACR_TensorWeeb_Hotbar_Feint = false\
-ACR_TensorWeeb_Hotbar_Potion = false\
-ACR_TensorWeeb_Hotbar_Sprint = false\
-ACR_TensorWeeb_Hotbar_LegSweep = false\
-ACR_TensorWeeb_Hotbar_Bloodbath = false\
-ACR_TensorWeeb_Hotbar_LimitBreak = false\
-ACR_TensorWeeb_Hotbar_LockFace = false\
-\
-ACR_TensorWeeb_CD = true\
-ACR_TensorWeeb_AOE = false\
-ACR_TensorWeeb_SmartAOE = false\
-ACR_TensorWeeb_DoTs = true \
-ACR_TensorWeeb_BurnKenki = false\
-ACR_TensorWeeb_HoldKenki = false\
-ACR_TensorWeeb_HoldSen = false\
-ACR_TensorWeeb_ThirdEye = true\
-ACR_TensorWeeb_Fillers = true\
-ACR_TensorWeeb_TrueNorth = true\
-ACR_TensorWeeb_MeikyoShisui = true\
-ACR_TensorWeeb_Senei = true\
-ACR_TensorWeeb_Jumps = true \
-ACR_TensorWeeb_Omni = false\
-\
-Player:ClearTarget()\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-ACR_TensorWeeb_Potion = true\
-end\
-self.used = true\
-\
-";
-				["allowInterrupt"] = false;
-				["atomicPriority"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["conditions"] = {
-					[1] = 1;
-				};
-				["endIfUsed"] = true;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = "Nearest";
-				["targetType"] = "Self";
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-			[2] = {
-				["aType"] = 4;
-				["actionID"] = -1;
-				["actionLua"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
-SallySAM.HotBarConfig.Bloodbath.enabled = true\
-SallySAM.HotBarConfig.Feint.enabled = true\
-SallySAM.HotBarConfig.Gyoten.enabled = true\
-SallySAM.HotBarConfig.Hagakure.enabled = true\
-SallySAM.HotBarConfig.Kaiten.enabled = true\
-SallySAM.HotBarConfig.LB.enabled = true\
-SallySAM.HotBarConfig.LegSweep.enabled = true\
-SallySAM.HotBarConfig.Meditate.enabled = true\
-SallySAM.HotBarConfig.Meikyo.enabled = true\
-SallySAM.HotBarConfig.Potion.enabled = true\
-SallySAM.HotBarConfig.SecondWind.enabled = true\
-SallySAM.HotBarConfig.Sprint.enabled = true\
-SallySAM.HotBarConfig.ThirdEye.enabled = true\
-SallySAM.HotBarConfig.TrueNorth.enabled = true\
-SallySAM.HotBarConfig.Yaten.enabled = true\
-\
-if AnyoneCore.Settings.NeverEnpi == false then\
-SallySAM.SkillSettings.Enpi.enabled = false\
-end\
-SallySAM.SkillSettings.Guren.enabled = true\
-SallySAM.SkillSettings.Hagakure.enabled = true\
-SallySAM.SkillSettings.Higanbana.enabled = true\
-SallySAM.SkillSettings.Ikishoten.enabled = true\
-SallySAM.SkillSettings.Kaiten.enabled = true\
-SallySAM.SkillSettings.Kyuten.enabled = true\
-SallySAM.SkillSettings.Meikyo.enabled = true\
-SallySAM.SkillSettings.Omni.enabled = false\
-SallySAM.SkillSettings.Opener.enabled = true\
-SallySAM.resetOpener()\
-SallySAM.SkillSettings.SaveCD.enabled = false\
-SallySAM.SkillSettings.Senei.enabled = true\
-SallySAM.SkillSettings.Shinten.enabled = true\
-SallySAM.SkillSettings.Shoha.enabled = true\
-SallySAM.SkillSettings.SmartTrueNorth.enabled = true\
-SallySAM.SkillSettings.Tsubame.enabled = true\
-SallySAM.SkillSettings.UseAOE.enabled = true\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallySAM.SkillSettings.Potion.enabled = true\
-end\
-self.used = true\
-\
-";
-				["allowInterrupt"] = false;
-				["atomicPriority"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["conditions"] = {
-					[1] = 2;
-				};
-				["endIfUsed"] = true;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = false;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = "Nearest";
-				["targetType"] = "Self";
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
-		["conditions"] = {
-			[1] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 4;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 1;
-				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[2] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 4;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 1;
-				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-				["conditionType"] = 1;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-		};
-		["enabled"] = true;
-		["eventType"] = 9;
-		["execute"] = "SallySAM.HotBarConfig.Armslength.enabled = true\
-SallySAM.HotBarConfig.Bloodbath.enabled = true\
-SallySAM.HotBarConfig.Feint.enabled = true\
-SallySAM.HotBarConfig.Gyoten.enabled = true\
-SallySAM.HotBarConfig.Hagakure.enabled = true\
-SallySAM.HotBarConfig.Kaiten.enabled = true\
-SallySAM.HotBarConfig.LB.enabled = true\
-SallySAM.HotBarConfig.LegSweep.enabled = true\
-SallySAM.HotBarConfig.Meditate.enabled = true\
-SallySAM.HotBarConfig.Meikyo.enabled = true\
-SallySAM.HotBarConfig.Potion.enabled = true\
-SallySAM.HotBarConfig.SecondWind.enabled = true\
-SallySAM.HotBarConfig.Sprint.enabled = true\
-SallySAM.HotBarConfig.ThirdEye.enabled = true\
-SallySAM.HotBarConfig.TrueNorth.enabled = true\
-SallySAM.HotBarConfig.Yaten.enabled = true\
-\
-if AnyoneCore.Settings.NeverEnpi == false then\
-SallySAM.SkillSettings.Enpi.enabled = false\
-end\
-SallySAM.SkillSettings.Guren.enabled = true\
-SallySAM.SkillSettings.Hagakure.enabled = true\
-SallySAM.SkillSettings.Higanbana.enabled = true\
-SallySAM.SkillSettings.Ikishoten.enabled = true\
-SallySAM.SkillSettings.Kaiten.enabled = true\
-SallySAM.SkillSettings.Kyuten.enabled = true\
-SallySAM.SkillSettings.Meikyo.enabled = true\
-SallySAM.SkillSettings.Omni.enabled = false\
-SallySAM.SkillSettings.Opener.enabled = true\
-SallySAM.resetOpener()\
-SallySAM.SkillSettings.SaveCD.enabled = false\
-SallySAM.SkillSettings.Senei.enabled = true\
-SallySAM.SkillSettings.Shinten.enabled = true\
-SallySAM.SkillSettings.Shoha.enabled = true\
-SallySAM.SkillSettings.SmartTrueNorth.enabled = true\
-SallySAM.SkillSettings.Tsubame.enabled = true\
-SallySAM.SkillSettings.UseAOE.enabled = true\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-SallySAM.SkillSettings.Potion.enabled = true\
-end\
-self.used = true\
-\
-";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "Reset Hotbars/QT on Wipe";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "988f24bc-c22b-a456-b8df-eb36ab571ec2";
 	};
 	[5] = {
 		["actions"] = {
@@ -2357,15 +2513,9 @@ self.eventConditionMismatch = true\
 		};
 		["enabled"] = true;
 		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 34 then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Samurai{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
-		elseif Player.job == 34 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		end\
-end\
-self.used = true";
+		["execute"] = "AnyoneCore.JobCheck()\
+self.used = true\
+";
 		["executeType"] = 2;
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
@@ -2380,7 +2530,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "038eca88-f53a-c148-8d14-3e9636efaba7";
+		["uuid"] = "32e4b994-1d3a-d69e-a14c-1250bb284441";
 	};
 	[8] = {
 		["actions"] = {
@@ -2503,7 +2653,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -2511,7 +2661,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2568,7 +2718,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -2576,7 +2726,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2699,7 +2849,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -2707,7 +2857,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -2764,7 +2914,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -2772,7 +2922,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;

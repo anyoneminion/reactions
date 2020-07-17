@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.081,\
+		version = 3.09,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -60,10 +60,144 @@ local obj1 = {
 	function WarnForUpdate()\
 		if Settings.AnyoneCore.WarnForUpdate == true and Settings.AnyoneCore.AutomaticUpdater == false then\
 			if gitVersion ~= nil and (AnyoneCore.version < gitVersion) then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to update.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] A new update to Anyone's reactions is available to download. Open AnyoneCore in your FFXIVMinion menu to update.\")\
 				d(\"[AnyoneCore] - New update available!\")\
 			else\
 				d(\"[AnyoneCore] - No updates available.\")\
+			end\
+		end\
+	end\
+	\
+	\
+		AnyoneCore.timelineTable = {\
+			[31] = { -- machinist\
+				[906] = \"anyone\\\\dps\\\\mch\\\\e5s\", -- edens verse\
+				[907] = \"anyone\\\\dps\\\\mch\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\mch\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\mch\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\mch\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"rikudou\\\\mch\\\\tea\", -- tea\
+			},\
+			[23] = { -- bard\
+				[906] = \"anyone\\\\dps\\\\brd\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\brd\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\brd\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\brd\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\brd\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[38] = { -- dancer\
+				[906] = \"anyone\\\\dps\\\\dnc\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\dnc\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\dnc\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\dnc\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[27] = { -- summoner\
+				[906] = \"anyone\\\\dps\\\\smn\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\smn\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\smn\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\smn\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\smn\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\smn\\\\tea\", -- tea\
+			},\
+			[34] = { -- samurai\
+				[906] = \"anyone\\\\dps\\\\sam\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\sam\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\sam\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\sam\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\sam\\\\tea\", -- tea\
+			},\
+			[25] = { -- black mage\
+				[906] = \"mattyice&anyone\\\\dps\\\\blm\\\\e5s\", --edens verse\
+				[907] = \"mattyice&anyone\\\\dps\\\\blm\\\\e6s\",\
+				[908] = \"mattyice&anyone\\\\dps\\\\blm\\\\e7s\",\
+				[909] = \"mattyice&anyone\\\\dps\\\\blm\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[35] = { -- red mage\
+				[906] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e5s\", --edens verse\
+				[907] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e6s\",\
+				[908] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e7s\",\
+				[909] = \"mattyice&anyone\\\\dps\\\\rdm\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[32] = { -- dark knight\
+				[906] = \"anyone\\\\dps\\\\drk\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\drk\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\drk\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\drk\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[21] = { -- warrior\
+				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[19] = { -- paladin\
+				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+			[37] = { -- gunbreaker\
+				[906] = \"anyone\\\\dps\\\\gnb\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\gnb\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\gnb\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\gnb\\\\e8s\",\
+				[733] = nil, -- ucob\
+				[777] = nil, -- uwu\
+				[887] = nil, -- tea\
+			},\
+		}\
+		\
+		AnyoneCore.generalTable = {\
+			[31] = \"anyone\\\\dps\\\\mch\", --machinist\
+			[23] = \"anyone\\\\dps\\\\brd\", -- bard\
+			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
+			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
+			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
+			[25] = \"anyone\\\\dps\\\\blm\", -- black mage\
+			[35] = \"anyone\\\\dps\\\\rdm\", -- red mage\
+			[32] = \"anyone\\\\dps\\\\drk\", -- dark knight\
+			[21] = \"anyone\\\\dps\\\\war\", -- warrior\
+			[19] = \"anyone\\\\dps\\\\pld\", -- paladin\
+			[37] = \"anyone\\\\dps\\\\gnb\", -- gunbreaker\
+		}\
+	\
+	function JobCheck()\
+		local CurrentTimeline = TensorCore.API.TensorReactions.getTimelineTriggerProfileName()\
+		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
+		if Settings.AnyoneCore.CheckJob == true then\
+			if Player.localmapid == AnyoneCore.timelineTable[Player.job] then\
+				if CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid] then\
+					TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
+					d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
+				end\
+			end\
+			if CurrentGeneral ~= AnyoneCore.generalTable[Player.job] then\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect general trigger profile selected for current job!\")\
+				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 		end\
 	end\
@@ -90,6 +224,11 @@ local obj1 = {
 	if Settings.AnyoneCore.AlwaysMini == nil then\
 		Settings.AnyoneCore.AlwaysMini = true -- true is default\
 		Settings.AnyoneCore.AlwaysMini = Settings.AnyoneCore.AlwaysMini \
+	end\
+\
+	if Settings.AnyoneCore.CheckJob == nil then\
+		Settings.AnyoneCore.CheckJob = true -- true is default\
+		Settings.AnyoneCore.CheckJob = Settings.AnyoneCore.CheckJob \
 	end\
 \
 	if Settings.AnyoneCore.DrawOrbs == nil then\
@@ -165,11 +304,6 @@ local obj1 = {
 	if Settings.AnyoneCore.UnderstandDanger == nil then\
 		Settings.AnyoneCore.UnderstandDanger = false -- false is default\
 		Settings.AnyoneCore.UnderstandDanger = Settings.AnyoneCore.UnderstandDanger \
-	end\
-	\
-	if Settings.AnyoneCore.JobCheck == nil then\
-		Settings.AnyoneCore.JobCheck = false -- false is default\
-		Settings.AnyoneCore.JobCheck = Settings.AnyoneCore.JobCheck \
 	end\
 	\
 	if Settings.AnyoneCore.e5sQueenGauge == nil then\
@@ -324,6 +458,7 @@ local obj1 = {
 			AlwaysMini = Settings.AnyoneCore.AlwaysMini,\
 			WarnForUpdate = Settings.AnyoneCore.WarnForUpdate,\
 			AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater,\
+			CheckJob = Settings.AnyoneCore.CheckJob,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -431,6 +566,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.AutomaticUpdater = AnyoneCore.Settings.AutomaticUpdater\
 		Settings.AnyoneCore.AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater\
+		\
+		Settings.AnyoneCore.CheckJob = AnyoneCore.Settings.CheckJob\
+		Settings.AnyoneCore.CheckJob = Settings.AnyoneCore.CheckJob\
 	\
 		\
 		---start of value selectors\
@@ -766,6 +904,20 @@ function AnyoneCore.draw()\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+            end\
+			\
+			local hovered = false\
+            AnyoneCore.Settings.CheckJob, changed = GUI:Checkbox(\"Warn me if I'm using the wrong profile\", AnyoneCore.Settings.CheckJob)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Everytime you change map or wipe to a boss fight, AnyoneCore will check if you're currently loaded on the wrong profile for both General and Timeline triggers.\\n\")\
+				GUI:TextColored(1,1,0,1,\"If you're on the wrong profile, a yellow colored message will be sent to chat warning you about it.\")\
+				GUI:TextColored(0,1,0,1,\"If you use your own personal timeline or general triggers profile, I'd recommend turning this setting off since it'll go off.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
             end\
             \
             local hovered = false\
@@ -1293,7 +1445,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "0e35aa40-c024-a8da-9502-c09546e6d075";
+		["uuid"] = "48502a86-9de4-e837-baac-bd3c1ffaa469";
 	};
 	[2] = {
 		["actions"] = {
@@ -1365,6 +1517,8 @@ SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
 SallyGNB.SkillSettings.GnashingFang.enabled = true\
 \
 Player:ClearTarget()\
+\
+JobCheck()\
 \
 if eventArgs.oldData.PotsEnabled ~= nil then\
 SallyGNB.SkillSettings.Potion.enabled = true\
@@ -1476,15 +1630,9 @@ end\
 		};
 		["enabled"] = true;
 		["eventType"] = 11;
-		["execute"] = "if Player.localmapid == 906 or Player.localmapid == 907 or Player.localmapid == 908 or Player.localmapid == 909 or Player.localmapid == 733 or Player.localmapid == 887 or Player.localmapid == 777 or AnyoneCore.Settings.DutyHelper == true then\
-		if Player.job ~= 37 then\
-				d(\"[Anyone's Reactions] - Job check failed, sending text command.\")\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} You're using the wrong general triggers. You're currently using the {color:255,0,0}Gunbreaker{color:0,255,0} profile, which doesn't match your current job. <se.1>\")\
-		elseif Player.job == 37 then\
-				d(\"[Anyone's Reactions] - Player job check succeeded\")\
-		end\
-end\
-self.used = true";
+		["execute"] = "AnyoneCore.JobCheck()\
+self.used = true\
+";
 		["executeType"] = 2;
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
@@ -1499,7 +1647,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "99239944-d834-3fa3-991f-0620a5fa13bb";
+		["uuid"] = "dd47abe3-bb86-1270-a28c-1158aed43a23";
 	};
 	[7] = {
 		["actions"] = {
