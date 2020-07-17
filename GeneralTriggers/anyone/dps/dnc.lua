@@ -16,7 +16,17 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.096,\
+		WindowStyle = {\
+		[\"Text\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
+		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.65 },\
+		[\"Button\"] = { [1] = 20, [2] = 75, [3] = 100, [4] = 1 },\
+		[\"ButtonHovered\"] = { [1] = 15, [2] = 31, [3] = 90, [4] = 0.75 },\
+		[\"CheckMark\"] = { [1] = 250, [2] = 250, [3] = 250, [4] = 1 },\
+		[\"TextSelectedBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
+		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
+		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
+		},\
+		version = 3.097,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -29,7 +39,10 @@ local obj1 = {
 		lastStatusCheck4,\
 	}\
 	\
+	local MinionPath = GetStartupPath()\
 	local LuaModsPath = GetLuaModsPath()\
+	\
+	\
 	function checkForUpdate()\
 		local LuaModsPath = GetLuaModsPath()\
 		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\",\"w\"):close()\
@@ -663,7 +676,6 @@ local obj1 = {
 	gAnyoneCoreInitialize = true\
 end\
 \
-\
 if (AnyoneCore ~= nil) then \
 	if AnyoneCore.Settings.WarnForUpdate == true then \
 		if AnyoneCore.lastUpdateCheck == nil then \
@@ -722,10 +734,52 @@ if (AnyoneCore ~= nil) then \
 	end\
 end\
 \
+	local MinionPath = GetStartupPath()\
+	local LuaModsPath = GetLuaModsPath()\
+---Idea and code for sidebar links was shamelessly stolen from Kali. Thank you Kali.\
+	LinksTable = {\
+		[1] = {\
+			name = \"dummy page doesnt work\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
+			link = nil,\
+			tooltip = \"1st link doesnt work so lol\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[2] = {\
+			name = \"GitHub\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
+			link = [[https://github.com/AnyoneMinion/reactions/releases]],\
+			tooltip = \"Releases page of GitHub, if you want to see any changes or download an older release.\\n\\nLeft-click to be sent to my GitHub page.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[3] = {\
+			name = \"Ko-fi\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\globe.png]],\
+			link = [[https://ko-fi.com/anyoneminion]],\
+			tooltip = \"If you appreciate the work I put into reactions, then throw me a few bucks on my Ko-fi page.\\n\\nLeft-click to be sent to my donation page.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[4] = {\
+			name = \"Reload\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\change.png]],\
+			link1 = nil,\
+			link2 = true,\
+			tooltip = \"Reloads AnyoneCore and loads reactions again.\\n\\nMostly meant for debugging and development purposes.\\n\\nLeft-click to reload AnyoneCore and reactions.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+	}\
+\
 \
 function AnyoneCore.draw()\
     if AnyoneCore.enabled and AnyoneCore.open then\
-        GUI:SetNextWindowSize(650,365,GUI.SetCond_FirstUseEver)\
+		local c = 0\
+		for k,v in pairs(AnyoneCore.WindowStyle) do if v[4] ~= 0 then c = c + 1 loadstring([[GUI:PushStyleColor(GUI.Col_]]..k..[[, ]]..(v[1]/255)..[[, ]]..(v[2]/255)..[[, ]]..(v[3]/255)..[[, ]]..v[4]..[[)]])() end end\
+        GUI:SetNextWindowSize(520,355,GUI.SetCond_FirstUseEver)\
+		local winX,winY,posX,posY\
         AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
         if AnyoneCore.visible then\
         local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs) \
@@ -1453,6 +1507,53 @@ function AnyoneCore.draw()\
             \
         end\
         end -- end of tabs\
+		\
+			--Code and idea for links was shamelessly stolen from Kali. Thank you Kali.\
+			local MinionPath = GetStartupPath()\
+			winX,winY = GUI:GetWindowSize()\
+			posX,posY = GUI:GetWindowPos()\
+			local min,max,rate,spacing,padding = 25,50,5,5,0\
+			local windowsize = 25\
+			for i=2, #LinksTable do\
+				local size = LinksTable[i].size.x\
+				if size and size > 0 and size > windowsize then windowsize = size end\
+			end\
+			GUI:PushStyleColor(GUI.Col_WindowBg, 0,0,0,0)\
+			GUI:SetNextWindowPos(posX-windowsize-spacing,posY + 20,GUI.SetCond_Always)\
+			GUI:SetNextWindowSize(max,((#LinksTable - 1) * min) + ((#LinksTable - 1) * spacing) + max,GUI.SetCond_Always)\
+			GUI:PushStyleVar(GUI.StyleVar_WindowPadding,padding,padding)\
+			GUI:PushStyleVar(GUI.StyleVar_ItemSpacing,spacing,spacing)\
+			GUI:Begin(\"AnyoneCore##Sidebar\",true,GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoResize + GUI.WindowFlags_NoMove + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoFocusOnAppearing)\
+			if GUI:IsWindowFocused(\"AnyoneCore##Sidebar\") then GUI:SetWindowFocus(AnyoneCore.name) end\
+			for i=2, #LinksTable do\
+				local link = LinksTable[i]\
+				GUI:Dummy(windowsize-link.size.x,0) GUI:SameLine(0,0)\
+				GUI:Image(link.icon,link.size.x,link.size.y)\
+				if GUI:IsItemHovered() then\
+					GUI:PopStyleVar(2)\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(link.tooltip)\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+					GUI:PushStyleVar(GUI.StyleVar_WindowPadding,padding,padding)\
+					GUI:PushStyleVar(GUI.StyleVar_ItemSpacing,spacing,spacing)\
+					if link.size.x < max then link.size.x = link.size.x + rate end\
+					if link.size.y < max then link.size.y = link.size.y + rate end\
+					if GUI:IsItemClicked(0) and link.link then\
+						io.popen([[cmd /c start \"\" \"]]..link.link..[[\"]]):close()\
+					elseif GUI:IsItemClicked(0) and link.link2 then\
+						AnyoneCoreReload()\
+					end\
+				else\
+					if link.size.x > min then link.size.x = link.size.x - rate end\
+					if link.size.y > min then link.size.y = link.size.y - rate end\
+				end\
+			end\
+			GUI:End()\
+			GUI:PopStyleColor()\
+			GUI:PopStyleVar(2)\
+		\
         end\
         GUI:End()\
     end\
@@ -1476,7 +1577,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "c350fe98-2002-13a1-a64e-d5563762b1b8";
+		["uuid"] = "e71523fd-c61e-cb87-9864-b35276724998";
 	};
 	[2] = {
 		["actions"] = {
