@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.091,\
+		version = 3.092,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -53,6 +53,14 @@ local obj1 = {
 	\
 	function AnyoneCoreReload()\
 		gAnyoneCoreInitialize = false\
+		downloadStatus = nil\
+		checkStatus = nil\
+		changelog = nil\
+		lastStatusCheck = nil\
+		lastUpdateCheck = nil\
+		lastStatusCheck2 = nil\
+		lastStatusCheck3 = nil\
+		lastStatusCheck4 = nil\
 		TensorCore.API.TensorReactions.reloadGeneralTriggers()\
 		TensorCore.API.TensorReactions.reloadTimelineTriggers()\
 	end\
@@ -1444,7 +1452,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "5a6e44e2-d788-0676-8994-ce96e89ddbf5";
+		["uuid"] = "f8d531da-8713-a970-b276-ff7c8917b1fa";
 	};
 	[2] = {
 		["actions"] = {
