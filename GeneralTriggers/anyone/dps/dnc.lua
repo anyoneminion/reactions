@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.095,\
+		version = 3.096,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1476,7 +1476,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "fae986e4-96f7-9645-9aa5-8c3432614e0b";
+		["uuid"] = "c350fe98-2002-13a1-a64e-d5563762b1b8";
 	};
 	[2] = {
 		["actions"] = {
@@ -4099,7 +4099,7 @@ self.used = true";
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return StopCastingTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
+return StopCastingTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 2";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -4171,7 +4171,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
+				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 1;
@@ -4457,7 +4457,7 @@ return StopCastingTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "b391293a-53b9-a2a4-bbff-b9cdea3b13e8";
+		["uuid"] = "a19552c7-c8c2-d89b-b0b8-9875d59c892a";
 	};
 	[13] = {
 		["actions"] = {
