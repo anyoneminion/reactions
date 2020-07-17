@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.097,\
+		version = 3.098,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1577,7 +1577,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e71523fd-c61e-cb87-9864-b35276724998";
+		["uuid"] = "1f39facc-86c2-4218-b890-cf5a685d027c";
 	};
 	[2] = {
 		["actions"] = {
@@ -5270,7 +5270,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 [18753] = true,\
 }\
 \
-return MitigationTable[eventArgs.spellID]";
+return MitigationTable[eventArgs.spellID] == true";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
@@ -5627,7 +5627,7 @@ return MitigationTable[eventArgs.spellID]";
 [3344] = true,\
 }\
 \
-return InterruptTable[eventArgs.spellID]";
+return InterruptTable[eventArgs.spellID] == true";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
@@ -5900,7 +5900,7 @@ return InterruptTable[eventArgs.spellID]";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "672b8bc1-6f3d-77b2-b28f-e512baa0cb47";
+		["uuid"] = "cc115d7f-34b8-e3be-84c8-2272676b3af8";
 	};
 	[16] = {
 		["actions"] = {
