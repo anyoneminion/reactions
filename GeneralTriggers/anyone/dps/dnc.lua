@@ -16,7 +16,7 @@ local obj1 = {
 		data = {},\
 		visible = true,\
 		open = false,\
-		version = 3.094,\
+		version = 3.095,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -143,37 +143,37 @@ local obj1 = {
 				[887] = nil, -- tea\
 			},\
 			[32] = { -- dark knight\
-				[906] = \"anyone\\\\dps\\\\drk\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\dps\\\\drk\\\\e6s\",\
-				[908] = \"anyone\\\\dps\\\\drk\\\\e7s\",\
-				[909] = \"anyone\\\\dps\\\\drk\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\drk\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\drk\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\drk\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\drk\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
 			},\
 			[21] = { -- warrior\
-				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
-				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
-				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\war\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
 			},\
 			[19] = { -- paladin\
-				[906] = \"anyone\\\\dps\\\\war\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\dps\\\\war\\\\e6s\",\
-				[908] = \"anyone\\\\dps\\\\war\\\\e7s\",\
-				[909] = \"anyone\\\\dps\\\\war\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\war\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\war\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\war\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\war\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
 			},\
 			[37] = { -- gunbreaker\
-				[906] = \"anyone\\\\dps\\\\gnb\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\dps\\\\gnb\\\\e6s\",\
-				[908] = \"anyone\\\\dps\\\\gnb\\\\e7s\",\
-				[909] = \"anyone\\\\dps\\\\gnb\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\gnb\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\gnb\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\gnb\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\gnb\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
@@ -186,12 +186,12 @@ local obj1 = {
 			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
 			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
 			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
-			[25] = \"anyone\\\\dps\\\\blm\", -- black mage\
-			[35] = \"anyone\\\\dps\\\\rdm\", -- red mage\
-			[32] = \"anyone\\\\dps\\\\drk\", -- dark knight\
-			[21] = \"anyone\\\\dps\\\\war\", -- warrior\
-			[19] = \"anyone\\\\dps\\\\pld\", -- paladin\
-			[37] = \"anyone\\\\dps\\\\gnb\", -- gunbreaker\
+			[25] = \"mattyice&anyone\\\\dps\\\\blm\", -- black mage\
+			[35] = \"mattyice&anyone\\\\dps\\\\rdm\", -- red mage\
+			[32] = \"anyone\\\\tank\\\\drk\", -- dark knight\
+			[21] = \"anyone\\\\tank\\\\war\", -- warrior\
+			[19] = \"anyone\\\\tank\\\\pld\", -- paladin\
+			[37] = \"anyone\\\\tank\\\\gnb\", -- gunbreaker\
 		}\
 	\
 	function JobCheck()\
@@ -1476,7 +1476,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "274008f4-4aca-19d9-b137-add2bda9938b";
+		["uuid"] = "fae986e4-96f7-9645-9aa5-8c3432614e0b";
 	};
 	[2] = {
 		["actions"] = {
@@ -3996,6 +3996,7 @@ self.used = true";
 				["conditions"] = {
 					[1] = 1;
 					[2] = 3;
+					[3] = 5;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -4103,7 +4104,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
+				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 1;
@@ -4353,6 +4354,91 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
+			[5] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local StopCastingTable = {\
+--face away\
+[8066] = true,\
+[7949] = true,\
+[9829] = true,\
+[11159] = true,\
+[12587] = true,\
+[12708] = true,\
+[9485] = true,\
+[9071] = true,\
+[9211] = true,\
+[20303] = true,\
+[16025] = true,\
+[19198] = true,\
+[14200] = true,\
+[20303] = true,\
+}\
+\
+return StopCastingTable[eventArgs.spellID] == true";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
 		};
 		["enabled"] = true;
 		["eventType"] = 3;
@@ -4366,12 +4452,12 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
-		["timeout"] = 5;
+		["timeout"] = 10;
 		["timerEndOffset"] = 0;
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "7ed0905d-cf05-4b4c-9a29-bddf55d18be2";
+		["uuid"] = "b391293a-53b9-a2a4-bbff-b9cdea3b13e8";
 	};
 	[13] = {
 		["actions"] = {
@@ -4393,6 +4479,7 @@ self.used = true";
 				["conditions"] = {
 					[1] = 1;
 					[2] = 2;
+					[3] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -4677,6 +4764,87 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local ClearTargetTable = {\
+--stop cast and clear target\
+[639] = true,\
+[960] = true,\
+[1049] = true,\
+[1072] = true,\
+[1132] = true,\
+[1133] = true,\
+[1269] = true,\
+[1270] = true,\
+[1384] = true,\
+[1599] = true,\
+}\
+\
+return ClearTargetTable[eventArgs.buffID] == true";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
 		};
 		["enabled"] = true;
 		["eventType"] = 8;
@@ -4690,12 +4858,12 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
-		["timeout"] = 5;
+		["timeout"] = 10;
 		["timerEndOffset"] = 0;
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "67d9b1bf-e801-fe60-a5f3-4a11b95cfc73";
+		["uuid"] = "cc1bb6b1-ef7c-b4c1-b774-ed1404f0052f";
 	};
 	[14] = {
 		["actions"] = {
@@ -5001,15 +5169,12 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 [18753] = true,\
 }\
 \
-if MitigationTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+return MitigationTable[eventArgs.spellID]";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
+				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 2;
@@ -5267,12 +5432,12 @@ return false";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "mitigation - duty helper";
+		["name"] = "shield samba - duty helper";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
-		["timeout"] = 5;
+		["timeout"] = 10;
 		["timerEndOffset"] = 0;
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
@@ -5361,10 +5526,7 @@ return false";
 [3344] = true,\
 }\
 \
-if InterruptTable[eventArgs.spellID] then\
-return true \
-end\
-return false";
+return InterruptTable[eventArgs.spellID]";
 				["conditionType"] = 2;
 				["conditions"] = {
 				};
@@ -5431,7 +5593,7 @@ return false";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 38 and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 31 and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -5632,12 +5794,12 @@ return false";
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
-		["timeout"] = 5;
+		["timeout"] = 10;
 		["timerEndOffset"] = 0;
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "2b3b04a3-f793-cf6d-aacb-5ee7d40d51ea";
+		["uuid"] = "672b8bc1-6f3d-77b2-b28f-e512baa0cb47";
 	};
 	[16] = {
 		["actions"] = {
@@ -5659,6 +5821,7 @@ return false";
 					[2] = 1;
 					[3] = 3;
 					[4] = 4;
+					[5] = 5;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -5758,7 +5921,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
+				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 2;
@@ -5820,7 +5983,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 38 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -6008,6 +6171,126 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
+			[5] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local KnockbackTable = {\
+---start of dungeon spell ids\
+--dungeons\
+[8328] = true,\
+[8329] = true,\
+[8293] = true,\
+[9606] = true,\
+[8173] = true,\
+[9810] = true,\
+[10132] = true,\
+[12618] = true,\
+[15520] = true,\
+[15596] = true,\
+--8 man raids\
+[9400] = true,\
+[9214] = true,\
+[9293] = true,\
+[10413] = true,\
+[10086] = true,\
+[10454] = true,\
+[10459] = true,\
+[12647] = true,\
+[12648] = true,\
+[13050] = true,\
+[15942] = true,\
+[15962] = true,\
+[16339] = true,\
+[16370] = true,\
+[16630] = true,\
+[16659] = true,\
+[16694] = true,\
+--e5-e8\
+[19928] = true,\
+---[19809] = true,\
+--trials\
+[8075] = true,\
+[8080] = true,\
+[9690] = true,\
+[9695] = true,\
+[9750] = true,\
+[12848] = true,\
+[13018] = true,\
+[13019] = true,\
+[16741] = true,\
+[16742] = true,\
+[19182] = true,\
+[19674] = true,\
+--24 man raids\
+[9660] = true,\
+[11344] = true,\
+[18627] = true,\
+}\
+\
+return KnockbackTable[eventArgs.spellID] == true";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
 		};
 		["enabled"] = true;
 		["eventType"] = 3;
@@ -6021,12 +6304,12 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
-		["timeout"] = 5;
+		["timeout"] = 10;
 		["timerEndOffset"] = 0;
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "dac26285-698a-3f51-805d-e2cf70592ea3";
+		["uuid"] = "5b501ce6-1bad-9e4c-aa8a-8d2ed3482a1e";
 	};
 	[17] = {
 		["actions"] = {
