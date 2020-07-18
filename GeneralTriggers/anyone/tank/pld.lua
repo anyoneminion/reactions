@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.101,\
+		version = 3.102,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1579,7 +1579,7 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "114a8794-81ac-c4b6-953e-73dd1bc5ed1e",
+		["uuid"] = "86013101-b611-2ad8-9421-dcb4ae6cc978",
 	},
 	[2] = {
 		["actions"] = {
@@ -1760,7 +1760,9 @@ self.used = true\
 		},
 		["enabled"] = true,
 		["eventType"] = 11,
-		["execute"] = "JobCheck()\
+		["execute"] = "if AnyoneCore ~= nil then\
+JobCheck()\
+end\
 self.used = true\
 self.eventConditionMismatch = true",
 		["executeType"] = 2,
@@ -1777,7 +1779,7 @@ self.eventConditionMismatch = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "8447c452-6ab9-a536-b2ec-c012e3dbca39",
+		["uuid"] = "5be5843e-0d53-e600-a349-74e6119e1f06",
 	},
 	[7] = {
 		["actions"] = {
@@ -9009,7 +9011,7 @@ end",
 				["clusterRadius"] = 8,
 				["clusterRange"] = 30,
 				["comparator"] = 1,
-				["conditionLua"] = "return Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true",
+				["conditionLua"] = "return AnyoneCore ~= nil and Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -9081,7 +9083,7 @@ end",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "2df1bb7e-9893-eefc-b166-9ef7d74b6da0",
+		["uuid"] = "d1aeb336-4197-8f9d-ab52-89398769ecf9",
 	},
 	[20] = {
 		["actions"] = {

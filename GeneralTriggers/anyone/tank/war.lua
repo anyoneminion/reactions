@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.101,\
+		version = 3.102,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1579,7 +1579,7 @@ self.used = true",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "c612e051-af5e-5084-96c7-06dd1ab8fc9e",
+		["uuid"] = "9e178582-ddf1-5442-9d72-9fc3fcd64a44",
 	},
 	[2] = {
 		["actions"] = {
@@ -2218,32 +2218,6 @@ end",
 	},
 	[6] = {
 		["actions"] = {
-		},
-		["conditions"] = {
-		},
-		["enabled"] = true,
-		["eventType"] = 11,
-		["execute"] = "JobCheck()\
-self.used = true\
-self.eventConditionMismatch = true",
-		["executeType"] = 2,
-		["lastUse"] = 0,
-		["luaNeedsWeaveWindow"] = false,
-		["luaReturnsAction"] = false,
-		["name"] = "job check",
-		["throttleTime"] = 0,
-		["time"] = 0,
-		["timeRange"] = false,
-		["timelineIndex"] = 0,
-		["timeout"] = 5,
-		["timerEndOffset"] = 0,
-		["timerOffset"] = 0,
-		["timerStartOffset"] = 0,
-		["used"] = false,
-		["uuid"] = "da80ddc6-c356-f5b4-ac84-318f19461548",
-	},
-	[7] = {
-		["actions"] = {
 			[1] = {
 				["aType"] = 4,
 				["actionID"] = -1,
@@ -2391,6 +2365,34 @@ self.eventConditionMismatch = true -- supress log",
 		["timerStartOffset"] = 0,
 		["used"] = false,
 		["uuid"] = "6b6715e8-7558-f27b-8062-19170bd0327c",
+	},
+	[7] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = true,
+		["eventType"] = 11,
+		["execute"] = "if AnyoneCore ~= nil then\
+JobCheck()\
+end\
+self.used = true\
+self.eventConditionMismatch = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "job check",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "9fa0eaf1-2cbe-2771-ac6d-15d223327ac7",
 	},
 	[8] = {
 		["actions"] = {
@@ -10074,7 +10076,7 @@ end",
 				["clusterRadius"] = 8,
 				["clusterRange"] = 30,
 				["comparator"] = 1,
-				["conditionLua"] = "return Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true",
+				["conditionLua"] = "return AnyoneCore ~= nil and Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true",
 				["conditionType"] = 1,
 				["conditions"] = {
 				},
@@ -10146,7 +10148,7 @@ end",
 		["timerOffset"] = 0,
 		["timerStartOffset"] = 0,
 		["used"] = false,
-		["uuid"] = "aebca0da-33ac-d3c4-bec1-c34af26a648f",
+		["uuid"] = "f8d4ceb2-951b-9464-b1cc-d7ccedf9d912",
 	},
 	[21] = {
 		["actions"] = {
@@ -12347,6 +12349,36 @@ return nil",
 		["timerStartOffset"] = 0,
 		["used"] = false,
 		["uuid"] = "9d483229-6778-4de2-ba68-a33273dc9b01",
+	},
+	[26] = {
+		["actions"] = {
+		},
+		["conditions"] = {
+		},
+		["enabled"] = false,
+		["eventType"] = 1,
+		["execute"] = "		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\",\"w\"):close()\
+		local command = [[if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath \"]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip\" -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID]]\
+		local encodedCommand = TensorCore.base64EncodePS(command)\
+		io.popen([[%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -EncodedCommand \"]] .. encodedCommand .. [[\"]])\
+		AnyoneCorelastStatusCheck2 = true\
+		d(\"Initializing...\")\
+self.used = true",
+		["executeType"] = 2,
+		["lastUse"] = 0,
+		["luaNeedsWeaveWindow"] = false,
+		["luaReturnsAction"] = false,
+		["name"] = "test",
+		["throttleTime"] = 0,
+		["time"] = 0,
+		["timeRange"] = false,
+		["timelineIndex"] = 0,
+		["timeout"] = 5,
+		["timerEndOffset"] = 0,
+		["timerOffset"] = 0,
+		["timerStartOffset"] = 0,
+		["used"] = false,
+		["uuid"] = "c8bd0908-2829-1416-8830-fe759872531d",
 	},
 }
 return obj1
