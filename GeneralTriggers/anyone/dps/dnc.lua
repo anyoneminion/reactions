@@ -18,7 +18,7 @@ local obj1 = {
 		open = false,\
 		WindowStyle = {\
 		[\"Text\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
-		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.65 },\
+		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.85 },\
 		[\"Button\"] = { [1] = 20, [2] = 75, [3] = 100, [4] = 1 },\
 		[\"ButtonHovered\"] = { [1] = 15, [2] = 31, [3] = 90, [4] = 0.75 },\
 		[\"CheckMark\"] = { [1] = 250, [2] = 250, [3] = 250, [4] = 1 },\
@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.098,\
+		version = 3.10,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1556,6 +1556,7 @@ function AnyoneCore.draw()\
 		\
         end\
         GUI:End()\
+		GUI:PopStyleColor(c)\
     end\
 end\
 \
@@ -1577,7 +1578,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "1f39facc-86c2-4218-b890-cf5a685d027c";
+		["uuid"] = "36dad9ef-01e2-a5e7-b558-05509d116cb9";
 	};
 	[2] = {
 		["actions"] = {
