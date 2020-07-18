@@ -823,10 +823,12 @@ function AnyoneCore.draw()\
             end\
             \
             if GUI:BeginPopupModal(\"Confirmation Window\", true, GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
-                GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
+				GUI:PushTextWrapPos(0.0)\
+				GUI:Text(\"Downloading the latest release will\") GUI:SameLine() GUI:TextColored(1,0,0,1,\"overwrite\") GUI:SameLine() GUI:Text(\"your current files.\")\
                 GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now.\")\
                 GUI:Text(\"A backup of your files will be created in\") GUI:SameLine() GUI:TextColored(1,1,0,1,\"LuaMods/TensorReactionsBackup.\") \
-                GUI:TextColored(0,1,0,1,\"Currently backed up files will be overwritten.\")\
+				GUI:TextColored(1,0,0,1,\"Warning: if any of the folders leading up to your LuaMods folder has a space in it, AnyoneCore updater will not work.\")\
+				GUI:PopTextWrapPos()\
                 GUI:PushItemWidth(200)\
                 if GUI:Button(\"Yes\") then download_files_noreading() downloadStatus = \"Wait...\" GUI:CloseCurrentPopup() end \
                 GUI:SameLine()\
@@ -1578,7 +1580,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "3a9231a4-4dd0-a91c-9974-76cbf3e48443";
+		["uuid"] = "60aa3d30-8b41-c86c-9034-6ac0d79c4ec7";
 	};
 	[2] = {
 		["actions"] = {
