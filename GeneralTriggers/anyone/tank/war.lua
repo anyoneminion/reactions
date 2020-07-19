@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.103,\
+		version = 3.105,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -45,8 +45,7 @@ local obj1 = {
 	\
 	function checkForUpdate()\
 		local LuaModsPath = GetLuaModsPath()\
-		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/anyonecoreversion.txt\",\"w\"):close()\
-		io.popen([[start /b powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -ErrorAction Stop -Force } catch { throw 'Could not create path!' } };[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Value $versionCheck; stop-process -Id $PID\"]]) \
+		io.popen([[start /b powershell -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Value $versionCheck; stop-process -Id $PID\"]]) \
 		lastStatusCheck4 = true\
 	end\
 	\
@@ -59,8 +58,7 @@ local obj1 = {
 	end\
 	\
 	function download_files_noreading()\
-		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\",\"w\"):close()\
-		io.popen([[start /b powershell -Command \"if (-not (Test-Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { try { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -ErrorAction Stop -Force } catch { throw 'Could not create path!' } }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
+		io.popen([[start /b powershell -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
 		lastStatusCheck2 = true\
 	end\
 	\
@@ -1577,7 +1575,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "6143335c-7a64-dc3d-83cb-ecca7ae57d56";
+		["uuid"] = "ec5b3b4f-3a1d-2e5c-b651-ad3d3e8566f1";
 	};
 	[2] = {
 		["actions"] = {
@@ -1654,10 +1652,7 @@ Player:ClearTarget()\
 \
 JobCheck()\
 \
-if Player.job ~= 21 then\
-self.eventConditionMismatch = true\
 self.used = true\
-end\
 \
 ";
 				["allowInterrupt"] = false;
@@ -1714,10 +1709,7 @@ Player:ClearTarget()\
 \
 JobCheck()\
 \
-if Player.job ~= 21 then\
-self.eventConditionMismatch = true\
 self.used = true\
-end\
 ";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
@@ -1730,6 +1722,94 @@ end\
 				["clusterRange"] = 30;
 				["conditions"] = {
 					[1] = 2;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[3] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "ACR_RikuWAR_Hotbar_ArmsLength = false\
+ACR_RikuWAR_Hotbar_Potion = false \
+ACR_RikuWAR_Hotbar_Sprint = false\
+ACR_RikuWAR_Hotbar_LimitBreak = false\
+ACR_RikuWAR_Hotbar_LowBlow = false \
+ACR_RikuWAR_Hotbar_Provoke = false \
+ACR_RikuWAR_Hotbar_Interject = false \
+ACR_RikuWAR_Hotbar_Onslaught = false \
+ACR_RikuWAR_Hotbar_Defiance = false \
+ACR_RikuWAR_Hotbar_LockFace = false\
+\
+ACR_RikuWAR_CD = true\
+---ACR_RikuWAR_AOE\
+ACR_RikuWAR_SmartAOE = true\
+ACR_RikuWAR_Burn = false\
+ACR_RikuWAR_HoldGauge = false\
+---ACR_RikuWAR_Jumps = true\
+---ACR_RikuWAR_AutoProvoke = false\
+---ACR_RikuWAR_Tomahawk = true\
+ACR_RikuWAR_StormsEye = true\
+---ACR_RikuWAR_AutoStance = false\
+---ACR_RikuWAR_AutoInterrupt = true\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+ACR_RikuWAR_Potion = true\
+else\
+ACR_RikuWAR_Potion = false\
+end\
+\
+ACR_RikuWAR_Tankbar_Rampart = false\
+ACR_RikuWAR_Tankbar_Reprisal = false\
+ACR_RikuWAR_Tankbar_NascentFlashOT = false\
+ACR_RikuWAR_Tankbar_ThrillOfBattle = false\
+ACR_RikuWAR_Tankbar_Vengeance = false\
+ACR_RikuWAR_Tankbar_Holmgang = false\
+ACR_RikuWAR_Tankbar_RawIntuition = false\
+ACR_RikuWAR_Tankbar_Equilibrium = false\
+ACR_RikuWAR_Tankbar_ShakeItOff = false\
+\
+data.mitigateTankbuster = nil\
+data.tankbusterSource = nil\
+data.aoeSource = nil\
+data.mitigateRaidAOE = nil\
+\
+Player:ClearTarget()\
+\
+JobCheck()\
+\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 3;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -1893,6 +1973,74 @@ end\
 				["setFirstMatch"] = false;
 				["targetName"] = "";
 			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"RikuWAR\"";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "RikuWAR";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+				["targetName"] = "";
+			};
 		};
 		["enabled"] = true;
 		["eventType"] = 9;
@@ -1936,18 +2084,13 @@ SallyWAR.HotBarConfig.Sprint.enabled = true\
 SallyWAR.HotBarConfig.Interject.enabled = true\
 SallyWAR.HotBarConfig.Armslength.enabled = true\
 SallyWAR.HotBarConfig.Upheaval.enabled = true\
-self.used = true\
 \
 data.mitigateTankbuster = nil\
 data.tankbusterSource = nil\
 data.aoeSource = nil\
 data.mitigateRaidAOE = nil\
 \
-if Player.job ~= 21 then\
-self.eventConditionMismatch = true\
-self.used = true\
-end\
-";
+self.used = true";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
 				["castAtMouse"] = false;
@@ -2032,6 +2175,75 @@ end";
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
+			[3] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "ACR_RikuWAR_Hotbar_ArmsLength = false\
+ACR_RikuWAR_Hotbar_Potion = false \
+ACR_RikuWAR_Hotbar_Sprint = false\
+ACR_RikuWAR_Hotbar_LimitBreak = false\
+ACR_RikuWAR_Hotbar_LowBlow = false \
+ACR_RikuWAR_Hotbar_Provoke = false \
+ACR_RikuWAR_Hotbar_Interject = false \
+ACR_RikuWAR_Hotbar_Onslaught = false \
+ACR_RikuWAR_Hotbar_Defiance = false \
+ACR_RikuWAR_Hotbar_LockFace = false\
+\
+ACR_RikuWAR_Tankbar_Rampart = false\
+ACR_RikuWAR_Tankbar_Reprisal = false\
+ACR_RikuWAR_Tankbar_NascentFlashOT = false\
+ACR_RikuWAR_Tankbar_ThrillOfBattle = false\
+ACR_RikuWAR_Tankbar_Vengeance = false\
+ACR_RikuWAR_Tankbar_Holmgang = false\
+ACR_RikuWAR_Tankbar_RawIntuition = false\
+ACR_RikuWAR_Tankbar_Equilibrium = false\
+ACR_RikuWAR_Tankbar_ShakeItOff = false\
+\
+\
+data.mitigateTankbuster = nil\
+data.tankbusterSource = nil\
+data.aoeSource = nil\
+data.mitigateRaidAOE = nil\
+\
+if Player.job ~= 21 then\
+self.eventConditionMismatch = true\
+self.used = true\
+end";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 3;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
 		};
 		["conditions"] = {
 			[1] = {
@@ -2153,6 +2365,74 @@ end";
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Emperor";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+				["targetName"] = "";
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"RikuWAR\"";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "RikuWAR";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -12347,36 +12627,6 @@ return nil";
 		["timerStartOffset"] = 0;
 		["used"] = false;
 		["uuid"] = "9d483229-6778-4de2-ba68-a33273dc9b01";
-	};
-	[26] = {
-		["actions"] = {
-		};
-		["conditions"] = {
-		};
-		["enabled"] = false;
-		["eventType"] = 1;
-		["execute"] = "		io.open(tostring(LuaModsPath)..\"TensorReactionsBackup/downloadstatus.txt\",\"w\"):close()\
-		local command = [[if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath \"]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip\" -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID]]\
-		local encodedCommand = TensorCore.base64EncodePS(command)\
-		io.popen([[%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -EncodedCommand \"]] .. encodedCommand .. [[\"]])\
-		AnyoneCorelastStatusCheck2 = true\
-		d(\"Initializing...\")\
-self.used = true";
-		["executeType"] = 2;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "test";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 5;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "c8bd0908-2829-1416-8830-fe759872531d";
 	};
 }
 return obj1
