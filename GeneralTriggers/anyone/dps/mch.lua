@@ -445,6 +445,11 @@ local obj1 = {
 		Settings.AnyoneCore.MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer \
 	end\
 	\
+	if Settings.AnyoneCore.ShowExtraDebugMessages == nil then\
+		Settings.AnyoneCore.ShowExtraDebugMessages = true -- true is default\
+		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -490,6 +495,7 @@ local obj1 = {
 			CheckJob = Settings.AnyoneCore.CheckJob,\
 			DrawYaten = Settings.AnyoneCore.DrawYaten,\
 			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
+			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -606,6 +612,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.MiniReactionsTimer = AnyoneCore.Settings.MiniReactionsTimer\
 		Settings.AnyoneCore.MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer\
+		\
+		Settings.AnyoneCore.ShowExtraDebugMessages = AnyoneCore.Settings.ShowExtraDebugMessages\
+		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -711,7 +720,9 @@ if (AnyoneCore ~= nil) then \
 				AnyoneCoreReload()\
 			elseif output == nil then\
 				lastStatusCheck = Now()\
-				d(\"[AnyoneCore] Updater: Download status file still nil, trying to check again. This is normal, but if not completed after five cycles, something is wrong...\")\
+				if AnyoneCore.Settings.ShowExtraDebugMessages == true then\
+					d(\"[AnyoneCore]1/2 Updater: Download status file still nil, trying to check again.\") d(\"[AnyoneCore]2/2 This is normal, but if not completed after five cycles, something is wrong...\")\
+				end\
 			end\
 		end\
 	end\
@@ -734,14 +745,18 @@ if (AnyoneCore ~= nil) then \
 					WarnForUpdate()\
 					if AnyoneCore.Settings.AutomaticUpdater == true then\
 						download_files_noreading()\
-						d(\"[AnyoneCore] Updater: New update was found and auto updating is enabled. Beginning the update process.\")\
+						if AnyoneCore.Settings.ShowExtraDebugMessages == true then\
+							d(\"[AnyoneCore] Updater: New update was found and auto updating is enabled. Beginning the update process.\")\
+						end\
 					end\
 				elseif AnyoneCore.version >= gitVersion then\
 					d(\"[AnyoneCore] No updates available.\")\
 				end\
 			elseif output == nil then\
 				lastStatusCheck3 = Now()\
-				d(\"[AnyoneCore] Update checker: Version file still nil, trying to check again. This is normal, but if not completed after three cycles, something is wrong...\")\
+				if AnyoneCore.Settings.ShowExtraDebugMessages == true then\
+					d(\"[AnyoneCore]1/2 Update checker: Version file still nil, trying to check again.\") d(\"[AnyoneCore]2/2 This is normal, but if not completed after three cycles, something is wrong...\")\
+				end\
 			end	\
 		end\
 	end\
@@ -1534,6 +1549,19 @@ function AnyoneCore.draw()\
                 GUI:PopTextWrapPos()\
                 GUI:EndTooltip()\
             end\
+			\
+			local hovered = false\
+            AnyoneCore.Settings.ShowExtraDebugMessages, changed = GUI:Checkbox(\"Show extra debug messages\", AnyoneCore.Settings.ShowExtraDebugMessages)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Adds additional messages in console mostly meant for debugging purposes.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Might get a little spammy with this on if you're using the updater. Not a lot, but maybe like a few extra messages every few minutes.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
 		\
         end -- end of tabs\
 		\
@@ -1615,7 +1643,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "74e02d88-b98a-0a72-b892-f5ff71554ca4";
+		["uuid"] = "e75b229b-0cf2-fd0f-a9ed-067f645c8416";
 	};
 	[2] = {
 		["actions"] = {
@@ -4302,7 +4330,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4310,7 +4338,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4367,7 +4395,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4375,7 +4403,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4573,7 +4601,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4638,7 +4666,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4768,7 +4796,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4833,7 +4861,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5029,7 +5057,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5037,7 +5065,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5094,7 +5122,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5102,7 +5130,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5159,7 +5187,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5167,7 +5195,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5349,7 +5377,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5357,7 +5385,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5414,7 +5442,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5422,7 +5450,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
