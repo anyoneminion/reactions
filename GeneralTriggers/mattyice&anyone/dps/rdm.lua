@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.105,\
+		version = 3.106,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -831,7 +831,7 @@ function AnyoneCore.draw()\
                 GUI:EndPopup()\
             end\
             \
-            if GUI:Button(\"Download latest release\") then GUI:OpenPopup(\"Download Updates\") end ---download_files()\
+            if GUI:Button(\"Update to newest release\") then GUI:OpenPopup(\"Download Updates\") end ---download_files()\
             if downloadStatus ~= nil then\
             GUI:SameLine()\
             GUI:TextColored(0,1,0,1,downloadStatus)\
@@ -1575,7 +1575,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "a9c8b130-be81-fe62-b9ad-01789537cdb4";
+		["uuid"] = "e3630691-1361-3650-b1cd-607081c5d6fd";
 	};
 	[2] = {
 		["actions"] = {
