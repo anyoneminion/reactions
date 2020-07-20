@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.106,\
+		version = 3.11,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -47,6 +47,7 @@ local obj1 = {
 		local LuaModsPath = GetLuaModsPath()\
 		io.popen([[start /b powershell -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $versionCheck = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\anyonecoreversion.txt' -Value $versionCheck; stop-process -Id $PID\"]]) \
 		lastStatusCheck4 = true\
+		d(\"[AnyoneCore] Checking for updates...\")\
 	end\
 	\
 	function readChangelog()\
@@ -60,6 +61,7 @@ local obj1 = {
 	function download_files_noreading()\
 		io.popen([[start /b powershell -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
 		lastStatusCheck2 = true\
+		d(\"[AnyoneCore] Updater: Download was started. Moving to next step...\")\
 	end\
 	\
 	function AnyoneCoreReload()\
@@ -438,6 +440,11 @@ local obj1 = {
 		Settings.AnyoneCore.DrawYaten = Settings.AnyoneCore.DrawYaten \
 	end\
 	\
+	if Settings.AnyoneCore.MiniReactionsTimer == nil then\
+		Settings.AnyoneCore.MiniReactionsTimer = false -- true is default\
+		Settings.AnyoneCore.MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -482,6 +489,7 @@ local obj1 = {
 			AutomaticUpdater = Settings.AnyoneCore.AutomaticUpdater,\
 			CheckJob = Settings.AnyoneCore.CheckJob,\
 			DrawYaten = Settings.AnyoneCore.DrawYaten,\
+			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -595,8 +603,10 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.DrawYaten = AnyoneCore.Settings.DrawYaten\
 		Settings.AnyoneCore.DrawYaten = Settings.AnyoneCore.DrawYaten\
-	\
 		\
+		Settings.AnyoneCore.MiniReactionsTimer = AnyoneCore.Settings.MiniReactionsTimer\
+		Settings.AnyoneCore.MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer\
+	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
 			AnyoneCore.Settings.e5sQueenGauge = 80\
@@ -666,7 +676,7 @@ local obj1 = {
 	end\
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-    AnyoneCore.main_tabs = GUI_CreateTabs(\" General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks \")\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\" General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks ,Debug \")\
 	\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
@@ -701,6 +711,7 @@ if (AnyoneCore ~= nil) then \
 				AnyoneCoreReload()\
 			elseif output == nil then\
 				lastStatusCheck = Now()\
+				d(\"[AnyoneCore] Updater: Download status file still nil, trying to check again. This is normal, but if not completed after five cycles, something is wrong...\")\
 			end\
 		end\
 	end\
@@ -721,11 +732,16 @@ if (AnyoneCore ~= nil) then \
 				checkStatus = \"Done\"\
 				if AnyoneCore.version < gitVersion then \
 					WarnForUpdate()\
+					if AnyoneCore.Settings.AutomaticUpdater == true then\
+						download_files_noreading()\
+						d(\"[AnyoneCore] Updater: New update was found and auto updating is enabled. Beginning the update process.\")\
+					end\
 				elseif AnyoneCore.version >= gitVersion then\
 					d(\"[AnyoneCore] No updates available.\")\
 				end\
 			elseif output == nil then\
 				lastStatusCheck3 = Now()\
+				d(\"[AnyoneCore] Update checker: Version file still nil, trying to check again. This is normal, but if not completed after three cycles, something is wrong...\")\
 			end	\
 		end\
 	end\
@@ -1503,6 +1519,22 @@ function AnyoneCore.draw()\
             end\
             \
         end\
+		\
+		elseif (tabname == \"Debug \") then\
+		\
+			local hovered = false\
+            AnyoneCore.Settings.MiniReactionsTimer, changed = GUI:Checkbox(\"Mini Reactions Timer\", AnyoneCore.Settings.MiniReactionsTimer)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Adds a miniature version of the reactions timer you would normally find in the TensorReactions debug tab.\\n\")\
+                GUI:TextColored(1,1,0,1,\"Pretty much only helpful for planning and debugging. Nice to have something small and easy to stuff in the corner of your screen.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+		\
         end -- end of tabs\
 		\
 			--Code and idea for links was shamelessly stolen from Kali. Thank you Kali.\
@@ -1550,11 +1582,19 @@ function AnyoneCore.draw()\
 			GUI:End()\
 			GUI:PopStyleColor()\
 			GUI:PopStyleVar(2)\
-		\
+				\
         end\
         GUI:End()\
 		GUI:PopStyleColor(c)\
     end\
+	\
+	if AnyoneCore.Settings.MiniReactionsTimer == true then\
+	GUI:Begin(\"AnyoneCore##MiniTimer\", AnyoneCore.Settings.MiniReactionsTimer,GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse)\
+		if TensorReactions_CurrentTimer ~= nil then\
+		GUI:Text(TensorReactions_CurrentTimer)\
+			end\
+	GUI:End()\
+	end\
 end\
 \
 AnyoneCore.draw()\
@@ -1575,7 +1615,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "b4aec309-b376-98ce-8347-8640472f6c9e";
+		["uuid"] = "c9ab6f87-e984-d78a-8f1f-d0100090bb56";
 	};
 	[2] = {
 		["actions"] = {
