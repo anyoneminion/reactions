@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.11,\
+		version = 3.112,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1643,7 +1643,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "56bc1a46-b6ae-ad7e-b0b9-4f80b18c1784";
+		["uuid"] = "796b07cf-85cb-4b63-a274-6de3c5014ba5";
 	};
 	[2] = {
 		["actions"] = {

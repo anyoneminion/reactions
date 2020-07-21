@@ -4735,6 +4735,138 @@ end";
 			["uuid"] = "5efbf7b3-6468-5c91-8bb7-abd939e84c66";
 		};
 	};
+	[128] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "data.drawHeavensfallKnockback = true\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 2;
+					["clusterMintarget"] = 1;
+					["clusterRadius"] = 10;
+					["clusterRange"] = 25;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "draw kb";
+			["throttleTime"] = 0;
+			["time"] = 686.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 128;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "f19e363b-976f-0e06-955c-34df3a1fcb96";
+		};
+	};
+	[130] = {
+		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "data.drawHeavensfallKnockback = nil\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 2;
+					["clusterMintarget"] = 1;
+					["clusterRadius"] = 10;
+					["clusterRange"] = 25;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "turn off kb";
+			["throttleTime"] = 0;
+			["time"] = 688.9;
+			["timeRange"] = false;
+			["timelineIndex"] = 130;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0.30000001192093;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "fcc0e641-9b36-8fd0-bc55-9cad8a9b9f86";
+		};
+	};
 	[134] = {
 		[1] = {
 			["actions"] = {
@@ -5022,82 +5154,8 @@ end";
 		};
 	};
 	[143] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil or AnyoneCore.Settings.DrawNaelQuotes == false then self.used = true end\
-\
-for id, ent in pairs(TensorCore.getEntityGroupList(\"Melee DPS\")) do    \
-		if ent then                     \
-				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
-		end \
-end\
-\
-for id, ent in pairs(TensorCore.getEntityGroupList(\"Ranged DPS\")) do    \
-		if ent then                     \
-				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
-		end \
-end\
-\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "draw meteor stream on dps";
-			["throttleTime"] = 0;
-			["time"] = 741.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 143;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "ef4ddcf1-f55f-6397-8fc7-92872e42926b";
-		};
 	};
 	[145] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-for id, ent in pairs(TensorCore.getEntityGroupList(\"Tank\")) do    \
-		if ent then                     \
-				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
-		end \
-end\
-\
-for id, ent in pairs(TensorCore.getEntityGroupList(\"Healer\")) do    \
-		if ent then                     \
-				Argus.addTimedCircleFilled(5000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \
-		end \
-end\
-\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "draw meteor stream on tank/healer";
-			["throttleTime"] = 0;
-			["time"] = 745.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 145;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "9fdac04c-4f78-5e24-a09a-4fc5e01b24e8";
-		};
 	};
 	[146] = {
 		[1] = {
