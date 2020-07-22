@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.121,\
+		version = 3.122,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1639,7 +1639,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "071ef040-4e4f-f582-93a1-fab8e101ede1";
+		["uuid"] = "88fbb951-54c1-0559-940f-c8aad0fcdd40";
 	};
 	[2] = {
 		["actions"] = {
@@ -12749,7 +12749,6 @@ return TankMitigationTable[eventArgs.spellID] == true";
 					[1] = 2;
 					[2] = 1;
 					[3] = 3;
-					[4] = 7;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -12792,6 +12791,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 					[1] = 1;
 					[2] = 2;
 					[3] = 3;
+					[4] = 7;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
