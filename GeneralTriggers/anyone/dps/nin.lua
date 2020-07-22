@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.12,\
+		version = 3.121,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1639,7 +1639,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "eb31b04a-ade9-21af-810a-74e378fef1b3";
+		["uuid"] = "a7ed5493-d9e8-24d8-83df-76c6e8cde137";
 	};
 	[2] = {
 		["actions"] = {
@@ -2073,7 +2073,7 @@ end";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning or (xivopeners ~= nil and (xivopeners.running == false)) and AnyoneCore ~= nil and AnyoneCore.Settings.BadTeamDelay ~= nil";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore ~= nil and AnyoneCore.Settings.BadTeamDelay ~= nil";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -2363,7 +2363,7 @@ return correct ~= nil";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return AnyoneCore.Settings.PrepullHelper == true";
+				["conditionLua"] = "return AnyoneCore.Settings.PrepullHelper == true and Player.job == 30";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
