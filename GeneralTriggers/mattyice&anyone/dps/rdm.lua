@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.112,\
+		version = 3.113,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -901,7 +901,6 @@ function AnyoneCore.draw()\
             GUI:Spacing( )\
             GUI:Separator( )\
             GUI:Spacing( )\
-            if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 38 or Player.job == 25 or Player.job == 35 then\
 				local hovered = false\
 				AnyoneCore.Settings.PrepullHelper, changed = GUI:Checkbox(\"Prepull Helper\", AnyoneCore.Settings.PrepullHelper)\
 				if changed then AnyoneCore.save() end\
@@ -954,9 +953,6 @@ function AnyoneCore.draw()\
 				GUI:Separator( )\
 				GUI:Spacing( )\
 				end\
-\
-            end ---end of prepullhelper enabled check\
-\
             \
             if Player.job == 23 or Player.job == 27 or Player.job == 31 or Player.job == 34 or Player.job == 38 then\
 				local hovered = false\
@@ -1643,7 +1639,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "9b6b0a31-459b-27ba-9719-31b70339321a";
+		["uuid"] = "eca2141c-17d5-28b3-879c-5ed6a6f0d3c9";
 	};
 	[2] = {
 		["actions"] = {

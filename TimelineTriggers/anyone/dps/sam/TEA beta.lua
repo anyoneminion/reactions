@@ -1319,7 +1319,7 @@ self.used = true\
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = 9214;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1384,7 +1384,7 @@ self.used = true\
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2269,7 +2269,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6267,7 +6267,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6756,7 +6756,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6810,7 +6810,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 18 -- queen\
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
