@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.123,\
+		version = 3.124,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -134,7 +134,16 @@ local obj1 = {
 				[909] = \"anyone\\\\dps\\\\sam\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
-				[887] = \"anyone\\\\dps\\\\sam\\\\tea\", -- tea\
+				[887] = \"anyone\\\\dps\\\\sam\\\\TEA beta\", -- tea\
+			},\
+			[22] = { -- dragoon\
+				[906] = \"anyone\\\\dps\\\\drg\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\drg\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\drg\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\drg\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\drg\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\drg\\\\TEA beta\", -- tea\
 			},\
 			[25] = { -- black mage\
 				[906] = \"mattyice&anyone\\\\dps\\\\blm\\\\e5s\", --edens verse\
@@ -198,6 +207,7 @@ local obj1 = {
 			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
 			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
 			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
+			[22] = \"anyone\\\\dps\\\\drg\", -- dragoon\
 			[25] = \"mattyice&anyone\\\\dps\\\\blm\", -- black mage\
 			[35] = \"mattyice&anyone\\\\dps\\\\rdm\", -- red mage\
 			[32] = \"anyone\\\\tank\\\\drk\", -- dark knight\
@@ -1639,7 +1649,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "118a622d-2ffa-19ed-b1ef-bd4a4b56d5da";
+		["uuid"] = "d7333b54-7ef3-b98d-a38a-2b12109e4179";
 	};
 	[2] = {
 		["actions"] = {
@@ -5858,7 +5868,7 @@ end";
 				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
-				["name"] = "";
+				["name"] = "Dash: Rough Divide";
 				["potType"] = 1;
 				["setTarget"] = false;
 				["showPositionPreview"] = false;
@@ -5926,7 +5936,7 @@ end";
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Map check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -5962,7 +5972,8 @@ end";
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.06";
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.03\
+--- LOWER NUMBER IS BETTER. THIS IS 0.03 SECONDS BEFORE THE CHANNEL GOES OFF.";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -5999,7 +6010,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Timer check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -6066,7 +6077,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Settings check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -6139,7 +6150,7 @@ return spellCheck[eventArgs.spellID] == true";
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Spell check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;

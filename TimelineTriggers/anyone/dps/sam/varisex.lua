@@ -64,7 +64,7 @@ local obj1 = {
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "78e7e413-3ae7-a51d-9cc2-fd1c70bfa967";
+			["uuid"] = "aa81bdee-6d53-8b01-92c9-0a0788bb51cd";
 		};
 	};
 	[19] = {
@@ -128,7 +128,7 @@ local obj1 = {
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6866c876-5a10-c9d3-ab58-0bf464e8f034";
+			["uuid"] = "35db23ca-dcb0-b1c7-847b-e8f44607ae6f";
 		};
 	};
 	[28] = {
@@ -341,7 +341,7 @@ end\
 			["timerOffset"] = -18;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b9f0c93d-e3d7-94f3-8a30-dc7f4e50ab2c";
+			["uuid"] = "ffac72f2-10ee-4c0a-8d8e-9e8f636e174c";
 		};
 	};
 	[31] = {
@@ -554,7 +554,7 @@ end\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "097945f6-203e-bdd9-87d9-a2a81fbc97ef";
+			["uuid"] = "01be4f3f-b69d-6ba3-9fe5-6b7001a35f0d";
 		};
 	};
 	[34] = {
@@ -767,7 +767,7 @@ end\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "be2fc5d1-e2d6-338d-ab90-9a1652898394";
+			["uuid"] = "f5b11a86-6da5-5268-b1a5-fbb82d992721";
 		};
 	};
 	[45] = {
@@ -831,7 +831,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "13b34504-f28f-6e85-a15d-ec946762a7c9";
+			["uuid"] = "6087ec9e-ff38-34f5-928e-2b1e44fd86e5";
 		};
 	};
 	[59] = {
@@ -895,7 +895,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e0623430-2bf9-57f0-bc5c-acfc0690cb34";
+			["uuid"] = "0728f724-9f33-47f8-904d-79ecbe64f12a";
 		};
 	};
 	[73] = {
@@ -959,7 +959,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fd5fa9a9-20c9-ffa2-ae60-571fdcf7223b";
+			["uuid"] = "9d620e7e-1652-7365-a943-d2f76c221640";
 		};
 	};
 	[89] = {
@@ -1023,7 +1023,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7ff63723-ae6f-3a4e-ae62-7f1e81f27114";
+			["uuid"] = "03cbb8c2-6c6c-f766-ad43-f9447bb312ae";
 		};
 	};
 	[112] = {
@@ -1087,7 +1087,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "d9a5fcc7-9df0-3cec-a952-06d5f5c0af0b";
+			["uuid"] = "1465efa5-9d67-aaed-991b-1975705ee8de";
 		};
 	};
 	[119] = {
@@ -1151,7 +1151,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3994f986-5cb1-ddb9-a3bb-fa92448112b0";
+			["uuid"] = "64261095-c11f-1e74-afd4-0e65e1812feb";
 		};
 	};
 	[131] = {
@@ -1215,7 +1215,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "6f1bf8e3-2344-965c-9b57-8da8836b6d51";
+			["uuid"] = "b19e714b-7a85-fd80-b07a-80150f30109a";
 		};
 	};
 	[146] = {
@@ -1279,7 +1279,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "fa89ffda-7aab-33df-87b9-3de59e72174f";
+			["uuid"] = "e8f4afed-b999-f062-8b75-22f3a0a58349";
 		};
 	};
 	[155] = {
@@ -1492,7 +1492,7 @@ end\
 			["timerOffset"] = -18;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8b377095-0471-3979-8437-268ef3d8ac8e";
+			["uuid"] = "4f7778d8-781c-7afb-816e-fb538fd62baf";
 		};
 	};
 	[162] = {
@@ -1705,7 +1705,7 @@ end\
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "129dfd4a-a5c7-b18e-84ce-e9c6b4d9ba4b";
+			["uuid"] = "34c38ba4-a206-b4a1-afb4-1d999f29c9f9";
 		};
 	};
 	[168] = {
@@ -1769,7 +1769,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c5631e7d-4dfc-a962-9be9-87a2e3e81c24";
+			["uuid"] = "17270113-55ae-100c-8e1b-a5028e307cc4";
 		};
 	};
 	[175] = {
@@ -1833,7 +1833,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "c3ca87ee-b1ec-9f7b-b324-6d78117e1658";
+			["uuid"] = "2e5f856e-b5ff-b543-a81b-25d77228971c";
 		};
 	};
 	[178] = {
@@ -1897,7 +1897,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "74e8a7ca-b0c7-64bd-9dc2-2eda0fef4952";
+			["uuid"] = "3d0cbab6-21b2-b72a-94f9-16eded337037";
 		};
 	};
 	[200] = {
@@ -1961,7 +1961,7 @@ end\
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2456effe-7273-edbf-ae21-e346085a4f05";
+			["uuid"] = "72fdcac0-d5c8-d0af-9f2d-5885a56cd173";
 		};
 	};
 	[207] = {
@@ -2025,7 +2025,7 @@ end\
 			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ade1fe55-ef60-f6a3-a563-d582fe18a75d";
+			["uuid"] = "a1504a57-10a4-1108-9ad4-fca4e5ae9fc0";
 		};
 	};
 	["mapID"] = 913;

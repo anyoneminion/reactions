@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.123,\
+		version = 3.124,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -134,7 +134,16 @@ local obj1 = {
 				[909] = \"anyone\\\\dps\\\\sam\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
-				[887] = \"anyone\\\\dps\\\\sam\\\\tea\", -- tea\
+				[887] = \"anyone\\\\dps\\\\sam\\\\TEA beta\", -- tea\
+			},\
+			[22] = { -- dragoon\
+				[906] = \"anyone\\\\dps\\\\drg\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\drg\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\drg\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\drg\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\drg\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\drg\\\\TEA beta\", -- tea\
 			},\
 			[25] = { -- black mage\
 				[906] = \"mattyice&anyone\\\\dps\\\\blm\\\\e5s\", --edens verse\
@@ -198,6 +207,7 @@ local obj1 = {
 			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
 			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
 			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
+			[22] = \"anyone\\\\dps\\\\drg\", -- dragoon\
 			[25] = \"mattyice&anyone\\\\dps\\\\blm\", -- black mage\
 			[35] = \"mattyice&anyone\\\\dps\\\\rdm\", -- red mage\
 			[32] = \"anyone\\\\tank\\\\drk\", -- dark knight\
@@ -1639,7 +1649,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "2400bee0-d601-c702-bcb8-668cedbe2c5b";
+		["uuid"] = "8662b9c8-1ee8-e9a7-b8a1-4a52c01b5878";
 	};
 	[2] = {
 		["actions"] = {

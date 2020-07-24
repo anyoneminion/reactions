@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.123,\
+		version = 3.124,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -134,7 +134,16 @@ local obj1 = {
 				[909] = \"anyone\\\\dps\\\\sam\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
-				[887] = \"anyone\\\\dps\\\\sam\\\\tea\", -- tea\
+				[887] = \"anyone\\\\dps\\\\sam\\\\TEA beta\", -- tea\
+			},\
+			[22] = { -- dragoon\
+				[906] = \"anyone\\\\dps\\\\drg\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\dps\\\\drg\\\\e6s\",\
+				[908] = \"anyone\\\\dps\\\\drg\\\\e7s\",\
+				[909] = \"anyone\\\\dps\\\\drg\\\\e8s\",\
+				[733] = \"anyone\\\\dps\\\\drg\\\\ucob\", -- ucob\
+				[777] = nil, -- uwu\
+				[887] = \"anyone\\\\dps\\\\drg\\\\TEA beta\", -- tea\
 			},\
 			[25] = { -- black mage\
 				[906] = \"mattyice&anyone\\\\dps\\\\blm\\\\e5s\", --edens verse\
@@ -198,6 +207,7 @@ local obj1 = {
 			[38] = \"anyone\\\\dps\\\\dnc\", -- dancer\
 			[27] = \"anyone\\\\dps\\\\smn\", -- summoner\
 			[34] = \"anyone\\\\dps\\\\sam\", -- samurai\
+			[22] = \"anyone\\\\dps\\\\drg\", -- dragoon\
 			[25] = \"mattyice&anyone\\\\dps\\\\blm\", -- black mage\
 			[35] = \"mattyice&anyone\\\\dps\\\\rdm\", -- red mage\
 			[32] = \"anyone\\\\tank\\\\drk\", -- dark knight\
@@ -1639,7 +1649,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "8011e77f-6d7e-3f87-93ed-3eb9a746d48e";
+		["uuid"] = "46937f16-35dc-406d-9dc5-020c73e6d5ae";
 	};
 	[2] = {
 		["actions"] = {
@@ -2816,7 +2826,7 @@ self.used = true";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return AnyoneCore.Settings.DrawYaten == true and Argus ~= nil";
+				["conditionLua"] = "return (AnyoneCore ~= nil and (AnyoneCore.Settings.DrawYaten == true)) and Argus ~= nil";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -3279,7 +3289,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3287,7 +3297,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3344,7 +3354,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3352,7 +3362,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3475,7 +3485,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3540,7 +3550,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3678,7 +3688,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3743,7 +3753,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -7677,7 +7687,7 @@ end";
 				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
-				["name"] = "";
+				["name"] = "Dash: Gyoten";
 				["potType"] = 1;
 				["setTarget"] = false;
 				["showPositionPreview"] = false;
@@ -7745,7 +7755,7 @@ end";
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Map check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -7781,7 +7791,8 @@ end";
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.06";
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.03\
+--- LOWER NUMBER IS BETTER. THIS IS 0.03 SECONDS BEFORE THE CHANNEL GOES OFF.";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -7818,7 +7829,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Timer check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -7885,7 +7896,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Settings check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -7958,7 +7969,7 @@ return spellCheck[eventArgs.spellID] == true";
 				["matchAnyBuff"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "Spell check or dequeue";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9484,6 +9495,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 					[2] = 1;
 					[3] = 3;
 					[4] = 4;
+					[5] = 5;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -9801,6 +9813,73 @@ return InterruptTable[eventArgs.spellID] == true";
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
+			[5] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 6;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 10;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Event Entity";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
 		};
 		["enabled"] = true;
 		["eventType"] = 3;
@@ -9819,7 +9898,7 @@ return InterruptTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "40eb12a8-9bb3-6ac4-90db-b269dd388e04";
+		["uuid"] = "4eb6439c-a24a-62e8-8f01-1beedd339fd2";
 	};
 	[26] = {
 		["actions"] = {

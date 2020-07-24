@@ -16,7 +16,7 @@ SallySAM.SkillSettings.Omni.enabled = true\
 SallySAM.SkillSettings.SmartTrueNorth.enabled = false\
 elseif gACRSelectedProfiles[Player.job] == \"TensorWeeb\" then\
 ACR_TensorWeeb_Omni = true\
-ACR_TensorWeeb_TrueNorth = true\
+ACR_TensorWeeb_TrueNorth = false\
 end\
 \
 \
@@ -40,7 +40,7 @@ self.used = true";
 			["timerOffset"] = -11.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "084381f1-251d-b9d6-b6b4-e88d6ffc4525";
+			["uuid"] = "690a32f3-fdda-463c-8f7e-30ae65fc3cb2";
 		};
 		[2] = {
 			["actions"] = {
@@ -253,7 +253,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4df21859-7ff8-2fde-bab0-58cc6e53beef";
+			["uuid"] = "beeb97ec-9654-e52c-bf6c-2dac2b49ce41";
 		};
 	};
 	[3] = {
@@ -410,7 +410,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3544897b-2c87-352d-bc08-970e2bb29319";
+			["uuid"] = "0d7bbd65-4713-ae59-b533-9cce1bd46ecd";
 		};
 	};
 	[16] = {
@@ -439,7 +439,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "05fbd4f6-b842-73c1-b522-96c0e3506b80";
+			["uuid"] = "93cdb617-a9f3-1ad1-a41b-eba0b93d3009";
 		};
 		[2] = {
 			["actions"] = {
@@ -623,7 +623,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -631,7 +631,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -671,7 +671,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -679,7 +679,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -719,7 +719,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -727,7 +727,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -767,7 +767,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[8];
+					["buffIDList"] = multiRefObjects[9];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -775,7 +775,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[8];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -826,7 +826,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e093eb6c-cc46-b2f9-9f0a-334021286b5b";
+			["uuid"] = "aa1333ce-3d42-fc82-af99-d62824322cde";
 		};
 		[3] = {
 			["actions"] = {
@@ -1014,7 +1014,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1022,7 +1022,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1062,7 +1062,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1070,7 +1070,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1110,7 +1110,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1118,7 +1118,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1158,7 +1158,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[2];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1166,7 +1166,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[7];
+					["conditions"] = multiRefObjects[3];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1268,7 +1268,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b9ecb38e-3cc8-0e57-9ff9-8cc9b4650e07";
+			["uuid"] = "1723cf99-60dd-c904-b428-6f69155bfe84";
 		};
 		[4] = {
 			["actions"] = {
@@ -1333,7 +1333,7 @@ self.used = true";
 			["timerOffset"] = 12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "438029cb-7107-9a24-a05e-1a796c217f21";
+			["uuid"] = "cd853779-ca79-c7f4-87be-dd4a0213149e";
 		};
 	};
 	[27] = {
@@ -1450,7 +1450,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "10b19f10-791c-853e-89af-9e870f139ee7";
+			["uuid"] = "9d434305-7d74-ad56-bc57-ec8e68c988fe";
 		};
 	};
 	[38] = {
@@ -1477,7 +1477,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e1750efc-d22d-1b91-97e6-59b86ad7227e";
+			["uuid"] = "c247807e-1d82-c6b7-bacb-c5e19e56fc22";
 		};
 		[2] = {
 			["actions"] = {
@@ -1661,7 +1661,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1669,7 +1669,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1709,7 +1709,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1717,7 +1717,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1757,7 +1757,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1765,7 +1765,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1805,7 +1805,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1813,7 +1813,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[3];
+					["conditions"] = multiRefObjects[4];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1864,7 +1864,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "bd86e8ee-9fa3-34b0-bf53-3e7c1bdacb79";
+			["uuid"] = "78a80557-8ac7-2dff-ae26-ce3b64b7191f";
 		};
 		[3] = {
 			["actions"] = {
@@ -2052,7 +2052,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -2060,7 +2060,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2100,7 +2100,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -2108,7 +2108,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2148,7 +2148,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -2156,7 +2156,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2196,7 +2196,7 @@ self.used = true";
 					["buffCheckType"] = 3;
 					["buffDuration"] = 1.5;
 					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[9];
+					["buffIDList"] = multiRefObjects[7];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -2204,7 +2204,7 @@ self.used = true";
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2306,7 +2306,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "69d71ede-e3c0-d34d-9be1-88cd2245979d";
+			["uuid"] = "1ac54627-fc40-71b8-9d5d-600058aef28a";
 		};
 		[4] = {
 			["actions"] = {
@@ -2371,7 +2371,7 @@ self.used = true";
 			["timerOffset"] = 12;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "9240cbc0-7cad-f1e7-bbad-4ef3c8161ce6";
+			["uuid"] = "08cb1323-a649-236f-94c1-b479a85a96e8";
 		};
 	};
 	[47] = {
@@ -2581,7 +2581,7 @@ self.used = true";
 			["timerOffset"] = -42;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "075c3246-75d4-d68e-bc32-97c742011a8f";
+			["uuid"] = "fb477135-d157-d66b-b367-157519d3ad4e";
 		};
 		[2] = {
 			["actions"] = {
@@ -2609,7 +2609,7 @@ self.used = true";
 			["timerOffset"] = -0.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "baa2f6db-a749-29ac-8d6c-9490565229da";
+			["uuid"] = "95fc1a19-b517-90c7-91a9-6aad2c38b0fd";
 		};
 		[3] = {
 			["actions"] = {
@@ -2724,7 +2724,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "3750a07d-46fb-7d08-9b39-7f989d92d5a1";
+			["uuid"] = "bb2e4b03-8739-8ac0-a77a-7e4d9ae410c7";
 		};
 	};
 	[51] = {
@@ -2974,7 +2974,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1603a3f2-80d2-aebd-ad30-a20b4dbda832";
+			["uuid"] = "f79fde9d-d393-a9c1-9f2a-394d62d1d6d6";
 		};
 		[2] = {
 			["actions"] = {
@@ -3185,7 +3185,7 @@ self.used = true";
 			["timerOffset"] = -10;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "690a7add-0665-eb88-ae67-5579e4677349";
+			["uuid"] = "5b45ac02-4564-8f5f-8f94-ab1548b9efc5";
 		};
 		[3] = {
 			["actions"] = {
@@ -3391,7 +3391,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "af084c89-5b50-bc2f-b50d-36b4743d97a2";
+			["uuid"] = "64983b50-ed42-9661-8233-0440b6c0852e";
 		};
 		[4] = {
 			["actions"] = {
@@ -3505,7 +3505,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -3;
 			["used"] = false;
-			["uuid"] = "4d8fb660-e84f-acd1-b399-e4db3a3f5039";
+			["uuid"] = "4eaf19e4-34c2-6ef9-bc7d-40593da96ec2";
 		};
 		[5] = {
 			["actions"] = {
@@ -3567,7 +3567,7 @@ return false";
 			["timerOffset"] = 5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ad8e309d-0ed8-9dd7-ba28-70e4c48f4ab5";
+			["uuid"] = "ad874455-48f2-085a-a998-be78d3745beb";
 		};
 	};
 	[52] = {
@@ -3740,7 +3740,7 @@ self.used = true";
 			["timerOffset"] = -0.5;
 			["timerStartOffset"] = -30;
 			["used"] = false;
-			["uuid"] = "e169f7ca-474b-7e51-8a30-4e0ca86520eb";
+			["uuid"] = "94e20ef0-002a-0fd4-89b9-9020c59757ae";
 		};
 		[2] = {
 			["actions"] = {
@@ -3934,7 +3934,7 @@ self.used = true";
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3984,7 +3984,7 @@ return false";
 					["conditionLua"] = "local t = Player:GetTarget()\
 return t == nil or t.hp.current <= 0 -- no target or target dead, then swap";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4039,7 +4039,7 @@ return t == nil or t.hp.current <= 0 -- no target or target dead, then swap";
 end\
 return true";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
+					["conditions"] = multiRefObjects[1];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -4243,7 +4243,7 @@ return true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = -42;
 			["used"] = false;
-			["uuid"] = "b5737f24-f58a-59df-b288-910583a69742";
+			["uuid"] = "53e0aa9a-46e3-ed9b-b480-65c40a6693f8";
 		};
 	};
 	[71] = {
@@ -4498,7 +4498,7 @@ end";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "50581a02-5ccc-dfdf-b007-b5a6639ec8ea";
+			["uuid"] = "483cd2ba-8baf-49a9-8aba-077f3aa51da9";
 		};
 		[2] = {
 			["actions"] = {
@@ -4612,7 +4612,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "44514ea8-9556-896a-a96a-b5c4923deb71";
+			["uuid"] = "625d44c2-46dc-5b6f-970d-ba70e4c7454e";
 		};
 	};
 	[83] = {
@@ -4905,7 +4905,7 @@ self.used = true";
 			["timerOffset"] = -9;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "e2b3c971-33ca-ab98-b5b8-4ddf3f320f35";
+			["uuid"] = "2d5f1d02-a56b-aafc-ba3f-96e7c2359450";
 		};
 	};
 	[87] = {
@@ -5021,7 +5021,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ddc3f815-a5dd-2ef7-a6f1-cb0288382a9d";
+			["uuid"] = "891f13bf-105c-8c30-91e4-91e6f7c216cb";
 		};
 		[2] = {
 			["actions"] = {
@@ -5136,7 +5136,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "4793dcc8-222f-1dfb-8f2f-017b7ca18843";
+			["uuid"] = "8d2f5d46-f38f-d09f-a43c-7638f46da2f2";
 		};
 	};
 	[92] = {
@@ -5253,7 +5253,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "2b9a62d8-e2ce-ecb0-af0f-74a89e58ff35";
+			["uuid"] = "baa10a4c-e4bf-63d6-9899-d994bc4728aa";
 		};
 	};
 	[93] = {
@@ -5372,7 +5372,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "b98f0ac5-5c94-89ac-bb28-0d6073b2f579";
+			["uuid"] = "a84021dc-2d82-de54-a81a-f76683871683";
 		};
 	};
 	[101] = {
@@ -5489,7 +5489,7 @@ self.used = true";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "069b81aa-5fff-9c87-8ca4-a8e0c3c38393";
+			["uuid"] = "9823db0a-fcdd-26c8-9c59-7f174e336ea8";
 		};
 	};
 	[104] = {
@@ -5606,7 +5606,7 @@ self.used = true";
 			["timerOffset"] = -6;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "cd2d5326-2f63-77c3-a650-f6a3719d81f2";
+			["uuid"] = "d29dc0bc-6b18-d125-8610-b07907bd44cf";
 		};
 		[2] = {
 			["actions"] = {
@@ -5634,7 +5634,7 @@ self.used = true";
 			["timerOffset"] = -0.5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "ef1292af-dc3c-1815-bf94-804602b2b912";
+			["uuid"] = "3a59f148-b307-fbe4-bf67-b3060580dcc3";
 		};
 	};
 	[107] = {
@@ -5750,7 +5750,7 @@ return false";
 			["timerOffset"] = 1.375;
 			["timerStartOffset"] = -8;
 			["used"] = false;
-			["uuid"] = "e2ce2e20-2b4d-73de-b842-dc866c97dc12";
+			["uuid"] = "8df6d7ab-2f71-4f73-b50a-6febec7d1038";
 		};
 		[2] = {
 			["actions"] = {
@@ -5998,7 +5998,7 @@ self.used = true";
 			["timerOffset"] = -1;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "5b880ab1-82de-9bd2-b397-6eebf594cba9";
+			["uuid"] = "172c81cb-0be0-772b-b141-fc68a4f1d0c7";
 		};
 	};
 	[108] = {
@@ -6311,7 +6311,7 @@ self.used = true";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "822ff89f-d086-3d65-b810-ea6c658dde83";
+			["uuid"] = "97f9cf6b-6de8-e1c3-b87b-2ddadf10f097";
 		};
 	};
 	[109] = {
@@ -6349,7 +6349,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "912247f0-80f4-72b0-89c8-b2bf467b5272";
+			["uuid"] = "0aaef289-a4f9-9332-9c0c-c26c18fd9411";
 		};
 		[2] = {
 			["actions"] = {
@@ -6385,7 +6385,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 11;
 			["used"] = false;
-			["uuid"] = "a8240df5-2548-e711-805c-e1aee3622b13";
+			["uuid"] = "6df444eb-2688-ccfc-abad-6ede196430f7";
 		};
 		[3] = {
 			["actions"] = {
@@ -6421,7 +6421,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 22;
 			["used"] = false;
-			["uuid"] = "dbad34a7-ef90-3445-9689-0167b5429ab6";
+			["uuid"] = "c34f34dc-c8d5-0e92-8ce5-0e9b82c3860c";
 		};
 	};
 	[113] = {
@@ -6538,7 +6538,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "02430f41-5d6d-89ab-bb24-53c9cf325f0d";
+			["uuid"] = "94ee51f9-17a3-b433-a5d1-5d4544f4dae8";
 		};
 	};
 	[116] = {
@@ -6576,7 +6576,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "7fc0935b-eeea-02ea-9abb-c1ee2a1adbfd";
+			["uuid"] = "510b65f9-2013-15ab-a9a7-113de29f154e";
 		};
 		[2] = {
 			["actions"] = {
@@ -6612,7 +6612,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 11;
 			["used"] = false;
-			["uuid"] = "6c55f6a5-b569-f3d6-ba55-1b8536d12516";
+			["uuid"] = "78f18aca-a374-60a5-804a-974c9a119735";
 		};
 		[3] = {
 			["actions"] = {
@@ -6648,7 +6648,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = 0;
 			["timerStartOffset"] = 22;
 			["used"] = false;
-			["uuid"] = "5a4834c3-e5e5-f26e-b6ac-0329a98f077c";
+			["uuid"] = "64e64d34-3b6c-3eec-811a-f32d72df3f28";
 		};
 	};
 	[120] = {
@@ -6765,7 +6765,7 @@ self.used = table.size(drawnOrbs) >= 3";
 			["timerOffset"] = -3;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "bf59dbef-51d6-6257-93c6-7bdf5206fbd4";
+			["uuid"] = "86009d7e-ff28-0667-a3f8-52629798707d";
 		};
 	};
 	["mapID"] = 908;
