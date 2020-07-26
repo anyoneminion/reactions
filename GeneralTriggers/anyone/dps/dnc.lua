@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.13,\
+		version = 3.131,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -955,7 +955,7 @@ function AnyoneCore.draw()\
 					if hovered then\
 						GUI:BeginTooltip()\
 						GUI:PushTextWrapPos(300)\
-						GUI:Text(\"Uses Elusive Jump to get to the boss with at the end of the countdown.\\n\")\
+						GUI:Text(\"Uses Elusive Jump to get to the boss at the end of the countdown.\\n\")\
 						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
 						GUI:PopTextWrapPos()\
 						GUI:EndTooltip()\
@@ -1669,7 +1669,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "8423ac4a-9f25-4068-9be7-a29e21f7b88e";
+		["uuid"] = "1c12298b-faed-6a03-a099-a4fc93b14a14";
 	};
 	[2] = {
 		["actions"] = {
