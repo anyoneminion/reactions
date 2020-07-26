@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.124,\
+		version = 3.13,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -182,10 +182,10 @@ local obj1 = {
 				[887] = nil, -- tea\
 			},\
 			[19] = { -- paladin\
-				[906] = \"anyone\\\\tank\\\\war\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\tank\\\\war\\\\e6s\",\
-				[908] = \"anyone\\\\tank\\\\war\\\\e7s\",\
-				[909] = \"anyone\\\\tank\\\\war\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\pld\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\pld\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\pld\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\pld\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
@@ -460,6 +460,11 @@ local obj1 = {
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages \
 	end\
 	\
+	if Settings.AnyoneCore.PrepullBackflip == nil then\
+		Settings.AnyoneCore.PrepullBackflip = true -- true is default\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -506,6 +511,7 @@ local obj1 = {
 			DrawYaten = Settings.AnyoneCore.DrawYaten,\
 			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
 			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
+			PrepullBackflip = Settings.AnyoneCore.PrepullBackflip,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -625,6 +631,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.ShowExtraDebugMessages = AnyoneCore.Settings.ShowExtraDebugMessages\
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages\
+		\
+		Settings.AnyoneCore.PrepullBackflip = AnyoneCore.Settings.PrepullBackflip\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -918,9 +927,8 @@ function AnyoneCore.draw()\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
+					GUI:Text(\"Helps with pre-pull before you start the boss fight.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
-					GUI:TextColored(1,0,0,1,\"This will only work on the English client. As it works by detecting the text signalling the start of the countdown. You may be able to get it working if you properly translate the text.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -940,7 +948,19 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end			\
 				end ---end of job check\
-				if (Player.job ~= 23 and Player.job ~= 31) then\
+					local hovered = false\
+					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Uses Elusive Jump to get to the boss with at the end of the countdown.\\n\")\
+						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
 				local hovered = false\
@@ -1649,7 +1669,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "46937f16-35dc-406d-9dc5-020c73e6d5ae";
+		["uuid"] = "f4bdeebb-3b50-08a8-8c5c-7b9ad54caa4d";
 	};
 	[2] = {
 		["actions"] = {
@@ -3289,7 +3309,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3297,7 +3317,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3354,7 +3374,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3362,7 +3382,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3485,7 +3505,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3493,7 +3513,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3550,7 +3570,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3558,7 +3578,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3688,7 +3708,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3753,7 +3773,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -9625,7 +9645,7 @@ return InterruptTable[eventArgs.spellID] == true";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 34 and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -9821,13 +9841,13 @@ return InterruptTable[eventArgs.spellID] == true";
 				["buffID"] = -1;
 				["buffIDList"] = {
 				};
-				["category"] = 1;
+				["category"] = 3;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
-				["conditionType"] = 6;
+				["conditionType"] = 4;
 				["conditions"] = {
 				};
 				["contentid"] = -1;
@@ -9857,7 +9877,7 @@ return InterruptTable[eventArgs.spellID] == true";
 				["hpType"] = 1;
 				["hpValue"] = 0;
 				["inCombatType"] = 1;
-				["inRangeValue"] = 10;
+				["inRangeValue"] = 3;
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
@@ -9872,9 +9892,9 @@ return InterruptTable[eventArgs.spellID] == true";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = "Nearest";
-				["partyTargetType"] = "All";
+				["partyTargetType"] = "Event Entity";
 				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Event Entity";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -9898,7 +9918,7 @@ return InterruptTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "4eb6439c-a24a-62e8-8f01-1beedd339fd2";
+		["uuid"] = "b7bb7453-9667-903a-9184-fc31ddf56a9a";
 	};
 	[26] = {
 		["actions"] = {
@@ -10082,7 +10102,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -10408,7 +10428,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "6c369742-fc84-6ea5-9b05-5932034b59c0";
+		["uuid"] = "4d55fae9-ab00-b122-b8c9-19f402301424";
 	};
 }
 return obj1

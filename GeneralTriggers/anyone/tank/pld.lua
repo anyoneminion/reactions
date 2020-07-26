@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.124,\
+		version = 3.13,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -182,10 +182,10 @@ local obj1 = {
 				[887] = nil, -- tea\
 			},\
 			[19] = { -- paladin\
-				[906] = \"anyone\\\\tank\\\\war\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\tank\\\\war\\\\e6s\",\
-				[908] = \"anyone\\\\tank\\\\war\\\\e7s\",\
-				[909] = \"anyone\\\\tank\\\\war\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\pld\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\pld\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\pld\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\pld\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
@@ -460,6 +460,11 @@ local obj1 = {
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages \
 	end\
 	\
+	if Settings.AnyoneCore.PrepullBackflip == nil then\
+		Settings.AnyoneCore.PrepullBackflip = true -- true is default\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -506,6 +511,7 @@ local obj1 = {
 			DrawYaten = Settings.AnyoneCore.DrawYaten,\
 			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
 			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
+			PrepullBackflip = Settings.AnyoneCore.PrepullBackflip,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -625,6 +631,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.ShowExtraDebugMessages = AnyoneCore.Settings.ShowExtraDebugMessages\
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages\
+		\
+		Settings.AnyoneCore.PrepullBackflip = AnyoneCore.Settings.PrepullBackflip\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -918,9 +927,8 @@ function AnyoneCore.draw()\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
+					GUI:Text(\"Helps with pre-pull before you start the boss fight.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
-					GUI:TextColored(1,0,0,1,\"This will only work on the English client. As it works by detecting the text signalling the start of the countdown. You may be able to get it working if you properly translate the text.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -940,7 +948,19 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end			\
 				end ---end of job check\
-				if (Player.job ~= 23 and Player.job ~= 31) then\
+					local hovered = false\
+					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Uses Elusive Jump to get to the boss with at the end of the countdown.\\n\")\
+						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
 				local hovered = false\
@@ -1649,7 +1669,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "8ab1a360-b6f3-0776-b011-630305d58919";
+		["uuid"] = "f1070798-8a98-c833-9a9a-fb2832124c4d";
 	};
 	[2] = {
 		["actions"] = {
@@ -7673,6 +7693,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 					[3] = 3;
 					[4] = 4;
 					[5] = 6;
+					[6] = 7;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -7716,6 +7737,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 					[2] = 5;
 					[3] = 4;
 					[4] = 6;
+					[5] = 7;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -7849,7 +7871,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperInterrupt == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -8122,13 +8144,13 @@ return KnockbackTable[eventArgs.spellID] == true";
 				["buffID"] = -1;
 				["buffIDList"] = {
 				};
-				["category"] = 1;
+				["category"] = 3;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
-				["conditionType"] = 6;
+				["conditionType"] = 4;
 				["conditions"] = {
 				};
 				["contentid"] = -1;
@@ -8173,9 +8195,76 @@ return KnockbackTable[eventArgs.spellID] == true";
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "Event Entity";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[7] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return gACRSelectedProfiles[Player.job] ~= \"RikuWAR\"";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
 				["partyTargetType"] = "All";
 				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Event Entity";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -8199,7 +8288,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "6849f8ad-0bdf-b6ac-90c8-f01bc60179c0";
+		["uuid"] = "50bbe1eb-eefd-463f-b596-cc45c1510138";
 	};
 	[21] = {
 		["actions"] = {
@@ -8383,7 +8472,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 19 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -8709,7 +8798,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "8a4f7958-3ab4-4c40-8cb4-4ae9eca406b6";
+		["uuid"] = "72557dd6-39fa-de17-b3b5-57e482e54676";
 	};
 	[22] = {
 		["actions"] = {
@@ -10938,7 +11027,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return TankMitigationTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 6";
+return ReprisalMitigationTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 6";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -11000,13 +11089,13 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["buffID"] = -1;
 				["buffIDList"] = {
 				};
-				["category"] = 1;
+				["category"] = 3;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 2;
 				["conditionLua"] = "";
-				["conditionType"] = 6;
+				["conditionType"] = 4;
 				["conditions"] = {
 				};
 				["contentid"] = -1;
@@ -11051,9 +11140,9 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
+				["partyTargetType"] = "Event Entity";
 				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Event Entity";
+				["rangeCheckSourceType"] = "Self";
 				["rangeSourceContentID"] = -1;
 				["rangeSourceName"] = "";
 				["setEventTargetSubtype"] = 1;
@@ -11360,7 +11449,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "local ReprisalMitigationTable = {\
+				["conditionLua"] = "local TankMitigationTable = {\
 --dungeons\
 [7963] = true,\
 [7974] = true,\

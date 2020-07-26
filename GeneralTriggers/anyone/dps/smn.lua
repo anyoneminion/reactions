@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.124,\
+		version = 3.13,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -182,10 +182,10 @@ local obj1 = {
 				[887] = nil, -- tea\
 			},\
 			[19] = { -- paladin\
-				[906] = \"anyone\\\\tank\\\\war\\\\e5s\", --edens verse\
-				[907] = \"anyone\\\\tank\\\\war\\\\e6s\",\
-				[908] = \"anyone\\\\tank\\\\war\\\\e7s\",\
-				[909] = \"anyone\\\\tank\\\\war\\\\e8s\",\
+				[906] = \"anyone\\\\tank\\\\pld\\\\e5s\", --edens verse\
+				[907] = \"anyone\\\\tank\\\\pld\\\\e6s\",\
+				[908] = \"anyone\\\\tank\\\\pld\\\\e7s\",\
+				[909] = \"anyone\\\\tank\\\\pld\\\\e8s\",\
 				[733] = nil, -- ucob\
 				[777] = nil, -- uwu\
 				[887] = nil, -- tea\
@@ -460,6 +460,11 @@ local obj1 = {
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages \
 	end\
 	\
+	if Settings.AnyoneCore.PrepullBackflip == nil then\
+		Settings.AnyoneCore.PrepullBackflip = true -- true is default\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -506,6 +511,7 @@ local obj1 = {
 			DrawYaten = Settings.AnyoneCore.DrawYaten,\
 			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
 			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
+			PrepullBackflip = Settings.AnyoneCore.PrepullBackflip,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -625,6 +631,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.ShowExtraDebugMessages = AnyoneCore.Settings.ShowExtraDebugMessages\
 		Settings.AnyoneCore.ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages\
+		\
+		Settings.AnyoneCore.PrepullBackflip = AnyoneCore.Settings.PrepullBackflip\
+		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -918,9 +927,8 @@ function AnyoneCore.draw()\
 				if hovered then\
 					GUI:BeginTooltip()\
 					GUI:PushTextWrapPos(300)\
-					GUI:Text(\"Helps with pre-pull before you start the boss fight. Pelotons at a random time after countdown starts, enables 'Start Combat' in Assist settings or targets the boss at the correct time.\\n\")\
+					GUI:Text(\"Helps with pre-pull before you start the boss fight.\\n\")\
 					GUI:TextColored(1,1,0,1,\"Careful if you've got a trigger happy team. If this is enabled and you're AFK, your team will be really confused how you were attacking the boss while AFK.\")\
-					GUI:TextColored(1,0,0,1,\"This will only work on the English client. As it works by detecting the text signalling the start of the countdown. You may be able to get it working if you properly translate the text.\")\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
@@ -940,7 +948,19 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end			\
 				end ---end of job check\
-				if (Player.job ~= 23 and Player.job ~= 31) then\
+					local hovered = false\
+					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Uses Elusive Jump to get to the boss with at the end of the countdown.\\n\")\
+						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
 				local hovered = false\
@@ -1649,7 +1669,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "f0ce470f-bedd-9fd2-9e17-6b8275a64300";
+		["uuid"] = "a8860556-fe91-1625-ab9e-8857c7725530";
 	};
 	[2] = {
 		["actions"] = {
@@ -4694,7 +4714,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4702,7 +4722,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4759,7 +4779,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[12];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4767,7 +4787,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4890,7 +4910,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4955,7 +4975,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5093,7 +5113,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5158,7 +5178,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5351,7 +5371,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5359,7 +5379,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5416,7 +5436,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5424,7 +5444,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5481,7 +5501,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5489,7 +5509,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5617,7 +5637,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5625,7 +5645,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5682,7 +5702,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5690,7 +5710,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5929,7 +5949,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5937,7 +5957,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5994,7 +6014,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6002,7 +6022,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6059,7 +6079,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[12];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6067,7 +6087,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -12087,7 +12107,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 27 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -12574,7 +12594,7 @@ return MitigationTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e383c743-693b-76bc-a252-62296846f35f";
+		["uuid"] = "d12cfaf5-ad23-3c95-a4f1-78c15225a899";
 	};
 	[29] = {
 		["actions"] = {
@@ -12758,7 +12778,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 27 and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperKnockback == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -13084,7 +13104,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "e6f8299d-a006-cd84-8f06-217b29231ecc";
+		["uuid"] = "ef98a0d2-8287-926a-b47c-4378450e0213";
 	};
 	[30] = {
 		["actions"] = {

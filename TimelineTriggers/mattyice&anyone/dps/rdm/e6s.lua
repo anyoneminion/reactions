@@ -1099,7 +1099,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = 2235;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1107,7 +1107,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1147,7 +1147,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = 2236;
-					["buffIDList"] = multiRefObjects[2];
+					["buffIDList"] = multiRefObjects[1];
 					["category"] = 2;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -1155,7 +1155,7 @@ self.used = true";
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1907,7 +1907,7 @@ self.used = true";
 end\
 local markedClones = {}\
 for id, ent in pairs(EntityList(\"\")) do\
-		if not markedClones[id] and ent.contentid == 9288 and ent.castinginfo.channelingid == 19473 then\
+		if not markedClones[id] and ent.contentid == 9289 and ent.castinginfo.channelingid == 19473 then\
 				Argus.addTimedRectFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 15, 5, ent.pos.h, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, true, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
 				markedClones[id] = true	\
 		end\

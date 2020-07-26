@@ -890,7 +890,6 @@ self.used = table.size(Orbs) >= 7";
 					["clusterRange"] = 30;
 					["conditions"] = {
 						[1] = 1;
-						[2] = 2;
 					};
 					["endIfUsed"] = false;
 					["gVar"] = "";
