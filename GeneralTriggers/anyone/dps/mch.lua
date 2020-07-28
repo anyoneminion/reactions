@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.132,\
+		version = 3.14,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -948,18 +948,20 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end			\
 				end ---end of job check\
-					local hovered = false\
-					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
-					if changed then AnyoneCore.save() end\
-					if not hovered then hovered = GUI:IsItemHovered() end\
-					if hovered then\
-						GUI:BeginTooltip()\
-						GUI:PushTextWrapPos(300)\
-						GUI:Text(\"Uses Elusive Jump to get to the boss at the end of the countdown.\\n\")\
-						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
-						GUI:PopTextWrapPos()\
-						GUI:EndTooltip()\
-					end\
+				if Player.job == 22 then\
+				local hovered = false\
+				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses Elusive Jump to get to the boss at the end of the countdown.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
 				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
@@ -1669,7 +1671,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "7fdfa773-a91a-d003-a777-2a53bf347d40";
+		["uuid"] = "529486c6-ad5f-84a6-9a6f-d48917ab806c";
 	};
 	[2] = {
 		["actions"] = {
@@ -4356,7 +4358,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4364,7 +4366,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4421,7 +4423,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4429,7 +4431,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4619,7 +4621,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4684,7 +4686,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4814,7 +4816,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4879,7 +4881,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[7];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5083,7 +5085,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5091,7 +5093,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5148,7 +5150,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5156,7 +5158,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5213,7 +5215,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5221,7 +5223,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5281,7 +5283,7 @@ self.used = true";
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
 		["name"] = "toggle off with hatch";
-		["throttleTime"] = 5000;
+		["throttleTime"] = 4850;
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
@@ -5411,7 +5413,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5476,7 +5478,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5756,7 +5758,7 @@ self.used = true";
 				["actionLua"] = "if Argus == nil then self.used = true return end\
 local ent = EntityList:Get(eventArgs.entityID)\
 if not ent then self.used = true return end\
-Argus.addTimedConeFilled(6000, 0, 2.38, 0, 25, math.rad(90), 0, 30, {r = 0.7, g = 0.2, b = 0}, 0.3, 0.3, 0, nil, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1)\
+Argus.addTimedConeFilled(6000, 0, 0, 0, 25, math.rad(90), 0, 30, {r = 0.7, g = 0.2, b = 0}, 0.3, 0.3, 0, nil, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1)\
 self.used = true";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;

@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.132,\
+		version = 3.14,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -948,18 +948,20 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end			\
 				end ---end of job check\
-					local hovered = false\
-					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
-					if changed then AnyoneCore.save() end\
-					if not hovered then hovered = GUI:IsItemHovered() end\
-					if hovered then\
-						GUI:BeginTooltip()\
-						GUI:PushTextWrapPos(300)\
-						GUI:Text(\"Uses Elusive Jump to get to the boss at the end of the countdown.\\n\")\
-						GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
-						GUI:PopTextWrapPos()\
-						GUI:EndTooltip()\
-					end\
+				if Player.job == 22 then\
+				local hovered = false\
+				AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Backflip in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Uses Elusive Jump to get to the boss at the end of the countdown.\\n\")\
+					GUI:TextColored(1,1,0,1,\"Line yourself up to backflip into max attack range of the boss, and not inside the bosses actual hitbox. Otherwise you will pull too early.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
 				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
@@ -1669,7 +1671,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "30127609-5bae-a6de-959d-29d7c9c0870e";
+		["uuid"] = "be41713f-0e70-6753-896d-44d5359b52d2";
 	};
 	[2] = {
 		["actions"] = {
