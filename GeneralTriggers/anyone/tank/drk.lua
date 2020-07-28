@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.14,\
+		version = 3.141,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -465,6 +465,11 @@ local obj1 = {
 		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip \
 	end\
 	\
+	if Settings.AnyoneCore.PrepullPlacePet == nil then\
+		Settings.AnyoneCore.PrepullPlacePet = true -- true is default\
+		Settings.AnyoneCore.PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -512,6 +517,7 @@ local obj1 = {
 			MiniReactionsTimer = Settings.AnyoneCore.MiniReactionsTimer,\
 			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
 			PrepullBackflip = Settings.AnyoneCore.PrepullBackflip,\
+			PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -634,6 +640,9 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.PrepullBackflip = AnyoneCore.Settings.PrepullBackflip\
 		Settings.AnyoneCore.PrepullBackflip = Settings.AnyoneCore.PrepullBackflip\
+		\
+		Settings.AnyoneCore.PrepullPlacePet = AnyoneCore.Settings.PrepullPlacePet\
+		Settings.AnyoneCore.PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -962,6 +971,20 @@ function AnyoneCore.draw()\
 					GUI:EndTooltip()\
 				end\
 				end\
+				if Player.job == 27 then\
+				local hovered = false\
+				AnyoneCore.Settings.PrepullPlacePet, changed = GUI:Checkbox(\"Place pet on boss in Prepull\", AnyoneCore.Settings.PrepullPlacePet)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Places your pet on top of the boss after countdown starts.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				end\
+				\
 				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
 					GUI:NewLine()\
 				end\
@@ -1671,7 +1694,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "c0305607-1df6-b193-95f1-558791d3dc44";
+		["uuid"] = "371beeef-0654-22cc-8e7f-7e18d662db0c";
 	};
 	[2] = {
 		["actions"] = {
