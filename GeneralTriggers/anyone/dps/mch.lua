@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.141,\
+		version = 3.142,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -59,7 +59,7 @@ local obj1 = {
 	end\
 	\
 	function download_files_noreading()\
-		io.popen([[start /b powershell -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
+		io.popen([[start /b powershell -verb runas -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
 		lastStatusCheck2 = true\
 		d(\"[AnyoneCore] Updater: Download was started. Moving to next step...\")\
 	end\
@@ -1694,7 +1694,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "400a3243-6be2-fafd-99a9-bbfe2b63fd00";
+		["uuid"] = "756a4ab0-6a80-afe3-803b-59ed6997edea";
 	};
 	[2] = {
 		["actions"] = {
@@ -4381,7 +4381,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4389,7 +4389,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4446,7 +4446,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[6];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4454,7 +4454,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4644,7 +4644,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4652,7 +4652,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4709,7 +4709,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4717,7 +4717,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4839,7 +4839,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4847,7 +4847,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4904,7 +4904,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4912,7 +4912,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5108,7 +5108,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5116,7 +5116,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5173,7 +5173,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5181,7 +5181,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5238,7 +5238,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5246,7 +5246,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5428,7 +5428,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5436,7 +5436,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5493,7 +5493,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5501,7 +5501,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -9633,9 +9633,9 @@ self.used = true";
 				["actionID"] = -1;
 				["actionLua"] = "Argus.addRectFilled(\
         0,\
-        2.38,\
         0,\
-        TensorCore.getDistance2d({x = 0, y = 0, z = 0}, Player.pos) + 10,\
+        0,\
+        TensorCore.getDistance2d({x = 0, y = 0, z = 0}, Player.pos) + 11,\
         0,\
         TensorCore.getHeadingToTarget({x = 0, y = 0, z = 0}, Player.pos),\
         nil,\
@@ -9643,7 +9643,7 @@ self.used = true";
         1.5\
     )\
     \
-    local projectedPos = TensorCore.getPosInDirection(Player.pos, TensorCore.getHeadingToTarget({x = 0, y = 0, z = 0}, Player.pos), 10)\
+    local projectedPos = TensorCore.getPosInDirection(Player.pos, TensorCore.getHeadingToTarget({x = 0, y = 2.38, z = 0}, Player.pos), 11)\
     Argus.addCircleFilled(\
         projectedPos.x,\
         projectedPos.y,\
@@ -9981,7 +9981,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "f821d27d-67df-67d0-b951-760277412257";
+		["uuid"] = "a6655745-dee8-c86c-8e79-baec306359c3";
 	};
 	[23] = {
 		["actions"] = {

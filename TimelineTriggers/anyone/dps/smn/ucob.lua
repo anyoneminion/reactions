@@ -1703,6 +1703,70 @@ return false";
 			["used"] = false;
 			["uuid"] = "9dbf8ed0-0980-40a2-9aff-29fa082749e7";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local target = Player:GetTarget()\
+ActionList:Get(11,3):Cast(0,0,0)\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "Place pet (new)";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "place pet";
+			["throttleTime"] = 0;
+			["time"] = 213.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -8;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "899c83d6-36dd-a9f0-aa61-cbb85132d734";
+		};
 	};
 	[49] = {
 		[1] = {
@@ -7274,6 +7338,70 @@ return false";
 			["used"] = false;
 			["uuid"] = "603a3b24-4040-4562-bb26-d4c349e44a67";
 		};
+		[2] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local target = Player:GetTarget()\
+ActionList:Get(11,3):Cast(0,0,0)\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "Place pet (new)";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "place pet";
+			["throttleTime"] = 0;
+			["time"] = 702.5;
+			["timeRange"] = false;
+			["timelineIndex"] = 134;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "9e487af0-c894-e824-bff7-f1c3e41a3952";
+		};
 	};
 	[136] = {
 	};
@@ -10575,6 +10703,70 @@ self.used = true";
 			["timerStartOffset"] = 0;
 			["used"] = false;
 			["uuid"] = "464b5304-3cc7-3778-a138-23340d778f44";
+		};
+		[3] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 4;
+					["actionID"] = -1;
+					["actionLua"] = "local target = Player:GetTarget()\
+ActionList:Get(11,3):Cast(0,0,0)\
+self.used = true";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
+					["conditions"] = {
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "Place pet (new)";
+					["potType"] = 1;
+					["setTarget"] = false;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Self";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "place pet";
+			["throttleTime"] = 0;
+			["time"] = 1245;
+			["timeRange"] = false;
+			["timelineIndex"] = 193;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = -6;
+			["timerStartOffset"] = 0;
+			["used"] = false;
+			["uuid"] = "4a47de2b-2fc9-05f3-8191-86e6f72dfae3";
 		};
 	};
 	["mapID"] = 733;
