@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.142,\
+		version = 3.15,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -470,6 +470,26 @@ local obj1 = {
 		Settings.AnyoneCore.PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet \
 	end\
 	\
+	if Settings.AnyoneCore.UseCleanse == nil then\
+		Settings.AnyoneCore.UseCleanse = false -- false is default\
+		Settings.AnyoneCore.UseCleanse = Settings.AnyoneCore.UseCleanse \
+	end\
+	\
+	if Settings.AnyoneCore.UseCleanseTop == nil then\
+		Settings.AnyoneCore.UseCleanseTop = false -- false is default\
+		Settings.AnyoneCore.UseCleanseTop = Settings.AnyoneCore.UseCleanseTop \
+	end\
+	\
+	if Settings.AnyoneCore.PrepullAetherpact == nil then\
+		Settings.AnyoneCore.PrepullAetherpact = true -- true is default\
+		Settings.AnyoneCore.PrepullAetherpact = Settings.AnyoneCore.PrepullAetherpact \
+	end\
+	\
+	if Settings.AnyoneCore.SaferKnockback == nil then\
+		Settings.AnyoneCore.SaferKnockback = false -- false is default\
+		Settings.AnyoneCore.SaferKnockback = Settings.AnyoneCore.SaferKnockback \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -518,6 +538,10 @@ local obj1 = {
 			ShowExtraDebugMessages = Settings.AnyoneCore.ShowExtraDebugMessages,\
 			PrepullBackflip = Settings.AnyoneCore.PrepullBackflip,\
 			PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet,\
+			UseCleanse = Settings.AnyoneCore.UseCleanse,\
+			UseCleanseTop = Settings.AnyoneCore.UseCleanseTop,\
+			PrepullAetherpact = Settings.AnyoneCore.PrepullAetherpact,\
+			SaferKnockback = Settings.AnyoneCore.SaferKnockback,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -643,6 +667,18 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.PrepullPlacePet = AnyoneCore.Settings.PrepullPlacePet\
 		Settings.AnyoneCore.PrepullPlacePet = Settings.AnyoneCore.PrepullPlacePet\
+		\
+		Settings.AnyoneCore.UseCleanse = AnyoneCore.Settings.UseCleanse\
+		Settings.AnyoneCore.UseCleanse = Settings.AnyoneCore.UseCleanse\
+		\
+		Settings.AnyoneCore.UseCleanseTop = AnyoneCore.Settings.UseCleanseTop\
+		Settings.AnyoneCore.UseCleanseTop = Settings.AnyoneCore.UseCleanseTop\
+		\
+		Settings.AnyoneCore.PrepullAetherpact = AnyoneCore.Settings.PrepullAetherpact\
+		Settings.AnyoneCore.PrepullAetherpact = Settings.AnyoneCore.PrepullAetherpact\
+		\
+		Settings.AnyoneCore.SaferKnockback = AnyoneCore.Settings.SaferKnockback\
+		Settings.AnyoneCore.SaferKnockback = Settings.AnyoneCore.SaferKnockback\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -713,7 +749,7 @@ local obj1 = {
 	end\
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-    AnyoneCore.main_tabs = GUI_CreateTabs(\" General,Argus,Fight Specific,Job Specific,Duty Helper,Hacks ,Debug \")\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Minion Hacks,Debug \")\
 	\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
@@ -839,7 +875,7 @@ function AnyoneCore.draw()\
         AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
         if AnyoneCore.visible then\
         local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs) \
-        if (tabname == \" General\") then\
+        if (tabname == \"Main\") then\
             GUI:Bullet()\
             GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
             GUI:Bullet()\
@@ -941,8 +977,8 @@ function AnyoneCore.draw()\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:SameLine()\
 				if AnyoneCore.Settings.PrepullHelper == true then\
+				GUI:SameLine()\
 				if (Player.job == 23 or Player.job == 31) and AnyoneCore.Settings.PrepullHelper == true then\
 					local hovered = false\
 					AnyoneCore.Settings.PrepullHelperPeloton, changed = GUI:Checkbox(\"Use Peloton in Prepull\", AnyoneCore.Settings.PrepullHelperPeloton)\
@@ -983,10 +1019,18 @@ function AnyoneCore.draw()\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
+				GUI:SameLine()\
+				local hovered = false\
+				AnyoneCore.Settings.PrepullAetherpact, changed = GUI:Checkbox(\"Use Prepull Aetherpact\", AnyoneCore.Settings.PrepullPlacePet)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Allows for a bit of a tricky play with moving your pet around to avoid casting Aetherpact but still ticks the cooldown down. For now, Prepull Helper will only do this if you're in e8s since it's the only fight where it's viable.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
 				end\
-				\
-				if (Player.job ~= 23 and Player.job ~= 31 and Player.job ~= 22) then\
-					GUI:NewLine()\
 				end\
 				local hovered = false\
 				GUI:PushItemWidth(80)\
@@ -1263,7 +1307,21 @@ function AnyoneCore.draw()\
                 GUI:PopTextWrapPos()\
                 GUI:EndTooltip()\
             end\
-            \
+			if AnyoneCore.Settings.KnockbackMirrorUptime == true then\
+				GUI:SameLine()\
+				local hovered = false\
+				AnyoneCore.Settings.SaferKnockback, changed = GUI:Checkbox(\"High ping mode\", AnyoneCore.Settings.SaferKnockback)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:TextColored(1,1,0,1,\"Primarily for high ping users having issues with this knockback. Makes it so the reaction will disable assist earlier.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+            end\
+			\
             local hovered = false\
             AnyoneCore.Settings.DiamondFrostUptime, changed = GUI:Checkbox(\"Diamond Frost uptime strat\", AnyoneCore.Settings.DiamondFrostUptime)\
             if changed then AnyoneCore.save() end\
@@ -1309,7 +1367,40 @@ function AnyoneCore.draw()\
             end -- end of brd/mch/dnc job check\
             \
         elseif (tabname == \"Job Specific\") then\
-            if Player.job == 31 then -- check for machinist\
+            if Player.job == 23 then -- check for bard\
+            \
+				GUI:Indent( )\
+				GUI:Text(\"Bard settings\")\
+				GUI:Unindent( )\
+				local hovered = false\
+				AnyoneCore.Settings.UseCleanse, changed = GUI:Checkbox(\"Cleanse with Warden's Paean\", AnyoneCore.Settings.UseCleanse)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Enables usage of Warden's Paean to cleanse debuffs off people.\\n\")\
+					GUI:TextColored(1,1,0,1,\"This currently only is applicable to using Paean's to cleanse the tanks during icelit dragonsong in e8s.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				GUI:SameLine()\
+				if AnyoneCore.Settings.UseCleanse == true then\
+					local hovered = false\
+					AnyoneCore.Settings.UseCleanseTop, changed = GUI:Checkbox(\"Prioritize top of the party list\", AnyoneCore.Settings.UseCleanseTop)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Warden's Paean will prioritize the person on the top of the party list. This usually means the first tank on your party list.\\n\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				end\
+			end\
+			\
+			if Player.job == 31 then -- check for machinist\
             \
 				GUI:Indent( )\
 				GUI:Text(\"Machinist settings\")\
@@ -1415,7 +1506,7 @@ function AnyoneCore.draw()\
 				end\
             end -- end of samurai job check\
             \
-            if Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for samurai\
+            if Player.job == 21 or Player.job == 19 or Player.job == 32 or Player.job == 37 then -- check for melee\
 				GUI:Indent( )\
 				GUI:Text(\"Tank Settings\")\
 				GUI:Unindent( )\
@@ -1521,7 +1612,7 @@ function AnyoneCore.draw()\
                 GUI:EndTooltip()\
             end\
         \
-        elseif (tabname == \"Hacks \") then\
+        elseif (tabname == \"Minion Hacks\") then\
         \
         \
         if AnyoneCore.Settings.UnderstandDanger == false then\
@@ -1694,7 +1785,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "3b8f2d7d-833c-b21c-8f01-a6fd78e3121b";
+		["uuid"] = "5a48afe8-b989-ee11-907d-c9c7da3522d1";
 	};
 	[2] = {
 		["actions"] = {
@@ -4868,7 +4959,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4933,7 +5024,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5066,7 +5157,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5074,7 +5165,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5131,7 +5222,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5139,7 +5230,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5263,7 +5354,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5271,7 +5362,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5328,7 +5419,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5336,7 +5427,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5530,7 +5621,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5538,7 +5629,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5595,7 +5686,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5603,7 +5694,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5660,7 +5751,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5668,7 +5759,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[1];
+				["conditions"] = multiRefObjects[2];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5796,7 +5887,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5804,7 +5895,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5861,7 +5952,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[9];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5869,7 +5960,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[8];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6233,7 +6324,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6241,7 +6332,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -6298,7 +6389,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6306,7 +6397,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -6363,7 +6454,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[6];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6371,7 +6462,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -10621,8 +10712,8 @@ self.used = true";
 				["conditions"] = {
 					[1] = 2;
 					[2] = 1;
-					[3] = 3;
-					[4] = 5;
+					[3] = 5;
+					[4] = 3;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -10665,6 +10756,7 @@ self.used = true";
 					[1] = 4;
 					[2] = 2;
 					[3] = 3;
+					[4] = 7;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -10707,6 +10799,7 @@ self.used = true";
 					[1] = 2;
 					[2] = 6;
 					[3] = 3;
+					[4] = 7;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -11131,6 +11224,76 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["partyTargetName"] = "";
 				["partyTargetNumber"] = 1;
 				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[7] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "if Player:GetTarget() ~= nil then\
+local target = Player:GetTarget()\
+end\
+return target ~= nil and target.contentid < 30000";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
 				["partyTargetType"] = "All";
 				["rangeCheckSourceSubType"] = "Nearest";
 				["rangeCheckSourceType"] = "Self";
