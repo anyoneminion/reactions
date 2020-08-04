@@ -1251,7 +1251,7 @@ self.used = true\
 					["comparator"] = 1;
 					["conditionLua"] = "";
 					["conditionType"] = 2;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = 9214;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -1316,7 +1316,7 @@ self.used = true\
 					["comparator"] = 2;
 					["conditionLua"] = "";
 					["conditionType"] = 3;
-					["conditions"] = multiRefObjects[4];
+					["conditions"] = multiRefObjects[2];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -2185,7 +2185,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[5];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -2201,7 +2201,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -3477,7 +3477,7 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 4;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -3544,7 +3544,7 @@ end";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[6];
+					["buffIDList"] = multiRefObjects[5];
 					["category"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -6299,7 +6299,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[5];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -6315,7 +6315,7 @@ end\
 \
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6792,7 +6792,7 @@ self.used = true";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[5];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -6804,7 +6804,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 10 -- wildfire
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;
@@ -6846,7 +6846,7 @@ return false";
 					["buffCheckType"] = 1;
 					["buffDuration"] = 0;
 					["buffID"] = -1;
-					["buffIDList"] = multiRefObjects[5];
+					["buffIDList"] = multiRefObjects[4];
 					["category"] = 4;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
@@ -6858,7 +6858,7 @@ if alexPrime and TensorCore.calcTimeToKill(alexPrime.id, 1000) <= 18 -- queen\
 end\
 return false";
 					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
+					["conditions"] = multiRefObjects[6];
 					["contentid"] = -1;
 					["dequeueIfLuaFalse"] = false;
 					["enmityValue"] = 0;

@@ -1949,7 +1949,125 @@ end";
 		};
 	};
 	[39] = {
+	};
+	[44] = {
+	};
+	[45] = {
 		[1] = {
+			["actions"] = {
+				[1] = {
+					["aType"] = 3;
+					["actionID"] = -1;
+					["actionLua"] = "";
+					["allowInterrupt"] = false;
+					["atomicPriority"] = false;
+					["castAtMouse"] = false;
+					["castPosX"] = 0;
+					["castPosY"] = 0;
+					["castPosZ"] = 0;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
+					["conditions"] = {
+						[1] = 1;
+					};
+					["endIfUsed"] = false;
+					["gVar"] = "";
+					["gVarIndex"] = 1;
+					["gVarValue"] = 1;
+					["ignoreWeaveRules"] = false;
+					["isAreaTarget"] = false;
+					["luaNeedsWeaveWindow"] = false;
+					["luaReturnsAction"] = false;
+					["name"] = "";
+					["potType"] = 1;
+					["setTarget"] = true;
+					["showPositionPreview"] = false;
+					["stopCasting"] = false;
+					["stopMoving"] = false;
+					["targetContentID"] = -1;
+					["targetName"] = "";
+					["targetSubType"] = "Nearest";
+					["targetType"] = "Enemy";
+					["untarget"] = false;
+					["useForWeaving"] = false;
+					["usePot"] = false;
+					["used"] = false;
+					["variableTogglesType"] = 1;
+				};
+			};
+			["conditions"] = {
+				[1] = {
+					["actionCDValue"] = 0;
+					["actionID"] = -1;
+					["buffCheckType"] = 1;
+					["buffDuration"] = 0;
+					["buffID"] = -1;
+					["buffIDList"] = {
+					};
+					["category"] = 4;
+					["clusterMinTarget"] = 1;
+					["clusterRadius"] = 8;
+					["clusterRange"] = 30;
+					["comparator"] = 1;
+					["conditionLua"] = "if not Player:GetTarget() then return true end\
+return false";
+					["conditionType"] = 1;
+					["conditions"] = {
+					};
+					["contentid"] = -1;
+					["dequeueIfLuaFalse"] = false;
+					["enmityValue"] = 0;
+					["filterTargetSubtype"] = "Nearest";
+					["filterTargetType"] = "Self";
+					["gaugeIndex"] = 1;
+					["gaugeValue"] = 0;
+					["hpType"] = 1;
+					["hpValue"] = 0;
+					["inCombatType"] = 1;
+					["inRangeValue"] = 0;
+					["lastSkillID"] = -1;
+					["localmapid"] = -1;
+					["matchAnyBuff"] = false;
+					["mpType"] = 1;
+					["mpValue"] = 0;
+					["name"] = "";
+					["partyHpType"] = 1;
+					["partyHpValue"] = 0;
+					["partyMpType"] = 1;
+					["partyMpValue"] = 0;
+					["partyTargetContentID"] = -1;
+					["partyTargetName"] = "";
+					["partyTargetNumber"] = 1;
+					["partyTargetSubType"] = 1;
+					["partyTargetType"] = "All";
+					["rangeCheckSourceSubType"] = "Nearest";
+					["rangeCheckSourceType"] = "Self";
+					["rangeSourceContentID"] = -1;
+					["rangeSourceName"] = "";
+					["setEventTargetSubtype"] = 1;
+					["setFirstMatch"] = false;
+				};
+			};
+			["enabled"] = true;
+			["execute"] = "";
+			["executeType"] = 1;
+			["lastUse"] = 0;
+			["loop"] = false;
+			["luaNeedsWeaveWindow"] = false;
+			["luaReturnsAction"] = false;
+			["name"] = "target boss";
+			["throttleTime"] = 0;
+			["time"] = 213.5;
+			["timeRange"] = true;
+			["timelineIndex"] = 45;
+			["timerEndOffset"] = 8;
+			["timerOffset"] = 1.375;
+			["timerStartOffset"] = -8;
+			["used"] = false;
+			["uuid"] = "44794768-2811-b85e-90b5-6d6a16a37c07";
+		};
+		[2] = {
 			["actions"] = {
 				[1] = {
 					["aType"] = 4;
@@ -2150,132 +2268,14 @@ self.used = true";
 			["luaReturnsAction"] = false;
 			["name"] = "reenable after";
 			["throttleTime"] = 0;
-			["time"] = 200;
+			["time"] = 213.5;
 			["timeRange"] = false;
-			["timelineIndex"] = 39;
+			["timelineIndex"] = 45;
 			["timerEndOffset"] = 0;
-			["timerOffset"] = 2;
+			["timerOffset"] = -5;
 			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "1496cd44-aaaf-5475-9530-51afd98c8c5e";
-		};
-	};
-	[44] = {
-	};
-	[45] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Enemy";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "target boss";
-			["throttleTime"] = 0;
-			["time"] = 213.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 45;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "44794768-2811-b85e-90b5-6d6a16a37c07";
+			["uuid"] = "0a15e57c-d4af-de12-8f4e-d1a788a9d956";
 		};
 	};
 	[46] = {

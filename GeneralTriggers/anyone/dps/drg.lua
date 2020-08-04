@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.15,\
+		version = 3.151,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1785,7 +1785,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "9cb77877-36e6-aae3-8ab4-4bc5d23e7cc2";
+		["uuid"] = "77ec510c-c38a-02e3-9867-7f6330afd977";
 	};
 	[2] = {
 		["actions"] = {
@@ -1863,9 +1863,39 @@ end\
 			[2] = {
 				["aType"] = 4;
 				["actionID"] = -1;
-				["actionLua"] = "if eventArgs.oldData.PotsEnabled ~= nil then\
-self.used = true\
+				["actionLua"] = "ACR_RikuDRG_Hotbar_ArmsLength = false\
+ACR_RikuDRG_Hotbar_SecondWind = false\
+ACR_RikuDRG_Hotbar_Feint = false\
+ACR_RikuDRG_Hotbar_Potion = false\
+ACR_RikuDRG_Hotbar_Sprint = false\
+ACR_RikuDRG_Hotbar_LegSweep = false\
+ACR_RikuDRG_Hotbar_Bloodbath = false\
+ACR_RikuDRG_Hotbar_LimitBreak = false\
+ACR_RikuDRG_Hotbar_ElusiveJump = false\
+ACR_RikuDRG_Hotbar_ElusiveJumpTarget = false\
+ACR_RikuDRG_Hotbar_DragonfireDive = false\
+ACR_RikuDRG_Hotbar_SpineshatterDive = false\
+ACR_RikuDRG_Hotbar_LockFace = false\
+\
+ACR_RikuDRG_CD = true\
+ACR_RikuDRG_CDJump = true\
+ACR_RikuDRG_AOE = true\
+ACR_RikuDRG_SmartAOE = true\
+ACR_RikuDRG_Burn = false\
+ACR_RikuDRG_TrueNorth = true\
+ACR_RikuDRG_Jumps = true\
+ACR_RikuDRG_RushLife = false\
+ACR_RikuDRG_DelayLife = false\
+ACR_RikuDRG_Sight = true\
+ACR_RikuDRG_BattleLitany = true\
+ACR_RikuDRG_Omni = false\
+\
+if eventArgs.oldData.PotsEnabled ~= nil then\
+ACR_RikuDRG_Potion = true\
+else\
+ACR_RikuDRG_Potion = false\
 end\
+\
 self.used = true\
 \
 ";
@@ -1908,39 +1938,26 @@ self.used = true\
 			[3] = {
 				["aType"] = 4;
 				["actionID"] = -1;
-				["actionLua"] = "ACR_RikuDRG_Hotbar_ArmsLength = false\
-ACR_RikuDRG_Hotbar_SecondWind = false\
-ACR_RikuDRG_Hotbar_Feint = false\
-ACR_RikuDRG_Hotbar_Potion = false\
-ACR_RikuDRG_Hotbar_Sprint = false\
-ACR_RikuDRG_Hotbar_LegSweep = false\
-ACR_RikuDRG_Hotbar_Bloodbath = false\
-ACR_RikuDRG_Hotbar_LimitBreak = false\
-ACR_RikuDRG_Hotbar_ElusiveJump = false\
-ACR_RikuDRG_Hotbar_ElusiveJumpTarget = false\
-ACR_RikuDRG_Hotbar_DragonfireDive = false\
-ACR_RikuDRG_Hotbar_SpineshatterDive = false\
-ACR_RikuDRG_Hotbar_LockFace = false\
-\
-ACR_RikuDRG_CD = true\
-ACR_RikuDRG_CDJump = true\
-ACR_RikuDRG_AOE = true\
-ACR_RikuDRG_SmartAOE = true\
-ACR_RikuDRG_Burn = false\
-ACR_RikuDRG_TrueNorth = true\
-ACR_RikuDRG_Jumps = true\
-ACR_RikuDRG_RushLife = false\
-ACR_RikuDRG_DelayLife = false\
-ACR_RikuDRG_Sight = true\
-ACR_RikuDRG_BattleLitany = true\
-ACR_RikuDRG_RangedAOE = true\
-ACR_RikuDRG_Omni = false\
-\
-if eventArgs.oldData.PotsEnabled ~= nil then\
-ACR_RikuDRG_Potion = true\
-else\
-ACR_RikuDRG_Potion = false\
-end\
+				["actionLua"] = "SallyDRG.HotBarConfig.Armslength.enabled = true\
+SallyDRG.HotBarConfig.Bloodbath.enabled = true\
+SallyDRG.HotBarConfig.Feint.enabled = true\
+SallyDRG.HotBarConfig.BattleLitany.enabled = true\
+SallyDRG.HotBarConfig.BloodOfTheDragon.enabled = true\
+SallyDRG.HotBarConfig.DragonFireDive.enabled = true\
+SallyDRG.HotBarConfig.LB.enabled = true\
+SallyDRG.HotBarConfig.DragonSight.enabled = true\
+SallyDRG.HotBarConfig.ElusiveJump.enabled = true\
+SallyDRG.HotBarConfig.ElusiveJumpTarget.enabled = true\
+SallyDRG.HotBarConfig.Potion.enabled = true\
+SallyDRG.HotBarConfig.Geirskogul.enabled = true\
+SallyDRG.HotBarConfig.Sprint.enabled = true\
+SallyDRG.HotBarConfig.HighJump.enabled = true\
+SallyDRG.HotBarConfig.TrueNorth.enabled = true\
+SallyDRG.HotBarConfig.LanceCharge.enabled = true\
+SallyDRG.HotBarConfig.LifeSurge.enabled = true\
+SallyDRG.HotBarConfig.MirageDive.enabled = true\
+SallyDRG.HotBarConfig.SecondWind.enabled = true\
+SallyDRG.HotBarConfig.SpineShatterDive.enabled = true\
 \
 self.used = true\
 \
@@ -5583,7 +5600,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5591,7 +5608,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5648,7 +5665,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5656,7 +5673,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5779,7 +5796,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5787,7 +5804,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5844,7 +5861,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5852,7 +5869,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[10];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5974,7 +5991,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6039,7 +6056,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6148,6 +6165,7 @@ self.used = true";
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "ACR_RikuDRG_Jumps = false\
+ACR_RikuDRG_RangedAOE = true\
 self.used = true";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
@@ -6240,7 +6258,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6248,7 +6266,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6305,7 +6323,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6313,7 +6331,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6370,7 +6388,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6378,7 +6396,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6682,6 +6700,7 @@ self.used = true";
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "ACR_RikuDRG_Jumps = false\
+ACR_RikuDRG_RangedAOE = false\
 data.InNeurolink = true\
 self.used = true";
 				["allowInterrupt"] = false;

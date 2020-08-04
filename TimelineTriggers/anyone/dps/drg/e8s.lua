@@ -716,25 +716,25 @@ self.used = true";
 	[24] = {
 	};
 	[27] = {
-	};
-	[29] = {
 		[1] = {
 			["actions"] = {
 			};
 			["conditions"] = {
 			};
-			["enabled"] = false;
+			["enabled"] = true;
 			["execute"] = "if Argus == nil then\
-		self.used = true\
+                self.used = true\
 end\
 \
 local drawnOrbs = {}\
 \
 for id, ent in pairs(EntityList(\"\")) do\
-		if ent.contentid == 9318 and not drawnOrbs[id] then\
-				drawnOrbs[id] = true\
-				Argus.addTimedCircleFilled(31000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.1, 0.1, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
+                if ent.contentid == 9318 and not drawnOrbs[id] then\
+																							if AnyoneCore.Settings.DrawOrbs == true then\
+                                drawnOrbs[id] = true\
+                                Argus.addTimedCircleFilled(20000, ent.pos.x, ent.pos.y, ent.pos.z, 5, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
+                							end\
+                end\
 end\
 \
 self.used = table.size(drawnOrbs) >= 4";
@@ -745,15 +745,17 @@ self.used = table.size(drawnOrbs) >= 4";
 			["luaReturnsAction"] = false;
 			["name"] = "draw orb";
 			["throttleTime"] = 0;
-			["time"] = 164.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 29;
-			["timerEndOffset"] = -5;
-			["timerOffset"] = 5;
-			["timerStartOffset"] = -9;
+			["time"] = 156.6;
+			["timeRange"] = false;
+			["timelineIndex"] = 27;
+			["timerEndOffset"] = 0;
+			["timerOffset"] = 0;
+			["timerStartOffset"] = 0;
 			["used"] = false;
-			["uuid"] = "8f379bc3-949e-aba2-b344-7ef27853a746";
+			["uuid"] = "f6dfcb91-e66e-2903-8f14-66c27ebbee4c";
 		};
+	};
+	[29] = {
 	};
 	[31] = {
 		[1] = {

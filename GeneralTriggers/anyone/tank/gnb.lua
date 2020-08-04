@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.15,\
+		version = 3.151,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -1785,7 +1785,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "244383e0-5f13-623d-bea9-ad22a00f39d4";
+		["uuid"] = "c805d8ef-ac6b-a36d-910d-20fcd5340f78";
 	};
 	[2] = {
 		["actions"] = {
@@ -1852,7 +1852,7 @@ SallyGNB.SkillSettings.JumpRange.enabled = true\
 SallyGNB.SkillSettings.BlastingZone.enabled = true\
 SallyGNB.SkillSettings.Ammo.enabled = true\
 SallyGNB.SkillSettings.BurnBoss.enabled = false\
-SallyGNB.SkillSettings.RangeComboBreak.enabled = true\
+SallyGNB.SkillSettings.RangeComboBreak.enabled = false\
 SallyGNB.SkillSettings.SaveRoughDivide.enabled = false\
 SallyGNB.SkillSettings.GnashingFang.enabled = true\
 \
