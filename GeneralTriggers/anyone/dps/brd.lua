@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.152,\
+		version = 3.153,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -234,6 +234,61 @@ local obj1 = {
 			end\
 		end\
 	end\
+	\
+---Idea and code for sidebar links was shamelessly stolen from Kali. Thank you Kali.\
+	LinksTable = {\
+		[1] = {\
+			name = \"dummy page doesnt work\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
+			link = nil,\
+			tooltip = \"first link doesnt work so lol\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[2] = {\
+			name = \"GitHub\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
+			link = [[https://github.com/AnyoneMinion/reactions/releases]],\
+			tooltip = \"Releases page of GitHub, if you want to see any changes or download an older release.\\n\\nLeft-click to be sent to my GitHub page.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[3] = {\
+			name = \"Ko-fi\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\globe.png]],\
+			link = [[https://ko-fi.com/anyoneminion]],\
+			tooltip = \"If you appreciate the work I put into reactions, then throw me a few bucks on my Ko-fi page.\\n\\nLeft-click to be sent to my donation page.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[4] = {\
+			name = \"Discord\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\questionmark.png]],\
+			link = [[https://discord.gg/bVABzBA]],\
+			link2 = [[https://discord.gg/YtvCbcB]],\
+			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[5] = {\
+			name = \"Trello\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\list.png]],\
+			link = [[https://trello.com/b/YAn04EOz/anyones-minion-development]],\
+			tooltip = \"A link to my Trello page that contains a backlog of updates, stuff I'm working on, stuff I've finished and stuff I've abandoned.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[6] = {\
+			name = \"Reload\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\change.png]],\
+			link1 = nil,\
+			link2 = nil,\
+			link3 = true,\
+			tooltip = \"Reloads AnyoneCore and loads reactions again.\\n\\nMostly meant for debugging and development purposes.\\n\\nLeft-click to reload AnyoneCore and reactions.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+	}\
 	\
 	if Settings.AnyoneCore.AutoSetMaxCameraZoom == true and (gDevHackMaxZoom ~= Settings.AnyoneCore.CameraZoomValue) then\
 		gDevHackMaxZoom = Settings.AnyoneCore.CameraZoomValue\
@@ -753,7 +808,7 @@ local obj1 = {
 	end\
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Minion Hacks,Debug \")\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Hacks,Debug\")\
 	\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
@@ -830,56 +885,6 @@ if (AnyoneCore ~= nil) then \
 	end\
 end\
 \
-	local MinionPath = GetStartupPath()\
-	local LuaModsPath = GetLuaModsPath()\
----Idea and code for sidebar links was shamelessly stolen from Kali. Thank you Kali.\
-	AnyoneCore.LinksTable = {\
-		[1] = {\
-			name = \"dummy page doesnt work\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
-			link = nil,\
-			tooltip = \"first link doesnt work so lol\",\
-			lasthover = 0,\
-			size = { x = 25, y = 25}\
-		},\
-		[2] = {\
-			name = \"GitHub\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
-			link = [[https://github.com/AnyoneMinion/reactions/releases]],\
-			tooltip = \"Releases page of GitHub, if you want to see any changes or download an older release.\\n\\nLeft-click to be sent to my GitHub page.\",\
-			lasthover = 0,\
-			size = { x = 25, y = 25}\
-		},\
-		[3] = {\
-			name = \"Ko-fi\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\globe.png]],\
-			link = [[https://ko-fi.com/anyoneminion]],\
-			tooltip = \"If you appreciate the work I put into reactions, then throw me a few bucks on my Ko-fi page.\\n\\nLeft-click to be sent to my donation page.\",\
-			lasthover = 0,\
-			size = { x = 25, y = 25}\
-		},\
-		[4] = {\
-			name = \"Discord\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\questionmark.png]],\
-			link = [[https://discord.gg/bVABzBA]],\
-			link2 = [[https://discord.gg/YtvCbcB]],\
-			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
-			lasthover = 0,\
-			size = { x = 25, y = 25}\
-		},\
-		[5] = {\
-			name = \"Reload\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\change.png]],\
-			link1 = nil,\
-			link2 = nil,\
-			link3 = true,\
-			tooltip = \"Reloads AnyoneCore and loads reactions again.\\n\\nMostly meant for debugging and development purposes.\\n\\nLeft-click to reload AnyoneCore and reactions.\",\
-			lasthover = 0,\
-			size = { x = 25, y = 25}\
-		},\
-	}\
-\
-\
 function AnyoneCore.draw()\
     if AnyoneCore.enabled and AnyoneCore.open then\
 		local c = 0\
@@ -889,7 +894,7 @@ function AnyoneCore.draw()\
         AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
         if AnyoneCore.visible then\
         local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs) \
-        if (tabname == \"Main\") then\
+        if (tabname == GetString(\"Main\")) then\
             GUI:Bullet()\
             GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
             GUI:Bullet()\
@@ -1139,7 +1144,7 @@ function AnyoneCore.draw()\
                 GUI:EndTooltip()\
             end\
             \
-        elseif (tabname == \"Argus\") then\
+        elseif (tabname == GetString(\"Argus\")) then\
             \
             local hovered = false\
             AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"e5s - Draw Stormcloud AoE radius\", AnyoneCore.Settings.DrawClouds)\
@@ -1249,7 +1254,7 @@ function AnyoneCore.draw()\
 				end\
 			end\
             \
-        elseif (tabname == \"Fight Specific\") then\
+        elseif (tabname == GetString(\"Fight Specific\")) then\
             local changed = false\
             \
             ---GUI:Text(\"			e5s settings\")\
@@ -1380,7 +1385,7 @@ function AnyoneCore.draw()\
 				end -- end of left side check\
             end -- end of brd/mch/dnc job check\
             \
-        elseif (tabname == \"Job Specific\") then\
+        elseif (tabname == GetString(\"Job Specific\")) then\
             if Player.job == 23 then -- check for bard\
             \
 				GUI:Indent( )\
@@ -1542,7 +1547,7 @@ function AnyoneCore.draw()\
             GUI:Text(\"No settings for current job.\")\
             end\
         \
-        elseif (tabname == \"Duty Helper\") then\
+        elseif (tabname == GetString(\"Duty Helper\")) then\
         \
             local hovered = false\
             AnyoneCore.Settings.DutyHelper, changed = GUI:Checkbox(\"Enable Duty Helper\", AnyoneCore.Settings.DutyHelper)\
@@ -1626,7 +1631,7 @@ function AnyoneCore.draw()\
                 GUI:EndTooltip()\
             end\
         \
-        elseif (tabname == \"Minion Hacks\") then\
+        elseif (tabname == GetString(\"Hacks\")) then\
         \
         \
         if AnyoneCore.Settings.UnderstandDanger == false then\
@@ -1691,7 +1696,7 @@ function AnyoneCore.draw()\
             \
         end\
 		\
-		elseif (tabname == \"Debug \") then\
+		elseif (tabname == GetString(\"Debug\")) then\
 		\
 			local hovered = false\
             AnyoneCore.Settings.MiniReactionsTimer, changed = GUI:Checkbox(\"Mini Reactions Timer\", AnyoneCore.Settings.MiniReactionsTimer)\
@@ -1801,7 +1806,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "0775383c-445a-1e79-8c88-74729f27f157";
+		["uuid"] = "62bc9af7-6539-e90e-af7e-e9a2ac4a3ca1";
 	};
 	[2] = {
 		["actions"] = {
@@ -4975,7 +4980,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4983,7 +4988,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5040,7 +5045,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5048,7 +5053,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5173,7 +5178,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5181,7 +5186,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5238,7 +5243,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5246,7 +5251,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5370,7 +5375,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5378,7 +5383,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5435,7 +5440,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5443,7 +5448,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5637,7 +5642,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5645,7 +5650,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -5702,7 +5707,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5710,7 +5715,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5767,7 +5772,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[9];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5775,7 +5780,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[8];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5903,7 +5908,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5911,7 +5916,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5968,7 +5973,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[7];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5976,7 +5981,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[7];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -6340,7 +6345,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6348,7 +6353,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return data.InNeurolink == true";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -6405,7 +6410,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6413,7 +6418,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -6470,7 +6475,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[10];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -6478,7 +6483,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[10];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
