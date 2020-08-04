@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.151,\
+		version = 3.152,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -221,11 +221,15 @@ local obj1 = {
 		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
 		if Settings.AnyoneCore.CheckJob == true then\
 			if (CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid]) and (AnyoneCore.timelineTable[Player.job][Player.localmapid] ~= nil) then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Incorrect timeline profile selected for current job. Note: This might be thrown off by slow loading.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Current profile: '\"..tostring(CurrentTimeline)..\"'\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Correct profile: '\"..tostring(AnyoneCore.timelineTable[Player.job][Player.localmapid])..\"'.\")\
 				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 			if CurrentGeneral ~= AnyoneCore.generalTable[Player.job] then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect general trigger profile selected for current job!\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Incorrect general trigger profile selected for current job.\") \
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Current profile: '\"..tostring(CurrentGeneral)..\"'\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Correct profile: '\"..tostring(AnyoneCore.generalTable[Player.job])..\"'.\")\
 				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 		end\
@@ -829,12 +833,12 @@ end\
 	local MinionPath = GetStartupPath()\
 	local LuaModsPath = GetLuaModsPath()\
 ---Idea and code for sidebar links was shamelessly stolen from Kali. Thank you Kali.\
-	LinksTable = {\
+	AnyoneCore.LinksTable = {\
 		[1] = {\
 			name = \"dummy page doesnt work\",\
 			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
 			link = nil,\
-			tooltip = \"1st link doesnt work so lol\",\
+			tooltip = \"first link doesnt work so lol\",\
 			lasthover = 0,\
 			size = { x = 25, y = 25}\
 		},\
@@ -855,10 +859,20 @@ end\
 			size = { x = 25, y = 25}\
 		},\
 		[4] = {\
+			name = \"Discord\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\questionmark.png]],\
+			link = [[https://discord.gg/bVABzBA]],\
+			link2 = [[https://discord.gg/YtvCbcB]],\
+			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[5] = {\
 			name = \"Reload\",\
 			icon = MinionPath .. [[\\GUI\\UI_Textures\\change.png]],\
 			link1 = nil,\
-			link2 = true,\
+			link2 = nil,\
+			link3 = true,\
 			tooltip = \"Reloads AnyoneCore and loads reactions again.\\n\\nMostly meant for debugging and development purposes.\\n\\nLeft-click to reload AnyoneCore and reactions.\",\
 			lasthover = 0,\
 			size = { x = 25, y = 25}\
@@ -1741,7 +1755,9 @@ function AnyoneCore.draw()\
 					if link.size.y < max then link.size.y = link.size.y + rate end\
 					if GUI:IsItemClicked(0) and link.link then\
 						io.popen([[cmd /c start \"\" \"]]..link.link..[[\"]]):close()\
-					elseif GUI:IsItemClicked(0) and link.link2 then\
+					elseif GUI:IsItemClicked(1) and link.link2 then\
+						io.popen([[cmd /c start \"\" \"]]..link.link2..[[\"]]):close()\
+					elseif GUI:IsItemClicked(0) and link.link3 then\
 						AnyoneCoreReload()\
 					end\
 				else\
@@ -1785,7 +1801,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "6ed46a3a-736c-7b1d-ba86-41ea47d19f45";
+		["uuid"] = "0f6b25b6-0b52-78b2-90e0-ff5462b93ff5";
 	};
 	[2] = {
 		["actions"] = {
@@ -3425,7 +3441,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3433,7 +3449,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3490,7 +3506,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[5];
+				["buffIDList"] = multiRefObjects[2];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3498,7 +3514,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[5];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3621,7 +3637,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3629,7 +3645,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3686,7 +3702,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[4];
+				["buffIDList"] = multiRefObjects[1];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3694,7 +3710,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[2];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3816,7 +3832,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3824,7 +3840,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -3881,7 +3897,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[3];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -3889,7 +3905,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[3];
+				["conditions"] = multiRefObjects[4];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;

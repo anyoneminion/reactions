@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-{};{};{};{};{};{};{};{};
+{};{};{};{};{};{};{};{};{};{};
 } -- multiRefObjects
 local obj1 = {
 	[1] = {
@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.151,\
+		version = 3.152,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -221,11 +221,15 @@ local obj1 = {
 		local CurrentGeneral = TensorCore.API.TensorReactions.getGeneralTriggerProfileName()\
 		if Settings.AnyoneCore.CheckJob == true then\
 			if (CurrentTimeline ~= AnyoneCore.timelineTable[Player.job][Player.localmapid]) and (AnyoneCore.timelineTable[Player.job][Player.localmapid] ~= nil) then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect timeline profile selected for current job!\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Incorrect timeline profile selected for current job. Note: This might be thrown off by slow loading.\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Current profile: '\"..tostring(CurrentTimeline)..\"'\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Correct profile: '\"..tostring(AnyoneCore.timelineTable[Player.job][Player.localmapid])..\"'.\")\
 				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 			if CurrentGeneral ~= AnyoneCore.generalTable[Player.job] then\
-				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Job Check Failed: Incorrect general trigger profile selected for current job!\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Incorrect general trigger profile selected for current job.\") \
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Current profile: '\"..tostring(CurrentGeneral)..\"'\")\
+				TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0}[AnyoneCore] {color:255, 200, 0}Correct profile: '\"..tostring(AnyoneCore.generalTable[Player.job])..\"'.\")\
 				d(\"[AnyoneCore] Job check failed. Sending chat warning.\")\
 			end\
 		end\
@@ -749,7 +753,7 @@ local obj1 = {
 	end\
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Minion Hacks,Debug \")\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Hacks,Debug\")\
 	\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
@@ -829,12 +833,12 @@ end\
 	local MinionPath = GetStartupPath()\
 	local LuaModsPath = GetLuaModsPath()\
 ---Idea and code for sidebar links was shamelessly stolen from Kali. Thank you Kali.\
-	LinksTable = {\
+	AnyoneCore.LinksTable = {\
 		[1] = {\
 			name = \"dummy page doesnt work\",\
 			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
 			link = nil,\
-			tooltip = \"1st link doesnt work so lol\",\
+			tooltip = \"first link doesnt work so lol\",\
 			lasthover = 0,\
 			size = { x = 25, y = 25}\
 		},\
@@ -855,10 +859,20 @@ end\
 			size = { x = 25, y = 25}\
 		},\
 		[4] = {\
+			name = \"Discord\",\
+			icon = MinionPath .. [[\\GUI\\UI_Textures\\questionmark.png]],\
+			link = [[https://discord.gg/bVABzBA]],\
+			link2 = [[https://discord.gg/YtvCbcB]],\
+			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
+			lasthover = 0,\
+			size = { x = 25, y = 25}\
+		},\
+		[5] = {\
 			name = \"Reload\",\
 			icon = MinionPath .. [[\\GUI\\UI_Textures\\change.png]],\
 			link1 = nil,\
-			link2 = true,\
+			link2 = nil,\
+			link3 = true,\
 			tooltip = \"Reloads AnyoneCore and loads reactions again.\\n\\nMostly meant for debugging and development purposes.\\n\\nLeft-click to reload AnyoneCore and reactions.\",\
 			lasthover = 0,\
 			size = { x = 25, y = 25}\
@@ -875,7 +889,7 @@ function AnyoneCore.draw()\
         AnyoneCore.visible, AnyoneCore.open = GUI:Begin(\"AnyoneCore - Reaction Settings Menu\", AnyoneCore.open)\
         if AnyoneCore.visible then\
         local tabindex, tabname = GUI_DrawTabs(AnyoneCore.main_tabs) \
-        if (tabname == \"Main\") then\
+        if (tabname == GetString(\"Main\")) then\
             GUI:Bullet()\
             GUI:TextColored(1,1,0,1,\"Current AnyoneCore Version: \".. tostring(AnyoneCore.version))\
             GUI:Bullet()\
@@ -1125,7 +1139,7 @@ function AnyoneCore.draw()\
                 GUI:EndTooltip()\
             end\
             \
-        elseif (tabname == \"Argus\") then\
+        elseif (tabname == GetString(\"Argus\")) then\
             \
             local hovered = false\
             AnyoneCore.Settings.DrawClouds, changed = GUI:Checkbox(\"e5s - Draw Stormcloud AoE radius\", AnyoneCore.Settings.DrawClouds)\
@@ -1235,7 +1249,7 @@ function AnyoneCore.draw()\
 				end\
 			end\
             \
-        elseif (tabname == \"Fight Specific\") then\
+        elseif (tabname == GetString(\"Fight Specific\")) then\
             local changed = false\
             \
             ---GUI:Text(\"			e5s settings\")\
@@ -1366,7 +1380,7 @@ function AnyoneCore.draw()\
 				end -- end of left side check\
             end -- end of brd/mch/dnc job check\
             \
-        elseif (tabname == \"Job Specific\") then\
+        elseif (tabname == GetString(\"Job Specific\")) then\
             if Player.job == 23 then -- check for bard\
             \
 				GUI:Indent( )\
@@ -1528,7 +1542,7 @@ function AnyoneCore.draw()\
             GUI:Text(\"No settings for current job.\")\
             end\
         \
-        elseif (tabname == \"Duty Helper\") then\
+        elseif (tabname == GetString(\"Duty Helper\")) then\
         \
             local hovered = false\
             AnyoneCore.Settings.DutyHelper, changed = GUI:Checkbox(\"Enable Duty Helper\", AnyoneCore.Settings.DutyHelper)\
@@ -1612,7 +1626,7 @@ function AnyoneCore.draw()\
                 GUI:EndTooltip()\
             end\
         \
-        elseif (tabname == \"Minion Hacks\") then\
+        elseif (tabname == GetString(\"Hacks\")) then\
         \
         \
         if AnyoneCore.Settings.UnderstandDanger == false then\
@@ -1677,7 +1691,7 @@ function AnyoneCore.draw()\
             \
         end\
 		\
-		elseif (tabname == \"Debug \") then\
+		elseif (tabname == GetString(\"Debug\")) then\
 		\
 			local hovered = false\
             AnyoneCore.Settings.MiniReactionsTimer, changed = GUI:Checkbox(\"Mini Reactions Timer\", AnyoneCore.Settings.MiniReactionsTimer)\
@@ -1741,7 +1755,9 @@ function AnyoneCore.draw()\
 					if link.size.y < max then link.size.y = link.size.y + rate end\
 					if GUI:IsItemClicked(0) and link.link then\
 						io.popen([[cmd /c start \"\" \"]]..link.link..[[\"]]):close()\
-					elseif GUI:IsItemClicked(0) and link.link2 then\
+					elseif GUI:IsItemClicked(1) and link.link2 then\
+						io.popen([[cmd /c start \"\" \"]]..link.link2..[[\"]]):close()\
+					elseif GUI:IsItemClicked(0) and link.link3 then\
 						AnyoneCoreReload()\
 					end\
 				else\
@@ -1785,7 +1801,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "5a022532-81f2-5ff1-a10c-bbce7e686704";
+		["uuid"] = "bca89b97-6c35-6160-be33-db1e2fc26bb4";
 	};
 	[2] = {
 		["actions"] = {
@@ -4472,7 +4488,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4480,7 +4496,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4537,7 +4553,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[3];
+				["buffIDList"] = multiRefObjects[4];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4545,7 +4561,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.markerID - 78 >= 1 and eventArgs.markerID - 78 <= 8";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[6];
+				["conditions"] = multiRefObjects[3];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4735,7 +4751,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4743,7 +4759,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4800,7 +4816,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4808,7 +4824,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4930,7 +4946,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 5;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -4938,7 +4954,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
@@ -4995,7 +5011,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[8];
+				["buffIDList"] = multiRefObjects[5];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5003,7 +5019,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[5];
+				["conditions"] = multiRefObjects[6];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5199,7 +5215,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = 344;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 4;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5207,7 +5223,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "return eventArgs.entityID == Player.id and eventArgs.markerID == 118";
 				["conditionType"] = 1;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5264,7 +5280,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5272,7 +5288,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5329,7 +5345,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[2];
+				["buffIDList"] = multiRefObjects[8];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5337,7 +5353,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[4];
+				["conditions"] = multiRefObjects[1];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5519,7 +5535,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5527,7 +5543,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 8;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -5584,7 +5600,7 @@ self.used = true";
 				["buffCheckType"] = 1;
 				["buffDuration"] = 0;
 				["buffID"] = -1;
-				["buffIDList"] = multiRefObjects[1];
+				["buffIDList"] = multiRefObjects[10];
 				["category"] = 2;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
@@ -5592,7 +5608,7 @@ self.used = true";
 				["comparator"] = 1;
 				["conditionLua"] = "";
 				["conditionType"] = 7;
-				["conditions"] = multiRefObjects[7];
+				["conditions"] = multiRefObjects[9];
 				["contentid"] = -1;
 				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
@@ -10798,6 +10814,340 @@ self.used = true";
 	};
 	[26] = {
 		["actions"] = {
+			[1] = {
+				["aType"] = 3;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 2;
+					[3] = 3;
+				};
+				["detectionTargetNumber"] = 1;
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setDetectionTargetPriority"] = 1;
+				["setTarget"] = true;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = 1185;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "ContentID";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = multiRefObjects[7];
+				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 2;
+				["conditions"] = multiRefObjects[2];
+				["contentid"] = 1186;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = multiRefObjects[7];
+				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 3;
+				["conditions"] = multiRefObjects[2];
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 20;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 2;
+				["buffDuration"] = 0;
+				["buffID"] = 1544;
+				["buffIDList"] = {
+				};
+				["category"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 6;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "";
+				["conditionType"] = 2;
+				["conditions"] = {
+					[1] = 1;
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "ContentID";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = true;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = 1186;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 4;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 1;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["loop"] = true;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Ifrit Nail Swap";
+		["throttleTime"] = 0;
+		["time"] = 328;
+		["timeRange"] = true;
+		["timelineIndex"] = 43;
+		["timeout"] = 5;
+		["timerEndOffset"] = 33.5;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "f5f921ee-a3a2-eeb4-8fa6-4e2c43dd8c44";
+	};
+	[27] = {
+		["actions"] = {
 		};
 		["conditions"] = {
 		};
@@ -10820,7 +11170,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "90dbc9c7-3d08-013d-b40f-cb39d9261cd2";
 	};
-	[27] = {
+	[28] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -11449,7 +11799,7 @@ return target ~= nil and target.contentid < 30000";
 		["used"] = false;
 		["uuid"] = "968110c3-392b-1be6-a48d-7b580263e5fe";
 	};
-	[28] = {
+	[29] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -11931,7 +12281,7 @@ return StopCastingTable[eventArgs.spellID] == true";
 		["used"] = false;
 		["uuid"] = "06e87a51-fdfd-17f6-8aa8-f643d76ada50";
 	};
-	[29] = {
+	[30] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -12337,7 +12687,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 		["used"] = false;
 		["uuid"] = "e4b0b88f-b80e-68b6-8139-cb26efead65f";
 	};
-	[30] = {
+	[31] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -12919,7 +13269,7 @@ return MitigationTable[eventArgs.spellID] == true\
 		["used"] = false;
 		["uuid"] = "a49e1412-1a11-718d-a65c-827e9543080a";
 	};
-	[31] = {
+	[32] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -13276,7 +13626,7 @@ return InterruptTable[eventArgs.spellID] == true";
 		["used"] = false;
 		["uuid"] = "1db89c83-2231-7280-ae8e-f3b7dc853eca";
 	};
-	[32] = {
+	[33] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -13786,7 +14136,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["used"] = false;
 		["uuid"] = "ae94b995-a016-c6a0-922e-2c4d2cec9088";
 	};
-	[33] = {
+	[34] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -13810,7 +14160,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["used"] = false;
 		["uuid"] = "72ef8654-a4e5-d6df-83a5-a3a67059ca35";
 	};
-	[34] = {
+	[35] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
