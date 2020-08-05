@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.154,\
+		version = 3.155,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -266,7 +266,7 @@ local obj1 = {
 			icon = LuaModsPath .. [[\\TensorReactions\\AnyoneCore\\images\\discord.png]],\
 			link = [[https://discord.gg/bVABzBA]],\
 			link2 = [[https://discord.gg/YtvCbcB]],\
-			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
+			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop. There's a few things here for reactions, but I'd prefer discussion to stay in Rikudou's discord.\",\
 			lasthover = 0,\
 			size = { x = 25, y = 25}\
 		},\
@@ -1806,7 +1806,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "0bd82c9e-ed03-0280-9a7f-98386fba7586";
+		["uuid"] = "fb19f627-4b96-98f9-b793-71a3b4aa7676";
 	};
 	[2] = {
 		["actions"] = {
