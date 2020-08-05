@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.153,\
+		version = 3.154,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -247,7 +247,7 @@ local obj1 = {
 		},\
 		[2] = {\
 			name = \"GitHub\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\code.png]],\
+			icon = LuaModsPath .. [[\\TensorReactions\\AnyoneCore\\images\\githublogo.png]],\
 			link = [[https://github.com/AnyoneMinion/reactions/releases]],\
 			tooltip = \"Releases page of GitHub, if you want to see any changes or download an older release.\\n\\nLeft-click to be sent to my GitHub page.\",\
 			lasthover = 0,\
@@ -255,7 +255,7 @@ local obj1 = {
 		},\
 		[3] = {\
 			name = \"Ko-fi\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\globe.png]],\
+			icon = LuaModsPath .. [[\\TensorReactions\\AnyoneCore\\images\\kofi.png]],\
 			link = [[https://ko-fi.com/anyoneminion]],\
 			tooltip = \"If you appreciate the work I put into reactions, then throw me a few bucks on my Ko-fi page.\\n\\nLeft-click to be sent to my donation page.\",\
 			lasthover = 0,\
@@ -263,7 +263,7 @@ local obj1 = {
 		},\
 		[4] = {\
 			name = \"Discord\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\questionmark.png]],\
+			icon = LuaModsPath .. [[\\TensorReactions\\AnyoneCore\\images\\discord.png]],\
 			link = [[https://discord.gg/bVABzBA]],\
 			link2 = [[https://discord.gg/YtvCbcB]],\
 			tooltip = \"Left-click to get sent to Rikudou's discord, which is where all reactions support and questions should go.\\n\\nRight-click to get sent to my personal discord, which is meant mostly for support with Profiler and any other addons I develop.\",\
@@ -272,7 +272,7 @@ local obj1 = {
 		},\
 		[5] = {\
 			name = \"Trello\",\
-			icon = MinionPath .. [[\\GUI\\UI_Textures\\list.png]],\
+			icon = LuaModsPath .. [[\\TensorReactions\\AnyoneCore\\images\\trello.png]],\
 			link = [[https://trello.com/b/YAn04EOz/anyones-minion-development]],\
 			tooltip = \"A link to my Trello page that contains a backlog of updates, stuff I'm working on, stuff I've finished and stuff I've abandoned.\",\
 			lasthover = 0,\
@@ -1806,7 +1806,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "1877e0d7-1a3e-389b-be95-56cbcbabf807";
+		["uuid"] = "a47315b4-f428-d2af-a56d-c220c91fc117";
 	};
 	[2] = {
 		["actions"] = {
