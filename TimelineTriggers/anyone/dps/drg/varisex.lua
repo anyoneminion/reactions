@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-
+{};
 } -- multiRefObjects
 local obj1 = {
 	[13] = {
@@ -125,6 +125,10 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["channelCheckSpellID"] = -1;
+					["channelCheckSpellIDList"] = multiRefObjects[1];
+					["channelCheckTimeRemain"] = 0;
+					["channelCheckType"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
 					["clusterRange"] = 30;
@@ -147,6 +151,7 @@ self.used = true";
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
 					["matchAnyBuff"] = false;
+					["minTargetPercent"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["name"] = "SallyDRG";
@@ -244,6 +249,10 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["channelCheckSpellID"] = -1;
+					["channelCheckSpellIDList"] = multiRefObjects[1];
+					["channelCheckTimeRemain"] = 0;
+					["channelCheckType"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
 					["clusterRange"] = 30;
@@ -266,6 +275,7 @@ self.used = true";
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
 					["matchAnyBuff"] = false;
+					["minTargetPercent"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["name"] = "SallyDRG";
@@ -363,6 +373,10 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["channelCheckSpellID"] = -1;
+					["channelCheckSpellIDList"] = multiRefObjects[1];
+					["channelCheckTimeRemain"] = 0;
+					["channelCheckType"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
 					["clusterRange"] = 30;
@@ -385,6 +399,7 @@ self.used = true";
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
 					["matchAnyBuff"] = false;
+					["minTargetPercent"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["name"] = "SallyDRG";
@@ -745,6 +760,10 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["channelCheckSpellID"] = -1;
+					["channelCheckSpellIDList"] = multiRefObjects[1];
+					["channelCheckTimeRemain"] = 0;
+					["channelCheckType"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
 					["clusterRange"] = 30;
@@ -767,6 +786,7 @@ self.used = true";
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
 					["matchAnyBuff"] = false;
+					["minTargetPercent"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["name"] = "SallyDRG";
@@ -864,6 +884,10 @@ self.used = true";
 					["buffIDList"] = {
 					};
 					["category"] = 4;
+					["channelCheckSpellID"] = -1;
+					["channelCheckSpellIDList"] = multiRefObjects[1];
+					["channelCheckTimeRemain"] = 0;
+					["channelCheckType"] = 1;
 					["clusterMinTarget"] = 1;
 					["clusterRadius"] = 8;
 					["clusterRange"] = 30;
@@ -886,6 +910,7 @@ self.used = true";
 					["lastSkillID"] = -1;
 					["localmapid"] = -1;
 					["matchAnyBuff"] = false;
+					["minTargetPercent"] = false;
 					["mpType"] = 1;
 					["mpValue"] = 0;
 					["name"] = "SallyDRG";

@@ -1,6 +1,6 @@
 -- Persistent Data
 local multiRefObjects = {
-
+{};{};
 } -- multiRefObjects
 local obj1 = {
 	[1] = {
@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.155,\
+		version = 3.17,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -37,6 +37,21 @@ local obj1 = {
 		lastStatusCheck2,\
 		lastStatusCheck3,\
 		lastStatusCheck4,\
+	}\
+	FaceAway = {\
+	enabled = Settings.AnyoneCore.FaceAwayEnabled,\
+	data = {},\
+	visible = true,\
+	open = false,\
+	WindowStyle = {\
+		[\"Text\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
+		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.55 },\
+	},\
+	facestatus = nil,\
+	keybindstatus = nil,\
+	FaceAway = false,\
+	FaceAwayKey = false,\
+	sleep = 0,\
 	}\
 	\
 	local MinionPath = GetStartupPath()\
@@ -60,6 +75,12 @@ local obj1 = {
 	\
 	function download_files_noreading()\
 		io.popen([[start /b powershell -verb runas -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/AnyoneMinion/reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/AnyoneMinion/reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactions\\ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
+		lastStatusCheck2 = true\
+		d(\"[AnyoneCore] Updater: Download was started. Moving to next step...\")\
+	end\
+	\
+	function download_qwerts()\
+		io.popen([[start /b powershell -verb runas -Command \"if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup' -ItemType Directory -Force }; if(!(test-path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt')) { New-Item -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -ItemType File -Force }; Clear-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Force; Compress-Archive -Path ']] ..LuaModsPath.. [[TensorReactions\\GeneralTriggers', ']] ..LuaModsPath.. [[TensorReactions\\TimelineTriggers' -DestinationPath ]] ..LuaModsPath.. [[\\TensorReactionsBackup\\TensorReactions_$((Get-Date).ToString('MM_dd_HHmm')).zip -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $tag = (Invoke-WebRequest -Uri https://api.github.com/repos/Q-W-E-R-T/Healer-reactions/releases -UseBasicParsing | ConvertFrom-Json)[0].tag_name; Invoke-WebRequest https://github.com/Q-W-E-R-T/Healer-reactions/releases/download/$tag/TensorReactions.zip -Out ]] ..LuaModsPath.. [[\\\\TensorReactions\\\\TensorReactions.zip; Expand-Archive ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -DestinationPath ]] ..LuaModsPath.. [[ -Force; Remove-Item ]] ..LuaModsPath.. [[\\TensorReactions\\TensorReactions.zip -Force; Set-Content -Path ']] ..LuaModsPath.. [[\\TensorReactionsBackup\\downloadstatus.txt' -Value 'Done'; stop-process -Id $PID\"]])\
 		lastStatusCheck2 = true\
 		d(\"[AnyoneCore] Updater: Download was started. Moving to next step...\")\
 	end\
@@ -97,7 +118,7 @@ local obj1 = {
 				[908] = \"anyone\\\\dps\\\\mch\\\\e7s\",\
 				[909] = \"anyone\\\\dps\\\\mch\\\\e8s\",\
 				[733] = \"anyone\\\\dps\\\\mch\\\\ucob\", -- ucob\
-				[777] = nil, -- uwu\
+				[777] = \"anyone\\\\dps\\\\mch\\\\uwu beta\", -- uwu\
 				[887] = \"rikudou\\\\mch\\\\riku tea\", -- tea\
 			},\
 			[23] = { -- bard\
@@ -107,7 +128,7 @@ local obj1 = {
 				[909] = \"anyone\\\\dps\\\\brd\\\\e8s\",\
 				[733] = \"anyone\\\\dps\\\\brd\\\\ucob\", -- ucob\
 				[777] = nil, -- uwu\
-				[887] = nil, -- tea\
+				[887] = \"rikudou\\\\brd\\\\riku tea\", -- tea\
 			},\
 			[38] = { -- dancer\
 				[906] = \"anyone\\\\dps\\\\dnc\\\\e5s\", --edens verse\
@@ -297,6 +318,36 @@ local obj1 = {
 	\
 	if Settings.AnyoneCore.AlwaysMini == true then\
 		ml_global_information.drawMode = 0\
+	end\
+	\
+	if Settings.AnyoneCore.Keybind == nil then\
+		Settings.AnyoneCore.Keybind = 0x11 -- ctrl is default\
+		Settings.AnyoneCore.Keybind = Settings.AnyoneCore.Keybind \
+	end\
+	\
+	if Settings.AnyoneCore.UseKeybind == nil then\
+		Settings.AnyoneCore.UseKeybind = true -- true is default\
+		Settings.AnyoneCore.UseKeybind = Settings.AnyoneCore.UseKeybind \
+	end\
+	\
+	if Settings.AnyoneCore.FaceAwayEnabled == nil then\
+		Settings.AnyoneCore.FaceAwayEnabled = true -- true is default\
+		Settings.AnyoneCore.FaceAwayEnabled = Settings.AnyoneCore.FaceAwayEnabled \
+	end\
+	\
+	if Settings.AnyoneCore.DrawFaceAway == nil then\
+		Settings.AnyoneCore.DrawFaceAway = true -- true is default\
+		Settings.AnyoneCore.DrawFaceAway = Settings.AnyoneCore.DrawFaceAway \
+	end\
+	\
+	if Settings.AnyoneCore.DrawFaceAwayNoReactions == nil then\
+		Settings.AnyoneCore.DrawFaceAwayNoReactions = false -- false is default\
+		Settings.AnyoneCore.DrawFaceAwayNoReactions = Settings.AnyoneCore.DrawFaceAwayNoReactions \
+	end\
+	\
+	if Settings.AnyoneCore.UseFaceAwayReactions == nil then\
+		Settings.AnyoneCore.UseFaceAwayReactions = true -- false is default\
+		Settings.AnyoneCore.UseFaceAwayReactions = Settings.AnyoneCore.UseFaceAwayReactions \
 	end\
 	\
 	if Settings.AnyoneCore.WarnForUpdate == nil then\
@@ -549,6 +600,16 @@ local obj1 = {
 		Settings.AnyoneCore.SaferKnockback = Settings.AnyoneCore.SaferKnockback \
 	end\
 	\
+	if Settings.AnyoneCore.NewTargetMethod == nil then\
+		Settings.AnyoneCore.NewTargetMethod = true -- true is default\
+		Settings.AnyoneCore.NewTargetMethod = Settings.AnyoneCore.NewTargetMethod \
+	end\
+	\
+	if Settings.AnyoneCore.PotionOverride == nil then\
+		Settings.AnyoneCore.PotionOverride = false -- false is default\
+		Settings.AnyoneCore.PotionOverride = Settings.AnyoneCore.PotionOverride \
+	end\
+	\
 	AnyoneCore.Settings = {\
 			DrawOrbs = Settings.AnyoneCore.DrawOrbs,\
 			DrawDragonHeads = Settings.AnyoneCore.DrawDragonHeads,\
@@ -601,6 +662,14 @@ local obj1 = {
 			UseCleanseTop = Settings.AnyoneCore.UseCleanseTop,\
 			PrepullAetherpact = Settings.AnyoneCore.PrepullAetherpact,\
 			SaferKnockback = Settings.AnyoneCore.SaferKnockback,\
+			NewTargetMethod = Settings.AnyoneCore.NewTargetMethod,\
+			PotionOverride = Settings.AnyoneCore.PotionOverride,\
+			UseKeybind = Settings.AnyoneCore.UseKeybind,\
+			Keybind = Settings.AnyoneCore.Keybind,\
+			FaceAwayEnabled = Settings.AnyoneCore.FaceAwayEnabled,\
+			DrawFaceAway = Settings.AnyoneCore.DrawFaceAway,\
+			DrawFaceAwayNoReactions = Settings.AnyoneCore.DrawFaceAwayNoReactions,\
+			UseFaceAwayReactions = Settings.AnyoneCore.UseFaceAwayReactions,\
 		}\
 \
 	function AnyoneCore.save()\
@@ -738,6 +807,21 @@ local obj1 = {
 		\
 		Settings.AnyoneCore.SaferKnockback = AnyoneCore.Settings.SaferKnockback\
 		Settings.AnyoneCore.SaferKnockback = Settings.AnyoneCore.SaferKnockback\
+		\
+		Settings.AnyoneCore.NewTargetMethod = AnyoneCore.Settings.NewTargetMethod\
+		Settings.AnyoneCore.NewTargetMethod = Settings.AnyoneCore.NewTargetMethod\
+		\
+		Settings.AnyoneCore.PotionOverride = AnyoneCore.Settings.PotionOverride\
+		Settings.AnyoneCore.PotionOverride = Settings.AnyoneCore.PotionOverride\
+		\
+		Settings.AnyoneCore.FaceAwayEnabled = AnyoneCore.Settings.FaceAwayEnabled\
+		Settings.AnyoneCore.FaceAwayEnabled = Settings.AnyoneCore.FaceAwayEnabled\
+		\
+		Settings.AnyoneCore.UseKeybind = AnyoneCore.Settings.UseKeybind\
+		Settings.AnyoneCore.UseKeybind = Settings.AnyoneCore.UseKeybind\
+		\
+		Settings.AnyoneCore.Keybind = AnyoneCore.Settings.Keybind\
+		Settings.AnyoneCore.Keybind = Settings.AnyoneCore.Keybind\
 	\
 		---start of value selectors\
 		if AnyoneCore.Settings.e5sQueenGauge > 80 then\
@@ -808,10 +892,13 @@ local obj1 = {
 	end\
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
-    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Duty Helper,Hacks,Debug\")\
-	\
+    AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Face Away Helper,Duty Helper,Hacks,Extra\")\
+	if Settings.AnyoneCore.FaceAwayEnabled == true then\
+	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_FaceAway\", name = \"FaceAway\", onClick = function() FaceAway.open = not FaceAway.open end, tooltip = \"Dedo's FaceAway\"},\"FFXIVMINION##MENU_HEADER\")\
+	end\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
+	d(\"Loaded FaceAway\")\
 	gAnyoneCoreInitialize = true\
 end\
 \
@@ -944,13 +1031,13 @@ function AnyoneCore.draw()\
 				GUI:PopTextWrapPos()\
                 GUI:EndPopup()\
             end\
-            \
+\
             if GUI:Button(\"Update to newest release\") then GUI:OpenPopup(\"Download Updates\") end ---download_files()\
             if downloadStatus ~= nil then\
             GUI:SameLine()\
             GUI:TextColored(0,1,0,1,downloadStatus)\
             end\
-            \
+\
             if GUI:Button(\"Read Changelog\") then readChangelog() GUI:OpenPopup(\"Changelog\") end\
             \
             local hovered = false\
@@ -1143,6 +1230,20 @@ function AnyoneCore.draw()\
                 GUI:PopTextWrapPos()\
                 GUI:EndTooltip()\
             end\
+			\
+			local hovered = false\
+            AnyoneCore.Settings.PotionOverride, changed = GUI:Checkbox(\"Always re-enable potions override\", AnyoneCore.Settings.PotionOverride)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+                GUI:Text(\"Instead of checking if you had potions enabled from the previous pull, potions will just always get re-enabled after a wipe, no matter what. Helps for people who are forgetful I guess.\\n\")\
+                GUI:TextColored(1,0,0,1,\"Please note that this means it will get enabled even on map changes and in dungeons. This could easily end up wasting a ton of pots if you forget you had this enabled, so don't say I didn't warn you.\")\
+				GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+			GUI:SameLine() GUI:TextColored(1,0,0,1,\"[CAUTION]\")\
             \
         elseif (tabname == GetString(\"Argus\")) then\
             \
@@ -1367,8 +1468,8 @@ function AnyoneCore.draw()\
 					GUI:PopTextWrapPos()\
 					GUI:EndTooltip()\
 				end\
-				GUI:SameLine()\
 				if AnyoneCore.Settings.LeftSide == true then\
+					GUI:SameLine()\
 					local hovered = false\
 					AnyoneCore.Settings.InterruptSecondAdd, changed = GUI:Checkbox(\"Interrupt the second Earthen Aether instead\", AnyoneCore.Settings.InterruptSecondAdd)\
 					if changed then AnyoneCore.save() end\
@@ -1383,6 +1484,17 @@ function AnyoneCore.draw()\
 						GUI:EndTooltip()\
 					end\
 				end -- end of left side check\
+				local hovered = false\
+				AnyoneCore.Settings.NewTargetMethod, changed = GUI:Checkbox(\"New adds phase targeting order\", AnyoneCore.Settings.NewTargetMethod)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Follows the current pug strats for dealing with adds as a ranged DPS. Disable to get the old method back.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
             end -- end of brd/mch/dnc job check\
             \
         elseif (tabname == GetString(\"Job Specific\")) then\
@@ -1547,6 +1659,95 @@ function AnyoneCore.draw()\
             GUI:Text(\"No settings for current job.\")\
             end\
         \
+		elseif (tabname == GetString(\"Face Away Helper\")) then\
+		\
+			local hovered = false\
+            AnyoneCore.Settings.FaceAwayEnabled, changed = GUI:Checkbox(\"Enable Face Away Helper\", AnyoneCore.Settings.FaceAwayEnabled)\
+            if changed then AnyoneCore.save() end\
+            if not hovered then hovered = GUI:IsItemHovered() end\
+            if hovered then\
+                GUI:BeginTooltip()\
+                GUI:PushTextWrapPos(300)\
+				GUI:TextColored(0.50,0.50,0,1,\"A huge thank you to Dedodedo from Rikudou's discord who created Face Away Helper. All I did was clean it up, add a few more options and put it in AnyoneCore. Send dedodedo#5099 all of your love.\")\
+                GUI:Text(\"Enables Face Away Helper, which will help you keep casting spells while actively avoiding looking at the boss for look away mechanics.\\n\\nThis works for any job, but works especially well with casters, and samurai.\")\
+                GUI:TextColored(1,1,0,1,\"Reload AnyoneCore with the reload button on the sidebar after disabling/enabling.\\n\")\
+                GUI:TextColored(1,0,0,1,\"[Warning]\")\
+                GUI:TextColored(1,0.10,0,1,\"Do not stand inside the bosses hitbox during the look away mechanics.\\n\\nDo not hold any mouse keys while Face Away Helper is doing it's thing.\\n\\nTry not to move while Face Away helper is doing it's thing.\")\
+                GUI:PopTextWrapPos()\
+                GUI:EndTooltip()\
+            end\
+			\
+			if AnyoneCore.Settings.FaceAwayEnabled == true then\
+			\
+				local hovered = false\
+				AnyoneCore.Settings.UseKeybind, changed = GUI:Checkbox(\"Use a keybind to set facing\", AnyoneCore.Settings.UseKeybind)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Allows you to use Face Away Helper entirely by yourself through use of a keybind. The keybind can be set to any key, but unfortunately not multiple keys at once.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				if AnyoneCore.Settings.UseKeybind == true then\
+					GUI:SameLine()\
+					local hovered = false\
+					AnyoneCore.Settings.Keybind, changed = GUI:Keybind(\"\", AnyoneCore.Settings.Keybind, 40)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Press any key to set as the keybind to use Face Away.\\n\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.UseFaceAwayReactions, changed = GUI:Checkbox(\"Enable the usage of reactions to activate Face Away automatically\", AnyoneCore.Settings.UseFaceAwayReactions)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"Face Away helper can also be used automatically through the use of reactions, you could even call it yourself by putting 'FaceAway.FaceAway = true' in a LUA reaction.\\n\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				local hovered = false\
+				AnyoneCore.Settings.DrawFaceAway, changed = GUI:Checkbox(\"Draw Face Away safe zone using Argus\", AnyoneCore.Settings.DrawFaceAway)\
+				if changed then AnyoneCore.save() end\
+				if not hovered then hovered = GUI:IsItemHovered() end\
+				if hovered then\
+					GUI:BeginTooltip()\
+					GUI:PushTextWrapPos(300)\
+					GUI:Text(\"If the user owns Argus, Face Away can be drawn, it'll show the danger zone where an eye effect would affect you, and then a safe zone where you can effectively cast spells without interruption and not get affected.\\n\")\
+					GUI:TextColored(1,0,0,1,\"[Warning]\")\
+					GUI:TextColored(1,1,0,1,\"On non-Tensor jobs while using TensorDrift, this draw can look fairly wonky and will show you looking directly at the boss. But this isn't the case, it's just how TensorDrift works. You'll still be safe.\")\
+					GUI:PopTextWrapPos()\
+					GUI:EndTooltip()\
+				end\
+				\
+				if AnyoneCore.Settings.DrawFaceAway == true then\
+					GUI:SameLine()\
+					local hovered = false\
+					AnyoneCore.Settings.DrawFaceAwayNoReactions, changed = GUI:Checkbox(\"Don't draw reactions-based Face Away\", AnyoneCore.Settings.DrawFaceAwayNoReactions)\
+					if changed then AnyoneCore.save() end\
+					if not hovered then hovered = GUI:IsItemHovered() end\
+					if hovered then\
+						GUI:BeginTooltip()\
+						GUI:PushTextWrapPos(300)\
+						GUI:Text(\"Makes it so the draws for using a keybind still show up, but not when done through reactions.\\n\")\
+						GUI:PopTextWrapPos()\
+						GUI:EndTooltip()\
+					end\
+				end\
+			\
+			end\
         elseif (tabname == GetString(\"Duty Helper\")) then\
         \
             local hovered = false\
@@ -1696,7 +1897,7 @@ function AnyoneCore.draw()\
             \
         end\
 		\
-		elseif (tabname == GetString(\"Debug\")) then\
+		elseif (tabname == GetString(\"Extra\")) then\
 		\
 			local hovered = false\
             AnyoneCore.Settings.MiniReactionsTimer, changed = GUI:Checkbox(\"Mini Reactions Timer\", AnyoneCore.Settings.MiniReactionsTimer)\
@@ -1723,6 +1924,25 @@ function AnyoneCore.draw()\
                 GUI:PopTextWrapPos()\
                 GUI:EndTooltip()\
             end\
+			\
+			if GUI:BeginPopupModal(\"Download Qwert's Reactions\", true, GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_NoSavedSettings) then\
+				GUI:PushTextWrapPos(500)\
+				GUI:Text(\"If you have a personally edited timeline, back it up or change the file name now or it'll be overwritten by the updater.\\n\")\
+                GUI:TextColored(1,1,0,1,\"A backup of your files will be created in LuaMods/TensorReactionsBackup.\\n\") \
+				GUI:TextColored(1,0,0,1,\"Warning: if any of the folders leading up to your LuaMods folder has a space in it's name, AnyoneCore updater will not work.\\n\")\
+                if GUI:Button(\"Yes\") then download_qwerts() downloadStatus = \"Wait...\" GUI:CloseCurrentPopup() end \
+                GUI:SameLine()\
+                if GUI:Button(\"No\") then GUI:CloseCurrentPopup() end\
+				GUI:PopTextWrapPos()\
+                GUI:EndPopup()\
+            end\
+			\
+			if GUI:Button(\"Update Qwert's reactions\") then GUI:OpenPopup(\"Download Qwert's Reactions\") end ---download_files()\
+            if downloadStatus ~= nil then\
+            GUI:SameLine()\
+            GUI:TextColored(0,1,0,1,downloadStatus)\
+            end\
+\
 		\
         end -- end of tabs\
 		\
@@ -1786,6 +2006,101 @@ function AnyoneCore.draw()\
 			end\
 	GUI:End()\
 	end\
+	\
+	if FaceAway.enabled and FaceAway.open then\
+		local c = 0\
+		local WinFlags = (GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoCollapse)\
+		for k,v in pairs(FaceAway.WindowStyle) do if v[4] ~= 0 then c = c + 1 loadstring([[GUI:PushStyleColor(GUI.Col_]]..k..[[, ]]..(v[1]/255)..[[, ]]..(v[2]/255)..[[, ]]..(v[3]/255)..[[, ]]..v[4]..[[)]])() end end\
+		GUI:SetNextWindowSize(60,50,GUI.SetCond_Always)\
+        FaceAway.visible, FaceAway.open = GUI:Begin(\"FaceAway\", FaceAway.open, WinFlags)\
+        if FaceAway.visible then\
+			local childColorFace\
+			local childColorKeybind\
+			local target = Player:GetTarget()\
+			-- Some stuff to check if we want to use keybinds or not and if so checks if ctrl is held down\
+			if AnyoneCore.Settings.UseKeybind == true then\
+				childColorKeybind = {r = 0, g = .1, b = 0, a = .75}\
+				FaceAway.keybindstatus = \"On\"\
+\
+					if (GUI:IsKeyDown(AnyoneCore.Settings.Keybind)) == true then\
+						CtrlIsDown = true\
+					else\
+						CtrlIsDown = false\
+					end\
+				else\
+				childColorKeybind = {r = .1, g = 0, b = 0, a = .75 }\
+				FaceAway.keybindstatus = \"Off\"\
+			end\
+			\
+			\
+			if (CtrlIsDown == true or FaceAway.FaceAway == true) and target then\
+				-- This presses the D key to update our position (https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN)\
+				PressKey(0x44)\
+\
+				-- some color/gui stuff\
+				childColorFace = {r = 0, g = .1, b = 0, a = .75}\
+				FaceAway.facestatus = \"On\"\
+				FaceAway.FaceAwayKey = true\
+\
+				-- stolen stuff from Anyone to get the heading\
+				local behind = TensorCore.getHeadingToTarget(Player.pos, target.pos) \
+				Player:SetFacing(behind+math.rad(60))\
+\
+				-- turns off legacy control if on, required to actually make the character turn and not move\
+				if gAssistUseLegacy == true then\
+					gAssistUseLegacy = false\
+					ml_global_information.GetMovementInfo(false)\
+				end\
+				FaceAway.sleep = Now()\
+			else\
+				if gAssistUseLegacy == false and TimeSince(FaceAway.sleep) >= 100 then\
+					gAssistUseLegacy = true\
+					ml_global_information.GetMovementInfo(false)\
+				end\
+				-- more gui and color stuff\
+				childColorFace = {r = .1, g = 0, b = 0, a = .75 }\
+				FaceAway.facestatus = \"Off\"\
+				FaceAway.FaceAwayKey = false\
+			end\
+\
+			GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding,10)\
+			GUI:PushStyleColor(GUI.Col_ChildWindowBg, childColorFace.r, childColorFace.g, childColorFace.b, childColorFace.a)\
+			GUI:BeginChild(\"##extra3\", 40, 35, true)\
+			GUI:AlignFirstTextHeightToWidgets()\
+			GUI:Text(FaceAway.facestatus)\
+			GUI:EndChild()\
+			-- lets us click it and enable disable it by clicking on the toggle\
+			if (GUI:IsItemHovered()) then\
+				if (GUI:IsMouseClicked(0)) and target then\
+					FaceAway.FaceAway = not FaceAway.FaceAway\
+				end\
+			end			\
+			GUI:PopStyleColor()\
+			GUI:PopStyleVar()\
+\
+\
+			--[[GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding,10)\
+			GUI:PushStyleColor(GUI.Col_ChildWindowBg, childColorKeybind.r, childColorKeybind.g, childColorKeybind.b, childColorKeybind.a)\
+			GUI:BeginChild(\"##extra4\", 40, 25, true)\
+			GUI:AlignFirstTextHeightToWidgets()\
+			GUI:Text(FaceAway.keybindstatus)\
+			GUI:EndChild()\
+			-- click it to enable the use of keybinds\
+			if (GUI:IsItemHovered()) then\
+				if (GUI:IsMouseClicked(0)) then\
+					AnyoneCore.Settings.UseKeybind = not AnyoneCore.Settings.UseKeybind\
+					AnyoneCore.save()\
+				end\
+			end\
+			GUI:PopStyleColor()\
+			GUI:PopStyleVar()]]--\
+			\
+			\
+\
+		end\
+		GUI:End()\
+		GUI:PopStyleColor(c)\
+	end\
 end\
 \
 AnyoneCore.draw()\
@@ -1806,7 +2121,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "9d5dd42a-e4d1-0975-aeac-1c7101ad33da";
+		["uuid"] = "0df5ade8-cc3a-398a-9310-692921b5fcc7";
 	};
 	[2] = {
 		["actions"] = {
@@ -1877,7 +2192,7 @@ gStartCombat = false\
 data.startCombat = nil\
 end\
 \
-if eventArgs.oldData.PotsEnabled ~= nil then\
+if eventArgs.oldData.PotsEnabled ~= nil or AnyoneCore.Settings.PotionOverride == true then\
 SallyDNC.SkillSettings.Potion.enabled = true\
 end\
 \
@@ -2359,6 +2674,10 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2398,6 +2717,7 @@ end";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "is bot running";
@@ -2426,6 +2746,10 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2487,6 +2811,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "is text countdown";
@@ -2515,6 +2840,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2554,6 +2883,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "time is -15";
@@ -2582,6 +2912,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2621,6 +2955,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "time is 0";
@@ -2649,6 +2984,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2688,6 +3027,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "time is < 0";
@@ -2716,6 +3056,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2755,6 +3099,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "is prepull enabled";
@@ -2783,6 +3128,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2822,6 +3171,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -2850,6 +3200,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2889,6 +3243,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "time is -1.4 (pots)";
@@ -2917,6 +3272,10 @@ return correct ~= nil";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -2956,6 +3315,7 @@ return correct ~= nil";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "check if pots enabled";
@@ -3260,6 +3620,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3299,6 +3663,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "English";
@@ -3327,6 +3692,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3366,6 +3735,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "China";
@@ -3394,6 +3764,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3433,6 +3807,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "French";
@@ -3461,6 +3836,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3500,6 +3879,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "German";
@@ -3528,6 +3908,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3567,6 +3951,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Korean";
@@ -3595,6 +3980,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -3634,6 +4023,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Japanese";
@@ -3730,6 +4120,792 @@ self.used = true";
 	};
 	[10] = {
 		["actions"] = {
+			[1] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "FaceAway.FaceAway = true\
+if AnyoneCore.Settings.DrawFaceAwayNoReactions == true then\
+data.dontdrawreactionsfacing = true\
+end\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 3;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "FaceAway.FaceAway = false\
+data.dontdrawreactionsfacing = nil\
+self.used = true";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 3;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[2];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local spellCheck = {\
+[343] = true, -- Doomsay\
+[352] = true, -- Chaotic Eye\
+[410] = true, -- Stone Gaze\
+[498] = true, -- Cold Gaze\
+[499] = true, -- Stone Gaze\
+[512] = true, -- Cursed Gaze\
+[513] = true, -- Dread Gaze\
+[743] = true, -- Mudslinger\
+[1161] = true, -- Stone Gaze\
+[1969] = true, -- Petrifaction\
+[1979] = true, -- Petrifaction\
+[2410] = true, -- Level X Petrify\
+[2516] = true, -- Petrifaction\
+[2526] = true, -- Petrifaction\
+[2734] = true, -- Stone Gaze\
+[2824] = true, -- Petrifaction\
+[2832] = true, -- Mortal Ray\
+[3027] = true, -- Calcifying Mist\
+[3173] = true, -- Entrance\
+[3281] = true, -- Mortal Gaze\
+[4201] = true, -- the Dragon's Gaze\
+[4331] = true, -- Petrifaction\
+[4492] = true, -- Quarry Lake\
+[4493] = true, -- Naked Soul\
+[4522] = true, -- Paradise Lost\
+[4528] = true, -- Hypnotize\
+[4537] = true, -- Headlight\
+[4554] = true, -- Headwind\
+[4666] = true, -- Calcifying Mist\
+[4682] = true, -- Evil Eye\
+[5028] = true, -- Petrifaction\
+[5041] = true, -- Evil Eye\
+[5140] = true, -- Stone Gaze\
+[5154] = true, -- Petrifaction\
+[5216] = true, -- Frond Fatale\
+[5257] = true, -- the Dragon's Gaze\
+[5366] = true, -- Foregone Gleam\
+[5374] = true, -- Petrifaction\
+[5431] = true, -- Petrifaction\
+[5788] = true, -- Oogle\
+[5832] = true, -- Mysterious Light\
+[6100] = true, -- Mortal Ray\
+[6146] = true, -- Assimilation\
+[6202] = true, -- Frond Affeared\
+[6351] = true, -- Stone Gaze\
+[6356] = true, -- Stone Gaze\
+[6379] = true, -- Quarry Lake\
+[6403] = true, -- Cold Feet\
+[6444] = true, -- Eye of the Stunted\
+[6445] = true, -- Eye of the Wildered\
+[6446] = true, -- Eye of the Slithered\
+[6521] = true, -- Divine Spark\
+[6582] = true, -- Divine Spark\
+[6939] = true, -- Hypnotize\
+[6953] = true, -- Mysterious Light\
+[6957] = true, -- Foregone Gleam\
+[7034] = true, -- Eye of the Stunted\
+[7043] = true, -- Evil Eye\
+[7182] = true, -- Nightmare\
+[7200] = true, -- Hollow Nightmare\
+[7270] = true, -- Meracydian Fear\
+[7364] = true, -- Flash Powder\
+[7651] = true, -- Eyeshine\
+[7672] = true, -- Petrifying Eye\
+[7675] = true, -- Evil Eye\
+[7734] = true, -- Meracydian Fear\
+[7779] = true, -- Petrifying Eye\
+[7940] = true, -- Empty Gaze\
+[7949] = true, -- Eye of the Fierce\
+[8066] = true, -- Mad Stare\
+[8194] = true, -- Nightmarish Light\
+[8648] = true, -- Foregone Gleam\
+[8717] = true, -- Inner Demons\
+[8952] = true, -- Squelch\
+[9030] = true, -- Overlong Glance\
+[9071] = true, -- Death's Gaze\
+[9165] = true, -- Eyeshine\
+[9485] = true, -- Demon Eye\
+[9542] = true, -- Frond Affeared\
+[9557] = true, -- Eyeshine\
+[9613] = true, -- Inner Demons\
+[9649] = true, -- Petrifaction\
+[9829] = true, -- Eye of the Fire\
+[10274] = true, -- Divine Lure\
+[10275] = true, -- Divine Lure\
+[10679] = true, -- Absolute Terror\
+[10769] = true, -- Petrifying Eye\
+[10852] = true, -- Double Hex Eye\
+[10956] = true, -- Explosive Dehiscence\
+[11159] = true, -- Wile of the Tengu\
+[11602] = true, -- Cerulean Ray\
+[11608] = true, -- Mortal Ray\
+[11645] = true, -- Mortal Gaze\
+[11671] = true, -- Hex Eye\
+[11750] = true, -- Quarry Lake\
+[11752] = true, -- Hypnotize\
+[11789] = true, -- Stone Gaze\
+[11900] = true, -- Neuro Squama\
+[11922] = true, -- Eye of the Fire\
+[11973] = true, -- Stone Gaze\
+[12174] = true, -- Blinding Burst\
+[12190] = true, -- Wile of the Tengu\
+[12261] = true, -- Eyeshine\
+[12281] = true, -- Allagan Fear\
+[12322] = true, -- Nightmarish Light\
+[12357] = true, -- Shifting Light\
+[12397] = true, -- Calcifying Mist\
+[12416] = true, -- Frond Fatale\
+[12442] = true, -- Hex\
+[12513] = true, -- Petrifying Eye\
+[12528] = true, -- Eye of the Slithered\
+[12529] = true, -- Cold Stare\
+[12553] = true, -- Naked Soul\
+[12563] = true, -- Mysterious Light\
+[12587] = true, -- Empty Gaze\
+[12708] = true, -- Frond Fatale\
+[13257] = true, -- Eyes of Anguish\
+[13263] = true, -- Eye of the Fire\
+[13296] = true, -- Evil Eye\
+[13299] = true, -- Evil Eye\
+[13368] = true, -- Hypnotize\
+[13410] = true, -- Erratic Blaster\
+[13552] = true, -- Imp Choir\
+[13712] = true, -- Dread Gaze\
+[13784] = true, -- Frond Affeared\
+[14200] = true, -- Devitalize\
+[14691] = true, -- Demon Eye\
+[14692] = true, -- Cold Stare\
+[14694] = true, -- Dread Gaze\
+[14875] = true, -- Cry of Rage\
+[14951] = true, -- Dark Sabbath\
+[15030] = true, -- Chilling Glare\
+[15078] = true, -- Explosive Dehiscence\
+[15272] = true, -- Eye of the Fierce\
+[15381] = true, -- Dread Gaze\
+[15455] = true, -- Cold Gaze\
+[15457] = true, -- Stone Gaze\
+[15469] = true, -- Petrifaction\
+[15475] = true, -- Petrifaction\
+[15477] = true, -- Wile of the Tengu\
+[16025] = true, -- Enthrall\
+[16976] = true, -- Headlight\
+[17198] = true, -- Charming Chasse\
+[17360] = true, -- Coin Toss\
+[17540] = true, -- Quarry Lake\
+[17856] = true, -- Petro Eyes\
+[17955] = true, -- Terrifying Glance\
+[17973] = true, -- Cold Gaze\
+[18017] = true, -- Stone Gaze\
+[18041] = true, -- Petrifying Eye\
+[18818] = true, -- Dread Gaze\
+[19198] = true, -- Negative Aura\
+[19995] = true, -- ネガティブオーラ\
+[20001] = true, -- Crushing Gaze\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.75";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[2] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[2];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local spellCheck = {\
+[343] = true, -- Doomsay\
+[352] = true, -- Chaotic Eye\
+[410] = true, -- Stone Gaze\
+[498] = true, -- Cold Gaze\
+[499] = true, -- Stone Gaze\
+[512] = true, -- Cursed Gaze\
+[513] = true, -- Dread Gaze\
+[743] = true, -- Mudslinger\
+[1161] = true, -- Stone Gaze\
+[1969] = true, -- Petrifaction\
+[1979] = true, -- Petrifaction\
+[2410] = true, -- Level X Petrify\
+[2516] = true, -- Petrifaction\
+[2526] = true, -- Petrifaction\
+[2734] = true, -- Stone Gaze\
+[2824] = true, -- Petrifaction\
+[2832] = true, -- Mortal Ray\
+[3027] = true, -- Calcifying Mist\
+[3173] = true, -- Entrance\
+[3281] = true, -- Mortal Gaze\
+[4201] = true, -- the Dragon's Gaze\
+[4331] = true, -- Petrifaction\
+[4492] = true, -- Quarry Lake\
+[4493] = true, -- Naked Soul\
+[4522] = true, -- Paradise Lost\
+[4528] = true, -- Hypnotize\
+[4537] = true, -- Headlight\
+[4554] = true, -- Headwind\
+[4666] = true, -- Calcifying Mist\
+[4682] = true, -- Evil Eye\
+[5028] = true, -- Petrifaction\
+[5041] = true, -- Evil Eye\
+[5140] = true, -- Stone Gaze\
+[5154] = true, -- Petrifaction\
+[5216] = true, -- Frond Fatale\
+[5257] = true, -- the Dragon's Gaze\
+[5366] = true, -- Foregone Gleam\
+[5374] = true, -- Petrifaction\
+[5431] = true, -- Petrifaction\
+[5788] = true, -- Oogle\
+[5832] = true, -- Mysterious Light\
+[6100] = true, -- Mortal Ray\
+[6146] = true, -- Assimilation\
+[6202] = true, -- Frond Affeared\
+[6351] = true, -- Stone Gaze\
+[6356] = true, -- Stone Gaze\
+[6379] = true, -- Quarry Lake\
+[6403] = true, -- Cold Feet\
+[6444] = true, -- Eye of the Stunted\
+[6445] = true, -- Eye of the Wildered\
+[6446] = true, -- Eye of the Slithered\
+[6521] = true, -- Divine Spark\
+[6582] = true, -- Divine Spark\
+[6939] = true, -- Hypnotize\
+[6953] = true, -- Mysterious Light\
+[6957] = true, -- Foregone Gleam\
+[7034] = true, -- Eye of the Stunted\
+[7043] = true, -- Evil Eye\
+[7182] = true, -- Nightmare\
+[7200] = true, -- Hollow Nightmare\
+[7270] = true, -- Meracydian Fear\
+[7364] = true, -- Flash Powder\
+[7651] = true, -- Eyeshine\
+[7672] = true, -- Petrifying Eye\
+[7675] = true, -- Evil Eye\
+[7734] = true, -- Meracydian Fear\
+[7779] = true, -- Petrifying Eye\
+[7940] = true, -- Empty Gaze\
+[7949] = true, -- Eye of the Fierce\
+[8066] = true, -- Mad Stare\
+[8194] = true, -- Nightmarish Light\
+[8648] = true, -- Foregone Gleam\
+[8717] = true, -- Inner Demons\
+[8952] = true, -- Squelch\
+[9030] = true, -- Overlong Glance\
+[9071] = true, -- Death's Gaze\
+[9165] = true, -- Eyeshine\
+[9485] = true, -- Demon Eye\
+[9542] = true, -- Frond Affeared\
+[9557] = true, -- Eyeshine\
+[9613] = true, -- Inner Demons\
+[9649] = true, -- Petrifaction\
+[9829] = true, -- Eye of the Fire\
+[10274] = true, -- Divine Lure\
+[10275] = true, -- Divine Lure\
+[10679] = true, -- Absolute Terror\
+[10769] = true, -- Petrifying Eye\
+[10852] = true, -- Double Hex Eye\
+[10956] = true, -- Explosive Dehiscence\
+[11159] = true, -- Wile of the Tengu\
+[11602] = true, -- Cerulean Ray\
+[11608] = true, -- Mortal Ray\
+[11645] = true, -- Mortal Gaze\
+[11671] = true, -- Hex Eye\
+[11750] = true, -- Quarry Lake\
+[11752] = true, -- Hypnotize\
+[11789] = true, -- Stone Gaze\
+[11900] = true, -- Neuro Squama\
+[11922] = true, -- Eye of the Fire\
+[11973] = true, -- Stone Gaze\
+[12174] = true, -- Blinding Burst\
+[12190] = true, -- Wile of the Tengu\
+[12261] = true, -- Eyeshine\
+[12281] = true, -- Allagan Fear\
+[12322] = true, -- Nightmarish Light\
+[12357] = true, -- Shifting Light\
+[12397] = true, -- Calcifying Mist\
+[12416] = true, -- Frond Fatale\
+[12442] = true, -- Hex\
+[12513] = true, -- Petrifying Eye\
+[12528] = true, -- Eye of the Slithered\
+[12529] = true, -- Cold Stare\
+[12553] = true, -- Naked Soul\
+[12563] = true, -- Mysterious Light\
+[12587] = true, -- Empty Gaze\
+[12708] = true, -- Frond Fatale\
+[13257] = true, -- Eyes of Anguish\
+[13263] = true, -- Eye of the Fire\
+[13296] = true, -- Evil Eye\
+[13299] = true, -- Evil Eye\
+[13368] = true, -- Hypnotize\
+[13410] = true, -- Erratic Blaster\
+[13552] = true, -- Imp Choir\
+[13712] = true, -- Dread Gaze\
+[13784] = true, -- Frond Affeared\
+[14200] = true, -- Devitalize\
+[14691] = true, -- Demon Eye\
+[14692] = true, -- Cold Stare\
+[14694] = true, -- Dread Gaze\
+[14875] = true, -- Cry of Rage\
+[14951] = true, -- Dark Sabbath\
+[15030] = true, -- Chilling Glare\
+[15078] = true, -- Explosive Dehiscence\
+[15272] = true, -- Eye of the Fierce\
+[15381] = true, -- Dread Gaze\
+[15455] = true, -- Cold Gaze\
+[15457] = true, -- Stone Gaze\
+[15469] = true, -- Petrifaction\
+[15475] = true, -- Petrifaction\
+[15477] = true, -- Wile of the Tengu\
+[16025] = true, -- Enthrall\
+[16976] = true, -- Headlight\
+[17198] = true, -- Charming Chasse\
+[17360] = true, -- Coin Toss\
+[17540] = true, -- Quarry Lake\
+[17856] = true, -- Petro Eyes\
+[17955] = true, -- Terrifying Glance\
+[17973] = true, -- Cold Gaze\
+[18017] = true, -- Stone Gaze\
+[18041] = true, -- Petrifying Eye\
+[18818] = true, -- Dread Gaze\
+[19198] = true, -- Negative Aura\
+[19995] = true, -- ネガティブオーラ\
+[20001] = true, -- Crushing Gaze\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime <= 0.01";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[3] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = {
+				};
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return AnyoneCore.Settings.FaceAwayEnabled == true and AnyoneCore.Settings.UseFaceAwayReactions == true";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 3;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Face Away channels";
+		["throttleTime"] = 1400;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 10;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "3a6e17c1-5be7-acbb-9fec-17bacf1e5841";
+	};
+	[11] = {
+		["actions"] = {
+			[1] = {
+				["aType"] = 4;
+				["actionID"] = -1;
+				["actionLua"] = "local t = Player:GetTarget()\
+if t then\
+local radius = t.Distance+2\
+Argus.addCircleFilled(t.pos.x, t.pos.y, t.pos.z, 0.1, 10, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), GUI:ColorConvertFloat4ToU32(0, 0, 0, 0), 0.1)\
+Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(90), Player.pos.h, 30, GUI:ColorConvertFloat4ToU32(1, 0, 0, 0.1), GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 2)\
+Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(30), Player.pos.h+math.rad(60), 30, GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.1), GUI:ColorConvertFloat4ToU32(0, 1, 0, 1), 2)\
+Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(30), Player.pos.h-math.rad(60), 30, GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.1), GUI:ColorConvertFloat4ToU32(0, 1, 0, 1), 2)\
+end";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+		};
+		["conditions"] = {
+			[1] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = {
+				};
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return (FaceAway.FaceAway == true or FaceAway.FaceAwayKey == true) and (AnyoneCore.Settings.FaceAwayEnabled == true and AnyoneCore.Settings.DrawFaceAway == true) and Argus ~= nil and (data.dontdrawreactionsfacing == nil)";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+		};
+		["enabled"] = true;
+		["eventType"] = 12;
+		["execute"] = "";
+		["executeType"] = 1;
+		["lastUse"] = 0;
+		["luaNeedsWeaveWindow"] = false;
+		["luaReturnsAction"] = false;
+		["name"] = "Draw Face Away";
+		["throttleTime"] = 0;
+		["time"] = 0;
+		["timeRange"] = false;
+		["timelineIndex"] = 0;
+		["timeout"] = 5;
+		["timerEndOffset"] = 0;
+		["timerOffset"] = 0;
+		["timerStartOffset"] = 0;
+		["used"] = false;
+		["uuid"] = "fc2d0c39-71a2-b4c8-be0d-1de609a56c96";
+	};
+	[12] = {
+		["actions"] = {
 		};
 		["conditions"] = {
 		};
@@ -3752,7 +4928,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "221f0abf-e70d-b6b9-bed9-ca41e91572e7";
 	};
-	[11] = {
+	[13] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -4576,6 +5752,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4615,6 +5795,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = 733;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -4643,6 +5824,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4682,6 +5867,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -4710,6 +5896,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4749,6 +5939,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Lunar Dynamo > Iron Chariot";
@@ -4777,6 +5968,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4816,6 +6011,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Thermionic > Iron Chariot";
@@ -4844,6 +6040,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4883,6 +6083,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Thermionic > Lunar Dynamo";
@@ -4911,6 +6112,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -4950,6 +6155,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Raven's Dive > Iron Chariot";
@@ -4978,6 +6184,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5017,6 +6227,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Raven's Dive > Lunar Dynamo";
@@ -5045,6 +6256,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5084,6 +6299,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Dalamud Dive > Thermionic";
@@ -5112,6 +6328,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5151,6 +6371,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Meteor Stream > Dalamud Dive";
@@ -5179,6 +6400,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5218,6 +6443,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "Lunar Dynamo > Thermionic";
@@ -5246,6 +6472,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5285,6 +6515,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "check if draws are enabled";
@@ -5313,6 +6544,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5352,6 +6587,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "LD > RD > MS (fellruin)";
@@ -5380,6 +6616,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5419,6 +6659,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "RD > LD > MS";
@@ -5447,6 +6688,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5486,6 +6731,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "LD > RD > TB (adds)";
@@ -5514,6 +6760,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5553,6 +6803,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "LD > IC > RD";
@@ -5581,6 +6832,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5620,6 +6875,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "IC > TB > RD";
@@ -5648,6 +6904,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 5;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5687,6 +6947,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "IC > RD > TB";
@@ -5726,7 +6987,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "1d294bf9-c7ac-b8e8-b977-ab40694f2211";
 	};
-	[12] = {
+	[14] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -5787,6 +7048,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5826,6 +7091,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = 733;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -5854,6 +7120,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5893,6 +7163,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -5921,6 +7192,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -5961,6 +7236,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -5989,6 +7265,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6028,6 +7308,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6056,6 +7337,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6095,6 +7380,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = 733;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6134,7 +7420,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "38ec7f31-2e2d-2b94-8d06-f29f0315d9c2";
 	};
-	[13] = {
+	[15] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -6251,6 +7537,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6291,6 +7581,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6319,6 +7610,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6358,6 +7653,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6386,6 +7682,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6425,6 +7725,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6453,6 +7754,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6492,6 +7797,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = 733;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6520,6 +7826,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6559,6 +7869,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6598,7 +7909,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "2ed278b3-13b6-ae25-b793-1d29c5c69362";
 	};
-	[14] = {
+	[16] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -6823,6 +8134,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6863,6 +8178,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6891,6 +8207,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6930,6 +8250,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -6958,6 +8279,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -6997,6 +8322,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7025,6 +8351,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7064,6 +8394,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = 733;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7092,6 +8423,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7131,6 +8466,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7159,6 +8495,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7198,6 +8538,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7226,6 +8567,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7265,6 +8610,7 @@ self.used = true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7304,7 +8650,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "5df98415-72aa-3f31-a81d-59138707e453";
 	};
-	[15] = {
+	[17] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -7328,7 +8674,7 @@ self.used = true";
 		["used"] = false;
 		["uuid"] = "88650a89-2ec4-058f-b535-c03581a83c9c";
 	};
-	[16] = {
+	[18] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -7417,6 +8763,10 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7456,6 +8806,7 @@ end";
 				["lastSkillID"] = -1;
 				["localmapid"] = 906;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7484,6 +8835,10 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7523,6 +8878,7 @@ end";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "has argus";
@@ -7562,7 +8918,7 @@ end";
 		["used"] = false;
 		["uuid"] = "84b13d19-f430-17aa-92bb-144877e5529e";
 	};
-	[17] = {
+	[19] = {
 		["actions"] = {
 		};
 		["conditions"] = {
@@ -7586,7 +8942,7 @@ end";
 		["used"] = false;
 		["uuid"] = "d701ee61-07a2-61c8-a9df-819535b1bc04";
 	};
-	[18] = {
+	[20] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 3;
@@ -7728,6 +9084,10 @@ end";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7768,6 +9128,7 @@ return false";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7796,6 +9157,10 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7835,6 +9200,7 @@ return false";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7863,6 +9229,10 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7902,6 +9272,7 @@ return false";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7930,6 +9301,10 @@ return false";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -7971,6 +9346,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -7999,6 +9375,10 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8038,6 +9418,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8066,6 +9447,10 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8105,6 +9490,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8133,6 +9519,10 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8175,6 +9565,7 @@ return target ~= nil and target.contentid < 30000";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8215,7 +9606,7 @@ return target ~= nil and target.contentid < 30000";
 		["used"] = false;
 		["uuid"] = "cc7ba16d-8310-333c-8e2c-a3956d162477";
 	};
-	[19] = {
+	[21] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -8314,6 +9705,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8372,6 +9767,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8400,6 +9796,10 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8439,6 +9839,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8467,6 +9868,10 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8506,6 +9911,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8534,6 +9940,10 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8573,6 +9983,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8601,6 +10012,10 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8658,6 +10073,7 @@ return StopCastingTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8697,7 +10113,7 @@ return StopCastingTable[eventArgs.spellID] == true";
 		["used"] = false;
 		["uuid"] = "a19552c7-c8c2-d89b-b0b8-9875d59c892a";
 	};
-	[20] = {
+	[22] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 4;
@@ -8796,6 +10212,10 @@ self.used = true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8849,6 +10269,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8877,6 +10298,10 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8916,6 +10341,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -8944,6 +10370,10 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -8983,6 +10413,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -9011,6 +10442,10 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -9064,6 +10499,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
 				["name"] = "";
@@ -9103,7 +10539,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 		["used"] = false;
 		["uuid"] = "cc1bb6b1-ef7c-b4c1-b774-ed1404f0052f";
 	};
-	[21] = {
+	[23] = {
 		["actions"] = {
 			[1] = {
 				["aType"] = 1;
@@ -9122,7 +10558,93 @@ return ClearTargetTable[eventArgs.buffID] == true";
 					[1] = 2;
 					[2] = 1;
 					[3] = 3;
+					[4] = 11;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = true;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Self";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
+				["aType"] = 1;
+				["actionID"] = 7551;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 6;
+					[2] = 7;
+					[3] = 5;
 					[4] = 4;
+				};
+				["endIfUsed"] = true;
+				["gVar"] = "ACR_RikuSCH_CD";
+				["gVarIndex"] = 1;
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "";
+				["potType"] = 1;
+				["setTarget"] = false;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Event Entity";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[3] = {
+				["aType"] = 1;
+				["actionID"] = 7548;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 8;
+					[2] = 9;
+					[3] = 10;
+					[4] = 3;
 				};
 				["endIfUsed"] = true;
 				["gVar"] = "";
@@ -9159,6 +10681,10 @@ return ClearTargetTable[eventArgs.buffID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -9412,7 +10938,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = false;
+				["dequeueIfLuaFalse"] = true;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
 				["eventArgType"] = 2;
@@ -9442,9 +10968,10 @@ return MitigationTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "miti table dequeue check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9470,11 +10997,15 @@ return MitigationTable[eventArgs.spellID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return FFXIV_Common_BotRunning and Player.job == 38 and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
+				["conditionLua"] = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.DutyHelperMitigation == true and AnyoneCore.Settings.DutyHelper == true";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -9509,9 +11040,10 @@ return MitigationTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "check mitigation settings";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9529,73 +11061,6 @@ return MitigationTable[eventArgs.spellID] == true";
 				["setFirstMatch"] = false;
 			};
 			[3] = {
-				["actionCDValue"] = 1;
-				["actionID"] = 16012;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 4;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[4] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -9604,6 +11069,10 @@ return MitigationTable[eventArgs.spellID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 2;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -9643,9 +11112,10 @@ return MitigationTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "combat check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9662,74 +11132,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-		};
-		["enabled"] = true;
-		["eventType"] = 3;
-		["execute"] = "";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "shield samba - duty helper";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 10;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "3e7e4fb9-2a27-03fa-9c15-2ad2fe7a900b";
-	};
-	[22] = {
-		["actions"] = {
-			[1] = {
-				["aType"] = 1;
-				["actionID"] = 7551;
-				["actionLua"] = "";
-				["allowInterrupt"] = false;
-				["atomicPriority"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["conditions"] = {
-					[1] = 2;
-					[2] = 1;
-					[3] = 3;
-					[4] = 4;
-				};
-				["endIfUsed"] = true;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = true;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = "Nearest";
-				["targetType"] = "Event Entity";
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
-		["conditions"] = {
-			[1] = {
+			[4] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -9738,41 +11141,29 @@ return MitigationTable[eventArgs.spellID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "local InterruptTable = {\
----dungeons\
-[9042] = true,\
-[8612] = true,\
-[2145] = true,\
-[12507] = true,\
-[15786] = true,\
-[16776] = true,\
-[16815] = true,\
-[15802] = true,\
-[15808] = true,\
-[17164] = true,\
----8 man raids\
-[8983] = true,\
-[10933] = true,\
-[15757] = true,\
----trials\
-[14324] = true,\
----24 man raids\
-[3344] = true,\
-}\
-\
-return InterruptTable[eventArgs.spellID] == true";
-				["conditionType"] = 2;
+				["conditionLua"] = "local target = EntityList:Get(eventArgs.detectionTargetID)\
+if target ~= nil and target.castinginfo ~= nil then\
+		if target.castinginfo.castinginterruptible == true then\
+			return true\
+		end\
+end\
+return false";
+				["conditionType"] = 1;
 				["conditions"] = {
 				};
 				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
+				["dequeueIfLuaFalse"] = false;
 				["enmityValue"] = 0;
 				["eventArgOptionType"] = 1;
-				["eventArgType"] = 2;
+				["eventArgType"] = 1;
 				["eventBuffDuration"] = 0;
 				["eventBuffID"] = -1;
 				["eventChatLine"] = "";
@@ -9799,9 +11190,10 @@ return InterruptTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "is interruptible?";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9818,7 +11210,79 @@ return InterruptTable[eventArgs.spellID] == true";
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-			[2] = {
+			[5] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 3;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 2;
+				["conditionLua"] = "";
+				["conditionType"] = 4;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 25;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "30y";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "Event Entity";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[6] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -9827,6 +11291,82 @@ return InterruptTable[eventArgs.spellID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "return Player.level >= 24";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "level 24";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = 1;
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[7] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -9866,9 +11406,10 @@ return InterruptTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "check interrupt settings";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -9885,209 +11426,7 @@ return InterruptTable[eventArgs.spellID] == true";
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-			[3] = {
-				["actionCDValue"] = 1;
-				["actionID"] = 7551;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 4;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[4] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 7;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-		};
-		["enabled"] = true;
-		["eventType"] = 3;
-		["execute"] = "";
-		["executeType"] = 1;
-		["lastUse"] = 0;
-		["luaNeedsWeaveWindow"] = false;
-		["luaReturnsAction"] = false;
-		["name"] = "head graze - duty helper";
-		["throttleTime"] = 0;
-		["time"] = 0;
-		["timeRange"] = false;
-		["timelineIndex"] = 0;
-		["timeout"] = 10;
-		["timerEndOffset"] = 0;
-		["timerOffset"] = 0;
-		["timerStartOffset"] = 0;
-		["used"] = false;
-		["uuid"] = "ef3e1535-6f5c-62e9-9e8e-272f626afd40";
-	};
-	[23] = {
-		["actions"] = {
-			[1] = {
-				["aType"] = 1;
-				["actionID"] = 7548;
-				["actionLua"] = "";
-				["allowInterrupt"] = false;
-				["atomicPriority"] = false;
-				["castAtMouse"] = false;
-				["castPosX"] = 0;
-				["castPosY"] = 0;
-				["castPosZ"] = 0;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["conditions"] = {
-					[1] = 2;
-					[2] = 1;
-					[3] = 3;
-					[4] = 4;
-					[5] = 5;
-				};
-				["endIfUsed"] = true;
-				["gVar"] = "";
-				["gVarIndex"] = 1;
-				["gVarValue"] = 1;
-				["ignoreWeaveRules"] = true;
-				["isAreaTarget"] = false;
-				["luaNeedsWeaveWindow"] = false;
-				["luaReturnsAction"] = false;
-				["name"] = "";
-				["potType"] = 1;
-				["setTarget"] = false;
-				["showPositionPreview"] = false;
-				["stopCasting"] = false;
-				["stopMoving"] = false;
-				["targetContentID"] = -1;
-				["targetName"] = "";
-				["targetSubType"] = "Nearest";
-				["targetType"] = "Self";
-				["untarget"] = false;
-				["useForWeaving"] = false;
-				["usePot"] = false;
-				["used"] = false;
-				["variableTogglesType"] = 1;
-			};
-		};
-		["conditions"] = {
-			[1] = {
+			[8] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -10096,6 +11435,10 @@ return InterruptTable[eventArgs.spellID] == true";
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -10189,9 +11532,10 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "knockback table";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -10208,7 +11552,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-			[2] = {
+			[9] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -10217,6 +11561,10 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -10256,9 +11604,10 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "check kb settings";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -10275,141 +11624,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["setEventTargetSubtype"] = 1;
 				["setFirstMatch"] = false;
 			};
-			[3] = {
-				["actionCDValue"] = 1;
-				["actionID"] = 7548;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 2;
-				["conditionLua"] = "";
-				["conditionType"] = 4;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[4] = {
-				["actionCDValue"] = 0;
-				["actionID"] = -1;
-				["buffCheckType"] = 1;
-				["buffDuration"] = 0;
-				["buffID"] = -1;
-				["buffIDList"] = {
-				};
-				["category"] = 2;
-				["clusterMinTarget"] = 1;
-				["clusterRadius"] = 8;
-				["clusterRange"] = 30;
-				["comparator"] = 1;
-				["conditionLua"] = "";
-				["conditionType"] = 7;
-				["conditions"] = {
-				};
-				["contentid"] = -1;
-				["dequeueIfLuaFalse"] = true;
-				["enmityValue"] = 0;
-				["eventArgOptionType"] = 1;
-				["eventArgType"] = 1;
-				["eventBuffDuration"] = 0;
-				["eventBuffID"] = -1;
-				["eventChatLine"] = "";
-				["eventEntityContentID"] = -1;
-				["eventEntityID"] = -1;
-				["eventEntityName"] = "";
-				["eventMarkerID"] = -1;
-				["eventOwnerContentID"] = -1;
-				["eventOwnerID"] = -1;
-				["eventOwnerName"] = "";
-				["eventSpellID"] = -1;
-				["eventSpellName"] = -1;
-				["eventTargetContentID"] = -1;
-				["eventTargetID"] = -1;
-				["eventTargetName"] = "";
-				["filterTargetSubtype"] = "Nearest";
-				["filterTargetType"] = "Self";
-				["gaugeIndex"] = 1;
-				["gaugeValue"] = 0;
-				["hpType"] = 1;
-				["hpValue"] = 0;
-				["inCombatType"] = 1;
-				["inRangeValue"] = 0;
-				["lastSkillID"] = -1;
-				["localmapid"] = -1;
-				["matchAnyBuff"] = false;
-				["mpType"] = 1;
-				["mpValue"] = 0;
-				["name"] = "";
-				["partyHpType"] = 1;
-				["partyHpValue"] = 0;
-				["partyMpType"] = 1;
-				["partyMpValue"] = 0;
-				["partyTargetContentID"] = -1;
-				["partyTargetName"] = "";
-				["partyTargetNumber"] = 1;
-				["partyTargetSubType"] = 1;
-				["partyTargetType"] = "All";
-				["rangeCheckSourceSubType"] = "Nearest";
-				["rangeCheckSourceType"] = "Self";
-				["rangeSourceContentID"] = -1;
-				["rangeSourceName"] = "";
-				["setEventTargetSubtype"] = 1;
-				["setFirstMatch"] = false;
-			};
-			[5] = {
+			[10] = {
 				["actionCDValue"] = 0;
 				["actionID"] = -1;
 				["buffCheckType"] = 1;
@@ -10418,6 +11633,10 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				["buffIDList"] = {
 				};
 				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
@@ -10510,9 +11729,327 @@ return KnockbackTable[eventArgs.spellID] == true";
 				["lastSkillID"] = -1;
 				["localmapid"] = -1;
 				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "dequeue check";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[11] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local MitigationTable = {\
+---start of dungeon spell ids\
+[8028] = true, \
+[8039] = true,\
+[8064] = true,\
+[7946] = true,\
+[8357] = true,\
+[7958] = true,\
+[8269] = true,\
+[8271] = true,\
+[8301] = true,\
+[7287] = true,\
+[7843] = true,\
+[8150] = true,\
+[8167] = true,\
+[8175] = true,\
+[9808] = true,\
+[10162] = true,\
+[11178] = true,\
+[11178] = true,\
+[11179] = true,\
+[11184] = true,\
+[11185] = true,\
+[11528] = true,\
+[11850] = true,\
+[12588] = true,\
+[13216] = true,\
+[11635] = true,\
+[12619] = true,\
+[13397] = true,\
+[14119] = true,\
+[14120] = true,\
+[14191] = true,\
+[14195] = true,\
+[15813] = true,\
+[15824] = true,\
+[15832] = true,\
+[7822] = true,\
+[8915] = true,\
+[13708] = true,\
+[15499] = true,\
+[15506] = true,\
+[15515] = true,\
+[15524] = true,\
+[15590] = true,\
+[15601] = true,\
+[15612] = true,\
+[15627] = true,\
+[15636] = true,\
+[15587] = true,\
+[17108] = true,\
+[15716] = true,\
+[15868] = true,\
+[15878] = true,\
+[15895] = true,\
+[15908] = true,\
+[18204] = true,\
+[18277] = true,\
+[18282] = true,\
+[18851] = true,\
+[19288] = true,\
+[19295] = true,\
+[19306] = true,\
+[19315] = true,\
+[19321] = true,\
+[19322] = true,\
+[19324] = true,\
+[19328] = true,\
+---start of trials spell ids\
+[8230] = true,\
+[8246] = true,\
+[8588] = true,\
+[9347] = true,\
+[9374] = true,\
+[8519] = true,\
+[9373] = true,\
+[8107] = true,\
+[8108] = true,\
+[8109] = true,\
+[8110] = true,\
+[9722] = true,\
+[9692] = true,\
+[9693] = true,\
+[9694] = true,\
+[10018] = true,\
+[10799] = true,\
+[10204] = true,\
+[11234] = true,\
+[11238] = true,\
+[11255] = true,\
+[11256] = true,\
+[11259] = true,\
+[11194] = true,\
+[11196] = true,\
+[11197] = true,\
+[11223] = true,\
+[11224] = true,\
+[11228] = true,\
+[12833] = true,\
+[12852] = true,\
+[13010] = true,\
+[13023] = true,\
+[14334] = true,\
+[14347] = true,\
+[14275] = true,\
+[14322] = true,\
+[14376] = true,\
+[15697] = true,\
+[15702] = true,\
+[15703] = true,\
+[15708] = true,\
+[15667] = true,\
+[15674] = true,\
+[15681] = true,\
+[15691] = true,\
+[16026] = true,\
+[16030] = true,\
+[16072] = true,\
+[16106] = true,\
+[16190] = true,\
+[16768] = true,\
+[17815] = true,\
+[18344] = true,\
+[18360] = true,\
+[18367] = true,\
+[18380] = true,\
+[18380] = true,\
+[18384] = true,\
+[18398] = true,\
+[18419] = true,\
+[18420] = true,\
+[19112] = true,\
+[19139] = true,\
+[19141] = true,\
+[19144] = true,\
+[19134] = true,\
+[19156] = true,\
+[19158] = true,\
+[19160] = true,\
+[19204] = true,\
+--- start of 8 man raids spell ids\
+[9180] = true,\
+[9184] = true,\
+[7892] = true,\
+[7900] = true,\
+[9476] = true,\
+[9488] = true,\
+[9059] = true,\
+[9074] = true,\
+[9317] = true,\
+[8950] = true,\
+[9414] = true,\
+[9220] = true,\
+[9222] = true,\
+[9239] = true,\
+[9256] = true,\
+[9257] = true,\
+[10284] = true,\
+[10283] = true,\
+[10094] = true,\
+[10123] = true,\
+[10541] = true,\
+[10456] = true,\
+[10471] = true,\
+[10477] = true,\
+[12645] = true,\
+[12646] = true,\
+[12647] = true,\
+[12648] = true,\
+[12678] = true,\
+[12679] = true,\
+[12680] = true,\
+[12681] = true,\
+[12742] = true,\
+[12715] = true,\
+[12934] = true,\
+[12908] = true,\
+[14072] = true,\
+[14082] = true,\
+[13066] = true,\
+[13073] = true,\
+[13074] = true,\
+[13093] = true,\
+[13122] = true,\
+[13123] = true,\
+[13135] = true,\
+[13138] = true,\
+[13139] = true,\
+[13143] = true,\
+[13179] = true,\
+[13793] = true,\
+[15780] = true,\
+[15783] = true,\
+[15736] = true,\
+[15738] = true,\
+[15755] = true,\
+[15759] = true,\
+[15656] = true,\
+[15982] = true,\
+[15984] = true,\
+[15986] = true,\
+[16324] = true,\
+[17435] = true,\
+[16348] = true,\
+[16350] = true,\
+[16395] = true,\
+[17436] = true,\
+[16631] = true,\
+[17382] = true,\
+[16660] = true,\
+[16682] = true,\
+[16699] = true,\
+[17384] = true,\
+[19353] = true,\
+[19354] = true,\
+[19415] = true,\
+[19441] = true,\
+[19538] = true,\
+[19927] = true,\
+[19937] = true,\
+[19944] = true,\
+[19948] = true,\
+[19949] = true,\
+--24 man raids\
+[9670] = true,\
+[9760] = true,\
+[11308] = true,\
+[11318] = true,\
+[11325] = true,\
+[11364] = true,\
+[11484] = true,\
+[11612] = true,\
+[11613] = true,\
+[14139] = true,\
+[14206] = true,\
+[14439] = true,\
+[18261] = true,\
+[18437] = true,\
+[18639] = true,\
+[18675] = true,\
+[18678] = true,\
+[18753] = true,\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return MitigationTable[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime < 5";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = false;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "miti table";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -10537,7 +12074,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["lastUse"] = 0;
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
-		["name"] = "arm's length - duty helper";
+		["name"] = "duty helper multitool";
 		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
@@ -10547,7 +12084,7 @@ return KnockbackTable[eventArgs.spellID] == true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "50e24fa3-6db7-fee8-9703-09fa5ad5bf0f";
+		["uuid"] = "7f9372ae-1b97-c3d7-8faa-68b3d5e21035";
 	};
 }
 return obj1
