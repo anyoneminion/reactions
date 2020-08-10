@@ -26,7 +26,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.17,\
+		version = 3.171,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -45,13 +45,14 @@ local obj1 = {
 	open = false,\
 	WindowStyle = {\
 		[\"Text\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
-		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.55 },\
+		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
 	},\
 	facestatus = nil,\
 	keybindstatus = nil,\
 	FaceAway = false,\
 	FaceAwayKey = false,\
 	sleep = 0,\
+	drawcall = nil,\
 	}\
 	\
 	local MinionPath = GetStartupPath()\
@@ -893,9 +894,6 @@ local obj1 = {
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
     AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Face Away Helper,Duty Helper,Hacks,Extra\")\
-	if Settings.AnyoneCore.FaceAwayEnabled == true then\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_FaceAway\", name = \"FaceAway\", onClick = function() FaceAway.open = not FaceAway.open end, tooltip = \"Dedo's FaceAway\"},\"FFXIVMINION##MENU_HEADER\")\
-	end\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
 	d(\"Loaded FaceAway\")\
@@ -1670,7 +1668,6 @@ function AnyoneCore.draw()\
                 GUI:PushTextWrapPos(300)\
 				GUI:TextColored(0.50,0.50,0,1,\"A huge thank you to Dedodedo from Rikudou's discord who created Face Away Helper. All I did was clean it up, add a few more options and put it in AnyoneCore. Send dedodedo#5099 all of your love.\")\
                 GUI:Text(\"Enables Face Away Helper, which will help you keep casting spells while actively avoiding looking at the boss for look away mechanics.\\n\\nThis works for any job, but works especially well with casters, and samurai.\")\
-                GUI:TextColored(1,1,0,1,\"Reload AnyoneCore with the reload button on the sidebar after disabling/enabling.\\n\")\
                 GUI:TextColored(1,0,0,1,\"[Warning]\")\
                 GUI:TextColored(1,0.10,0,1,\"Do not stand inside the bosses hitbox during the look away mechanics.\\n\\nDo not hold any mouse keys while Face Away Helper is doing it's thing.\\n\\nTry not to move while Face Away helper is doing it's thing.\")\
                 GUI:PopTextWrapPos()\
@@ -2007,7 +2004,7 @@ function AnyoneCore.draw()\
 	GUI:End()\
 	end\
 	\
-	if FaceAway.enabled and FaceAway.open then\
+	if AnyoneCore.Settings.FaceAwayEnabled then\
 		local c = 0\
 		local WinFlags = (GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoCollapse)\
 		for k,v in pairs(FaceAway.WindowStyle) do if v[4] ~= 0 then c = c + 1 loadstring([[GUI:PushStyleColor(GUI.Col_]]..k..[[, ]]..(v[1]/255)..[[, ]]..(v[2]/255)..[[, ]]..(v[3]/255)..[[, ]]..v[4]..[[)]])() end end\
@@ -2121,7 +2118,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "851cae01-356d-c034-b131-b2b3c4318bb4";
+		["uuid"] = "02c12cc8-647e-60e3-a4f4-e972785c0031";
 	};
 	[2] = {
 		["actions"] = {

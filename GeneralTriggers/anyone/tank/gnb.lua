@@ -2,8 +2,8 @@
 local multiRefObjects = {
 {};{};{};
 } -- multiRefObjects
-multiRefObjects[3][1] = 19367;
-multiRefObjects[3][2] = 19465;
+multiRefObjects[1][1] = 19367;
+multiRefObjects[1][2] = 19465;
 local obj1 = {
 	[1] = {
 		["actions"] = {
@@ -28,7 +28,7 @@ local obj1 = {
 		[\"TooltipBg\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.9 },\
 		[\"ModalWindowDarkening\"] = { [1] = 7, [2] = 0, [3] = 12, [4] = 0.75 },\
 		},\
-		version = 3.17,\
+		version = 3.171,\
 		helperVersion = 1.0,\
 		gitVersion,\
 		downloadStatus,\
@@ -47,13 +47,14 @@ local obj1 = {
 	open = false,\
 	WindowStyle = {\
 		[\"Text\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
-		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0.55 },\
+		[\"WindowBg\"] = { [1] = 0, [2] = 0, [3] = 0, [4] = 0 },\
 	},\
 	facestatus = nil,\
 	keybindstatus = nil,\
 	FaceAway = false,\
 	FaceAwayKey = false,\
 	sleep = 0,\
+	drawcall = nil,\
 	}\
 	\
 	local MinionPath = GetStartupPath()\
@@ -895,9 +896,6 @@ local obj1 = {
 \
     -- RegisterEventHandler(\"Gameloop.Update\", AnyoneCore.func, \"AnyoneCore\")\
     AnyoneCore.main_tabs = GUI_CreateTabs(\"Main,Argus,Fight Specific,Job Specific,Face Away Helper,Duty Helper,Hacks,Extra\")\
-	if Settings.AnyoneCore.FaceAwayEnabled == true then\
-	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_FaceAway\", name = \"FaceAway\", onClick = function() FaceAway.open = not FaceAway.open end, tooltip = \"Dedo's FaceAway\"},\"FFXIVMINION##MENU_HEADER\")\
-	end\
 	ml_gui.ui_mgr:AddMember({ id = \"FFXIVMINION##MENU_AnyoneCore\", name = \"AnyoneCore\", onClick = function() AnyoneCore.open = not AnyoneCore.open end, tooltip = \"Menu for changing the settings for Anyone's reactions for TensorReactions.\"},\"FFXIVMINION##MENU_HEADER\")\
 	d(\"Loaded AnyoneCore\")\
 	d(\"Loaded FaceAway\")\
@@ -1672,7 +1670,6 @@ function AnyoneCore.draw()\
                 GUI:PushTextWrapPos(300)\
 				GUI:TextColored(0.50,0.50,0,1,\"A huge thank you to Dedodedo from Rikudou's discord who created Face Away Helper. All I did was clean it up, add a few more options and put it in AnyoneCore. Send dedodedo#5099 all of your love.\")\
                 GUI:Text(\"Enables Face Away Helper, which will help you keep casting spells while actively avoiding looking at the boss for look away mechanics.\\n\\nThis works for any job, but works especially well with casters, and samurai.\")\
-                GUI:TextColored(1,1,0,1,\"Reload AnyoneCore with the reload button on the sidebar after disabling/enabling.\\n\")\
                 GUI:TextColored(1,0,0,1,\"[Warning]\")\
                 GUI:TextColored(1,0.10,0,1,\"Do not stand inside the bosses hitbox during the look away mechanics.\\n\\nDo not hold any mouse keys while Face Away Helper is doing it's thing.\\n\\nTry not to move while Face Away helper is doing it's thing.\")\
                 GUI:PopTextWrapPos()\
@@ -2009,7 +2006,7 @@ function AnyoneCore.draw()\
 	GUI:End()\
 	end\
 	\
-	if FaceAway.enabled and FaceAway.open then\
+	if AnyoneCore.Settings.FaceAwayEnabled then\
 		local c = 0\
 		local WinFlags = (GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoResize + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoCollapse)\
 		for k,v in pairs(FaceAway.WindowStyle) do if v[4] ~= 0 then c = c + 1 loadstring([[GUI:PushStyleColor(GUI.Col_]]..k..[[, ]]..(v[1]/255)..[[, ]]..(v[2]/255)..[[, ]]..(v[3]/255)..[[, ]]..v[4]..[[)]])() end end\
@@ -2123,7 +2120,7 @@ self.used = true";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "3789698a-1b4a-8156-ab79-513372857f76";
+		["uuid"] = "cfd3346d-cd7e-db96-932e-5a1e7a6fba43";
 	};
 	[2] = {
 		["actions"] = {
@@ -2402,7 +2399,7 @@ self.eventConditionMismatch = true -- supress log";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -2487,6 +2484,47 @@ self.eventConditionMismatch = true -- supress log";
 	[8] = {
 		["actions"] = {
 			[1] = {
+				["aType"] = 3;
+				["actionID"] = -1;
+				["actionLua"] = "";
+				["allowInterrupt"] = false;
+				["atomicPriority"] = false;
+				["castAtMouse"] = false;
+				["castPosX"] = 0;
+				["castPosY"] = 0;
+				["castPosZ"] = 0;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["conditions"] = {
+					[1] = 1;
+					[2] = 3;
+					[3] = 4;
+				};
+				["endIfUsed"] = false;
+				["gVar"] = "";
+				["gVarValue"] = 1;
+				["ignoreWeaveRules"] = false;
+				["isAreaTarget"] = false;
+				["luaNeedsWeaveWindow"] = false;
+				["luaReturnsAction"] = false;
+				["name"] = "set target to entity";
+				["potType"] = 1;
+				["setTarget"] = true;
+				["showPositionPreview"] = false;
+				["stopCasting"] = false;
+				["stopMoving"] = false;
+				["targetContentID"] = -1;
+				["targetName"] = "";
+				["targetSubType"] = "Nearest";
+				["targetType"] = "Event Entity";
+				["untarget"] = false;
+				["useForWeaving"] = false;
+				["usePot"] = false;
+				["used"] = false;
+				["variableTogglesType"] = 1;
+			};
+			[2] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "FaceAway.FaceAway = true\
@@ -2506,6 +2544,7 @@ self.used = true";
 				["conditions"] = {
 					[1] = 1;
 					[2] = 3;
+					[3] = 4;
 				};
 				["endIfUsed"] = false;
 				["gVar"] = "";
@@ -2514,7 +2553,7 @@ self.used = true";
 				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
-				["name"] = "";
+				["name"] = "look away";
 				["potType"] = 1;
 				["setTarget"] = false;
 				["showPositionPreview"] = false;
@@ -2530,7 +2569,7 @@ self.used = true";
 				["used"] = false;
 				["variableTogglesType"] = 1;
 			};
-			[2] = {
+			[3] = {
 				["aType"] = 4;
 				["actionID"] = -1;
 				["actionLua"] = "FaceAway.FaceAway = false\
@@ -2546,17 +2585,18 @@ self.used = true";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["conditions"] = {
-					[1] = 1;
-					[2] = 3;
+					[1] = 3;
+					[2] = 2;
+					[3] = 4;
 				};
-				["endIfUsed"] = false;
+				["endIfUsed"] = true;
 				["gVar"] = "";
 				["gVarValue"] = 1;
 				["ignoreWeaveRules"] = false;
 				["isAreaTarget"] = false;
 				["luaNeedsWeaveWindow"] = false;
 				["luaReturnsAction"] = false;
-				["name"] = "";
+				["name"] = "dequeue";
 				["potType"] = 1;
 				["setTarget"] = false;
 				["showPositionPreview"] = false;
@@ -2787,7 +2827,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "channel time check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -2979,7 +3019,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 }\
 \
 local caster = EntityList:Get(eventArgs.entityID)\
-return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime <= 0.01";
+return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.casttime - caster.castinginfo.channeltime <= 0.01";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -3017,7 +3057,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "dequeue check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -3090,7 +3130,238 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				["minTargetPercent"] = false;
 				["mpType"] = 1;
 				["mpValue"] = 0;
-				["name"] = "";
+				["name"] = "settings check";
+				["partyHpType"] = 1;
+				["partyHpValue"] = 0;
+				["partyMpType"] = 1;
+				["partyMpValue"] = 0;
+				["partyTargetContentID"] = -1;
+				["partyTargetName"] = "";
+				["partyTargetNumber"] = 1;
+				["partyTargetSubType"] = "Nearest";
+				["partyTargetType"] = "All";
+				["rangeCheckSourceSubType"] = "Nearest";
+				["rangeCheckSourceType"] = "Self";
+				["rangeSourceContentID"] = -1;
+				["rangeSourceName"] = "";
+				["setEventTargetSubtype"] = 1;
+				["setFirstMatch"] = false;
+			};
+			[4] = {
+				["actionCDValue"] = 0;
+				["actionID"] = -1;
+				["buffCheckType"] = 1;
+				["buffDuration"] = 0;
+				["buffID"] = -1;
+				["buffIDList"] = {
+				};
+				["category"] = 4;
+				["channelCheckSpellID"] = -1;
+				["channelCheckSpellIDList"] = {
+				};
+				["channelCheckTimeRemain"] = 0;
+				["channelCheckType"] = 1;
+				["clusterMinTarget"] = 1;
+				["clusterRadius"] = 8;
+				["clusterRange"] = 30;
+				["comparator"] = 1;
+				["conditionLua"] = "local spellCheck = {\
+[343] = true, -- Doomsay\
+[352] = true, -- Chaotic Eye\
+[410] = true, -- Stone Gaze\
+[498] = true, -- Cold Gaze\
+[499] = true, -- Stone Gaze\
+[512] = true, -- Cursed Gaze\
+[513] = true, -- Dread Gaze\
+[743] = true, -- Mudslinger\
+[1161] = true, -- Stone Gaze\
+[1969] = true, -- Petrifaction\
+[1979] = true, -- Petrifaction\
+[2410] = true, -- Level X Petrify\
+[2516] = true, -- Petrifaction\
+[2526] = true, -- Petrifaction\
+[2734] = true, -- Stone Gaze\
+[2824] = true, -- Petrifaction\
+[2832] = true, -- Mortal Ray\
+[3027] = true, -- Calcifying Mist\
+[3173] = true, -- Entrance\
+[3281] = true, -- Mortal Gaze\
+[4201] = true, -- the Dragon's Gaze\
+[4331] = true, -- Petrifaction\
+[4492] = true, -- Quarry Lake\
+[4493] = true, -- Naked Soul\
+[4522] = true, -- Paradise Lost\
+[4528] = true, -- Hypnotize\
+[4537] = true, -- Headlight\
+[4554] = true, -- Headwind\
+[4666] = true, -- Calcifying Mist\
+[4682] = true, -- Evil Eye\
+[5028] = true, -- Petrifaction\
+[5041] = true, -- Evil Eye\
+[5140] = true, -- Stone Gaze\
+[5154] = true, -- Petrifaction\
+[5216] = true, -- Frond Fatale\
+[5257] = true, -- the Dragon's Gaze\
+[5366] = true, -- Foregone Gleam\
+[5374] = true, -- Petrifaction\
+[5431] = true, -- Petrifaction\
+[5788] = true, -- Oogle\
+[5832] = true, -- Mysterious Light\
+[6100] = true, -- Mortal Ray\
+[6146] = true, -- Assimilation\
+[6202] = true, -- Frond Affeared\
+[6351] = true, -- Stone Gaze\
+[6356] = true, -- Stone Gaze\
+[6379] = true, -- Quarry Lake\
+[6403] = true, -- Cold Feet\
+[6444] = true, -- Eye of the Stunted\
+[6445] = true, -- Eye of the Wildered\
+[6446] = true, -- Eye of the Slithered\
+[6521] = true, -- Divine Spark\
+[6582] = true, -- Divine Spark\
+[6939] = true, -- Hypnotize\
+[6953] = true, -- Mysterious Light\
+[6957] = true, -- Foregone Gleam\
+[7034] = true, -- Eye of the Stunted\
+[7043] = true, -- Evil Eye\
+[7182] = true, -- Nightmare\
+[7200] = true, -- Hollow Nightmare\
+[7270] = true, -- Meracydian Fear\
+[7364] = true, -- Flash Powder\
+[7651] = true, -- Eyeshine\
+[7672] = true, -- Petrifying Eye\
+[7675] = true, -- Evil Eye\
+[7734] = true, -- Meracydian Fear\
+[7779] = true, -- Petrifying Eye\
+[7940] = true, -- Empty Gaze\
+[7949] = true, -- Eye of the Fierce\
+[8066] = true, -- Mad Stare\
+[8194] = true, -- Nightmarish Light\
+[8648] = true, -- Foregone Gleam\
+[8717] = true, -- Inner Demons\
+[8952] = true, -- Squelch\
+[9030] = true, -- Overlong Glance\
+[9071] = true, -- Death's Gaze\
+[9165] = true, -- Eyeshine\
+[9485] = true, -- Demon Eye\
+[9542] = true, -- Frond Affeared\
+[9557] = true, -- Eyeshine\
+[9613] = true, -- Inner Demons\
+[9649] = true, -- Petrifaction\
+[9829] = true, -- Eye of the Fire\
+[10274] = true, -- Divine Lure\
+[10275] = true, -- Divine Lure\
+[10679] = true, -- Absolute Terror\
+[10769] = true, -- Petrifying Eye\
+[10852] = true, -- Double Hex Eye\
+[10956] = true, -- Explosive Dehiscence\
+[11159] = true, -- Wile of the Tengu\
+[11602] = true, -- Cerulean Ray\
+[11608] = true, -- Mortal Ray\
+[11645] = true, -- Mortal Gaze\
+[11671] = true, -- Hex Eye\
+[11750] = true, -- Quarry Lake\
+[11752] = true, -- Hypnotize\
+[11789] = true, -- Stone Gaze\
+[11900] = true, -- Neuro Squama\
+[11922] = true, -- Eye of the Fire\
+[11973] = true, -- Stone Gaze\
+[12174] = true, -- Blinding Burst\
+[12190] = true, -- Wile of the Tengu\
+[12261] = true, -- Eyeshine\
+[12281] = true, -- Allagan Fear\
+[12322] = true, -- Nightmarish Light\
+[12357] = true, -- Shifting Light\
+[12397] = true, -- Calcifying Mist\
+[12416] = true, -- Frond Fatale\
+[12442] = true, -- Hex\
+[12513] = true, -- Petrifying Eye\
+[12528] = true, -- Eye of the Slithered\
+[12529] = true, -- Cold Stare\
+[12553] = true, -- Naked Soul\
+[12563] = true, -- Mysterious Light\
+[12587] = true, -- Empty Gaze\
+[12708] = true, -- Frond Fatale\
+[13257] = true, -- Eyes of Anguish\
+[13263] = true, -- Eye of the Fire\
+[13296] = true, -- Evil Eye\
+[13299] = true, -- Evil Eye\
+[13368] = true, -- Hypnotize\
+[13410] = true, -- Erratic Blaster\
+[13552] = true, -- Imp Choir\
+[13712] = true, -- Dread Gaze\
+[13784] = true, -- Frond Affeared\
+[14200] = true, -- Devitalize\
+[14691] = true, -- Demon Eye\
+[14692] = true, -- Cold Stare\
+[14694] = true, -- Dread Gaze\
+[14875] = true, -- Cry of Rage\
+[14951] = true, -- Dark Sabbath\
+[15030] = true, -- Chilling Glare\
+[15078] = true, -- Explosive Dehiscence\
+[15272] = true, -- Eye of the Fierce\
+[15381] = true, -- Dread Gaze\
+[15455] = true, -- Cold Gaze\
+[15457] = true, -- Stone Gaze\
+[15469] = true, -- Petrifaction\
+[15475] = true, -- Petrifaction\
+[15477] = true, -- Wile of the Tengu\
+[16025] = true, -- Enthrall\
+[16976] = true, -- Headlight\
+[17198] = true, -- Charming Chasse\
+[17360] = true, -- Coin Toss\
+[17540] = true, -- Quarry Lake\
+[17856] = true, -- Petro Eyes\
+[17955] = true, -- Terrifying Glance\
+[17973] = true, -- Cold Gaze\
+[18017] = true, -- Stone Gaze\
+[18041] = true, -- Petrifying Eye\
+[18818] = true, -- Dread Gaze\
+[19198] = true, -- Negative Aura\
+[19995] = true, -- ネガティブオーラ\
+[20001] = true, -- Crushing Gaze\
+}\
+\
+local caster = EntityList:Get(eventArgs.entityID)\
+return spellCheck[eventArgs.spellID] == true";
+				["conditionType"] = 1;
+				["conditions"] = {
+				};
+				["contentid"] = -1;
+				["dequeueIfLuaFalse"] = true;
+				["enmityValue"] = 0;
+				["eventArgOptionType"] = 1;
+				["eventArgType"] = 1;
+				["eventBuffDuration"] = 0;
+				["eventBuffID"] = -1;
+				["eventChatLine"] = "";
+				["eventEntityContentID"] = -1;
+				["eventEntityID"] = -1;
+				["eventEntityName"] = "";
+				["eventMarkerID"] = -1;
+				["eventOwnerContentID"] = -1;
+				["eventOwnerID"] = -1;
+				["eventOwnerName"] = "";
+				["eventSpellID"] = -1;
+				["eventSpellName"] = -1;
+				["eventTargetContentID"] = -1;
+				["eventTargetID"] = -1;
+				["eventTargetName"] = "";
+				["filterTargetSubtype"] = "Nearest";
+				["filterTargetType"] = "Self";
+				["gaugeIndex"] = 1;
+				["gaugeValue"] = 0;
+				["hpType"] = 1;
+				["hpValue"] = 0;
+				["inCombatType"] = 1;
+				["inRangeValue"] = 0;
+				["lastSkillID"] = -1;
+				["localmapid"] = -1;
+				["matchAnyBuff"] = false;
+				["minTargetPercent"] = false;
+				["mpType"] = 1;
+				["mpValue"] = 0;
+				["name"] = "correct spell check";
 				["partyHpType"] = 1;
 				["partyHpValue"] = 0;
 				["partyMpType"] = 1;
@@ -3116,7 +3387,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 		["luaNeedsWeaveWindow"] = false;
 		["luaReturnsAction"] = false;
 		["name"] = "Face Away channels";
-		["throttleTime"] = 1400;
+		["throttleTime"] = 0;
 		["time"] = 0;
 		["timeRange"] = false;
 		["timelineIndex"] = 0;
@@ -3125,7 +3396,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "a570c3a3-c651-3683-82ba-d8e6b4c2f073";
+		["uuid"] = "0e43a8d9-dea2-3784-a4a9-d7553db20d38";
 	};
 	[9] = {
 		["actions"] = {
@@ -3139,7 +3410,8 @@ Argus.addCircleFilled(t.pos.x, t.pos.y, t.pos.z, 0.1, 10, GUI:ColorConvertFloat4
 Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(90), Player.pos.h, 30, GUI:ColorConvertFloat4ToU32(1, 0, 0, 0.1), GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 2)\
 Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(30), Player.pos.h+math.rad(60), 30, GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.1), GUI:ColorConvertFloat4ToU32(0, 1, 0, 1), 2)\
 Argus.addConeFilled(Player.pos.x, Player.pos.y, Player.pos.z, radius, math.rad(30), Player.pos.h-math.rad(60), 30, GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.1), GUI:ColorConvertFloat4ToU32(0, 1, 0, 1), 2)\
-end";
+end\
+self.used = true";
 				["allowInterrupt"] = false;
 				["atomicPriority"] = false;
 				["castAtMouse"] = false;
@@ -3195,7 +3467,7 @@ end";
 				["clusterRadius"] = 8;
 				["clusterRange"] = 30;
 				["comparator"] = 1;
-				["conditionLua"] = "return (FaceAway.FaceAway == true or FaceAway.FaceAwayKey == true) and (AnyoneCore.Settings.FaceAwayEnabled == true and AnyoneCore.Settings.DrawFaceAway == true) and Argus ~= nil and (data.dontdrawreactionsfacing == nil)";
+				["conditionLua"] = "return (FaceAway.FaceAway == true or FaceAway.FaceAwayKey == true or FaceAway.drawcall ~= nil) and (AnyoneCore.Settings.FaceAwayEnabled == true and AnyoneCore.Settings.DrawFaceAway == true) and Argus ~= nil and (data.dontdrawreactionsfacing == nil)";
 				["conditionType"] = 1;
 				["conditions"] = {
 				};
@@ -3268,7 +3540,7 @@ end";
 		["timerOffset"] = 0;
 		["timerStartOffset"] = 0;
 		["used"] = false;
-		["uuid"] = "984a61de-8dfe-9098-befe-1ad8b9c15f02";
+		["uuid"] = "1c4958cc-074c-a544-bf31-1bea0f348415";
 	};
 	[10] = {
 		["actions"] = {
@@ -3356,7 +3628,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -3428,7 +3700,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -3500,7 +3772,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -3573,7 +3845,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -3645,7 +3917,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4552,7 +4824,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4624,7 +4896,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4696,7 +4968,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4768,7 +5040,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4840,7 +5112,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4912,7 +5184,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -4984,7 +5256,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5056,7 +5328,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5128,7 +5400,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5200,7 +5472,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5272,7 +5544,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5344,7 +5616,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5416,7 +5688,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5488,7 +5760,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5560,7 +5832,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5632,7 +5904,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5704,7 +5976,7 @@ self.used = true";
 				};
 				["category"] = 5;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5904,7 +6176,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -5977,7 +6249,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6049,7 +6321,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6121,7 +6393,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6193,7 +6465,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6501,7 +6773,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6574,7 +6846,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6646,7 +6918,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6718,7 +6990,7 @@ self.used = true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6790,7 +7062,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6862,7 +7134,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -6934,7 +7206,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7130,7 +7402,7 @@ end";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7202,7 +7474,7 @@ end";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7341,7 +7613,7 @@ end";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[3];
+				["channelCheckSpellIDList"] = multiRefObjects[1];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7413,7 +7685,7 @@ end";
 				};
 				["category"] = 3;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[3];
+				["channelCheckSpellIDList"] = multiRefObjects[1];
 				["channelCheckTimeRemain"] = 0.029999999329448;
 				["channelCheckType"] = 3;
 				["clusterMinTarget"] = 1;
@@ -7492,7 +7764,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[3];
+				["channelCheckSpellIDList"] = multiRefObjects[1];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7565,7 +7837,7 @@ return spellCheck[eventArgs.spellID] == true and caster and caster.castinginfo.c
 				};
 				["category"] = 3;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[3];
+				["channelCheckSpellIDList"] = multiRefObjects[1];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 2;
 				["clusterMinTarget"] = 1;
@@ -7819,7 +8091,7 @@ return spellCheck[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7892,7 +8164,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -7964,7 +8236,7 @@ return false";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8036,7 +8308,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8110,7 +8382,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8182,7 +8454,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8254,7 +8526,7 @@ return mytarget ~= nil and cinfo ~= nil and cinfo.channeltargetid ~= nil and (my
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8440,7 +8712,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8531,7 +8803,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8603,7 +8875,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8675,7 +8947,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8747,7 +9019,7 @@ return StopCastingTable[eventArgs.spellID] == true and caster and caster.casting
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -8947,7 +9219,7 @@ self.used = true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9033,7 +9305,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9105,7 +9377,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9177,7 +9449,7 @@ return ClearTargetTable[eventArgs.buffID] == true and eventArgs.buffDuration <= 
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9331,7 +9603,7 @@ return ClearTargetTable[eventArgs.buffID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9610,7 +9882,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9682,7 +9954,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9754,7 +10026,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -9826,7 +10098,7 @@ return MitigationTable[eventArgs.spellID] == true and caster and caster.castingi
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10352,7 +10624,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10578,7 +10850,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10650,7 +10922,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10722,7 +10994,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10794,7 +11066,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10866,7 +11138,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -10938,7 +11210,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11010,7 +11282,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11082,7 +11354,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11154,7 +11426,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11226,7 +11498,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster.targetID == Pla
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11678,7 +11950,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				};
 				["category"] = 3;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11750,7 +12022,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -11822,7 +12094,7 @@ return TankMitigationTable[eventArgs.spellID] == true and caster and caster.cast
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -12047,7 +12319,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -12821,7 +13093,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -12893,7 +13165,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -12965,7 +13237,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13037,7 +13309,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13109,7 +13381,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13181,7 +13453,7 @@ return TankMitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13418,7 +13690,7 @@ end";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13490,7 +13762,7 @@ end";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13570,7 +13842,7 @@ return false";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13642,7 +13914,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13722,7 +13994,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13897,7 +14169,7 @@ return nil";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -13969,7 +14241,7 @@ return nil";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14041,7 +14313,7 @@ return nil";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14336,7 +14608,7 @@ return nil";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14652,7 +14924,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14724,7 +14996,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 2;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14796,7 +15068,7 @@ return MitigationTable[eventArgs.spellID] == true";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14874,7 +15146,7 @@ return false";
 				};
 				["category"] = 3;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -14946,7 +15218,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -15018,7 +15290,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -15090,7 +15362,7 @@ return false";
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -15216,7 +15488,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
@@ -15288,7 +15560,7 @@ return KnockbackTable[eventArgs.spellID] == true and caster and caster.castingin
 				};
 				["category"] = 4;
 				["channelCheckSpellID"] = -1;
-				["channelCheckSpellIDList"] = multiRefObjects[1];
+				["channelCheckSpellIDList"] = multiRefObjects[3];
 				["channelCheckTimeRemain"] = 0;
 				["channelCheckType"] = 1;
 				["clusterMinTarget"] = 1;
