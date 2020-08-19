@@ -1665,13 +1665,13 @@ local tbl =
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
-					conditionLua = "return AnyoneCore.Settings.FaceAwayEnabled == true and AnyoneCore.Settings.UseFaceAwayReactions == true",
+					conditionLua = "return AnyoneCore.Settings.FaceAwayEnabler == true and AnyoneCore.Settings.UseFaceAwayReactions == true",
 					conditionType = 1,
 					conditions = 
 					{
 					},
 					contentid = -1,
-					dequeueIfLuaFalse = false,
+					dequeueIfLuaFalse = true,
 					enmityValue = 0,
 					eventArgOptionType = 1,
 					eventArgType = 1,
