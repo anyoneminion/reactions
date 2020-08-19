@@ -1,46 +1,54 @@
 # Supported Jobs
 
-Machinist, Bard, Summoner, Dancer, Samurai, Dark Knight, Warrior, Paladin, Gunbreaker
+Machinist, Bard, Summoner, Dancer, Samurai, Dragoon, Ninja, Dark Knight, Warrior, Paladin, Gunbreaker
 
 ### Machinist
 
-Eden's Verse 5-8, TEA, UCoB - TensorMagnum only
+Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorMagnum only
 
 ### Bard
 
-Eden's Verse 5-8, TEA, UCoB - TensorRequiem only
+Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorRequiem only
 
 ### Summoner
 
-Eden's Verse 5-8, TEA, UCoB - TensorRuin only
+Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorRuin only
 
 ### Dancer
 
-Eden's Verse 5-8 - SallyDNC only
+Prepull Helper, Duty Helper, Eden's Verse 5-8 - SallyDNC only
 
 ### Samurai
 
-Eden's Verse 5-8, TEA - TensorWeeb/SallySAM only
+Duty Helper, Eden's Verse 5-8, TEA - TensorWeeb/SallySAM only
 
 ### Black Mage
 
-Eden's Verse 5-8 - SallyBLM only
+Prepull Helper, Duty Helper, Eden's Verse 5-8 - SallyBLM only
+
+### Dragoon
+
+Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - RikuDRG and SallyDRG only
+
+### Ninja
+
+Prepull Helper - SallyNIN only
 
 ### Dark Knight
 
-Eden's Verse 5-8 (tanking) - SallyDRK only
+Duty Helper, Eden's Verse 5-8 (tanking) - SallyDRK only
 
 ### Warrior
 
-Eden's Verse 5-8 (tanking) - SallyWAR only
+Duty Helper, Eden's Verse 5-8 (tanking) - SallyWAR only
 
 ### Paladin
 
-Eden's Verse 5-8 (tanking) - SallyPLD only
+Duty Helper, Eden's Verse 5-8 (tanking) - SallyPLD only
 
 ### Gunbreaker
 
-Eden's Verse 5-8 (reactions are only for DPS optimization, not for tanking) - SallyGNB only
+Duty Helper, Eden's Verse 5-8 (timeline reactions are only for DPS optimization, not for tanking) - SallyGNB only
 
 # FAQ
 
