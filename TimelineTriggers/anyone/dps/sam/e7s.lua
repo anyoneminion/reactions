@@ -1,7079 +1,7470 @@
--- Persistent Data
-local multiRefObjects = {
-{};{};{};{};{};{};{};{};{};{};
-} -- multiRefObjects
-local obj1 = {
-	[2] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "\
-if gACRSelectedProfiles[Player.job] == \"SallySAM\" then\
-SallySAM.SkillSettings.Omni.enabled = true\
-SallySAM.SkillSettings.SmartTrueNorth.enabled = false\
-elseif gACRSelectedProfiles[Player.job] == \"TensorWeeb\" then\
-ACR_TensorWeeb_Omni = true\
-ACR_TensorWeeb_TrueNorth = false\
-end\
-\
-\
----if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\
-if AnyoneCore.Settings.AutoSetSpeedHacks == true then\
-		gDevHackWalkSpeed = 7\
-		Player:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\
-end\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "REACTION SETTINGS";
-			["throttleTime"] = 0;
-			["time"] = 13;
-			["timeRange"] = false;
-			["timelineIndex"] = 2;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -11.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "690a32f3-fdda-463c-8f7e-30ae65fc3cb2";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if SallySAM.SkillSettings.Potion.enabled == true then\
-data.PotsEnabled = true\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if ACR_TensorWeeb_Potion == true then\
-data.PotsEnabled = true\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "ACR_TensorWeeb_CD";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Set Pot Setting";
-			["throttleTime"] = 0;
-			["time"] = 13;
-			["timeRange"] = false;
-			["timelineIndex"] = 2;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "beeb97ec-9654-e52c-bf6c-2dac2b49ce41";
-		};
-	};
-	[3] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_MidareFirst";
-					["gVarIndex"] = 16;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_Cursed";
-					["gVarIndex"] = 17;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "disable cursed/midare first";
-			["throttleTime"] = 0;
-			["time"] = 25.2;
-			["timeRange"] = false;
-			["timelineIndex"] = 3;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "0d7bbd65-4713-ae59-b533-9cce1bd46ecd";
-		};
-	};
-	[16] = {
-	};
-	[22] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "\
---- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
---- to use them, change the settings in the reaction settings menu. ";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "-- read me --";
-			["throttleTime"] = 0;
-			["time"] = 116.7;
-			["timeRange"] = false;
-			["timelineIndex"] = 22;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "93cdb617-a9f3-1ad1-a41b-eba0b93d3009";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 3;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 4;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[3];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[10];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[3];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[10];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[3];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[10];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[3];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[10];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Disable Assist Before Teleport";
-			["throttleTime"] = 0;
-			["time"] = 116.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 22;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "aa1333ce-3d42-fc82-af99-d62824322cde";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 3;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 4;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[9];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[9];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[9];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[9];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[2];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[5] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return AnyoneCore.Settings.DisableAssist == true";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = true;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "stop casts before teleport";
-			["throttleTime"] = 0;
-			["time"] = 116.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 22;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "1723cf99-60dd-c904-b428-6f69155bfe84";
-		};
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if not FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Enable All After Teleport";
-			["throttleTime"] = 0;
-			["time"] = 116.7;
-			["timeRange"] = false;
-			["timelineIndex"] = 22;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "cd853779-ca79-c7f4-87be-dd4a0213149e";
-		};
-	};
-	[27] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 139.9;
-			["timeRange"] = false;
-			["timelineIndex"] = 27;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "9d434305-7d74-ad56-bc57-ec8e68c988fe";
-		};
-	};
-	[38] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "\
---- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\
---- to use them, change the settings in the reaction settings menu. ";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "-- read me --";
-			["throttleTime"] = 0;
-			["time"] = 177.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 38;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "c247807e-1d82-c6b7-bacb-c5e19e56fc22";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 3;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 4;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[8];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[8];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[8];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[8];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[1];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Disable Assist Before Teleport";
-			["throttleTime"] = 0;
-			["time"] = 177.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 38;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "78a80557-8ac7-2dff-ae26-ce3b64b7191f";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 3;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 4;
-						[2] = 5;
-					};
-					["endIfUsed"] = true;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = true;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2240;
-					["buffIDList"] = multiRefObjects[6];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2241;
-					["buffIDList"] = multiRefObjects[6];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2242;
-					["buffIDList"] = multiRefObjects[6];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 3;
-					["buffDuration"] = 1.5;
-					["buffID"] = 2243;
-					["buffIDList"] = multiRefObjects[6];
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[5];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[5] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return AnyoneCore.Settings.DisableAssist == true";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = true;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "stop casts before teleport";
-			["throttleTime"] = 0;
-			["time"] = 177.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 38;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "1ac54627-fc40-71b8-9d5d-600058aef28a";
-		};
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if not FFXIV_Common_BotRunning then\
-		ml_global_information.ToggleRun()\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Enable All After Teleport";
-			["throttleTime"] = 0;
-			["time"] = 177.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 38;
-			["timerEndOffset"] = 20;
-			["timerOffset"] = 12;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "08cb1323-a649-236f-94c1-b479a85a96e8";
-		};
-	};
-	[47] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_DoTs";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Don't Higanbana";
-			["throttleTime"] = 0;
-			["time"] = 198.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 47;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -42;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "fb477135-d157-d66b-b367-157519d3ad4e";
-		};
-		[2] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
-MoogleTTS.Speak(\"Use Meditate\")\
-elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
-TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
-end\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Meditate TTS";
-			["throttleTime"] = 0;
-			["time"] = 198.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 47;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "95fc1a19-b517-90c7-91a9-6aad2c38b0fd";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_MeikyoShisui";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = false;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Hold Meikyo";
-			["throttleTime"] = 0;
-			["time"] = 198.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 47;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "bb2e4b03-8739-8ac0-a77a-7e4d9ae410c7";
-		};
-	};
-	[51] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_DoTs";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_MeikyoShisui";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Enable All";
-			["throttleTime"] = 0;
-			["time"] = 205.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 51;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -1;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "f79fde9d-d393-a9c1-9f2a-394d62d1d6d6";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if SallySAM.SkillSettings.Potion.enabled == true then\
-data.PotsEnabled = true\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if ACR_TensorWeeb_Potion == true then\
-data.PotsEnabled = true\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Set Pot Status";
-			["throttleTime"] = 0;
-			["time"] = 205.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 51;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -10;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "5b45ac02-4564-8f5f-8f94-ab1548b9efc5";
-		};
-		[3] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Potion.enabled = false\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_Potion";
-					["gVarIndex"] = 15;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Don't Pot";
-			["throttleTime"] = 0;
-			["time"] = 205.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 51;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "64983b50-ed42-9661-8233-0440b6c0852e";
-		};
-		[4] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Enemy";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = true;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Target Nearest Add";
-			["throttleTime"] = 0;
-			["time"] = 205.6;
-			["timeRange"] = true;
-			["timelineIndex"] = 51;
-			["timerEndOffset"] = 3;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -3;
-			["used"] = false;
-			["uuid"] = "4eaf19e4-34c2-6ef9-bc7d-40593da96ec2";
-		};
-		[5] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 3;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Sprint";
-			["throttleTime"] = 0;
-			["time"] = 205.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 51;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "ad874455-48f2-085a-a998-be78d3745beb";
-		};
-	};
-	[52] = {
-	};
-	[62] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
-MoogleTTS.Speak(\"Use Meditate\")\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 2;
-					["conditions"] = {
-					};
-					["contentid"] = 9300;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 10;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Meditate TTS";
-			["throttleTime"] = 0;
-			["time"] = 291.8;
-			["timeRange"] = true;
-			["timelineIndex"] = 62;
-			["timerEndOffset"] = -30;
-			["timerOffset"] = -0.5;
-			["timerStartOffset"] = -30;
-			["used"] = false;
-			["uuid"] = "94e20ef0-002a-0fd4-89b9-9020c59757ae";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Event Target";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 3;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = 9300;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "ContentID";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = false\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 3;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[4] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 5;
-						[2] = 6;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_DoTs";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "for id, ent in pairs(TensorCore.entityList(\"\")) do\
-    if ent.contentid == 9301 and ent.hp.current > 0 then\
-        -- swap to other add that's alive\
-        reaction.eventArgs.targetID = id\
-        return true\
-    end\
-end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "local t = Player:GetTarget()\
-return t == nil or t.hp.current <= 0 -- no target or target dead, then swap";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "for id, ent in pairs(TensorCore.entityList(\"\")) do\
-    if ent.contentid == 9301 and ent.hp.current > 0 then\
-        -- other add is alive, don't swap to blasphemy\
-        return false\
-    end\
-end\
-return true";
-					["conditionType"] = 1;
-					["conditions"] = multiRefObjects[4];
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[5] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[6] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 50;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Retarget / Disable Higanbana";
-			["throttleTime"] = 0;
-			["time"] = 291.8;
-			["timeRange"] = true;
-			["timelineIndex"] = 62;
-			["timerEndOffset"] = 30;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = -42;
-			["used"] = false;
-			["uuid"] = "53e0aa9a-46e3-ed9b-b480-65c40a6693f8";
-		};
-	};
-	[71] = {
-	};
-	[74] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
-if data.PotsEnabled == true then\
-SallySAM.SkillSettings.Potion.enabled = true\
-end\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_DoTs";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "if data.PotsEnabled == true then\
-ACR_TensorWeeb_Potion = true\
-end";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Enable All";
-			["throttleTime"] = 0;
-			["time"] = 510.3;
-			["timeRange"] = false;
-			["timelineIndex"] = 74;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -1;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "483cd2ba-8baf-49a9-8aba-077f3aa51da9";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Enemy";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = true;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Target Boss";
-			["throttleTime"] = 0;
-			["time"] = 510.3;
-			["timeRange"] = true;
-			["timelineIndex"] = 74;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "625d44c2-46dc-5b6f-970d-ba70e4c7454e";
-		};
-	};
-	[83] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = 3;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_Hotbar_Sprint";
-					["gVarIndex"] = 8;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 2;
-				};
-				[2] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Sprint.enabled = false\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 3;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return AnyoneCore.Settings.UseSprint == true";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "Check Settings";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["eventArgOptionType"] = 1;
-					["eventArgType"] = 1;
-					["eventBuffDuration"] = 0;
-					["eventBuffID"] = -1;
-					["eventChatLine"] = "";
-					["eventEntityContentID"] = -1;
-					["eventEntityID"] = -1;
-					["eventEntityName"] = "";
-					["eventMarkerID"] = -1;
-					["eventOwnerContentID"] = -1;
-					["eventOwnerID"] = -1;
-					["eventOwnerName"] = "";
-					["eventSpellID"] = -1;
-					["eventSpellName"] = -1;
-					["eventTargetContentID"] = -1;
-					["eventTargetID"] = -1;
-					["eventTargetName"] = "";
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["eventArgOptionType"] = 1;
-					["eventArgType"] = 1;
-					["eventBuffDuration"] = 0;
-					["eventBuffID"] = -1;
-					["eventChatLine"] = "";
-					["eventEntityContentID"] = -1;
-					["eventEntityID"] = -1;
-					["eventEntityName"] = "";
-					["eventMarkerID"] = -1;
-					["eventOwnerContentID"] = -1;
-					["eventOwnerID"] = -1;
-					["eventOwnerName"] = "";
-					["eventSpellID"] = -1;
-					["eventSpellName"] = -1;
-					["eventTargetContentID"] = -1;
-					["eventTargetID"] = -1;
-					["eventTargetName"] = "";
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Use Sprint";
-			["throttleTime"] = 0;
-			["time"] = 550.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 83;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -9;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "2d5f1d02-a56b-aafc-ba3f-96e7c2359450";
-		};
-	};
-	[87] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7549;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Current Target";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 2;
-					["buffDuration"] = 0;
-					["buffID"] = 1195;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Feint";
-			["throttleTime"] = 0;
-			["time"] = 565.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 87;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "891f13bf-105c-8c30-91e4-91e6f7c216cb";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 565.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 87;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "8d2f5d46-f38f-d09f-a43c-7638f46da2f2";
-		};
-	};
-	[92] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 596.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 92;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "baa10a4c-e4bf-63d6-9899-d994bc4728aa";
-		};
-	};
-	[93] = {
-	};
-	[96] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 614.4;
-			["timeRange"] = false;
-			["timelineIndex"] = 96;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "a84021dc-2d82-de54-a81a-f76683871683";
-		};
-	};
-	[101] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 636.2;
-			["timeRange"] = false;
-			["timelineIndex"] = 101;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "9823db0a-fcdd-26c8-9c59-7f174e336ea8";
-		};
-	};
-	[104] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_MeikyoShisui";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Hold Meikyo";
-			["throttleTime"] = 0;
-			["time"] = 658.8;
-			["timeRange"] = false;
-			["timelineIndex"] = 104;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -6;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "d29dc0bc-6b18-d125-8610-b07907bd44cf";
-		};
-		[2] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\
-MoogleTTS.Speak(\"Use Meditate\")\
-elseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\
-TensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\
-end\
-self.used = true";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Meditate TTS";
-			["throttleTime"] = 0;
-			["time"] = 658.8;
-			["timeRange"] = false;
-			["timelineIndex"] = 104;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -0.5;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "3a59f148-b307-fbe4-bf67-b3060580dcc3";
-		};
-	};
-	[107] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 3;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = true;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Enemy";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "if not Player:GetTarget() then return true end\
-return false";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = true;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Target Boss";
-			["throttleTime"] = 0;
-			["time"] = 673.5;
-			["timeRange"] = true;
-			["timelineIndex"] = 107;
-			["timerEndOffset"] = 8;
-			["timerOffset"] = 1.375;
-			["timerStartOffset"] = -8;
-			["used"] = false;
-			["uuid"] = "8df6d7ab-2f71-4f73-b50a-6febec7d1038";
-		};
-		[2] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 4;
-					["actionID"] = -1;
-					["actionLua"] = "SallySAM.SkillSettings.Higanbana.enabled = true\
-self.used = true";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "SallySAM";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_DoTs";
-					["gVarIndex"] = 4;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "TensorWeeb";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[3] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_MeikyoShisui";
-					["gVarIndex"] = 11;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "SallySAM";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "TensorWeeb";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Enable All";
-			["throttleTime"] = 0;
-			["time"] = 673.5;
-			["timeRange"] = false;
-			["timelineIndex"] = 107;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -1;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "172c81cb-0be0-772b-b141-fc68a4f1d0c7";
-		};
-	};
-	[108] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-						[2] = 2;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_BurnKenki";
-					["gVarIndex"] = 5;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-				[2] = {
-					["aType"] = 2;
-					["actionID"] = -1;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 2;
-						[2] = 3;
-						[3] = 4;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "ACR_TensorWeeb_BurnKenki";
-					["gVarIndex"] = 5;
-					["gVarValue"] = 2;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 3;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 1.99899995327;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[2] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 1;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "";
-					["conditionType"] = 2;
-					["conditions"] = {
-					};
-					["contentid"] = 9298;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[3] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 2;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 2;
-					["conditionLua"] = "";
-					["conditionType"] = 2;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0.10000000149012;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-				[4] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = false;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Burn Boss";
-			["throttleTime"] = 0;
-			["time"] = 677.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 108;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "97f9cf6b-6de8-e1c3-b87b-2ddadf10f097";
-		};
-	};
-	[109] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 1";
-			["throttleTime"] = 0;
-			["time"] = 683.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 109;
-			["timerEndOffset"] = 1;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "0aaef289-a4f9-9332-9c0c-c26c18fd9411";
-		};
-		[2] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 2";
-			["throttleTime"] = 0;
-			["time"] = 683.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 109;
-			["timerEndOffset"] = 12;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 11;
-			["used"] = false;
-			["uuid"] = "6df444eb-2688-ccfc-abad-6ede196430f7";
-		};
-		[3] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 3";
-			["throttleTime"] = 0;
-			["time"] = 683.7;
-			["timeRange"] = true;
-			["timelineIndex"] = 109;
-			["timerEndOffset"] = 23;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 22;
-			["used"] = false;
-			["uuid"] = "c34f34dc-c8d5-0e92-8ce5-0e9b82c3860c";
-		};
-	};
-	[113] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 736.6;
-			["timeRange"] = false;
-			["timelineIndex"] = 113;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "94ee51f9-17a3-b433-a5d1-5d4544f4dae8";
-		};
-	};
-	[116] = {
-		[1] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 1";
-			["throttleTime"] = 0;
-			["time"] = 761.9;
-			["timeRange"] = true;
-			["timelineIndex"] = 116;
-			["timerEndOffset"] = 1;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "510b65f9-2013-15ab-a9a7-113de29f154e";
-		};
-		[2] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 2";
-			["throttleTime"] = 0;
-			["time"] = 761.9;
-			["timeRange"] = true;
-			["timelineIndex"] = 116;
-			["timerEndOffset"] = 12;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 11;
-			["used"] = false;
-			["uuid"] = "78f18aca-a374-60a5-804a-974c9a119735";
-		};
-		[3] = {
-			["actions"] = {
-			};
-			["conditions"] = {
-			};
-			["enabled"] = true;
-			["execute"] = "if Argus == nil then self.used = true end\
-\
-local drawnOrbs = {}\
-\
-for id, ent in pairs(EntityList(\"\")) do\
-	if (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\
-		if AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\
-			drawnOrbs[id] = true\
-			Argus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\
-		end\
-	end\
-end\
-\
-self.used = table.size(drawnOrbs) >= 3";
-			["executeType"] = 2;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Draw Orbs Group 3";
-			["throttleTime"] = 0;
-			["time"] = 761.9;
-			["timeRange"] = true;
-			["timelineIndex"] = 116;
-			["timerEndOffset"] = 23;
-			["timerOffset"] = 0;
-			["timerStartOffset"] = 22;
-			["used"] = false;
-			["uuid"] = "64e64d34-3b6c-3eec-811a-f32d72df3f28";
-		};
-	};
-	[120] = {
-		[1] = {
-			["actions"] = {
-				[1] = {
-					["aType"] = 1;
-					["actionID"] = 7498;
-					["actionLua"] = "";
-					["allowInterrupt"] = false;
-					["atomicPriority"] = false;
-					["castAtMouse"] = false;
-					["castPosX"] = 0;
-					["castPosY"] = 0;
-					["castPosZ"] = 0;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["conditions"] = {
-						[1] = 1;
-					};
-					["endIfUsed"] = false;
-					["gVar"] = "";
-					["gVarIndex"] = 1;
-					["gVarValue"] = 1;
-					["ignoreWeaveRules"] = false;
-					["isAreaTarget"] = false;
-					["luaNeedsWeaveWindow"] = false;
-					["luaReturnsAction"] = false;
-					["name"] = "";
-					["potType"] = 1;
-					["setTarget"] = false;
-					["showPositionPreview"] = false;
-					["stopCasting"] = false;
-					["stopMoving"] = false;
-					["targetContentID"] = -1;
-					["targetName"] = "";
-					["targetSubType"] = "Nearest";
-					["targetType"] = "Self";
-					["untarget"] = false;
-					["useForWeaving"] = false;
-					["usePot"] = false;
-					["used"] = false;
-					["variableTogglesType"] = 1;
-				};
-			};
-			["conditions"] = {
-				[1] = {
-					["actionCDValue"] = 0;
-					["actionID"] = -1;
-					["buffCheckType"] = 1;
-					["buffDuration"] = 0;
-					["buffID"] = -1;
-					["buffIDList"] = {
-					};
-					["category"] = 4;
-					["channelCheckSpellID"] = -1;
-					["channelCheckSpellIDList"] = multiRefObjects[7];
-					["channelCheckTimeRemain"] = 0;
-					["channelCheckType"] = 1;
-					["clusterMinTarget"] = 1;
-					["clusterRadius"] = 8;
-					["clusterRange"] = 30;
-					["comparator"] = 1;
-					["conditionLua"] = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \
-";
-					["conditionType"] = 1;
-					["conditions"] = {
-					};
-					["contentid"] = -1;
-					["dequeueIfLuaFalse"] = true;
-					["enmityValue"] = 0;
-					["filterTargetSubtype"] = "Nearest";
-					["filterTargetType"] = "Self";
-					["gaugeIndex"] = 1;
-					["gaugeValue"] = 0;
-					["hpType"] = 1;
-					["hpValue"] = 0;
-					["inCombatType"] = 1;
-					["inRangeValue"] = 0;
-					["lastSkillID"] = -1;
-					["localmapid"] = -1;
-					["matchAnyBuff"] = false;
-					["minTargetPercent"] = false;
-					["mpType"] = 1;
-					["mpValue"] = 0;
-					["name"] = "";
-					["partyHpType"] = 1;
-					["partyHpValue"] = 0;
-					["partyMpType"] = 1;
-					["partyMpValue"] = 0;
-					["partyTargetContentID"] = -1;
-					["partyTargetName"] = "";
-					["partyTargetNumber"] = 1;
-					["partyTargetSubType"] = 1;
-					["partyTargetType"] = "All";
-					["rangeCheckSourceSubType"] = "Nearest";
-					["rangeCheckSourceType"] = "Self";
-					["rangeSourceContentID"] = -1;
-					["rangeSourceName"] = "";
-					["setEventTargetSubtype"] = 1;
-					["setFirstMatch"] = false;
-					["targetName"] = "";
-				};
-			};
-			["enabled"] = true;
-			["execute"] = "";
-			["executeType"] = 1;
-			["lastUse"] = 0;
-			["loop"] = false;
-			["luaNeedsWeaveWindow"] = false;
-			["luaReturnsAction"] = false;
-			["name"] = "Third Eye";
-			["throttleTime"] = 0;
-			["time"] = 814.8;
-			["timeRange"] = false;
-			["timelineIndex"] = 120;
-			["timerEndOffset"] = 0;
-			["timerOffset"] = -3;
-			["timerStartOffset"] = 0;
-			["used"] = false;
-			["uuid"] = "86009d7e-ff28-0667-a3f8-52629798707d";
-		};
-	};
-	["mapID"] = 908;
-	["version"] = 6;
+local tbl = 
+{
+	[2] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "\nif gACRSelectedProfiles[Player.job] == \"SallySAM\" then\nSallySAM.SkillSettings.Omni.enabled = true\nSallySAM.SkillSettings.SmartTrueNorth.enabled = false\nelseif gACRSelectedProfiles[Player.job] == \"TensorWeeb\" then\nACR_TensorWeeb_Omni = true\nACR_TensorWeeb_TrueNorth = false\nend\n\n\n---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\nif AnyoneCore.Settings.AutoSetSpeedHacks == true then\n\t\tgDevHackWalkSpeed = 7\n\t\tPlayer:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\nend\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "REACTION SETTINGS",
+			throttleTime = 0,
+			time = 13,
+			timeRange = false,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = -11.5,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "690a32f3-fdda-463c-8f7e-30ae65fc3cb2",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if SallySAM.SkillSettings.Potion.enabled == true then\ndata.PotsEnabled = true\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if ACR_TensorWeeb_Potion == true then\ndata.PotsEnabled = true\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = true,
+					gVar = "ACR_TensorWeeb_CD",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Set Pot Setting",
+			throttleTime = 0,
+			time = 13,
+			timeRange = false,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "beeb97ec-9654-e52c-bf6c-2dac2b49ce41",
+		},
+	},
+	[3] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_MidareFirst",
+					gVarIndex = 16,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_Cursed",
+					gVarIndex = 17,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "disable cursed/midare first",
+			throttleTime = 0,
+			time = 25.2,
+			timeRange = false,
+			timelineIndex = 3,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "0d7bbd65-4713-ae59-b533-9cce1bd46ecd",
+		},
+	},
+	[16] = 
+	{
+	},
+	[22] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "\n--- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\n--- to use them, change the settings in the reaction settings menu. ",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "-- read me --",
+			throttleTime = 0,
+			time = 116.7,
+			timeRange = false,
+			timelineIndex = 22,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "93cdb617-a9f3-1ad1-a41b-eba0b93d3009",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						3,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						4,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2240,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2241,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2242,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2243,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Disable Assist Before Teleport",
+			throttleTime = 0,
+			time = 116.7,
+			timeRange = true,
+			timelineIndex = 22,
+			timerEndOffset = 20,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "aa1333ce-3d42-fc82-af99-d62824322cde",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						3,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						4,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2240,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2241,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2242,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2243,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return AnyoneCore.Settings.DisableAssist == true",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "stop casts before teleport",
+			throttleTime = 0,
+			time = 116.7,
+			timeRange = true,
+			timelineIndex = 22,
+			timerEndOffset = 20,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "1723cf99-60dd-c904-b428-6f69155bfe84",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if not FFXIV_Common_BotRunning then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Enable All After Teleport",
+			throttleTime = 0,
+			time = 116.7,
+			timeRange = false,
+			timelineIndex = 22,
+			timerEndOffset = 20,
+			timerOffset = 12,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "cd853779-ca79-c7f4-87be-dd4a0213149e",
+		},
+	},
+	[27] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 139.9,
+			timeRange = false,
+			timelineIndex = 27,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "9d434305-7d74-ad56-bc57-ec8e68c988fe",
+		},
+	},
+	[38] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "\n--- 'disable assist before teleport', and 'reenable assist after stunned' are disabled by default. if you'd like\n--- to use them, change the settings in the reaction settings menu. ",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "-- read me --",
+			throttleTime = 0,
+			time = 177.5,
+			timeRange = false,
+			timelineIndex = 38,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "c247807e-1d82-c6b7-bacb-c5e19e56fc22",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						3,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						4,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2240,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2241,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2242,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2243,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Disable Assist Before Teleport",
+			throttleTime = 0,
+			time = 177.5,
+			timeRange = true,
+			timelineIndex = 38,
+			timerEndOffset = 20,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "78a80557-8ac7-2dff-ae26-ce3b64b7191f",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						3,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "if FFXIV_Common_BotRunning and AnyoneCore.Settings.DisableAssist == true then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						4,
+						5,
+					},
+					endIfUsed = true,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = true,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2240,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2241,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2242,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 3,
+					buffDuration = 1.5,
+					buffID = 2243,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return AnyoneCore.Settings.DisableAssist == true",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "stop casts before teleport",
+			throttleTime = 0,
+			time = 177.5,
+			timeRange = true,
+			timelineIndex = 38,
+			timerEndOffset = 20,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "1ac54627-fc40-71b8-9d5d-600058aef28a",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if not FFXIV_Common_BotRunning then\n\t\tml_global_information.ToggleRun()\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Enable All After Teleport",
+			throttleTime = 0,
+			time = 177.5,
+			timeRange = false,
+			timelineIndex = 38,
+			timerEndOffset = 20,
+			timerOffset = 12,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "08cb1323-a649-236f-94c1-b479a85a96e8",
+		},
+	},
+	[47] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Higanbana.enabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_DoTs",
+					gVarIndex = 4,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Don't Higanbana",
+			throttleTime = 0,
+			time = 198.5,
+			timeRange = false,
+			timelineIndex = 47,
+			timerEndOffset = 0,
+			timerOffset = -42,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "fb477135-d157-d66b-b367-157519d3ad4e",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\nMoogleTTS.Speak(\"Use Meditate\")\nelseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\nTensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\nend\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Meditate TTS",
+			throttleTime = 0,
+			time = 198.5,
+			timeRange = false,
+			timelineIndex = 47,
+			timerEndOffset = 0,
+			timerOffset = -0.5,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "95fc1a19-b517-90c7-91a9-6aad2c38b0fd",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_MeikyoShisui",
+					gVarIndex = 11,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = false,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Hold Meikyo",
+			throttleTime = 0,
+			time = 198.5,
+			timeRange = false,
+			timelineIndex = 47,
+			timerEndOffset = 0,
+			timerOffset = -6,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "bb2e4b03-8739-8ac0-a77a-7e4d9ae410c7",
+		},
+	},
+	[51] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Higanbana.enabled = true\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_DoTs",
+					gVarIndex = 4,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_MeikyoShisui",
+					gVarIndex = 11,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Enable All",
+			throttleTime = 0,
+			time = 205.6,
+			timeRange = false,
+			timelineIndex = 51,
+			timerEndOffset = 0,
+			timerOffset = -1,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "f79fde9d-d393-a9c1-9f2a-394d62d1d6d6",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if SallySAM.SkillSettings.Potion.enabled == true then\ndata.PotsEnabled = true\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if ACR_TensorWeeb_Potion == true then\ndata.PotsEnabled = true\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Set Pot Status",
+			throttleTime = 0,
+			time = 205.6,
+			timeRange = false,
+			timelineIndex = 51,
+			timerEndOffset = 0,
+			timerOffset = -10,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "5b45ac02-4564-8f5f-8f94-ab1548b9efc5",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Potion.enabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_Potion",
+					gVarIndex = 15,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Don't Pot",
+			throttleTime = 0,
+			time = 205.6,
+			timeRange = false,
+			timelineIndex = 51,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "64983b50-ed42-9661-8233-0440b6c0852e",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Enemy",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "if not Player:GetTarget() then return true end\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Target Nearest Add",
+			throttleTime = 0,
+			time = 205.6,
+			timeRange = true,
+			timelineIndex = 51,
+			timerEndOffset = 3,
+			timerOffset = 1.375,
+			timerStartOffset = -3,
+			used = false,
+			uuid = "4eaf19e4-34c2-6ef9-bc7d-40593da96ec2",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 3,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Sprint",
+			throttleTime = 0,
+			time = 205.6,
+			timeRange = false,
+			timelineIndex = 51,
+			timerEndOffset = 0,
+			timerOffset = 5,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "ad874455-48f2-085a-a998-be78d3745beb",
+		},
+	},
+	[52] = 
+	{
+	},
+	[62] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\nMoogleTTS.Speak(\"Use Meditate\")\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						2,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 2,
+					conditions = 
+					{
+					},
+					contentid = 9300,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 3,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 10,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Meditate TTS",
+			throttleTime = 0,
+			time = 291.8,
+			timeRange = true,
+			timelineIndex = 62,
+			timerEndOffset = -30,
+			timerOffset = -0.5,
+			timerStartOffset = -30,
+			used = false,
+			uuid = "94e20ef0-002a-0fd4-89b9-9020c59757ae",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						2,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Event Target",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+						3,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = 9300,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "ContentID",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Higanbana.enabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+						3,
+						4,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "self.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						5,
+						6,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_DoTs",
+					gVarIndex = 4,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "for id, ent in pairs(TensorCore.entityList(\"\")) do\n    if ent.contentid == 9301 and ent.hp.current > 0 then\n        -- swap to other add that's alive\n        reaction.eventArgs.targetID = id\n        return true\n    end\nend\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "local t = Player:GetTarget()\nreturn t == nil or t.hp.current <= 0 -- no target or target dead, then swap",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "for id, ent in pairs(TensorCore.entityList(\"\")) do\n    if ent.contentid == 9301 and ent.hp.current > 0 then\n        -- other add is alive, don't swap to blasphemy\n        return false\n    end\nend\nreturn true",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 3,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 50,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Retarget / Disable Higanbana",
+			throttleTime = 0,
+			time = 291.8,
+			timeRange = true,
+			timelineIndex = 62,
+			timerEndOffset = 30,
+			timerOffset = 0,
+			timerStartOffset = -42,
+			used = false,
+			uuid = "53e0aa9a-46e3-ed9b-b480-65c40a6693f8",
+		},
+	},
+	[71] = 
+	{
+	},
+	[74] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Higanbana.enabled = true\nif data.PotsEnabled == true then\nSallySAM.SkillSettings.Potion.enabled = true\nend\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_DoTs",
+					gVarIndex = 4,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "if data.PotsEnabled == true then\nACR_TensorWeeb_Potion = true\nend",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" ",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Enable All",
+			throttleTime = 0,
+			time = 510.3,
+			timeRange = false,
+			timelineIndex = 74,
+			timerEndOffset = 0,
+			timerOffset = -1,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "483cd2ba-8baf-49a9-8aba-077f3aa51da9",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Enemy",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "if not Player:GetTarget() then return true end\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Target Boss",
+			throttleTime = 0,
+			time = 510.3,
+			timeRange = true,
+			timelineIndex = 74,
+			timerEndOffset = 8,
+			timerOffset = 1.375,
+			timerStartOffset = -8,
+			used = false,
+			uuid = "625d44c2-46dc-5b6f-970d-ba70e4c7454e",
+		},
+	},
+	[83] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 2,
+					actionID = 3,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_Hotbar_Sprint",
+					gVarIndex = 8,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 2,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Sprint.enabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						3,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return AnyoneCore.Settings.UseSprint == true",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "Check Settings",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					eventArgOptionType = 1,
+					eventArgType = 1,
+					eventBuffDuration = 0,
+					eventBuffID = -1,
+					eventChatLine = "",
+					eventEntityContentID = -1,
+					eventEntityID = -1,
+					eventEntityName = "",
+					eventMarkerID = -1,
+					eventOwnerContentID = -1,
+					eventOwnerID = -1,
+					eventOwnerName = "",
+					eventSpellID = -1,
+					eventSpellName = -1,
+					eventTargetContentID = -1,
+					eventTargetID = -1,
+					eventTargetName = "",
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					eventArgOptionType = 1,
+					eventArgType = 1,
+					eventBuffDuration = 0,
+					eventBuffID = -1,
+					eventChatLine = "",
+					eventEntityContentID = -1,
+					eventEntityID = -1,
+					eventEntityName = "",
+					eventMarkerID = -1,
+					eventOwnerContentID = -1,
+					eventOwnerID = -1,
+					eventOwnerName = "",
+					eventSpellID = -1,
+					eventSpellName = -1,
+					eventTargetContentID = -1,
+					eventTargetID = -1,
+					eventTargetName = "",
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Use Sprint",
+			throttleTime = 0,
+			time = 550.5,
+			timeRange = false,
+			timelineIndex = 83,
+			timerEndOffset = 0,
+			timerOffset = -9,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "2d5f1d02-a56b-aafc-ba3f-96e7c2359450",
+		},
+	},
+	[87] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7549,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Current Target",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 2,
+					buffDuration = 0,
+					buffID = 1195,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Feint",
+			throttleTime = 0,
+			time = 565.5,
+			timeRange = false,
+			timelineIndex = 87,
+			timerEndOffset = 0,
+			timerOffset = -6,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "891f13bf-105c-8c30-91e4-91e6f7c216cb",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 565.5,
+			timeRange = false,
+			timelineIndex = 87,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "8d2f5d46-f38f-d09f-a43c-7638f46da2f2",
+		},
+	},
+	[92] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 596.6,
+			timeRange = false,
+			timelineIndex = 92,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "baa10a4c-e4bf-63d6-9899-d994bc4728aa",
+		},
+	},
+	[93] = 
+	{
+	},
+	[96] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 614.4,
+			timeRange = false,
+			timelineIndex = 96,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "a84021dc-2d82-de54-a81a-f76683871683",
+		},
+	},
+	[101] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 636.2,
+			timeRange = false,
+			timelineIndex = 101,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "9823db0a-fcdd-26c8-9c59-7f174e336ea8",
+		},
+	},
+	[104] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_MeikyoShisui",
+					gVarIndex = 11,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Hold Meikyo",
+			throttleTime = 0,
+			time = 658.8,
+			timeRange = false,
+			timelineIndex = 104,
+			timerEndOffset = 0,
+			timerOffset = -6,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "d29dc0bc-6b18-d125-8610-b07907bd44cf",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if MoogleTTS ~= nil and AnyoneCore.Settings.UseMoogleTTS == true then\nMoogleTTS.Speak(\"Use Meditate\")\nelseif MoogleTTS == nil and AnyoneCore.Settings.UseMoogleTTS == true then\nTensorCore.sendParsedChatMessage(\"/e {color:0, 255, 0} Use Meditate. <se.1>\")\nend\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Meditate TTS",
+			throttleTime = 0,
+			time = 658.8,
+			timeRange = false,
+			timelineIndex = 104,
+			timerEndOffset = 0,
+			timerOffset = -0.5,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "3a59f148-b307-fbe4-bf67-b3060580dcc3",
+		},
+	},
+	[107] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Enemy",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "if not Player:GetTarget() then return true end\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Target Boss",
+			throttleTime = 0,
+			time = 673.5,
+			timeRange = true,
+			timelineIndex = 107,
+			timerEndOffset = 8,
+			timerOffset = 1.375,
+			timerStartOffset = -8,
+			used = false,
+			uuid = "8df6d7ab-2f71-4f73-b50a-6febec7d1038",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "SallySAM.SkillSettings.Higanbana.enabled = true\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "SallySAM",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_DoTs",
+					gVarIndex = 4,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "TensorWeeb",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_MeikyoShisui",
+					gVarIndex = 11,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "SallySAM",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "TensorWeeb",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Enable All",
+			throttleTime = 0,
+			time = 673.5,
+			timeRange = false,
+			timelineIndex = 107,
+			timerEndOffset = 0,
+			timerOffset = -1,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "172c81cb-0be0-772b-b141-fc68a4f1d0c7",
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+						2,
+						4,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_BurnKenki",
+					gVarIndex = 5,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 2,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+						3,
+						4,
+					},
+					endIfUsed = false,
+					gVar = "ACR_TensorWeeb_BurnKenki",
+					gVarIndex = 5,
+					gVarValue = 2,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 3,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 1.99899995327,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 2,
+					conditions = 
+					{
+					},
+					contentid = 9298,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 2,
+					conditionLua = "",
+					conditionType = 2,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0.10000000149012,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"TensorWeeb\"",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Burn Boss",
+			throttleTime = 0,
+			time = 677.6,
+			timeRange = false,
+			timelineIndex = 108,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "97f9cf6b-6de8-e1c3-b87b-2ddadf10f097",
+		},
+	},
+	[109] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 1",
+			throttleTime = 0,
+			time = 683.7,
+			timeRange = true,
+			timelineIndex = 109,
+			timerEndOffset = 1,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "0aaef289-a4f9-9332-9c0c-c26c18fd9411",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 2",
+			throttleTime = 0,
+			time = 683.7,
+			timeRange = true,
+			timelineIndex = 109,
+			timerEndOffset = 12,
+			timerOffset = 0,
+			timerStartOffset = 11,
+			used = false,
+			uuid = "6df444eb-2688-ccfc-abad-6ede196430f7",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 3",
+			throttleTime = 0,
+			time = 683.7,
+			timeRange = true,
+			timelineIndex = 109,
+			timerEndOffset = 23,
+			timerOffset = 0,
+			timerStartOffset = 22,
+			used = false,
+			uuid = "c34f34dc-c8d5-0e92-8ce5-0e9b82c3860c",
+		},
+	},
+	[113] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 736.6,
+			timeRange = false,
+			timelineIndex = 113,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "94ee51f9-17a3-b433-a5d1-5d4544f4dae8",
+		},
+	},
+	[116] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 1",
+			throttleTime = 0,
+			time = 761.9,
+			timeRange = true,
+			timelineIndex = 116,
+			timerEndOffset = 1,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "510b65f9-2013-15ab-a9a7-113de29f154e",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 2",
+			throttleTime = 0,
+			time = 761.9,
+			timeRange = true,
+			timelineIndex = 116,
+			timerEndOffset = 12,
+			timerOffset = 0,
+			timerStartOffset = 11,
+			used = false,
+			uuid = "78f18aca-a374-60a5-804a-974c9a119735",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if Argus == nil then self.used = true end\n\nlocal drawnOrbs = {}\n\nfor id, ent in pairs(EntityList(\"\")) do\n\tif (ent.contentid == 9302 or ent.contentid == 9303) and not drawnOrbs[id] then\n\t\tif AnyoneCore.Settings.DrawBlackWhiteOrbs == true then\n\t\t\tdrawnOrbs[id] = true\n\t\t\tArgus.addTimedCircleFilled(10000, ent.pos.x, ent.pos.y, ent.pos.z, 6, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\tend\n\tend\nend\n\nself.used = table.size(drawnOrbs) >= 3",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Draw Orbs Group 3",
+			throttleTime = 0,
+			time = 761.9,
+			timeRange = true,
+			timelineIndex = 116,
+			timerEndOffset = 23,
+			timerOffset = 0,
+			timerStartOffset = 22,
+			used = false,
+			uuid = "64e64d34-3b6c-3eec-811a-f32d72df3f28",
+		},
+	},
+	[120] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 1,
+					actionID = 7498,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					usePot = false,
+					used = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return gACRSelectedProfiles[Player.job] == \"SallySAM\" \n",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = true,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Third Eye",
+			throttleTime = 0,
+			time = 814.8,
+			timeRange = false,
+			timelineIndex = 120,
+			timerEndOffset = 0,
+			timerOffset = -3,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "86009d7e-ff28-0667-a3f8-52629798707d",
+		},
+	},
+	mapID = 908,
+	version = 6,
 }
-return obj1
+
+
+
+return tbl
