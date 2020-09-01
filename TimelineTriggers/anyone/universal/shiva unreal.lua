@@ -44,6 +44,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -84,6 +85,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -124,6 +126,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -164,6 +167,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -204,6 +208,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -277,6 +282,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -321,6 +327,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -365,6 +372,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -405,6 +413,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -446,6 +455,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -486,6 +496,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -526,6 +537,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -566,6 +578,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -872,6 +885,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -912,6 +926,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -952,6 +967,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -992,6 +1008,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1061,6 +1078,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1130,6 +1148,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1199,6 +1218,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1269,6 +1289,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1309,6 +1330,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1349,6 +1371,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1389,6 +1412,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1429,6 +1453,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1469,6 +1494,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1509,6 +1535,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1549,6 +1576,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1589,6 +1617,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1716,6 +1745,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1846,6 +1876,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1886,6 +1917,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -1955,6 +1987,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -1995,6 +2028,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2064,6 +2098,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2104,6 +2139,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2173,6 +2209,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2213,6 +2250,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2283,6 +2321,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2323,6 +2362,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2363,6 +2403,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2403,6 +2444,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2443,6 +2485,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2483,6 +2526,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2523,6 +2567,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2563,6 +2608,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2603,6 +2649,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2730,6 +2777,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2860,6 +2908,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -2900,6 +2949,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -2969,6 +3019,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3009,6 +3060,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -3078,6 +3130,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3118,6 +3171,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -3187,6 +3241,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3227,6 +3282,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -3296,6 +3352,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3336,6 +3393,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3376,6 +3434,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3416,6 +3475,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3456,6 +3516,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -3529,6 +3590,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -3573,6 +3635,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -3617,6 +3680,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -3657,6 +3721,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3698,6 +3763,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3738,6 +3804,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3778,6 +3845,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -3818,6 +3886,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -4124,6 +4193,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4164,6 +4234,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4204,6 +4275,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4244,6 +4316,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -4313,6 +4386,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -4382,6 +4456,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -4453,6 +4528,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -4583,6 +4659,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4623,6 +4700,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4663,6 +4741,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4703,6 +4782,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4743,6 +4823,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4783,6 +4864,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4823,6 +4905,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4863,6 +4946,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -4903,6 +4987,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5030,6 +5115,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5160,6 +5246,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5200,6 +5287,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5271,6 +5359,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5400,6 +5489,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5440,6 +5530,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5480,6 +5571,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5520,6 +5612,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5560,6 +5653,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5629,6 +5723,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5698,6 +5793,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5738,6 +5834,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5778,6 +5875,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5818,6 +5916,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -5858,6 +5957,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -5931,6 +6031,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -5975,6 +6076,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -6019,6 +6121,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 2,
 				},
 				
@@ -6059,6 +6162,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6100,6 +6204,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6140,6 +6245,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6180,6 +6286,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6220,6 +6327,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -6526,6 +6634,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6566,6 +6675,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6606,6 +6716,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6646,6 +6757,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -6715,6 +6827,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -6785,6 +6898,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6825,6 +6939,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6865,6 +6980,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6905,6 +7021,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6945,6 +7062,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -6985,6 +7103,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -7025,6 +7144,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -7065,6 +7185,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -7105,6 +7226,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -7232,6 +7354,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
@@ -7362,6 +7485,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 				
@@ -7402,6 +7526,7 @@ local tbl =
 					useForWeaving = false,
 					usePot = false,
 					used = false,
+					variableIsHover = false,
 					variableTogglesType = 1,
 				},
 			},
