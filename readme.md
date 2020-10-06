@@ -1,54 +1,8 @@
+Some information on this page may be outdated.
+
 # Supported Jobs
 
 Machinist, Bard, Summoner, Dancer, Samurai, Dragoon, Ninja, Dark Knight, Warrior, Paladin, Gunbreaker
-
-### Machinist
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorMagnum only
-
-### Bard
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorRequiem only
-
-### Summoner
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - TensorRuin only
-
-### Dancer
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8 - SallyDNC only
-
-### Samurai
-
-Duty Helper, Eden's Verse 5-8, TEA - TensorWeeb/SallySAM only
-
-### Black Mage
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8 - SallyBLM only
-
-### Dragoon
-
-Prepull Helper, Duty Helper, Eden's Verse 5-8, TEA, UCoB - RikuDRG and SallyDRG only
-
-### Ninja
-
-Prepull Helper - SallyNIN only
-
-### Dark Knight
-
-Duty Helper, Eden's Verse 5-8 (tanking) - SallyDRK only
-
-### Warrior
-
-Duty Helper, Eden's Verse 5-8 (tanking) - SallyWAR only
-
-### Paladin
-
-Duty Helper, Eden's Verse 5-8 (tanking) - SallyPLD only
-
-### Gunbreaker
-
-Duty Helper, Eden's Verse 5-8 (timeline reactions are only for DPS optimization, not for tanking) - SallyGNB only
 
 # FAQ
 
