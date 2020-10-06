@@ -40,9 +40,13 @@ Merge the folders that share their names.
 **Q: Where do I place the AnyoneCore folder?**
 
 A: Same folder as your reactions. The folder setup should looks like this:
+
 AnyoneCore
+
 GeneralTriggers
+
 Logs
+
 TimelineTriggers
 
 **Q: How do I download these?**
