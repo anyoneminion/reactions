@@ -21,26 +21,29 @@ A: To be safe, after placing these files in the above folder, reload your LUA, t
 
 **Q: "How do I get the knockback mirror arm's length strat to work?" or "I got killed during knockback mirrors"**
 
-A: Open the AnyoneCore menu and enable "Knockback Mirror Uptime Strat"
+A: Open the AnyoneCore menu and enable "Knockback Mirror Uptime Strat", alternatively you can enable the "High Ping Mode" setting located in the same spot.
 
-
-**Q: "How do I get the assist toggle during Away With Thee to work on e7s?"
+**Q: "How do I get the assist toggle during Away With Thee to work on e7s?"**
 
 A: Open the AnyoneCore Menu and enable "Disable Assist for Away With Thee"
 
-**Q: "Where do I find the AnyoneCore menu?"
+**Q: "Where do I find the AnyoneCore menu?"**
 
 A: Press the MMOMinion menu button, and at the bottom of the FFXIVMinion list, you should see
 an option named "AnyoneCore". Click that and change the settings as you please.
-
-**Q: "Why don't you do something this way instead of that way?"
-
-A: Because that's how I made it. If you truly believe you have a better idea, then send it to me on Discord.
 
 **Q: Where do I place the reactions?**
 
 A: MINIONAPP\Bots\FFXIVMinion64\LuaMods\TensorReactions
 Merge the folders that share their names.
+
+**Q: Where do I place the AnyoneCore folder?**
+
+A: Same folder as your reactions. The folder setup should looks like this:
+AnyoneCore
+GeneralTriggers
+Logs
+TimelineTriggers
 
 **Q: How do I download these?**
 
