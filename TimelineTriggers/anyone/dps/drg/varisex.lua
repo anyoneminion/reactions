@@ -1,9 +1,6 @@
 local tbl = 
 {
-	[13] = 
-	{
-	},
-	[19] = 
+	[18] = 
 	{
 		
 		{
@@ -47,6 +44,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -63,13 +63,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 109.6,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 109.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 19,
+			timelineIndex = 18,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -121,6 +123,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -148,6 +153,7 @@ local tbl =
 					channelCheckType = 1,
 					clusterMinPercent = false,
 					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
@@ -199,8 +205,10 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 177.1,
 			name = "Hold Buffs -20s",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 177.1,
 			timeRandomRange = false,
@@ -213,7 +221,7 @@ local tbl =
 			uuid = "828019ef-027a-ce91-b2f9-435847ee7b8e",
 		},
 	},
-	[31] = 
+	[30] = 
 	{
 		
 		{
@@ -257,6 +265,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -284,6 +295,7 @@ local tbl =
 					channelCheckType = 1,
 					clusterMinPercent = false,
 					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
@@ -335,13 +347,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 200.1,
 			name = "Enable All",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 200.1,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 31,
+			timelineIndex = 30,
 			timerEndOffset = 0,
 			timerOffset = -1,
 			timerStartOffset = 0,
@@ -349,7 +363,7 @@ local tbl =
 			uuid = "8cbcc911-d6f9-802c-bb6e-0e2ee725c1ed",
 		},
 	},
-	[34] = 
+	[33] = 
 	{
 		
 		{
@@ -393,6 +407,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -420,6 +437,7 @@ local tbl =
 					channelCheckType = 1,
 					clusterMinPercent = false,
 					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
@@ -471,13 +489,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 269.1,
 			name = "Enable All",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 269.1,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 34,
+			timelineIndex = 33,
 			timerEndOffset = 0,
 			timerOffset = -1,
 			timerStartOffset = 0,
@@ -485,10 +505,7 @@ local tbl =
 			uuid = "b4da1849-1d16-baee-9ebc-2e4ba6e3ab44",
 		},
 	},
-	[45] = 
-	{
-	},
-	[59] = 
+	[58] = 
 	{
 		
 		{
@@ -532,6 +549,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -548,13 +568,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 305.9,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
-			time = 307.9,
+			time = 305.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 59,
+			timelineIndex = 58,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -562,10 +584,7 @@ local tbl =
 			uuid = "e0623430-2bf9-57f0-bc5c-acfc0690cb34",
 		},
 	},
-	[73] = 
-	{
-	},
-	[89] = 
+	[88] = 
 	{
 		
 		{
@@ -609,6 +628,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -625,13 +647,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 585.9,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 585.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 89,
+			timelineIndex = 88,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -639,10 +663,7 @@ local tbl =
 			uuid = "7ff63723-ae6f-3a4e-ae62-7f1e81f27114",
 		},
 	},
-	[112] = 
-	{
-	},
-	[119] = 
+	[118] = 
 	{
 		
 		{
@@ -686,6 +707,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -702,13 +726,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 784.4,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 784.4,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 119,
+			timelineIndex = 118,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -716,7 +742,7 @@ local tbl =
 			uuid = "3994f986-5cb1-ddb9-a3bb-fa92448112b0",
 		},
 	},
-	[131] = 
+	[130] = 
 	{
 		
 		{
@@ -760,6 +786,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -776,22 +805,21 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 931.6,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 931.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 131,
+			timelineIndex = 130,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
 			uuid = "6f1bf8e3-2344-965c-9b57-8da8836b6d51",
 		},
-	},
-	[146] = 
-	{
 	},
 	[155] = 
 	{
@@ -837,6 +865,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -864,6 +895,7 @@ local tbl =
 					channelCheckType = 1,
 					clusterMinPercent = false,
 					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
@@ -915,8 +947,10 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 1200,
 			name = "Hold Buffs -20s",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 1200,
 			timeRandomRange = false,
@@ -929,7 +963,7 @@ local tbl =
 			uuid = "81a92910-bf4f-d042-8b87-f95094d912dd",
 		},
 	},
-	[162] = 
+	[161] = 
 	{
 		
 		{
@@ -973,6 +1007,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -1000,6 +1037,7 @@ local tbl =
 					channelCheckType = 1,
 					clusterMinPercent = false,
 					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
@@ -1051,13 +1089,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 1303,
 			name = "Enable All",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 1303,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 162,
+			timelineIndex = 161,
 			timerEndOffset = 0,
 			timerOffset = -1,
 			timerStartOffset = 0,
@@ -1065,10 +1105,7 @@ local tbl =
 			uuid = "fd3b8462-0c3b-9817-94e5-960e8e5e113a",
 		},
 	},
-	[168] = 
-	{
-	},
-	[175] = 
+	[174] = 
 	{
 		
 		{
@@ -1112,6 +1149,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -1128,13 +1168,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 1394.6,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 1394.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 175,
+			timelineIndex = 174,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -1142,13 +1184,7 @@ local tbl =
 			uuid = "c3ca87ee-b1ec-9f7b-b324-6d78117e1658",
 		},
 	},
-	[178] = 
-	{
-	},
-	[200] = 
-	{
-	},
-	[207] = 
+	[206] = 
 	{
 		
 		{
@@ -1192,6 +1228,9 @@ local tbl =
 					targetType = "Self",
 					untarget = false,
 					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
 					usePot = false,
 					used = false,
 					variableIsHover = false,
@@ -1208,13 +1247,15 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 1573.6,
 			name = "Arm's Length",
 			randomOffset = 0,
+			randomTimeout = 3,
 			throttleTime = 0,
 			time = 1573.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 207,
+			timelineIndex = 206,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -1223,7 +1264,7 @@ local tbl =
 		},
 	},
 	mapID = 913,
-	version = 1,
+	version = 2,
 }
 
 
