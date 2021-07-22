@@ -2799,7 +2799,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "30f8fedc-f79a-e9be-8c47-ab80ab0af1fa",
+			uuid = "dceb56dd-2181-fb3e-b817-3b25e03c2a98",
 		},
 		
 		{
@@ -2810,12 +2810,13 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 3.5 and liquid.hp.percent >= 8 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 3.5 or liquid.hp.percent <= 5 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
+			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 4.5 and liquid.hp.percent >= 12 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 4.5 or liquid.hp.percent <= 10 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = true,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 19.5,
 			name = "manage consistent HP",
 			randomOffset = 0,
 			randomTimeout = 3,
@@ -2971,7 +2972,7 @@ local tbl =
 			timerOffset = -1.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e0bc1d53-22c3-8d9f-8677-ad11e1857d91",
+			uuid = "8a5d9649-7a3c-9db8-bb2d-3f119230e835",
 		},
 	},
 	[9] = 
@@ -3052,7 +3053,7 @@ local tbl =
 			timerOffset = -25,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "37f4d5b3-bbe5-aa16-badd-4ebfda17c349",
+			uuid = "307aa211-a476-c069-8871-0a913e8782cf",
 		},
 		
 		{
@@ -3209,7 +3210,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "829fb589-497d-b925-a9a8-84ddad641824",
+			uuid = "ca40b7c2-844b-ca9b-9fa5-f1a06e0085a2",
 		},
 		
 		{
@@ -3367,7 +3368,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "7d595fbc-7e31-d189-bf7a-ed5a74c3376f",
+			uuid = "d15ae715-bfd6-f562-945d-807d8187f138",
 		},
 		
 		{
@@ -3607,7 +3608,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "ed16539f-4d75-b7ee-8628-4dcd1c12a485",
+			uuid = "7f2fcd53-2fc2-a730-b668-f9d96d556dc6",
 		},
 	},
 	[14] = 
@@ -3753,7 +3754,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -20,
 			used = false,
-			uuid = "37e9486e-f10c-b644-93e7-f7b630092f02",
+			uuid = "a576bc48-f3ff-d057-a96b-654b2c116633",
 		},
 	},
 	[19] = 
@@ -3832,7 +3833,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ea7afe3e-99be-7b1c-a130-06d204fdaf18",
+			uuid = "cddeb9ff-971d-0905-92bf-f85ea1163e55",
 		},
 	},
 	[20] = 
@@ -4051,7 +4052,7 @@ local tbl =
 			timerOffset = -30,
 			timerStartOffset = -50,
 			used = false,
-			uuid = "7d284e86-70a6-5e71-b980-1732c3f4da8f",
+			uuid = "e829ac9f-d43d-ede6-a8d6-8bab3f8627f1",
 		},
 	},
 	[39] = 
@@ -4295,7 +4296,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "8d69a4d5-ac98-2aff-a6d6-58c23b69ffd2",
+			uuid = "9dc13691-7b78-b1c8-ac91-6b806c5701af",
 		},
 		
 		{
@@ -4325,7 +4326,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "8f98b0b7-5f81-1d3a-8d60-18e5e4e89a9a",
+			uuid = "b141f32f-751c-a584-b9c9-ee5e2ffc63d6",
 		},
 		
 		{
@@ -4468,7 +4469,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "2ffef602-9bd8-d365-946a-14d45f0a84d0",
+			uuid = "dd68918f-6446-4c4b-9448-cbe101ceccde",
 		},
 		
 		{
@@ -4761,7 +4762,7 @@ local tbl =
 			timerOffset = -30,
 			timerStartOffset = -30,
 			used = false,
-			uuid = "e62278ca-0792-b61e-a56d-e1b7fa5114ae",
+			uuid = "625ec2a8-6861-1100-a08d-8cc820b5f7cb",
 		},
 	},
 	[58] = 
@@ -4840,7 +4841,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -5,
 			used = false,
-			uuid = "1036338f-f24b-afc1-9424-8ab42a3b84e7",
+			uuid = "1b3d1f20-f047-52ff-9ec4-bb7d3dbd6a66",
 		},
 		
 		{
@@ -4915,7 +4916,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b1ffdb52-eec8-feb1-9eea-cb4bd84bf93d",
+			uuid = "e3a9ddb0-516b-445d-bc7d-e8730441f53f",
 		},
 	},
 	[67] = 
@@ -5058,7 +5059,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7a697a30-101b-b164-923b-c507078ee402",
+			uuid = "c5454524-b20f-4f3b-b465-d68dee5d8c82",
 		},
 		
 		{
@@ -5198,7 +5199,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7f715d6d-5122-b129-a9b6-53b30232bcc6",
+			uuid = "e9b4efd9-33c5-9779-89cb-e08b4cf84dbd",
 		},
 	},
 	[71] = 
@@ -5341,7 +5342,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6616e44f-47d3-e4fa-abf0-3d9d31c474ee",
+			uuid = "82adcbbd-49e6-027c-958f-53d73d2ca273",
 		},
 		
 		{
@@ -5481,7 +5482,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b4d45acd-171f-8ad4-a5a0-2fa89886618a",
+			uuid = "44af58d3-2754-5f96-aa59-81f139a39c22",
 		},
 	},
 	[72] = 
@@ -5559,7 +5560,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "728ca5e5-6d13-eeb7-a8d5-e4a2bafe8d91",
+			uuid = "54d10f48-4f8a-6582-9099-15be40ecc3e1",
 		},
 	},
 	[73] = 
@@ -5772,7 +5773,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -1,
 			used = false,
-			uuid = "c8fce637-d47d-3980-9a3c-039dd5333be3",
+			uuid = "88d4fc07-96c1-ea8f-bdd6-641e48756c6a",
 		},
 		
 		{
@@ -6064,7 +6065,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -1,
 			used = false,
-			uuid = "938f826b-dca3-5070-ac33-58927fa9dbc5",
+			uuid = "107c3d51-0b9e-8c93-a64a-03bee772e23f",
 		},
 		
 		{
@@ -6204,7 +6205,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b8147159-3854-fa7c-a8f9-2e37a16387c5",
+			uuid = "2d7594b1-b5f3-8287-b211-29b7cff1d819",
 		},
 		
 		{
@@ -6330,6 +6331,7 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 314.1,
 			name = "disable aoe if on shield",
 			randomOffset = 0,
 			randomTimeout = 3,
@@ -6420,7 +6422,7 @@ local tbl =
 			timerOffset = 3,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "18f08db8-98cb-95eb-bbcf-0cea2a721e5a",
+			uuid = "5b6cd267-9d8f-4a97-a6cd-b275c011f448",
 		},
 	},
 	[76] = 
@@ -6563,7 +6565,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0c699ae9-fddc-f335-84ff-09f962c62447",
+			uuid = "8e84ad34-cfdf-6c11-b41b-36d35e534462",
 		},
 		
 		{
@@ -6703,7 +6705,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "30bf50ff-738b-9b51-b775-37064499512b",
+			uuid = "6d67073a-c957-911b-b431-26f6829e5889",
 		},
 		
 		{
@@ -6842,7 +6844,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "45d0907d-acdf-b677-9b26-a005b06e4bce",
+			uuid = "75b383e5-a873-b65d-9b81-877e678d1f14",
 		},
 		
 		{
@@ -6917,7 +6919,7 @@ local tbl =
 			timerOffset = 2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "32c1dad5-7e1c-fb94-b908-479d832286a9",
+			uuid = "7ac38fa7-bf6d-2472-946c-91354f08018f",
 		},
 		
 		{
@@ -7057,7 +7059,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b2cc885b-dae6-adaa-95ac-0682b9d065ed",
+			uuid = "3a1c2ac2-7ebe-94da-81af-6a0ab566695b",
 		},
 	},
 	[78] = 
@@ -7135,7 +7137,7 @@ local tbl =
 			timerOffset = 3,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "459eab0d-1095-7a72-9f36-7953fc8e5037",
+			uuid = "c703ceba-3629-b25a-b8fe-240ed8366afb",
 		},
 		
 		{
@@ -7275,7 +7277,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "99effc33-2954-8d68-9695-60f9e6a8de74",
+			uuid = "c6261d92-6b42-7844-9fb9-c6571e40022d",
 		},
 		
 		{
@@ -7841,7 +7843,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "725b93e1-a64a-4869-9333-5543db4db902",
+			uuid = "515e97bf-c45c-f518-8af1-f00e272dac58",
 		},
 		
 		{
@@ -7919,7 +7921,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e4f93b33-0f47-a4d6-b60e-61f9c23c923b",
+			uuid = "28efb724-a122-2dd0-ab58-62f9c24c047d",
 		},
 	},
 	[88] = 
@@ -8589,7 +8591,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2a57a85e-245d-ea32-a84b-1857b73dffd3",
+			uuid = "5037f5ce-9f18-5da0-9292-0ec205401894",
 		},
 	},
 	[101] = 
@@ -8715,7 +8717,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5d519138-f241-aa7e-908c-1af777f961ce",
+			uuid = "7d50041e-dde5-14c0-bda3-7b6a50a537b1",
 		},
 		
 		{
@@ -8790,7 +8792,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8d5f84bf-0417-bf6d-84a5-39ea17b5c322",
+			uuid = "09ecaeb1-b92e-dbcd-a840-7aa92dc8334f",
 		},
 	},
 	[104] = 
@@ -8933,7 +8935,7 @@ local tbl =
 			timerOffset = -14,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a0ed8544-2d7f-63e0-bafa-b9f6886cfc02",
+			uuid = "476980c7-8d93-4bef-b30e-e05555b42916",
 		},
 	},
 	[114] = 
@@ -9056,7 +9058,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6199a5ef-53ae-f514-978a-233f0714c5af",
+			uuid = "d271a65f-caca-4e57-b370-01d9badb1e3b",
 		},
 	},
 	[120] = 
@@ -9137,7 +9139,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2fd2b078-7cbe-937f-b7cf-f4967eac320f",
+			uuid = "7a2e1e1e-ed1f-1e9c-a83f-91b93bdb88fc",
 		},
 	},
 	[125] = 
@@ -9218,7 +9220,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d887e2d6-a72f-7ecc-9207-cfa909b025aa",
+			uuid = "08d8e973-aaf2-31c7-8b63-6c1ad0277185",
 		},
 	},
 	[126] = 
@@ -9462,7 +9464,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "dceebb5e-a00d-a7f6-baa7-992086a86504",
+			uuid = "50e6e890-9a1a-776b-8a31-463e8ec257ea",
 		},
 		
 		{
@@ -9492,7 +9494,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "42d6b8e5-8b69-4a72-ae40-8e494a3ba543",
+			uuid = "44f8a2d2-b33a-62ab-ab8b-9434e1b48699",
 		},
 		
 		{
@@ -9635,7 +9637,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "f03c93e8-0b44-1907-a13b-43c15d28e787",
+			uuid = "d6065ac3-c61c-102a-b382-931ec6966c59",
 		},
 	},
 	[141] = 
@@ -9713,7 +9715,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8c6702b9-d3a5-30ef-a382-45419c0fdb61",
+			uuid = "9f62a471-1949-3d07-958d-7fa433d283b9",
 		},
 	},
 	[146] = 
@@ -9794,7 +9796,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d5efc44d-9a75-6aa6-8a55-01c9d7f00564",
+			uuid = "0bf5f0ca-5165-1ef7-8b01-f2e679dd3870",
 		},
 	},
 	[147] = 
@@ -9873,7 +9875,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "193e94de-e217-994d-ba51-b074f211f06a",
+			uuid = "1c5dd2fe-6814-9c9d-8208-2af32344ec53",
 		},
 		
 		{
@@ -9948,7 +9950,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "1ab28273-3d67-cd44-87c5-0c4d817d8a2f",
+			uuid = "94b3af28-6d77-0d15-b496-f8ee48c9d18b",
 		},
 	},
 	[149] = 
@@ -10091,7 +10093,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -10.800000190735,
 			used = false,
-			uuid = "cdc3bba0-6b94-abe6-bc40-1a7389c5c168",
+			uuid = "c8df985e-7b5c-542a-a1a7-a87c37a91b9d",
 		},
 		
 		{
@@ -10231,7 +10233,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "62ce1857-d752-60c8-be92-3bb20d3c0bf6",
+			uuid = "fc72b3e3-080d-5d60-afbf-2dad2d330d2e",
 		},
 	},
 	[153] = 
@@ -10310,7 +10312,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "937d0288-39c7-67e4-b983-11205294d7b0",
+			uuid = "afd864df-66dc-f70e-a679-d32bbf79bcc1",
 		},
 		
 		{
@@ -10385,7 +10387,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8477de69-9bc5-3b31-a9d3-0f90e78f7dca",
+			uuid = "d3cca107-f970-acaf-81d1-fce28df29cbe",
 		},
 	},
 	[157] = 
@@ -10463,7 +10465,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "75501b72-eeb5-3fca-9591-dd3cc3343331",
+			uuid = "f5504856-30d2-9a7a-80a5-743dbe3258c8",
 		},
 	},
 	[168] = 
@@ -10544,7 +10546,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6bdf2900-5d61-0db8-b49e-e03c13f17b89",
+			uuid = "35a682a5-c606-d54b-89f2-614a400e2d84",
 		},
 	},
 	[173] = 
@@ -10622,7 +10624,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "85f61156-2b85-9874-bfc2-7b2fc7ff5205",
+			uuid = "ab03d2bd-e183-e148-9924-6ee72ec8545f",
 		},
 		
 		{
@@ -10698,7 +10700,7 @@ local tbl =
 			timerOffset = 1.375,
 			timerStartOffset = -5,
 			used = false,
-			uuid = "9fd2fa17-cb4d-1b12-b6e5-26f1a3ca6a34",
+			uuid = "335edb9b-03d9-e054-8b41-8862df7c8b59",
 		},
 	},
 	[186] = 
@@ -10779,7 +10781,7 @@ local tbl =
 			timerOffset = -15.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c77ed49b-cf42-3e1c-9ec6-893161f07562",
+			uuid = "1678809f-f516-5a4b-a633-22e76ae76e1f",
 		},
 	},
 	[192] = 
@@ -10857,7 +10859,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "03021acb-1809-eada-8527-2c0a15548d6c",
+			uuid = "16cb70b3-431e-94db-b3c9-279917164152",
 		},
 		
 		{
@@ -10933,7 +10935,7 @@ local tbl =
 			timerOffset = 1.375,
 			timerStartOffset = -8,
 			used = false,
-			uuid = "35bc1074-6dbf-dade-894b-bc46a2d05a75",
+			uuid = "4057f861-6f77-6a49-bad0-6e49d7a1b307",
 		},
 	},
 	[213] = 
@@ -11011,7 +11013,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "07218f83-bb27-7f7a-a534-ddbf7222ef32",
+			uuid = "74b5ecc0-3fd0-da48-a8c2-f1a63f06b95a",
 		},
 	},
 	mapID = 887,

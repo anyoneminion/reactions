@@ -236,6 +236,36 @@ local tbl =
 		{
 			actions = 
 			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 4.5 and liquid.hp.percent >= 12 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 4.5 or liquid.hp.percent <= 10 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = true,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 19.5,
+			name = "manage consistent HP",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 19.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 3,
+			timerEndOffset = 115,
+			timerOffset = 5,
+			timerStartOffset = 5,
+			used = false,
+			uuid = "d91a8fd5-a3cd-229d-b66a-94e204d1e446",
+		},
+		
+		{
+			actions = 
+			{
 				
 				{
 					aType = 4,
@@ -353,36 +383,6 @@ local tbl =
 			timerStartOffset = -30,
 			used = false,
 			uuid = "d457daeb-ba1e-0b46-9cba-fed5ba38e9cd",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 3.5 and liquid.hp.percent >= 8 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 3.5 or liquid.hp.percent <= 5 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
-			executeType = 2,
-			lastUse = 0,
-			loop = true,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 19.5,
-			name = "manage consistent HP",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 19.5,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 3,
-			timerEndOffset = 115,
-			timerOffset = 5,
-			timerStartOffset = 5,
-			used = false,
-			uuid = "5c0dd52d-d56f-d600-9f61-1d8a8fb77f94",
 		},
 	},
 	[4] = 

@@ -633,7 +633,7 @@ local tbl =
 			{
 				
 				{
-					aType = 1,
+					aType = 2,
 					actionID = 7418,
 					actionLua = "",
 					allowInterrupt = false,
@@ -4089,7 +4089,7 @@ local tbl =
 			{
 				
 				{
-					aType = 1,
+					aType = 2,
 					actionID = 7418,
 					actionLua = "",
 					allowInterrupt = false,
@@ -6828,9 +6828,6 @@ local tbl =
 			used = false,
 			uuid = "667b523b-3ce8-9386-b7be-f6fe0bff7b06",
 		},
-	},
-	[47] = 
-	{
 		
 		{
 			actions = 
@@ -6839,7 +6836,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "data.nailphase = false\nself.used = true",
+					actionLua = "data.nailphase = nil\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -7033,14 +7030,17 @@ local tbl =
 			throttleTime = 0,
 			time = 345,
 			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 47,
-			timerEndOffset = 2,
-			timerOffset = 2,
-			timerStartOffset = -3,
+			timeRange = false,
+			timelineIndex = 46,
+			timerEndOffset = 0,
+			timerOffset = 4,
+			timerStartOffset = 4,
 			used = false,
-			uuid = "45d1c2cc-785f-4531-b464-ff68ea064c87",
+			uuid = "021695f4-0719-3a4d-a22c-e0529e30735b",
 		},
+	},
+	[47] = 
+	{
 	},
 	[50] = 
 	{
