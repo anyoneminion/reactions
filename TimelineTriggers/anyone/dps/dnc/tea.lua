@@ -426,7 +426,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 4.5 and liquid.hp.percent >= 12 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 4.5 or liquid.hp.percent <= 10 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
+			execute = "if AnyoneCore.Settings.ManageHandvsLiquidHP then\n    if data.liquidid == nil or data.handid == nil then\n            local nearby = TensorCore.entityList(\"attackable, alive, targetable\")\n            for k,v in pairs(nearby) do \n                    if v.contentid == 9212 then \n                            data.handid = v.id \n                    elseif v.contentid == 9211 then\n                            data.liquidid = v.id\n                    end\n            end\n    end\n    if data.liquidid ~= nil and data.handid ~= nil then\n        local hand = EntityList:Get(data.handid)\n        local liquid = EntityList:Get(data.liquidid)\n        local cTarget = Player:GetTarget()\n        if cTarget and cTarget.id == data.liquidid then\n                if (hand.hp.percent - liquid.hp.percent) >= 4.5 and liquid.hp.percent >= 12 then\n                        Player:SetTarget(data.handid)\n                end\n        elseif cTarget and cTarget.id == data.handid then\n                if (liquid.hp.percent - hand.hp.percent) >= 4.5 or liquid.hp.percent <= 10 then\n                        Player:SetTarget(data.liquidid)\n                end\n        end\n    end\nend\nself.used = true\nself.eventConditionMismatch = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = true,
@@ -11924,7 +11924,7 @@ local tbl =
 			timeRange = false,
 			timelineIndex = 101,
 			timerEndOffset = 0,
-			timerOffset = 0,
+			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
 			uuid = "f02ee305-9b23-c048-90fd-7ee6cf916aed",
