@@ -220,7 +220,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n    local line = eventArgs.line.line\n    time = line:match(v)\nend\n\nif time ~= nil then\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.openerDelay = math.random(0, 250)\n\t\t\t\tdata.targetDelay = math.random(100, 7500)\nend\n\nJobCheck(3)\nself.used = true",
+				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n\t\t\t\tlocal check = line:match(v)\n    if check then\n\t\t\t\t\t\ttime = check\n\t\t\t\tend\nend\n\nif time ~= nil then\n\t\t\t\td(\"starting prepull helper\")\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.openerDelay = math.random(0, 250)\n\t\t\t\tdata.targetDelay = math.random(100, 7500)\nend\n\nJobCheck(3)\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,

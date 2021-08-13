@@ -28,7 +28,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "395f07d8-70c4-78c9-bc18-1d59f61d98a1",
+		uuid = "71b66687-6f90-b858-a423-4b647aadc74f",
 	},
 	
 	{
@@ -58,7 +58,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "4370fc7d-0c58-cee3-94ff-e04197b5c9b7",
+		uuid = "ba32b83e-a7a8-80f4-b55d-e492b8095eb9",
 	},
 	
 	{
@@ -134,7 +134,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "5494a0b8-df7e-362e-a535-c319d7ee9d4d",
+		uuid = "9f383e7a-985d-22f2-9de2-e97bdd322168",
 	},
 	
 	{
@@ -164,7 +164,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "c59c2826-ea1e-359b-8b43-ed4c0cf977cd",
+		uuid = "1fe7a095-9cbd-4f3d-8533-5addd71ed638",
 	},
 	
 	{
@@ -174,7 +174,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n    local line = eventArgs.line.line\n    time = line:match(v)\nend\n\nif time ~= nil then\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.pelotonDelay = math.random(500, 8000)\n\t\t\t\tdata.reassembleDelay = math.random(1000, 2000)\n\t\t\t\tdata.targetDelay = math.random(10, 250)\n\t\t\t\tif gStartCombat == false and data.startCombat == nil then\n\t\t\t\t\t\tdata.startCombat = true\n\t\t\t\telse\n\t\t\t\t\t\tgStartCombat = false\n\t\t\t\tend\nend\n\nAnyoneCore.JobCheck()\nself.used = true",
+				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n\t\t\t\tlocal check = line:match(v)\n    if check then\n\t\t\t\t\t\ttime = check\n\t\t\t\tend\nend\n\nif time ~= nil then\n\t\t\t\td(\"starting prepull helper\")\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.pelotonDelay = math.random(500, 8000)\n\t\t\t\tdata.reassembleDelay = math.random(1000, 2000)\n\t\t\t\tdata.targetDelay = math.random(10, 250)\n\t\t\t\tif gStartCombat == false and data.startCombat == nil then\n\t\t\t\t\t\tdata.startCombat = true\n\t\t\t\telse\n\t\t\t\t\t\tgStartCombat = false\n\t\t\t\tend\nend\n\nAnyoneCore.JobCheck()\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -732,7 +732,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "if data.languages == nil then \n    data.languages = {\n        [\"English\"] = \"Battle commencing in (%d+) seconds!\\n\",\n        [\"China\"] = \"距离战斗开始还有(%d+)秒！\\n\",\n        [\"French\"] = \"Début du combat dans (%d+) secondes!\\n\",\n        [\"German\"] = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\",\n        [\"Korean\"] = \"전투 시작 (%d+)초 전!\\n\",\n        [\"Japanese\"] = \"戦闘開始(%d+)秒！\\n\",\n    }\nend\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(data.languages) do\n    local line = eventArgs.line.line\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
+				conditionLua = "if data.languages == nil then \n    data.languages = {\n        [\"English\"] = \"Battle commencing in (%d+) seconds!\\n\",\n        [\"China\"] = \"距离战斗开始还有(%d+)秒！\\n\",\n        [\"French\"] = \"Début du combat dans (%d+) secondes!\\n\",\n        [\"German\"] = \"Noch (%d+) Sekunden bis Kampfbeginn!\\n\",\n        [\"Korean\"] = \"전투 시작 (%d+)초 전!\",\n        [\"Japanese\"] = \"戦闘開始(%d+)秒！\\n\",\n    }\nend\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(data.languages) do\n    local line = eventArgs.line.line\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1678,7 +1678,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "f5b4faad-4685-1f7e-85f9-61313fe7aae8",
+		uuid = "9ed36cd7-726d-54be-8b48-e76a442fd010",
 	},
 	
 	{
@@ -1756,13 +1756,13 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "local languages = {\n    [\"English\"] = \"Countdown canceled by\",\n    [\"China\"] = \"取消了战斗开始倒计时\",\n    [\"French\"] = \"Le compte à rebours a été interrompu par\",\n    [\"German\"] = \"hat den Countdown abgebrochen.\",\n    [\"Korean\"] = \"님이 초읽기를 취소했습니다\",\n    [\"Japanese\"] = \"戦闘開始.\",\n}\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(languages) do\n    if string.contains(line, v) then\n        return true\n    end\nend\nreturn false",
+				conditionLua = "if data.cancelLanguages == nil then \n\t\t\t\tdata.cancelLanguages = {\n    \t\t\t\t[\"English\"] = \"Countdown canceled by\",\n    \t\t\t\t[\"China\"] = \"取消了战斗开始倒计时\",\n    \t\t\t\t[\"French\"] = \"Le compte à rebours a été interrompu par\",\n    \t\t\t\t[\"German\"] = \"hat den Countdown abgebrochen\",\n    \t\t\t\t[\"Korean\"] = \"님이 초읽기를 취소했습니다\",\n    \t\t\t\t[\"Japanese\"] = \"により、戦闘開始カウントがキャンセルされました\",\n\t\t\t\t}\nend\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(data.cancelLanguages) do\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
 				conditionType = 1,
 				conditions = 
 				{
 				},
 				contentid = -1,
-				dequeueIfLuaFalse = false,
+				dequeueIfLuaFalse = true,
 				enmityValue = 0,
 				eventArgOptionType = 1,
 				eventArgType = 1,
@@ -1833,7 +1833,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "6d0b5f15-d2fa-766a-b8c5-d5d5cc0155e5",
+		uuid = "513cb762-4748-8e7f-a4b5-a646f906bebf",
 	},
 	
 	{
@@ -1863,7 +1863,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "6db2bff8-49cd-9d3e-9c6a-d3c8f860135f",
+		uuid = "c248ae64-49b7-a85e-9e8f-460dd6493ad8",
 	},
 	
 	{
@@ -2227,7 +2227,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = -15,
 		used = false,
-		uuid = "7c08079e-7464-f184-8c0a-23a6e4ed56ec",
+		uuid = "82f66aa4-754b-4cf3-aedd-ca748009fb86",
 	},
 	
 	{
@@ -2559,7 +2559,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "defcafd9-8209-be78-b2ba-dc5c3bbbc3f6",
+		uuid = "fa1570f7-ab62-0ea1-bfed-9fa89a61d52c",
 	},
 	
 	{
@@ -2844,7 +2844,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "927eac45-d9af-8681-8333-db83e3d3af10",
+		uuid = "b67549a1-b3da-935c-b9a0-ad63adfc44af",
 	},
 	
 	{
@@ -4389,7 +4389,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "330a6d7c-03b2-7672-88d2-fc9206b01412",
+		uuid = "66693b32-d7f7-3c26-a3af-b5cb74c99e30",
 	},
 	
 	{
@@ -4419,7 +4419,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "b298c6d9-c238-feae-9f6d-fff4431b712f",
+		uuid = "1dbe5407-9394-252f-ba19-24983d7ed4dd",
 	},
 	
 	{
@@ -4784,7 +4784,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "9afb68b2-5f21-bb1d-9a0e-ad5c444f044f",
+		uuid = "3ed59d90-a713-6567-ab83-51fe4837e0b5",
 	},
 	
 	{
@@ -5308,7 +5308,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "8ebecf18-ed43-f115-a1ce-db095ac73059",
+		uuid = "32a6ac66-266b-9b1a-8737-4bcf69aa5ae5",
 	},
 	
 	{
@@ -5784,7 +5784,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "4908002a-c87d-6e18-89ac-2a3014fd90e1",
+		uuid = "0292fdf5-420c-5354-a0da-e13e861ea1b7",
 	},
 	
 	{
@@ -7857,7 +7857,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "d9454443-900e-6e5a-be3d-b969dc2389cc",
+		uuid = "e9acaae6-d3db-e350-ac92-b649d525f036",
 	},
 	
 	{
@@ -9930,7 +9930,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "759c08b6-0985-9a67-b10a-2113bfde2214",
+		uuid = "2742d7df-8263-6a67-9340-2d10e2254dca",
 	},
 	
 	{
@@ -12003,7 +12003,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "d81b5718-c2c9-a761-bf4e-cc82a9e8b409",
+		uuid = "9d855246-acb5-a4b0-b03a-70d09aeb48a8",
 	},
 	
 	{
@@ -12530,7 +12530,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "cfdf83f5-6e12-0240-9617-c49d262119e6",
+		uuid = "3efea300-9d7c-4490-9e2a-86a4fccdaa17",
 	},
 	
 	{
@@ -13321,7 +13321,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "7dbc4b7f-e036-5670-9155-15400c937865",
+		uuid = "31be1ca0-1895-cc6d-8f85-2ec65b92887a",
 	},
 	
 	{
@@ -13845,7 +13845,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "83e00531-a9be-d2d1-ba27-eba792ce9891",
+		uuid = "5e69ec05-3fe7-5479-b233-d36e6bce2333",
 	},
 	
 	{
@@ -13875,7 +13875,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "fc3be950-cbde-bf25-bf91-e40f0d4eb0e6",
+		uuid = "401cfab2-386d-e216-bea4-dae5223653a2",
 	},
 	
 	{
@@ -14476,7 +14476,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "4e4b08c0-e559-030c-a02c-6dc9bba36ea5",
+		uuid = "469bfaa2-abda-45d3-b9bd-537ebb79bd37",
 	},
 	
 	{
@@ -15523,7 +15523,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "308a9c38-1715-1fad-8080-8d7adc0f46a5",
+		uuid = "af1e57a5-7486-061f-bbfd-297fa16bc170",
 	},
 	
 	{
@@ -16093,7 +16093,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "bced90cc-338f-59a5-b06c-d2928778fc8b",
+		uuid = "2d467973-be13-6957-a266-f049c4a6b7c8",
 	},
 	
 	{
@@ -16123,7 +16123,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "90dbc9c7-3d08-013d-b40f-cb39d9261cd2",
+		uuid = "c7894308-ccf5-9e15-8c81-374e033d93cb",
 	},
 	
 	{
@@ -17174,7 +17174,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "bfcb3e04-bd15-29ed-855c-d1bf2bd0aae2",
+		uuid = "b494a14c-8dda-7ce5-b98f-08edd3b713f1",
 	},
 	
 	{
@@ -17204,7 +17204,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "72ef8654-a4e5-d6df-83a5-a3a67059ca35",
+		uuid = "9dda2915-c813-b84e-9ce7-87a4da32d1e1",
 	},
 	
 	{
@@ -17520,7 +17520,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "080b5fce-0284-fa9c-a01b-a8158939c03f",
+		uuid = "20163d89-e4bc-cff7-bde6-63e0d0633053",
 	},
 	
 	{
@@ -18133,7 +18133,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "3c9bd7b7-e0cd-76bf-ad24-b35cf811fb4a",
+		uuid = "8bd7fa8b-5af3-eb75-931f-355c20754dda",
 	},
 	
 	{
@@ -18744,7 +18744,7 @@ local tbl =
 		timerOffset = -10,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "f359be45-1ae4-e6cd-b801-9dbee85a2348",
+		uuid = "01f6552e-07e0-1f8d-a9bc-5151381bf11b",
 	},
 	
 	{
@@ -19519,7 +19519,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "6c465cf1-dbc9-95ec-9c97-0f85a404d6ec",
+		uuid = "75fe2172-09f0-27d1-8c8f-d597b88c0fc5",
 	},
 	
 	{
@@ -19834,7 +19834,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "b7ddf14a-aa66-4d26-b351-b36fb6b94a9e",
+		uuid = "afd4d786-b125-bd12-9dcf-bab5b288d4bb",
 	},
 	
 	{
@@ -20482,7 +20482,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "008f02ca-6676-c24f-8129-ef0fd154f5bc",
+		uuid = "e713be89-d50b-021f-8e49-835f8b73a8a9",
 	},
 	
 	{
@@ -20797,7 +20797,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "bff6b4a0-1d51-1492-b4d5-abb6f2b0ead7",
+		uuid = "a9dcd797-39b1-5495-a451-dd1acb299d6e",
 	},
 	
 	{
@@ -21414,7 +21414,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "dd398e0f-2555-d992-afcb-dba9d1c23f39",
+		uuid = "c3a51cea-36a0-8b72-a5d2-e2c74cee60d5",
 	},
 	
 	{
@@ -21729,7 +21729,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "ab6ac338-e900-96bb-a067-1e430b77c722",
+		uuid = "36ae14cc-3923-5891-8d2e-a3064ab9b9c8",
 	},
 }
 

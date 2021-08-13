@@ -754,7 +754,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n    local line = eventArgs.line.line\n    time = line:match(v)\nend\n\nif time ~= nil then\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.pelotonDelay = math.random(500, 7000)\n\t\t\t\tdata.dancestartDelay = math.random(1, 250)\nend\n\n\nAnyoneCore.JobCheck()\nself.used = true",
+				actionLua = "local line = eventArgs.line.line\nlocal time\nfor k,v in pairs(data.languages) do\n\t\t\t\tlocal check = line:match(v)\n    if check then\n\t\t\t\t\t\ttime = check\n\t\t\t\tend\nend\n\nif time ~= nil then\n\t\t\t\td(\"starting prepull helper\")\n\t\t\t\tdata.countdownTime = Now()\n\t\t\t\tdata.countdownDuration = tonumber(time)\n\t\t\t\tAnyoneCore.Data.countdownTime = Now()\n\t\t\t\tAnyoneCore.Data.countdownDuration = tonumber(time)\n\t\t\t\tdata.pelotonDelay = math.random(500, 7000)\n\t\t\t\tdata.dancestartDelay = math.random(1, 250)\nend\n\n\nAnyoneCore.JobCheck()\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -2172,13 +2172,13 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "local languages = {\n    [\"English\"] = \"Countdown canceled by\",\n    [\"China\"] = \"取消了战斗开始倒计时\",\n    [\"French\"] = \"Le compte à rebours a été interrompu par\",\n    [\"German\"] = \"hat den Countdown abgebrochen.\",\n    [\"Korean\"] = \"님이 초읽기를 취소했습니다\",\n    [\"Japanese\"] = \"戦闘開始.\",\n}\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(languages) do\n    if string.contains(line, v) then\n        return true\n    end\nend\nreturn false",
+				conditionLua = "if data.cancelLanguages == nil then \n\t\t\t\tdata.cancelLanguages = {\n    \t\t\t\t[\"English\"] = \"Countdown canceled by\",\n    \t\t\t\t[\"China\"] = \"取消了战斗开始倒计时\",\n    \t\t\t\t[\"French\"] = \"Le compte à rebours a été interrompu par\",\n    \t\t\t\t[\"German\"] = \"hat den Countdown abgebrochen\",\n    \t\t\t\t[\"Korean\"] = \"님이 초읽기를 취소했습니다\",\n    \t\t\t\t[\"Japanese\"] = \"により、戦闘開始カウントがキャンセルされました\",\n\t\t\t\t}\nend\n\nlocal line = eventArgs.line.line\nfor k,v in pairs(data.cancelLanguages) do\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
 				conditionType = 1,
 				conditions = 
 				{
 				},
 				contentid = -1,
-				dequeueIfLuaFalse = false,
+				dequeueIfLuaFalse = true,
 				enmityValue = 0,
 				eventArgOptionType = 1,
 				eventArgType = 1,
@@ -2249,7 +2249,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "9de5d71c-ad0d-a151-9273-cb00455539c7",
+		uuid = "97b0a66d-9892-d57e-a49a-c85fce3a5aa5",
 	},
 	
 	{
@@ -16963,7 +16963,7 @@ local tbl =
 				inRangeValue = 0,
 				lastSkillID = -1,
 				localmapid = -1,
-				matchAnyBuff = true,
+				matchAnyBuff = false,
 				minTargetPercent = false,
 				mpType = 1,
 				mpValue = 0,
