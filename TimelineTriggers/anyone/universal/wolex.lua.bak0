@@ -56,7 +56,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -103,7 +102,6 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -150,7 +148,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -197,7 +194,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -244,7 +240,6 @@ local tbl =
 						5,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -291,7 +286,6 @@ local tbl =
 						6,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -338,7 +332,6 @@ local tbl =
 						7,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -385,7 +378,6 @@ local tbl =
 						8,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -432,7 +424,6 @@ local tbl =
 						9,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -479,7 +470,6 @@ local tbl =
 						10,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -526,7 +516,6 @@ local tbl =
 						11,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -573,7 +562,6 @@ local tbl =
 						12,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -620,7 +608,6 @@ local tbl =
 						13,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -667,7 +654,6 @@ local tbl =
 						14,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -714,7 +700,6 @@ local tbl =
 						15,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -761,7 +746,6 @@ local tbl =
 						16,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -808,7 +792,6 @@ local tbl =
 						17,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1958,7 +1941,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2101,7 +2083,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2244,7 +2225,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2292,7 +2272,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2341,7 +2320,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2733,7 +2711,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2813,7 +2790,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2956,7 +2932,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3004,7 +2979,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3053,7 +3027,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3382,7 +3355,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3464,7 +3436,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -3514,7 +3485,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -3564,7 +3534,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -3611,7 +3580,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3657,7 +3625,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3703,7 +3670,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3749,7 +3715,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4077,7 +4042,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4123,7 +4087,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4169,7 +4132,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4215,7 +4177,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4261,7 +4222,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4307,7 +4267,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4353,7 +4312,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4399,7 +4357,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4445,7 +4402,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4491,7 +4447,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4635,7 +4590,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -4685,7 +4639,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -4735,7 +4688,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -4782,7 +4734,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4829,7 +4780,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4875,7 +4825,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4921,7 +4870,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4967,7 +4915,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5013,7 +4960,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5341,7 +5287,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5482,7 +5427,6 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5530,7 +5474,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5578,7 +5521,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5626,7 +5568,6 @@ local tbl =
 						5,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5674,7 +5615,6 @@ local tbl =
 						6,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5722,7 +5662,6 @@ local tbl =
 						7,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5770,7 +5709,6 @@ local tbl =
 						8,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5818,7 +5756,6 @@ local tbl =
 						9,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5865,7 +5802,6 @@ local tbl =
 						11,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5913,7 +5849,6 @@ local tbl =
 						10,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5961,7 +5896,6 @@ local tbl =
 						18,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6009,7 +5943,6 @@ local tbl =
 						12,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6057,7 +5990,6 @@ local tbl =
 						13,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6105,7 +6037,6 @@ local tbl =
 						14,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6153,7 +6084,6 @@ local tbl =
 						15,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6201,7 +6131,6 @@ local tbl =
 						16,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6249,7 +6178,6 @@ local tbl =
 						17,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7462,7 +7390,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7508,7 +7435,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7554,7 +7480,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7600,7 +7525,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7679,7 +7603,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7725,7 +7648,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7771,7 +7693,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7817,7 +7738,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7897,7 +7817,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7943,7 +7862,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7989,7 +7907,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8035,7 +7952,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8081,7 +7997,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8127,7 +8042,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8173,7 +8087,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8219,7 +8132,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8265,7 +8177,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8406,7 +8317,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8452,7 +8362,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8498,7 +8407,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8544,7 +8452,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8624,7 +8531,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -8765,7 +8671,6 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8813,7 +8718,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8861,7 +8765,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8909,7 +8812,6 @@ local tbl =
 						5,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -8957,7 +8859,6 @@ local tbl =
 						6,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9005,7 +8906,6 @@ local tbl =
 						7,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9053,7 +8953,6 @@ local tbl =
 						8,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9101,7 +9000,6 @@ local tbl =
 						9,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9149,7 +9047,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9197,7 +9094,6 @@ local tbl =
 						10,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9245,7 +9141,6 @@ local tbl =
 						18,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9293,7 +9188,6 @@ local tbl =
 						12,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9341,7 +9235,6 @@ local tbl =
 						13,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9389,7 +9282,6 @@ local tbl =
 						14,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9437,7 +9329,6 @@ local tbl =
 						15,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9485,7 +9376,6 @@ local tbl =
 						16,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -9533,7 +9423,6 @@ local tbl =
 						17,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -10721,7 +10610,7 @@ local tbl =
 			uuid = "79180a6a-dc3a-0c5d-b901-881c8d82c7e0",
 		},
 	},
-	[64] = 
+	[70] = 
 	{
 		
 		{
@@ -10747,7 +10636,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -10848,7 +10736,7 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
-			mechanicTime = 522.6,
+			mechanicTime = 522.7,
 			name = "check for fire",
 			randomOffset = 0,
 			randomTimeout = 3,
@@ -10856,7 +10744,7 @@ local tbl =
 			time = 522.7,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 64,
+			timelineIndex = 70,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -10864,7 +10752,7 @@ local tbl =
 			uuid = "1334a2d3-c802-6f38-a1e0-9ce1a982a88d",
 		},
 	},
-	[91] = 
+	[88] = 
 	{
 		
 		{
@@ -10890,7 +10778,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -10938,7 +10825,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -10987,7 +10873,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -11286,7 +11171,7 @@ local tbl =
 			time = 1567.9,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 91,
+			timelineIndex = 88,
 			timerEndOffset = 8,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -1.5,
@@ -11316,7 +11201,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11362,7 +11246,7 @@ local tbl =
 			time = 1567.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 91,
+			timelineIndex = 88,
 			timerEndOffset = 0,
 			timerOffset = 8,
 			timerStartOffset = 0,
@@ -11370,7 +11254,7 @@ local tbl =
 			uuid = "a443ee51-b93d-4483-97cb-99d01693c560",
 		},
 	},
-	[95] = 
+	[92] = 
 	{
 		
 		{
@@ -11396,7 +11280,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11442,7 +11325,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11488,7 +11370,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11534,7 +11415,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11580,7 +11460,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11626,7 +11505,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11672,7 +11550,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11718,7 +11595,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11764,7 +11640,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11810,7 +11685,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -11918,7 +11792,7 @@ local tbl =
 			time = 1598.1,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 95,
+			timelineIndex = 92,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -11926,7 +11800,7 @@ local tbl =
 			uuid = "f63d7b4c-e0a1-3cdb-87a5-351a2f549bbb",
 		},
 	},
-	[97] = 
+	[94] = 
 	{
 		
 		{
@@ -11952,7 +11826,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12000,7 +11873,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -12236,7 +12108,7 @@ local tbl =
 			time = 1619.6,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 97,
+			timelineIndex = 94,
 			timerEndOffset = 30,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -10,
@@ -12244,7 +12116,7 @@ local tbl =
 			uuid = "7eb3e741-8532-5c46-919d-1a09cfcc013e",
 		},
 	},
-	[104] = 
+	[101] = 
 	{
 		
 		{
@@ -12272,7 +12144,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -12322,7 +12193,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -12372,7 +12242,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -12419,7 +12288,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12466,7 +12334,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12512,7 +12379,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12558,7 +12424,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12604,7 +12469,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12650,7 +12514,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -12944,7 +12807,7 @@ local tbl =
 			time = 1651.4,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 104,
+			timelineIndex = 101,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -12952,7 +12815,7 @@ local tbl =
 			uuid = "94759e75-00d5-0337-9a7a-935b010d41b7",
 		},
 	},
-	[107] = 
+	[108] = 
 	{
 		
 		{
@@ -12978,7 +12841,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13087,7 +12949,7 @@ local tbl =
 			time = 1667,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 107,
+			timelineIndex = 108,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -13095,7 +12957,7 @@ local tbl =
 			uuid = "d01bf4d2-3545-0912-87f5-0cb846ed5678",
 		},
 	},
-	[127] = 
+	[125] = 
 	{
 		
 		{
@@ -13123,7 +12985,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -13173,7 +13034,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -13223,7 +13083,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -13270,7 +13129,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13316,7 +13174,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13362,7 +13219,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13408,7 +13264,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13702,7 +13557,7 @@ local tbl =
 			time = 2571.8,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 127,
+			timelineIndex = 125,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -13710,7 +13565,7 @@ local tbl =
 			uuid = "59968a67-0cf7-6d3b-8cc1-2c28b3cc2428",
 		},
 	},
-	[129] = 
+	[127] = 
 	{
 		
 		{
@@ -13736,7 +13591,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13782,7 +13636,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13828,7 +13681,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13874,7 +13726,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13920,7 +13771,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -13966,7 +13816,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14012,7 +13861,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14058,7 +13906,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14104,7 +13951,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14150,7 +13996,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14258,7 +14103,7 @@ local tbl =
 			time = 2589.1,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 129,
+			timelineIndex = 127,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -14266,7 +14111,7 @@ local tbl =
 			uuid = "c6d48a53-ddb4-dcfb-81a1-22f633faf5eb",
 		},
 	},
-	[131] = 
+	[129] = 
 	{
 		
 		{
@@ -14292,7 +14137,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14340,7 +14184,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -14576,7 +14419,7 @@ local tbl =
 			time = 2610.6,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 131,
+			timelineIndex = 129,
 			timerEndOffset = 30,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -10,
@@ -14584,7 +14427,7 @@ local tbl =
 			uuid = "803c4344-e9e7-9ace-b1ec-e7d4e00caeea",
 		},
 	},
-	[138] = 
+	[136] = 
 	{
 		
 		{
@@ -14612,7 +14455,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -14662,7 +14504,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -14712,7 +14553,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -14759,7 +14599,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14806,7 +14645,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14852,7 +14690,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14898,7 +14735,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14944,7 +14780,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -14990,7 +14825,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -15284,7 +15118,7 @@ local tbl =
 			time = 2642.4,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 138,
+			timelineIndex = 136,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -15292,7 +15126,7 @@ local tbl =
 			uuid = "ffd8f674-ff9f-cd87-94d8-c448dc6f1662",
 		},
 	},
-	[141] = 
+	[143] = 
 	{
 		
 		{
@@ -15318,7 +15152,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -15427,7 +15260,7 @@ local tbl =
 			time = 2658,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 141,
+			timelineIndex = 143,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -15435,7 +15268,7 @@ local tbl =
 			uuid = "b3ea350f-e0ad-f59d-a695-66086a6f9cec",
 		},
 	},
-	[154] = 
+	[153] = 
 	{
 		
 		{
@@ -15460,7 +15293,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -15506,7 +15338,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -15552,7 +15383,7 @@ local tbl =
 			time = 3554.1,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 154,
+			timelineIndex = 153,
 			timerEndOffset = 0,
 			timerOffset = -3,
 			timerStartOffset = 0,
@@ -15560,7 +15391,7 @@ local tbl =
 			uuid = "be36b72f-931d-16a6-8830-162a8edff7b7",
 		},
 	},
-	[158] = 
+	[157] = 
 	{
 		
 		{
@@ -15586,7 +15417,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -15634,7 +15464,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -15683,7 +15512,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -15982,7 +15810,7 @@ local tbl =
 			time = 3566.6,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 158,
+			timelineIndex = 157,
 			timerEndOffset = 8,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -1.5,
@@ -16012,7 +15840,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16058,7 +15885,7 @@ local tbl =
 			time = 3566.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 158,
+			timelineIndex = 157,
 			timerEndOffset = 0,
 			timerOffset = 8,
 			timerStartOffset = 0,
@@ -16066,7 +15893,7 @@ local tbl =
 			uuid = "759c8ac1-f847-6243-ab8f-eebc4eced449",
 		},
 	},
-	[159] = 
+	[158] = 
 	{
 		
 		{
@@ -16094,7 +15921,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -16144,7 +15970,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -16194,7 +16019,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -16241,7 +16065,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16288,7 +16111,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16334,7 +16156,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16380,7 +16201,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16426,7 +16246,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16472,7 +16291,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16766,7 +16584,7 @@ local tbl =
 			time = 3575.7,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 159,
+			timelineIndex = 158,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -16774,7 +16592,7 @@ local tbl =
 			uuid = "d2a45c9a-2ebf-6ada-aa23-de0bed257c56",
 		},
 	},
-	[160] = 
+	[159] = 
 	{
 		
 		{
@@ -16800,7 +16618,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16846,7 +16663,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16892,7 +16708,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16938,7 +16753,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -16984,7 +16798,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17030,7 +16843,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17076,7 +16888,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17122,7 +16933,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17168,7 +16978,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17214,7 +17023,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17322,7 +17130,7 @@ local tbl =
 			time = 3589,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 160,
+			timelineIndex = 159,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -17330,7 +17138,7 @@ local tbl =
 			uuid = "7d12fc6f-6e87-5b18-b2d8-de2c768e0150",
 		},
 	},
-	[162] = 
+	[161] = 
 	{
 		
 		{
@@ -17356,7 +17164,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17404,7 +17211,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -17640,7 +17446,7 @@ local tbl =
 			time = 3610.5,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 162,
+			timelineIndex = 161,
 			timerEndOffset = 30,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -10,
@@ -17648,7 +17454,7 @@ local tbl =
 			uuid = "720ddc22-7ab5-6963-92b5-7d11ec328b81",
 		},
 	},
-	[169] = 
+	[168] = 
 	{
 		
 		{
@@ -17676,7 +17482,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -17726,7 +17531,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -17776,7 +17580,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -17823,7 +17626,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17870,7 +17672,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17916,7 +17717,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -17962,7 +17762,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18008,7 +17807,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18054,7 +17852,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18348,7 +18145,7 @@ local tbl =
 			time = 3642.3,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 169,
+			timelineIndex = 168,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -18382,7 +18179,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18499,7 +18295,7 @@ local tbl =
 			uuid = "2e1086b7-baaa-76e5-bf83-6121dd3bffc6",
 		},
 	},
-	[181] = 
+	[180] = 
 	{
 		
 		{
@@ -18525,7 +18321,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18634,7 +18429,7 @@ local tbl =
 			time = 4522.7,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 181,
+			timelineIndex = 180,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -18642,7 +18437,7 @@ local tbl =
 			uuid = "43843726-226c-6e74-8d9c-223359d3f237",
 		},
 	},
-	[195] = 
+	[194] = 
 	{
 		
 		{
@@ -18668,7 +18463,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18716,7 +18510,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -18765,7 +18558,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -19064,7 +18856,7 @@ local tbl =
 			time = 4585.2,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 195,
+			timelineIndex = 194,
 			timerEndOffset = 8,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -1.5,
@@ -19094,7 +18886,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19140,7 +18931,7 @@ local tbl =
 			time = 4585.2,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 195,
+			timelineIndex = 194,
 			timerEndOffset = 0,
 			timerOffset = 8,
 			timerStartOffset = 0,
@@ -19148,7 +18939,7 @@ local tbl =
 			uuid = "7614897e-8cbc-3cd3-8246-4dacbb06cf99",
 		},
 	},
-	[196] = 
+	[195] = 
 	{
 		
 		{
@@ -19176,7 +18967,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -19226,7 +19016,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -19276,7 +19065,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -19323,7 +19111,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19370,7 +19157,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19416,7 +19202,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19462,7 +19247,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19508,7 +19292,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19554,7 +19337,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19848,7 +19630,7 @@ local tbl =
 			time = 4594.3,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 196,
+			timelineIndex = 195,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -19856,7 +19638,7 @@ local tbl =
 			uuid = "cc83249a-8b88-3ebc-8a68-d1e82a33e6e8",
 		},
 	},
-	[197] = 
+	[196] = 
 	{
 		
 		{
@@ -19882,7 +19664,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19928,7 +19709,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -19974,7 +19754,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20020,7 +19799,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20066,7 +19844,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20112,7 +19889,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20158,7 +19934,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20204,7 +19979,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20250,7 +20024,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20296,7 +20069,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20404,7 +20176,7 @@ local tbl =
 			time = 4607.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 197,
+			timelineIndex = 196,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -20412,7 +20184,7 @@ local tbl =
 			uuid = "725bfe84-b9f4-1ecd-bbc1-374fbefe35b9",
 		},
 	},
-	[199] = 
+	[198] = 
 	{
 		
 		{
@@ -20438,7 +20210,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20486,7 +20257,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -20722,7 +20492,7 @@ local tbl =
 			time = 4629.1,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 199,
+			timelineIndex = 198,
 			timerEndOffset = 30,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -10,
@@ -20730,7 +20500,7 @@ local tbl =
 			uuid = "44c6c147-f2e8-33e2-a178-e1183be42300",
 		},
 	},
-	[206] = 
+	[205] = 
 	{
 		
 		{
@@ -20758,7 +20528,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -20808,7 +20577,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -20858,7 +20626,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -20905,7 +20672,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20952,7 +20718,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -20998,7 +20763,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21044,7 +20808,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21090,7 +20853,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21136,7 +20898,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21430,7 +21191,7 @@ local tbl =
 			time = 4660.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 206,
+			timelineIndex = 205,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -21464,7 +21225,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21581,7 +21341,7 @@ local tbl =
 			uuid = "65e8c89b-565e-1599-907c-21e79839c678",
 		},
 	},
-	[233] = 
+	[231] = 
 	{
 		
 		{
@@ -21607,7 +21367,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21655,7 +21414,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -21704,7 +21462,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -22003,7 +21760,7 @@ local tbl =
 			time = 6050.9,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 233,
+			timelineIndex = 231,
 			timerEndOffset = 8,
 			timerOffset = -0.80000001192093,
 			timerStartOffset = -1.5,
@@ -22033,7 +21790,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22079,7 +21835,7 @@ local tbl =
 			time = 6050.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 233,
+			timelineIndex = 231,
 			timerEndOffset = 0,
 			timerOffset = 8,
 			timerStartOffset = 0,
@@ -22087,7 +21843,7 @@ local tbl =
 			uuid = "5667eb5d-a077-c886-a637-8ceaa1316648",
 		},
 	},
-	[237] = 
+	[235] = 
 	{
 		
 		{
@@ -22113,7 +21869,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22159,7 +21914,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22205,7 +21959,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22251,7 +22004,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22297,7 +22049,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22343,7 +22094,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22389,7 +22139,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22435,7 +22184,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22481,7 +22229,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22589,7 +22336,7 @@ local tbl =
 			time = 6080.9,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 237,
+			timelineIndex = 235,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -22597,7 +22344,7 @@ local tbl =
 			uuid = "9ee91966-8e85-87e0-90e0-272449dc912e",
 		},
 	},
-	[240] = 
+	[242] = 
 	{
 		
 		{
@@ -22623,7 +22370,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22732,7 +22478,7 @@ local tbl =
 			time = 6089.4,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 240,
+			timelineIndex = 242,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -22740,7 +22486,7 @@ local tbl =
 			uuid = "b45dcbcc-d4f3-4b02-99ef-c9fa44d33fe4",
 		},
 	},
-	[260] = 
+	[259] = 
 	{
 		
 		{
@@ -22768,7 +22514,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -22818,7 +22563,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -22868,7 +22612,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -22915,7 +22658,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -22961,7 +22703,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23007,7 +22748,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23053,7 +22793,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23347,7 +23086,7 @@ local tbl =
 			time = 7054.6,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 260,
+			timelineIndex = 259,
 			timerEndOffset = 0,
 			timerOffset = -5,
 			timerStartOffset = 0,
@@ -23355,7 +23094,7 @@ local tbl =
 			uuid = "af5a5b64-62f5-20aa-89a5-4e6dd2f7804a",
 		},
 	},
-	[262] = 
+	[261] = 
 	{
 		
 		{
@@ -23381,7 +23120,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23427,7 +23165,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23473,7 +23210,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23519,7 +23255,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23565,7 +23300,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23611,7 +23345,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23657,7 +23390,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23703,7 +23435,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23749,7 +23480,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23795,7 +23525,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -23903,7 +23632,7 @@ local tbl =
 			time = 7071.8,
 			timeRandomRange = false,
 			timeRange = false,
-			timelineIndex = 262,
+			timelineIndex = 261,
 			timerEndOffset = 0,
 			timerOffset = -9,
 			timerStartOffset = 0,
@@ -23937,7 +23666,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24079,7 +23807,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -24125,7 +23852,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -24205,7 +23931,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24253,7 +23978,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24302,7 +24026,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -24631,7 +24354,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24713,7 +24435,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -24763,7 +24484,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -24813,7 +24533,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -24860,7 +24579,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24907,7 +24625,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24953,7 +24670,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -24999,7 +24715,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25045,7 +24760,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25091,7 +24805,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25419,7 +25132,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25465,7 +25177,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25511,7 +25222,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25557,7 +25267,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25603,7 +25312,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25649,7 +25357,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25695,7 +25402,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25741,7 +25447,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25787,7 +25492,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25833,7 +25537,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -25949,7 +25652,7 @@ local tbl =
 			uuid = "1f225b23-4c90-8e26-b0fd-d7c209652308",
 		},
 	},
-	[287] = 
+	[291] = 
 	{
 		
 		{
@@ -25975,7 +25678,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26084,7 +25786,7 @@ local tbl =
 			time = 8080,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 287,
+			timelineIndex = 291,
 			timerEndOffset = 10,
 			timerOffset = 0,
 			timerStartOffset = -10,
@@ -26118,7 +25820,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26261,7 +25962,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26309,7 +26009,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26358,7 +26057,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -26687,7 +26385,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26769,7 +26466,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -26819,7 +26515,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -26869,7 +26564,6 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -26916,7 +26610,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -26963,7 +26656,6 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27009,7 +26701,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27055,7 +26746,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27101,7 +26791,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27147,7 +26836,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27475,7 +27163,6 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27521,7 +27208,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27567,7 +27253,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27613,7 +27298,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27659,7 +27343,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27705,7 +27388,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27751,7 +27433,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27797,7 +27478,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27843,7 +27523,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -27889,7 +27568,6 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
-					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -28006,7 +27684,7 @@ local tbl =
 		},
 	},
 	mapID = 923,
-	version = 3,
+	version = 2,
 }
 
 

@@ -58,6 +58,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -137,6 +138,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -219,6 +221,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -421,6 +424,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_ArmsLength",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -625,6 +629,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -701,6 +706,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -779,6 +785,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Sprint",
 					gVarIndex = 16,
 					gVarValue = 1,
@@ -981,6 +988,7 @@ local tbl =
 					{
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -1059,6 +1067,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1138,6 +1147,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1218,6 +1228,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1264,6 +1275,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1423,6 +1435,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1502,6 +1515,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1617,6 +1631,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1817,6 +1832,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1893,6 +1909,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1972,6 +1989,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2048,6 +2066,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2124,6 +2143,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2200,6 +2220,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2276,6 +2297,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2352,6 +2374,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2428,6 +2451,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2508,6 +2532,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2646,6 +2671,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2722,6 +2748,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2798,6 +2825,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -2876,6 +2904,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2954,6 +2983,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3092,6 +3122,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3168,6 +3199,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -3248,6 +3280,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3390,6 +3423,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3468,6 +3502,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3609,6 +3644,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3689,6 +3725,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3827,6 +3864,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3873,6 +3911,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3949,6 +3988,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4025,6 +4065,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4101,6 +4142,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4177,6 +4219,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -4253,6 +4296,7 @@ local tbl =
 					{
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = true,
@@ -4328,6 +4372,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4404,6 +4449,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4483,6 +4529,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4565,6 +4612,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -4769,6 +4817,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4910,6 +4959,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5146,6 +5196,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5287,6 +5338,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5492,6 +5544,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -5572,6 +5625,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5713,6 +5767,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5949,6 +6004,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6089,6 +6145,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6229,6 +6286,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6369,6 +6427,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6510,6 +6569,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6557,6 +6617,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6763,6 +6824,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -6963,6 +7025,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7042,6 +7105,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7121,6 +7185,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7200,6 +7265,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7279,6 +7345,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7358,6 +7425,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7437,6 +7505,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7517,6 +7586,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7657,6 +7727,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7797,6 +7868,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7936,6 +8008,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -8051,6 +8124,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,

@@ -58,6 +58,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -104,6 +105,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartDoT",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -150,6 +152,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -256,6 +259,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -302,6 +306,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -348,6 +353,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartDoT",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -394,6 +400,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -471,6 +478,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -518,6 +526,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -565,6 +574,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -612,6 +622,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -943,6 +954,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1270,6 +1282,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1316,6 +1329,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartDoT",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -1362,6 +1376,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -1469,6 +1484,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1516,6 +1532,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1563,6 +1580,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1610,6 +1628,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1934,6 +1953,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1980,6 +2000,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -2026,6 +2047,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartDoT",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -2072,6 +2094,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -2151,6 +2174,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_DoTs",
 					gVarIndex = 7,
 					gVarValue = 2,
@@ -2197,6 +2221,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 2,
@@ -2273,6 +2298,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -2349,6 +2375,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2425,6 +2452,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -2504,6 +2532,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2550,6 +2579,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -2596,6 +2626,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_DoTs",
 					gVarIndex = 7,
 					gVarValue = 1,
@@ -2642,6 +2673,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_AOE",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -2688,6 +2720,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2734,6 +2767,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2810,6 +2844,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2886,6 +2921,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -2932,6 +2968,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartDoT",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -2978,6 +3015,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_IronJaws",
 					gVarIndex = 13,
 					gVarValue = 1,
@@ -3024,6 +3062,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartAoE",
 					gVarIndex = 9,
 					gVarValue = 1,
@@ -3130,6 +3169,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3176,6 +3216,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3257,6 +3298,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3305,6 +3347,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3574,6 +3617,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3931,6 +3975,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -3977,6 +4022,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4023,6 +4069,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -4069,6 +4116,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_DoTs",
 					gVarIndex = 7,
 					gVarValue = 1,
@@ -4115,6 +4163,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_SmartJaws",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -4161,6 +4210,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_IronJaws",
 					gVarIndex = 13,
 					gVarValue = 1,
@@ -4237,6 +4287,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4313,6 +4364,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4393,6 +4445,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Sprint",
 					gVarIndex = 16,
 					gVarValue = 1,
@@ -4534,6 +4587,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_DoTs",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4738,6 +4792,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -4814,6 +4869,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -4860,6 +4916,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -4937,6 +4994,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_IronJaws",
 					gVarIndex = 7,
 					gVarValue = 1,
@@ -5079,6 +5137,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5155,6 +5214,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Songs",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -5201,6 +5261,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -5247,6 +5308,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_DoTs",
 					gVarIndex = 7,
 					gVarValue = 1,
@@ -5293,6 +5355,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5469,6 +5532,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,

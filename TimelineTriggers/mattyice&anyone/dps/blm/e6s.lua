@@ -55,6 +55,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -137,6 +138,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -340,6 +342,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -417,6 +420,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -559,6 +563,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -701,6 +706,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 9,
 					gVarValue = 2,
@@ -777,6 +783,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -853,6 +860,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -929,6 +937,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1005,6 +1014,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1084,6 +1094,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1161,6 +1172,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1300,6 +1312,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1440,6 +1453,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1580,6 +1594,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1719,6 +1734,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1795,6 +1811,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1871,6 +1888,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1953,6 +1971,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -2189,6 +2208,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2265,6 +2285,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2344,6 +2365,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2423,6 +2445,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2499,6 +2522,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2575,6 +2599,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2651,6 +2676,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2727,6 +2753,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2807,6 +2834,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2946,6 +2974,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3085,6 +3114,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -3161,6 +3191,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3237,6 +3268,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3313,6 +3345,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3389,6 +3422,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -3469,6 +3503,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3516,6 +3551,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3720,6 +3756,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3862,6 +3899,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3938,6 +3976,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4017,6 +4056,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4096,6 +4136,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -4172,6 +4213,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4248,6 +4290,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4324,6 +4367,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -4404,6 +4448,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4542,6 +4587,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -4588,6 +4634,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4665,6 +4712,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4804,6 +4852,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4880,6 +4929,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4956,6 +5006,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5033,6 +5084,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5173,6 +5225,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5312,6 +5365,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5387,6 +5441,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -5469,6 +5524,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -5705,6 +5761,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5781,6 +5838,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5860,6 +5918,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5940,6 +5999,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6078,6 +6138,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -6156,6 +6217,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6358,6 +6420,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6434,6 +6497,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -6510,6 +6574,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -6590,6 +6655,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6728,6 +6794,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -6804,6 +6871,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -6880,6 +6948,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -6959,6 +7028,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7038,6 +7108,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -7120,6 +7191,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -7324,6 +7396,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7463,6 +7536,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,

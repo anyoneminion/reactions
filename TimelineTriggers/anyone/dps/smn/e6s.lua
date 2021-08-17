@@ -61,6 +61,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -263,6 +264,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Sprint",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -469,6 +471,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Surecast",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -611,6 +614,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -753,6 +757,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_DoTs",
 					gVarIndex = 9,
 					gVarValue = 2,
@@ -829,6 +834,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -905,6 +911,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -981,6 +988,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1060,6 +1068,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1106,6 +1115,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -1152,6 +1162,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_DoTs",
 					gVarIndex = 9,
 					gVarValue = 1,
@@ -1229,6 +1240,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1367,6 +1379,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Aetherpact",
 					gVarIndex = 7,
 					gVarValue = 2,
@@ -1449,6 +1462,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1687,6 +1701,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Sprint",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -1892,6 +1907,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_SmartAOE",
 					gVarIndex = 13,
 					gVarValue = 2,
@@ -1938,6 +1954,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_SmartAOE",
 					gVarIndex = 14,
 					gVarValue = 2,
@@ -2014,6 +2031,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -2090,6 +2108,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -2166,6 +2185,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Deathflare",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -2305,6 +2325,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Potion",
 					gVarIndex = 16,
 					gVarValue = 2,
@@ -2385,6 +2406,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2523,6 +2545,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -2569,6 +2592,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -2615,6 +2639,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Aetherpact",
 					gVarIndex = 7,
 					gVarValue = 1,
@@ -2695,6 +2720,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2742,6 +2768,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2942,6 +2969,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_AOE",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -2988,6 +3016,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_SmartBane",
 					gVarIndex = 15,
 					gVarValue = 2,
@@ -3034,6 +3063,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_SmartDoT",
 					gVarIndex = 14,
 					gVarValue = 2,
@@ -3114,6 +3144,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3258,6 +3289,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Sprint",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -3463,6 +3495,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -3539,6 +3572,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -3615,6 +3649,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_DoTs",
 					gVarIndex = 9,
 					gVarValue = 2,
@@ -3691,6 +3726,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -3767,6 +3803,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3847,6 +3884,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3985,6 +4023,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -4031,6 +4070,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -4077,6 +4117,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4123,6 +4164,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_DoTs",
 					gVarIndex = 9,
 					gVarValue = 1,
@@ -4169,6 +4211,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_SmartDoT",
 					gVarIndex = 14,
 					gVarValue = 1,
@@ -4216,6 +4259,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Potion",
 					gVarIndex = 16,
 					gVarValue = 1,
@@ -4360,6 +4404,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Sprint",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -4568,6 +4613,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -4805,6 +4851,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Surecast",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4943,6 +4990,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -4989,6 +5037,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 2,
@@ -5069,6 +5118,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5207,6 +5257,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_PetCD",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -5253,6 +5304,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Demi",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -5334,6 +5386,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_BurnR4",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -5382,6 +5435,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_HardDoTs",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -5588,6 +5642,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Addle",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -5793,6 +5848,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Sprint",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -5999,6 +6055,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6138,6 +6195,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRuin_Hotbar_Surecast",
 					gVarIndex = 1,
 					gVarValue = 1,

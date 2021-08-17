@@ -58,6 +58,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -104,6 +105,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -180,6 +182,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -257,6 +260,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -426,6 +430,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -473,6 +478,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -520,6 +526,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -567,6 +574,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -893,6 +901,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -941,6 +950,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -989,6 +999,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1037,6 +1048,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1424,6 +1436,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1470,6 +1483,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1516,6 +1530,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1562,6 +1577,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 1,
@@ -1608,6 +1624,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -1654,6 +1671,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -1700,6 +1718,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -1783,6 +1802,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -2110,6 +2130,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -2156,6 +2177,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -2232,6 +2254,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -2339,6 +2362,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2386,6 +2410,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2433,6 +2458,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2480,6 +2506,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2806,6 +2833,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2854,6 +2882,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2902,6 +2931,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2950,6 +2980,7 @@ local tbl =
 						5,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3337,6 +3368,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3383,6 +3415,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 1,
@@ -3429,6 +3462,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -3475,6 +3509,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -3554,6 +3589,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -3630,6 +3666,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -3676,6 +3713,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -3752,6 +3790,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 2,
@@ -3829,6 +3868,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 2,
@@ -3876,6 +3916,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 2,
@@ -4015,6 +4056,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -4061,6 +4103,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -4137,6 +4180,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4216,6 +4260,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -4262,6 +4307,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4308,6 +4354,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -4354,6 +4401,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 1,
@@ -4430,6 +4478,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4507,6 +4556,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4646,6 +4696,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4693,6 +4744,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4926,6 +4978,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -4972,6 +5025,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -5048,6 +5102,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -5125,6 +5180,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5263,6 +5319,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5309,6 +5366,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -5355,6 +5413,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 1,
@@ -5401,6 +5460,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -5447,6 +5507,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -5493,6 +5554,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -5569,6 +5631,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5650,6 +5713,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5698,6 +5762,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5962,6 +6027,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -6164,6 +6230,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -6371,6 +6438,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -6698,6 +6766,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -6744,6 +6813,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6790,6 +6860,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -6836,6 +6907,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -6882,6 +6954,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -6958,6 +7031,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7035,6 +7109,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7174,6 +7249,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7221,6 +7297,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7421,6 +7498,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -7501,6 +7579,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Sprint_Safe",
 					gVarIndex = 20,
 					gVarValue = 1,
@@ -7706,6 +7785,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -7782,6 +7862,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 2,
@@ -7858,6 +7939,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -7904,6 +7986,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -7981,6 +8064,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 2,
@@ -8028,6 +8112,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 2,
@@ -8167,6 +8252,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -8213,6 +8299,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -8325,6 +8412,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -8371,6 +8459,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -8417,6 +8506,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Reassemble",
 					gVarIndex = 4,
 					gVarValue = 1,
@@ -8463,6 +8553,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_AirAnchor",
 					gVarIndex = 10,
 					gVarValue = 1,
@@ -8509,6 +8600,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Drill",
 					gVarIndex = 8,
 					gVarValue = 1,
@@ -8585,6 +8677,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -8662,6 +8755,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -8801,6 +8895,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -8848,6 +8943,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -9048,6 +9144,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -9257,6 +9354,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician_Safe",
 					gVarIndex = 12,
 					gVarValue = 1,

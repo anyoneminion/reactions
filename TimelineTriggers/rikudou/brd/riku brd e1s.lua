@@ -29,6 +29,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -356,6 +357,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -402,6 +404,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -448,6 +451,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 2,
@@ -530,6 +534,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -576,6 +581,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -622,6 +628,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -705,6 +712,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1033,6 +1041,7 @@ local tbl =
 					},
 					detectionTargetNumber = 1,
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -1080,6 +1089,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 2,
@@ -1162,6 +1172,7 @@ local tbl =
 					},
 					detectionTargetNumber = 1,
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1209,6 +1220,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -1294,6 +1306,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1622,6 +1635,7 @@ local tbl =
 					},
 					detectionTargetNumber = 1,
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 2,
@@ -1669,6 +1683,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 2,
@@ -1751,6 +1766,7 @@ local tbl =
 					},
 					detectionTargetNumber = 1,
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_BattleVoice",
 					gVarIndex = 6,
 					gVarValue = 1,
@@ -1798,6 +1814,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Potion",
 					gVarIndex = 12,
 					gVarValue = 1,
@@ -1883,6 +1900,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorRequiem_Hotbar_Troubadour",
 					gVarIndex = 1,
 					gVarValue = 1,

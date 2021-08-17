@@ -56,6 +56,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "ACR_TensorWeeb_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -198,6 +199,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Potion",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -279,6 +281,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -482,6 +485,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -528,6 +532,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -604,6 +609,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -682,6 +688,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -728,6 +735,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -805,6 +813,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -944,6 +953,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Potion",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -1019,6 +1029,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1098,6 +1109,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1236,6 +1248,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Surecast",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1314,6 +1327,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -1392,6 +1406,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1471,6 +1486,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1615,6 +1631,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1818,6 +1835,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1864,6 +1882,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1940,6 +1959,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -2018,6 +2038,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2096,6 +2117,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2142,6 +2164,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2221,6 +2244,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -2299,6 +2323,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -2344,6 +2369,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -2423,6 +2449,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2469,6 +2496,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2515,6 +2543,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2783,6 +2812,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2921,6 +2951,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2966,6 +2997,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3044,6 +3076,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3122,6 +3155,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3168,6 +3202,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3244,6 +3279,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3319,6 +3355,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3397,6 +3434,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3478,6 +3516,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -3681,6 +3720,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Potion",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3758,6 +3798,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3996,6 +4037,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4042,6 +4084,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4118,6 +4161,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4193,6 +4237,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4271,6 +4316,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4317,6 +4363,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4393,6 +4440,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Potion",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4468,6 +4516,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4546,6 +4595,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4624,6 +4674,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4670,6 +4721,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4749,6 +4801,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4794,6 +4847,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4873,6 +4927,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4919,6 +4974,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4965,6 +5021,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5233,6 +5290,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5371,6 +5429,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5416,6 +5475,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5494,6 +5554,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5540,6 +5601,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5616,6 +5678,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -5694,6 +5757,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5740,6 +5804,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5817,6 +5882,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -5956,6 +6022,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6035,6 +6102,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6173,6 +6241,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Surecast",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6254,6 +6323,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -6457,6 +6527,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6503,6 +6574,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6579,6 +6651,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6654,6 +6727,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -6732,6 +6806,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6778,6 +6853,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -6854,6 +6930,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6929,6 +7006,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -7010,6 +7088,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 3,
 					gVarValue = 1,

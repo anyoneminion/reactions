@@ -55,6 +55,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_FastEmbolden",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -133,6 +134,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_FastEmbolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -211,6 +213,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Addle",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -289,6 +292,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuDNC_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -334,6 +338,7 @@ local tbl =
 					{
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Surecast",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -409,6 +414,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -454,6 +460,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -529,6 +536,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -574,6 +582,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -652,6 +661,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -730,6 +740,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -805,6 +816,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -850,6 +862,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -925,6 +938,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -970,6 +984,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1045,6 +1060,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1121,6 +1137,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1167,6 +1184,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1375,6 +1393,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1514,6 +1533,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1658,6 +1678,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1706,6 +1727,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1754,6 +1776,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -1799,6 +1822,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Addle",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2065,6 +2089,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2112,6 +2137,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2159,6 +2185,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2206,6 +2233,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2679,6 +2707,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2725,6 +2754,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -2933,6 +2963,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3072,6 +3103,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3213,6 +3245,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3291,6 +3324,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3369,6 +3403,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3445,6 +3480,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3583,6 +3619,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3661,6 +3698,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3736,6 +3774,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3811,6 +3850,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -3886,6 +3926,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -3967,6 +4008,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4015,6 +4057,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4063,6 +4106,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4108,6 +4152,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Addle",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4372,6 +4417,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuDNC_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4417,6 +4463,7 @@ local tbl =
 					{
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Surecast",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4492,6 +4539,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4537,6 +4585,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4612,6 +4661,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4657,6 +4707,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4735,6 +4786,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4780,6 +4832,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -4855,6 +4908,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4930,6 +4984,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpIn",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -4975,6 +5030,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_JumpOut",
 					gVarValue = 2,
 					ignoreWeaveRules = false,
@@ -5051,6 +5107,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5097,6 +5154,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5305,6 +5363,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5444,6 +5503,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5585,6 +5645,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Embolden",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5663,6 +5724,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5739,6 +5801,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5883,6 +5946,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5931,6 +5995,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -5979,6 +6044,7 @@ local tbl =
 						3,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6024,6 +6090,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_RikuRDM_Hotbar_Addle",
 					gVarValue = 1,
 					ignoreWeaveRules = false,
@@ -6287,6 +6354,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarValue = 1,
 					ignoreWeaveRules = false,

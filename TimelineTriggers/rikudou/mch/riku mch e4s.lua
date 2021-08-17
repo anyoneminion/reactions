@@ -29,6 +29,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -357,6 +358,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_ArmsLength",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -502,6 +504,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -832,6 +835,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -878,6 +882,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -924,6 +929,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -970,6 +976,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 2,
@@ -1056,6 +1063,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1386,6 +1394,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -1432,6 +1441,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -1478,6 +1488,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -1524,6 +1535,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 2,
@@ -1603,6 +1615,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1649,6 +1662,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -1695,6 +1709,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -1741,6 +1756,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -1817,6 +1833,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -1894,6 +1911,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2033,6 +2051,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2080,6 +2099,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2284,6 +2304,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_ArmsLength",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -2428,6 +2449,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -2474,6 +2496,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 2,
@@ -2555,6 +2578,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -2601,6 +2625,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -2686,6 +2711,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3014,6 +3040,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_ArmsLength",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -3155,6 +3182,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 2,
@@ -3201,6 +3229,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 2,
@@ -3247,6 +3276,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 2,
@@ -3293,6 +3323,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 2,
@@ -3372,6 +3403,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_CD",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3418,6 +3450,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hypercharge",
 					gVarIndex = 3,
 					gVarValue = 1,
@@ -3464,6 +3497,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_SummonQueen",
 					gVarIndex = 5,
 					gVarValue = 1,
@@ -3510,6 +3544,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Potion",
 					gVarIndex = 11,
 					gVarValue = 1,
@@ -3586,6 +3621,7 @@ local tbl =
 					{
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3663,6 +3699,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3802,6 +3839,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -3849,6 +3887,7 @@ local tbl =
 						2,
 					},
 					endIfUsed = true,
+					fallthrough = false,
 					gVar = "",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4053,6 +4092,7 @@ local tbl =
 						1,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_ArmsLength",
 					gVarIndex = 2,
 					gVarValue = 1,
@@ -4201,6 +4241,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
@@ -4538,6 +4579,7 @@ local tbl =
 						4,
 					},
 					endIfUsed = false,
+					fallthrough = false,
 					gVar = "ACR_TensorMagnum_Hotbar_Tactician",
 					gVarIndex = 1,
 					gVarValue = 1,
