@@ -41,7 +41,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if gACRSelectedProfiles[Player.job] == \"RikuDNC\" and ACR_RikuDNC_Potion == true then\n\t\tAnyoneCore.Data.PotsEnabled = true\n\t\tAnyoneCore.Data.PotsEnabled = true\nelseif gACRSelectedProfiles[Player.job] == \"RikuDNC\" and ACR_RikuDNC_Potion == false then\n\t\tAnyoneCore.Data.PotsEnabled = false\nend\n\nif gACRSelectedProfiles[Player.job] == \"SallyDNC\" and SallyDNC.SkillSettings.Potion.enabled == true then\n\t\tAnyoneCore.Data.PotsEnabled = true\n\t\tAnyoneCore.Data.PotsEnabled = true\nelseif gACRSelectedProfiles[Player.job] == \"SallyDNC\" and SallyDNC.SkillSettings.Potion.enabled == false then\n\t\tAnyoneCore.Data.PotsEnabled = false\nend\n\nself.used = true",
+			execute = "if gACRSelectedProfiles[Player.job] == \"TensorRequiem\" and ACR_TensorRequiem_Potion == true then\n\t\tAnyoneCore.Data.PotsEnabled = true\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
