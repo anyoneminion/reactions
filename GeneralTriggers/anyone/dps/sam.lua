@@ -38,7 +38,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_TensorWeeb_Hotbar_ArmsLength = false\nACR_TensorWeeb_Hotbar_SecondWind = false\nACR_TensorWeeb_Hotbar_Gyoten = false\nACR_TensorWeeb_Hotbar_Yaten = false\nACR_TensorWeeb_Hotbar_ThirdEye = false\nACR_TensorWeeb_Hotbar_Feint = false\nACR_TensorWeeb_Hotbar_Potion = false\nACR_TensorWeeb_Hotbar_Sprint = false\nACR_TensorWeeb_Hotbar_LegSweep = false\nACR_TensorWeeb_Hotbar_Bloodbath = false\nACR_TensorWeeb_Hotbar_LimitBreak = false\nACR_TensorWeeb_Hotbar_LockFace = false\n\nACR_TensorWeeb_CD = true\nACR_TensorWeeb_AOE = false\nACR_TensorWeeb_SmartAOE = false\nACR_TensorWeeb_DoTs = true \nACR_TensorWeeb_BurnKenki = false\nACR_TensorWeeb_HoldKenki = false\nACR_TensorWeeb_HoldSen = false\nACR_TensorWeeb_ThirdEye = true\nACR_TensorWeeb_Fillers = true\nACR_TensorWeeb_TrueNorth = true\nACR_TensorWeeb_MeikyoShisui = true\nACR_TensorWeeb_Senei = true\nACR_TensorWeeb_Jumps = true \nACR_TensorWeeb_Omni = false\n\nPlayer:ClearTarget()\n\nAnyoneCore.JobCheck()\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tAnyoneCore.Data.PotsEnabled = nil\n\t\tACR_TensorWeeb_Potion = true\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_TensorWeeb_Potion = false\nend\nself.used = true\n\n",
+				actionLua = "ACR_TensorWeeb_Hotbar_ArmsLength = false\nACR_TensorWeeb_Hotbar_SecondWind = false\nACR_TensorWeeb_Hotbar_Gyoten = false\nACR_TensorWeeb_Hotbar_Yaten = false\nACR_TensorWeeb_Hotbar_ThirdEye = false\nACR_TensorWeeb_Hotbar_Feint = false\nACR_TensorWeeb_Hotbar_Potion = false\nACR_TensorWeeb_Hotbar_Sprint = false\nACR_TensorWeeb_Hotbar_LegSweep = false\nACR_TensorWeeb_Hotbar_Bloodbath = false\nACR_TensorWeeb_Hotbar_LimitBreak = false\nACR_TensorWeeb_Hotbar_LockFace = false\n\nACR_TensorWeeb_CD = true\nACR_TensorWeeb_AOE = false\nACR_TensorWeeb_SmartAOE = false\nACR_TensorWeeb_DoTs = true \nACR_TensorWeeb_BurnKenki = false\nACR_TensorWeeb_HoldKenki = false\nACR_TensorWeeb_HoldSen = false\nACR_TensorWeeb_ThirdEye = true\nACR_TensorWeeb_Fillers = true\nACR_TensorWeeb_TrueNorth = true\nACR_TensorWeeb_MeikyoShisui = true\nACR_TensorWeeb_Senei = true\nACR_TensorWeeb_Jumps = true \nACR_TensorWeeb_Omni = false\n\nPlayer:ClearTarget()\n\nAnyoneCore.JobCheck()\n\nTensorDrift_SlidecastForceHold = false\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tAnyoneCore.Data.PotsEnabled = nil\n\t\tACR_TensorWeeb_Potion = true\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_TensorWeeb_Potion = false\nend\nself.used = true\n\n",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -14348,7 +14348,6 @@ local tbl =
 			},
 		},
 		enabled = true,
-		eventConditionMismatch = true,
 		eventType = 12,
 		execute = "",
 		executeType = 1,

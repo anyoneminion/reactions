@@ -776,7 +776,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -843,7 +843,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "df9d0f37-f9c3-8423-a37b-9318313061c0",
+			uuid = "be70335d-d228-3e31-b178-34532f4a429d",
 		},
 		
 		{
@@ -853,7 +853,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -920,7 +920,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "49fd781c-2e82-40a0-b4a9-9421ff9fc1aa",
+			uuid = "4f5f5583-4d3c-9e03-bfbe-0687feebcec1",
 		},
 	},
 	[10] = 
@@ -1625,7 +1625,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1692,7 +1692,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c905cfbc-9add-364a-b769-47e44c83ea4b",
+			uuid = "43792357-cdc6-53b5-bdc6-254f7c60dc02",
 		},
 		
 		{
@@ -1702,7 +1702,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1769,7 +1769,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2077a8cf-e681-3e91-9eac-da8bb69200bc",
+			uuid = "3f43e13e-55a0-9e6e-82df-f135c91b9c24",
 		},
 	},
 	[16] = 
@@ -1935,7 +1935,6 @@ local tbl =
 					clusterRange = 30,
 					conditions = 
 					{
-						1,
 					},
 					endIfUsed = false,
 					fallthrough = false,
@@ -1968,69 +1967,6 @@ local tbl =
 			},
 			conditions = 
 			{
-				
-				{
-					actionCDValue = 0,
-					actionID = -1,
-					buffCheckType = 1,
-					buffDuration = 0,
-					buffID = -1,
-					buffIDList = 
-					{
-					},
-					category = 4,
-					channelCheckSpellID = -1,
-					channelCheckSpellIDList = 
-					{
-					},
-					channelCheckTimeRemain = 0,
-					channelCheckType = 1,
-					clusterMinPercent = false,
-					clusterMinTarget = 1,
-					clusterOriginalTarget = false,
-					clusterRadius = 8,
-					clusterRange = 30,
-					comparator = 1,
-					conditionLua = "return not AnyoneCore.Settings.MNKCDIfrit",
-					conditionType = 1,
-					conditions = 
-					{
-					},
-					contentid = -1,
-					dequeueIfLuaFalse = false,
-					enmityValue = 0,
-					filterTargetSubtype = "Nearest",
-					filterTargetType = "Self",
-					gaugeIndex = 1,
-					gaugeValue = 0,
-					hpType = 1,
-					hpValue = 0,
-					inCombatType = 1,
-					inRangeValue = 0,
-					lastSkillID = -1,
-					localmapid = -1,
-					matchAnyBuff = false,
-					minTargetPercent = false,
-					mpType = 1,
-					mpValue = 0,
-					name = "",
-					partyHpType = 1,
-					partyHpValue = 0,
-					partyMpType = 1,
-					partyMpValue = 0,
-					partyTargetContentID = -1,
-					partyTargetName = "",
-					partyTargetNumber = 1,
-					partyTargetSubType = "Nearest",
-					partyTargetType = "All",
-					rangeCheckSourceSubType = "Nearest",
-					rangeCheckSourceType = "Self",
-					rangeSourceContentID = -1,
-					rangeSourceName = "",
-					setEventTargetSubtype = 1,
-					setFirstMatch = false,
-					targetName = "",
-				},
 			},
 			enabled = true,
 			execute = "",
@@ -2380,7 +2316,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2447,7 +2383,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "52b0e7b1-4f0c-47c1-a659-bf4c3cd98bc2",
+			uuid = "df92fd47-fab4-a575-8c3c-43247b28da72",
 		},
 		
 		{
@@ -2457,7 +2393,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2524,7 +2460,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8ca0bb82-3142-e039-aa5d-987d067a2865",
+			uuid = "20b9ac05-0cbe-3a30-8104-0a31367b32ad",
 		},
 	},
 	[22] = 
@@ -2537,7 +2473,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2604,7 +2540,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a31125be-5da1-52ab-b2e0-c3419ebbe084",
+			uuid = "88c48af6-37a7-bd95-9ad1-51a2fccd4f74",
 		},
 		
 		{
@@ -2614,7 +2550,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2681,7 +2617,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e40d5cff-906f-9a8d-b623-8c9e84e41382",
+			uuid = "353a64ed-7099-af30-a1ac-fc9516fd5bec",
 		},
 	},
 	[26] = 
@@ -3045,7 +2981,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3112,7 +3048,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a7c3b09e-ef62-f69d-b9ef-1cd291191b94",
+			uuid = "2ed0eaa6-116b-3720-b4bc-1ef20c31156d",
 		},
 		
 		{
@@ -3122,7 +3058,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3189,7 +3125,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "025694ff-4932-de23-9367-a75ebd96a4e8",
+			uuid = "ecd91c95-12dd-7fb1-95c5-921dd5182bfd",
 		},
 	},
 	[30] = 
@@ -3216,6 +3152,7 @@ local tbl =
 					conditions = 
 					{
 						1,
+						2,
 					},
 					endIfUsed = false,
 					fallthrough = false,
@@ -3285,6 +3222,69 @@ local tbl =
 					gaugeValue = 0,
 					hpType = 1,
 					hpValue = 20,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 1,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 2,
+					conditions = 
+					{
+					},
+					contentid = 1644,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
 					inCombatType = 1,
 					inRangeValue = 0,
 					lastSkillID = -1,
@@ -3685,82 +3685,6 @@ local tbl =
 	},
 	[36] = 
 	{
-		
-		{
-			actions = 
-			{
-				
-				{
-					aType = 1,
-					actionID = 4262,
-					actionLua = "",
-					allowInterrupt = false,
-					atomicPriority = false,
-					castAtMouse = false,
-					castPosX = 0,
-					castPosY = 0,
-					castPosZ = 0,
-					clusterMinPercent = false,
-					clusterMinTarget = 1,
-					clusterRadius = 8,
-					clusterRange = 30,
-					conditions = 
-					{
-					},
-					endIfUsed = false,
-					fallthrough = false,
-					gVar = "",
-					gVarValue = 1,
-					ignoreWeaveRules = true,
-					isAreaTarget = false,
-					luaNeedsWeaveWindow = false,
-					luaReturnsAction = false,
-					name = "",
-					potType = 1,
-					setTarget = false,
-					showPositionPreview = false,
-					stopCasting = false,
-					stopMoving = false,
-					targetContentID = -1,
-					targetName = "",
-					targetSubType = "Nearest",
-					targetType = "Self",
-					untarget = false,
-					useForWeaving = false,
-					useItem = false,
-					useItemID = 0,
-					useItemName = "",
-					usePot = false,
-					used = false,
-					variableIsHover = false,
-					variableTogglesType = 1,
-				},
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "",
-			executeType = 1,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 300,
-			name = "form shift",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 300,
-			timeRandomRange = false,
-			timeRange = false,
-			timelineIndex = 36,
-			timerEndOffset = 0,
-			timerOffset = 0,
-			timerStartOffset = 0,
-			used = false,
-			uuid = "6570a1bb-d83f-67e5-bcfa-d5a8fe664b85",
-		},
 	},
 	[37] = 
 	{
@@ -4217,53 +4141,6 @@ local tbl =
 		{
 			actions = 
 			{
-				
-				{
-					aType = 3,
-					actionID = -1,
-					actionLua = "",
-					allowInterrupt = false,
-					atomicPriority = false,
-					castAtMouse = false,
-					castPosX = 0,
-					castPosY = 0,
-					castPosZ = 0,
-					clusterMinPercent = false,
-					clusterMinTarget = 1,
-					clusterRadius = 8,
-					clusterRange = 30,
-					conditions = 
-					{
-						1,
-					},
-					endIfUsed = false,
-					fallthrough = false,
-					gVar = "ACR_TensorMagnum_CD",
-					gVarValue = 1,
-					ignoreWeaveRules = true,
-					isAreaTarget = false,
-					luaNeedsWeaveWindow = false,
-					luaReturnsAction = false,
-					name = "Use Pot",
-					potType = 4,
-					setTarget = false,
-					showPositionPreview = false,
-					stopCasting = false,
-					stopMoving = false,
-					targetContentID = -1,
-					targetName = "",
-					targetSubType = "Nearest",
-					targetType = "Self",
-					untarget = false,
-					useForWeaving = false,
-					useItem = false,
-					useItemID = 0,
-					useItemName = "",
-					usePot = true,
-					used = false,
-					variableIsHover = false,
-					variableTogglesType = 1,
-				},
 				
 				{
 					aType = 4,
@@ -5527,7 +5404,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 328,
+			time = 327.89544358654,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 43,
@@ -6548,52 +6425,6 @@ local tbl =
 		{
 			actions = 
 			{
-				
-				{
-					aType = 1,
-					actionID = 65,
-					actionLua = "",
-					allowInterrupt = false,
-					atomicPriority = false,
-					castAtMouse = false,
-					castPosX = 0,
-					castPosY = 0,
-					castPosZ = 0,
-					clusterMinPercent = false,
-					clusterMinTarget = 1,
-					clusterRadius = 8,
-					clusterRange = 30,
-					conditions = 
-					{
-					},
-					endIfUsed = false,
-					fallthrough = false,
-					gVar = "",
-					gVarValue = 1,
-					ignoreWeaveRules = false,
-					isAreaTarget = false,
-					luaNeedsWeaveWindow = false,
-					luaReturnsAction = false,
-					name = "",
-					potType = 1,
-					setTarget = false,
-					showPositionPreview = false,
-					stopCasting = false,
-					stopMoving = false,
-					targetContentID = -1,
-					targetName = "",
-					targetSubType = "Nearest",
-					targetType = "Self",
-					untarget = false,
-					useForWeaving = false,
-					useItem = false,
-					useItemID = 0,
-					useItemName = "",
-					usePot = false,
-					used = false,
-					variableIsHover = false,
-					variableTogglesType = 1,
-				},
 			},
 			conditions = 
 			{
@@ -6610,7 +6441,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 405,
+			time = 403.96285897397,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 61,
@@ -6866,7 +6697,7 @@ local tbl =
 			randomOffset = 2,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 417.74327829829,
+			time = 417.73955504013,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 65,
@@ -8304,7 +8135,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -8371,7 +8202,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9d58798f-7fb1-bd85-b5bb-94549d4a0a30",
+			uuid = "6df7461a-bf77-bb9b-9c52-e5d718d6d52d",
 		},
 	},
 	[79] = 
@@ -8463,7 +8294,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -8530,7 +8361,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "12f881fb-7f9d-bd16-b5c7-83a433211c61",
+			uuid = "907717c7-6f4c-9847-b3dd-1da83dba413e",
 		},
 		
 		{
@@ -8540,7 +8371,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -8607,7 +8438,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "fb453265-2e7d-369e-a18e-347635aa46be",
+			uuid = "7e890302-4a05-5241-b91c-41d6229e2889",
 		},
 	},
 	[82] = 
@@ -9349,7 +9180,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9416,7 +9247,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2aa6ed52-4301-9f82-8687-1917d2b6cca4",
+			uuid = "577a57ef-28b6-fb21-8303-2a5a3ef6624b",
 		},
 	},
 	[88] = 
@@ -9429,7 +9260,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9496,7 +9327,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "65cd0784-c797-0ea5-8414-82fff9431f84",
+			uuid = "81f4bbec-f780-8bbb-b121-ea7a9801c997",
 		},
 		
 		{
@@ -9506,7 +9337,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9573,7 +9404,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2521be02-062e-3308-b620-bfed821185fa",
+			uuid = "6cf770ff-e747-f4a2-ad6f-cac9d6d6cc8e",
 		},
 	},
 	[89] = 
@@ -9644,7 +9475,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 651,
+			time = 648.18402661214,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 89,
@@ -9665,7 +9496,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9732,7 +9563,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2ffbf6bc-95b4-defb-86db-a446310e6a64",
+			uuid = "d56ae800-d8e7-017b-a2ad-5675f87ee8f6",
 		},
 	},
 	[91] = 
@@ -9745,7 +9576,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9812,7 +9643,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5d0cdacb-c2a7-a50d-a271-7f6a7d901bcf",
+			uuid = "582fa86e-1d37-6c9d-9aaa-8454369c35cf",
 		},
 	},
 	[92] = 
@@ -9825,7 +9656,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -9892,7 +9723,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "13e69349-c134-4e3d-8c42-ab7ae784556a",
+			uuid = "0932b49b-6ac8-7518-b9e0-321124a7406d",
 		},
 	},
 	[93] = 
@@ -9982,7 +9813,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -10049,7 +9880,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bed7ee10-c66d-2b2b-93ec-6faf43e070ea",
+			uuid = "aaf79390-b9d4-9af8-88a7-4e55607615f8",
 		},
 		
 		{
@@ -10059,7 +9890,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -10126,7 +9957,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0ccd187e-ee63-238e-b200-5fa07e1ea67a",
+			uuid = "64a10260-4c5d-11c3-8f50-3ae837543b9f",
 		},
 	},
 	[94] = 
@@ -10875,7 +10706,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -10942,7 +10773,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "dce69281-d567-85fb-96a7-1a304d540a04",
+			uuid = "bca214a6-1e3d-5604-b942-62a240fea7ed",
 		},
 	},
 	[97] = 
@@ -10955,7 +10786,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11022,7 +10853,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7a453c16-cc95-6b48-bf12-8f489f8ac585",
+			uuid = "d17913e9-4758-4706-8155-f2e65f677121",
 		},
 		
 		{
@@ -11032,7 +10863,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11099,7 +10930,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5c53d2bf-9f0a-8c22-b44e-1d72de824536",
+			uuid = "0895c3a2-1c09-88de-8995-fd3f75485fae",
 		},
 	},
 	[100] = 
@@ -11396,7 +11227,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11463,7 +11294,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5e966f5e-523c-a264-93bf-619ae35638d8",
+			uuid = "3dd675e6-3e67-9632-a030-6cfbc2371675",
 		},
 	},
 	[103] = 
@@ -11476,7 +11307,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11543,7 +11374,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c013a80f-ec78-8668-8c0e-4a77c561803c",
+			uuid = "95700620-3f31-9732-a184-30e020ccf00b",
 		},
 	},
 	[104] = 
@@ -11556,7 +11387,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11623,7 +11454,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "09a6d723-220a-d276-89ae-d433d1a77700",
+			uuid = "3fc0311a-d7e8-95ae-918c-14aba6c80a23",
 		},
 	},
 	[105] = 
@@ -11636,7 +11467,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11703,7 +11534,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a3eae875-7135-bbdb-806c-d25dbe2e2f73",
+			uuid = "f95977b2-c260-4c61-bea9-9f26003d560b",
 		},
 	},
 	[106] = 
@@ -11716,7 +11547,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11783,7 +11614,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "04e5480e-4d26-7cd5-bdc0-df54683d453d",
+			uuid = "9a933ebe-7ee9-1358-b0cd-8415a407f929",
 		},
 		
 		{
@@ -11793,7 +11624,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11860,7 +11691,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f5503b2e-65be-7842-a5e3-707b41c9246b",
+			uuid = "ed41dc91-ead7-334e-82eb-b42e1e210262",
 		},
 	},
 	[108] = 
@@ -12081,7 +11912,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12148,7 +11979,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "00179dae-9095-858a-b762-227c821f7cf0",
+			uuid = "bc3ffa7e-e6e4-7735-9506-ee00e715dff3",
 		},
 	},
 	[110] = 
@@ -12161,7 +11992,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12228,7 +12059,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a5652522-f14c-55c4-ad1e-cd715e5108d9",
+			uuid = "39f634d6-5f6f-f339-bd15-1819d73079b2",
 		},
 	},
 	[111] = 
@@ -12241,7 +12072,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12308,7 +12139,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9b50abe7-ea42-d486-adc9-c68a11b6a23e",
+			uuid = "9cba7cfb-3728-a63d-857f-ea02c6cb3d51",
 		},
 		
 		{
@@ -12318,7 +12149,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12385,7 +12216,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9e9f7cfc-e1b7-9dab-8f7e-431f62b26408",
+			uuid = "d3611df7-b7c5-95f7-935e-bced01f7c400",
 		},
 	},
 	[113] = 
@@ -14771,7 +14602,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14838,7 +14669,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "acdb8f30-36b7-0452-99df-7884f241f9a8",
+			uuid = "b343df3a-9901-46fa-9210-21fdabf89700",
 		},
 		
 		{
@@ -14848,7 +14679,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14915,7 +14746,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e458643e-041b-b72b-9906-73010d638a08",
+			uuid = "f790c045-86a6-d253-8db6-71a47e831adb",
 		},
 	},
 	[128] = 
@@ -14931,7 +14762,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14998,7 +14829,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bb8c7193-5181-4888-89d0-d7abf0238de7",
+			uuid = "aec8feaa-5eed-eed5-b1a6-afadaa01d369",
 		},
 		
 		{
@@ -15008,7 +14839,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15075,7 +14906,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4a470408-64f6-6eb9-a086-0955aa05ecd9",
+			uuid = "130e68f7-5187-691f-a89d-a681b062d236",
 		},
 	},
 	[132] = 
@@ -15088,7 +14919,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15155,7 +14986,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "00590e3a-61b6-c72b-96d8-99932551111a",
+			uuid = "4c3fe248-d52c-3bba-b0e8-656102139e1c",
 		},
 		
 		{
@@ -15165,7 +14996,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15232,7 +15063,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "1eea6d79-5ab1-d9f2-bc68-61f6a0a3728c",
+			uuid = "bbb6199c-c84e-4f83-8ffe-f59e7427c64d",
 		},
 	},
 	[133] = 
@@ -15703,7 +15534,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15770,7 +15601,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "91bd7192-df0b-3295-9411-6ee1c42c6f96",
+			uuid = "4f841602-e38c-5ceb-a5e5-45c48dbcf095",
 		},
 	},
 	[139] = 
@@ -15783,7 +15614,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15850,7 +15681,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "1731763d-768e-5329-92d3-b0bf1c86c9a5",
+			uuid = "b4c21010-523a-a1fc-a2fd-618dffbbfc92",
 		},
 		
 		{
@@ -15860,7 +15691,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15927,7 +15758,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8cfeae4a-bdea-f1dc-8dc8-056dc0092120",
+			uuid = "0094d7d1-4def-7e96-b1d9-a3d7b9d46442",
 		},
 	},
 	[144] = 
@@ -15940,7 +15771,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16007,7 +15838,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f6425e82-be3d-acdf-884b-3aee992e8898",
+			uuid = "85271053-80b3-efbb-9554-34d917c3fb7b",
 		},
 	},
 	[147] = 
@@ -16020,7 +15851,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16087,7 +15918,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c6826824-866b-9e89-9152-b2c7fad7d53b",
+			uuid = "cf88aa96-facd-c8a9-b26a-3cce12496fa5",
 		},
 		
 		{
@@ -16097,7 +15928,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16164,7 +15995,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e12586df-daf2-19ea-8257-903d6a780265",
+			uuid = "27761545-c7e7-8506-bda5-0ded194151ff",
 		},
 	},
 	[149] = 
@@ -16714,7 +16545,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16781,7 +16612,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "da58248e-e924-ce9a-9cd2-ac4f5d304972",
+			uuid = "011ef81f-2611-609e-a085-26a7bf3ba20a",
 		},
 	},
 	[153] = 
@@ -16794,7 +16625,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16861,7 +16692,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b876b5da-92ba-8250-987e-efef15dbc4aa",
+			uuid = "24c58b76-2ca0-9961-b1de-f87090713a22",
 		},
 	},
 	[157] = 
@@ -16874,7 +16705,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16941,7 +16772,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "408c736a-46ff-1508-9e4e-460934438e68",
+			uuid = "9acbb0ce-e13a-91d2-8688-dd33a8ca48be",
 		},
 		
 		{
@@ -16951,7 +16782,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17018,7 +16849,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c172899a-af6f-110a-a221-7fa76e2e4fd7",
+			uuid = "495a5d3f-a59a-8809-ac0f-0fde3e1bd139",
 		},
 	},
 	[159] = 
@@ -17031,7 +16862,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17098,7 +16929,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "653b65ba-64d0-6634-9f95-a45d5a287a2b",
+			uuid = "ebc3190f-e082-54d8-bf8b-a9b71a66b67e",
 		},
 		
 		{
@@ -17108,7 +16939,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17175,7 +17006,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6c295eea-c98b-1dbb-b6be-aeb045147541",
+			uuid = "6b8fd8c0-e148-9ce4-929b-f72460760b76",
 		},
 	},
 	[162] = 
@@ -17191,7 +17022,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17258,7 +17089,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a5c108ca-2165-184d-a7a4-fce64e056ca9",
+			uuid = "2b2bcee7-a316-ece4-b6b9-9322559e7205",
 		},
 		
 		{
@@ -17268,7 +17099,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17335,7 +17166,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e526ceed-5719-750f-8755-a60d22a2c75b",
+			uuid = "61dc6b9e-60ad-7b69-893a-227147d6a47c",
 		},
 	},
 	[164] = 
@@ -17457,7 +17288,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17524,7 +17355,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d5ad1850-af3e-ab75-addd-ca8df60492f3",
+			uuid = "7e6cbaca-ae5d-6ab8-b94d-12462e002308",
 		},
 		
 		{
@@ -17534,7 +17365,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"tcj\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17601,7 +17432,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "283b86f7-8205-c83d-8a73-a00aad8eaae9",
+			uuid = "c3e1c6d2-cf15-6730-a1af-deb77745181a",
 		},
 	},
 	[172] = 
@@ -17617,7 +17448,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17684,7 +17515,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "65bec4ed-734f-5a0b-a9f1-d4f1d19059c7",
+			uuid = "5a5ed1fe-9a6e-f3e2-801a-2c68f7fb928a",
 		},
 		
 		{
@@ -17694,7 +17525,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17761,7 +17592,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "fc9c53dd-d1bd-8f04-ab9f-f0739fd03f54",
+			uuid = "71f36f32-928f-f635-9de4-d83a1cb5baa9",
 		},
 	},
 	[174] = 
@@ -19303,7 +19134,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19370,7 +19201,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c6549baa-5fb9-cc72-bb9a-ffc29f8c3cb9",
+			uuid = "20b3205c-ca19-8b1f-88c9-6d074aefad3b",
 		},
 	},
 	[196] = 
@@ -19383,7 +19214,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19450,7 +19281,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a702cae9-a5cb-b5ac-bef4-2cf89c9072cd",
+			uuid = "370dba40-92d1-df2b-9d4f-45b65f7bedf5",
 		},
 	},
 	[199] = 
@@ -19463,7 +19294,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19530,7 +19361,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e257fae1-efc5-0da7-ac97-caf44d53ff22",
+			uuid = "43727995-2cd3-d320-92af-1c61c05ec875",
 		},
 	},
 	[201] = 
@@ -19543,7 +19374,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19610,7 +19441,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "25a4b1ad-0107-e8cc-932c-f608d9a08c51",
+			uuid = "6d9f8ad9-9c44-d91f-a950-6d239eb61f1a",
 		},
 	},
 	[204] = 
@@ -19623,7 +19454,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19690,7 +19521,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "59e3f2d9-8e79-f832-ac70-ba65e2701326",
+			uuid = "796fa519-06ff-4883-b1db-25b406b312e3",
 		},
 		
 		{
@@ -19700,7 +19531,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -19767,7 +19598,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "59eeb263-a08e-03b0-af3e-4acc241a193b",
+			uuid = "ae5b7c1d-34f2-6c2c-8f96-bf30f391c339",
 		},
 	},
 	[205] = 
@@ -21086,7 +20917,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21153,7 +20984,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b5456f8f-56ab-5dee-aa06-eaf81f01d137",
+			uuid = "df79aa67-9ae5-15fc-88df-e4b2383c1119",
 		},
 		
 		{
@@ -21163,7 +20994,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21230,7 +21061,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ec83b386-d97d-3739-966c-bb1494cfd698",
+			uuid = "623c82c6-7151-60d8-afb0-8e30535d4def",
 		},
 	},
 	[220] = 
@@ -21401,7 +21232,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21468,7 +21299,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "84a2e512-49fd-e8d1-9eec-ce2d5da4831f",
+			uuid = "5d2a755b-71cd-b367-b561-5b82232d190b",
 		},
 	},
 	[225] = 
@@ -21481,7 +21312,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21548,7 +21379,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "49c260cf-586c-669b-b23e-782b72efa447",
+			uuid = "fdb4b582-6b0f-3be7-a9cf-d733f89e19a6",
 		},
 	},
 	[226] = 
@@ -21640,7 +21471,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = true\nACR_TensorRuin_SlidecastForceHold = true\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21707,7 +21538,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9de1d884-7c62-bc3a-a885-624384880f95",
+			uuid = "9f1a9c0d-d684-a14b-b6f3-f35c62a89081",
 		},
 		
 		{
@@ -21717,7 +21548,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "TensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -21784,7 +21615,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "cccc7d40-48bd-3076-b906-915f3c9dd9b8",
+			uuid = "d2d99eb1-657e-f5e0-88ff-e2931883c086",
 		},
 	},
 	[228] = 

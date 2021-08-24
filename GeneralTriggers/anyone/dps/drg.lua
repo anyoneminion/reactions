@@ -84,7 +84,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_RikuDRG_Hotbar_ArmsLength = false\nACR_RikuDRG_Hotbar_SecondWind = false\nACR_RikuDRG_Hotbar_Feint = false\nACR_RikuDRG_Hotbar_Potion = false\nACR_RikuDRG_Hotbar_Sprint = false\nACR_RikuDRG_Hotbar_LegSweep = false\nACR_RikuDRG_Hotbar_Bloodbath = false\nACR_RikuDRG_Hotbar_LimitBreak = false\nACR_RikuDRG_Hotbar_ElusiveJump = false\nACR_RikuDRG_Hotbar_ElusiveJumpTarget = false\nACR_RikuDRG_Hotbar_DragonfireDive = false\nACR_RikuDRG_Hotbar_SpineshatterDive = false\nACR_RikuDRG_Hotbar_LockFace = false\n\nACR_RikuDRG_CD = true\nACR_RikuDRG_CDJump = true\nACR_RikuDRG_AOE = true\nACR_RikuDRG_SmartAOE = true\nACR_RikuDRG_Burn = false\nACR_RikuDRG_TrueNorth = true\nACR_RikuDRG_Jumps = true\nACR_RikuDRG_RushLife = false\nACR_RikuDRG_DelayLife = false\nACR_RikuDRG_Sight = true\nACR_RikuDRG_BattleLitany = true\nACR_RikuDRG_Omni = false\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tAnyoneCore.Data.PotsEnabled = nil\n\t\tACR_RikuDRG_Potion = true\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_RikuDRG_Potion = false\nend\n\nself.used = true\n\n",
+				actionLua = "ACR_RikuDRG_Hotbar_ArmsLength = false\nACR_RikuDRG_Hotbar_SecondWind = false\nACR_RikuDRG_Hotbar_Feint = false\nACR_RikuDRG_Hotbar_Potion = false\nACR_RikuDRG_Hotbar_Sprint = false\nACR_RikuDRG_Hotbar_LegSweep = false\nACR_RikuDRG_Hotbar_Bloodbath = false\nACR_RikuDRG_Hotbar_LimitBreak = false\nACR_RikuDRG_Hotbar_ElusiveJump = false\nACR_RikuDRG_Hotbar_ElusiveJumpTarget = false\nACR_RikuDRG_Hotbar_DragonfireDive = false\nACR_RikuDRG_Hotbar_SpineshatterDive = false\nACR_RikuDRG_Hotbar_LockFace = false\n\nACR_RikuDRG_CD = true\nACR_RikuDRG_CDJump = true\nACR_RikuDRG_AOE = true\nACR_RikuDRG_SmartAOE = true\nACR_RikuDRG_Burn = false\nACR_RikuDRG_TrueNorth = true\nACR_RikuDRG_Jumps = true\nACR_RikuDRG_RushLife = false\nACR_RikuDRG_DelayLife = false\nACR_RikuDRG_Sight = true\nACR_RikuDRG_BattleLitany = true\nACR_RikuDRG_Omni = false\n\nTensorDrift_SlidecastForceHold = false\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tAnyoneCore.Data.PotsEnabled = nil\n\t\tACR_RikuDRG_Potion = true\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_RikuDRG_Potion = false\nend\n\nself.used = true\n\n",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -17230,7 +17230,6 @@ local tbl =
 			},
 		},
 		enabled = true,
-		eventConditionMismatch = true,
 		eventType = 12,
 		execute = "",
 		executeType = 1,

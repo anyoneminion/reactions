@@ -8401,7 +8401,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_RikuNIN_Jumps = false\nself.used = true",
+				actionLua = "ACR_RikuNIN_Jumps = false\nTensorDrift_SlidecastForceHold = true\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -9031,7 +9031,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_RikuNIN_Jumps = false\ndata.InNeurolink = true\nself.used = true",
+				actionLua = "ACR_RikuNIN_Jumps = false\nTensorDrift_SlidecastForceHold = true\ndata.InNeurolink = true\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -9082,7 +9082,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_RikuNIN_Jumps = true\ndata.InNeurolink = false\nself.used = true",
+				actionLua = "ACR_RikuNIN_Jumps = true\nTensorDrift_SlidecastForceHold = false\ndata.InNeurolink = false\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,

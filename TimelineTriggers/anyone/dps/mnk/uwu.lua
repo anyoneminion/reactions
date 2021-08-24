@@ -776,7 +776,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -843,7 +843,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c22bc893-3c0a-1349-ad3d-ee2de3991a6a",
+			uuid = "355b9acf-d585-b86d-86b5-059932389b3a",
 		},
 		
 		{
@@ -853,7 +853,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -920,7 +920,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6ccd9712-fc60-792f-b63c-a37c28b36e3e",
+			uuid = "a9e543ba-8a3b-3c2a-af9d-743b2dbe5299",
 		},
 	},
 	[10] = 
@@ -1210,7 +1210,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 43.691396832179,
+			time = 41.402966399121,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 11,
@@ -1286,7 +1286,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 40.156346324046,
+			time = 43.919095431379,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 11,
@@ -1386,7 +1386,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1453,7 +1453,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "1304e965-d930-3b6e-938a-89ec03ff1c88",
+			uuid = "3240a668-8e45-eba8-9102-bbbb664642b4",
 		},
 		
 		{
@@ -1463,7 +1463,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1530,7 +1530,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c6e672cb-409f-b05d-bdce-30d201df3480",
+			uuid = "2a8b2c49-ce4d-fd52-be96-c69f841051c7",
 		},
 	},
 	[16] = 
@@ -1826,7 +1826,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1893,7 +1893,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f13ad5ab-75c5-02d5-9eb2-24a0d999ab7a",
+			uuid = "fc729a6a-f8f9-a211-94ef-c846571dff49",
 		},
 		
 		{
@@ -1903,7 +1903,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1970,7 +1970,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "78b89ba7-2366-1b7e-b90a-b73c1df07061",
+			uuid = "6977a2c8-d576-887e-ba44-a496009d61fc",
 		},
 	},
 	[22] = 
@@ -1983,7 +1983,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2050,7 +2050,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a31d7b4a-8596-751d-827a-f0524db792f6",
+			uuid = "1118c9e4-069d-72dc-9535-5bdc83388835",
 		},
 		
 		{
@@ -2060,7 +2060,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2127,7 +2127,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "3f85f49d-2650-118a-a042-e635828b14f6",
+			uuid = "0079f655-65c5-0d8d-af36-5a456acbfc61",
 		},
 	},
 	[26] = 
@@ -2491,7 +2491,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2558,7 +2558,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a643c4f3-fc89-1a79-bb3f-50e47656e255",
+			uuid = "55a959dc-3295-4434-968c-45ebd2d98d83",
 		},
 		
 		{
@@ -2568,7 +2568,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2635,7 +2635,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "fd60462f-ddeb-39eb-a06c-a5a00903cffc",
+			uuid = "38248cbc-0329-9bd9-9a2e-1e4889a0867c",
 		},
 	},
 	[30] = 
@@ -4704,7 +4704,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 330.37760551775,
+			time = 325.18329416791,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 43,
@@ -5640,7 +5640,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 404.31141087069,
+			time = 404.26920377209,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 61,
@@ -5896,7 +5896,7 @@ local tbl =
 			randomOffset = 2,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 415.01101718192,
+			time = 415.51445051424,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 65,
@@ -7566,6 +7566,82 @@ local tbl =
 			used = false,
 			uuid = "2ec176c4-da3e-92b9-8b49-8b957a363bac",
 		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 639,
+			name = "disable jumps",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 639,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 85,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "c3a5c430-7204-4038-ba5f-05420aa78ce7",
+		},
 	},
 	[86] = 
 	{
@@ -7951,7 +8027,7 @@ local tbl =
 			randomOffset = 3,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 648.64354380932,
+			time = 651.18778038881,
 			timeRandomRange = false,
 			timeRange = false,
 			timelineIndex = 89,
@@ -7960,6 +8036,82 @@ local tbl =
 			timerStartOffset = 0,
 			used = false,
 			uuid = "e70750d9-cfdd-2de6-9e19-e1801b10597d",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 651,
+			name = "disable jumps",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 651,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 89,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "8c7b2d2c-2e7e-fab2-8d43-779bdfeee52a",
 		},
 	},
 	[90] = 
@@ -12590,7 +12742,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12657,7 +12809,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "26cece6f-b728-60bd-b9ef-fa134ba39230",
+			uuid = "e2b7aa57-3a33-9c32-bc8a-64e9e5948acd",
 		},
 		
 		{
@@ -12667,7 +12819,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12734,7 +12886,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4e492882-ab48-7228-90ea-b02c939a5876",
+			uuid = "82ea7744-b760-aaee-8fe8-d2b8311055a8",
 		},
 	},
 	[133] = 
@@ -13127,7 +13279,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13194,7 +13346,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0a62b641-af3d-c7b3-8a5b-69f21131cbd6",
+			uuid = "f86933a9-bc25-5822-a600-4d674b2e47e7",
 		},
 	},
 	[147] = 
@@ -13207,7 +13359,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13274,7 +13426,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "161a9dd1-5af4-7ec4-8444-cc67b2616e95",
+			uuid = "943d3fcb-4b9c-14af-bbe0-586cd4a36a92",
 		},
 		
 		{
@@ -13284,7 +13436,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13351,7 +13503,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "cc3487f2-b707-98ef-8f6f-5dd76fa501f0",
+			uuid = "d1c0f582-1910-2664-b531-e0f77de709e3",
 		},
 	},
 	[149] = 
@@ -13903,7 +14055,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13970,7 +14122,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4c232e4e-7f92-203d-84a4-d8bcf9dda75e",
+			uuid = "22846dc5-528e-1861-aea3-0b00a9805a93",
 		},
 		
 		{
@@ -13980,7 +14132,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14047,7 +14199,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2e8a971a-a634-823c-87d6-2a4efae62463",
+			uuid = "331fa857-7095-3646-99d8-f0e444eb8e63",
 		},
 	},
 	[162] = 
@@ -14489,7 +14641,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14556,7 +14708,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "02ed1208-9044-42d4-a057-be037988f1aa",
+			uuid = "43f9e4dd-bf6f-23ba-b805-35725b0c16ab",
 		},
 		
 		{
@@ -14566,7 +14718,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14633,7 +14785,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "94a9af64-5d76-52e1-90ea-5a831b4833bf",
+			uuid = "e6d0e762-a2c1-f0f3-928a-8b0e2dbd2274",
 		},
 	},
 	[174] = 
@@ -15542,7 +15694,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15609,7 +15761,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "69143c6f-f016-d456-b5f7-7abdc648fdd1",
+			uuid = "cdbe4622-76c1-c424-bf71-10c04fe8a17d",
 		},
 	},
 	[196] = 
@@ -15622,7 +15774,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15689,7 +15841,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "aafd481a-459b-a36d-a374-b2b75e5a97e4",
+			uuid = "7549fa23-ba7d-dad1-b142-17fa4c1b244e",
 		},
 	},
 	[199] = 
@@ -15862,7 +16014,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15929,7 +16081,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8b6b8742-53f1-af49-895a-67225979fc0a",
+			uuid = "b08e3d40-0e8e-c180-8bdf-45248e9be087",
 		},
 		
 		{
@@ -15939,7 +16091,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16006,7 +16158,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7cee8a91-cb4c-0e3b-8a61-931d51acfa0e",
+			uuid = "c9396054-9167-04a4-9553-13fa12c46a08",
 		},
 	},
 	[205] = 
@@ -17159,7 +17311,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17226,7 +17378,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5a26cd4e-1ce3-f4cf-964f-ba182b749e85",
+			uuid = "6b203216-148c-6334-a915-4f1a20c37c10",
 		},
 		
 		{
@@ -17236,7 +17388,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -17303,7 +17455,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8950f25a-2a1f-d6c0-b048-e9744b5ed247",
+			uuid = "2f870c43-fe97-e821-8de3-1e838a870e9f",
 		},
 	},
 	[220] = 

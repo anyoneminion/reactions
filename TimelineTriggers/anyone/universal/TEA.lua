@@ -9233,7 +9233,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "for id, ent in pairs(EntityList(\"attackable\")) do\n\tif ent.contentid == 9216 then\n\t\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\t\tArgus2.addTimedConeFilled(7500, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), ent.pos.h, 30, start, finish, mid, 0, ent.id, nil, nil, line)\n\t\t\t---Argus.addTimedConeFilled(7500, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), ent.pos.h, 30, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\tend\nend\nself.used = true",
+					actionLua = "for id, ent in pairs(EntityList(\"\")) do\n\tif ent.contentid == 9216 and ent.castinginfo.channelingid == 18505 then\n\t\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\t\tArgus2.addTimedConeFilled(7500, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), ent.pos.h, 30, start, finish, mid, 4000, ent.id, nil, nil, line)\n\t\t\t---Argus.addTimedConeFilled(7500, ent.pos.x, ent.pos.y, ent.pos.z, 25, math.rad(90), ent.pos.h, 30, {r = 1, g = 0, b = 0}, 0.1, 0.5, 0, ent.id, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
