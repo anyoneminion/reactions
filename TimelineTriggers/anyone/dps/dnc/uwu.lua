@@ -2984,7 +2984,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\t--Argus.addTimedDonutFilled(5156, ent.pos.z, ent.pos.y, ent.pos.z, 7, 20, 50, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(MoogleTelegraphs.Settings.outlineRGB.enemy.r, MoogleTelegraphs.Settings.outlineRGB.enemy.g, MoogleTelegraphs.Settings.outlineRGB.enemy.b, MoogleTelegraphs.Settings.outlineRGB.enemy.a), MoogleTelegraphs.Settings.outlineThickness.enemy)\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -6384,7 +6384,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -12597,7 +12597,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12737,7 +12737,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+					actionLua = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12877,7 +12877,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z, 8 + ent.hitradius ,50,start,finish,mid,0,nil,GUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),line)\nend\n\nself.used = true",
+					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z, 8 + ent.hitradius ,50,start,finish,mid,0,nil,nil,line)\nend\n\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14466,7 +14466,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -17149,7 +17149,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\t--Argus.addTimedDonutFilled(5156, ent.pos.z, ent.pos.y, ent.pos.z, 7, 20, 50, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(MoogleTelegraphs.Settings.outlineRGB.enemy.r, MoogleTelegraphs.Settings.outlineRGB.enemy.g, MoogleTelegraphs.Settings.outlineRGB.enemy.b, MoogleTelegraphs.Settings.outlineRGB.enemy.a), MoogleTelegraphs.Settings.outlineThickness.enemy)\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,

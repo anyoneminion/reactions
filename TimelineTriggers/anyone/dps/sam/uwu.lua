@@ -730,7 +730,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -797,7 +797,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "cb317b1b-7f45-ba61-9d0b-1af83f5d22c7",
+			uuid = "3a01c8c8-1b8b-c67c-b2e1-ee86488ae108",
 		},
 		
 		{
@@ -807,7 +807,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -874,7 +874,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6831fa55-8661-60f0-aafe-ef8c469bbe1b",
+			uuid = "0a4a20c4-c64a-8822-bb2a-b77e5a19e188",
 		},
 	},
 	[10] = 
@@ -1264,7 +1264,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1331,7 +1331,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7a101efb-b975-fdd6-862a-c8ccfa3ccfb2",
+			uuid = "81f1b2a7-78a3-4221-bde7-c9a038f25dcd",
 		},
 		
 		{
@@ -1341,7 +1341,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1408,7 +1408,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0eebef82-6602-120e-862a-0ce6e0065054",
+			uuid = "53ac97c9-217d-b14e-aef8-286e1c5843dd",
 		},
 	},
 	[16] = 
@@ -1704,7 +1704,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1771,7 +1771,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "91b94833-ea6d-c87e-b1fa-6a66783bd80a",
+			uuid = "bc91fd60-325c-5d0d-8097-ceefd6ed36bf",
 		},
 		
 		{
@@ -1781,7 +1781,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1848,7 +1848,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5db10a69-f03c-e0b4-86bb-98287b1fad46",
+			uuid = "f250af23-24cf-f781-b3fa-05045d98f532",
 		},
 	},
 	[22] = 
@@ -1861,7 +1861,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -1928,7 +1928,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d55b9461-4a74-c5b3-9270-ebcf9877b974",
+			uuid = "ad4f2a27-2019-6100-ae0b-1fea35796ec3",
 		},
 		
 		{
@@ -1938,7 +1938,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2005,7 +2005,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8fefbad0-ccbe-c251-b699-611e5930b0a2",
+			uuid = "db8e6a52-c515-35e1-b554-8d766a9f96d3",
 		},
 	},
 	[26] = 
@@ -2369,7 +2369,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2436,7 +2436,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "901ba137-7618-8aba-b33e-c3c9b0bf99d8",
+			uuid = "f0acdb2b-e53f-a613-b919-f8e11bbbed2d",
 		},
 		
 		{
@@ -2446,7 +2446,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2513,7 +2513,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4209b1ab-ceab-d2d9-ae0d-3f28b1573d9e",
+			uuid = "9d030966-4351-02b1-a5e9-dba35939a905",
 		},
 	},
 	[30] = 
@@ -2666,7 +2666,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\t--Argus.addTimedDonutFilled(5156, ent.pos.z, ent.pos.y, ent.pos.z, 7, 20, 50, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(MoogleTelegraphs.Settings.outlineRGB.enemy.r, MoogleTelegraphs.Settings.outlineRGB.enemy.g, MoogleTelegraphs.Settings.outlineRGB.enemy.b, MoogleTelegraphs.Settings.outlineRGB.enemy.a), MoogleTelegraphs.Settings.outlineThickness.enemy)\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3172,7 +3172,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -5090,7 +5090,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -5325,7 +5325,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", false, 16000)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -5391,7 +5391,223 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9d8e66c4-e049-8730-8580-1681562f9893",
+			uuid = "5f49b042-2c6c-7bfc-907c-ffcee469d28d",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "local t = Player:GetTarget()\ndata.ifrithp = t.hp.percent\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 409,
+			name = "record hp",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 409,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 63,
+			timerEndOffset = 0,
+			timerOffset = -2,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "48ecdb35-78d5-1fde-b0b4-8b9b0886d123",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "AnyoneCore.Toggle(\"CD\", true)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "ACR_RikuDRG_CD",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "return data.ifrithp >= 15",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 409,
+			name = "enable cd",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 409,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 63,
+			timerEndOffset = 0,
+			timerOffset = 1,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "b896d869-3cc4-ac31-a80c-a032c34a9880",
 		},
 	},
 	[64] = 
@@ -5405,7 +5621,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -7241,7 +7457,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -10778,7 +10994,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", true)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11438,7 +11654,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11578,7 +11794,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+					actionLua = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -11718,7 +11934,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z, 8 + ent.hitradius,50,start,finish,mid,0,nil,GUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),line)\nend\n\nself.used = true",
+					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z, 8 + ent.hitradius ,50,start,finish,mid,0,nil,nil,line)\nend\n\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12178,7 +12394,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12245,7 +12461,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "42d32219-d9d1-f9a2-9961-fabdbf0244b0",
+			uuid = "3c1d8357-9b8e-0621-a96c-4235763ec6d6",
 		},
 		
 		{
@@ -12255,7 +12471,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12322,7 +12538,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c2c83057-1708-bffb-bb38-a96cf6c10545",
+			uuid = "6d83e4da-95e8-f4df-89d5-4ffc95eb98a5",
 		},
 	},
 	[133] = 
@@ -12715,7 +12931,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12782,7 +12998,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "37615b3a-4037-1e2f-af0a-c3a1f5adb199",
+			uuid = "2e492e7e-bea8-4d32-b612-a7c6b081ce4c",
 		},
 	},
 	[147] = 
@@ -12795,7 +13011,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12862,7 +13078,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "24dc07f5-9901-ca7f-9a06-b0d963296c61",
+			uuid = "8e777f3c-cdf3-aec1-8bf6-838e4b675226",
 		},
 		
 		{
@@ -12872,7 +13088,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12939,7 +13155,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d423a807-7e8e-4eb9-87c7-402432ab15a2",
+			uuid = "55ecc8c0-b3b9-d9d6-a434-0017b99bc890",
 		},
 	},
 	[149] = 
@@ -13491,7 +13707,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13558,7 +13774,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b2f7ba74-386c-a612-a15c-10bab371da3f",
+			uuid = "5b1e4ea5-e535-e554-acdc-bef859c25c92",
 		},
 		
 		{
@@ -13568,7 +13784,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -13635,7 +13851,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e338dc71-2cc6-a4de-b58f-0bcd2c3192b2",
+			uuid = "5b5dc1c9-3d0d-3d21-828a-83b56d228828",
 		},
 	},
 	[162] = 
@@ -13809,7 +14025,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tGUI:ColorConvertFloat4ToU32(colorFill.r, colorFill.g, colorFill.b, 1),\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -14077,7 +14293,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14144,7 +14360,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7fdf8de2-5eaf-3faf-972e-f17e368e37ce",
+			uuid = "714f00cb-5c2c-078c-8e6c-1a6918d98b08",
 		},
 		
 		{
@@ -14154,7 +14370,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -14221,7 +14437,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "91a8629f-a3f7-71a5-a1e6-5f744664d852",
+			uuid = "d056f1e8-2299-1e88-b5be-29fdae4dbf66",
 		},
 	},
 	[174] = 
@@ -14908,7 +15124,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"cd\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"cd\", false)\nTensorDrift_SlidecastForceHold = false\nACR_TensorRuin_SlidecastForceHold = false\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15130,7 +15346,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15197,7 +15413,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ec4875f5-9893-36c8-89cc-47846bcfd457",
+			uuid = "90b0306b-ac6d-78a4-a389-c6c9f6e47f71",
 		},
 	},
 	[196] = 
@@ -15210,7 +15426,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15277,7 +15493,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d9fdf077-3f03-2e75-aa9c-d6d8992bf2e5",
+			uuid = "26810179-3e93-8d1c-9603-167141b78f0e",
 		},
 	},
 	[199] = 
@@ -15450,7 +15666,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15517,7 +15733,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c995b977-a8e0-aaac-a8fd-edb1e237b098",
+			uuid = "843b194c-9a77-4961-8ab0-ec4605200c76",
 		},
 		
 		{
@@ -15527,7 +15743,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -15594,7 +15810,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d1adb4fa-f919-d4bc-8d62-1d9849f928f2",
+			uuid = "cb6d0e11-2f6e-0676-bb30-7b94feb5ceac",
 		},
 	},
 	[205] = 
@@ -16291,7 +16507,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\t--Argus.addTimedDonutFilled(5156, ent.pos.z, ent.pos.y, ent.pos.z, 7, 20, 50, {r = 1, g = 0, b = 0}, 0.2, 0.2, 0, ent.id, GUI:ColorConvertFloat4ToU32(MoogleTelegraphs.Settings.outlineRGB.enemy.r, MoogleTelegraphs.Settings.outlineRGB.enemy.g, MoogleTelegraphs.Settings.outlineRGB.enemy.b, MoogleTelegraphs.Settings.outlineRGB.enemy.a), MoogleTelegraphs.Settings.outlineThickness.enemy)\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16595,7 +16811,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nAnyoneCore.Toggle(\"TCJ\", false)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", false)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16662,7 +16878,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c6621d73-7c48-d2ca-bba1-748b1eab6c6c",
+			uuid = "6c7f8754-336a-2f62-9af1-128f77f8acd7",
 		},
 		
 		{
@@ -16672,7 +16888,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nAnyoneCore.Toggle(\"TCJ\", true)\nself.used = true",
+					actionLua = "AnyoneCore.Toggle(\"jumps\", true)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -16739,7 +16955,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "aef999f6-06a5-b0a6-a0b8-fc1b182e3107",
+			uuid = "b2b674e3-52ef-a73e-a187-2e282474bcc2",
 		},
 	},
 	[220] = 
