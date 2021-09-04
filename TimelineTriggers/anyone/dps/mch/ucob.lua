@@ -2573,7 +2573,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local ent = EntityList:Get(data.mtentityid)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nArgus2.addTimedCircleFilled(2000,ent.pos.x,ent.pos.y,ent.pos.z,9,30,start,finish,mid,0,ent.id,nil,line)\nself.used = true",
+					actionLua = "local ent = EntityList:Get(data.mtentityid)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nArgus2.addTimedCircleFilled(2000,ent.pos.x,ent.pos.y,ent.pos.z,5,30,start,finish,mid,0,ent.id,nil,line)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
