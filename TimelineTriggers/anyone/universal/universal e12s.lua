@@ -156,7 +156,7 @@ local tbl =
 			timerOffset = -16,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "17f92497-e3e6-ac27-882c-4fdf18d84a6a",
+			uuid = "2ec95683-4b14-c22f-982f-5d005b45342b",
 		},
 		
 		{
@@ -232,7 +232,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "52db6fe4-7a6e-03b3-9909-b841527fcf56",
+			uuid = "d62140ac-b13d-e62a-9be2-de5ee7590684",
 		},
 		
 		{
@@ -500,7 +500,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "7b386367-198a-0a1d-9160-7695e28a850c",
+			uuid = "981ccb5d-a9d3-068c-8231-6231861811cb",
 		},
 		
 		{
@@ -1075,7 +1075,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = -5,
 			used = false,
-			uuid = "5b3c3ad3-8457-18f0-9eb2-7cf43d1e8d61",
+			uuid = "34ac1713-d297-0e07-adb4-f9c3f9457dc3",
 		},
 		
 		{
@@ -3745,7 +3745,265 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "594a36dd-5e8e-b4e3-89db-282c15d07a7d",
+			uuid = "27ff85e3-f24b-eed1-84f2-65f29faf3116",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "data.StanceEnabled = true\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "data.StanceEnabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 4,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+						91,
+						743,
+						79,
+						1833,
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = true,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 5,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+						91,
+						743,
+						79,
+						1833,
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 16,
+			name = "Check Stance",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 16,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 3,
+			timerEndOffset = 0,
+			timerOffset = -5,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "b514c856-6eae-29e9-b9b0-2ce4bee50bd6",
 		},
 	},
 	[4] = 
@@ -3904,7 +4162,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "24fc12a2-bccb-ba40-8761-43bf7c985042",
+			uuid = "ce18609a-59bc-10fc-b25a-ed20168a4f83",
 		},
 	},
 	[6] = 
@@ -4047,7 +4305,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bb27d993-d466-5dd1-944c-3cb6e4f4437d",
+			uuid = "1491418f-1e09-b9f2-9095-6d0d97782fc5",
 		},
 	},
 	[8] = 
@@ -4254,7 +4512,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "35255dc3-3924-f5c9-a7db-1161c8d30a80",
+			uuid = "acefea85-fd89-0fc4-9780-48f75b41bc4e",
 		},
 		
 		{
@@ -4330,7 +4588,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "b2edc0c7-c10d-ab2d-824b-f06b09e1cf39",
+			uuid = "02143ecf-d8d5-de60-bae3-dea9f96677da",
 		},
 	},
 	[10] = 
@@ -4537,7 +4795,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ee014b32-7a12-544e-bec0-99e30121779b",
+			uuid = "ec4d5c87-d7f0-dca4-b215-605aad0c0a4b",
 		},
 		
 		{
@@ -4613,7 +4871,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "eb12d1ff-d137-4ec1-a257-6f9069f9425e",
+			uuid = "5f0ce8cd-f82a-f016-80ff-1b35b6c68ff5",
 		},
 	},
 	[12] = 
@@ -4692,7 +4950,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "945d528b-9583-2e63-9974-d02d8c96e27b",
+			uuid = "f037c67d-217f-5472-9c81-b4845ae5889a",
 		},
 	},
 	[13] = 
@@ -4899,7 +5157,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "44a39135-115b-1547-8894-77638150601c",
+			uuid = "b35e5db8-68e6-990a-8253-25df249e611c",
 		},
 		
 		{
@@ -5104,7 +5362,7 @@ local tbl =
 			timerOffset = -8,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "8adab41c-be98-7b2d-95ca-fbbff215da59",
+			uuid = "5fc42eae-1a21-5a61-86d3-99d35c1ac5b9",
 		},
 	},
 	[16] = 
@@ -5314,7 +5572,7 @@ local tbl =
 			timerOffset = 5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7d48799c-dea1-2883-8bd7-e508ece56784",
+			uuid = "421ef292-6257-6116-9f0d-fcf8b6968e4b",
 		},
 		
 		{
@@ -5518,7 +5776,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "8094a457-8781-b7ec-a237-bff7c7fa7d14",
+			uuid = "c3a188e0-3f60-d96b-9009-5c06b64b4684",
 		},
 		
 		{
@@ -5594,7 +5852,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "b52b12de-e8c3-bef3-8ebb-b752e0d1db57",
+			uuid = "871b04f3-4770-306b-ad44-8313ff75aa4c",
 		},
 	},
 	[19] = 
@@ -5801,7 +6059,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "736dfb37-e224-3ffe-aa72-04aad3a03275",
+			uuid = "1fc8c44f-4522-df18-86d3-c51f8a3e1b4b",
 		},
 	},
 	[20] = 
@@ -5880,7 +6138,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "391116a7-6e87-eb44-aa3b-4abfab974926",
+			uuid = "67abcbbb-200b-5772-ad05-fb04950ebe35",
 		},
 	},
 	[21] = 
@@ -6423,7 +6681,7 @@ local tbl =
 			timerOffset = -5.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e1d7f603-8fae-d3de-81a0-798ed2371e66",
+			uuid = "4a4e33ac-184d-2d7e-8465-284ac9540248",
 		},
 	},
 	[22] = 
@@ -6915,7 +7173,7 @@ local tbl =
 			timerOffset = -14,
 			timerStartOffset = -6.5,
 			used = false,
-			uuid = "89f1d166-f49f-a4e5-9192-36e2778aecae",
+			uuid = "ed57d2d6-f207-3e3c-b508-6c4ab9bb4791",
 		},
 		
 		{
@@ -6991,7 +7249,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "f4c856f5-9a05-3f09-ad57-49b4b804bb55",
+			uuid = "b8a5e250-4762-375f-9c82-ed0ff8586140",
 		},
 	},
 	[24] = 
@@ -7198,7 +7456,7 @@ local tbl =
 			timerOffset = -7,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7d163456-73c2-e594-a8ea-58a0cd89aed8",
+			uuid = "e871cda1-8dbf-eb35-868d-1221b4823b5a",
 		},
 	},
 	[27] = 
@@ -7405,7 +7663,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "6287edae-beaa-44b5-b1a7-2e9bafd8effe",
+			uuid = "c20f8458-f023-814a-a220-75c3a0225d70",
 		},
 		
 		{
@@ -7481,7 +7739,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "ceaa5c34-7f1d-ef86-8769-07d10910d7a7",
+			uuid = "2cdd5094-a95d-f2f6-b04e-6edafd8b1316",
 		},
 	},
 	[31] = 
@@ -7560,7 +7818,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "90a236da-0fb2-e7fb-88cd-6223ce06ada8",
+			uuid = "e734a9f1-372a-2d9d-9ac2-dc27bb9ca887",
 		},
 	},
 	[32] = 
@@ -7706,7 +7964,7 @@ local tbl =
 			timerOffset = -8,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "5443873f-5a4b-b1b9-9352-d1f207335d8d",
+			uuid = "4c4e5165-e86a-4128-b142-ddc7c88cc4a1",
 		},
 	},
 	[38] = 
@@ -7785,7 +8043,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "7fdeabc8-6938-7830-bd54-b99f0734f27e",
+			uuid = "caa403a7-8740-052d-a242-db9d68d660ca",
 		},
 	},
 	[40] = 
@@ -7992,7 +8250,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "f44c9884-1045-2442-b88c-10da24bcc84d",
+			uuid = "56b3785a-6c23-e1d4-aa0a-3ce7c6577a8d",
 		},
 	},
 	[43] = 
@@ -8551,7 +8809,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -6,
 			used = false,
-			uuid = "fa042a6c-c779-9c30-9ee8-46267cdab87d",
+			uuid = "0b9ad014-2b68-bbe5-b079-1a9722c8de2d",
 		},
 		
 		{
@@ -8627,7 +8885,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "3fbfa9e9-bb36-abda-a21f-0506f06cc23b",
+			uuid = "04c9a5fb-dd05-0717-9b19-bfadc19b5ab7",
 		},
 	},
 	[45] = 
@@ -8709,7 +8967,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "05d8f2e3-2187-be68-9f42-a4d3a6afdeca",
+			uuid = "99f3421d-64c3-3e51-b67f-9188e73a0711",
 		},
 	},
 	[50] = 
@@ -8852,7 +9110,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = -6,
 			used = false,
-			uuid = "909efd33-9528-0f53-aead-53d30868e8ed",
+			uuid = "c391daee-4498-6657-8327-f8354f8ae970",
 		},
 	},
 	[55] = 
@@ -8934,7 +9192,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "bac50883-b762-2ff2-b9c4-b88202a11d98",
+			uuid = "b3396dec-8172-67ec-a776-162503c4de09",
 		},
 	},
 	[57] = 
@@ -9142,7 +9400,7 @@ local tbl =
 			timerOffset = -8,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "13205bb0-bce5-660a-8088-1c64e7c59f6c",
+			uuid = "e4f36c21-c09f-e28e-8607-a0431fd3c744",
 		},
 	},
 	[58] = 
@@ -9714,7 +9972,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b253bcd7-dc85-edb5-abc1-16d78cef30b5",
+			uuid = "a055b2a6-c1ac-3fc4-a170-8e4e421b2c48",
 		},
 		
 		{
@@ -9934,7 +10192,7 @@ local tbl =
 			timerOffset = -40,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4f4a4c6a-a558-ff9c-a7b0-9e83d1fc6139",
+			uuid = "73b06539-fb9e-c4be-9f9c-39b017aebe49",
 		},
 	},
 	[60] = 
@@ -10080,7 +10338,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "17f4fc42-aed7-fd25-8d2f-70e144a6c76b",
+			uuid = "bf84912e-e175-bae5-a150-abaad69d6e25",
 		},
 		
 		{
@@ -10300,7 +10558,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "656069d6-a8c9-ed6a-8b4f-2bdd972806de",
+			uuid = "6531c160-ac63-0c88-84c4-f4a18fe9a14b",
 		},
 		
 		{
@@ -10840,7 +11098,7 @@ local tbl =
 			timerOffset = -5.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ba82d50c-6588-f428-8e9e-75d5b495fb9d",
+			uuid = "9e34a531-3466-382b-9fbc-74f11ddefe96",
 		},
 	},
 	[63] = 
@@ -11352,7 +11610,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -6,
 			used = false,
-			uuid = "f277466e-cb6b-dfa1-9a2a-e4453599c9d0",
+			uuid = "c92c075a-b6b0-d494-81bd-1b9965eb9dd7",
 		},
 		
 		{
@@ -11428,7 +11686,7 @@ local tbl =
 			timerOffset = -3,
 			timerStartOffset = 1.5,
 			used = false,
-			uuid = "0c904672-1c7e-e297-9924-27e6924da230",
+			uuid = "fa50fe16-e9e5-8a3e-b068-06fa3e9f983f",
 		},
 	},
 	[64] = 
@@ -11571,7 +11829,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = -6,
 			used = false,
-			uuid = "39e49ab9-23d5-5a93-b875-8b0a5c940a6b",
+			uuid = "825844e8-8570-95aa-b991-4685fb08c109",
 		},
 		
 		{
@@ -11791,7 +12049,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f8b5c0ab-2579-9a5d-b2f5-247420d551d4",
+			uuid = "f59dea30-10ce-1d71-8c90-c6d3d6b2e192",
 		},
 	},
 	[65] = 
@@ -12031,7 +12289,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "44222806-6451-1b64-81ae-0d86c104bf7b",
+			uuid = "3a5d1aff-170d-203e-a975-f74edccf4143",
 		},
 		
 		{
@@ -12412,7 +12670,7 @@ local tbl =
 			timerOffset = -2.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "3fc35001-6c53-05f9-94c8-f2785bfa276c",
+			uuid = "fe5e2046-5865-9927-ad6f-a8c58e760493",
 		},
 		
 		{
@@ -12791,7 +13049,7 @@ local tbl =
 			timerOffset = 7,
 			timerStartOffset = -1.5,
 			used = false,
-			uuid = "25267dba-36bd-fd11-b157-a0306c48b0f2",
+			uuid = "eb156aad-952c-a418-9e77-e78c961d61b2",
 		},
 		
 		{
@@ -12947,7 +13205,7 @@ local tbl =
 			timerOffset = 15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "b42a2201-467a-db40-b132-a8ae2477215b",
+			uuid = "4275ba35-30a6-a175-9be9-277d4907f136",
 		},
 	},
 	[70] = 
@@ -13090,7 +13348,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a1b963cd-ae60-cc64-97b2-7643f693e566",
+			uuid = "fa2a22e3-44d6-2081-8001-fa14ffa24c41",
 		},
 	},
 	[72] = 
@@ -13297,7 +13555,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8f697f8c-2448-0cd2-9e6f-3e1bdf041228",
+			uuid = "954ef7eb-1e6a-bd51-a5fd-c1990f35bae1",
 		},
 		
 		{
@@ -13806,7 +14064,7 @@ local tbl =
 			timerOffset = -14,
 			timerStartOffset = -15,
 			used = false,
-			uuid = "4d985c48-59ba-428f-b2d5-aaa86a187835",
+			uuid = "f5ecc3e9-c674-ac41-82cb-82a21f368e3f",
 		},
 		
 		{
@@ -13882,7 +14140,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "d67d29bf-cffa-065f-b462-43ee217f95ea",
+			uuid = "c8fb6555-c412-2b6d-9e21-f6e04daf0470",
 		},
 	},
 	[75] = 
@@ -14025,7 +14283,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "50bae3a8-eb35-6b75-b2a4-3e39e9a45235",
+			uuid = "c016298d-6b72-a1f5-91be-5eb15c06c3c7",
 		},
 	},
 	[77] = 
@@ -14232,7 +14490,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c0ca6a3c-73f9-dd0c-96bd-059b45cd2370",
+			uuid = "e46d184e-316e-a02d-8171-b9a0c4cea2be",
 		},
 		
 		{
@@ -14308,7 +14566,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "8d9047d8-f54d-da9b-a80f-c205644a7df2",
+			uuid = "be25fe8f-59b3-c61e-a4ce-1e6d813a1e7e",
 		},
 	},
 	[79] = 
@@ -14387,7 +14645,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "63bf13ab-c582-ae54-a324-792e486010d6",
+			uuid = "8d8faf91-915a-86d7-8ba1-126287de1433",
 		},
 	},
 	[80] = 
@@ -14595,7 +14853,7 @@ local tbl =
 			timerOffset = -8,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "ad7308c8-1bb6-eda5-b224-c70064f94109",
+			uuid = "6aa857c0-62b0-7b1f-8740-e75a1c4deb74",
 		},
 	},
 	[83] = 
@@ -14898,7 +15156,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -300,
 			used = false,
-			uuid = "9eec03d9-db73-b899-bb90-b9a9cc8b4c5a",
+			uuid = "d0b3bcac-7dba-7993-b88b-3987b44ade3d",
 		},
 		
 		{
@@ -15182,7 +15440,268 @@ local tbl =
 			timerOffset = -30,
 			timerStartOffset = -30,
 			used = false,
-			uuid = "b6bc1cf2-28e0-398e-bf44-e7586ea2b09f",
+			uuid = "8d8a1d69-a598-e1ec-b80a-7e0c6102e578",
+		},
+	},
+	[85] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "data.StanceEnabled = true\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "data.StanceEnabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						2,
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 4,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+						91,
+						743,
+						79,
+						1833,
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = true,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 5,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+						91,
+						743,
+						79,
+						1833,
+					},
+					category = 2,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = "Nearest",
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+					targetName = "",
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1000,
+			name = "Check Stance",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1000,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 85,
+			timerEndOffset = 0,
+			timerOffset = 2,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "6b0e87b6-85b5-6418-855b-9a12f313058c",
 		},
 	},
 	[87] = 
@@ -15344,7 +15863,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "3c455b7a-706a-41b1-8f0b-0880c36f3a11",
+			uuid = "6275b92b-34f4-1fbd-bbba-d1f335193c38",
 		},
 	},
 	[91] = 
@@ -15423,7 +15942,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -8,
 			used = false,
-			uuid = "c7f1d56e-ac19-2cdc-802f-848a307e4127",
+			uuid = "13d14f14-fd5b-ce87-a9cc-0c0765bee9ce",
 		},
 		
 		{
@@ -15499,7 +16018,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "f924b5c1-0ad9-5592-a38d-2ce9b301c649",
+			uuid = "578e8fb4-1e93-72fc-b0d4-141e6914fa0c",
 		},
 	},
 	[93] = 
@@ -15642,7 +16161,7 @@ local tbl =
 			timerOffset = -2.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a54e3731-e158-08a3-ba82-68fed49278ff",
+			uuid = "021b96a5-a3d8-d1ab-8c07-2464db801c8f",
 		},
 		
 		{
@@ -15718,7 +16237,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2e1e2326-30d1-6969-bc97-2d4257fb5c74",
+			uuid = "ac2fd262-4170-0751-9392-3c5b27589447",
 		},
 		
 		{
@@ -16282,7 +16801,7 @@ local tbl =
 			timerOffset = 0.69999998807907,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bfdda552-52cb-0747-9dec-322fb23e5759",
+			uuid = "a86b1529-56bf-6380-97af-cdceb0dffdfa",
 		},
 	},
 	[94] = 
@@ -16361,7 +16880,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -8,
 			used = false,
-			uuid = "7eb20c70-bc2b-47ce-8019-135f2f818fea",
+			uuid = "d7c9be3f-e9fd-a8fa-8721-9ba60e5f1e51",
 		},
 		
 		{
@@ -16437,7 +16956,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "910ccf0c-f413-53cf-91ad-5d5ff431adf9",
+			uuid = "2625335f-6a09-47d0-9fb7-7a1f1be1d024",
 		},
 	},
 	[96] = 
@@ -16773,7 +17292,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = -30,
 			used = false,
-			uuid = "630f3fe2-eaed-d963-9578-daf1d8de4e0b",
+			uuid = "c5d81042-6131-5211-96ea-f587bd8e9ee3",
 		},
 		
 		{
@@ -17106,7 +17625,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = -30,
 			used = false,
-			uuid = "1aebce14-e273-b427-9f6b-466426b89c45",
+			uuid = "3a742699-450d-8632-8cf3-a323f0e8fd30",
 		},
 		
 		{
@@ -17182,7 +17701,7 @@ local tbl =
 			timerOffset = -17,
 			timerStartOffset = -18,
 			used = false,
-			uuid = "c7e6d562-72d2-8d4e-97b4-129ca204a033",
+			uuid = "8e300b57-7d9f-548c-bd18-db90c73c5c97",
 		},
 		
 		{
@@ -17350,7 +17869,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "63956887-eb90-7c4e-9fe0-99c1fd0375ba",
+			uuid = "a20620e3-1764-c987-86ab-9dd015e7f3c5",
 		},
 		
 		{
@@ -17490,7 +18009,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "e171217e-93ba-2eaa-a4bf-4b3e90752f58",
+			uuid = "73bd57f7-0c05-5864-932b-4c89c9905c2e",
 		},
 		
 		{
@@ -17694,7 +18213,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "db0af2a2-ec66-7f39-b13a-6db34d334de7",
+			uuid = "984d64f9-f01b-b2ba-88f7-80bc5ccf549c",
 		},
 		
 		{
@@ -17770,7 +18289,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bdb9a9fa-d56a-44d6-8165-9ff4e58526fe",
+			uuid = "63abbfc0-611c-ce97-a3ab-302b103a0a8f",
 		},
 		
 		{
@@ -17846,7 +18365,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "be092efc-df8a-b917-815c-de31c706559a",
+			uuid = "0ffad2dd-77cd-d5bc-8db1-97f33576c0dd",
 		},
 		
 		{
@@ -17922,7 +18441,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "812a1ed3-4066-6aed-a2a2-42a5e94cd43e",
+			uuid = "831e8808-47b4-7156-8aa5-14e6a1474915",
 		},
 		
 		{
@@ -17998,7 +18517,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bc947ff5-e042-32dd-b5bc-ef32d7effd6f",
+			uuid = "7f26e1dc-acb2-5015-a81c-651bf94d8d2b",
 		},
 	},
 	[102] = 
@@ -18251,7 +18770,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5f2f1c82-7557-9bee-a42e-aad6c49bcff0",
+			uuid = "31b39489-b6f4-ba49-8ab3-0b1e6ee5a748",
 		},
 		
 		{
@@ -18407,7 +18926,7 @@ local tbl =
 			timerOffset = -12,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "321080ce-c5c2-1963-8f73-c32c2317ae8e",
+			uuid = "6497437e-b3fc-bed1-8fda-0271006f2a32",
 		},
 		
 		{
@@ -18547,7 +19066,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c61a7b61-0e0b-ea83-9aa6-b913e269e59c",
+			uuid = "d1734b47-9aad-fe18-8d3a-4f5600fb7301",
 		},
 		
 		{
@@ -18623,7 +19142,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4f9d08fb-bb56-1cdc-8598-43d672d072e8",
+			uuid = "02a992c1-f00a-f120-ad8c-5b26d8a963eb",
 		},
 		
 		{
@@ -18699,7 +19218,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "770ca67b-5e5e-873f-a9ba-187f4b00557e",
+			uuid = "5c985422-3736-ce82-a0e8-1112c08dfcbb",
 		},
 	},
 	[104] = 
@@ -18952,7 +19471,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "663631bf-518a-a56a-b74b-a07a4f6e12c4",
+			uuid = "3a860286-8a44-320e-b724-f0830b8ad352",
 		},
 		
 		{
@@ -19138,7 +19657,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f209c8a8-824c-9801-89ae-6661ad0a4eb9",
+			uuid = "f4033369-8ac9-ef5e-84bb-180dd565334b",
 		},
 		
 		{
@@ -19646,7 +20165,7 @@ local tbl =
 			timerOffset = -3,
 			timerStartOffset = -1,
 			used = false,
-			uuid = "6ea1e16b-25e4-e121-9ab1-b6a316f3da77",
+			uuid = "5440269d-e8e9-6be4-ba97-339bd69841c4",
 		},
 		
 		{
@@ -19933,7 +20452,7 @@ local tbl =
 			timerOffset = -3,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d3bd28d7-6e91-0830-800c-b76b2ad7e097",
+			uuid = "6b376948-d330-d33a-990a-615ee29c53ab",
 		},
 		
 		{
@@ -20089,7 +20608,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9ce5612f-9df3-3a1f-bbfb-44f9d9d23b66",
+			uuid = "07b09e57-3537-9961-8a82-f7bde6fbe542",
 		},
 		
 		{
@@ -20165,7 +20684,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7d8ea060-b7f0-7ca1-9667-7c0991319630",
+			uuid = "dec1bc2c-a197-501e-829d-99066c5cd274",
 		},
 		
 		{
@@ -20241,7 +20760,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2ca7a198-1c75-f9d3-bb24-a12cd1470a06",
+			uuid = "21510872-b6d6-1f60-af99-21cfb8562bb1",
 		},
 		
 		{
@@ -20318,7 +20837,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4f12d1ef-9990-c480-bc18-91309a80f184",
+			uuid = "2d621dd8-8a9a-0df9-bb2f-e933068d40e0",
 		},
 		
 		{
@@ -20394,7 +20913,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "3c3e8952-1021-d7b0-afbd-205f45bbd65b",
+			uuid = "c807b735-33a7-b505-b8ca-20f32fb4d67f",
 		},
 	},
 	[107] = 
@@ -20473,7 +20992,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "b7d177ec-4c55-8ee5-b421-1d7056d23d64",
+			uuid = "d031faa2-0bdb-dde3-b1f6-4f45f25ecdc9",
 		},
 		
 		{
@@ -20613,7 +21132,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d630dc9e-8fe7-73ab-bdb9-a73077a7e3bf",
+			uuid = "05570d17-8867-70a0-9ba0-3832f50f3aa1",
 		},
 		
 		{
@@ -20753,7 +21272,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4834cc2f-062d-5796-bc2b-a1139a47b744",
+			uuid = "f344ea9f-b1a8-b221-8fff-62051a6969aa",
 		},
 	},
 	[110] = 
@@ -20960,7 +21479,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a7e726e3-02b8-da8c-b529-bc9a085f3b08",
+			uuid = "dac8e66a-9973-09b9-bc96-c5b960e92a5b",
 		},
 		
 		{
@@ -21036,7 +21555,7 @@ local tbl =
 			timerOffset = -1,
 			timerStartOffset = -12,
 			used = false,
-			uuid = "0b738a58-6548-3b5d-9607-1d92d9be6c7e",
+			uuid = "06b7ac3b-5854-98df-833f-a7512b04d4ef",
 		},
 	},
 	[111] = 
@@ -21118,7 +21637,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "606b631a-1c16-4713-83f5-4f898122d158",
+			uuid = "27c66b61-000b-2be3-976a-39a3af0b0e62",
 		},
 	},
 	[120] = 
@@ -21325,7 +21844,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -5,
 			used = false,
-			uuid = "e86d264d-7c3e-834e-a5f5-b885bbf35474",
+			uuid = "2da7eb84-6884-9028-9cfc-60a62343dd77",
 		},
 		
 		{
@@ -21529,7 +22048,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "89c8743a-bb9a-28ab-af1b-7ffc4f1dcd2c",
+			uuid = "43f2cc47-1edc-a9f9-af83-b4985e14c4b0",
 		},
 		
 		{
@@ -21605,7 +22124,7 @@ local tbl =
 			timerOffset = 10.10000038147,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "cecc58de-c480-fd32-ab3b-9a949aa38e9c",
+			uuid = "90a23339-80f3-6f0b-81ff-e070a9f4d0e4",
 		},
 		
 		{
@@ -21745,7 +22264,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6df55026-b388-6cad-83f1-70cab37a0466",
+			uuid = "a0a6c06c-47ba-02a5-abc6-e60f94a14a9b",
 		},
 	},
 	[124] = 
@@ -21891,7 +22410,7 @@ local tbl =
 			timerOffset = -0.5,
 			timerStartOffset = -2,
 			used = false,
-			uuid = "fafa2999-26e8-8259-9894-a6c467defef8",
+			uuid = "6d05d006-437b-3997-b059-b29a9ba054f1",
 		},
 		
 		{
@@ -22031,7 +22550,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "aceed715-f85e-dd92-9189-1501f7b42fc9",
+			uuid = "3fce4389-7f52-5f4a-83c6-a6f83ae4119f",
 		},
 		
 		{
@@ -22235,7 +22754,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "9d7a2a16-7b20-e25a-af8f-cfdc5988cc6c",
+			uuid = "2889d428-a659-dda4-bbb8-2cea54e379c5",
 		},
 		
 		{
@@ -22311,7 +22830,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "b43a36d5-bf3d-ea79-ab7d-966eea6231f3",
+			uuid = "c02c5854-8ae8-685c-9e7d-cb8f8434387e",
 		},
 		
 		{
@@ -22498,7 +23017,7 @@ local tbl =
 			timerOffset = -18,
 			timerStartOffset = -20,
 			used = false,
-			uuid = "7b1e0374-4d2e-9241-ba6c-c74e484d925e",
+			uuid = "989d3709-89c7-1680-9981-7c7a2c7c8ef9",
 		},
 	},
 	[126] = 
@@ -22751,7 +23270,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a68afc1f-f3a5-aa34-bd28-e8646032c476",
+			uuid = "ccb09377-a2d5-40c5-aa13-c14653afd213",
 		},
 		
 		{
@@ -23001,7 +23520,7 @@ local tbl =
 			timerOffset = 13,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5ff23f6a-acc2-7182-a420-e2d798603209",
+			uuid = "83130685-f808-d711-b218-0f893dea35c2",
 		},
 		
 		{
@@ -23077,7 +23596,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "95b6eb66-6ced-962c-9a05-84470a3eb768",
+			uuid = "586f612e-650f-8af4-9925-9ed0eac64350",
 		},
 		
 		{
@@ -23153,7 +23672,7 @@ local tbl =
 			timerOffset = 13,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "617d12d4-b0f5-227e-a7f2-803ff95b8560",
+			uuid = "25f164b4-f0d7-c8e2-a55d-c0373680a2a4",
 		},
 		
 		{
@@ -23309,7 +23828,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "85cb1a08-c099-c1a8-9905-dfdd91955055",
+			uuid = "8f752040-5aad-6f26-97a6-5662c7362d3d",
 		},
 		
 		{
@@ -23465,7 +23984,7 @@ local tbl =
 			timerOffset = 8,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "406478de-ad96-3132-9d88-b8abdbc70002",
+			uuid = "f344f92f-2dbf-5374-9b1e-479a0c010ff1",
 		},
 		
 		{
@@ -23752,7 +24271,7 @@ local tbl =
 			timerOffset = -3,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4e0883c8-c8dc-03a5-a7f6-07517a21996e",
+			uuid = "cb097758-9e16-ea04-b6c7-cb91223da87b",
 		},
 		
 		{
@@ -23828,7 +24347,7 @@ local tbl =
 			timerOffset = -11,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c8531363-f307-9109-8283-4fd91a63c44c",
+			uuid = "d95a8355-cf1c-bb94-aad0-5cac1c01c79e",
 		},
 		
 		{
@@ -23904,7 +24423,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 6,
 			used = false,
-			uuid = "f606b177-711b-472e-af77-2938204739d4",
+			uuid = "0ddc5849-9ae6-a17b-b364-d88a9bb37213",
 		},
 		
 		{
@@ -23980,7 +24499,7 @@ local tbl =
 			timerOffset = 9,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "8a39067f-5e2f-746e-be40-ae8b3d2dd950",
+			uuid = "ee3544ac-a3fc-c975-85a1-6d9d4999edea",
 		},
 	},
 	[127] = 
@@ -24059,7 +24578,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c1821bd7-f94f-e087-b384-8b39060c5133",
+			uuid = "d0617937-de30-da41-ae3d-b2d5945b1423",
 		},
 	},
 	[129] = 
@@ -24202,7 +24721,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e75d017c-b853-25fc-846a-52041e9f3eb6",
+			uuid = "92d41389-039b-fb38-80aa-8dc87bced360",
 		},
 		
 		{
@@ -24342,7 +24861,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "df3c742a-ff0b-665a-94cb-b54a1409ac3f",
+			uuid = "cc3c4935-bfbb-b341-a514-f196a4b4f222",
 		},
 		
 		{
@@ -24546,7 +25065,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "f3f3f4fb-6252-322e-8769-bf80550f9730",
+			uuid = "175fb06b-3b94-c92a-9d5b-179308460588",
 		},
 	},
 	[138] = 
@@ -24625,7 +25144,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "842521a4-e9d4-1392-a644-6984d10cc4d8",
+			uuid = "167ba54a-b5fc-6620-8554-49303763ce5e",
 		},
 	},
 	[139] = 
@@ -24768,7 +25287,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "a0849f8d-41f0-a056-b605-241932f19946",
+			uuid = "c34105f6-7d8f-e653-b712-c568d78ce481",
 		},
 		
 		{
@@ -24844,7 +25363,7 @@ local tbl =
 			timerOffset = -5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ad385537-320b-236d-95c4-8f814e1057ff",
+			uuid = "ba3f682e-e124-be2b-9ead-ca319ac78371",
 		},
 	},
 	[141] = 
@@ -25356,7 +25875,7 @@ local tbl =
 			timerOffset = -7,
 			timerStartOffset = -4,
 			used = false,
-			uuid = "ae7100f5-fb14-7279-9adc-f72ea5f3ec7b",
+			uuid = "65a93f8f-891f-64d1-8eb3-7384e04d31ba",
 		},
 		
 		{
@@ -25560,7 +26079,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "bc0976d5-84e2-b4fc-a718-bc17f754b06d",
+			uuid = "da819a1e-15a6-3bd6-a7ba-0c95b5e19074",
 		},
 		
 		{
@@ -25636,7 +26155,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "846ebc7d-01fe-3624-9658-3678a06d224c",
+			uuid = "25abf57d-d125-d5ae-9467-1acd4c1815d3",
 		},
 		
 		{
@@ -25712,7 +26231,7 @@ local tbl =
 			timerOffset = -9,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "be84b4e8-20b8-b749-9662-a7233375ebc6",
+			uuid = "ecfd46fe-8124-06c1-a948-323c2f696bc1",
 		},
 		
 		{
@@ -25899,7 +26418,7 @@ local tbl =
 			timerOffset = -18,
 			timerStartOffset = -20,
 			used = false,
-			uuid = "dd933e6b-dd29-9fbb-bd20-4fd1543e6d2f",
+			uuid = "628ed47b-933b-b58c-b5d8-4e96a18ab3ad",
 		},
 		
 		{
@@ -25975,7 +26494,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0744860d-2c77-175d-99a4-db7a4a92e997",
+			uuid = "f23f3864-3ffe-2872-8292-9907d0105c6f",
 		},
 		
 		{
@@ -26051,7 +26570,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "0ef84838-60ae-3127-b873-3a4f53eece59",
+			uuid = "72153fb0-7922-ecde-8221-8f40c3bd0d74",
 		},
 	},
 	[142] = 
@@ -26304,7 +26823,7 @@ local tbl =
 			timerOffset = -12,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "1e5e43ad-71f9-314a-89b8-c7fa38e49a70",
+			uuid = "94eaccf8-c248-9258-a89d-862a8cdb0fd1",
 		},
 		
 		{
@@ -26460,7 +26979,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "9d8dd776-aac0-b244-a5f5-cb1bb70ba361",
+			uuid = "07a6bf8f-0b2d-8803-a9d2-1b70ca9047c1",
 		},
 		
 		{
@@ -26710,7 +27229,7 @@ local tbl =
 			timerOffset = 15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d5b0045a-e7d8-19fe-bd5b-27ba9b6c3a3c",
+			uuid = "1bfaa5a7-9968-10fb-90a3-f485be7eb55e",
 		},
 		
 		{
@@ -26786,7 +27305,7 @@ local tbl =
 			timerOffset = -9,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7ce52650-15d8-0db0-a756-61c74a8f7f0a",
+			uuid = "85001a5e-0dd2-84b3-80f2-3b41f06e8d1a",
 		},
 		
 		{
@@ -26989,7 +27508,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "bac289af-e57b-4a54-bd90-9d40515b40ff",
+			uuid = "b51fec67-e476-6002-955e-4214f15b7452",
 		},
 		
 		{
@@ -27192,7 +27711,7 @@ local tbl =
 			timerOffset = 15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4637113b-42a6-729e-b3ef-caae76664105",
+			uuid = "d57d2aed-751b-5476-b8b3-e8f4ce2a54a6",
 		},
 		
 		{
@@ -27348,7 +27867,7 @@ local tbl =
 			timerOffset = 5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "d21daa89-511b-3180-ac8a-9f0c024ac8d8",
+			uuid = "ea8028a0-c1b8-7104-bbef-115c7dc1757f",
 		},
 		
 		{
@@ -27488,7 +28007,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "f9135d60-0241-5057-babf-041fae65149e",
+			uuid = "a47a8ae9-a652-1a27-aacc-26519f45466b",
 		},
 		
 		{
@@ -27644,7 +28163,7 @@ local tbl =
 			timerOffset = -23,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e41e7a56-60e5-9839-9feb-f4abf6a2751c",
+			uuid = "adde4a66-a9ec-e6f0-8d22-8e6ad2a876df",
 		},
 		
 		{
@@ -27800,7 +28319,7 @@ local tbl =
 			timerOffset = 15,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "eca0c0d4-60de-af5c-a4e3-100a27a1d896",
+			uuid = "29fb808b-4b87-bdf8-b509-35b85afb1896",
 		},
 		
 		{
@@ -27958,7 +28477,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4416c740-f5c6-bc31-8d8b-65b98564f293",
+			uuid = "6741ca13-a945-bd4d-ae57-39c2395e9f22",
 		},
 		
 		{
@@ -28100,7 +28619,7 @@ local tbl =
 			timerOffset = -3.5,
 			timerStartOffset = -5,
 			used = false,
-			uuid = "1b034672-66a2-e189-8b55-8ee31f2252d3",
+			uuid = "214cd770-b734-61a6-a111-0ae35adf644c",
 		},
 		
 		{
@@ -28240,7 +28759,7 @@ local tbl =
 			timerOffset = -42,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6c438607-39ce-7a92-a37c-70cb63f0815a",
+			uuid = "2b78b99a-4872-8b1c-ac49-4da0549b7f73",
 		},
 		
 		{
@@ -28316,7 +28835,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c6b686b2-da35-6a1c-8218-f876f3ea1ed2",
+			uuid = "c250c4ff-b549-1e74-bdf2-f53295ec0ebc",
 		},
 		
 		{
@@ -28502,7 +29021,7 @@ local tbl =
 			timerOffset = -7.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "705b05dc-c3c8-071f-87c8-cd177446a2a8",
+			uuid = "519c9f75-75c6-6fe4-aa4a-4c794aed6e73",
 		},
 	},
 	[153] = 
@@ -28584,7 +29103,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "94f4c6d3-3438-8cf2-801c-f0963c848f04",
+			uuid = "fb351297-0bfa-bfb2-aaa7-34d5247923c5",
 		},
 		
 		{
@@ -28771,7 +29290,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5da391ed-8d66-6ba7-838d-8c9781330744",
+			uuid = "e7f686c0-9c1a-3977-9ccb-dddee8639a44",
 		},
 	},
 	[156] = 
@@ -28851,7 +29370,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -8,
 			used = false,
-			uuid = "64f694cb-0f0a-2384-9758-17b93e9bb1c1",
+			uuid = "eec10d65-8a40-635b-a223-9fa0d7a483e2",
 		},
 		
 		{
@@ -29211,7 +29730,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = -4,
 			used = false,
-			uuid = "083d6c64-409e-a644-812b-f36e9d127f0c",
+			uuid = "809f7cdb-d037-6c41-b952-561b0b3e9d5a",
 		},
 		
 		{
@@ -29431,7 +29950,7 @@ local tbl =
 			timerOffset = -1.3999999761581,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "ed907439-1cad-c033-95e7-ae45f968a0e2",
+			uuid = "f89f936d-ea4a-8a71-8788-fa09d0482660",
 		},
 		
 		{
@@ -29681,7 +30200,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "e2b39e4c-342c-60b3-9efc-093588aafb31",
+			uuid = "935ae778-31a3-bfab-b8a7-6fb2a61b492b",
 		},
 		
 		{
@@ -29885,7 +30404,7 @@ local tbl =
 			timerOffset = -1.3999999761581,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6beff6da-aa81-d70d-b7cd-bc6bae6bc331",
+			uuid = "ba5bde21-2c6e-5308-82de-0de6c9e28617",
 		},
 		
 		{
@@ -30265,7 +30784,7 @@ local tbl =
 			timerOffset = -14.5,
 			timerStartOffset = -14.5,
 			used = false,
-			uuid = "f43592e3-af83-faed-9bb4-d24512ce9288",
+			uuid = "313752d6-ace2-0b69-a54c-30de2ed47c25",
 		},
 		
 		{
@@ -30452,7 +30971,7 @@ local tbl =
 			timerOffset = -2,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "faf39f5c-e5de-9961-b7a1-d9c3fcf5be4f",
+			uuid = "0795aea7-b958-8302-9e0f-e455854a400f",
 		},
 		
 		{
@@ -30656,7 +31175,7 @@ local tbl =
 			timerOffset = -30,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "5791582f-606d-8d05-b80c-27f66c5feba4",
+			uuid = "a239201d-fb05-08c0-9040-18b0687718b4",
 		},
 		
 		{
@@ -31346,7 +31865,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = -3.5,
 			used = false,
-			uuid = "c93ec4de-d504-fe8b-b81c-16718d9ef20b",
+			uuid = "77a68a47-bf5e-0905-9e4b-20da1cdf9ddb",
 		},
 		
 		{
@@ -31422,7 +31941,7 @@ local tbl =
 			timerOffset = 10,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "82ab8128-0074-edf7-88bd-8d6a6487cef5",
+			uuid = "93adffea-4185-279b-b139-de22b0a59aaf",
 		},
 		
 		{
@@ -31498,7 +32017,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "4f53cfe3-335b-bc1a-945f-b6ba3487af96",
+			uuid = "fe0d9414-a50d-78f1-9f6f-0b802e692cb4",
 		},
 	},
 	[162] = 
@@ -31641,7 +32160,7 @@ local tbl =
 			timerOffset = -2.5,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6ebb9100-bf02-2321-90d7-ba567d657e0e",
+			uuid = "2ef400f1-4b6f-40e9-9d9f-8ae2ed31b611",
 		},
 		
 		{
@@ -31717,7 +32236,7 @@ local tbl =
 			timerOffset = 1,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "c5c02d6d-4fe5-a1c5-8db1-77cd719089cb",
+			uuid = "a09ef4d0-ab3e-2293-8de5-eb2d15b47f53",
 		},
 	},
 	[165] = 
@@ -31925,7 +32444,7 @@ local tbl =
 			timerOffset = -8,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "a9e53cec-0ac7-6c92-9af5-0685a60b66c2",
+			uuid = "89649820-b6c0-8ef5-a2da-041a68879e54",
 		},
 	},
 	[166] = 
@@ -32132,7 +32651,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "bb9bb499-ba69-5457-9c14-69ac856c874b",
+			uuid = "8d5fce89-3bf0-ceea-ba40-9816f250078d",
 		},
 		
 		{
@@ -32208,7 +32727,7 @@ local tbl =
 			timerOffset = -2.9500000476837,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "3441942b-b46a-1d24-bf8f-e01a962b9cae",
+			uuid = "34155965-a435-bd5a-8ff6-0db0e3833f5e",
 		},
 	},
 	[174] = 
@@ -32767,7 +33286,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = -4,
 			used = false,
-			uuid = "7fa9d7e7-c2f5-9dfb-aea2-706c67659201",
+			uuid = "0b9a7ad8-b496-f20e-8c36-5f9870841f60",
 		},
 	},
 	[175] = 
@@ -32846,7 +33365,7 @@ local tbl =
 			timerOffset = 0.20000000298023,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "05fa953d-1eca-cf0c-b156-c97e6afc9d9a",
+			uuid = "5674eca3-c14a-29d1-a564-08fa0641a320",
 		},
 	},
 	[178] = 
@@ -33405,7 +33924,7 @@ local tbl =
 			timerOffset = -15,
 			timerStartOffset = -4,
 			used = false,
-			uuid = "fe28ae5d-5f47-9c3e-a518-2992f3e0bc9e",
+			uuid = "71516f5d-1067-925f-a0af-ae72c949a4b8",
 		},
 		
 		{
@@ -33609,7 +34128,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = -9,
 			used = false,
-			uuid = "057cb10b-5540-2004-9e6e-5c19181faeb9",
+			uuid = "ccafa406-f594-a9d2-b6f1-133039192abe",
 		},
 		
 		{
@@ -33749,7 +34268,7 @@ local tbl =
 			timerOffset = -10,
 			timerStartOffset = -10,
 			used = false,
-			uuid = "39034879-15bb-b6ee-8dab-b51b1a95a3bb",
+			uuid = "824a9707-7816-19e4-a7b7-5d317b6beec4",
 		},
 		
 		{
@@ -33936,7 +34455,7 @@ local tbl =
 			timerOffset = -18,
 			timerStartOffset = -20,
 			used = false,
-			uuid = "b000d01e-6bba-f834-8890-850278bb80fb",
+			uuid = "7f8e80d7-71ba-dc7d-8b92-45d62d3af009",
 		},
 	},
 	[179] = 
@@ -34239,7 +34758,7 @@ local tbl =
 			timerOffset = 0,
 			timerStartOffset = -300,
 			used = false,
-			uuid = "13c1c5bf-44fe-77ef-ae40-ad8c9b888571",
+			uuid = "7851abc5-64e9-db07-bdd3-1e60f018e52e",
 		},
 	},
 	mapID = 949,

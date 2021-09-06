@@ -1698,7 +1698,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "data.countdownCanceled = true\nAnyoneCore.log(\"Countdown was canceled.\", 2)\nself.used = true",
+				actionLua = "data.countdownCanceled = true\nAnyoneCore.Data.countdownCanceled = true\nAnyoneCore.log(\"Countdown was canceled.\", 2)\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -1844,7 +1844,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "513cb762-4748-8e7f-a4b5-a646f906bebf",
+		uuid = "bd4cd5ca-9b15-1a5f-af75-c12598601b75",
 	},
 	
 	{

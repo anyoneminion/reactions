@@ -2432,6 +2432,38 @@ local tbl =
 			used = false,
 			uuid = "ead36d00-2f6a-29d5-ba8f-d2ab3211b6dd",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			eventType = 1,
+			execute = "--- Huge thank you to MattyIce for helping with Red Mage and Black mage reactions. \n--- He's done a bulk of the work on optimizing these jobs and I (Anyone) just give him a framework to use.",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 16.9,
+			name = "--credits--",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 16.9,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 2,
+			timeout = 5,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "60c7e2e4-ce24-8fd4-af88-02b34edcc212",
+		},
 	},
 	[4] = 
 	{

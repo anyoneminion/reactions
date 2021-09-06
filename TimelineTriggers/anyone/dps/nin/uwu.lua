@@ -192,7 +192,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local blEntry = TensorCore.API.TensorWeeb.getBlacklistEntry(1648)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuMNK.addBlacklistEntry(1648)\n\t\tend\nself.used = true\n",
+					actionLua = "local blEntry = TensorCore.API.RikuNIN.getBlacklistEntry(1648)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuNIN.addBlacklistEntry(1648)\n\t\tend\nself.used = true\n",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -239,7 +239,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local blEntry = TensorCore.API.TensorWeeb.getBlacklistEntry(2091)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuMNK.addBlacklistEntry(2091)\n\t\tend\nself.used = true\n",
+					actionLua = "local blEntry = TensorCore.API.RikuNIN.getBlacklistEntry(2091)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuNIN.addBlacklistEntry(2091)\n\t\tend\nself.used = true\n",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -286,7 +286,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local blEntry = TensorCore.API.TensorWeeb.getBlacklistEntry(1804)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuMNK.addBlacklistEntry(1804)\n\t\tend\nself.used = true\n",
+					actionLua = "local blEntry = TensorCore.API.RikuNIN.getBlacklistEntry(1804)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuNIN.addBlacklistEntry(1804)\n\t\tend\nself.used = true\n",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -333,7 +333,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local blEntry = TensorCore.API.TensorWeeb.getBlacklistEntry(1186)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuMNK.addBlacklistEntry(1186)\n\t\tend\nself.used = true\n",
+					actionLua = "local blEntry = TensorCore.API.RikuNIN.getBlacklistEntry(1186)\n\t\tif blEntry ~= nil then\n\t\t\t\tblEntry.enabled = true\n\t\telseif blEntry == nil then\n\t\t\t\tTensorCore.API.RikuNIN.addBlacklistEntry(1186)\n\t\tend\nself.used = true\n",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
