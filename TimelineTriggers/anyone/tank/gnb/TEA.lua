@@ -3047,7 +3047,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "for id, ent in pairs(EntityList(\"\")) do\n\tif ent.contentid == 8658 then\n\t\t\tArgus.addTimedRectFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 20, 3, 0, {r = 0, g = 1, b = 0}, 0.2, 0.2, 0, ent.id, nil, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\tend\nend\nself.used = true",
+					actionLua = "local ent = Player:GetTarget()\nArgus.addTimedRectFilled(7000, ent.pos.x, ent.pos.y, ent.pos.z, 20, 3, 0, {r = 0, g = 1, b = 0}, 0.1, 0.1, 0, ent.id, nil, false, GUI:ColorConvertFloat4ToU32(0.5, 1, 0, 1), 1)\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3186,7 +3186,7 @@ local tbl =
 					conditions = 
 					{
 					},
-					contentid = 8658,
+					contentid = 9218,
 					dequeueIfLuaFalse = false,
 					enmityValue = 0,
 					filterTargetSubtype = "Nearest",
@@ -3236,13 +3236,13 @@ local tbl =
 			throttleTime = 0,
 			time = 314.1,
 			timeRandomRange = false,
-			timeRange = true,
+			timeRange = false,
 			timelineIndex = 73,
 			timerEndOffset = 3,
-			timerOffset = 0,
+			timerOffset = -3,
 			timerStartOffset = -3,
 			used = false,
-			uuid = "a9fe83ec-4c1a-6dcb-b09d-c0ad82b62f00",
+			uuid = "2d881c98-c2d7-906b-9c93-bcbe1569f03b",
 		},
 		
 		{
