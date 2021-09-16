@@ -10842,7 +10842,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.twindead == nil and MoogleTelegraphs ~= nil and AnyoneCore.tankJobs[Player.job]",
+				conditionLua = "return data.twindead == nil and MoogleTelegraphs ~= nil and AnyoneCore.tankJobs[Player.job] == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -10979,6 +10979,7 @@ local tbl =
 			},
 		},
 		enabled = true,
+		eventConditionMismatch = true,
 		eventType = 12,
 		execute = "",
 		executeType = 1,
@@ -10998,7 +10999,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "c2070e6f-5be8-2fc4-8be9-895f06cabcc8",
+		uuid = "dc3acc5a-9507-6a64-b4bb-d001135005ba",
 	},
 	
 	{
