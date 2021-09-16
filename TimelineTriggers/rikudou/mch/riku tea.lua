@@ -11,7 +11,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if ACR_TensorMagnum_Potion == true then\nAnyoneCore.Data.PotsEnabled = true\nend\n\n---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\nif AnyoneCore.Settings.AutoSetSpeedHacks == true then\n\t\tgDevHackWalkSpeed = AnyoneCore.Settings.SpeedHackValue\n\t\tPlayer:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\nend\n\nself.used = true",
+			execute = "if ACR_TensorMagnum_Potion == true then\nAnyoneCore.Data.PotsEnabled = true\nend\n\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,

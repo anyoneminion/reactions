@@ -6,6 +6,36 @@ local tbl =
 		{
 			actions = 
 			{
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			execute = "DO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE\n\nDO NOT USE THIS TIMELINE IF YOUR JOB ALREADY HAS AN EXISTING TIMELINE",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 11.4,
+			name = "-- READ ME -- IMPORTANT",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 11.4,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "33146d19-d6e4-3abc-9a5b-4367844b72de",
+		},
+		
+		{
+			actions = 
+			{
 				
 				{
 					aType = 4,

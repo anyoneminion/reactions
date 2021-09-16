@@ -1215,7 +1215,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "data.twindead = true\ndata.mtentityid = TensorCore.getEntityByGroup(\"Main Tank\")\nself.used = true",
+					actionLua = "data.twindead = true\nlocal mt = TensorCore.getEntityByGroup(\"Main Tank\")\ndata.mtentityid = mt.id\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,

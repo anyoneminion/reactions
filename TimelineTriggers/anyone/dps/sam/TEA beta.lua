@@ -6,36 +6,6 @@ local tbl =
 		{
 			actions = 
 			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "---if you want a higher or lower speed, you can change 7.2 to anything you want. you will have to change on each timeline.\nif AnyoneCore.Settings.AutoSetSpeedHacks == true then\n\t\tgDevHackWalkSpeed = AnyoneCore.Settings.SpeedHackValue\n\t\tPlayer:SetSpeed(1,gDevHackWalkSpeed,gDevHackWalkSpeed,gDevHackWalkSpeed)\nend\nself.used = true",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 11.4,
-			name = "REACTION SETTINGS",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 11.4,
-			timeRandomRange = false,
-			timeRange = false,
-			timelineIndex = 2,
-			timerEndOffset = 0,
-			timerOffset = -10,
-			timerStartOffset = 0,
-			used = false,
-			uuid = "e63bc6e9-87d3-48cb-bea4-a7256bc62459",
-		},
-		
-		{
-			actions = 
-			{
 				
 				{
 					aType = 4,
@@ -283,6 +253,82 @@ local tbl =
 			timerStartOffset = 0,
 			used = false,
 			uuid = "7a712d81-47f0-cfa4-97b8-942ae088bb3a",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 4,
+					actionID = -1,
+					actionLua = "AnyoneCore.Settings.DutyHelper.enabled = false\nself.used = true",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+					},
+					endIfUsed = false,
+					fallthrough = false,
+					gVar = "",
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = false,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Self",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 11.4,
+			name = "Disable Duty Helper",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 11.4,
+			timeRandomRange = false,
+			timeRange = false,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = -10,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "b47dd289-59e4-be38-bdf1-0819680d4d01",
 		},
 	},
 	[3] = 
