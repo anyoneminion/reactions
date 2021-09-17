@@ -263,6 +263,7 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 7,
 			name = "Get Twin's ID for Octet",
 			randomOffset = 0,
 			randomTimeout = 3,

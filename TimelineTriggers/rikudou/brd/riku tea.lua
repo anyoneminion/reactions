@@ -6731,6 +6731,7 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 306.7,
 			name = "refresh dots if needed",
 			randomOffset = 0,
 			randomTimeout = 3,
