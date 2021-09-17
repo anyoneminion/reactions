@@ -131,7 +131,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "ACR_RikuDNC_CD = true\nACR_RikuDNC_AOE = true\nACR_RikuDNC_SmartAOE = true\nACR_RikuDNC_Burn = false\nACR_RikuDNC_NoHold = false\nACR_RikuDNC_StandardFinish = true\nACR_RikuDNC_TechnicalFinish = true\nACR_RikuDNC_StandardStep = true\nACR_RikuDNC_AutoPartner = false\nACR_RikuDNC_Flourish = true\nACR_RikuDNC_FanDance = true\nACR_RikuDNC_Potion = false\nACR_RikuDNC_HoldAOE = false\nACR_RikuDNC_SaberDance = true\n\nACR_RikuDNC_Hotbar_ArmsLength = false\nACR_RikuDNC_Hotbar_SecondWind = false\nACR_RikuDNC_Hotbar_ShieldSamba = false\nACR_RikuDNC_Hotbar_Potion = false\nACR_RikuDNC_Hotbar_Sprint = false\nACR_RikuDNC_Hotbar_HeadGraze = false\nACR_RikuDNC_Hotbar_EnAvant = false\nACR_RikuDNC_Hotbar_LimitBreak = false\nACR_RikuDNC_Hotbar_CuringWaltz = false\nACR_RikuDNC_Hotbar_ClosedPosition = false\nACR_RikuDNC_Hotbar_LockFace = false\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tACR_RikuDNC_Potion = true\t\t\n\t\tAnyoneCore.Data.PotsEnabled = nil\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_RikuDNC_Potion = false\nend\n\nself.used = true",
+				actionLua = "ACR_RikuDNC_CD = true\nACR_RikuDNC_AOE = true\nACR_RikuDNC_SmartAOE = true\nACR_RikuDNC_Burn = false\nACR_RikuDNC_NoHold = false\nACR_RikuDNC_StandardFinish = true\nACR_RikuDNC_TechnicalFinish = true\nACR_RikuDNC_StandardStep = true\nACR_RikuDNC_Flourish = true\nACR_RikuDNC_FanDance = true\nACR_RikuDNC_Potion = false\nACR_RikuDNC_HoldAOE = false\nACR_RikuDNC_SaberDance = true\n\nACR_RikuDNC_Hotbar_ArmsLength = false\nACR_RikuDNC_Hotbar_SecondWind = false\nACR_RikuDNC_Hotbar_ShieldSamba = false\nACR_RikuDNC_Hotbar_Potion = false\nACR_RikuDNC_Hotbar_Sprint = false\nACR_RikuDNC_Hotbar_HeadGraze = false\nACR_RikuDNC_Hotbar_EnAvant = false\nACR_RikuDNC_Hotbar_LimitBreak = false\nACR_RikuDNC_Hotbar_CuringWaltz = false\nACR_RikuDNC_Hotbar_ClosedPosition = false\nACR_RikuDNC_Hotbar_LockFace = false\n\nif AnyoneCore.Data.PotsEnabled == true or AnyoneCore.Settings.PotionOverride == true then\n\t\tACR_RikuDNC_Potion = true\t\t\n\t\tAnyoneCore.Data.PotsEnabled = nil\nend\n\nif Player.localmapid == 777 and AnyoneCore.Settings.IfritPhasePot == true then\n\t\tACR_RikuDNC_Potion = false\nend\n\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -13650,7 +13650,6 @@ local tbl =
 			},
 		},
 		enabled = true,
-		eventConditionMismatch = true,
 		eventType = 12,
 		execute = "",
 		executeType = 1,
