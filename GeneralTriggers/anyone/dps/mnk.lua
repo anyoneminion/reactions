@@ -5929,7 +5929,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true return end\nlocal ent = EntityList:Get(eventArgs.entityID)\nif not ent then self.used = true return end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nArgus2.addTimedConeFilled(6000, 0, 0, 0, 25, math.rad(90), 0, 30, start, finish, mid, 0, nil, ent.id, nil, line)\nself.used = true",
+				actionLua = "local ent = EntityList:Get(eventArgs.entityID)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nif ent then\n\t\tArgus2.addTimedConeFilled(5000, 0, 0, 0, 30, math.rad(95), 0, 50, start, finish, mid, 0, nil, ent.id, nil, line)\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -5947,7 +5947,7 @@ local tbl =
 					3,
 					4,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarIndex = 1,
@@ -5980,7 +5980,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if data.octetblacklist == nil then data.octetblacklist = {} end\ndata.octetblacklist[eventArgs.entityID] = true\nif #tbl >= 7 then\n\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\tlocal findtwin = TensorCore.getEntityGroupList(\"ContentID\", {contentid = 1482})\n\t\tlocal twin\n\t\tfor k,v in pairs(findtwin) do\n\t\t\t\ttwin = v.id\n\t\tend\n\t\tfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do \n\t\t\t\tif not data.octetblacklist[id] then\n\t\t\t\t\t\tArgus2.addTimedRectFilled(9000, 0, 0, 0, 60, 8, 0, start, finish, mid, 0, twin, ent.id, true, nil, line)\n\t\t\t\tend\n\t\tend\nend\nself.used = true",
+				actionLua = "if data.octetblacklist == nil then data.octetblacklist = {} end\ndata.octetblacklist[eventArgs.entityID] = true\nif #data.octetblacklist >= 7 then\n\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\tfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do \n\t\t\t\tif not data.octetblacklist[id] then\n\t\t\t\t\t\tArgus2.addTimedRectFilled(9000, 0, 0, 0, 60, 8, 0, start, finish, mid, 0, data.twinid, ent.id, true, nil, line)\n\t\t\t\tend\n\t\tend\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -5999,7 +5999,7 @@ local tbl =
 					4,
 					6,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarValue = 1,
@@ -6031,7 +6031,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if data.hatchtargets == nil then data.hatchtargets = {} end\n\nif data.hatchtargets[eventArgs.entityID] == nil then \n\t\tdata.hatchtargets[eventArgs.entityID] = Now()\nelse\n\t\tif TimeSince(data.hatchtargets[eventArgs.entityID]) >= 8000 then\n\t\t\t\tdata.hatchtargets[eventArgs.entityID] = nil\n\t\t\t\tself.used = true\n\t\tend\nend",
+				actionLua = "if data.hatchtargets == nil then data.hatchtargets = {} end\n\nif data.hatchtargets[eventArgs.entityID] == nil then \n\t\tdata.hatchtargets[eventArgs.entityID] = Now()\nend",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -6048,7 +6048,7 @@ local tbl =
 					2,
 					7,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarValue = 1,
@@ -6339,7 +6339,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -6648,12 +6648,12 @@ local tbl =
 		timeRandomRange = false,
 		timeRange = false,
 		timelineIndex = 0,
-		timeout = 10,
+		timeout = 5,
 		timerEndOffset = 0,
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "f2c40bf7-e7ed-503f-8c15-fc310b472b24",
+		uuid = "04a8b8a9-ea63-48e5-8d59-8094e3be1e9d",
 	},
 	
 	{
@@ -8189,7 +8189,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -8740,7 +8740,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "0d4e91a7-97f1-93f6-955f-d809cf603fcd",
+		uuid = "40a61774-8068-b4c1-8e0e-0307efcbb7f1",
 	},
 	
 	{
@@ -10276,7 +10276,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -10827,7 +10827,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "d650513b-98db-7ff1-a58c-0d6bced0cba5",
+		uuid = "de98c3cc-b4d9-078a-9bbe-b9eaee8a5541",
 	},
 	
 	{
@@ -12363,7 +12363,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -12914,7 +12914,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "c8b140d1-76a0-a348-91a7-38e351b804ec",
+		uuid = "c4174ad3-0c40-5783-810c-b83cc938b478",
 	},
 	
 	{
@@ -12924,7 +12924,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true end\n\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then\n\t\t\t\tArgus2.addTimedCircleFilled(eventArgs.channelTimeMax*1000,ent.pos.x,ent.pos.y,ent.pos.z,1,30,start,finish,mid,0,ent.id,nil,line)\n\t\tend \nend\n\nself.used = true\n\n",
+				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then\n\t\t\t\tArgus2.addTimedCircleFilled(eventArgs.channelTimeMax*1000,ent.pos.x,ent.pos.y,ent.pos.z,1,30,start,finish,mid,0,ent.id,nil,line)\n\t\tend \nend\n\nself.used = true\n\n",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -13155,7 +13155,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.DrawNaelQuotes == true",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -13311,7 +13311,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "6a833a3e-795a-0086-8ebf-e3550463c285",
+		uuid = "a6fa43e1-4631-a674-ac50-145e30aadf62",
 	},
 	
 	{
@@ -13471,7 +13471,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id,time in pairs(data.hatchtargets) do\n\t\tlocal ent = MGetEntity(id)\n\t\tlocal buff = TensorCore.getBuff(ent, 344)\n\t\tif buff ~= nil then\n\t\t\t\tArgus.addCircleFilled(ent.pos.x, ent.pos.y, ent.pos.z, 8, 50, mid, finish, line)\n\t\tend\nend\nself.used = true",
+				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id,time in pairs(data.hatchtargets) do\n\t\tif TimeSince(time) <= 15000 then\n\t\t\t\tlocal ent = MGetEntity(id)\n\t\t\t\tlocal buff = TensorCore.getBuff(ent, 344)\n\t\t\t\tif buff ~= nil then\n\t\t\t\t\t\tArgus.addCircleFilled(ent.pos.x, ent.pos.y, ent.pos.z, 8, 50, mid, finish, line)\n\t\t\t\tend\n\t\telseif TimeSince(time) > 15000 then\n\t\t\t\tdata.hatchtargets[id] = nil\n\t\tend\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -13484,8 +13484,9 @@ local tbl =
 				clusterRange = 30,
 				conditions = 
 				{
-					1,
+					2,
 					7,
+					1,
 				},
 				endIfUsed = false,
 				fallthrough = false,
@@ -13541,7 +13542,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.DrawNaelQuotes == true and Argus ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -14093,7 +14094,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "bc094730-d15c-3a77-89db-2107472749f7",
+		uuid = "483bc8c7-87e5-f9b8-bd26-62fc23858f47",
 	},
 	
 	{

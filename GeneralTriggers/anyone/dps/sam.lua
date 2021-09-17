@@ -4869,7 +4869,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true return end\nlocal ent = EntityList:Get(eventArgs.entityID)\nif not ent then self.used = true return end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nArgus2.addTimedConeFilled(6000, 0, 0, 0, 25, math.rad(90), 0, 30, start, finish, mid, 0, nil, ent.id, nil, line)\nself.used = true",
+				actionLua = "local ent = EntityList:Get(eventArgs.entityID)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nif ent then\n\t\tArgus2.addTimedConeFilled(5000, 0, 0, 0, 30, math.rad(95), 0, 50, start, finish, mid, 0, nil, ent.id, nil, line)\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -4887,7 +4887,7 @@ local tbl =
 					3,
 					4,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarIndex = 1,
@@ -4920,7 +4920,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if data.octetblacklist == nil then data.octetblacklist = {} end\ndata.octetblacklist[eventArgs.entityID] = true\nif #tbl >= 7 then\n\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\tlocal findtwin = TensorCore.getEntityGroupList(\"ContentID\", {contentid = 1482})\n\t\tlocal twin\n\t\tfor k,v in pairs(findtwin) do\n\t\t\t\ttwin = v.id\n\t\tend\n\t\tfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do \n\t\t\t\tif not data.octetblacklist[id] then\n\t\t\t\t\t\tArgus2.addTimedRectFilled(9000, 0, 0, 0, 60, 8, 0, start, finish, mid, 0, twin, ent.id, true, nil, line)\n\t\t\t\tend\n\t\tend\nend\nself.used = true",
+				actionLua = "if data.octetblacklist == nil then data.octetblacklist = {} end\ndata.octetblacklist[eventArgs.entityID] = true\nif #data.octetblacklist >= 7 then\n\t\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\t\tfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do \n\t\t\t\tif not data.octetblacklist[id] then\n\t\t\t\t\t\tArgus2.addTimedRectFilled(9000, 0, 0, 0, 60, 8, 0, start, finish, mid, 0, data.twinid, ent.id, true, nil, line)\n\t\t\t\tend\n\t\tend\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -4939,7 +4939,7 @@ local tbl =
 					4,
 					6,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarValue = 1,
@@ -4971,7 +4971,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if data.hatchtargets == nil then data.hatchtargets = {} end\n\nif data.hatchtargets[eventArgs.entityID] == nil then \n\t\tdata.hatchtargets[eventArgs.entityID] = Now()\nelse\n\t\tif TimeSince(data.hatchtargets[eventArgs.entityID]) >= 8000 then\n\t\t\t\tdata.hatchtargets[eventArgs.entityID] = nil\n\t\t\t\tself.used = true\n\t\tend\nend",
+				actionLua = "if data.hatchtargets == nil then data.hatchtargets = {} end\n\nif data.hatchtargets[eventArgs.entityID] == nil then \n\t\tdata.hatchtargets[eventArgs.entityID] = Now()\nend",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -4988,7 +4988,7 @@ local tbl =
 					2,
 					7,
 				},
-				endIfUsed = true,
+				endIfUsed = false,
 				fallthrough = false,
 				gVar = "",
 				gVarValue = 1,
@@ -5279,7 +5279,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -5588,12 +5588,12 @@ local tbl =
 		timeRandomRange = false,
 		timeRange = false,
 		timelineIndex = 0,
-		timeout = 10,
+		timeout = 5,
 		timerEndOffset = 0,
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "b8333b53-2f5e-d168-9554-9a341326ebbc",
+		uuid = "56f47748-643a-7df7-a7da-f126b118a8a0",
 	},
 	
 	{
@@ -5654,7 +5654,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n---for id, ent in pairs(TensorCore.getEntityGroupList(\"Most Clustered Ally\")) do    \n---\t\tif ent then                     \n---\t\t\t\tArgus.addTimedCircleFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 0.6, g = 0.6, b = 0.2}, 0.2, 0.2, 1500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \n---\t\tend \n---end\n\nfor id, ent in pairs(TensorCore.entityList(\"\")) do\n\tif ent.contentid == 2612 then\n\t\t\t--Argus.addTimedCircleFilled(5500, ent.pos.x, ent.pos.y, ent.pos.z, 9, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 3500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\t Argus2.addTimedCircleFilled(5500,ent.pos.x,ent.pos.y,ent.pos.z,9,30,start,finish,mid,3500,ent.id,nil,line)\n\tend\nend\n\nself.used = true",
+				actionLua = "if Argus == nil then self.used = true end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n--for id, ent in pairs(TensorCore.getEntityGroupList(\"Most Clustered Ally\")) do    \n--\t\tif ent then                     \n--\t\t\t\tArgus.addTimedCircleFilled(3500, ent.pos.x, ent.pos.y, ent.pos.z, 3, 30, {r = 0.6, g = 0.6, b = 0.2}, 0.2, 0.2, 1500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)    \n--\t\tend \n--end\n\nfor id, ent in pairs(TensorCore.entityList(\"\")) do\n\tif ent.contentid == 2612 then\n\t\t\t--Argus.addTimedCircleFilled(5500, ent.pos.x, ent.pos.y, ent.pos.z, 9, 30, {r = 1, g = 0, b = 0}, 0.2, 0.2, 3500, ent.id, GUI:ColorConvertFloat4ToU32(1, 0, 0, 1), 1.5)\n\t\t Argus2.addTimedCircleFilled(5500,ent.pos.x,ent.pos.y,ent.pos.z,9,30,start,finish,mid,3500,ent.id,nil,line)\n\tend\nend\n\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -5756,7 +5756,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then             \n\t\t\t\tArgus2.addTimedCircleFilled(5000,ent.pos.x,ent.pos.y,ent.pos.z,3,30,start,finish,mid,0,ent.id,nil,line)    \n\t\tend \nend\n\nfor id, ent in pairs(TensorCore.entityList(\"contentid=2612\")) do\n\t\tArgus2.addTimedCircleFilled(5000,ent.pos.x,ent.pos.y,ent.pos.z,9,30,start,finish,mid,4000,ent.id,nil,line)\nend\n\nself.used = true",
+				actionLua = "if Argus == nil then self.used = true end\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then             \n\t\t\t\tArgus2.addTimedCircleFilled(5000,ent.pos.x,ent.pos.y,ent.pos.z,3,30,start,finish,mid,0,ent.id,nil,line)    \n\t\tend \nend\n\nfor id, ent in pairs(TensorCore.entityList(\"\")) do\n\tif ent.contentid == 2612 then\n\t\t\tArgus2.addTimedCircleFilled(5000,ent.pos.x,ent.pos.y,ent.pos.z,9,30,start,finish,mid,4000,ent.id,nil,line)\n\tend\nend\n\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -7129,7 +7129,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -7680,7 +7680,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "2d0a1021-8738-1073-87d4-572450584635",
+		uuid = "d2ff9875-7d46-a9b7-998f-9b3be61366fc",
 	},
 	
 	{
@@ -9216,7 +9216,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -9767,7 +9767,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "a891ceaa-029f-2fb7-83ad-5d808cf58261",
+		uuid = "9ab077ee-6f01-5e7c-b7a6-023b5489a0fc",
 	},
 	
 	{
@@ -11303,7 +11303,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.DrawNaelQuotes == true and AnyoneCore ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -11854,7 +11854,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "6da6ab9b-4e43-a834-8ec8-b5fc58fac49e",
+		uuid = "ec490608-da2b-dc81-a71c-4c1fb178d0aa",
 	},
 	
 	{
@@ -11864,7 +11864,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "if Argus == nil then self.used = true end\n\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then\n\t\t\t\tArgus2.addTimedCircleFilled(eventArgs.channelTimeMax*1000,ent.pos.x,ent.pos.y,ent.pos.z,1,30,start,finish,mid,0,ent.id,nil,line)\n\t\tend \nend\n\nself.used = true\n\n",
+				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id, ent in pairs(TensorCore.getEntityGroupList(\"Party\")) do    \n\t\tif ent and ent.alive == true then\n\t\t\t\tArgus2.addTimedCircleFilled(eventArgs.channelTimeMax*1000,ent.pos.x,ent.pos.y,ent.pos.z,1,30,start,finish,mid,0,ent.id,nil,line)\n\t\tend \nend\n\nself.used = true\n\n",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -12095,7 +12095,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.DrawNaelQuotes == true",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -12251,7 +12251,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "39eb0f4f-2358-4d46-b446-e68fcb27d362",
+		uuid = "70b0f21f-58fe-df39-8a70-a4e5e34964dc",
 	},
 	
 	{
@@ -12411,7 +12411,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id,time in pairs(data.hatchtargets) do\n\t\tlocal ent = MGetEntity(id)\n\t\tlocal buff = TensorCore.getBuff(ent, 344)\n\t\tif buff ~= nil then\n\t\t\t\tArgus.addCircleFilled(ent.pos.x, ent.pos.y, ent.pos.z, 8, 50, mid, finish, line)\n\t\tend\nend\nself.used = true",
+				actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nfor id,time in pairs(data.hatchtargets) do\n\t\tif TimeSince(time) <= 15000 then\n\t\t\t\tlocal ent = MGetEntity(id)\n\t\t\t\tlocal buff = TensorCore.getBuff(ent, 344)\n\t\t\t\tif buff ~= nil then\n\t\t\t\t\t\tArgus.addCircleFilled(ent.pos.x, ent.pos.y, ent.pos.z, 8, 50, mid, finish, line)\n\t\t\t\tend\n\t\telseif TimeSince(time) > 15000 then\n\t\t\t\tdata.hatchtargets[id] = nil\n\t\tend\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -12424,8 +12424,9 @@ local tbl =
 				clusterRange = 30,
 				conditions = 
 				{
-					1,
+					2,
 					7,
+					1,
 				},
 				endIfUsed = false,
 				fallthrough = false,
@@ -12481,7 +12482,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.DrawNaelQuotes == true and Argus ~= nil",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -13033,7 +13034,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "52b95d29-6670-a828-9ce9-3b2de6b462a3",
+		uuid = "a19d0d36-b247-57fb-962b-36fc6b067610",
 	},
 	
 	{
