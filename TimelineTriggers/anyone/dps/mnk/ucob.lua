@@ -2751,7 +2751,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0, g = 0.5, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\nend\nself.used = true",
+					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n\t\tif id == Player:GetTarget().id then\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0, g = 0.5, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\n\t\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -2817,7 +2817,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "53d3f5b3-0d22-7d10-b9ad-25d703c5e987",
+			uuid = "430fb5e2-5d8a-fa14-ba65-e49c5ad02926",
 		},
 	},
 	[53] = 
@@ -3037,7 +3037,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tif tether.targetid == Player.id then data.dontstackfireball = true end\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0.5, g = 0, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\nend\nself.used = true",
+					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n\t\tif id == Player:GetTarget().id then\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tif tether.targetid == Player.id then data.dontstackfireball = true end\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0.5, g = 0, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\n\t\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3103,7 +3103,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "2b590ffc-b400-14af-9490-fca3950590d7",
+			uuid = "6156eb3a-3a16-2534-9561-d63b748da44c",
 		},
 	},
 	[56] = 
@@ -3404,7 +3404,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tlocal rgb = {r = 0, g = 0.5, b = 0}\n\t\t\t\t\t\t\t\tif data.dontstackfireball == true then rgb = {r = 0.5, g = 0, b = 0} end\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, rgb, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\nend\nself.used = true",
+					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n\t\tif id == Player:GetTarget().id then\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tlocal rgb = {r = 0, g = 0.5, b = 0}\n\t\t\t\t\t\t\t\tif data.dontstackfireball == true then rgb = {r = 0.5, g = 0, b = 0} end\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, rgb, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\n\t\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3470,7 +3470,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "6d412c94-5bd8-f76a-b0c9-83bfff276a04",
+			uuid = "cf3122c0-c974-98be-8800-206d6cb7df6b",
 		},
 		
 		{
@@ -3610,7 +3610,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "68edd753-4f04-c07a-94db-6bd15804d3a8",
+			uuid = "65669eec-cfb9-d2fc-82c0-0339095a47ac",
 		},
 	},
 	[62] = 
@@ -3830,7 +3830,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0, g = 0.5, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\nend\nself.used = true",
+					actionLua = "local tethers = Argus.getCurrentTethers()\nfor id, ts in pairs(tethers) do\n\t\tif id == Player:GetTarget().id then\n    for t = 1, #ts do\n        local tether = ts[t]\n\t\t\t\t\t\t\t\tlocal ent = EntityList:Get(tether.targetid)\n\t\t\t\t\t\t\t\tArgus.addTimedCircleFilled(4000, ent.pos.x, ent.pos.y, ent.pos.z, 4, 30, {r = 0, g = 0.5, b = 0}, 0.05, 0.05, 0, ent.id, nil, 1.5)\n    end\n\t\tend\nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -3896,7 +3896,7 @@ local tbl =
 			timerOffset = -4,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "db2fb29b-8b96-4827-be73-963006b3172b",
+			uuid = "bd13c6b3-621a-dc30-80e6-08a8f75b0cd4",
 		},
 	},
 	[65] = 

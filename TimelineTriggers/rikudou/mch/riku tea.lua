@@ -351,7 +351,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "local ac = ActionList:Get(1, 2866)\nif ac.recasttime == 2.5 then\n\t\tdata.nosksp = true\nelse\n\t\tdata.noskp = false\nend\nself.used = true",
+			execute = "local ac = ActionList:Get(1, 2866)\nif ac.recasttime == 2.5 then\n\t\tdata.nosksp = true\nelse\n\t\tdata.nosksp = false\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
