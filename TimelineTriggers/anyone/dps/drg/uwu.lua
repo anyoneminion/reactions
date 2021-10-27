@@ -3171,7 +3171,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, 0, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -6050,7 +6050,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t8000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\tend\nend\nself.used = true",
+			execute = "if Argus ~= nil then\n\tlocal colorFill = {r = 0, g = 0, b = 1, a = 0.1}\n\tlocal centerPos = {x = 100, y = 0, z = 100}\n\tlocal ent = TensorCore.getWokenEnt(1185)\n\tlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\n\tif ent then\n\t\t-- draw line going all the way through\n\t\tArgus2.addTimedCrossFilled(\n\t\t\t9000,\n\t\t\tcenterPos.x,\n\t\t\tcenterPos.y,\n\t\t\tcenterPos.z,\n\t\t\t44/2,\n\t\t\t12,\n\t\t\tTensorCore.getHeadingToTarget(centerPos, ent.pos) + math.pi / 4,\n\t\t\tstart,\n\t\t\tfinish,\n\t\t\tmid,\n\t\t\t0,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tnil,\n\t\t\tline\n\t\t)\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z,3,30,finish,finish,finish,0,ent.id,nil,line)\n\tend\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -12095,7 +12095,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(8000, ent.pos.x, 0, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12225,7 +12225,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "53f0a3f8-ae5d-df6b-8a01-2a810d897f4a",
+			uuid = "fa51f7e1-8692-0f92-8d4f-855c6f8e6029",
 		},
 		
 		{
@@ -12365,7 +12365,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "7d905941-a846-bdb0-addf-99a3deadd18d",
+			uuid = "5076102e-be5a-dedf-a097-3b96e6129f65",
 		},
 		
 		{
@@ -12375,7 +12375,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,ent.pos.y,ent.pos.z, 8 + ent.hitradius ,50,start,finish,mid,0,nil,nil,line)\nend\n\nself.used = true",
+					actionLua = "local colorFill = {r = 0, g = 0, b = 1, a = 0.1}\nlocal ent = TensorCore.getWokenEnt(2137)\nlocal start,mid,finish,line = AnyoneCore.convertSettingsToU32()\n\nif ent then\n\t\tArgus2.addTimedCircleFilled(8000,ent.pos.x,0,ent.pos.z, 8 + ent.hitradius ,50,start,finish,mid,0,nil,nil,line)\nend\n\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,
@@ -12505,7 +12505,7 @@ local tbl =
 			timerOffset = -6,
 			timerStartOffset = 0,
 			used = false,
-			uuid = "140f7401-dc48-3eb8-901d-fbb691491f31",
+			uuid = "cdc7ef66-2ffd-5be0-ab1a-8e2b2f763fa9",
 		},
 	},
 	[127] = 
@@ -17483,7 +17483,7 @@ local tbl =
 				{
 					aType = 4,
 					actionID = -1,
-					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, ent.pos.y, ent.pos.z, 7 + ent.hitradius, 20 + ent.hitradius, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
+					actionLua = "local start,mid,finish,line = AnyoneCore.convertSettingsToU32()\nlocal ent = TensorCore.getWokenEnt(1644)\nif ent then\n\t\tArgus2.addTimedDonutFilled(3000, ent.pos.x, 0, ent.pos.z, 7 + ent.hitradius, 20, 50, start, finish, mid, 0, ent.id, nil, line) \nend\nself.used = true",
 					allowInterrupt = false,
 					atomicPriority = false,
 					castAtMouse = false,

@@ -18084,7 +18084,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local jobs = {}\nfor k,v in pairs(data.currentJailTargets) do\n\t\tlocal ent = EntityList:Get(v)\n\t\tif ent then\n\t\t\t\tjobs[ent.job] = ent.id\n\t\tend\nend\n\nlocal PartySortOrder = {20,30,22,34,37,19,21,32,38,23,31,28,33,24,27,35,25}\nlocal num = 1\nif data.markedplayer == nil then data.markedplayer = {} end\nif table.size(jobs) == 3 then\n\t\tfor _,n in table.pairsbykeys(PartySortOrder) do\n\t\t\t\tif jobs[n] ~= nil then\n\t\t\t\t\t\td(\"marking \" .. jobs[n] .. \" for \" .. num .. \" marker\")\n\t\t\t\t\t\tdata.markedplayer[num] = jobs[n]\n\t\t\t\t\t\tActionList:Get(12,num):Cast(jobs[n])\n\t\t\t\t\t\tnum = num + 1\n\t\t\t\tend\n\t\tend\nend\n\nif num > 3 then\n\t\tdata.jailsdone = true\n\t\tdata.removemarkers = Now()\n\t\tdata.removedmarking = false\n\t\td(\"automarkers done\")\nend\nself.used = true",
+				actionLua = "local jobs = {}\nfor k,v in pairs(data.currentJailTargets) do\n\t\tlocal ent = EntityList:Get(v)\n\t\tif ent then\n\t\t\t\tjobs[ent.job] = ent.id\n\t\tend\nend\n\nlocal PartySortOrder = {20,30,22,34,37,19,21,32,38,23,31,28,33,35,24,27,25}\nlocal num = 1\nif data.markedplayer == nil then data.markedplayer = {} end\nif table.size(jobs) == 3 then\n\t\tfor _,n in table.pairsbykeys(PartySortOrder) do\n\t\t\t\tif jobs[n] ~= nil then\n\t\t\t\t\t\td(\"marking \" .. jobs[n] .. \" for \" .. num .. \" marker\")\n\t\t\t\t\t\tdata.markedplayer[num] = jobs[n]\n\t\t\t\t\t\tActionList:Get(12,num):Cast(jobs[n])\n\t\t\t\t\t\tnum = num + 1\n\t\t\t\tend\n\t\tend\nend\n\nif num > 3 then\n\t\tdata.jailsdone = true\n\t\tdata.removemarkers = Now()\n\t\tdata.removedmarking = false\n\t\td(\"automarkers done\")\nend\nself.used = true",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
@@ -18678,7 +18678,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.removemarkers ~= nil and data.markedplayer ~= nil and data.removedmarking == false and TimeSince(data.removemarkers) >= 10000 and AnyoneCore.Settings.AutoJailMarkers == true",
+				conditionLua = "return data.removemarkers ~= nil and data.markedplayer ~= nil and data.removedmarking == false and TimeSince(data.removemarkers) >= 20000 and AnyoneCore.Settings.AutoJailMarkers == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -18755,7 +18755,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "7af379e6-6106-5c84-8400-e806fb91bca1",
+		uuid = "d95f8a06-c132-a569-8412-87cb5fe56ae4",
 	},
 	
 	{

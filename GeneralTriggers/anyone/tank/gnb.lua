@@ -996,7 +996,7 @@ local tbl =
 				{
 					2,
 					1,
-					3,
+					10,
 					5,
 				},
 				endIfUsed = false,
@@ -14987,7 +14987,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.removemarkers ~= nil and data.markedplayer ~= nil and data.removedmarking == false and TimeSince(data.removemarkers) >= 10000 and AnyoneCore.Settings.AutoJailMarkers == true",
+				conditionLua = "return data.removemarkers ~= nil and data.markedplayer ~= nil and data.removedmarking == false and TimeSince(data.removemarkers) >= 20000 and AnyoneCore.Settings.AutoJailMarkers == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -15064,7 +15064,7 @@ local tbl =
 		timerOffset = 0,
 		timerStartOffset = 0,
 		used = false,
-		uuid = "be3e74ee-ba47-8c3a-8052-d26ef9b113b7",
+		uuid = "2c13d9d3-b56d-b160-8629-352902fee3eb",
 	},
 	
 	{
