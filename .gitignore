@@ -1,2 +1,9 @@
 
 *.zip
+*.paf
+/Logs/*
+/TimelineTriggers/qwert/*
+/TimelineTriggers/personal/*
+/GeneralTriggers/qwert/*
+/GeneralTriggers/personal/*
+settings.lua
