@@ -2095,7 +2095,7 @@ local tbl =
 			{
 				aType = 4,
 				actionID = -1,
-				actionLua = "local target = Player:GetTarget() \nlocal halfwaypos = TensorCore.getPosInDirection(Player.pos,TensorCore.getHeadingToTarget(target.pos, Player.pos), -(AnyoneCore.Distance3D(Player.pos, target.pos)/2)) \nActionList:Get(11,3):Cast(halfwaypos.x,halfwaypos.y,halfwaypos.z) \nself.used = true ",
+				actionLua = "local target = Player:GetTarget() \nif table.valid(target) then \n  local halfwaypos = TensorCore.getPosInDirection(Player.pos,TensorCore.getHeadingToTarget(target.pos, Player.pos), -(AnyoneCore.Distance3D(Player.pos, target.pos)/2)) \n  ActionList:Get(11,3):Cast(halfwaypos.x,halfwaypos.y,halfwaypos.z) \nend \nself.used = true ",
 				allowInterrupt = false,
 				atomicPriority = false,
 				castAtMouse = false,
