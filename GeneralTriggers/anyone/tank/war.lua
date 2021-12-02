@@ -1264,7 +1264,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 0 + AnyoneCore.Settings.PrepullHelper[Player.job].badteamdelay",
+				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 0 + AnyoneCore.Settings.PrepullHelper.BadTeamDelay",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1422,7 +1422,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore.Settings.PrepullHelper[Player.job].enabled == true and Player.job == 21",
+				conditionLua = "return AnyoneCore.Settings.PrepullHelper.enabled == true and Player.job == 21",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1659,7 +1659,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 10000 + AnyoneCore.Settings.PrepullHelper[Player.job].badteamdelay - data.randomDelay",
+				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 10000 + AnyoneCore.Settings.PrepullHelper.BadTeamDelay - data.randomDelay",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1738,7 +1738,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 700 + AnyoneCore.Settings.PrepullHelper[Player.job].badteamdelay",
+				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 700 + AnyoneCore.Settings.PrepullHelper.BadTeamDelay",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1817,7 +1817,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 5000 - data.randomDelay + AnyoneCore.Settings.PrepullHelper[Player.job].badteamdelay",
+				conditionLua = "return data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration * 1000 - TimeSince(data.countdownTime) <= 5000 - data.randomDelay + AnyoneCore.Settings.PrepullHelper.BadTeamDelay",
 				conditionType = 1,
 				conditions = 
 				{
@@ -1896,7 +1896,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.PrepullHelper[Player.job].sprint == true",
+				conditionLua = "return AnyoneCore ~= nil and AnyoneCore.Settings.PrepullHelper.sprint == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -11319,7 +11319,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil and AnyoneCore.Settings.DrawChainLightning == true",
+				conditionLua = "return AnyoneCore ~= nil and Argus ~= nil and AnyoneCore ~= nil",
 				conditionType = 1,
 				conditions = 
 				{
@@ -14923,7 +14923,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper[Player.job].interrupt == true and AnyoneCore.Settings.DutyHelper.enabled == true",
+				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper.interrupt == true and AnyoneCore.Settings.DutyHelper.enabled == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -15560,7 +15560,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper[Player.job].mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
+				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper.mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -16416,7 +16416,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and Player.job == 21 and AnyoneCore.Settings.DutyHelper[Player.job].mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
+				conditionLua = "return AnyoneCore ~= nil and (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and Player.job == 21 and AnyoneCore.Settings.DutyHelper.mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -17886,7 +17886,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return AnyoneCore ~= nil and (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper[Player.job].mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
+				conditionLua = "return AnyoneCore ~= nil and (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper.mitigation == true and AnyoneCore.Settings.DutyHelper.enabled == true",
 				conditionType = 1,
 				conditions = 
 				{
@@ -18123,7 +18123,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 2,
-				conditionLua = "return Player.hp.percent <= AnyoneCore.Settings.LargePullThreshhold",
+				conditionLua = "return Player.hp.percent <= AnyoneCore.Settings.DutyHelper.LargePullThreshhold",
 				conditionType = 2,
 				conditions = 
 				{
@@ -18281,7 +18281,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 2,
-				conditionLua = "return Player.hp.percent <= AnyoneCore.Settings.LargePullInvulnThreshhold",
+				conditionLua = "return Player.hp.percent <= AnyoneCore.Settings.DutyHelper.LargePullInvulnThreshhold",
 				conditionType = 2,
 				conditions = 
 				{
@@ -18827,7 +18827,7 @@ local tbl =
 				clusterRadius = 8,
 				clusterRange = 30,
 				comparator = 1,
-				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.HealingUsageDH == true and AnyoneCore.Settings.DutyHelper.enabled == true",
+				conditionLua = "return (FFXIV_Common_BotRunning or AnyoneCore.Settings.DutyHelper.requirebotenabled == false) and AnyoneCore ~= nil and AnyoneCore.Settings.DutyHelper.HealingUsage == true and AnyoneCore.Settings.DutyHelper.enabled == true",
 				conditionType = 1,
 				conditions = 
 				{

@@ -1,3 +1,5 @@
+This is outdated as of Endwalker. You can get Endwalker reactions from the Minionapp store, and general triggers are located in AnyoneCore.
+
 **How can I download these?**
 
 Use the updater built into AnyoneCore.

@@ -11041,7 +11041,7 @@ local tbl =
 					clusterRadius = 8,
 					clusterRange = 30,
 					comparator = 1,
-					conditionLua = "return AnyoneCore.Settings.e9sMitigation == true",
+					conditionLua = "return AnyoneCore ~= nil",
 					conditionType = 1,
 					conditions = 
 					{
