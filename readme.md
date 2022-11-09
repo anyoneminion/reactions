@@ -2,7 +2,7 @@ This is outdated as of Endwalker. You can get Endwalker reactions from the Minio
 
 **How can I download these?**
 
-Use the updater built into AnyoneCore.
+AnyoneCore will automatically install these. As long as you have AnyoneCore, you do not need to do anything.
 
 **Where can I donate to thank you?**
 
